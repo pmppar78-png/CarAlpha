@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Car Alpha — Free VIN Lookup & Smart Report</title>
+  <meta name="description" content="Free VIN lookup with recalls & specs plus AI that explains next steps: insurance savings, warranty value, repairs, loans/refi, lemon-law options and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.7); }
+    .shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,.08); }
+    .scrollbox { max-height: 360px; overflow:auto; }
+    .fab { position:fixed; right:16px; bottom:16px; }
+    @media (min-width: 1024px){ .hide-desktop { display:none; } }
+    @media (max-width: 1023.98px){ .hide-mobile { display:none; } }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800">
+<script>
+// ====== Affiliate config (replace after approval) ======
+const AFFILIATES = {
+  insurance: "https://example.com/aff/insurance?vin={{VIN}}",
+  warranty:  "https://example.com/aff/warranty?vin={{VIN}}",
+  loans:     "https://example.com/aff/loans?vin={{VIN}}",
+  sell:      "https://example.com/aff/sell?vin={{VIN}}",
+  mechanics: "https://example.com/aff/mechanics?vin={{VIN}}",
+  lemonlaw:  "https://example.com/aff/lemon?vin={{VIN}}"
+};
+</script>
+
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="h-10 w-10 rounded-xl bg-indigo-600 grid place-items-center text-white font-bold">A</div>
+      <div>
+        <h1 class="text-xl font-extrabold tracking-tight">Car <span class="text-indigo-600">Alpha</span></h1>
+        <p class="text-xs text-slate-500 -mt-1">Free VIN lookup · Instant smart report</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#features" class="hover:text-indigo-600">Features</a>
+      <a href="#about" class="hover:text-indigo-600">About</a>
+      <a href="#legal" class="hover:text-indigo-600">Privacy & Terms</a>
+    </nav>
+  </div>
+</header>
+
+<section class="bg-gradient-to-b from-indigo-50 to-transparent">
+  <div class="max-w-6xl mx-auto px-4 py-10 md:py-16 grid lg:grid-cols-[1fr_360px] gap-8 items-start">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Instant, free <span class="text-indigo-700">VIN lookup</span> with recalls, specs, and <span class="text-indigo-700">AI guidance</span>.</h2>
+      <ul class="mt-4 text-slate-700 space-y-2">
+        <li>• Powered by official NHTSA data for VIN decoding & recalls</li>
+        <li>• Action‑focused: clear next steps with trusted providers</li>
+        <li>• 100% free — we earn via partners, never from you</li>
+      </ul>
+
+      <div id="vin" class="mt-6 glass rounded-2xl p-5 shadow-soft border border-white/60">
+        <label class="block text-sm font-semibold text-slate-700">Enter VIN</label>
+        <input id="vinInput" maxlength="17" placeholder="e.g., 1HGCM82633A004352" class="mt-2 w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-slate-400" />
+        <button id="runBtn" class="mt-3 w-full px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700">Get Free Report</button>
+        <p class="mt-2 text-xs text-slate-500">We only use your VIN to fetch public specs & recall info. No storage.</p>
+      </div>
+
+      <div class="mt-6 text-xs text-slate-600">
+        <strong>Ask Car Alpha AI — try:</strong>
+        <span class="ml-1">“Any recalls for this VIN?”, “Is warranty worth it for a 2015 Civic?”, “Cheapest insurance for an EV?”, “Repair estimate for brakes?”, “Best loan/refi options?”</span>
+      </div>
+
+      <!-- Results -->
+      <section class="mt-6 space-y-6">
+        <div class="hidden" id="loading">
+          <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">Fetching official data…</div>
+        </div>
+        <div class="hidden" id="errorBox">
+          <div class="p-5 rounded-2xl border border-rose-200 bg-rose-50 text-rose-700 shadow-soft" id="errorText">Error</div>
+        </div>
+        <div class="hidden" id="vehicleCard"></div>
+        <div class="hidden" id="recallCard"></div>
+        <div class="hidden" id="actionsCard"></div>
+      </section>
+    </div>
+
+    <!-- AI assistant (visible on desktop) -->
+    <aside id="aiPanel" class="hide-mobile self-start sticky top-[84px] space-y-4">
+      <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <h3 class="text-lg font-bold">Car Alpha AI</h3>
+        <p class="text-sm text-slate-600">Ask anything about your vehicle. We’ll tailor clear answers and helpful next steps.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-quick="insurance">Cheapest insurance?</button>
+          <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-quick="warranty">Worth getting warranty?</button>
+          <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-quick="recalls">Any recalls?</button>
+          <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-quick="mechanic">Repair estimates</button>
+          <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-quick="loans">Best loan/refi?</button>
+          <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-quick="lemon">Lemon law?</button>
+        </div>
+        <div id="chat" class="scrollbox mt-4 space-y-3 text-sm">
+          <div class="flex items-start gap-2"><div class="shrink-0 h-6 w-6 rounded-full bg-indigo-600 text-white grid place-items-center text-xs">AI</div><div class="p-3 rounded-2xl bg-slate-50 border border-slate-200">Run a VIN to unlock tailored guidance — or ask a general question now.</div></div>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <input id="chatInput" placeholder="Ask about insurance, warranty, recalls… (examples above)" class="flex-1 px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <button id="chatSend" class="px-4 py-2 rounded-xl bg-indigo-600 text-white">Send</button>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl border border-indigo-200 bg-indigo-50 text-indigo-900 shadow-soft">
+        <p class="text-sm">We never sell your data. You stay anonymous — partners only see your info if you proceed on their site.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Floating chat for mobile -->
+<button id="fabBtn" class="hide-desktop fab z-50 rounded-full bg-indigo-600 text-white px-4 py-3 shadow-soft">Ask Car Alpha AI</button>
+<div id="fabDrawer" class="hide-desktop fixed inset-0 z-40 hidden">
+  <div class="absolute inset-0 bg-black/40" onclick="toggleDrawer(false)"></div>
+  <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-4 shadow-soft">
+    <div class="flex items-center justify-between">
+      <h3 class="font-bold">Car Alpha AI</h3>
+      <button onclick="toggleDrawer(false)" class="text-slate-500">Close</button>
+    </div>
+    <div id="mchat" class="scrollbox mt-3 space-y-3 text-sm" style="max-height:50vh">
+      <div class="flex items-start gap-2"><div class="shrink-0 h-6 w-6 rounded-full bg-indigo-600 text-white grid place-items-center text-xs">AI</div><div class="p-3 rounded-2xl bg-slate-50 border border-slate-200">Run a VIN or ask: “Any recalls?”, “Cheapest insurance?”, “Repair estimates”</div></div>
+    </div>
+    <div class="mt-3 flex gap-2">
+      <input id="mchatInput" placeholder="Type your question…" class="flex-1 px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <button id="mchatSend" class="px-4 py-2 rounded-xl bg-indigo-600 text-white">Send</button>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+      <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-mquick="insurance">Cheapest insurance?</button>
+      <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-mquick="warranty">Worth warranty?</button>
+      <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-mquick="recalls">Any recalls?</button>
+      <button class="px-3 py-2 rounded-full bg-slate-100 hover:bg-slate-200" data-mquick="mechanic">Repair estimates</button>
+    </div>
+  </div>
+</div>
+
+<section id="features" class="bg-white border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-14">
+    <h3 class="text-2xl font-extrabold">Everything you need — in one clean report</h3>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50"><h4 class="font-semibold">VIN Decode</h4><p class="text-sm text-slate-600">Official NHTSA VIN specs: make, model, year, engine, trim, build plant, and more.</p></div>
+      <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50"><h4 class="font-semibold">Recall Check</h4><p class="text-sm text-slate-600">Known recalls by make/model/year with NHTSA references so you can fix them free at the dealer.</p></div>
+      <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50"><h4 class="font-semibold">AI Guidance</h4><p class="text-sm text-slate-600">Plain‑English guidance + affiliate actions that actually help.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="bg-slate-50 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-14">
+    <h3 class="text-2xl font-extrabold">About Car Alpha</h3>
+    <div class="mt-4 grid md:grid-cols-2 gap-8">
+      <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <h4 class="font-semibold">Who we are</h4>
+        <p class="mt-2 text-slate-700 text-sm leading-relaxed">Car Alpha is a consumer‑first automotive intelligence project. We believe vital car data should be fast, free, and easy to understand. We don’t sell your information or gate basic safety data behind paywalls. We earn by recommending helpful next steps — insurance savings, fair‑price warranties, mechanic estimates, refinancing options, and reputable marketplaces — only when you choose to click.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <h4 class="font-semibold">What we offer</h4>
+        <ul class="mt-2 text-slate-700 text-sm leading-relaxed list-disc list-inside">
+          <li>Instant, free VIN decode powered by official sources</li>
+          <li>Make/Model/Year recall checks with NHTSA references</li>
+          <li>Plain‑English AI guidance tailored to your vehicle</li>
+          <li>Clear, optional actions with trusted partners — never required</li>
+          <li>No accounts, no emails, no storage of your VIN</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="legal" class="bg-white border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
+    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50">
+      <h4 class="font-semibold">Privacy Policy</h4>
+      <p class="mt-2 text-sm text-slate-700 leading-relaxed">We do not collect or store VINs, search queries, or report outputs. Basic, anonymous analytics may measure usage to improve reliability. If you click a partner link, you will be subject to that partner’s policies. We never sell personal data.</p>
+    </div>
+    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50">
+      <h4 class="font-semibold">Terms</h4>
+      <p class="mt-2 text-sm text-slate-700 leading-relaxed">Car Alpha provides general information sourced from public datasets and partners and does not guarantee completeness or fitness for a particular purpose. Always verify details with a qualified professional. By using this site you agree that Car Alpha is not liable for decisions made based on this information.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-500">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="font-semibold text-slate-700">Car Alpha</div>
+        <div>© <span id="year"></span> Car Alpha. All rights reserved.</div>
+      </div>
+      <div class="flex gap-4">
+        <a href="#about" class="hover:text-indigo-700">About</a>
+        <a href="#legal" class="hover:text-indigo-700">Privacy</a>
+        <a href="#legal" class="hover:text-indigo-700">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const yearEl = document.getElementById('year');
+yearEl.textContent = new Date().getFullYear();
+
+const qs = (s) => document.querySelector(s);
+
+const vinInput = qs('#vinInput');
+const runBtn   = qs('#runBtn');
+const loading  = qs('#loading');
+const errorBox = qs('#errorBox');
+const errorText= qs('#errorText');
+const vehicleCard = qs('#vehicleCard');
+const recallCard  = qs('#recallCard');
+const actionsCard = qs('#actionsCard');
+const aiPanel = qs('#aiPanel');
+
+// Mobile chat elements
+const fabBtn    = document.getElementById('fabBtn');
+const fabDrawer = document.getElementById('fabDrawer');
+const mchat     = document.getElementById('mchat');
+const mchatInput= document.getElementById('mchatInput');
+const mchatSend = document.getElementById('mchatSend');
+
+function toggleDrawer(show){
+  fabDrawer.classList.toggle('hidden', !show);
+}
+fabBtn.addEventListener('click', ()=> toggleDrawer(true));
+
+function setLoading(on){ loading.classList.toggle('hidden', !on); }
+function setError(msg){ if(!msg){ errorBox.classList.add('hidden'); return;} errorText.textContent = msg; errorBox.classList.remove('hidden'); }
+function fillAffiliate(href, vin){ return href.replaceAll('{{VIN}}', encodeURIComponent(vin)); }
+
+// ---- Lightweight "AI" — rule-based guidance with affiliate CTAs ----
+const chat       = document.getElementById('chat');
+const chatInput  = document.getElementById('chatInput');
+const chatSend   = document.getElementById('chatSend');
+function postBubble(container, role, html){
+  const isAI = role === 'ai';
+  const wrap = document.createElement('div');
+  wrap.className = 'flex items-start gap-2';
+  wrap.innerHTML = `<div class="shrink-0 h-6 w-6 rounded-full ${isAI? 'bg-indigo-600 text-white':'bg-slate-300 text-slate-800'} grid place-items-center text-xs">${isAI?'AI':'You'}</div>
+                    <div class="p-3 rounded-2xl ${isAI? 'bg-slate-50 border border-slate-200':'bg-white border border-slate-200'}">${html}</div>`;
+  container.appendChild(wrap);
+  container.scrollTop = container.scrollHeight;
+}
+function CTA(label,key,vin){ const href=fillAffiliate(AFFILIATES[key],vin||''); return `<a target="_blank" rel="nofollow sponsored noopener" href="${href}" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 hover:border-indigo-300 text-xs mt-2">${label}</a>`; }
+let ctx = { vin:null, decoded:{}, recallCount:0 };
+function answer(q, mobile=false){
+  const query = (q||'').toLowerCase();
+  const c = ctx; const age = c.decoded?.ModelYear? (new Date().getFullYear()-parseInt(c.decoded.ModelYear,10)):null;
+  const make = c.decoded?.Make||'this vehicle'; const isEV = (c.decoded?.FuelTypePrimary||'').toLowerCase().includes('electric');
+  if(query.includes('recall')) return c.recallCount>0?`We found <strong>${c.recallCount}</strong> recall(s) for ${make}. Book the <strong>free dealer fix</strong> first. ${CTA('Find a dealer','mechanics',c.vin)} ${CTA('Compare warranty options','warranty',c.vin)}`:`No recalls were found for ${make} based on the decoded year/model. Still, consider a quick inspection before purchase. ${CTA('Get mechanic estimates','mechanics',c.vin)}`;
+  if(query.includes('warranty')) return age!==null&&age>=7?`At about <strong>${age} years</strong> old, an extended warranty can be cost‑effective. ${CTA('See warranty plans','warranty',c.vin)}`:`Warranty value depends on repair risk and mileage. Many owners use warranties for transmission/engine coverage. ${CTA('Check warranty quotes','warranty',c.vin)}`;
+  if(query.includes('insurance')) return `${isEV?'EVs sometimes qualify for lower rates. ':''}Compare at least 3 carriers to save 10–30%. ${CTA('Compare insurance rates','insurance',c.vin)}`;
+  if(query.includes('loan')||query.includes('refi')||query.includes('finance')) return `Better credit and newer vehicles often qualify for lower APR. Check offers with no hard pull first. ${CTA('Get loan/refi offers','loans',c.vin)}`;
+  if(query.includes('mechanic')||query.includes('repair')||query.includes('estimate')) return `Get multiple quotes and check common issues for this model. ${CTA('Check mechanic estimates','mechanics',c.vin)}`;
+  if(query.includes('sell')||query.includes('trade')) return `Instant‑offer marketplaces can beat dealer trade‑ins. ${CTA('Get an instant offer','sell',c.vin)}`;
+  if(query.includes('lemon')) return `If repeated repairs affect safety or drivability, you may have remedies under state lemon laws. ${CTA('Check lemon‑law options','lemonlaw',c.vin)}`;
+  return `Try asking about: <em>recalls</em>, <em>insurance</em>, <em>warranty</em>, <em>loan/refi</em>, <em>repair estimates</em>, <em>selling</em>, or <em>lemon‑law</em>. Run a VIN for tailored guidance.`;
+}
+function handleChat(inputEl, outEl){ const text=inputEl.value; if(!text.trim()) return; postBubble(outEl,'user',text); postBubble(outEl,'ai',answer(text,outEl===mchat)); inputEl.value=''; }
+chatSend.addEventListener('click', ()=>handleChat(chatInput,chat));
+chatInput.addEventListener('keydown', e=>{ if(e.key==='Enter') handleChat(chatInput,chat); });
+mchatSend.addEventListener('click', ()=>handleChat(mchatInput,mchat));
+mchatInput.addEventListener('keydown', e=>{ if(e.key==='Enter') handleChat(mchatInput,mchat); });
+document.querySelectorAll('[data-quick]').forEach(b=> b.addEventListener('click',()=>{ handleChat({value:b.textContent.trim()},chat); }));
+document.querySelectorAll('[data-mquick]').forEach(b=> b.addEventListener('click',()=>{ handleChat({value:b.textContent.trim()},mchat); toggleDrawer(true);}));
+
+// ---- Robust fetch with timeout ----
+function fetchJSON(url, timeoutMs=10000){
+  const controller = new AbortController();
+  const t = setTimeout(()=>controller.abort(), timeoutMs);
+  return fetch(url,{signal:controller.signal}).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).finally(()=>clearTimeout(t));
+}
+
+// ---- VIN flow ----
+async function runVIN(){
+  setError(); vehicleCard.classList.add('hidden'); recallCard.classList.add('hidden'); actionsCard.classList.add('hidden');
+  const vin = (vinInput.value||'').trim().toUpperCase();
+  if(vin.length!==17){ setError('Please enter a valid 17‑character VIN.'); return; }
+  setLoading(true);
+  try{
+    const decodeUrl = `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/${vin}?format=json`;
+    const dRes = await fetchJSON(decodeUrl, 12000);
+    const decoded = (dRes.Results && dRes.Results[0]) || {};
+    decoded.VIN = vin;
+    renderVehicle(decoded);
+
+    // Recall lookup (graceful if empty)
+    let recallCount = 0;
+    try{
+      const make = encodeURIComponent(decoded.Make||''); const model = encodeURIComponent(decoded.Model||''); const year = encodeURIComponent(decoded.ModelYear||'');
+      if(make && model && year){
+        const rUrl = `https://api.nhtsa.gov/recalls/recallsByVehicle?make=${make}&model=${model}&modelYear=${year}`;
+        const rRes = await fetchJSON(rUrl, 12000);
+        recallCount = renderRecalls(rRes) || 0;
+      } else {
+        recallCard.innerHTML = `<div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft"><h3 class="text-lg font-bold">Recalls</h3><p class="mt-2 text-slate-600 text-sm">Could not determine make/model/year from VIN to fetch recalls.</p></div>`;
+        recallCard.classList.remove('hidden');
+      }
+    } catch(err){
+      recallCard.innerHTML = `<div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft"><h3 class="text-lg font-bold">Recalls</h3><p class="mt-2 text-slate-600 text-sm">Recall service is busy. Try again later.</p></div>`;
+      recallCard.classList.remove('hidden');
+    }
+
+    // Save context for AI
+    ctx = { vin, decoded, recallCount };
+
+    renderActions(vin, decoded, recallCount);
+    postBubble(chat,'ai',"Report ready. Ask anything — insurance, warranty, repair risk, recalls, or resale.");
+    postBubble(mchat,'ai',"Report ready. Ask anything — insurance, warranty, repair risk, recalls, or resale.");
+  } catch(e){
+    setError('Service is busy right now. Please try again shortly.');
+  } finally {
+    setLoading(false);
+  }
+}
+
+function renderVehicle(data){
+  const fields = [
+    ['Year', data.ModelYear],
+    ['Make', data.Make],
+    ['Model', data.Model],
+    ['Trim', data.Trim],
+    ['Engine', `${data.DisplacementL || ''}L ${data.EngineConfiguration || ''} ${data.FuelTypePrimary || ''}`.trim()],
+    ['Body', data.BodyClass],
+    ['Drive', data.DriveType],
+    ['Transmission', data.TransmissionStyle || data.TransmissionDescriptor || ''],
+    ['Plant', data.PlantCity && data.PlantCountry ? `${data.PlantCity}, ${data.PlantCountry}` : data.PlantCountry || '']
+  ].filter(([k,v]) => v && String(v).trim() !== '');
+
+  vehicleCard.innerHTML = `
+    <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+      <div class="flex items-center justify-between gap-4">
+        <h3 class="text-lg font-bold">Vehicle</h3>
+        <span class="text-xs px-2 py-1 rounded bg-slate-100">VIN: ${data.VIN || ''}</span>
+      </div>
+      <div class="mt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+        ${fields.map(([k,v]) => `<div class="p-3 rounded-xl bg-slate-50 border border-slate-200"><div class="text-xs text-slate-500">${k}</div><div class="font-semibold">${v}</div></div>`).join('')}
+      </div>
+    </div>`;
+  vehicleCard.classList.remove('hidden');
+}
+
+function renderRecalls(recalls){
+  if(!recalls || !recalls.results || !recalls.results.length){
+    recallCard.innerHTML = `
+      <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <h3 class="text-lg font-bold">Recalls</h3>
+        <p class="mt-2 text-slate-600 text-sm">No recalls found for the decoded make/model/year.</p>
+      </div>`;
+    recallCard.classList.remove('hidden');
+    return 0;
+  }
+  const items = recalls.results.slice(0, 8).map(r => `
+    <details class="p-3 rounded-xl bg-amber-50 border border-amber-200">
+      <summary class="cursor-pointer font-semibold">${r.Component || 'Recall'} — ${r.ReportReceivedDate || ''}</summary>
+      <div class="mt-2 text-sm text-slate-700">
+        <div><span class="font-semibold">Summary:</span> ${r.Summary || '—'}</div>
+        <div class="mt-1"><span class="font-semibold">Consequence:</span> ${r.Conequence || r.Consequence || '—'}</div>
+        <div class="mt-1"><span class="font-semibold">Remedy:</span> ${r.Remedy || '—'}</div>
+        <div class="mt-1"><span class="font-semibold">NHTSA #:</span> ${r.NHTSACampaignNumber || '—'}</div>
+      </div>
+    </details>`).join('');
+
+  recallCard.innerHTML = `
+    <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+      <h3 class="text-lg font-bold">Recalls</h3>
+      <div class="mt-3 space-y-3">${items}</div>
+    </div>`;
+  recallCard.classList.remove('hidden');
+  return recalls.results.length;
+}
+
+function renderActions(vin, decoded, recallCount){
+  const actions = [
+    {label:'Compare insurance rates', key:'insurance', desc:'See top carriers for this vehicle.'},
+    {label:'Check extended warranty options', key:'warranty', desc:'Protection for costly repairs.'},
+    {label:'Get auto loan/refi offers', key:'loans', desc:'Lower payments or finance smart.'},
+    {label:'Sell or get instant offer', key:'sell', desc:'See what you could get right now.'},
+    {label:'Find mechanic estimates', key:'mechanics', desc:'Find fair prices near you.'},
+    {label:'Lemon‑law / defect help', key:'lemonlaw', desc:'If repairs pile up, know your rights.'}
+  ];
+  const html = `
+    <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft">
+      <h3 class="text-lg font-bold">Next steps</h3>
+      <div class="mt-3 grid sm:grid-cols-2 gap-3">
+        ${actions.map(a => `
+          <a target="_blank" rel="nofollow sponsored noopener" href="${fillAffiliate(AFFILIATES[a.key], vin)}" class="block p-4 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-soft">
+            <div class="font-semibold">${a.label}</div>
+            <div class="text-xs text-slate-500 mt-1">${a.desc}</div>
+          </a>`).join('')}
+      </div>
+      <p class="mt-3 text-xs text-slate-500">Affiliate disclosure: We may earn when you click a partner link — at no cost to you.</p>
+    </div>`;
+  actionsCard.innerHTML = html;
+  actionsCard.classList.remove('hidden');
+}
+
+runBtn.addEventListener('click', runVIN);
+vinInput.addEventListener('keydown', e=>{ if(e.key==='Enter') runVIN(); });
+</script>
+</body>
+</html>
