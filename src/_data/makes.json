@@ -1,0 +1,602 @@
+[
+  {
+    "slug": "toyota",
+    "name": "Toyota",
+    "country": "Japan",
+    "founded": 1937,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["camry", "corolla", "rav4", "highlander", "tacoma", "tundra", "4runner", "prius"],
+    "description": "Toyota is the world's largest automaker by volume, renowned for reliability and resale value. Founded in Japan, Toyota pioneered hybrid technology with the Prius and continues to lead in quality and durability. The brand offers everything from economical sedans to rugged trucks and luxury vehicles through its Lexus division."
+  },
+  {
+    "slug": "honda",
+    "name": "Honda",
+    "country": "Japan",
+    "founded": 1948,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["civic", "accord", "cr-v", "pilot", "hr-v", "odyssey", "ridgeline"],
+    "description": "Honda is one of the most trusted automotive brands in America, known for engineering excellence and long-term reliability. The Civic and Accord are perennial best-sellers that set the standard for compact and midsize sedans. Honda also produces motorcycles, power equipment, and aircraft."
+  },
+  {
+    "slug": "ford",
+    "name": "Ford",
+    "country": "United States",
+    "founded": 1903,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["f-150", "explorer", "mustang", "escape", "bronco", "edge", "ranger", "expedition"],
+    "description": "Ford Motor Company is an American icon and the creator of the modern assembly line. The F-150 has been America's best-selling truck for over four decades, and the Mustang is one of the most recognized sports cars in history. Ford is aggressively expanding into electric vehicles with the Mustang Mach-E and F-150 Lightning."
+  },
+  {
+    "slug": "chevrolet",
+    "name": "Chevrolet",
+    "country": "United States",
+    "founded": 1911,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["silverado", "equinox", "malibu", "tahoe", "camaro", "corvette", "traverse", "colorado"],
+    "description": "Chevrolet is one of America's most popular and enduring automotive brands, offering a full lineup from compact cars to heavy-duty trucks. The Silverado competes head-to-head with Ford's F-150, while the Corvette is an American performance legend. Chevrolet is a division of General Motors and sells vehicles in over 100 countries."
+  },
+  {
+    "slug": "bmw",
+    "name": "BMW",
+    "country": "Germany",
+    "founded": 1916,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["3-series", "5-series", "x3", "x5", "x1", "7-series", "4-series"],
+    "description": "BMW, short for Bayerische Motoren Werke, is a German luxury automaker synonymous with driving pleasure and precision engineering. The brand's tagline 'The Ultimate Driving Machine' reflects its commitment to performance-oriented luxury vehicles. BMW offers a complete range of sedans, SUVs, coupes, and an expanding lineup of electric i-series models."
+  },
+  {
+    "slug": "mercedes-benz",
+    "name": "Mercedes-Benz",
+    "country": "Germany",
+    "founded": 1926,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["c-class", "e-class", "gle", "glc", "s-class", "gla", "a-class"],
+    "description": "Mercedes-Benz is the world's oldest automotive brand, tracing its lineage to Karl Benz's 1886 Patent-Motorwagen. Known for cutting-edge technology, safety innovations, and refined luxury, Mercedes sets the standard for premium automobiles. The brand spans from entry-level luxury to ultra-premium Maybach models and high-performance AMG variants."
+  },
+  {
+    "slug": "audi",
+    "name": "Audi",
+    "country": "Germany",
+    "founded": 1909,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["a4", "q5", "q7", "a6", "q3", "a3", "e-tron"],
+    "description": "Audi is a German luxury automaker owned by the Volkswagen Group, known for its quattro all-wheel-drive system and progressive design language. The brand combines cutting-edge technology with understated elegance across its sedan and SUV lineups. Audi's e-tron electric vehicles represent the brand's push toward sustainable luxury mobility."
+  },
+  {
+    "slug": "nissan",
+    "name": "Nissan",
+    "country": "Japan",
+    "founded": 1933,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["altima", "rogue", "pathfinder", "sentra", "frontier", "murano", "kicks", "versa"],
+    "description": "Nissan is a Japanese automaker that offers a broad range of affordable and reliable vehicles for the American market. The Rogue is one of the best-selling SUVs in the country, and the Altima remains a popular midsize sedan. Nissan was an early pioneer in mass-market electric vehicles with the Leaf."
+  },
+  {
+    "slug": "hyundai",
+    "name": "Hyundai",
+    "country": "South Korea",
+    "founded": 1967,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["elantra", "tucson", "santa-fe", "sonata", "kona", "palisade", "venue", "ioniq-5"],
+    "description": "Hyundai has transformed from a budget brand into a formidable competitor offering exceptional value, technology, and design. The South Korean automaker backs its vehicles with one of the best warranties in the industry at 10 years or 100,000 miles on the powertrain. Hyundai's IONIQ sub-brand is rapidly expanding in the electric vehicle market."
+  },
+  {
+    "slug": "kia",
+    "name": "Kia",
+    "country": "South Korea",
+    "founded": 1944,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["sorento", "sportage", "forte", "telluride", "soul", "k5", "seltos", "ev6"],
+    "description": "Kia has undergone a dramatic brand transformation, evolving from a value brand into a design-forward automaker with award-winning vehicles. The Telluride has won numerous SUV of the Year awards, and the EV6 represents Kia's ambitious electric future. Kia offers a 10-year, 100,000-mile powertrain warranty, among the best in the industry."
+  },
+  {
+    "slug": "volkswagen",
+    "name": "Volkswagen",
+    "country": "Germany",
+    "founded": 1937,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["jetta", "tiguan", "atlas", "taos", "golf", "id-4", "atlas-cross-sport"],
+    "description": "Volkswagen is one of the world's largest automakers, known for German engineering at accessible price points. The brand's name translates to 'People's Car,' reflecting its mission to offer quality vehicles for everyday drivers. VW is investing heavily in electrification with the ID series of electric vehicles."
+  },
+  {
+    "slug": "subaru",
+    "name": "Subaru",
+    "country": "Japan",
+    "founded": 1953,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["outback", "forester", "crosstrek", "wrx", "impreza", "ascent", "legacy", "brz"],
+    "description": "Subaru is known for its standard symmetrical all-wheel drive, boxer engines, and loyal customer base. The brand has a strong following among outdoor enthusiasts and is consistently ranked among the safest vehicles on the road. Subaru's commitment to safety and all-weather capability makes it especially popular in northern and mountainous states."
+  },
+  {
+    "slug": "mazda",
+    "name": "Mazda",
+    "country": "Japan",
+    "founded": 1920,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["cx-5", "mazda3", "cx-50", "cx-30", "cx-90", "mx-5-miata", "cx-9"],
+    "description": "Mazda is a Japanese automaker that prioritizes driving dynamics and design, often described as offering premium experiences at mainstream prices. The MX-5 Miata is the best-selling roadster in history, and the CX-5 is one of the top-rated compact SUVs. Mazda's Skyactiv technology focuses on efficiency without sacrificing performance."
+  },
+  {
+    "slug": "lexus",
+    "name": "Lexus",
+    "country": "Japan",
+    "founded": 1989,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["rx", "es", "is", "nx", "gx", "lx", "ux"],
+    "description": "Lexus is Toyota's luxury division and has become synonymous with refined comfort, whisper-quiet cabins, and legendary reliability. The RX was one of the first luxury crossover SUVs and remains a segment leader. Lexus consistently tops customer satisfaction and dependability surveys."
+  },
+  {
+    "slug": "acura",
+    "name": "Acura",
+    "country": "Japan",
+    "founded": 1986,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["tlx", "mdx", "rdx", "integra", "nsx"],
+    "description": "Acura is Honda's luxury and performance division, offering precision-crafted vehicles with a sportier edge than many luxury competitors. The MDX is one of the best-selling three-row luxury SUVs in America. Acura combines Honda's renowned reliability with premium materials and advanced technology."
+  },
+  {
+    "slug": "infiniti",
+    "name": "Infiniti",
+    "country": "Japan",
+    "founded": 1989,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["q50", "q60", "qx60", "qx80", "qx50", "qx55"],
+    "description": "Infiniti is Nissan's luxury brand, offering a lineup of performance-inspired sedans and SUVs with distinctive design. The brand is known for powerful VQ-series engines and driver-focused interiors. Infiniti competes in the entry and mid-luxury segments against Lexus, Acura, and German rivals."
+  },
+  {
+    "slug": "volvo",
+    "name": "Volvo",
+    "country": "Sweden",
+    "founded": 1927,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["xc60", "xc90", "xc40", "s60", "s90", "v60", "c40"],
+    "description": "Volvo is a Swedish luxury automaker with an unmatched reputation for safety innovation, having invented the three-point seatbelt in 1959. Now owned by Geely, Volvo combines Scandinavian minimalist design with cutting-edge safety technology. The brand has committed to becoming fully electric by 2030."
+  },
+  {
+    "slug": "jeep",
+    "name": "Jeep",
+    "country": "United States",
+    "founded": 1941,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["wrangler", "grand-cherokee", "cherokee", "compass", "renegade", "gladiator", "wagoneer"],
+    "description": "Jeep is an iconic American brand synonymous with off-road capability and rugged adventure. The Wrangler traces its lineage to the World War II military vehicle and remains the gold standard for off-road SUVs. Jeep is a division of Stellantis and offers vehicles ranging from compact crossovers to full-size luxury SUVs."
+  },
+  {
+    "slug": "ram",
+    "name": "Ram",
+    "country": "United States",
+    "founded": 2010,
+    "active": true,
+    "type": "truck",
+    "popularModels": ["1500", "2500", "3500", "promaster"],
+    "description": "Ram Trucks was spun off from Dodge in 2010 to create a dedicated truck brand under what is now Stellantis. The Ram 1500 is widely praised for its luxurious interior, smooth ride, and innovative features like the multifunction tailgate. Ram has rapidly gained market share in the fiercely competitive full-size truck segment."
+  },
+  {
+    "slug": "dodge",
+    "name": "Dodge",
+    "country": "United States",
+    "founded": 1900,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["charger", "challenger", "durango", "hornet"],
+    "description": "Dodge is an American performance brand known for muscle cars and powerful engines, especially the legendary Hemi V8. The Charger and Challenger are modern muscle car icons, and the Durango offers SUV practicality with performance credentials. Dodge is transitioning toward electrified performance under Stellantis."
+  },
+  {
+    "slug": "chrysler",
+    "name": "Chrysler",
+    "country": "United States",
+    "founded": 1925,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["pacifica", "300"],
+    "description": "Chrysler is one of America's oldest automotive brands, now operating as a smaller division within Stellantis. The Pacifica is widely regarded as the best minivan on the market, offering a plug-in hybrid option. Chrysler is being repositioned as a technology-forward brand with plans for full electrification."
+  },
+  {
+    "slug": "buick",
+    "name": "Buick",
+    "country": "United States",
+    "founded": 1903,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["encore", "enclave", "encore-gx", "envision"],
+    "description": "Buick is a General Motors brand that bridges the gap between mainstream and luxury, offering quiet and comfortable vehicles at accessible prices. The brand is one of the oldest in America and has a massive following in China. Buick has shifted to an all-SUV lineup in the US market."
+  },
+  {
+    "slug": "gmc",
+    "name": "GMC",
+    "country": "United States",
+    "founded": 1911,
+    "active": true,
+    "type": "truck",
+    "popularModels": ["sierra", "canyon", "terrain", "acadia", "yukon", "hummer-ev"],
+    "description": "GMC is General Motors' premium truck and SUV brand, offering upscale versions of Chevrolet's truck lineup with distinctive styling and additional features. The Sierra and Yukon are among the most popular full-size trucks and SUVs in America. GMC revived the Hummer nameplate as an all-electric supertruck."
+  },
+  {
+    "slug": "cadillac",
+    "name": "Cadillac",
+    "country": "United States",
+    "founded": 1902,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["xt5", "ct5", "escalade", "xt4", "xt6", "ct4", "lyriq"],
+    "description": "Cadillac is General Motors' luxury brand and was once the undisputed standard of the world in American luxury automobiles. The Escalade remains an icon of American luxury, and Cadillac is reinventing itself with the all-electric Lyriq. The brand competes with BMW, Mercedes-Benz, and Lexus in the premium market."
+  },
+  {
+    "slug": "lincoln",
+    "name": "Lincoln",
+    "country": "United States",
+    "founded": 1917,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["navigator", "aviator", "corsair", "nautilus"],
+    "description": "Lincoln is Ford's luxury division, known for serene interiors, smooth rides, and the iconic Navigator full-size SUV. The brand has undergone a significant renaissance with modern designs and the 'Quiet Flight' philosophy. Lincoln competes in the American luxury market against Cadillac, Lexus, and European imports."
+  },
+  {
+    "slug": "tesla",
+    "name": "Tesla",
+    "country": "United States",
+    "founded": 2003,
+    "active": true,
+    "type": "ev",
+    "popularModels": ["model-3", "model-y", "model-s", "model-x", "cybertruck"],
+    "description": "Tesla revolutionized the automotive industry by proving that electric vehicles could be desirable, high-performance, and practical for everyday use. The Model Y and Model 3 are among the best-selling vehicles in the world, and Tesla's Supercharger network is the largest fast-charging network in North America. Tesla also develops autonomous driving technology, energy storage, and solar products."
+  },
+  {
+    "slug": "rivian",
+    "name": "Rivian",
+    "country": "United States",
+    "founded": 2009,
+    "active": true,
+    "type": "ev",
+    "popularModels": ["r1t", "r1s"],
+    "description": "Rivian is an American electric vehicle startup that launched with the R1T, the first electric pickup truck to reach production. The R1S is a three-row electric SUV that competes with luxury offerings from traditional automakers. Rivian also builds electric delivery vans for Amazon."
+  },
+  {
+    "slug": "lucid",
+    "name": "Lucid",
+    "country": "United States",
+    "founded": 2007,
+    "active": true,
+    "type": "ev",
+    "popularModels": ["air", "gravity"],
+    "description": "Lucid Motors is an American electric vehicle manufacturer that produces the Lucid Air, an ultra-luxury EV sedan with industry-leading range. The Air Grand Touring achieved an EPA-estimated 516 miles of range, the highest of any EV. Lucid is backed by Saudi Arabia's Public Investment Fund and is expanding into the SUV market with the Gravity."
+  },
+  {
+    "slug": "porsche",
+    "name": "Porsche",
+    "country": "Germany",
+    "founded": 1931,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["cayenne", "macan", "911", "taycan", "panamera", "718"],
+    "description": "Porsche is a German sports car manufacturer and one of the most profitable automakers in the world. The 911 is one of the most iconic sports cars ever made, while the Cayenne and Macan SUVs drive the brand's sales volume. Porsche has successfully entered the electric market with the Taycan."
+  },
+  {
+    "slug": "land-rover",
+    "name": "Land Rover",
+    "country": "United Kingdom",
+    "founded": 1948,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["range-rover", "range-rover-sport", "defender", "discovery", "evoque", "velar"],
+    "description": "Land Rover is a British luxury SUV brand known for combining opulent interiors with genuine off-road capability. The Range Rover is the definitive luxury SUV and has been favored by royalty and celebrities for decades. Land Rover is owned by Tata Motors' Jaguar Land Rover division."
+  },
+  {
+    "slug": "jaguar",
+    "name": "Jaguar",
+    "country": "United Kingdom",
+    "founded": 1935,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["f-pace", "e-pace", "f-type", "xe", "xf"],
+    "description": "Jaguar is a British luxury automaker with a heritage rooted in elegant sports cars like the E-Type and XK series. The brand has expanded into SUVs with the F-Pace while maintaining its sporting character. Jaguar is transitioning to an all-electric luxury brand under Jaguar Land Rover."
+  },
+  {
+    "slug": "mitsubishi",
+    "name": "Mitsubishi",
+    "country": "Japan",
+    "founded": 1970,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["outlander", "eclipse-cross", "mirage", "outlander-sport"],
+    "description": "Mitsubishi is a Japanese automaker now partnered with the Renault-Nissan-Mitsubishi Alliance, offering affordable SUVs and crossovers. The Outlander is available as a plug-in hybrid, one of the most affordable PHEVs on the market. Mitsubishi is known for value pricing and generous warranty coverage."
+  },
+  {
+    "slug": "genesis",
+    "name": "Genesis",
+    "country": "South Korea",
+    "founded": 2015,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["g70", "g80", "g90", "gv70", "gv80", "gv60"],
+    "description": "Genesis is Hyundai's luxury brand that has rapidly established itself as a serious competitor to established German and Japanese luxury marques. The brand offers elegant design, advanced technology, and exceptional value compared to BMW and Mercedes-Benz. Genesis includes complimentary scheduled maintenance and valet service for owners."
+  },
+  {
+    "slug": "alfa-romeo",
+    "name": "Alfa Romeo",
+    "country": "Italy",
+    "founded": 1910,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["giulia", "stelvio", "tonale"],
+    "description": "Alfa Romeo is an Italian luxury automaker with a storied racing heritage dating back over a century. The Giulia sedan and Stelvio SUV offer passionate Italian design and engaging driving dynamics. Alfa Romeo is part of Stellantis and is expanding its lineup with new electrified models."
+  },
+  {
+    "slug": "fiat",
+    "name": "Fiat",
+    "country": "Italy",
+    "founded": 1899,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["500", "500x", "500e"],
+    "description": "Fiat is Italy's largest automaker and one of the founding brands of Stellantis. The Fiat 500 is an iconic city car known for its retro charm and compact dimensions. Fiat's US presence has been scaled back significantly, with the brand focusing on the electrified 500e."
+  },
+  {
+    "slug": "mini",
+    "name": "Mini",
+    "country": "United Kingdom",
+    "founded": 1959,
+    "active": true,
+    "type": "mainstream",
+    "popularModels": ["cooper", "countryman", "clubman", "cooper-se"],
+    "description": "Mini is a British brand owned by BMW, known for its iconic compact cars with go-kart-like handling and distinctive retro-modern design. The Cooper is available in hardtop, convertible, and performance JCW variants. Mini is expanding into electric vehicles with the Cooper SE."
+  },
+  {
+    "slug": "saab",
+    "name": "Saab",
+    "country": "Sweden",
+    "founded": 1945,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["9-3", "9-5", "9-2x", "9-7x", "900"],
+    "description": "Saab was a Swedish automaker known for quirky engineering, turbocharged performance, and aviation-inspired design. The brand had a devoted following but ceased production in 2011 after bankruptcy. Saab vehicles were known for their unique ignition placement between the seats and strong safety record."
+  },
+  {
+    "slug": "saturn",
+    "name": "Saturn",
+    "country": "United States",
+    "founded": 1985,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["aura", "vue", "outlook", "ion", "sky", "sl"],
+    "description": "Saturn was a General Motors brand created to compete with Japanese imports through a no-haggle pricing model and polymer body panels. The brand cultivated an enthusiastic owner community with annual 'Homecoming' events at its Spring Hill, Tennessee factory. Saturn was discontinued in 2010 during GM's bankruptcy restructuring."
+  },
+  {
+    "slug": "pontiac",
+    "name": "Pontiac",
+    "country": "United States",
+    "founded": 1926,
+    "active": false,
+    "type": "performance",
+    "popularModels": ["g6", "grand-am", "grand-prix", "gto", "firebird", "solstice", "vibe"],
+    "description": "Pontiac was General Motors' performance-oriented brand, famous for the GTO, Firebird, and Trans Am muscle cars. The brand's tagline 'We Build Excitement' captured its sporty image throughout the 1980s and 1990s. Pontiac was discontinued in 2010 as part of GM's bankruptcy restructuring."
+  },
+  {
+    "slug": "oldsmobile",
+    "name": "Oldsmobile",
+    "country": "United States",
+    "founded": 1897,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["cutlass", "alero", "intrigue", "bravada", "aurora", "442"],
+    "description": "Oldsmobile was one of America's oldest automotive brands and a cornerstone of General Motors for over a century. The Cutlass was America's best-selling car in the 1970s, and the 442 was a legendary muscle car. Oldsmobile was discontinued in 2004 after declining sales and brand identity challenges."
+  },
+  {
+    "slug": "mercury",
+    "name": "Mercury",
+    "country": "United States",
+    "founded": 1938,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["grand-marquis", "sable", "mountaineer", "mariner", "milan", "cougar"],
+    "description": "Mercury was Ford's mid-level brand, positioned between Ford and Lincoln, offering slightly upscale versions of Ford vehicles. The Grand Marquis was a staple of taxi fleets and police departments, and the brand had a strong following among traditional American car buyers. Mercury was discontinued in 2011 as Ford streamlined its brand portfolio."
+  },
+  {
+    "slug": "hummer",
+    "name": "Hummer",
+    "country": "United States",
+    "founded": 1992,
+    "active": false,
+    "type": "truck",
+    "popularModels": ["h2", "h3", "h1"],
+    "description": "Hummer was a brand of large SUVs and trucks derived from the military HMMWV (Humvee). The H2 became a cultural phenomenon in the early 2000s, symbolizing excess and off-road capability. The original Hummer brand was discontinued in 2010, but the nameplate was revived as a GMC sub-brand for an electric supertruck."
+  },
+  {
+    "slug": "plymouth",
+    "name": "Plymouth",
+    "country": "United States",
+    "founded": 1928,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["neon", "voyager", "barracuda", "road-runner", "prowler", "breeze"],
+    "description": "Plymouth was Chrysler's value brand, known for producing affordable vehicles and iconic muscle cars like the Barracuda and Road Runner. The Plymouth Voyager was one of the original minivans that created the segment in 1984. Plymouth was discontinued in 2001 as Chrysler consolidated its brand lineup."
+  },
+  {
+    "slug": "scion",
+    "name": "Scion",
+    "country": "Japan",
+    "founded": 2003,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["tc", "xb", "fr-s", "xd", "iq", "im"],
+    "description": "Scion was Toyota's youth-oriented brand, designed to attract younger buyers with affordable, customizable vehicles and a no-haggle pricing model. The tC coupe and xB box car developed cult followings, and the FR-S sports car became a tuner favorite. Scion was discontinued in 2016, with its best models absorbed into the Toyota lineup."
+  },
+  {
+    "slug": "suzuki",
+    "name": "Suzuki",
+    "country": "Japan",
+    "founded": 1909,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["grand-vitara", "sx4", "swift", "kizashi", "samurai", "xl-7"],
+    "description": "Suzuki was a Japanese automaker known for small, affordable vehicles and the legendary Samurai compact SUV. The brand left the US automobile market in 2012 due to low sales volume, though it remains a major global automaker. Suzuki continues to sell motorcycles and ATVs in the United States."
+  },
+  {
+    "slug": "isuzu",
+    "name": "Isuzu",
+    "country": "Japan",
+    "founded": 1916,
+    "active": false,
+    "type": "truck",
+    "popularModels": ["rodeo", "trooper", "ascender", "axiom", "hombre", "vehicross"],
+    "description": "Isuzu was known in the US market for rugged SUVs and trucks, particularly the Trooper and Rodeo. The brand exited the US consumer vehicle market in 2009 but continues to sell commercial trucks in North America. Isuzu remains one of the world's largest manufacturers of medium and heavy-duty diesel trucks."
+  },
+  {
+    "slug": "smart",
+    "name": "Smart",
+    "country": "Germany",
+    "founded": 1994,
+    "active": false,
+    "type": "mainstream",
+    "popularModels": ["fortwo", "forfour"],
+    "description": "Smart was a microcar brand created as a joint venture between Swatch and Mercedes-Benz, producing ultra-compact city cars. The ForTwo was the brand's signature model, measuring under nine feet long and perfect for urban parking. Smart exited the US market in 2019 but continues to sell electric vehicles in Europe and China."
+  },
+  {
+    "slug": "polestar",
+    "name": "Polestar",
+    "country": "Sweden",
+    "founded": 2017,
+    "active": true,
+    "type": "ev",
+    "popularModels": ["polestar-2", "polestar-3", "polestar-4"],
+    "description": "Polestar is a Swedish electric vehicle brand spun off from Volvo, focused on performance-oriented EVs with minimalist Scandinavian design. The Polestar 2 is a direct competitor to the Tesla Model 3, offering a refined driving experience and premium materials. Polestar is expanding its lineup with the Polestar 3 SUV and Polestar 4 coupe-SUV."
+  },
+  {
+    "slug": "fisker",
+    "name": "Fisker",
+    "country": "United States",
+    "founded": 2016,
+    "active": false,
+    "type": "ev",
+    "popularModels": ["ocean"],
+    "description": "Fisker was an American electric vehicle startup founded by Henrik Fisker, who previously created the Fisker Karma plug-in hybrid. The Fisker Ocean was a mid-size electric SUV that aimed to combine sustainability with accessible pricing. Fisker filed for bankruptcy in 2024 after production and distribution challenges."
+  },
+  {
+    "slug": "lotus",
+    "name": "Lotus",
+    "country": "United Kingdom",
+    "founded": 1948,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["emira", "eletre", "evija", "evora", "elise", "exige"],
+    "description": "Lotus is a British sports car manufacturer renowned for lightweight engineering and exceptional handling, following founder Colin Chapman's philosophy of 'simplify, then add lightness.' The Emira is the brand's final internal combustion sports car, while the Eletre marks Lotus's entry into the electric SUV market. Lotus is now owned by Geely and is expanding globally."
+  },
+  {
+    "slug": "maserati",
+    "name": "Maserati",
+    "country": "Italy",
+    "founded": 1914,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["ghibli", "levante", "quattroporte", "mc20", "grecale", "granturismo"],
+    "description": "Maserati is an Italian luxury automaker with a rich racing heritage, known for its distinctive trident logo and sonorous engines. The brand offers grand touring cars and luxury SUVs that blend Italian craftsmanship with sporting character. Maserati is part of Stellantis and is electrifying its lineup with the Folgore range."
+  },
+  {
+    "slug": "aston-martin",
+    "name": "Aston Martin",
+    "country": "United Kingdom",
+    "founded": 1913,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["db12", "vantage", "dbx", "dbs", "db11", "valkyrie"],
+    "description": "Aston Martin is a British ultra-luxury sports car maker, famously associated with James Bond and British elegance. The brand produces hand-crafted grand tourers and the DBX luxury SUV at its Gaydon factory. Aston Martin combines bespoke craftsmanship with high performance in a very exclusive package."
+  },
+  {
+    "slug": "bentley",
+    "name": "Bentley",
+    "country": "United Kingdom",
+    "founded": 1919,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["continental-gt", "bentayga", "flying-spur"],
+    "description": "Bentley is a British ultra-luxury automaker owned by the Volkswagen Group, producing handcrafted vehicles at its Crewe factory in England. The Continental GT is the definitive modern grand tourer, and the Bentayga was the first ultra-luxury SUV. Bentley combines unmatched cabin opulence with surprising performance capabilities."
+  },
+  {
+    "slug": "rolls-royce",
+    "name": "Rolls-Royce",
+    "country": "United Kingdom",
+    "founded": 1904,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["phantom", "ghost", "cullinan", "spectre", "wraith", "dawn"],
+    "description": "Rolls-Royce is the pinnacle of automotive luxury, hand-building vehicles at its Goodwood factory with unparalleled attention to detail. Each Rolls-Royce takes months to complete and can be bespoke-ordered to virtually any specification. The brand, owned by BMW, has entered the electric era with the Spectre."
+  },
+  {
+    "slug": "lamborghini",
+    "name": "Lamborghini",
+    "country": "Italy",
+    "founded": 1963,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["huracan", "urus", "revuelto", "aventador", "gallardo"],
+    "description": "Lamborghini is an Italian supercar manufacturer known for dramatic design, screaming engines, and outrageous performance. The Urus super-SUV has become the brand's best-selling model, making Lamborghini more accessible than ever. Lamborghini is owned by the Volkswagen Group through Audi and is transitioning to hybrid powertrains."
+  },
+  {
+    "slug": "ferrari",
+    "name": "Ferrari",
+    "country": "Italy",
+    "founded": 1939,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["roma", "296-gtb", "sf90", "f8-tributo", "812", "purosangue"],
+    "description": "Ferrari is the world's most iconic sports car brand, synonymous with Formula 1 racing, Italian passion, and automotive excellence. The Prancing Horse badge represents decades of engineering innovation and racing victories. Ferrari deliberately limits production to maintain exclusivity and has become one of the most valuable luxury brands in the world."
+  },
+  {
+    "slug": "mclaren",
+    "name": "McLaren",
+    "country": "United Kingdom",
+    "founded": 1985,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["720s", "750s", "artura", "gt", "765lt"],
+    "description": "McLaren is a British supercar manufacturer born from the legendary McLaren Formula 1 team. The brand produces lightweight, carbon-fiber supercars that emphasize driver engagement and technological innovation. McLaren's road cars share engineering DNA with its F1 race cars, using carbon fiber tubs and advanced aerodynamics."
+  },
+  {
+    "slug": "bugatti",
+    "name": "Bugatti",
+    "country": "France",
+    "founded": 1909,
+    "active": true,
+    "type": "performance",
+    "popularModels": ["chiron", "veyron", "mistral", "tourbillon"],
+    "description": "Bugatti is a French hyper-luxury automaker that produces the fastest and most expensive production cars in the world. The Chiron and its variants can exceed 300 mph, representing the absolute pinnacle of automotive engineering. Bugatti is now part of Bugatti Rimac, a joint venture between Porsche and Croatian EV maker Rimac."
+  },
+  {
+    "slug": "maybach",
+    "name": "Maybach",
+    "country": "Germany",
+    "founded": 1909,
+    "active": true,
+    "type": "luxury",
+    "popularModels": ["s-class-maybach", "gls-maybach", "eqs-maybach"],
+    "description": "Maybach is Mercedes-Benz's ultra-luxury sub-brand, revived in 2015 as Mercedes-Maybach after the standalone brand was discontinued in 2012. The Mercedes-Maybach S-Class represents the pinnacle of luxury sedan motoring, competing with Rolls-Royce and Bentley. Maybach models feature exclusive design elements, premium materials, and extended wheelbases for rear-seat comfort."
+  },
+  {
+    "slug": "delorean",
+    "name": "DeLorean",
+    "country": "United States",
+    "founded": 1975,
+    "active": false,
+    "type": "performance",
+    "popularModels": ["dmc-12"],
+    "description": "DeLorean Motor Company produced the iconic DMC-12, a stainless steel sports car with gull-wing doors that became a pop culture legend through the Back to the Future films. The original company produced fewer than 9,000 cars before going bankrupt in 1982. A new DeLorean Motor Company has announced plans for an electric vehicle revival."
+  }
+]

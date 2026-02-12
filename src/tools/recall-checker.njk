@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+title: "Free Recall Checker — Check Vehicle Recalls by VIN"
+description: "Check vehicle safety recalls by VIN using the official NHTSA recall database. Free, instant results with campaign details and remedies."
+permalink: /recall-checker/
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Recall Checker" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-4xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Free <span class="text-gradient">Recall Checker</span></h1>
+      <p class="mt-4 text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Enter your VIN to check for open safety recalls using the official NHTSA database. All recall repairs are performed free of charge by authorized dealers.</p>
+    </div>
+
+    <div class="vin-card glass-card rounded-2xl p-6 md:p-8 glow-cyan max-w-xl mx-auto carbon-panel">
+      <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter your 17-character VIN</label>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input id="vinInput" maxlength="17" placeholder="e.g., 1HGCM82633A004352" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+        <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Check Recalls</button>
+      </div>
+      <p class="mt-3 text-xs text-silver-500/70 text-left">We decode your VIN to identify the make, model, and year, then check for open recalls.</p>
+    </div>
+
+    <section class="mt-10 max-w-3xl mx-auto space-y-5">
+      <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Checking recalls...</div></div></div>
+      <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300 shadow-card" id="errorText"></div></div>
+      <div class="hidden" id="vehicleCard"></div>
+      <div class="hidden" id="recallCard"></div>
+    </section>
+  </div>
+</section>
+
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-4xl mx-auto px-4 py-20 prose-dark">
+    <h2>Understanding Vehicle Recalls</h2>
+    <p>A vehicle recall occurs when a manufacturer or NHTSA determines that a vehicle, equipment, car seat, or tire creates an unreasonable safety risk or fails to meet minimum safety standards. When a recall is issued, the manufacturer must fix the problem at no cost to the vehicle owner.</p>
+
+    <h2>Recall Statistics</h2>
+    <p>According to NHTSA, there are approximately 30,000 to 40,000 recalls issued each year across all vehicle types in the United States, affecting tens of millions of vehicles. In 2024 alone, major recalls included issues with airbag systems, brake components, fuel system leaks, and software glitches in advanced driver assistance systems.</p>
+
+    <div class="grid sm:grid-cols-3 gap-4 my-8">
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-3xl font-black text-volt-400">900+</div>
+        <div class="text-sm text-silver-400 mt-1">Recalls per year</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-3xl font-black text-volt-400">53M+</div>
+        <div class="text-sm text-silver-400 mt-1">Vehicles affected (2024)</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-3xl font-black text-volt-400">100%</div>
+        <div class="text-sm text-silver-400 mt-1">Free to repair</div>
+      </div>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What happens when a recall is issued?</h3>
+    <p>The manufacturer sends notification letters to registered owners, typically by first-class mail. The letter explains the defect, the potential safety risk, and how to schedule the free repair at an authorized dealership. You can also check for recalls online using your VIN.</p>
+
+    <h3>Do recall repairs cost anything?</h3>
+    <p>No. By federal law, manufacturers must remedy safety defects at no charge to vehicle owners. This includes the cost of parts, labor, and any reasonable towing to the dealership. If you already paid for a recall-related repair before the recall was announced, you may be eligible for reimbursement.</p>
+
+    <h3>Is there a time limit to get a recall fixed?</h3>
+    <p>For most recalls, there is no expiration date. However, tire recalls have a 60-day free remedy period, and child safety seat recalls have different timelines. It is always best to get recall repairs completed as soon as possible for your safety.</p>
+
+    <h3>What if I bought a used car with open recalls?</h3>
+    <p>Recall repairs carry over with the vehicle regardless of ownership changes. If you purchase a used vehicle with open recalls, you are entitled to the same free repair at an authorized dealership. Always check for open recalls before completing a used vehicle purchase.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
+  if(!vinInput||!runBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+  function renderRecalls(recalls){
+    if(!recalls||!recalls.results||!recalls.results.length){
+      recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recall Results</h3></div><div class="px-6 py-5"><div class="flex items-center gap-2 text-emerald-400 text-sm"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No open recalls found. Your vehicle is clear.</div></div></div>';
+      recallCard.classList.remove('hidden');return;
+    }
+    var items=recalls.results.map(function(r){return '<details class="p-4 rounded-xl bg-amber-500/[0.06] border border-amber-500/20"><summary class="cursor-pointer font-semibold text-amber-300 text-sm">'+(r.Component||'Recall')+' &mdash; '+(r.ReportReceivedDate||'')+'</summary><div class="mt-3 text-sm text-silver-400 space-y-1.5 pl-4"><div><strong class="text-silver-300">Summary:</strong> '+(r.Summary||'&mdash;')+'</div><div><strong class="text-silver-300">Consequence:</strong> '+(r.Conequence||r.Consequence||'&mdash;')+'</div><div><strong class="text-silver-300">Remedy:</strong> '+(r.Remedy||'&mdash;')+'</div><div><strong class="text-silver-300">NHTSA Campaign:</strong> '+(r.NHTSACampaignNumber||'&mdash;')+'</div></div></details>';}).join('');
+    recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recalls Found: '+recalls.results.length+'</h3></div><div class="px-6 py-5 space-y-3">'+items+'<p class="mt-4 text-xs text-silver-500">All recall repairs are free at authorized dealerships. Contact your nearest dealer to schedule the repair.</p></div></div>';
+    recallCard.classList.remove('hidden');
+  }
+  async function run(){
+    setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{};
+      vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-4 flex-wrap"><span class="text-sm font-bold text-white">'+(dec.ModelYear||'')+' '+(dec.Make||'')+' '+(dec.Model||'')+'</span><span class="text-xs px-3 py-1 rounded-lg bg-volt-600/10 border border-volt-500/20 text-volt-400 font-mono">VIN: '+vin+'</span></div></div>';
+      vehicleCard.classList.remove('hidden');
+      var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');
+      if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);renderRecalls(r);}
+      else{setError('Could not determine make/model/year from this VIN.');}
+    }catch(e){setError('Service is busy. Please try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);
+  vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>

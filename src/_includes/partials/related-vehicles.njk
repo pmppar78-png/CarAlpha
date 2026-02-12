@@ -1,0 +1,29 @@
+{# ── Related Vehicles Component ── #}
+{# Takes `vehicles` array: [{make, model, year, url}] #}
+
+{% if vehicles and vehicles.length %}
+<div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel">
+  <div class="steel-header px-5 py-3.5 flex items-center gap-2">
+    <svg class="w-4 h-4 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25h3.86c.274 0 .537-.114.727-.312l2.4-2.508a1.125 1.125 0 01.813-.343h2.65c.286 0 .56.11.765.313l2.4 2.508c.19.198.453.312.727.312h3.908a1.125 1.125 0 001.125-1.125v-3.375c0-.621-.504-1.125-1.125-1.125h-2.56a1.125 1.125 0 01-.884-.43l-1.89-2.41A1.125 1.125 0 0013.38 6H10.62a1.125 1.125 0 00-.884.43l-1.89 2.41a1.125 1.125 0 01-.884.43H4.5a1.125 1.125 0 00-1.125 1.125v3.375c0 .621.504 1.125 1.125 1.125z"/></svg>
+    <h3 class="text-sm font-bold text-white uppercase tracking-wider">Related Vehicles</h3>
+  </div>
+  <div class="p-4 space-y-1.5">
+    {% for vehicle in vehicles | limit(8) %}
+    <a href="{{ vehicle.url }}" class="flex items-center justify-between p-3 rounded-xl hover:bg-white/[0.03] transition-colors group">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-8 h-8 rounded-lg bg-white/[0.04] border border-white/[0.06] grid place-items-center shrink-0">
+          <span class="text-xs font-bold text-volt-400">{{ vehicle.year | truncate(2, true, "") }}</span>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm font-medium text-silver-300 group-hover:text-volt-400 transition-colors truncate">
+            {{ vehicle.make }} {{ vehicle.model }}
+          </div>
+          <div class="text-xs text-silver-500">{{ vehicle.year }}</div>
+        </div>
+      </div>
+      <svg class="w-4 h-4 text-silver-500/50 group-hover:text-volt-400 transition-colors shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

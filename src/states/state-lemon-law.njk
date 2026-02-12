@@ -1,0 +1,100 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: states
+  size: 1
+  alias: state
+permalink: "/states/{{ state.slug }}/lemon-law/"
+eleventyComputed:
+  title: "{{ state.name }} Lemon Law Guide — Know Your Rights"
+  description: "Complete guide to {{ state.name }}'s lemon law protections: what qualifies as a lemon, how to file a claim, required repair attempts, and how to get a refund or replacement vehicle."
+  breadcrumbs:
+    - label: Home
+      url: /
+    - label: States
+      url: /states/
+    - label: "{{ state.name }}"
+      url: "/states/{{ state.slug }}/"
+    - label: Lemon Law
+---
+
+<div class="prose-dark">
+
+<h2 id="overview">{{ state.name }} Lemon Law Overview</h2>
+
+{% if state.hasLemonLaw %}
+<p>{{ state.name }} has a lemon law designed to protect consumers who purchase new vehicles that turn out to have serious, unrepairable defects. {{ state.lemonLawSummary }}</p>
+
+<p>The purpose of lemon laws is to hold manufacturers accountable when they sell vehicles with substantial defects that cannot be corrected after a reasonable number of repair attempts. If your vehicle qualifies as a "lemon," you may be entitled to a full refund, a replacement vehicle, or a cash settlement.</p>
+{% else %}
+<p>{{ state.name }} does not have a specific state lemon law. However, consumers may still have protection under the federal Magnuson-Moss Warranty Act, which applies to all states and covers products sold with written warranties.</p>
+{% endif %}
+
+<h2 id="qualifies">What Qualifies as a Lemon in {{ state.name }}?</h2>
+
+<p>Generally, a vehicle may qualify as a lemon in {{ state.name }} if it meets the following criteria:</p>
+
+<ul>
+  <li><strong>Substantial defect:</strong> The vehicle has a defect or condition that substantially impairs its use, value, or safety. Minor cosmetic issues typically do not qualify.</li>
+  <li><strong>Covered period:</strong> The defect was reported to the manufacturer or an authorized dealer during the warranty period. Each state defines this window differently.</li>
+  <li><strong>Reasonable repair attempts:</strong> The manufacturer or dealer was given a reasonable number of opportunities to repair the defect. This typically means 3-4 attempts for the same problem, or the vehicle has been out of service for a cumulative total of 30 or more days.</li>
+  <li><strong>Not caused by owner:</strong> The defect was not caused by abuse, neglect, unauthorized modification, or an accident caused by the owner.</li>
+</ul>
+
+<h2 id="how-to-file">How to File a Lemon Law Claim in {{ state.name }}</h2>
+
+<p>If you believe your vehicle qualifies as a lemon, follow these steps to protect your rights and build the strongest possible case:</p>
+
+<ol>
+  <li><strong>Document every repair visit.</strong> Keep copies of all repair orders, invoices, and correspondence with the dealer and manufacturer. Note the date, mileage, description of the problem, and what was done.</li>
+  <li><strong>Send written notice to the manufacturer.</strong> Most state lemon laws require you to send a formal written notice to the manufacturer (not just the dealer) describing the defect and requesting it be repaired. Send this via certified mail with return receipt.</li>
+  <li><strong>Allow a final repair attempt.</strong> After sending written notice, you must typically allow the manufacturer one final opportunity to repair the defect.</li>
+  <li><strong>File for arbitration or legal action.</strong> If the final repair attempt fails, you can file for manufacturer-sponsored arbitration, state-sponsored arbitration, or pursue legal action. Many states require you to attempt arbitration before filing a lawsuit.</li>
+  <li><strong>Consider hiring a lemon law attorney.</strong> Most lemon law attorneys work on contingency, meaning they only get paid if you win. Under most state lemon laws, the manufacturer is required to pay your attorney fees if you prevail.</li>
+</ol>
+
+<div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
+  <h3 class="text-xl font-bold text-white mb-3">Think You Have a Lemon?</h3>
+  <p class="text-silver-400 mb-6 max-w-lg mx-auto">Connect with an experienced {{ state.name }} lemon law attorney for a free case evaluation. Most work on contingency with no upfront costs.</p>
+  <a href="/go/lemon-law/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
+    Free Lemon Law Consultation
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+  </a>
+  <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
+</div>
+
+<h2 id="remedies">Remedies Available Under {{ state.name }} Lemon Law</h2>
+
+<p>If your claim is successful, you may be entitled to one of the following remedies:</p>
+
+<ul>
+  <li><strong>Full refund:</strong> The manufacturer refunds the full purchase price of the vehicle, including taxes, registration fees, and finance charges. A reasonable offset for the miles you drove before the first repair attempt may be deducted.</li>
+  <li><strong>Replacement vehicle:</strong> The manufacturer provides a comparable replacement vehicle of equal value and similar features.</li>
+  <li><strong>Cash settlement:</strong> In some cases, manufacturers offer a cash settlement to resolve the claim without providing a full refund or replacement. Always have an attorney review settlement offers before accepting.</li>
+</ul>
+
+<h2 id="federal">Federal Lemon Law Protection</h2>
+
+<p>In addition to {{ state.name }}'s state lemon law, you may also have rights under the federal Magnuson-Moss Warranty Act. This federal law applies when:</p>
+
+<ul>
+  <li>A product is sold with a written warranty</li>
+  <li>The product fails to conform to the warranty after a reasonable number of repair attempts</li>
+  <li>The warranty provider (manufacturer) refuses to honor the warranty terms</li>
+</ul>
+
+<p>The Magnuson-Moss Warranty Act can apply to both new and used vehicles that are still under manufacturer warranty. It also allows consumers to recover attorney fees and court costs if they prevail.</p>
+
+<h2 id="tips">Tips for Strengthening Your Lemon Law Claim</h2>
+
+<ol>
+  <li><strong>Always report problems in writing.</strong> Email or written service requests create a paper trail that is harder to dispute than verbal complaints.</li>
+  <li><strong>Take your vehicle to authorized dealers only.</strong> Repairs performed by independent shops may weaken your claim, as the manufacturer can argue they did not have a proper opportunity to fix the issue.</li>
+  <li><strong>Do not accept verbal promises.</strong> If a dealer promises that a problem will be fixed or monitored, ask them to document it on the repair order.</li>
+  <li><strong>Keep a detailed log.</strong> Record every instance of the defect, including dates, circumstances, and any safety concerns. Photos and video evidence can be valuable.</li>
+  <li><strong>Act quickly.</strong> Lemon law protections have time limits. The sooner you begin the claims process, the stronger your position.</li>
+</ol>
+
+<p>For more information about federal lemon law protections, see our <a href="/guides/lemon-law/federal-lemon-law/">Federal Lemon Law Guide</a>.</p>
+
+</div>

@@ -1,0 +1,161 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: makes
+  size: 1
+  alias: make
+permalink: "/makes/{{ make.slug }}/"
+eleventyComputed:
+  title: "{{ make.name }} VIN Decoder & Recall Check — Car Alpha"
+  description: "Free {{ make.name }} VIN decoder and recall checker. Decode any {{ make.name }} VIN for full specs, safety recalls, and AI-powered guidance."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "name": "{{ make.name }}",
+  "description": "{{ make.description | truncate(160) }}",
+  "url": "https://www.caralpha.com/makes/{{ make.slug }}/"
+}
+</script>
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: make.name }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+
+    {# Make Header #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm carbon-panel mb-10">
+      <div class="steel-header px-8 py-5">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-black text-white">{{ make.name }}</h1>
+            <div class="flex items-center gap-4 mt-2 text-sm text-silver-400">
+              <span>{{ make.country }}</span>
+              <span>&middot;</span>
+              <span>Founded {{ make.founded }}</span>
+              <span>&middot;</span>
+              {% if make.active %}
+                <span class="text-emerald-400 font-medium">Active</span>
+              {% else %}
+                <span class="text-amber-400 font-medium">Discontinued</span>
+              {% endif %}
+            </div>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-volt-600/10 border border-volt-500/20 text-volt-400 text-xs font-bold uppercase tracking-wider">{{ make.type }}</span>
+        </div>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 leading-relaxed">{{ make.description }}</p>
+      </div>
+    </div>
+
+    {# Popular Models #}
+    {% if make.popularModels and make.popularModels.length %}
+    <div class="mb-12">
+      <h2 class="text-xl font-black text-white mb-6">Popular {{ make.name }} Models</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {% for modelSlug in make.popularModels %}
+          {% set modelData = false %}
+          {% for m in models %}
+            {% if m.makeSlug == make.slug and m.slug == modelSlug %}
+              {% set modelData = m %}
+            {% endif %}
+          {% endfor %}
+          {% if modelData %}
+            <a href="/makes/{{ make.slug }}/{{ modelSlug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
+              <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ modelData.name }}</div>
+              <div class="text-[10px] text-silver-500 mt-1">{{ modelData.bodyType }}</div>
+            </a>
+          {% else %}
+            <div class="glass-card rounded-xl p-4 carbon-panel text-center border border-white/[0.04]">
+              <div class="font-bold text-silver-400 text-sm capitalize">{{ modelSlug | replace("-", " ") }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {# VIN Decoder for this make #}
+    <div class="mb-12">
+      <h2 class="text-xl font-black text-white mb-6">Decode a {{ make.name }} VIN</h2>
+      <div class="vin-card glass-card rounded-2xl p-6 glow-cyan carbon-panel">
+        <label class="block text-sm font-bold text-silver-300 mb-3 tracking-wide uppercase">Enter your {{ make.name }} VIN</label>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input id="vinInput" maxlength="17" placeholder="Enter 17-character VIN" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+          <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Decode VIN</button>
+        </div>
+      </div>
+      <section class="mt-6 space-y-5">
+        <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Decoding...</div></div></div>
+        <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300" id="errorText"></div></div>
+        <div class="hidden" id="vehicleCard"></div>
+        <div class="hidden" id="recallCard"></div>
+      </section>
+    </div>
+
+    {# Recall Info #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">{{ make.name }} Recall Information</h2>
+      </div>
+      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed">
+        <p>{{ make.name }} vehicles, like all manufacturers, are subject to safety recalls issued by the National Highway Traffic Safety Administration (NHTSA). Recalls address safety-related defects or non-compliance with federal safety standards. All recall repairs are performed free of charge at authorized {{ make.name }} dealerships.</p>
+        <p class="mt-3">To check if a specific {{ make.name }} vehicle has open recalls, enter the VIN above or use our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a>.</p>
+      </div>
+    </div>
+
+    {# CTA Section #}
+    <div class="grid sm:grid-cols-3 gap-4">
+      <a href="/vin-decoder/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-10 h-10 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5z"/></svg>
+        </div>
+        <h3 class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">VIN Decoder</h3>
+        <p class="text-xs text-silver-500 mt-1">Decode any VIN instantly</p>
+      </a>
+      <a href="/recall-checker/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-10 h-10 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg>
+        </div>
+        <h3 class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Recall Checker</h3>
+        <p class="text-xs text-silver-500 mt-1">Check for open recalls</p>
+      </a>
+      <a href="/compare/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-10 h-10 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+        </div>
+        <h3 class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Compare Vehicles</h3>
+        <p class="text-xs text-silver-500 mt-1">Side-by-side comparison</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
+  if(!vinInput||!runBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+  async function run(){
+    setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{};
+      var f=[['Year',dec.ModelYear],['Make',dec.Make],['Model',dec.Model],['Trim',dec.Trim],['Engine',((dec.DisplacementL||'')+'L '+(dec.FuelTypePrimary||'')).trim()],['Body',dec.BodyClass],['Drive',dec.DriveType]].filter(function(x){return x[1]&&String(x[1]).trim()!=='';});
+      vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Vehicle Specs</h3></div><div class="px-6 py-5"><div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">'+f.map(function(x){return '<div class="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]"><div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">'+x[0]+'</div><div class="font-semibold text-white mt-0.5">'+x[1]+'</div></div>';}).join('')+'</div></div></div>';
+      vehicleCard.classList.remove('hidden');
+      try{var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);var cnt=(r&&r.results)?r.results.length:0;recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-2 '+(cnt>0?'text-amber-300':'text-emerald-400')+' text-sm font-bold">'+(cnt>0?cnt+' recall(s) found. <a href="/recall-checker/" class="underline ml-1">View details</a>':'No open recalls found.')+'</div></div>';recallCard.classList.remove('hidden');}}catch(e){}
+    }catch(e){setError('Service unavailable. Try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>

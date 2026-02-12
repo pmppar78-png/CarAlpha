@@ -1,0 +1,115 @@
+---
+layout: layouts/base.njk
+title: "Free VIN Check — No Cost Vehicle Report"
+description: "Get a free VIN check with full vehicle specs and safety recall data. No hidden fees, no account needed. Powered by official NHTSA data."
+permalink: /free-vin-check/
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Free VIN Check" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-4xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-volt-500/20 bg-volt-500/[0.06] text-xs font-semibold text-volt-400 mb-6">
+        <span class="w-2 h-2 rounded-full bg-volt-400 pulse-dot"></span>
+        Always Free &mdash; No Hidden Costs
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Free VIN <span class="text-gradient">Check</span></h1>
+      <p class="mt-4 text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Run a completely free VIN check to get vehicle specifications, open safety recalls, and AI-powered ownership guidance. No credit card, no sign-up, no catch.</p>
+    </div>
+
+    <div class="vin-card glass-card rounded-2xl p-6 md:p-8 glow-cyan max-w-xl mx-auto carbon-panel">
+      <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter VIN for free check</label>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input id="vinInput" maxlength="17" placeholder="e.g., 1HGCM82633A004352" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+        <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Free Check</button>
+      </div>
+      <p class="mt-3 text-xs text-silver-500/70 text-left">100% free. No account required. Data from official NHTSA sources.</p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-7 text-xs font-semibold text-silver-500">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        No Hidden Fees
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"/></svg>
+        No Account Needed
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Instant Results
+      </div>
+    </div>
+
+    <section class="mt-10 max-w-3xl mx-auto space-y-5">
+      <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Running free VIN check...</div></div></div>
+      <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300 shadow-card" id="errorText"></div></div>
+      <div class="hidden" id="vehicleCard"></div>
+      <div class="hidden" id="recallCard"></div>
+    </section>
+  </div>
+</section>
+
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-4xl mx-auto px-4 py-20 prose-dark">
+    <h2>What You Get with a Free VIN Check</h2>
+    <p>Car Alpha's free VIN check provides essential vehicle information sourced directly from the official NHTSA databases. Unlike services that charge for basic data, we believe every vehicle owner and buyer deserves free access to critical safety and specification information.</p>
+
+    <div class="grid sm:grid-cols-2 gap-4 my-8">
+      <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+        <h3 class="text-volt-400 font-bold text-sm mb-2">Included Free</h3>
+        <ul class="text-sm text-silver-400 space-y-1.5">
+          <li>Complete vehicle specifications</li>
+          <li>Open safety recall alerts</li>
+          <li>Recall campaign details</li>
+          <li>Engine and drivetrain info</li>
+          <li>Assembly plant data</li>
+          <li>AI-powered guidance</li>
+        </ul>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+        <h3 class="text-silver-300 font-bold text-sm mb-2">Available from Paid Services</h3>
+        <ul class="text-sm text-silver-400 space-y-1.5">
+          <li>Accident history reports</li>
+          <li>Odometer verification</li>
+          <li>Title brand checks</li>
+          <li>Ownership history count</li>
+          <li>Service and maintenance records</li>
+          <li>Auction and salvage records</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Why Choose Car Alpha for Your Free VIN Check?</h2>
+    <p>Many websites advertise "free VIN checks" but then require you to create an account, enter a credit card for a "free trial," or only show partial results behind a paywall. Car Alpha is different. Our VIN check is genuinely free with no strings attached. We pull data directly from the official NHTSA databases, and we never store your VIN or personal information.</p>
+    <p>We sustain our free service through optional affiliate recommendations. After your VIN check, we may suggest relevant services like insurance comparisons, warranty options, or mechanic estimates from trusted partners. These are always optional, clearly labeled, and only shown when they are relevant to your vehicle.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
+  if(!vinInput||!runBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+  async function run(){
+    setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{};
+      var f=[['Year',dec.ModelYear],['Make',dec.Make],['Model',dec.Model],['Trim',dec.Trim],['Engine',((dec.DisplacementL||'')+'L '+(dec.FuelTypePrimary||'')).trim()],['Body',dec.BodyClass],['Drive',dec.DriveType]].filter(function(x){return x[1]&&String(x[1]).trim()!=='';});
+      vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Free VIN Check Results</h3></div><div class="px-6 py-5"><div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">'+f.map(function(x){return '<div class="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]"><div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">'+x[0]+'</div><div class="font-semibold text-white mt-0.5">'+x[1]+'</div></div>';}).join('')+'</div></div></div>';
+      vehicleCard.classList.remove('hidden');
+      try{var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);var cnt=(r&&r.results)?r.results.length:0;recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-2 '+(cnt>0?'text-amber-300':'text-emerald-400')+' text-sm font-bold">'+(cnt>0?'<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg>'+cnt+' Recall(s) Found &mdash; <a href="/recall-checker/" class="underline">View Details</a>':'<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No open recalls found.')+'</div></div>';recallCard.classList.remove('hidden');}}catch(e){}
+    }catch(e){setError('Service unavailable. Try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>

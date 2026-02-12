@@ -1,0 +1,12 @@
+---
+permalink: /sitemap-index.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap.xml</loc>
+    {%- set lastItem = collections.sitemap | last %}
+    <lastmod>{% if lastItem %}{{ lastItem.date | dateFormat("yyyy-LL-dd") }}{% else %}{{ page.date | dateFormat("yyyy-LL-dd") }}{% endif %}</lastmod>
+  </sitemap>
+</sitemapindex>

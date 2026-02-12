@@ -1,0 +1,119 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: states
+  size: 1
+  alias: state
+permalink: "/states/{{ state.slug }}/registration/"
+eleventyComputed:
+  title: "{{ state.name }} Vehicle Registration — Fees, Process & Documents"
+  description: "How to register a vehicle in {{ state.name }}: registration fees, title transfer costs, required documents, and step-by-step process for new and used cars."
+  breadcrumbs:
+    - label: Home
+      url: /
+    - label: States
+      url: /states/
+    - label: "{{ state.name }}"
+      url: "/states/{{ state.slug }}/"
+    - label: Registration
+---
+
+<div class="prose-dark">
+
+<h2 id="fees">{{ state.name }} Registration Fees</h2>
+
+<div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel my-8 not-prose">
+  <div class="steel-header px-6 py-4">
+    <h3 class="font-bold text-white text-lg">Fee Summary</h3>
+  </div>
+  <div class="px-6 py-5">
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Registration Fee</div>
+        <div class="font-bold text-white mt-1">{{ state.registrationFeeRange }}</div>
+      </div>
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Title Fee</div>
+        <div class="font-bold text-white mt-1">{{ state.titleFee }}</div>
+      </div>
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Plate Fee</div>
+        <div class="font-bold text-white mt-1">{{ state.plateFee }}</div>
+      </div>
+    </div>
+    <p class="text-silver-400 text-sm leading-relaxed mt-4">{{ state.registrationNotes }}</p>
+  </div>
+</div>
+
+<h2 id="new-vehicle">Registering a New Vehicle in {{ state.name }}</h2>
+
+<p>When you purchase a new vehicle from a dealership in {{ state.name }}, the dealer typically handles the title and registration paperwork on your behalf. However, it helps to understand the process and know what to expect:</p>
+
+<ol>
+  <li><strong>Complete the sale.</strong> The dealer will collect the necessary sales tax or use tax at the time of purchase and submit the title application to the state.</li>
+  <li><strong>Provide proof of insurance.</strong> You must have valid auto insurance meeting {{ state.name }}'s minimum requirements ({{ state.insuranceMinimum }}) before the vehicle can be registered.</li>
+  <li><strong>Receive temporary plates.</strong> The dealer will issue temporary tags that allow you to drive the vehicle while your permanent registration and plates are processed.</li>
+  <li><strong>Receive your title and registration.</strong> Your permanent registration card and license plates will be mailed to you or available for pickup at your local DMV, typically within 4-8 weeks.</li>
+</ol>
+
+<h2 id="used-vehicle">Registering a Used Vehicle in {{ state.name }}</h2>
+
+<p>If you purchase a used vehicle from a private seller in {{ state.name }}, you will need to handle the registration and title transfer yourself. Gather the following documents and visit your local DMV or tag office:</p>
+
+<h3>Required Documents</h3>
+
+<ul>
+  <li><strong>Signed title (certificate of origin):</strong> The seller must sign the title over to you, including the odometer reading and sale price.</li>
+  <li><strong>Bill of sale:</strong> A written record of the transaction including the date, price, vehicle description, and both parties' signatures.</li>
+  <li><strong>Valid photo ID:</strong> Your driver's license or state-issued identification card.</li>
+  <li><strong>Proof of insurance:</strong> A current insurance card or policy declaration page showing coverage that meets {{ state.name }}'s requirements.</li>
+  <li><strong>Lien release (if applicable):</strong> If the previous owner had a loan on the vehicle, a lien release from the lender is required.</li>
+  {% if state.hasEmissions %}<li><strong>Emissions test certificate:</strong> A valid emissions test result may be required before registration in applicable {{ state.name }} counties.</li>{% endif %}
+  {% if state.hasSafetyInspection %}<li><strong>Safety inspection certificate:</strong> A current safety inspection is required for registration in {{ state.name }}.</li>{% endif %}
+  <li><strong>Payment:</strong> Be prepared to pay the title fee ({{ state.titleFee }}), registration fee ({{ state.registrationFeeRange }}), and any applicable sales or use tax.</li>
+</ul>
+
+<h2 id="renewal">Renewing Your Registration in {{ state.name }}</h2>
+
+<p>Vehicle registration in {{ state.name }} must be renewed periodically. Here is what you need to know about the renewal process:</p>
+
+<ul>
+  <li><strong>Renewal frequency:</strong> Registration is typically renewed annually or biennially, depending on the state and vehicle type.</li>
+  <li><strong>Renewal notice:</strong> The state DMV typically sends a renewal notice by mail 30-60 days before your registration expires.</li>
+  <li><strong>Online renewal:</strong> Many states, including {{ state.name }}, offer online registration renewal for eligible vehicles, saving you a trip to the DMV.</li>
+  <li><strong>Late fees:</strong> Driving with expired registration can result in fines and penalties. Renew on time to avoid additional costs.</li>
+  {% if state.hasEmissions %}<li><strong>Emissions compliance:</strong> You may need a current emissions test before you can renew your registration in applicable {{ state.name }} counties.</li>{% endif %}
+  {% if state.hasSafetyInspection %}<li><strong>Safety inspection:</strong> A current safety inspection may be required for renewal in {{ state.name }}.</li>{% endif %}
+</ul>
+
+<h2 id="title-transfer">Title Transfer in {{ state.name }}</h2>
+
+<p>When a vehicle changes ownership in {{ state.name }}, the title must be transferred to the new owner. The title fee is <strong>{{ state.titleFee }}</strong>. Here are important things to know:</p>
+
+<ul>
+  <li>Title transfers must typically be completed within 30 days of the sale to avoid late fees.</li>
+  <li>If the title is lost, the seller must apply for a duplicate title before the vehicle can be transferred.</li>
+  <li>If there is a lien on the vehicle, the lienholder must provide a release before the title can be transferred.</li>
+  <li>Out-of-state titles are accepted but may require additional verification steps.</li>
+</ul>
+
+<div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
+  <h3 class="text-xl font-bold text-white mb-3">Need Insurance for Your New Vehicle?</h3>
+  <p class="text-silver-400 mb-6 max-w-lg mx-auto">You will need proof of insurance before you can register your vehicle in {{ state.name }}. Compare rates from top carriers in minutes.</p>
+  <a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
+    Compare {{ state.name }} Insurance Rates
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+  </a>
+  <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
+</div>
+
+<h2 id="special">Special Registration Situations</h2>
+
+<ul>
+  <li><strong>Moving to {{ state.name }}:</strong> New residents typically have 30-90 days to register their out-of-state vehicle. You will need to transfer your title and obtain {{ state.name }} plates.</li>
+  <li><strong>Military personnel:</strong> Active duty military members stationed in {{ state.name }} may be exempt from certain registration requirements or fees.</li>
+  <li><strong>Inherited vehicles:</strong> Vehicles received through inheritance may require additional documentation, such as a death certificate and probate documents.</li>
+  <li><strong>Rebuilt or salvage titles:</strong> Vehicles with salvage or rebuilt titles have additional inspection requirements before they can be registered for road use.</li>
+</ul>
+
+</div>

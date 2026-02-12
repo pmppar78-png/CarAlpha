@@ -1,0 +1,113 @@
+---
+layout: layouts/base.njk
+title: "VIN Number Breakdown — What Each Position Means"
+description: "Detailed breakdown of all 17 VIN positions. Learn exactly what each character in your Vehicle Identification Number encodes about your vehicle."
+permalink: /learn/vin-positions/
+order: 2
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Learn", url: "/learn/" }, { label: "VIN Position Breakdown" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-4xl mx-auto px-4 pt-12 pb-20">
+    <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-6">VIN Number <span class="text-gradient">Breakdown</span></h1>
+    <p class="text-lg text-silver-400 leading-relaxed mb-12">Every character in a VIN has a specific meaning. Here is a complete guide to all 17 positions and the information they encode.</p>
+
+    <div class="prose-dark">
+      <h2>VIN Structure Overview</h2>
+      <p>A standard VIN consists of 17 alphanumeric characters divided into three sections: the World Manufacturer Identifier (WMI), the Vehicle Descriptor Section (VDS), and the Vehicle Identifier Section (VIS). The letters I, O, and Q are never used to avoid confusion with the numbers 1, 0, and 9.</p>
+
+      {# Visual VIN breakdown #}
+      <div class="glass-card metallic-border rounded-2xl p-6 my-8 carbon-panel">
+        <div class="flex flex-wrap gap-1 justify-center mb-6">
+          {% set positions = ["1","H","G","C","M","8","2","6","3","3","A","0","0","4","3","5","2"] %}
+          {% for char in positions %}
+          <div class="w-10 h-12 rounded-lg bg-white/[0.04] border border-volt-500/20 grid place-items-center text-volt-400 font-mono font-bold text-lg">{{ char }}</div>
+          {% endfor %}
+        </div>
+        <div class="flex flex-wrap gap-1 justify-center text-[10px] text-silver-500 font-mono">
+          {% for i in range(1, 18) %}
+          <div class="w-10 text-center">{{ i }}</div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <h2>Position 1: Country of Manufacture</h2>
+      <p>The first character identifies the country where the vehicle was manufactured, not where the brand is headquartered. For example, a Toyota built in Kentucky will start with a different character than one built in Japan.</p>
+      <table>
+        <thead><tr><th>Character</th><th>Country</th></tr></thead>
+        <tbody>
+          <tr><td>1, 4, 5</td><td>United States</td></tr>
+          <tr><td>2</td><td>Canada</td></tr>
+          <tr><td>3</td><td>Mexico</td></tr>
+          <tr><td>J</td><td>Japan</td></tr>
+          <tr><td>K</td><td>South Korea</td></tr>
+          <tr><td>S</td><td>United Kingdom</td></tr>
+          <tr><td>W</td><td>Germany</td></tr>
+          <tr><td>Z</td><td>Italy</td></tr>
+          <tr><td>Y</td><td>Sweden or Finland</td></tr>
+          <tr><td>9</td><td>Brazil</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Position 2: Manufacturer</h2>
+      <p>The second character identifies the vehicle manufacturer or the company division. Combined with position 1, it narrows down the exact producer.</p>
+      <table>
+        <thead><tr><th>Character</th><th>Manufacturer</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Audi, Jaguar, or Mitsubishi (depends on country code)</td></tr>
+          <tr><td>B</td><td>BMW or Dodge</td></tr>
+          <tr><td>G</td><td>General Motors</td></tr>
+          <tr><td>H</td><td>Honda or Acura</td></tr>
+          <tr><td>L</td><td>Lincoln</td></tr>
+          <tr><td>N</td><td>Nissan or Infiniti</td></tr>
+          <tr><td>T</td><td>Toyota or Lexus</td></tr>
+          <tr><td>V</td><td>Volkswagen or Volvo</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Position 3: Vehicle Type or Manufacturing Division</h2>
+      <p>The third character, combined with the first two, completes the World Manufacturer Identifier (WMI). It typically indicates the vehicle type (passenger car, truck, SUV) or the specific manufacturing division within a larger corporation. For example, in a General Motors VIN, position 3 might distinguish between Chevrolet, GMC, Buick, and Cadillac.</p>
+
+      <h2>Positions 4-8: Vehicle Descriptor Section</h2>
+      <p>These five characters describe the specific attributes of the vehicle. The meaning of each position in this section varies by manufacturer, but collectively they encode the following information:</p>
+      <ul>
+        <li><strong>Position 4:</strong> Typically the body type, platform, or model line (sedan, coupe, SUV, etc.)</li>
+        <li><strong>Position 5:</strong> Often the model series or restraint type (airbag configuration, seatbelt type)</li>
+        <li><strong>Position 6:</strong> Usually the body style (2-door, 4-door, wagon, convertible) or the model designation</li>
+        <li><strong>Position 7:</strong> Commonly the engine type (4-cylinder, V6, V8, electric motor, turbo variant)</li>
+        <li><strong>Position 8:</strong> Frequently the transmission type (manual, automatic, CVT) or additional model info</li>
+      </ul>
+
+      <h2>Position 9: Check Digit</h2>
+      <p>Position 9 is a calculated verification digit that validates the entire VIN. Each character in the VIN is assigned a numerical value and a positional weight. These values are multiplied, summed, and divided by 11. The remainder becomes the check digit. If the remainder is 10, the letter X is used. This mathematical verification helps detect VIN fraud, data entry errors, and tampering.</p>
+
+      <h2>Position 10: Model Year</h2>
+      <p>The tenth character encodes the vehicle's model year. Note that the model year may differ from the calendar year the vehicle was actually built, as manufacturers often begin producing next year's models in the current calendar year.</p>
+      <table>
+        <thead><tr><th>Character</th><th>Model Year</th><th>Character</th><th>Model Year</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>2010</td><td>K</td><td>2019</td></tr>
+          <tr><td>B</td><td>2011</td><td>L</td><td>2020</td></tr>
+          <tr><td>C</td><td>2012</td><td>M</td><td>2021</td></tr>
+          <tr><td>D</td><td>2013</td><td>N</td><td>2022</td></tr>
+          <tr><td>E</td><td>2014</td><td>P</td><td>2023</td></tr>
+          <tr><td>F</td><td>2015</td><td>R</td><td>2024</td></tr>
+          <tr><td>G</td><td>2016</td><td>S</td><td>2025</td></tr>
+          <tr><td>H</td><td>2017</td><td>T</td><td>2026</td></tr>
+          <tr><td>J</td><td>2018</td><td>V</td><td>2027</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Position 11: Assembly Plant</h2>
+      <p>The eleventh character identifies the specific manufacturing plant where the vehicle was assembled. Each manufacturer assigns its own plant codes, so the same letter may represent different plants for different manufacturers. For instance, a Ford VIN with plant code "A" indicates the Atlanta assembly plant, while a Toyota VIN with the same code might indicate a completely different facility.</p>
+
+      <h2>Positions 12-17: Production Sequence Number</h2>
+      <p>The final six characters form the vehicle's unique serial number within its model, year, and assembly plant. This is a sequential number assigned as each vehicle comes off the production line. These digits make each VIN truly unique and are essential for identifying a specific individual vehicle among thousands of identical models.</p>
+
+      <h2>Decode Your VIN Now</h2>
+      <p>Now that you understand what each VIN position means, use our free <a href="/vin-decoder/">VIN Decoder</a> to translate your vehicle's VIN into readable specifications. The decoder pulls data from the official NHTSA VPIC database to give you accurate, comprehensive vehicle information instantly.</p>
+    </div>
+  </div>
+</section>

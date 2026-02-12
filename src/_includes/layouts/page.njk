@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+---
+
+{# ── Page Layout — extends base with breadcrumbs, content area, optional sidebar ── #}
+
+<div class="max-w-6xl mx-auto px-4 py-10 md:py-16">
+
+  {# ── Breadcrumbs ── #}
+  {% if breadcrumbs and breadcrumbs.length %}
+    {% include "partials/breadcrumbs.njk" %}
+  {% endif %}
+
+  {# ── Page Header ── #}
+  {% if title %}
+  <header class="mb-10">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">{{ title }}</h1>
+    {% if description %}
+    <p class="mt-4 text-lg text-silver-400 max-w-3xl leading-relaxed">{{ description }}</p>
+    {% endif %}
+  </header>
+  {% endif %}
+
+  <div class="divider mb-10"></div>
+
+  {# ── Content + Optional Sidebar ── #}
+  <div class="{% if sidebar %}flex flex-col lg:flex-row gap-10{% endif %}">
+
+    {# ── Main Content Area ── #}
+    <div class="{% if sidebar %}flex-1 min-w-0{% else %}w-full{% endif %}">
+      <div class="prose-dark">
+        {{ content | safe }}
+      </div>
+    </div>
+
+    {# ── Sidebar ── #}
+    {% if sidebar %}
+    <aside class="w-full lg:w-80 shrink-0 space-y-6">
+      {% if sidebar == "monetization" %}
+        {% include "partials/monetization.njk" %}
+      {% elif sidebar == "custom" %}
+        {{ sidebarContent | safe }}
+      {% else %}
+        {% include "partials/monetization.njk" %}
+      {% endif %}
+    </aside>
+    {% endif %}
+
+  </div>
+</div>

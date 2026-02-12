@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+title: "Page Not Found — Car Alpha"
+description: "The page you are looking for does not exist or has been moved. Use our VIN decoder, recall checker, or browse our vehicle resources."
+permalink: /404.html
+---
+
+<section class="relative overflow-hidden min-h-[70vh] flex items-center">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="absolute inset-0 perf-grid"></div>
+
+  <div class="relative max-w-2xl mx-auto px-4 py-20 text-center">
+    {# Large 404 display #}
+    <div class="mb-8">
+      <div class="text-[120px] md:text-[160px] font-black leading-none tracking-tighter text-gradient select-none" aria-hidden="true">404</div>
+    </div>
+
+    {# Error message #}
+    <h1 class="text-2xl md:text-3xl font-bold text-white mb-4">Page Not Found</h1>
+    <p class="text-silver-400 text-lg leading-relaxed mb-10 max-w-lg mx-auto">The page you are looking for does not exist, may have been moved, or is temporarily unavailable. Use the options below to get back on track.</p>
+
+    {# Quick action cards #}
+    <div class="grid sm:grid-cols-3 gap-4 mb-10">
+      <a href="/tools/vin-decoder/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-12 h-12 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+        </div>
+        <div class="font-semibold text-white text-sm group-hover:text-volt-400 transition-colors">VIN Decoder</div>
+        <div class="text-xs text-silver-500 mt-1">Decode any VIN instantly</div>
+      </a>
+
+      <a href="/recalls/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-12 h-12 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+          </svg>
+        </div>
+        <div class="font-semibold text-white text-sm group-hover:text-volt-400 transition-colors">Recall Checker</div>
+        <div class="text-xs text-silver-500 mt-1">Check for safety recalls</div>
+      </a>
+
+      <a href="/makes/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-12 h-12 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
+          </svg>
+        </div>
+        <div class="font-semibold text-white text-sm group-hover:text-volt-400 transition-colors">Browse Makes</div>
+        <div class="text-xs text-silver-500 mt-1">Explore all vehicle makes</div>
+      </a>
+    </div>
+
+    {# VIN search #}
+    <div class="glass-card metallic-border rounded-2xl p-6 carbon-panel max-w-md mx-auto mb-10">
+      <p class="text-sm text-silver-400 mb-3">Have a VIN? Decode it right here.</p>
+      <form action="/tools/vin-decoder/" method="get" class="flex gap-2">
+        <input
+          type="text"
+          name="vin"
+          placeholder="Enter 17-character VIN"
+          maxlength="17"
+          class="input-premium flex-1 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-silver-500 font-mono tracking-wider uppercase"
+          aria-label="Vehicle Identification Number"
+        />
+        <button type="submit" class="btn-primary px-5 py-2.5 rounded-lg text-sm font-bold text-white whitespace-nowrap">Decode</button>
+      </form>
+    </div>
+
+    {# Helpful links #}
+    <div class="text-sm text-silver-500">
+      <p class="mb-3">Or try one of these popular pages:</p>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <a href="/" class="text-volt-400 hover:text-volt-300 transition-colors">Home</a>
+        <a href="/learn/" class="text-volt-400 hover:text-volt-300 transition-colors">Learn About VINs</a>
+        <a href="/blog/" class="text-volt-400 hover:text-volt-300 transition-colors">Blog</a>
+        <a href="/tools/free-vin-check/" class="text-volt-400 hover:text-volt-300 transition-colors">Free VIN Check</a>
+        <a href="/tools/compare/" class="text-volt-400 hover:text-volt-300 transition-colors">Compare Vehicles</a>
+      </div>
+    </div>
+  </div>
+</section>

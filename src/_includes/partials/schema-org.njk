@@ -1,0 +1,188 @@
+{# ── Schema.org JSON-LD Template ── #}
+{# Conditional rendering based on `schemaType` front matter variable #}
+{# Supported types: WebSite, Organization, Vehicle, Article, BreadcrumbList, FAQPage, HowTo #}
+
+{% if schemaType == "WebSite" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Car Alpha",
+  "alternateName": "CarAlpha",
+  "url": "https://www.caralpha.com",
+  "description": "Free VIN lookup with recalls & specs plus AI that explains next steps: insurance savings, warranty value, repairs, loans/refi, lemon-law options and more.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Car Alpha",
+    "url": "https://www.caralpha.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.caralpha.com/assets/images/logo.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.caralpha.com/search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{% endif %}
+
+{% if schemaType == "Organization" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Car Alpha",
+  "url": "https://www.caralpha.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.caralpha.com/assets/images/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "description": "Consumer-first vehicle intelligence platform. Free VIN lookup, recall checks, and AI-powered guidance for insurance, warranty, repairs, loans, and lemon law.",
+  "foundingDate": "2024",
+  "sameAs": [],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://www.caralpha.com/contact/"
+  }
+}
+</script>
+{% endif %}
+
+{% if schemaType == "Vehicle" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Car",
+  "name": "{{ year }} {{ make }} {{ model }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ make }}"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "{{ make }}"
+  },
+  "model": "{{ model }}",
+  "vehicleModelDate": "{{ year }}",
+  {% if bodyStyle %}"bodyType": "{{ bodyStyle }}",{% endif %}
+  {% if driveType %}"driveWheelConfiguration": "{{ driveType }}",{% endif %}
+  {% if engineType %}"vehicleEngine": {
+    "@type": "EngineSpecification",
+    "name": "{{ engineType }}"
+  },{% endif %}
+  {% if fuelType %}"fuelType": "{{ fuelType }}",{% endif %}
+  {% if transmission %}"vehicleTransmission": "{{ transmission }}",{% endif %}
+  "url": "{{ 'https://www.caralpha.com' + page.url }}"
+}
+</script>
+{% endif %}
+
+{% if schemaType == "Article" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "datePublished": "{{ date }}",
+  {% if updated %}"dateModified": "{{ updated }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ author or 'Car Alpha Editorial' }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Car Alpha",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.caralpha.com/assets/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ 'https://www.caralpha.com' + page.url }}"
+  }{% if ogImage %},
+  "image": "{{ ogImage }}"{% endif %}
+}
+</script>
+{% endif %}
+
+{% if schemaType == "BreadcrumbList" and breadcrumbs and breadcrumbs.length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for item in breadcrumbs %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": "{{ item.label }}"{% if item.url %},
+      "item": "https://www.caralpha.com{{ item.url }}"{% endif %}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if schemaType == "FAQPage" and faqs and faqs.length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if schemaType == "HowTo" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  {% if totalTime %}"totalTime": "{{ totalTime }}",{% endif %}
+  {% if estimatedCost %}"estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "{{ estimatedCost }}"
+  },{% endif %}
+  {% if howToSteps and howToSteps.length %}
+  "step": [
+    {% for step in howToSteps %}
+    {
+      "@type": "HowToStep",
+      "position": {{ loop.index }},
+      "name": "{{ step.name }}",
+      "text": "{{ step.text }}"{% if step.image %},
+      "image": "{{ step.image }}"{% endif %}{% if step.url %},
+      "url": "{{ step.url }}"{% endif %}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],{% endif %}
+  "url": "{{ 'https://www.caralpha.com' + page.url }}"
+}
+</script>
+{% endif %}

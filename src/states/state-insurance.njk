@@ -1,0 +1,119 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: states
+  size: 1
+  alias: state
+permalink: "/states/{{ state.slug }}/insurance/"
+eleventyComputed:
+  title: "Car Insurance in {{ state.name }} — Requirements & Best Rates"
+  description: "Everything you need to know about car insurance in {{ state.name }}: minimum coverage requirements ({{ state.insuranceMinimum }}), average costs, and tips to find the cheapest rates."
+  breadcrumbs:
+    - label: Home
+      url: /
+    - label: States
+      url: /states/
+    - label: "{{ state.name }}"
+      url: "/states/{{ state.slug }}/"
+    - label: Insurance
+---
+
+<div class="prose-dark">
+
+<h2 id="requirements">{{ state.name }} Minimum Insurance Requirements</h2>
+
+<p>{{ state.name }} requires drivers to carry at least the following minimum liability insurance coverage: <strong>{{ state.insuranceMinimum }}</strong>.</p>
+
+<div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel my-8 not-prose">
+  <div class="steel-header px-6 py-4">
+    <h3 class="font-bold text-white text-lg">Coverage Breakdown</h3>
+  </div>
+  <div class="px-6 py-5">
+    <p class="text-silver-400 text-sm leading-relaxed mb-4">{{ state.insuranceMinimumDetail }}</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Minimum Coverage</div>
+        <div class="font-bold text-white text-lg mt-1">{{ state.insuranceMinimum }}</div>
+      </div>
+      {% if state.averageInsuranceCost %}
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Average Annual Premium</div>
+        <div class="font-bold text-white text-lg mt-1">${{ state.averageInsuranceCost }}</div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<p>While these are the state minimums, insurance experts generally recommend carrying higher limits to fully protect your assets. A common recommended policy is 100/300/100, especially if you have significant savings, own a home, or could be held personally liable in a serious accident.</p>
+
+<h2 id="average-costs">Average Car Insurance Costs in {{ state.name }}</h2>
+
+{% if state.averageInsuranceCost %}
+<p>The average annual car insurance premium in {{ state.name }} is approximately <strong>${{ state.averageInsuranceCost }}</strong>. However, your actual rate will vary significantly based on several factors:</p>
+{% else %}
+<p>Car insurance rates in {{ state.name }} vary significantly based on several factors:</p>
+{% endif %}
+
+<ul>
+  <li><strong>Driving record:</strong> Clean records qualify for the lowest rates. A single at-fault accident can increase premiums by 20-40%.</li>
+  <li><strong>Age and experience:</strong> Drivers under 25 and over 70 typically pay more. The lowest rates are generally available to drivers aged 30-60.</li>
+  <li><strong>Vehicle type:</strong> Newer, more expensive vehicles cost more to insure. Safety features and good crash test ratings can help lower rates.</li>
+  <li><strong>Credit score:</strong> In most states, including {{ state.name }}, insurers use credit-based insurance scores as a rating factor.</li>
+  <li><strong>Location:</strong> Urban areas with higher traffic density and theft rates typically have higher premiums than rural areas.</li>
+  <li><strong>Coverage level:</strong> Higher deductibles lower premiums, while comprehensive and collision coverage adds cost but protects your vehicle.</li>
+</ul>
+
+<h2 id="tips">Tips to Save on Car Insurance in {{ state.name }}</h2>
+
+<p>There are several proven strategies to reduce your car insurance costs in {{ state.name }} without sacrificing the coverage you need:</p>
+
+<ol>
+  <li><strong>Compare at least 3-5 carriers.</strong> Rates vary dramatically between insurers for the same coverage. Shopping around is the single most effective way to save money.</li>
+  <li><strong>Bundle policies.</strong> Many carriers offer discounts of 10-25% when you combine auto and home or renters insurance.</li>
+  <li><strong>Ask about discounts.</strong> Good driver, good student, military, professional organization, and low-mileage discounts are widely available but not always automatically applied.</li>
+  <li><strong>Raise your deductible.</strong> Increasing your deductible from $250 to $1,000 can lower your premium by 15-30%. Just make sure you can afford the deductible if you need to file a claim.</li>
+  <li><strong>Maintain a clean record.</strong> Avoiding tickets and accidents is the best long-term strategy for low rates. Many states offer point reduction courses.</li>
+  <li><strong>Review your coverage annually.</strong> As your vehicle ages, you may want to drop comprehensive and collision coverage if the car's value no longer justifies the premium cost.</li>
+  <li><strong>Consider telematics programs.</strong> Many insurers offer usage-based insurance programs that can save safe drivers 10-40% by tracking driving behavior.</li>
+</ol>
+
+<div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
+  <h3 class="text-xl font-bold text-white mb-3">Compare {{ state.name }} Insurance Rates</h3>
+  <p class="text-silver-400 mb-6 max-w-lg mx-auto">See quotes from top carriers in {{ state.name }} and find the best rate for your situation. It takes less than 5 minutes.</p>
+  <a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
+    Get Free Quotes
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+  </a>
+  <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
+</div>
+
+<h2 id="types">Types of Coverage Available in {{ state.name }}</h2>
+
+<p>Beyond the state minimum, {{ state.name }} drivers should consider the following coverage types for comprehensive protection:</p>
+
+<ul>
+  <li><strong>Collision coverage:</strong> Pays for damage to your vehicle after an accident, regardless of fault. Required if your vehicle is financed or leased.</li>
+  <li><strong>Comprehensive coverage:</strong> Covers theft, vandalism, weather damage, animal strikes, and other non-collision events. Also typically required for financed vehicles.</li>
+  <li><strong>Uninsured/underinsured motorist coverage:</strong> Protects you if you are hit by a driver with no insurance or insufficient coverage. Highly recommended in every state.</li>
+  <li><strong>Medical payments / PIP:</strong> Covers medical expenses for you and your passengers regardless of fault. PIP (Personal Injury Protection) may be required in {{ state.name }}.</li>
+  <li><strong>Roadside assistance:</strong> Covers towing, battery jumps, flat tire changes, and lockout services. Usually affordable at $2-5 per month.</li>
+  <li><strong>Gap coverage:</strong> Pays the difference between your vehicle's actual cash value and what you owe on your loan if the car is totaled. Essential for new cars with loans.</li>
+</ul>
+
+<h2 id="filing-claim">Filing an Insurance Claim in {{ state.name }}</h2>
+
+<p>If you are involved in an accident in {{ state.name }}, follow these steps to protect your insurance claim:</p>
+
+<ol>
+  <li>Ensure everyone is safe and call 911 if there are injuries.</li>
+  <li>Exchange information with the other driver(s): name, phone, insurance company, policy number, and license plate.</li>
+  <li>Document the scene with photos and video from multiple angles.</li>
+  <li>File a police report, even for minor accidents. This creates an official record that supports your claim.</li>
+  <li>Contact your insurance company as soon as possible. Most insurers have 24/7 claims lines.</li>
+  <li>Keep records of all expenses related to the accident, including medical bills, rental car costs, and lost wages.</li>
+</ol>
+
+<p>If your claim is denied or you believe you are not receiving fair compensation, consider consulting with an auto accident attorney who is licensed in {{ state.name }}.</p>
+
+</div>

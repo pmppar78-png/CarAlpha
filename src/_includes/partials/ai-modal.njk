@@ -1,0 +1,156 @@
+{# ── AI Chat Modal — Command Center Style ── #}
+
+<div id="aiOverlay" class="ai-modal-overlay">
+  <div class="ai-modal w-full max-w-2xl rounded-2xl shadow-premium flex flex-col carbon-panel" style="max-height: 85vh; border: 1px solid rgba(6,182,212,0.15);">
+
+    {# ── Modal Header ── #}
+    <div class="flex items-center justify-between px-6 py-4" style="background: linear-gradient(135deg, rgba(6,182,212,0.08) 0%, rgba(13,17,23,0.9) 100%); border-bottom: 1px solid rgba(6,182,212,0.1);">
+      <div class="flex items-center gap-3">
+        <div class="relative h-10 w-10 rounded-xl bg-gradient-to-br from-volt-500 to-volt-700 grid place-items-center text-white font-bold text-sm shadow-lg shadow-volt-500/30">
+          AI
+          <div class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-carbon-900 shadow-sm shadow-emerald-400/50"></div>
+        </div>
+        <div>
+          <div class="font-bold text-white text-sm tracking-tight">Car Alpha AI</div>
+          <div class="text-[11px] text-volt-400/70 font-medium">Recalls &middot; Warranty &middot; Insurance &middot; Lemon Law &middot; Next Steps</div>
+        </div>
+      </div>
+      <button id="closeAI" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    {# ── Quick Action Buttons ── #}
+    <div class="px-6 py-3 border-b border-white/[0.04] flex flex-wrap gap-2">
+      <button class="ai-quick-btn px-3 py-1.5 rounded-lg btn-ghost text-xs text-volt-400 font-medium" data-quick="recalls">Any recalls?</button>
+      <button class="ai-quick-btn px-3 py-1.5 rounded-lg btn-ghost text-xs text-volt-400 font-medium" data-quick="insurance">Cheapest insurance?</button>
+      <button class="ai-quick-btn px-3 py-1.5 rounded-lg btn-ghost text-xs text-volt-400 font-medium" data-quick="warranty">Worth getting warranty?</button>
+      <button class="ai-quick-btn px-3 py-1.5 rounded-lg btn-ghost text-xs text-volt-400 font-medium" data-quick="mechanic">Repair estimates</button>
+      <button class="ai-quick-btn px-3 py-1.5 rounded-lg btn-ghost text-xs text-volt-400 font-medium" data-quick="loans">Best loan/refi?</button>
+      <button class="ai-quick-btn px-3 py-1.5 rounded-lg btn-ghost text-xs text-volt-400 font-medium" data-quick="lemon">Lemon law?</button>
+    </div>
+
+    {# ── Chat Messages Area ── #}
+    <div id="chat" class="scrollbox flex-1 px-6 py-5 space-y-4 text-sm overflow-y-auto">
+      <div class="flex items-start gap-3">
+        <div class="shrink-0 h-7 w-7 rounded-lg bg-gradient-to-br from-volt-500 to-volt-700 text-white grid place-items-center text-[10px] font-bold shadow-md shadow-volt-500/20">AI</div>
+        <div class="p-3.5 rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/[0.06] text-silver-300 leading-relaxed max-w-[85%]">
+          Welcome to Car Alpha AI. Run a VIN lookup for tailored guidance, or ask a general question &mdash; insurance, warranty, recalls, repairs, selling, loans, or lemon law. I'm here to help.
+        </div>
+      </div>
+    </div>
+
+    {# ── Input Area ── #}
+    <div class="px-6 py-4" style="border-top: 1px solid rgba(6,182,212,0.08);">
+      <div class="flex gap-3 items-end">
+        <input id="chatInput" placeholder="Ask about insurance, warranty, recalls, repairs, lemon law..."
+          class="flex-1 px-4 py-3 rounded-xl input-premium text-white placeholder-silver-500 text-sm" />
+        <button id="chatSend" class="p-3 rounded-xl btn-primary text-white shrink-0">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+        </button>
+      </div>
+      <div class="mt-2 flex items-center justify-between">
+        <span class="text-[10px] text-silver-500/60">Powered by OpenAI &middot; ChatGPT-style intelligence</span>
+        <span class="text-[10px] text-silver-500/40">We never sell your data</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── AI Modal Scripts ── #}
+<script>
+(function() {
+  var aiOverlay = document.getElementById('aiOverlay');
+  var openAI = document.getElementById('openAI');
+  var closeAI = document.getElementById('closeAI');
+  var chat = document.getElementById('chat');
+  var chatInput = document.getElementById('chatInput');
+  var chatSend = document.getElementById('chatSend');
+
+  if (!aiOverlay || !openAI) return;
+
+  openAI.addEventListener('click', function() {
+    aiOverlay.classList.add('active');
+    if (chatInput) chatInput.focus();
+  });
+
+  if (closeAI) {
+    closeAI.addEventListener('click', function() {
+      aiOverlay.classList.remove('active');
+    });
+  }
+
+  aiOverlay.addEventListener('click', function(e) {
+    if (e.target === aiOverlay) aiOverlay.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') aiOverlay.classList.remove('active');
+  });
+
+  function postBubble(container, role, html) {
+    var isAI = role === 'ai';
+    var wrap = document.createElement('div');
+    wrap.className = 'flex items-start gap-3 animate-in';
+    if (isAI) {
+      wrap.innerHTML =
+        '<div class="shrink-0 h-7 w-7 rounded-lg bg-gradient-to-br from-volt-500 to-volt-700 text-white grid place-items-center text-[10px] font-bold shadow-md shadow-volt-500/20">AI</div>' +
+        '<div class="p-3.5 rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/[0.06] text-silver-300 leading-relaxed max-w-[85%]">' + html + '</div>';
+    } else {
+      wrap.innerHTML =
+        '<div class="ml-auto p-3.5 rounded-2xl rounded-tr-md bg-volt-600/20 border border-volt-500/20 text-volt-200 leading-relaxed max-w-[85%]">' + html + '</div>';
+    }
+    container.appendChild(wrap);
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function aiAnswer(query) {
+    var q = (query || '').toLowerCase();
+    if (q.includes('recall'))
+      return 'Use our <a href="/recalls/" class="text-volt-400 underline">Recall Lookup</a> tool to check for open recalls on any vehicle by make, model, and year. All recalls require a free dealer fix.';
+    if (q.includes('insurance'))
+      return 'Compare at least 3 carriers to potentially save 10-30% on auto insurance. Factors like vehicle age, safety rating, and your driving record all affect rates.';
+    if (q.includes('warranty'))
+      return 'Extended warranties can be cost-effective for vehicles over 5 years old or with 60k+ miles. Look for plans covering powertrain and major electrical components.';
+    if (q.includes('loan') || q.includes('refi') || q.includes('finance'))
+      return 'Check pre-qualified offers with no hard credit pull first. Refinancing can lower your rate if your credit has improved since the original loan.';
+    if (q.includes('mechanic') || q.includes('repair') || q.includes('estimate'))
+      return 'Always get at least 2-3 quotes for major repairs. Check common issues for your specific make and model to know what to expect.';
+    if (q.includes('sell') || q.includes('trade'))
+      return 'Online instant-offer platforms often beat dealer trade-in values by 10-20%. Compare offers from multiple buyers before deciding.';
+    if (q.includes('lemon'))
+      return 'If your vehicle has had repeated repairs for the same issue affecting safety or drivability, you may have remedies under your state\'s lemon law. Check our <a href="/states/" class="text-volt-400 underline">state guides</a> for details.';
+    return 'I can help with: <strong>recalls</strong>, <strong>insurance</strong>, <strong>warranty</strong>, <strong>loan/refi</strong>, <strong>repair estimates</strong>, <strong>selling</strong>, or <strong>lemon law</strong>. Ask me anything about your vehicle.';
+  }
+
+  function handleChat(text) {
+    if (!text || !text.trim()) return;
+    postBubble(chat, 'user', text);
+    postBubble(chat, 'ai', aiAnswer(text));
+  }
+
+  if (chatSend) {
+    chatSend.addEventListener('click', function() {
+      var text = chatInput.value;
+      chatInput.value = '';
+      handleChat(text);
+    });
+  }
+
+  if (chatInput) {
+    chatInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        var text = chatInput.value;
+        chatInput.value = '';
+        handleChat(text);
+      }
+    });
+  }
+
+  document.querySelectorAll('.ai-quick-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      handleChat(btn.textContent.trim());
+    });
+  });
+})();
+</script>

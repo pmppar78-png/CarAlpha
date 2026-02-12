@@ -1,0 +1,171 @@
+---
+layout: layouts/base.njk
+title: "Free VIN Decoder — Decode Any VIN Number Instantly"
+description: "Free VIN decoder using official NHTSA data. Enter any 17-character VIN to get full vehicle specs, recall history, and AI-powered insights."
+permalink: /vin-decoder/
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Car Alpha VIN Decoder",
+  "url": "https://www.caralpha.com/vin-decoder/",
+  "description": "Free VIN decoder using official NHTSA data. Decode any 17-character VIN instantly.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "provider": { "@type": "Organization", "name": "Car Alpha", "url": "https://www.caralpha.com" }
+}
+</script>
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "VIN Decoder" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-4xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Free <span class="text-gradient">VIN Decoder</span></h1>
+      <p class="mt-4 text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Enter any 17-character Vehicle Identification Number to instantly decode the full specs, safety recalls, and detailed vehicle history using official NHTSA data.</p>
+    </div>
+
+    <div class="vin-card glass-card rounded-2xl p-6 md:p-8 glow-cyan max-w-xl mx-auto carbon-panel">
+      <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter your 17-character VIN</label>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input id="vinInput" maxlength="17" placeholder="e.g., 1HGCM82633A004352"
+          class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+        <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Decode VIN</button>
+      </div>
+      <p class="mt-3 text-xs text-silver-500/70 text-left">Your VIN is used once to fetch public data. We never store it.</p>
+    </div>
+
+    <section class="mt-10 max-w-3xl mx-auto space-y-5">
+      <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Decoding VIN...</div></div></div>
+      <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300 shadow-card" id="errorText"></div></div>
+      <div class="hidden" id="vehicleCard"></div>
+      <div class="hidden" id="recallCard"></div>
+      <div class="hidden" id="actionsCard"></div>
+    </section>
+  </div>
+</section>
+
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-4xl mx-auto px-4 py-20 prose-dark">
+    <h2>What is VIN Decoding?</h2>
+    <p>VIN decoding is the process of translating a 17-character Vehicle Identification Number into readable vehicle information. Every vehicle manufactured after 1981 receives a unique VIN that acts as its automotive fingerprint. No two vehicles in operation share the same VIN.</p>
+    <p>When you enter a VIN into our decoder, we query the official NHTSA Vehicle Product Information Catalog (VPIC) database to extract detailed specifications assigned during manufacturing. This includes the make, model, year, engine type, body style, drive type, transmission, plant of manufacture, and much more.</p>
+
+    <h2>What Information Does a VIN Decode Reveal?</h2>
+    <div class="grid sm:grid-cols-2 gap-4 my-6">
+      <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+        <h3 class="text-volt-400 font-bold text-sm mb-2">Vehicle Identity</h3>
+        <ul class="text-sm text-silver-400 space-y-1">
+          <li>Make and manufacturer</li>
+          <li>Model name and trim level</li>
+          <li>Model year</li>
+          <li>Body style (sedan, SUV, etc.)</li>
+        </ul>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+        <h3 class="text-volt-400 font-bold text-sm mb-2">Mechanical Specs</h3>
+        <ul class="text-sm text-silver-400 space-y-1">
+          <li>Engine type and displacement</li>
+          <li>Fuel type (gas, diesel, EV, hybrid)</li>
+          <li>Transmission type</li>
+          <li>Drive type (FWD, AWD, 4WD, RWD)</li>
+        </ul>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+        <h3 class="text-volt-400 font-bold text-sm mb-2">Manufacturing</h3>
+        <ul class="text-sm text-silver-400 space-y-1">
+          <li>Country of origin</li>
+          <li>Assembly plant location</li>
+          <li>Manufacturer identifier</li>
+          <li>Production sequence</li>
+        </ul>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+        <h3 class="text-volt-400 font-bold text-sm mb-2">Safety Data</h3>
+        <ul class="text-sm text-silver-400 space-y-1">
+          <li>Open recall campaigns</li>
+          <li>Recall consequences</li>
+          <li>Required remedies</li>
+          <li>NHTSA campaign numbers</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is a VIN?</h3>
+    <p>A VIN (Vehicle Identification Number) is a unique 17-character code assigned to every motor vehicle when it is manufactured. It serves as the vehicle's fingerprint, since no two vehicles in operation have the same VIN. The VIN standard was established in 1981 by the National Highway Traffic Safety Administration (NHTSA).</p>
+
+    <h3>Where can I find my VIN?</h3>
+    <p>The most common locations are the lower-left corner of the dashboard (visible through the windshield), the driver's side door jamb, your vehicle registration card, and your insurance documents. Some vehicles also have the VIN stamped on the engine block or frame rail.</p>
+
+    <h3>Is this VIN decoder really free?</h3>
+    <p>Yes. Car Alpha's VIN decoder is 100% free with no hidden fees, no account required, and no limits on how many VINs you can decode. We source our data directly from the official NHTSA VPIC database.</p>
+
+    <h3>How accurate is the decoded information?</h3>
+    <p>Our VIN decoder pulls data directly from the official NHTSA Vehicle Product Information Catalog, which is the same database used by law enforcement, insurance companies, and dealerships. The data is as accurate as the information manufacturers report to NHTSA.</p>
+
+    <h3>Can I decode a VIN for any vehicle?</h3>
+    <p>Our decoder works for all vehicles manufactured after 1981 that follow the standard 17-character VIN format. This includes cars, trucks, SUVs, vans, motorcycles, and many trailers. Vehicles manufactured before 1981 may have shorter VINs that are not compatible with the NHTSA database.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput = document.getElementById('vinInput');
+  var runBtn = document.getElementById('runBtn');
+  var loading = document.getElementById('loading');
+  var errorBox = document.getElementById('errorBox');
+  var errorText = document.getElementById('errorText');
+  var vehicleCard = document.getElementById('vehicleCard');
+  var recallCard = document.getElementById('recallCard');
+  var actionsCard = document.getElementById('actionsCard');
+  if (!vinInput || !runBtn) return;
+
+  function setLoading(on){ loading.classList.toggle('hidden', !on); }
+  function setError(msg){ if(!msg){ errorBox.classList.add('hidden'); return;} errorText.textContent = msg; errorBox.classList.remove('hidden'); }
+
+  function fetchJSON(url, ms){
+    var c = new AbortController(); var t = setTimeout(function(){ c.abort(); }, ms || 12000);
+    return fetch(url,{signal:c.signal}).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).finally(function(){ clearTimeout(t); });
+  }
+
+  function renderVehicle(d){
+    var f=[['Year',d.ModelYear],['Make',d.Make],['Model',d.Model],['Trim',d.Trim],['Engine',((d.DisplacementL||'')+'L '+(d.EngineConfiguration||'')+' '+(d.FuelTypePrimary||'')).trim()],['Body',d.BodyClass],['Drive',d.DriveType],['Transmission',d.TransmissionStyle||d.TransmissionDescriptor||''],['Plant',d.PlantCity&&d.PlantCountry?d.PlantCity+', '+d.PlantCountry:(d.PlantCountry||'')]].filter(function(x){return x[1]&&String(x[1]).trim()!=='';});
+    vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm animate-in carbon-panel"><div class="steel-header px-6 py-4 flex items-center justify-between"><h3 class="text-lg font-bold text-white">Vehicle Specs</h3><span class="text-xs px-3 py-1.5 rounded-lg bg-volt-600/10 border border-volt-500/20 text-volt-400 font-mono tracking-wide">VIN: '+(d.VIN||'')+'</span></div><div class="px-6 py-5"><div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">'+f.map(function(x){return '<div class="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]"><div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">'+x[0]+'</div><div class="font-semibold text-white mt-0.5">'+x[1]+'</div></div>';}).join('')+'</div></div></div>';
+    vehicleCard.classList.remove('hidden');
+  }
+
+  function renderRecalls(recalls){
+    if(!recalls||!recalls.results||!recalls.results.length){
+      recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recalls</h3></div><div class="px-6 py-5"><div class="flex items-center gap-2 text-emerald-400 text-sm"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No recalls found.</div></div></div>';
+      recallCard.classList.remove('hidden'); return 0;
+    }
+    var items=recalls.results.slice(0,8).map(function(r){return '<details class="p-4 rounded-xl bg-amber-500/[0.06] border border-amber-500/20"><summary class="cursor-pointer font-semibold text-amber-300 text-sm">'+(r.Component||'Recall')+' &mdash; '+(r.ReportReceivedDate||'')+'</summary><div class="mt-3 text-sm text-silver-400 space-y-1.5 pl-4"><div><strong class="text-silver-300">Summary:</strong> '+(r.Summary||'&mdash;')+'</div><div><strong class="text-silver-300">Consequence:</strong> '+(r.Conequence||r.Consequence||'&mdash;')+'</div><div><strong class="text-silver-300">Remedy:</strong> '+(r.Remedy||'&mdash;')+'</div></div></details>';}).join('');
+    recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recalls ('+recalls.results.length+')</h3></div><div class="px-6 py-5 space-y-3">'+items+'</div></div>';
+    recallCard.classList.remove('hidden'); return recalls.results.length;
+  }
+
+  async function run(){
+    setError(); vehicleCard.classList.add('hidden'); recallCard.classList.add('hidden'); actionsCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{}; dec.VIN=vin; renderVehicle(dec);
+      try{
+        var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');
+        if(mk&&md&&yr){ var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr); renderRecalls(r); }
+      }catch(e){ recallCard.innerHTML='<div class="glass-card rounded-2xl p-6 carbon-panel"><p class="text-silver-400 text-sm">Recall check unavailable. Try again later.</p></div>'; recallCard.classList.remove('hidden'); }
+    }catch(e){setError('Service is busy. Please try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);
+  vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>
