@@ -1,0 +1,142 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: models
+  size: 1
+  alias: model
+permalink: "/makes/{{ model.makeSlug }}/{{ model.slug }}/"
+eleventyComputed:
+  title: "{{ model.makeName }} {{ model.name }} — VIN Decoder & Recalls"
+  description: "Free VIN decoder and recall checker for the {{ model.makeName }} {{ model.name }}. Get full specs, safety recalls, and ownership insights."
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: model.makeName, url: "/makes/" + model.makeSlug + "/" }, { label: model.name }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+
+    {# Model Header #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm carbon-panel mb-10">
+      <div class="steel-header px-8 py-5">
+        <h1 class="text-3xl md:text-4xl font-black text-white">{{ model.makeName }} <span class="text-gradient">{{ model.name }}</span></h1>
+        <div class="flex items-center gap-4 mt-2 text-sm text-silver-400">
+          <span>{{ model.bodyType }}</span>
+          <span>&middot;</span>
+          <span>{{ model.yearStart }}&ndash;{% if model.yearEnd %}{{ model.yearEnd }}{% else %}Present{% endif %}</span>
+        </div>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 leading-relaxed">{{ model.description }}</p>
+      </div>
+    </div>
+
+    {# Year Range Info #}
+    <div class="grid sm:grid-cols-3 gap-4 mb-10">
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-2xl font-black text-volt-400">{{ model.yearStart }}</div>
+        <div class="text-xs text-silver-400 mt-1">First Year</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-2xl font-black text-volt-400">{% if model.yearEnd %}{{ model.yearEnd }}{% else %}2026{% endif %}</div>
+        <div class="text-xs text-silver-400 mt-1">{% if model.yearEnd %}Last Year{% else %}Current Year{% endif %}</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-2xl font-black text-volt-400">{% if model.yearEnd %}{{ model.yearEnd - model.yearStart }}{% else %}{{ 2026 - model.yearStart }}{% endif %}+</div>
+        <div class="text-xs text-silver-400 mt-1">Years in Production</div>
+      </div>
+    </div>
+
+    {# VIN Decoder #}
+    <div class="mb-12">
+      <h2 class="text-xl font-black text-white mb-6">Decode a {{ model.makeName }} {{ model.name }} VIN</h2>
+      <div class="vin-card glass-card rounded-2xl p-6 glow-cyan carbon-panel">
+        <label class="block text-sm font-bold text-silver-300 mb-3 tracking-wide uppercase">Enter VIN</label>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input id="vinInput" maxlength="17" placeholder="Enter 17-character VIN" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+          <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap">Decode</button>
+        </div>
+      </div>
+      <section class="mt-6 space-y-5">
+        <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Decoding...</div></div></div>
+        <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300" id="errorText"></div></div>
+        <div class="hidden" id="vehicleCard"></div>
+        <div class="hidden" id="recallCard"></div>
+      </section>
+    </div>
+
+    {# Common Recalls #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">{{ model.makeName }} {{ model.name }} Recalls</h2>
+      </div>
+      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed">
+        <p>Like all vehicles, the {{ model.makeName }} {{ model.name }} may be subject to safety recalls issued by NHTSA. Common recall categories for this model include airbag systems, engine components, electrical systems, and brake assemblies. All recall repairs are performed free of charge at authorized {{ model.makeName }} dealerships regardless of vehicle age or mileage.</p>
+        <p class="mt-3">Enter your specific VIN above to check for open recalls on your {{ model.name }}, or visit our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> tool.</p>
+      </div>
+    </div>
+
+    {# Ownership CTAs #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">{{ model.makeName }} {{ model.name }} Ownership Resources</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+          <h3 class="font-bold text-white text-sm mb-2">Insurance</h3>
+          <p class="text-xs text-silver-400 leading-relaxed">Compare insurance rates for the {{ model.makeName }} {{ model.name }} from top carriers. Factors like model year, trim, and safety features all affect your premium.</p>
+        </div>
+        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+          <h3 class="font-bold text-white text-sm mb-2">Warranty</h3>
+          <p class="text-xs text-silver-400 leading-relaxed">Extended warranty plans can protect against costly repairs, especially for {{ model.name }} models outside the factory warranty period. Coverage typically includes powertrain and major electrical components.</p>
+        </div>
+        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+          <h3 class="font-bold text-white text-sm mb-2">Financing</h3>
+          <p class="text-xs text-silver-400 leading-relaxed">Pre-qualify for auto loan or refinancing offers for your {{ model.makeName }} {{ model.name }}. Better credit scores and newer model years typically qualify for lower APR.</p>
+        </div>
+        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
+          <h3 class="font-bold text-white text-sm mb-2">Selling</h3>
+          <p class="text-xs text-silver-400 leading-relaxed">Get instant offer quotes for your {{ model.makeName }} {{ model.name }} from multiple buyers. Online platforms often beat dealer trade-in values by 10-20%.</p>
+        </div>
+      </div>
+    </div>
+
+    {# Related Models #}
+    <div>
+      <h2 class="text-xl font-black text-white mb-6">More {{ model.makeName }} Models</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {% for m in models %}
+          {% if m.makeSlug == model.makeSlug and m.slug != model.slug %}
+          <a href="/makes/{{ m.makeSlug }}/{{ m.slug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ m.name }}</div>
+            <div class="text-[10px] text-silver-500 mt-1">{{ m.bodyType }}</div>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
+  if(!vinInput||!runBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+  async function run(){
+    setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{};
+      var f=[['Year',dec.ModelYear],['Make',dec.Make],['Model',dec.Model],['Trim',dec.Trim],['Engine',((dec.DisplacementL||'')+'L '+(dec.FuelTypePrimary||'')).trim()],['Body',dec.BodyClass],['Drive',dec.DriveType]].filter(function(x){return x[1]&&String(x[1]).trim()!=='';});
+      vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Vehicle Specs</h3></div><div class="px-6 py-5"><div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">'+f.map(function(x){return '<div class="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]"><div class="text-[10px] font-semibold text-silver-500 uppercase">'+x[0]+'</div><div class="font-semibold text-white mt-0.5">'+x[1]+'</div></div>';}).join('')+'</div></div></div>';
+      vehicleCard.classList.remove('hidden');
+      try{var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);var cnt=(r&&r.results)?r.results.length:0;recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-2 '+(cnt>0?'text-amber-300':'text-emerald-400')+' text-sm font-bold">'+(cnt>0?cnt+' recall(s) found. <a href="/recall-checker/" class="underline ml-1">View details</a>':'No open recalls found.')+'</div></div>';recallCard.classList.remove('hidden');}}catch(e){}
+    }catch(e){setError('Service unavailable. Try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>

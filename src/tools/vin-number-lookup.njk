@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: "VIN Number Lookup — Free Vehicle History Check"
+description: "Free VIN number lookup tool. Get vehicle specs, recall history, and ownership insights using official NHTSA data. No account required."
+permalink: /vin-number-lookup/
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "VIN Number Lookup" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-4xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">VIN Number <span class="text-gradient">Lookup</span></h1>
+      <p class="mt-4 text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Look up any vehicle by its VIN number to get a complete report including specifications, safety recalls, and AI-powered next-step guidance. Completely free, powered by official NHTSA data.</p>
+    </div>
+
+    <div class="vin-card glass-card rounded-2xl p-6 md:p-8 glow-cyan max-w-xl mx-auto carbon-panel">
+      <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter VIN Number</label>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input id="vinInput" maxlength="17" placeholder="e.g., 1HGCM82633A004352" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+        <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Look Up VIN</button>
+      </div>
+      <p class="mt-3 text-xs text-silver-500/70 text-left">Free lookup using the official NHTSA Vehicle Product Information Catalog.</p>
+    </div>
+
+    <section class="mt-10 max-w-3xl mx-auto space-y-5">
+      <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Looking up VIN...</div></div></div>
+      <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300 shadow-card" id="errorText"></div></div>
+      <div class="hidden" id="vehicleCard"></div>
+      <div class="hidden" id="recallCard"></div>
+    </section>
+  </div>
+</section>
+
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-4xl mx-auto px-4 py-20 prose-dark">
+    <h2>Why Look Up a VIN Number?</h2>
+    <p>A VIN number lookup is one of the most important steps you can take before buying, selling, or insuring a vehicle. The VIN (Vehicle Identification Number) is a unique 17-character code that reveals everything about a vehicle's identity, specifications, and safety history.</p>
+
+    <h2>When to Use a VIN Number Lookup</h2>
+    <ul>
+      <li><strong>Buying a used car:</strong> Verify the seller's claims about the vehicle's year, make, model, and specifications. A VIN lookup can reveal if the vehicle has been misrepresented.</li>
+      <li><strong>Checking for safety recalls:</strong> Open recalls mean your vehicle may have a known safety defect. The manufacturer must fix it for free at an authorized dealership.</li>
+      <li><strong>Insurance quotes:</strong> Insurance companies use VIN data to accurately quote rates based on your vehicle's exact specifications, safety features, and recall status.</li>
+      <li><strong>Selling your vehicle:</strong> Provide potential buyers with a VIN report to build trust and justify your asking price.</li>
+      <li><strong>Vehicle registration:</strong> Confirm that VIN records match your title and registration documents.</li>
+    </ul>
+
+    <h2>What Our VIN Lookup Includes</h2>
+    <p>When you enter a VIN number, Car Alpha queries the official NHTSA databases to deliver a comprehensive report that includes the make and manufacturer, model name and trim level, model year, engine specifications, body style and drive type, assembly plant location, and any open safety recalls with full campaign details.</p>
+
+    <h2>Free vs. Paid VIN Reports</h2>
+    <p>Car Alpha provides free VIN lookups using official government data. This includes vehicle specifications from the NHTSA VPIC database and safety recall data from the NHTSA Office of Defects Investigation. Paid VIN report services like Carfax and AutoCheck offer additional data such as accident history, odometer readings, title status, and ownership history that comes from insurance companies, repair shops, and state DMV records.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
+  if(!vinInput||!runBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+  function renderVehicle(d){
+    var f=[['Year',d.ModelYear],['Make',d.Make],['Model',d.Model],['Trim',d.Trim],['Engine',((d.DisplacementL||'')+'L '+(d.EngineConfiguration||'')+' '+(d.FuelTypePrimary||'')).trim()],['Body',d.BodyClass],['Drive',d.DriveType]].filter(function(x){return x[1]&&String(x[1]).trim()!=='';});
+    vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm animate-in carbon-panel"><div class="steel-header px-6 py-4 flex items-center justify-between"><h3 class="text-lg font-bold text-white">Vehicle Report</h3><span class="text-xs px-3 py-1.5 rounded-lg bg-volt-600/10 border border-volt-500/20 text-volt-400 font-mono">VIN: '+(d.VIN||'')+'</span></div><div class="px-6 py-5"><div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">'+f.map(function(x){return '<div class="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]"><div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">'+x[0]+'</div><div class="font-semibold text-white mt-0.5">'+x[1]+'</div></div>';}).join('')+'</div></div></div>';
+    vehicleCard.classList.remove('hidden');
+  }
+  async function run(){
+    setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{};dec.VIN=vin;renderVehicle(dec);
+      try{var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);if(r&&r.results&&r.results.length){recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-2 text-amber-300 mb-3"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg><span class="font-bold">'+r.results.length+' Recall(s) Found</span></div><p class="text-sm text-silver-400">Use our <a href="/recall-checker/" class="text-volt-400 underline">Recall Checker</a> for full details and remedies.</p></div>';recallCard.classList.remove('hidden');}else{recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-2 text-emerald-400 text-sm"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No open recalls found.</div></div>';recallCard.classList.remove('hidden');}}}catch(e){}
+    }catch(e){setError('Service unavailable. Try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>

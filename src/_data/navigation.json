@@ -1,0 +1,44 @@
+{
+  "main": [
+    { "label": "VIN Decoder", "url": "/vin-decoder/" },
+    { "label": "Recall Checker", "url": "/recall-checker/" },
+    { "label": "Makes", "url": "/makes/" },
+    { "label": "States", "url": "/states/" },
+    { "label": "Guides", "url": "/guides/" },
+    { "label": "Learn", "url": "/learn/" },
+    { "label": "Blog", "url": "/blog/" }
+  ],
+  "tools": [
+    { "label": "Free VIN Decoder", "url": "/vin-decoder/" },
+    { "label": "Recall Checker", "url": "/recall-checker/" },
+    { "label": "Free VIN Check", "url": "/free-vin-check/" },
+    { "label": "VIN Number Lookup", "url": "/vin-number-lookup/" },
+    { "label": "Compare Vehicles", "url": "/compare/" }
+  ],
+  "guides": [
+    { "label": "Car Insurance Guide", "url": "/guides/insurance/" },
+    { "label": "Extended Warranties", "url": "/guides/warranties/" },
+    { "label": "Auto Financing", "url": "/guides/financing/" },
+    { "label": "Lemon Law Guide", "url": "/guides/lemon-law/" },
+    { "label": "EV Buying Guide", "url": "/guides/ev/" },
+    { "label": "Repair Costs", "url": "/guides/repairs/" },
+    { "label": "Buying Guide", "url": "/guides/buying/" },
+    { "label": "Safety Ratings", "url": "/guides/safety/" },
+    { "label": "Title & Registration", "url": "/guides/title/" }
+  ],
+  "learn": [
+    { "label": "What Is a VIN?", "url": "/learn/what-is-a-vin/" },
+    { "label": "VIN Positions Explained", "url": "/learn/vin-positions/" },
+    { "label": "Where to Find Your VIN", "url": "/learn/where-to-find-vin/" }
+  ],
+  "footer": [
+    { "label": "Home", "url": "/" },
+    { "label": "VIN Decoder", "url": "/vin-decoder/" },
+    { "label": "Recall Checker", "url": "/recall-checker/" },
+    { "label": "Makes", "url": "/makes/" },
+    { "label": "States", "url": "/states/" },
+    { "label": "Guides", "url": "/guides/" },
+    { "label": "Learn", "url": "/learn/" },
+    { "label": "Blog", "url": "/blog/" }
+  ]
+}

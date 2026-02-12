@@ -1,0 +1,16 @@
+{
+  "name": "Car Alpha",
+  "url": "https://caralpha.netlify.app",
+  "domain": "caralpha.netlify.app",
+  "tagline": "Vehicle Intelligence Platform",
+  "description": "Free VIN decoder, recall checker, and AI-powered vehicle intelligence. Decode any VIN instantly, check safety recalls, and get expert automotive guidance.",
+  "author": "Car Alpha",
+  "email": "info@caralpha.com",
+  "language": "en",
+  "locale": "en_US",
+  "twitter": "@caralpha",
+  "og_image": "/assets/images/og-default.jpg",
+  "theme_color": "#ADFF2F",
+  "background_color": "#0a0a0a",
+  "analytics_id": ""
+}

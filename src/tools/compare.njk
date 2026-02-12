@@ -1,0 +1,108 @@
+---
+layout: layouts/base.njk
+title: "Compare Vehicles Side by Side — Car Alpha"
+description: "Compare two vehicles side by side using official NHTSA data. Enter two VINs to see specs, recalls, and key differences at a glance."
+permalink: /compare/
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Compare Vehicles" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Compare <span class="text-gradient">Vehicles</span></h1>
+      <p class="mt-4 text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Enter two VINs to compare vehicle specifications side by side. See how different vehicles stack up in terms of engine, body style, drivetrain, and more.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass-card metallic-border rounded-2xl p-6 carbon-panel">
+        <div class="steel-header -mx-6 -mt-6 px-6 py-3 mb-5 rounded-t-2xl">
+          <h2 class="font-bold text-white text-sm">Vehicle 1</h2>
+        </div>
+        <label class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">VIN</label>
+        <input id="vin1" maxlength="17" placeholder="Enter first VIN" class="w-full px-4 py-3 rounded-xl input-premium text-white placeholder-silver-500 text-sm font-mono tracking-wider" />
+      </div>
+      <div class="glass-card metallic-border rounded-2xl p-6 carbon-panel">
+        <div class="steel-header -mx-6 -mt-6 px-6 py-3 mb-5 rounded-t-2xl">
+          <h2 class="font-bold text-white text-sm">Vehicle 2</h2>
+        </div>
+        <label class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">VIN</label>
+        <input id="vin2" maxlength="17" placeholder="Enter second VIN" class="w-full px-4 py-3 rounded-xl input-premium text-white placeholder-silver-500 text-sm font-mono tracking-wider" />
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button id="compareBtn" class="px-10 py-4 rounded-xl btn-primary text-white font-bold text-base tracking-wide">Compare Vehicles</button>
+    </div>
+
+    <div class="hidden mt-10" id="loading">
+      <div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel">
+        <div class="inline-flex items-center gap-3 text-silver-300">
+          <svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
+          Fetching vehicle data...
+        </div>
+      </div>
+    </div>
+    <div class="hidden mt-6" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300 shadow-card" id="errorText"></div></div>
+    <div class="hidden mt-10" id="comparisonTable"></div>
+  </div>
+</section>
+
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-4xl mx-auto px-4 py-20 prose-dark">
+    <h2>How Vehicle Comparison Works</h2>
+    <p>Our vehicle comparison tool decodes both VINs using the official NHTSA VPIC database and presents the specifications in a clear side-by-side format. This makes it easy to spot differences in engine size, body style, drivetrain, transmission, and manufacturing details.</p>
+
+    <h2>When to Compare Vehicles</h2>
+    <ul>
+      <li><strong>Shopping for a car:</strong> Compare two vehicles you are considering to see which better fits your needs.</li>
+      <li><strong>Trading up:</strong> See how your current vehicle compares to the one you want to buy.</li>
+      <li><strong>Insurance shopping:</strong> Understand how different specs might affect insurance rates.</li>
+      <li><strong>Verifying listings:</strong> Compare the VIN data against what a seller claims about two similar vehicles.</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+(function(){
+  var vin1El=document.getElementById('vin1'),vin2El=document.getElementById('vin2'),compareBtn=document.getElementById('compareBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),compTable=document.getElementById('comparisonTable');
+  if(!compareBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+
+  function renderComparison(d1,d2){
+    var rows=[['Year','ModelYear'],['Make','Make'],['Model','Model'],['Trim','Trim'],['Engine','EngineConfiguration'],['Displacement','DisplacementL'],['Fuel Type','FuelTypePrimary'],['Body Style','BodyClass'],['Drive Type','DriveType'],['Transmission','TransmissionStyle'],['Doors','Doors'],['Plant Country','PlantCountry'],['Plant City','PlantCity']];
+    var html='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Side-by-Side Comparison</h3></div><div class="px-6 py-5"><table class="w-full"><thead><tr><th class="text-left text-xs font-bold text-silver-400 uppercase tracking-wider pb-3 pr-4">Spec</th><th class="text-left text-xs font-bold text-volt-400 uppercase tracking-wider pb-3 pr-4">Vehicle 1</th><th class="text-left text-xs font-bold text-volt-400 uppercase tracking-wider pb-3">Vehicle 2</th></tr></thead><tbody>';
+    rows.forEach(function(r){
+      var v1=d1[r[1]]||'&mdash;';var v2=d2[r[1]]||'&mdash;';
+      var diff=String(v1).toLowerCase()!==String(v2).toLowerCase();
+      html+='<tr class="border-t border-white/[0.04]"><td class="py-3 pr-4 text-sm text-silver-400 font-medium">'+r[0]+'</td><td class="py-3 pr-4 text-sm '+(diff?'text-volt-300 font-semibold':'text-white')+'">'+v1+'</td><td class="py-3 text-sm '+(diff?'text-volt-300 font-semibold':'text-white')+'">'+v2+'</td></tr>';
+    });
+    html+='</tbody></table></div></div>';
+    compTable.innerHTML=html;
+    compTable.classList.remove('hidden');
+  }
+
+  async function compare(){
+    setError();compTable.classList.add('hidden');
+    var v1=(vin1El.value||'').trim().toUpperCase();
+    var v2=(vin2El.value||'').trim().toUpperCase();
+    if(v1.length!==17||v2.length!==17){setError('Both VINs must be exactly 17 characters.');return;}
+    if(v1===v2){setError('Please enter two different VINs to compare.');return;}
+    setLoading(true);
+    try{
+      var res=await Promise.all([
+        fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+v1+'?format=json'),
+        fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+v2+'?format=json')
+      ]);
+      var d1=(res[0].Results&&res[0].Results[0])||{};
+      var d2=(res[1].Results&&res[1].Results[0])||{};
+      renderComparison(d1,d2);
+    }catch(e){setError('One or both VINs could not be decoded. Please check and try again.');}finally{setLoading(false);}
+  }
+  compareBtn.addEventListener('click',compare);
+})();
+</script>

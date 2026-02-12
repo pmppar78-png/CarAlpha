@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+title: "Car Alpha Blog — Vehicle News, Recalls & Ownership Tips"
+description: "Expert articles on vehicle recalls, buying guides, car maintenance, insurance tips, and automotive news. Stay informed with Car Alpha's blog."
+permalink: /blog/
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Blog" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-volt-500/15 bg-volt-500/[0.04] text-xs font-semibold text-volt-400 mb-5 uppercase tracking-widest">Blog</div>
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Car Alpha <span class="text-gradient">Blog</span></h1>
+      <p class="mt-4 text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Expert articles on vehicle recalls, buying guides, maintenance tips, and automotive news to help you make smarter vehicle decisions.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="/blog/understanding-vehicle-recalls/" class="glass-card metallic-border rounded-2xl overflow-hidden card-hover carbon-panel group">
+        <div class="steel-header px-6 py-4">
+          <span class="text-[10px] font-bold text-volt-400 uppercase tracking-widest">Safety</span>
+        </div>
+        <div class="px-6 py-5">
+          <h2 class="font-bold text-white text-lg group-hover:text-volt-400 transition-colors mb-2">Understanding Vehicle Recalls</h2>
+          <p class="text-sm text-silver-400 leading-relaxed">What every vehicle owner should know about safety recalls, how the process works, your rights, and how to get free repairs.</p>
+          <div class="mt-4 text-xs font-semibold text-volt-400">Read Article &rarr;</div>
+        </div>
+      </a>
+
+      <a href="/blog/ev-buying-guide-2026/" class="glass-card metallic-border rounded-2xl overflow-hidden card-hover carbon-panel group">
+        <div class="steel-header px-6 py-4">
+          <span class="text-[10px] font-bold text-volt-400 uppercase tracking-widest">Buying Guide</span>
+        </div>
+        <div class="px-6 py-5">
+          <h2 class="font-bold text-white text-lg group-hover:text-volt-400 transition-colors mb-2">Electric Vehicle Buying Guide 2026</h2>
+          <p class="text-sm text-silver-400 leading-relaxed">Everything you need to know about buying an electric vehicle in 2026, from range and charging to incentives and total cost of ownership.</p>
+          <div class="mt-4 text-xs font-semibold text-volt-400">Read Article &rarr;</div>
+        </div>
+      </a>
+
+      <a href="/blog/winter-car-care/" class="glass-card metallic-border rounded-2xl overflow-hidden card-hover carbon-panel group">
+        <div class="steel-header px-6 py-4">
+          <span class="text-[10px] font-bold text-volt-400 uppercase tracking-widest">Maintenance</span>
+        </div>
+        <div class="px-6 py-5">
+          <h2 class="font-bold text-white text-lg group-hover:text-volt-400 transition-colors mb-2">Winter Car Care Checklist</h2>
+          <p class="text-sm text-silver-400 leading-relaxed">Prepare your vehicle for cold weather with this comprehensive winter maintenance checklist covering tires, fluids, battery, and more.</p>
+          <div class="mt-4 text-xs font-semibold text-volt-400">Read Article &rarr;</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

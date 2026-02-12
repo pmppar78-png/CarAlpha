@@ -1,0 +1,128 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: states
+  size: 1
+  alias: state
+permalink: "/states/{{ state.slug }}/ev-incentives/"
+eleventyComputed:
+  title: "{{ state.name }} EV Incentives 2026 — Tax Credits, Rebates & Savings"
+  description: "Complete guide to electric vehicle incentives in {{ state.name }}: state tax credits, rebates, federal EV incentives, eligible vehicles, and step-by-step instructions to claim your savings."
+  breadcrumbs:
+    - label: Home
+      url: /
+    - label: States
+      url: /states/
+    - label: "{{ state.name }}"
+      url: "/states/{{ state.slug }}/"
+    - label: EV Incentives
+---
+
+<div class="prose-dark">
+
+<h2 id="state-incentives">{{ state.name }} EV Incentives</h2>
+
+{% if state.evIncentives %}
+<p>{{ state.name }} offers incentives designed to encourage the adoption of electric and alternative-fuel vehicles. These programs can save you thousands of dollars on the purchase of an EV, on top of federal incentives.</p>
+
+<div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel my-8 not-prose">
+  <div class="steel-header px-6 py-4 flex items-center gap-3">
+    <div class="feature-icon w-11 h-11 rounded-xl grid place-items-center">
+      <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+    </div>
+    <h3 class="font-bold text-white text-lg">{{ state.name }} EV Programs</h3>
+  </div>
+  <div class="px-6 py-5">
+    <p class="text-silver-400 text-sm leading-relaxed">{{ state.evIncentiveDetails }}</p>
+  </div>
+</div>
+{% else %}
+<p>{{ state.name }} does not currently offer state-level EV incentives. However, {{ state.name }} residents are still eligible for federal EV tax credits and may benefit from local utility company programs.</p>
+{% endif %}
+
+<h2 id="federal-incentives">Federal EV Tax Credits</h2>
+
+<p>Regardless of which state you live in, federal tax incentives can significantly reduce the cost of purchasing or leasing an electric vehicle. The federal Clean Vehicle Credit, established under the Inflation Reduction Act, offers substantial savings:</p>
+
+<ul>
+  <li><strong>New EV Tax Credit:</strong> Up to $7,500 for qualifying new battery electric vehicles and plug-in hybrids. The vehicle must meet domestic manufacturing requirements and critical mineral sourcing thresholds.</li>
+  <li><strong>Used EV Tax Credit:</strong> Up to $4,000 (or 30% of the sale price, whichever is less) for qualifying used electric vehicles purchased from a licensed dealer. The vehicle must be at least 2 model years old and priced at $25,000 or less.</li>
+  <li><strong>Point-of-sale transfer:</strong> Starting in 2024, buyers can choose to transfer the credit to the dealer at the time of purchase, effectively reducing the purchase price immediately rather than waiting to claim the credit on their tax return.</li>
+  <li><strong>Commercial clean vehicle credit:</strong> Businesses can claim up to $7,500 for qualifying light-duty EVs and up to $40,000 for heavier commercial EVs used for business purposes.</li>
+</ul>
+
+<h3>Federal Credit Income Limits</h3>
+
+<p>The federal EV tax credit has income eligibility caps:</p>
+
+<ul>
+  <li><strong>New vehicles:</strong> Modified AGI must be below $300,000 for married filing jointly, $225,000 for head of household, or $150,000 for single filers.</li>
+  <li><strong>Used vehicles:</strong> Modified AGI must be below $150,000 for married filing jointly, $112,500 for head of household, or $75,000 for single filers.</li>
+</ul>
+
+<h3>Federal Credit Vehicle Price Caps</h3>
+
+<ul>
+  <li><strong>SUVs, vans, and pickups:</strong> MSRP must not exceed $80,000</li>
+  <li><strong>All other vehicles (sedans, hatchbacks, etc.):</strong> MSRP must not exceed $55,000</li>
+</ul>
+
+<h2 id="eligible-vehicles">Eligible Vehicles</h2>
+
+<p>Not all electric vehicles qualify for the full federal tax credit. Eligibility depends on where the vehicle was assembled, where the battery components were manufactured, and where the critical minerals were sourced. The IRS maintains an updated list of qualifying vehicles at <a href="https://fueleconomy.gov/feg/tax2023.shtml">fueleconomy.gov</a>.</p>
+
+<p>Popular qualifying vehicles typically include select models from:</p>
+
+<ul>
+  <li>Tesla (select models assembled in the US)</li>
+  <li>Chevrolet (Bolt, Equinox EV, Blazer EV)</li>
+  <li>Ford (F-150 Lightning, Mustang Mach-E)</li>
+  <li>Rivian (R1T, R1S)</li>
+  <li>Hyundai and Kia (select US-assembled models)</li>
+  <li>BMW (select models)</li>
+  <li>Chrysler/Stellantis (Jeep and Ram plug-in hybrids)</li>
+</ul>
+
+<p>Always verify the current qualification status of a specific vehicle before purchasing, as the eligible vehicle list is updated quarterly.</p>
+
+<h2 id="how-to-claim">How to Claim EV Incentives</h2>
+
+<h3>Claiming the Federal Tax Credit</h3>
+
+<ol>
+  <li><strong>Verify vehicle eligibility.</strong> Check the IRS and Department of Energy websites to confirm the specific make, model, and trim qualifies for the credit.</li>
+  <li><strong>Purchase or lease from a qualified dealer.</strong> The vehicle must be purchased from a licensed dealer (not a private party) to qualify for the new vehicle credit.</li>
+  <li><strong>Obtain the seller's report.</strong> The dealer must submit a time-of-sale report to the IRS confirming the vehicle qualifies and the credit amount.</li>
+  <li><strong>File IRS Form 8936</strong> with your federal tax return to claim the credit, or elect to transfer the credit to the dealer at the time of purchase for an immediate price reduction.</li>
+</ol>
+
+{% if state.evIncentives %}
+<h3>Claiming {{ state.name }} State Incentives</h3>
+
+<p>State incentive programs in {{ state.name }} may require separate applications. Check with your state's energy office or DMV for specific application requirements, deadlines, and documentation needed. Many state programs have limited funding and operate on a first-come, first-served basis.</p>
+{% endif %}
+
+<div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
+  <h3 class="text-xl font-bold text-white mb-3">Ready to Go Electric?</h3>
+  <p class="text-silver-400 mb-6 max-w-lg mx-auto">Compare insurance rates for electric vehicles in {{ state.name }}. EV owners often qualify for special discounts with certain carriers.</p>
+  <a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
+    Compare EV Insurance Rates
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+  </a>
+  <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
+</div>
+
+<h2 id="charging">Home Charging Considerations</h2>
+
+<p>Beyond the vehicle purchase incentives, {{ state.name }} residents should factor in the cost and benefits of home charging:</p>
+
+<ul>
+  <li><strong>Level 1 charging (120V):</strong> Uses a standard household outlet. Adds approximately 3-5 miles of range per hour. No installation cost, but slow charging makes it best suited for plug-in hybrids or low-mileage drivers.</li>
+  <li><strong>Level 2 charging (240V):</strong> Requires a 240V outlet or hardwired installation. Adds 20-40 miles of range per hour. Installation typically costs $500-$2,000 depending on your home's electrical capacity.</li>
+  <li><strong>Federal charging credit:</strong> The Alternative Fuel Vehicle Refueling Property Credit covers 30% of home charger installation costs, up to $1,000 for residential installations.</li>
+  <li><strong>Utility incentives:</strong> Many electric utility companies in {{ state.name }} offer time-of-use rates that make overnight EV charging significantly cheaper. Some also offer rebates for charger installation.</li>
+</ul>
+
+<p>For a complete overview of EV incentives nationwide, see our <a href="/guides/ev/ev-tax-credits/">Federal and State EV Tax Credits Guide</a>.</p>
+
+</div>

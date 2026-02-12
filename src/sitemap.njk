@@ -1,0 +1,15 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.sitemap %}
+  <url>
+    <loc>https://www.caralpha.com{{ item.url }}</loc>
+    <lastmod>{{ item.date | dateFormat("yyyy-LL-dd") }}</lastmod>
+    <changefreq>{% if item.url == "/" %}daily{% elif "blog" in item.url or "guides" in item.url %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if item.url == "/" %}1.0{% elif "makes" in item.url or "tools" in item.url %}0.8{% elif "guides" in item.url or "blog" in item.url %}0.7{% elif "states" in item.url %}0.6{% else %}0.5{% endif %}</priority>
+  </url>
+{%- endfor %}
+</urlset>

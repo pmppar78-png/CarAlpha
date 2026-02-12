@@ -1,2 +1,109 @@
 [build]
-  publish = "."
+  command = "npx @11ty/eleventy"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Dev server
+[dev]
+  command = "npx @11ty/eleventy --serve"
+  port = 8888
+  targetPort = 8080
+  autoLaunch = false
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+
+# Redirects for SEO
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+# Trailing slash normalization
+[[redirects]]
+  from = "/vin-decoder"
+  to = "/vin-decoder/"
+  status = 301
+
+[[redirects]]
+  from = "/recall-checker"
+  to = "/recall-checker/"
+  status = 301
+
+[[redirects]]
+  from = "/makes"
+  to = "/makes/"
+  status = 301
+
+[[redirects]]
+  from = "/states"
+  to = "/states/"
+  status = 301
+
+[[redirects]]
+  from = "/guides"
+  to = "/guides/"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/learn"
+  to = "/learn/"
+  status = 301
+
+[[redirects]]
+  from = "/recalls"
+  to = "/recalls/"
+  status = 301
+
+# Legacy URL support
+[[redirects]]
+  from = "/vin-check"
+  to = "/free-vin-check/"
+  status = 301
+
+[[redirects]]
+  from = "/vin-lookup"
+  to = "/vin-number-lookup/"
+  status = 301
+
+# Affiliate redirects handled by edge function
+[[edge_functions]]
+  function = "affiliate-redirect"
+  path = "/go/*"
+
+# SPA fallback for 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
