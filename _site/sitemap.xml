@@ -37,32 +37,20 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.caralpha.com/guides/insurance/best-car-insurance/</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/insurance/cheapest-car-insurance/</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.caralpha.com/guides/lemon-law/federal-lemon-law/</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.caralpha.com/guides/safety/nhtsa-ratings-explained/</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.caralpha.com/guides/repairs/average-repair-costs/</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.caralpha.com/guides/repairs/average-repair-costs/</loc>
-    <lastmod>2026-01-18</lastmod>
+    <loc>https://www.caralpha.com/guides/safety/nhtsa-ratings-explained/</loc>
+    <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -75,6 +63,18 @@
   <url>
     <loc>https://www.caralpha.com/guides/warranties/extended-warranty-guide/</loc>
     <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/guides/insurance/best-car-insurance/</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/guides/insurance/cheapest-car-insurance/</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -229,25 +229,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.caralpha.com/guides/insurance/</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.caralpha.com/guides/lemon-law/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.caralpha.com/guides/safety/</loc>
+    <loc>https://www.caralpha.com/guides/repairs/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.caralpha.com/guides/repairs/</loc>
+    <loc>https://www.caralpha.com/guides/safety/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -260,6 +254,12 @@
   </url>
   <url>
     <loc>https://www.caralpha.com/guides/warranties/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/guides/insurance/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
