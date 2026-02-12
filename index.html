@@ -35,39 +35,62 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.032;
+      opacity: 0.04;
       background-image:
-        /* Diagonal weave - first direction */
+        /* Tow bundles — warp direction (diagonal right) */
         repeating-linear-gradient(
           45deg,
-          transparent,
-          transparent 2px,
-          rgba(255,255,255,0.4) 2px,
-          rgba(255,255,255,0.4) 3px,
-          transparent 3px,
-          transparent 6px
+          rgba(255,255,255,0.0) 0px,
+          rgba(255,255,255,0.28) 2px,
+          rgba(255,255,255,0.38) 4px,
+          rgba(255,255,255,0.28) 6px,
+          rgba(255,255,255,0.0) 8px,
+          rgba(255,255,255,0.0) 10px
         ),
-        /* Diagonal weave - second direction */
+        /* Tow bundles — weft direction (diagonal left) */
         repeating-linear-gradient(
           -45deg,
-          transparent,
-          transparent 2px,
-          rgba(255,255,255,0.35) 2px,
-          rgba(255,255,255,0.35) 3px,
-          transparent 3px,
-          transparent 6px
+          rgba(255,255,255,0.0) 0px,
+          rgba(255,255,255,0.22) 2px,
+          rgba(255,255,255,0.30) 4px,
+          rgba(255,255,255,0.22) 6px,
+          rgba(255,255,255,0.0) 8px,
+          rgba(255,255,255,0.0) 10px
         ),
-        /* Subtle highlight at intersections */
+        /* Over-under depth: darker recesses at crossing points */
         repeating-linear-gradient(
           45deg,
-          transparent,
-          transparent 5px,
-          rgba(255,255,255,0.15) 5px,
-          rgba(255,255,255,0.15) 6px,
-          transparent 6px,
-          transparent 12px
+          rgba(0,0,0,0.0) 0px,
+          rgba(0,0,0,0.0) 4px,
+          rgba(0,0,0,0.18) 5px,
+          rgba(0,0,0,0.0) 6px,
+          rgba(0,0,0,0.0) 10px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(0,0,0,0.0) 0px,
+          rgba(0,0,0,0.0) 4px,
+          rgba(0,0,0,0.15) 5px,
+          rgba(0,0,0,0.0) 6px,
+          rgba(0,0,0,0.0) 10px
+        ),
+        /* Micro-sheen: directional metallic highlight */
+        repeating-linear-gradient(
+          45deg,
+          rgba(255,255,255,0.0) 0px,
+          rgba(255,255,255,0.12) 3px,
+          rgba(255,255,255,0.0) 5px,
+          rgba(255,255,255,0.0) 10px
+        ),
+        /* Weave intersection grain */
+        repeating-linear-gradient(
+          -45deg,
+          rgba(255,255,255,0.0) 0px,
+          rgba(255,255,255,0.08) 3px,
+          rgba(255,255,255,0.0) 5px,
+          rgba(255,255,255,0.0) 10px
         );
-      background-size: 8px 8px, 8px 8px, 12px 12px;
+      background-size: 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
     }
     .carbon-bg > * { position: relative; z-index: 1; }
 
@@ -81,27 +104,43 @@
       inset: 0;
       border-radius: inherit;
       pointer-events: none;
-      opacity: 0.025;
+      opacity: 0.03;
       background-image:
         repeating-linear-gradient(
           45deg,
-          transparent,
-          transparent 2px,
-          rgba(255,255,255,0.4) 2px,
-          rgba(255,255,255,0.4) 3px,
-          transparent 3px,
-          transparent 6px
+          rgba(255,255,255,0.0) 0px,
+          rgba(255,255,255,0.28) 2px,
+          rgba(255,255,255,0.38) 4px,
+          rgba(255,255,255,0.28) 6px,
+          rgba(255,255,255,0.0) 8px,
+          rgba(255,255,255,0.0) 10px
         ),
         repeating-linear-gradient(
           -45deg,
-          transparent,
-          transparent 2px,
-          rgba(255,255,255,0.35) 2px,
-          rgba(255,255,255,0.35) 3px,
-          transparent 3px,
-          transparent 6px
+          rgba(255,255,255,0.0) 0px,
+          rgba(255,255,255,0.22) 2px,
+          rgba(255,255,255,0.30) 4px,
+          rgba(255,255,255,0.22) 6px,
+          rgba(255,255,255,0.0) 8px,
+          rgba(255,255,255,0.0) 10px
+        ),
+        repeating-linear-gradient(
+          45deg,
+          rgba(0,0,0,0.0) 0px,
+          rgba(0,0,0,0.0) 4px,
+          rgba(0,0,0,0.15) 5px,
+          rgba(0,0,0,0.0) 6px,
+          rgba(0,0,0,0.0) 10px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(0,0,0,0.0) 0px,
+          rgba(0,0,0,0.0) 4px,
+          rgba(0,0,0,0.12) 5px,
+          rgba(0,0,0,0.0) 6px,
+          rgba(0,0,0,0.0) 10px
         );
-      background-size: 8px 8px;
+      background-size: 10px 10px;
     }
 
     /* === GLASSMORPHISM === */
