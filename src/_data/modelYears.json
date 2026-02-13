@@ -3158,5 +3158,1421 @@
     "makeName": "Ford",
     "year": 2010,
     "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "c-class",
+    "name": "C-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "gle",
+    "name": "GLE",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "year": 2010,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "year": 2010,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "altima",
+    "name": "Altima",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "elantra",
+    "name": "Elantra",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "telluride",
+    "name": "Telluride",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-3",
+    "name": "Model 3",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "model-y",
+    "name": "Model Y",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "wrangler",
+    "name": "Wrangler",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2010,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "grand-cherokee",
+    "name": "Grand Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "year": 2010,
+    "bodyType": "SUV"
   }
 ]
