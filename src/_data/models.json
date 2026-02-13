@@ -738,5 +738,165 @@
     "yearEnd": null,
     "bodyType": "SUV",
     "description": "The Dodge Hornet is a compact performance crossover that brings the brand's muscle car attitude to the growing small SUV segment. Available with a turbocharged engine or a plug-in hybrid R/T powertrain with over 280 horsepower. The Hornet marks Dodge's entry into the electrified performance crossover market."
+  },
+  {
+    "slug": "sierra",
+    "name": "Sierra",
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "yearStart": 1999,
+    "yearEnd": null,
+    "bodyType": "Truck",
+    "description": "The GMC Sierra is a full-size pickup truck that shares its platform with the Chevrolet Silverado but adds premium features and distinctive styling. The Sierra Denali is one of the most luxurious trucks available, while the AT4 trim offers enhanced off-road capability. The Sierra was the first truck to offer a MultiPro tailgate with six unique functions."
+  },
+  {
+    "slug": "yukon",
+    "name": "Yukon",
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "yearStart": 1992,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The GMC Yukon is a full-size SUV built on the same platform as the Chevrolet Tahoe, offering a premium experience with three rows of seating and powerful V8 engines. The Yukon Denali is the flagship model with exclusive features, while the Yukon XL provides additional cargo and passenger space. The current generation features an independent rear suspension for improved ride quality."
+  },
+  {
+    "slug": "terrain",
+    "name": "Terrain",
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "yearStart": 2010,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The GMC Terrain is a compact crossover SUV that offers a refined cabin, good fuel economy, and GMC's professional-grade image. The Terrain competes with the Chevrolet Equinox and offers available all-wheel drive with a choice of turbocharged engines. The Denali trim adds premium materials and exclusive styling elements."
+  },
+  {
+    "slug": "acadia",
+    "name": "Acadia",
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "yearStart": 2007,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The GMC Acadia is a midsize crossover SUV offering available three-row seating in a more manageable footprint than the full-size Yukon. The Acadia Denali and AT4 trims cater to luxury and adventure buyers respectively. The Acadia provides a good balance of passenger space, cargo capacity, and driving dynamics."
+  },
+  {
+    "slug": "canyon",
+    "name": "Canyon",
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "yearStart": 2004,
+    "yearEnd": null,
+    "bodyType": "Truck",
+    "description": "The GMC Canyon is a midsize pickup truck that shares its platform with the Chevrolet Colorado but adds a more upscale presentation. The Canyon AT4X is one of the most capable off-road midsize trucks available, with Multimatic DSSV dampers and front and rear locking differentials. The Denali trim brings full-size luxury to the midsize segment."
+  },
+  {
+    "slug": "gv70",
+    "name": "GV70",
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Genesis GV70 is a compact luxury SUV that quickly established itself as a serious competitor to the BMW X3 and Mercedes-Benz GLC. Offering a choice of turbocharged four-cylinder and twin-turbo V6 engines with available all-wheel drive. The GV70 delivers exceptional value with standard features that are optional on German rivals."
+  },
+  {
+    "slug": "gv80",
+    "name": "GV80",
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Genesis GV80 is a midsize luxury SUV that announced Genesis as a legitimate luxury brand when it debuted. Available with three rows of seating, the GV80 features a serene cabin with premium materials and advanced technology. The GV80 competes with the BMW X5 and Mercedes-Benz GLE at a more accessible price point."
+  },
+  {
+    "slug": "g70",
+    "name": "G70",
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Genesis G70 is a compact sport sedan that has won multiple comparison tests against the BMW 3 Series and Mercedes-Benz C-Class. With a turbocharged 2.0T or powerful 3.3T twin-turbo V6, the G70 delivers engaging driving dynamics. Genesis includes complimentary scheduled maintenance and concierge service with every G70."
+  },
+  {
+    "slug": "g80",
+    "name": "G80",
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Genesis G80 is a midsize luxury sedan that competes with the BMW 5 Series and Mercedes-Benz E-Class. The G80 offers elegant design, a quiet and refined cabin, and an extensive list of standard features. An all-electric Electrified G80 variant brings EV luxury to the lineup."
+  },
+  {
+    "slug": "outlander",
+    "name": "Outlander",
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "yearStart": 2003,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Mitsubishi Outlander is a compact crossover SUV that offers available three-row seating and one of the most affordable plug-in hybrid options in the market. The Outlander PHEV provides substantial electric-only range for daily commuting while maintaining SUV versatility. The latest generation features a bold new design and partnership-derived technology from the Nissan-Mitsubishi alliance."
+  },
+  {
+    "slug": "eclipse-cross",
+    "name": "Eclipse Cross",
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Mitsubishi Eclipse Cross is a compact crossover SUV that slots between the smaller Outlander Sport and the larger Outlander in the lineup. Featuring a distinctive coupe-like roofline and available Super All-Wheel Control, the Eclipse Cross offers a unique design in the crowded compact SUV market. Competitive pricing and a generous warranty make it a solid value proposition."
+  },
+  {
+    "slug": "pacifica",
+    "name": "Pacifica",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "bodyType": "Minivan",
+    "description": "The Chrysler Pacifica is widely regarded as the best minivan on the market, offering a refined interior, innovative Stow 'n Go seating, and available plug-in hybrid powertrain. The Pacifica Hybrid was the first electrified minivan, providing significant fuel savings for family transportation. Available all-wheel drive and the Uconnect 5 infotainment system keep the Pacifica competitive."
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "yearStart": 2005,
+    "yearEnd": 2024,
+    "bodyType": "Sedan",
+    "description": "The Chrysler 300 was a full-size sedan that combined bold American styling with available V8 power and a rear-wheel-drive platform. The 300S offered a sportier driving experience, while the top-tier 300C featured the legendary 6.4-liter HEMI V8. Chrysler discontinued the 300 after the 2024 model year as the brand transitions toward electrification."
+  },
+  {
+    "slug": "enclave",
+    "name": "Enclave",
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "yearStart": 2008,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Buick Enclave is a three-row luxury crossover SUV that offers a quiet, comfortable cabin with premium features at a more accessible price than many luxury competitors. The Enclave's spacious interior seats up to seven or eight passengers, making it a popular family vehicle. Buick's QuietTuning technology ensures a serene driving experience."
+  },
+  {
+    "slug": "encore-gx",
+    "name": "Encore GX",
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Buick Encore GX is a subcompact luxury crossover SUV that bridges the gap between the smaller Encore and the larger Envision. Offering available all-wheel drive and a choice of turbocharged three-cylinder engines, the Encore GX provides premium features in a compact package. The Sport Touring trim adds sporty visual elements and enhanced technology."
+  },
+  {
+    "slug": "envision",
+    "name": "Envision",
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Buick Envision is a compact luxury crossover SUV that offers a comfortable ride, a quiet cabin, and Buick's signature premium experience. Standard features include a turbocharged engine, an 8-inch touchscreen, and active safety technology. The Envision Avenir trim adds exclusive materials and design elements for a true luxury experience."
   }
 ]
