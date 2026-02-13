@@ -898,5 +898,455 @@
     "yearEnd": null,
     "bodyType": "SUV",
     "description": "The Buick Envision is a compact luxury crossover SUV that offers a comfortable ride, a quiet cabin, and Buick's signature premium experience. Standard features include a turbocharged engine, an 8-inch touchscreen, and active safety technology. The Envision Avenir trim adds exclusive materials and design elements for a true luxury experience."
+  },
+  {
+    "slug": "q50",
+    "name": "Q50",
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "yearStart": 2014,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Infiniti Q50 is a compact luxury sport sedan powered by a twin-turbocharged V6 engine, offering a balance of performance and everyday comfort. Available with rear-wheel or all-wheel drive, the Q50 Red Sport 400 delivers 400 horsepower for genuine sport sedan thrills."
+  },
+  {
+    "slug": "qx60",
+    "name": "QX60",
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "yearStart": 2014,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Infiniti QX60 is a three-row luxury crossover SUV that combines a refined cabin with family-friendly versatility. Completely redesigned with bold new styling and a luxurious interior, the QX60 competes with the Acura MDX and Lexus RX L."
+  },
+  {
+    "slug": "qx80",
+    "name": "QX80",
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "yearStart": 2011,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Infiniti QX80 is a full-size luxury SUV with seating for up to eight passengers and a powerful V8 engine. Known for its spacious cabin and commanding road presence, the QX80 competes with the Cadillac Escalade and Lincoln Navigator."
+  },
+  {
+    "slug": "qx50",
+    "name": "QX50",
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Infiniti QX50 is a compact luxury crossover featuring the world's first production variable-compression turbo engine. The QX50 offers a spacious interior with premium materials and competes with the BMW X3 and Audi Q5."
+  },
+  {
+    "slug": "cooper",
+    "name": "Cooper",
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "yearStart": 2002,
+    "yearEnd": null,
+    "bodyType": "Hatchback",
+    "description": "The Mini Cooper is an iconic compact car known for its go-kart-like handling, retro-modern design, and fun-to-drive character. Available in hardtop, convertible, and high-performance John Cooper Works variants, the Mini Cooper delivers driving excitement in a city-friendly package."
+  },
+  {
+    "slug": "countryman",
+    "name": "Countryman",
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "yearStart": 2011,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Mini Countryman is the brand's largest model, offering more passenger and cargo space while maintaining Mini's signature driving dynamics. Available with all-wheel drive and a plug-in hybrid powertrain, the Countryman brings versatility to the Mini lineup."
+  },
+  {
+    "slug": "f-pace",
+    "name": "F-Pace",
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Jaguar F-Pace is a luxury performance SUV that combines Jaguar's sporting heritage with everyday practicality. Offering a range of powertrains including a supercharged V8 in the SVR variant, the F-Pace delivers engaging driving dynamics unusual for its class."
+  },
+  {
+    "slug": "f-type",
+    "name": "F-Type",
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "yearStart": 2014,
+    "yearEnd": 2024,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Jaguar F-Type is a luxury sports car that carries on the legacy of the legendary E-Type. Available as a coupe or convertible with supercharged engines ranging from four cylinders to a thunderous V8, the F-Type is one of the most beautiful sports cars of its generation."
+  },
+  {
+    "slug": "e-pace",
+    "name": "E-Pace",
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Jaguar E-Pace is a compact luxury crossover SUV that brings Jaguar's design language and sporting character to the growing small luxury SUV segment. Standard all-wheel drive and a turbocharged engine provide confident performance in all conditions."
+  },
+  {
+    "slug": "giulia",
+    "name": "Giulia",
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Alfa Romeo Giulia is an Italian sport sedan that prioritizes driving engagement above all else. The Quadrifoglio variant delivers 505 horsepower from a Ferrari-derived twin-turbo V6, making it one of the fastest sport sedans available. Stunning design and a driver-focused cockpit set the Giulia apart from German rivals."
+  },
+  {
+    "slug": "stelvio",
+    "name": "Stelvio",
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Alfa Romeo Stelvio is a compact luxury SUV that brings Italian passion and driving dynamics to the SUV segment. Named after the famous Stelvio Pass in the Italian Alps, the Stelvio Quadrifoglio variant is one of the fastest SUVs around the Nurburgring."
+  },
+  {
+    "slug": "tonale",
+    "name": "Tonale",
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Alfa Romeo Tonale is a subcompact luxury crossover that expands the brand's SUV lineup with a more accessible entry point. Available with a plug-in hybrid powertrain, the Tonale features distinctive Italian styling and connects owners to the vehicle through an NFT-based digital certificate."
+  },
+  {
+    "slug": "ghibli",
+    "name": "Ghibli",
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "yearStart": 2014,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Maserati Ghibli is an Italian luxury sport sedan named after a hot Saharan wind. Powered by Ferrari-built twin-turbo V6 engines, the Ghibli offers distinctive Italian design and an intoxicating exhaust note that set it apart from German competitors."
+  },
+  {
+    "slug": "levante",
+    "name": "Levante",
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Maserati Levante is an Italian luxury SUV that brings Maserati's grand touring character to the SUV segment. Available with twin-turbo V6 and V8 engines, the Levante combines genuine off-road capability with the soul of a sports car."
+  },
+  {
+    "slug": "grecale",
+    "name": "Grecale",
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Maserati Grecale is a compact luxury SUV that competes with the Porsche Macan. Named after the Mediterranean wind, the Grecale offers multiple powertrain options including the electrified Folgore variant, representing Maserati's push toward electrification."
+  },
+  {
+    "slug": "500x",
+    "name": "500X",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Fiat 500X is a subcompact crossover SUV that combines Italian style with everyday practicality. Sharing its platform with the Jeep Renegade, the 500X offers available all-wheel drive and a turbocharged engine in a distinctive package."
+  },
+  {
+    "slug": "500e",
+    "name": "500e",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "Hatchback",
+    "description": "The Fiat 500e is an all-electric city car that brings the iconic Cinquecento into the electric age. With retro-modern styling and zero emissions, the 500e is designed for urban driving with a range suitable for daily commuting."
+  },
+  {
+    "slug": "polestar-2",
+    "name": "Polestar 2",
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Polestar 2 is a premium all-electric fastback sedan that competes directly with the Tesla Model 3. Built on Volvo's CMA platform, the Polestar 2 offers Scandinavian minimalist design, Google built-in infotainment, and available dual-motor all-wheel drive."
+  },
+  {
+    "slug": "polestar-3",
+    "name": "Polestar 3",
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "yearStart": 2025,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Polestar 3 is a luxury electric performance SUV designed to compete with the BMW iX and Mercedes EQE SUV. Built on Volvo's SPA2 platform with advanced aerodynamics, the Polestar 3 features a dual-motor powertrain and advanced lidar-based safety systems."
+  },
+  {
+    "slug": "r1t",
+    "name": "R1T",
+    "makeSlug": "rivian",
+    "makeName": "Rivian",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "Truck",
+    "description": "The Rivian R1T was the first electric pickup truck to reach production, offering a quad-motor drivetrain with up to 835 horsepower. With an integrated gear tunnel, powered tonneau cover, and adventure-oriented design, the R1T is purpose-built for outdoor lifestyles."
+  },
+  {
+    "slug": "r1s",
+    "name": "R1S",
+    "makeSlug": "rivian",
+    "makeName": "Rivian",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Rivian R1S is a three-row electric SUV that shares its platform with the R1T pickup. Offering impressive off-road capability with up to 835 horsepower and over 300 miles of range, the R1S competes with the Land Rover Defender and Tesla Model X."
+  },
+  {
+    "slug": "air",
+    "name": "Air",
+    "makeSlug": "lucid",
+    "makeName": "Lucid",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Lucid Air is an ultra-luxury electric sedan that holds the record for the longest-range EV with an EPA-estimated 516 miles. Designed by the former chief engineer of the Tesla Model S, the Air offers a spacious interior with a glass canopy roof and up to 1,234 horsepower in the Sapphire variant."
+  },
+  {
+    "slug": "gravity",
+    "name": "Gravity",
+    "makeSlug": "lucid",
+    "makeName": "Lucid",
+    "yearStart": 2025,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Lucid Gravity is a luxury electric SUV that brings Lucid's advanced EV technology to the three-row SUV segment. With seating for up to seven passengers and Lucid's efficient drivetrain technology, the Gravity targets the luxury SUV market dominated by the BMW X7 and Mercedes GLS."
+  },
+  {
+    "slug": "emira",
+    "name": "Emira",
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The Lotus Emira is the brand's final internal combustion sports car, offering a choice of AMG-sourced four-cylinder turbo or Toyota-derived supercharged V6 engines. Following Colin Chapman's philosophy of lightweight engineering, the Emira delivers exceptional handling in a stunning mid-engine package."
+  },
+  {
+    "slug": "eletre",
+    "name": "Eletre",
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Lotus Eletre is an all-electric hyper-SUV that marks Lotus's entry into the luxury electric SUV market. With up to 905 horsepower and a 0-60 time under 3 seconds, the Eletre combines Lotus's lightweight engineering expertise with cutting-edge EV technology."
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "yearStart": 2004,
+    "yearEnd": null,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Bentley Continental GT is the definitive modern grand tourer, combining effortless power with handcrafted luxury. Powered by a twin-turbocharged W12 or V8 engine, the Continental GT can cross continents in supreme comfort while delivering genuine supercar performance."
+  },
+  {
+    "slug": "bentayga",
+    "name": "Bentayga",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Bentley Bentayga was the first ultra-luxury SUV, setting a new benchmark for opulence in the SUV segment. Handcrafted at Bentley's Crewe factory with the finest leathers, woods, and metals, the Bentayga offers V8 power with plug-in hybrid efficiency available."
+  },
+  {
+    "slug": "cullinan",
+    "name": "Cullinan",
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Rolls-Royce Cullinan is the most luxurious SUV in the world, named after the largest diamond ever discovered. Powered by a twin-turbo V12 and featuring the signature coach doors, the Cullinan brings Rolls-Royce's magic carpet ride to all terrains."
+  },
+  {
+    "slug": "ghost",
+    "name": "Ghost",
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "yearStart": 2010,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Rolls-Royce Ghost is designed for owner-drivers who want the Rolls-Royce experience in a more dynamic package. The second-generation Ghost features a minimalist design philosophy with over 100kg of sound-deadening material for an eerily silent cabin."
+  },
+  {
+    "slug": "spectre",
+    "name": "Spectre",
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The Rolls-Royce Spectre is the brand's first fully electric vehicle, a luxury coupe that delivers the silent power befitting the world's most prestigious automaker. With 577 horsepower from dual electric motors and a range of over 260 miles, the Spectre represents the future of ultra-luxury motoring."
+  },
+  {
+    "slug": "urus",
+    "name": "Urus",
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Lamborghini Urus is a super SUV that combines Lamborghini's dramatic design and performance with everyday usability. Powered by a twin-turbo V8 producing 641 horsepower, the Urus is the fastest production SUV and has become Lamborghini's best-selling model."
+  },
+  {
+    "slug": "huracan",
+    "name": "Huracan",
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "yearStart": 2015,
+    "yearEnd": 2024,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Lamborghini Huracan is a mid-engine supercar powered by a naturally aspirated 5.2-liter V10 engine. Available in Coupe and Spyder body styles with rear-wheel or all-wheel drive, the Huracan delivers visceral performance with one of the greatest-sounding engines in automotive history."
+  },
+  {
+    "slug": "revuelto",
+    "name": "Revuelto",
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The Lamborghini Revuelto is the successor to the Aventador, combining a naturally aspirated V12 with three electric motors for a combined 1,001 horsepower. The first Lamborghini plug-in hybrid, the Revuelto represents the brand's electrified future while preserving the emotional V12 experience."
+  },
+  {
+    "slug": "roma",
+    "name": "Roma",
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The Ferrari Roma is a front-engine grand tourer that embodies the dolce vita spirit of 1960s Rome. With 612 horsepower from a twin-turbo V8, elegant proportions, and a refined cabin, the Roma is Ferrari's most accessible and versatile model."
+  },
+  {
+    "slug": "296-gtb",
+    "name": "296 GTB",
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The Ferrari 296 GTB is a mid-engine plug-in hybrid supercar that pairs a twin-turbo V6 with an electric motor for 819 combined horsepower. The 296 GTB represents Ferrari's new era of electrified performance while introducing a completely new engine architecture."
+  },
+  {
+    "slug": "purosangue",
+    "name": "Purosangue",
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Ferrari Purosangue is the brand's first four-door, four-seat vehicle, powered by a naturally aspirated 6.5-liter V12 producing 715 horsepower. Ferrari insists the Purosangue is not an SUV but a new segment of vehicle, combining Ferrari performance with four-door practicality for the first time."
+  },
+  {
+    "slug": "750s",
+    "name": "750S",
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "Coupe/Convertible",
+    "description": "The McLaren 750S is a supercar that replaces the 720S, offering 740 horsepower from a twin-turbo V8 in a carbon-fiber structure weighing just over 3,000 pounds. The 750S delivers race-car levels of performance while remaining usable as a grand tourer."
+  },
+  {
+    "slug": "artura",
+    "name": "Artura",
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The McLaren Artura is the brand's first series-production hybrid supercar, combining a twin-turbo V6 with an electric motor for 671 combined horsepower. Built on an all-new carbon-fiber architecture, the Artura represents McLaren's transition toward electrified performance."
+  },
+  {
+    "slug": "dbx",
+    "name": "DBX",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Aston Martin DBX is the brand's first SUV, combining British luxury and craftsmanship with genuine performance capability. The DBX707 variant produces 697 horsepower, making it one of the most powerful luxury SUVs in the world."
+  },
+  {
+    "slug": "db12",
+    "name": "DB12",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Aston Martin DB12 is billed as the world's first super tourer, replacing the iconic DB11 with 671 horsepower from a twin-turbo V8. The DB12 combines Aston Martin's timeless design with cutting-edge technology and devastating performance."
+  },
+  {
+    "slug": "vantage",
+    "name": "Vantage",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Aston Martin Vantage is the brand's pure sports car, designed to compete with the Porsche 911 and Mercedes-AMG GT. Powered by a twin-turbo V8, the Vantage delivers sharp handling and dramatic styling in a more compact package than the DB12."
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "yearStart": 2017,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Bugatti Chiron is one of the most extreme production cars ever made, powered by an 8.0-liter quad-turbocharged W16 engine producing 1,500 horsepower. Limited to 500 units worldwide, the Chiron can exceed 300 mph and represents the absolute pinnacle of automotive engineering."
+  },
+  {
+    "slug": "tourbillon",
+    "name": "Tourbillon",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "yearStart": 2026,
+    "yearEnd": null,
+    "bodyType": "Coupe",
+    "description": "The Bugatti Tourbillon is the successor to the Chiron, combining a naturally aspirated V16 engine with three electric motors for approximately 1,800 horsepower. Named after the precision watchmaking mechanism, the Tourbillon represents Bugatti's vision for the future of hyper-luxury performance."
+  },
+  {
+    "slug": "s-class-maybach",
+    "name": "S-Class Maybach",
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Mercedes-Maybach S-Class is the pinnacle of luxury sedan motoring, featuring an extended wheelbase, reclining rear seats, and the finest materials available. Powered by a twin-turbo V8 or V12 engine, the Maybach S-Class competes with Rolls-Royce and Bentley."
+  },
+  {
+    "slug": "gls-maybach",
+    "name": "GLS Maybach",
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Mercedes-Maybach GLS is an ultra-luxury SUV that transforms the GLS platform into a four-seat limousine on stilts. With executive rear seating, a refrigerated champagne compartment, and a twin-turbo V8, the Maybach GLS competes with the Bentley Bentayga and Rolls-Royce Cullinan."
   }
 ]
