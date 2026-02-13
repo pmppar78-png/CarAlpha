@@ -1798,5 +1798,1365 @@
     "makeName": "Volvo",
     "year": 2009,
     "bodyType": "SUV"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "camry",
+    "name": "Camry",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2026,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2025,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2024,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2023,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2022,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2021,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2020,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2019,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2018,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2017,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2016,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2015,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2014,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2013,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2012,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2011,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "corolla",
+    "name": "Corolla",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2010,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "rav4",
+    "name": "RAV4",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2010,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2026,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2025,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2024,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2023,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2022,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2021,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2020,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2019,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2018,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2017,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2016,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2015,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2014,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2013,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2012,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2011,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "tacoma",
+    "name": "Tacoma",
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "year": 2010,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2026,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2025,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2024,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2023,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2022,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2021,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2020,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2019,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2018,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2017,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2016,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2015,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2014,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2013,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2012,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2011,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "civic",
+    "name": "Civic",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2010,
+    "bodyType": "Sedan/Hatchback"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2026,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2025,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2024,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2023,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2022,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2021,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2020,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2019,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2018,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2017,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2016,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2015,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2014,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2013,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2012,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2011,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "accord",
+    "name": "Accord",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2010,
+    "bodyType": "Sedan"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "cr-v",
+    "name": "CR-V",
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "year": 2010,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2026,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2025,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2024,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2023,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2022,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2021,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2020,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2019,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2018,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2017,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2016,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2015,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2014,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2013,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2012,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2011,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2010,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2026,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2025,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2024,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2023,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2022,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2021,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2020,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2019,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2018,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2017,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2016,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2015,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2014,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2013,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2012,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2011,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "explorer",
+    "name": "Explorer",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2010,
+    "bodyType": "SUV"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2026,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2025,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2024,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2023,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2022,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2021,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2020,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2019,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2018,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2017,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2016,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2015,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2014,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2013,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2012,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2011,
+    "bodyType": "Coupe/Convertible"
+  },
+  {
+    "slug": "mustang",
+    "name": "Mustang",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2010,
+    "bodyType": "Coupe/Convertible"
   }
 ]
