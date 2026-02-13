@@ -658,5 +658,85 @@
     "yearEnd": null,
     "bodyType": "Coupe",
     "description": "The Subaru BRZ is a lightweight rear-wheel-drive sports coupe developed jointly with Toyota. Known for its exceptional handling balance and accessible performance, the BRZ is a pure driver's car in an era of heavy, tech-laden vehicles. The second generation added more power while maintaining the lightweight formula."
+  },
+  {
+    "slug": "tlx",
+    "name": "TLX",
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "yearStart": 2015,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Acura TLX is a sport luxury sedan that combines precision handling with advanced technology and a premium interior. The Type S variant delivers genuine performance with a turbocharged V6 and torque-vectoring all-wheel drive. The TLX competes with the BMW 3 Series and Mercedes-Benz C-Class."
+  },
+  {
+    "slug": "mdx",
+    "name": "MDX",
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "yearStart": 2001,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Acura MDX is a three-row luxury SUV that has been one of the best-selling vehicles in its segment since its introduction. Known for combining Honda reliability with premium appointments and available Super Handling All-Wheel Drive. The MDX Type S adds a turbocharged V6 for enhanced performance."
+  },
+  {
+    "slug": "rdx",
+    "name": "RDX",
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "yearStart": 2007,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Acura RDX is a compact luxury crossover SUV that offers a turbocharged engine, a spacious interior, and Acura's precision-crafted design philosophy. The RDX features the True Touchpad Interface and available A-Spec styling for a sportier appearance. It competes with the Lexus NX and BMW X3."
+  },
+  {
+    "slug": "integra",
+    "name": "Integra",
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "bodyType": "Hatchback",
+    "description": "The Acura Integra was revived in 2023 as a premium sport compact liftback, carrying on the legacy of the beloved original. Sharing its platform with the Honda Civic, the Integra offers a six-speed manual transmission and engaging driving dynamics. The Integra Type S delivers track-ready performance with a turbocharged engine."
+  },
+  {
+    "slug": "charger",
+    "name": "Charger",
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "yearStart": 2006,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Dodge Charger is an American muscle sedan that combines aggressive styling with powerful engine options, including the legendary HEMI V8. The Charger SRT Hellcat and Redeye variants delivered supercharged performance exceeding 700 horsepower. Dodge has transitioned the Charger to an electrified platform for the next generation."
+  },
+  {
+    "slug": "challenger",
+    "name": "Challenger",
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "yearStart": 2008,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Dodge Challenger is a retro-styled muscle car that carried the torch for American V8 performance. From the V6 SXT to the supercharged Hellcat and the record-breaking Demon 170, the Challenger offered something for every performance enthusiast. Production ended in 2024 as Dodge transitions to electrified performance."
+  },
+  {
+    "slug": "durango",
+    "name": "Durango",
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "yearStart": 2004,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Dodge Durango is a three-row performance SUV that stands apart from competitors with available V8 power and muscular styling. The Durango SRT and SRT Hellcat variants made it the fastest and most powerful three-row SUV available. The Durango combines family hauling capability with genuine performance credentials."
+  },
+  {
+    "slug": "hornet",
+    "name": "Hornet",
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Dodge Hornet is a compact performance crossover that brings the brand's muscle car attitude to the growing small SUV segment. Available with a turbocharged engine or a plug-in hybrid R/T powertrain with over 280 horsepower. The Hornet marks Dodge's entry into the electrified performance crossover market."
   }
 ]
