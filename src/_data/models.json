@@ -230,6 +230,66 @@
     "description": "The Hyundai Tucson is a compact crossover SUV with bold styling, a premium interior, and available hybrid and plug-in hybrid powertrains. The Tucson offers one of the best value propositions in its class."
   },
   {
+    "slug": "santa-fe",
+    "name": "Santa Fe",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "yearStart": 2001,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Hyundai Santa Fe is a midsize SUV offering a comfortable ride, generous standard features, and available hybrid and plug-in hybrid powertrains. The Santa Fe provides excellent value with a spacious interior and Hyundai's comprehensive warranty."
+  },
+  {
+    "slug": "sonata",
+    "name": "Sonata",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "yearStart": 1985,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Hyundai Sonata is a midsize sedan known for its striking design, generous features, and excellent value. Available in hybrid and N Line performance variants, the Sonata offers a compelling alternative to traditional segment leaders."
+  },
+  {
+    "slug": "kona",
+    "name": "Kona",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Hyundai Kona is a subcompact crossover SUV offering distinctive styling, a tech-rich interior, and available all-wheel drive. The Kona Electric variant provides a fully electric option with competitive range."
+  },
+  {
+    "slug": "palisade",
+    "name": "Palisade",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Hyundai Palisade is a three-row SUV that elevated Hyundai's brand with premium materials, a refined ride, and a spacious cabin. The Palisade offers near-luxury features at a mainstream price."
+  },
+  {
+    "slug": "venue",
+    "name": "Venue",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Hyundai Venue is an entry-level subcompact SUV offering an affordable starting price, easy maneuverability, and a surprisingly feature-rich interior for its class."
+  },
+  {
+    "slug": "ioniq-5",
+    "name": "IONIQ 5",
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Hyundai IONIQ 5 is an all-electric crossover built on Hyundai's dedicated E-GMP platform, featuring ultra-fast 800V charging, a retro-futuristic design, and a spacious flat-floor interior."
+  },
+  {
     "slug": "sorento",
     "name": "Sorento",
     "makeSlug": "kia",
@@ -248,6 +308,66 @@
     "yearEnd": null,
     "bodyType": "SUV",
     "description": "The Kia Telluride quickly became one of the most acclaimed SUVs in America, winning multiple SUV of the Year awards with its spacious three-row interior, premium feel, and competitive pricing."
+  },
+  {
+    "slug": "sportage",
+    "name": "Sportage",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "yearStart": 1993,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Kia Sportage is a compact SUV with bold styling, a tech-forward interior, and available hybrid and plug-in hybrid powertrains. The Sportage offers one of the most distinctive designs in its segment."
+  },
+  {
+    "slug": "forte",
+    "name": "Forte",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "yearStart": 2010,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Kia Forte is a compact sedan offering excellent value with a generous features list, a comfortable ride, and Kia's industry-leading warranty. Available in sedan and hatchback body styles."
+  },
+  {
+    "slug": "soul",
+    "name": "Soul",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "yearStart": 2010,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Kia Soul is a distinctive boxy crossover known for its funky styling, spacious interior, and value-oriented pricing. The Soul EV offers an all-electric variant for eco-conscious buyers."
+  },
+  {
+    "slug": "k5",
+    "name": "K5",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "Sedan",
+    "description": "The Kia K5 replaced the Optima as Kia's midsize sedan, bringing a sportier design, available all-wheel drive, and a turbocharged GT variant with genuine performance credentials."
+  },
+  {
+    "slug": "seltos",
+    "name": "Seltos",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Kia Seltos is a subcompact SUV slotting between the Soul and Sportage, offering a refined ride, available all-wheel drive, and a well-appointed interior at a competitive price."
+  },
+  {
+    "slug": "ev6",
+    "name": "EV6",
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Kia EV6 is an all-electric crossover built on the E-GMP platform, featuring ultra-fast charging, a striking design, and the high-performance GT variant producing over 576 horsepower."
   },
   {
     "slug": "model-3",
@@ -348,6 +468,56 @@
     "yearEnd": null,
     "bodyType": "SUV",
     "description": "The Volkswagen Tiguan is a compact SUV that offers European driving dynamics, a spacious interior, and available third-row seating. The Tiguan combines VW's engineering heritage with everyday practicality."
+  },
+  {
+    "slug": "atlas",
+    "name": "Atlas",
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Volkswagen Atlas is a three-row midsize SUV offering one of the most spacious interiors in its class, straightforward technology, and a comfortable ride designed specifically for American families."
+  },
+  {
+    "slug": "taos",
+    "name": "Taos",
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Volkswagen Taos is a subcompact SUV offering German engineering at an accessible price, with a roomy interior for its size and available all-wheel drive."
+  },
+  {
+    "slug": "golf",
+    "name": "Golf",
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "yearStart": 1974,
+    "yearEnd": null,
+    "bodyType": "Hatchback",
+    "description": "The Volkswagen Golf is an iconic hatchback known worldwide for its refined driving dynamics, practical design, and versatility. The Golf GTI and Golf R variants are benchmark hot hatches."
+  },
+  {
+    "slug": "id-4",
+    "name": "ID.4",
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Volkswagen ID.4 is an all-electric compact SUV built on VW's MEB platform, offering a spacious interior, competitive range, and an approachable entry point into electric vehicle ownership."
+  },
+  {
+    "slug": "atlas-cross-sport",
+    "name": "Atlas Cross Sport",
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "bodyType": "SUV",
+    "description": "The Volkswagen Atlas Cross Sport is a two-row midsize SUV with a sportier roofline than the standard Atlas, offering a stylish design, generous cargo space, and available V6 power."
   },
   {
     "slug": "cayenne",
@@ -1348,5 +1518,1575 @@
     "yearEnd": null,
     "bodyType": "SUV",
     "description": "The Mercedes-Maybach GLS is an ultra-luxury SUV that transforms the GLS platform into a four-seat limousine on stilts. With executive rear seating, a refrigerated champagne compartment, and a twin-turbo V8, the Maybach GLS competes with the Bentley Bentayga and Rolls-Royce Cullinan."
+  },
+  {
+    "slug": "9-3",
+    "name": "9-3",
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "yearStart": 1999,
+    "yearEnd": 2012,
+    "bodyType": "Sedan",
+    "description": "The Saab 9-3 was a compact executive car that embodied Saab's aviation-inspired engineering with turbocharged performance and distinctive Scandinavian design. Known for its unique ignition placement between the front seats and strong safety credentials, the 9-3 developed a loyal following among enthusiasts who valued its blend of quirkiness and capability."
+  },
+  {
+    "slug": "9-5",
+    "name": "9-5",
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "yearStart": 1999,
+    "yearEnd": 2012,
+    "bodyType": "Sedan",
+    "description": "The Saab 9-5 was a midsize luxury sedan that served as the brand's flagship, offering turbocharged power, a spacious cabin, and Saab's commitment to safety innovation. The second-generation 9-5 launched in 2010 with striking design but saw limited production before Saab's bankruptcy in 2011."
+  },
+  {
+    "slug": "9-2x",
+    "name": "9-2X",
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "yearStart": 2005,
+    "yearEnd": 2006,
+    "bodyType": "Wagon",
+    "description": "The Saab 9-2X was a compact wagon based on the Subaru Impreza, offering standard all-wheel drive and a turbocharged engine option in the Aero trim. Affectionately nicknamed the 'Saabaru' by enthusiasts, the 9-2X was a unique blend of Subaru capability and Saab styling that lasted only two model years."
+  },
+  {
+    "slug": "9-7x",
+    "name": "9-7X",
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "yearStart": 2005,
+    "yearEnd": 2009,
+    "bodyType": "SUV",
+    "description": "The Saab 9-7X was a midsize SUV based on the Chevrolet TrailBlazer platform, representing Saab's entry into the American SUV market. It featured Saab-specific styling cues and an available V8 engine, offering a more refined experience than its GM platform-mate despite its truck-based underpinnings."
+  },
+  {
+    "slug": "900",
+    "name": "900",
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "yearStart": 1979,
+    "yearEnd": 1998,
+    "bodyType": "Sedan/Convertible",
+    "description": "The Saab 900 was the quintessential Saab, renowned for its turbocharged engines, distinctive wraparound windshield, and aircraft-inspired dashboard. The 900 Convertible became a cultural icon and is considered one of the most desirable Saabs ever produced, helping establish the brand's identity in North America."
+  },
+  {
+    "slug": "aura",
+    "name": "Aura",
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "yearStart": 2007,
+    "yearEnd": 2010,
+    "bodyType": "Sedan",
+    "description": "The Saturn Aura was a midsize sedan that earned the 2007 North American Car of the Year award, signaling Saturn's move toward competitive mainstream vehicles. Built on GM's Epsilon platform shared with the Pontiac G6, the Aura offered a refined ride, available V6 power, and a hybrid variant."
+  },
+  {
+    "slug": "vue",
+    "name": "Vue",
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "yearStart": 2002,
+    "yearEnd": 2010,
+    "bodyType": "SUV",
+    "description": "The Saturn Vue was a compact crossover SUV that pioneered Saturn's move into the growing SUV segment. The second-generation Vue offered a Green Line hybrid variant and was one of the first affordable hybrid SUVs available to American consumers."
+  },
+  {
+    "slug": "outlook",
+    "name": "Outlook",
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "yearStart": 2007,
+    "yearEnd": 2010,
+    "bodyType": "SUV",
+    "description": "The Saturn Outlook was a full-size three-row crossover SUV that shared its Lambda platform with the GMC Acadia and Buick Enclave. The Outlook offered seating for up to eight passengers with a spacious interior and car-like driving dynamics uncommon in vehicles of its size."
+  },
+  {
+    "slug": "ion",
+    "name": "Ion",
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "yearStart": 2003,
+    "yearEnd": 2007,
+    "bodyType": "Sedan",
+    "description": "The Saturn Ion was a compact car that replaced the iconic S-Series, featuring Saturn's signature dent-resistant polymer body panels. The Ion Red Line variant offered a supercharged Ecotec engine and sport-tuned suspension, giving the compact Saturn legitimate performance credentials."
+  },
+  {
+    "slug": "sky",
+    "name": "Sky",
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "yearStart": 2007,
+    "yearEnd": 2010,
+    "bodyType": "Convertible",
+    "description": "The Saturn Sky was a two-seat roadster that shared its Kappa platform with the Pontiac Solstice, offering open-air driving excitement at an accessible price. The Sky Red Line featured a turbocharged engine producing 260 horsepower, making it one of the most exciting vehicles Saturn ever produced."
+  },
+  {
+    "slug": "sl",
+    "name": "SL",
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "yearStart": 1998,
+    "yearEnd": 2002,
+    "bodyType": "Sedan",
+    "description": "The Saturn SL was the original Saturn sedan that helped define the brand with its dent-resistant polymer body panels and no-haggle pricing philosophy. The SL offered practical, fuel-efficient transportation and cultivated a devoted owner community that celebrated the brand at annual Homecoming events in Spring Hill, Tennessee."
+  },
+  {
+    "slug": "g6",
+    "name": "G6",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 2005,
+    "yearEnd": 2010,
+    "bodyType": "Sedan",
+    "description": "The Pontiac G6 was a midsize car that gained massive publicity when Oprah Winfrey gave away 276 of them to her studio audience in 2004. Available as a sedan, coupe, and retractable hardtop convertible, the G6 offered versatility and style as Pontiac's volume seller."
+  },
+  {
+    "slug": "grand-am",
+    "name": "Grand Am",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 1999,
+    "yearEnd": 2005,
+    "bodyType": "Sedan",
+    "description": "The Pontiac Grand Am was one of the best-selling compact cars in America during its production run, known for its aggressive styling and sport-tuned suspension. The Grand Am GT with its RAM Air hood and distinctive body cladding was a common sight on American roads throughout the early 2000s."
+  },
+  {
+    "slug": "grand-prix",
+    "name": "Grand Prix",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 1998,
+    "yearEnd": 2008,
+    "bodyType": "Sedan",
+    "description": "The Pontiac Grand Prix was a midsize sedan with strong NASCAR heritage, known for its powerful supercharged V6 engine in the GTP trim. The Grand Prix GXP with its V8 engine represented the pinnacle of front-wheel-drive performance sedans from General Motors."
+  },
+  {
+    "slug": "gto",
+    "name": "GTO",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 2004,
+    "yearEnd": 2006,
+    "bodyType": "Coupe",
+    "description": "The Pontiac GTO was a rebadged Holden Monaro from Australia, reviving one of the most legendary muscle car nameplates in American history. Powered by a Corvette-derived LS-series V8 with up to 400 horsepower, the GTO offered tremendous performance value but had modest sales due to its understated styling."
+  },
+  {
+    "slug": "firebird",
+    "name": "Firebird",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 1998,
+    "yearEnd": 2002,
+    "bodyType": "Coupe",
+    "description": "The Pontiac Firebird and its iconic Trans Am variant were among America's most celebrated sports cars, offering V8 power and aggressive styling. The WS6 performance package with the Ram Air V8 made the fourth-generation Firebird one of the best performance bargains of its era."
+  },
+  {
+    "slug": "solstice",
+    "name": "Solstice",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 2006,
+    "yearEnd": 2010,
+    "bodyType": "Convertible",
+    "description": "The Pontiac Solstice was a two-seat roadster that proved Pontiac could still build exciting cars in the brand's final years. The Solstice GXP featured a turbocharged engine producing 260 horsepower, and the rare Solstice Coupe is now highly sought after by collectors."
+  },
+  {
+    "slug": "vibe",
+    "name": "Vibe",
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "yearStart": 2003,
+    "yearEnd": 2010,
+    "bodyType": "Hatchback",
+    "description": "The Pontiac Vibe was a compact hatchback developed jointly with Toyota, sharing its platform and powertrain with the Toyota Matrix. This collaboration gave the Vibe Toyota's renowned reliability, and the Vibe GT offered a high-revving 180-horsepower engine from the Corolla XRS."
+  },
+  {
+    "slug": "cutlass",
+    "name": "Cutlass",
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "yearStart": 1998,
+    "yearEnd": 1999,
+    "bodyType": "Sedan",
+    "description": "The Oldsmobile Cutlass carried one of the most storied nameplates in American automotive history, as the original Cutlass was America's best-selling car throughout much of the 1970s. The final-generation Cutlass was a midsize sedan that served as a bridge between Oldsmobile's glorious past and its uncertain future."
+  },
+  {
+    "slug": "alero",
+    "name": "Alero",
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "yearStart": 1999,
+    "yearEnd": 2004,
+    "bodyType": "Sedan",
+    "description": "The Oldsmobile Alero was a compact car that served as the brand's final attempt to attract younger buyers with sportier styling and available V6 power. The very last Oldsmobile ever produced was a 2004 Alero, ending over 100 years of continuous Oldsmobile production."
+  },
+  {
+    "slug": "intrigue",
+    "name": "Intrigue",
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "yearStart": 1998,
+    "yearEnd": 2002,
+    "bodyType": "Sedan",
+    "description": "The Oldsmobile Intrigue was a midsize sedan powered by a responsive 3.5-liter V6 engine, earning praise for its balanced handling and refined ride quality. The Intrigue represented Oldsmobile's attempt to redefine itself as a driver-focused brand but could not reverse the marque's declining sales."
+  },
+  {
+    "slug": "bravada",
+    "name": "Bravada",
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "yearStart": 2002,
+    "yearEnd": 2004,
+    "bodyType": "SUV",
+    "description": "The Oldsmobile Bravada was a midsize luxury SUV that offered standard all-wheel drive and a refined on-road experience compared to its truck-based competitors. The third-generation Bravada shared its platform with the Chevrolet TrailBlazer but added upscale features and a smoother ride befitting the Oldsmobile brand."
+  },
+  {
+    "slug": "aurora",
+    "name": "Aurora",
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "yearStart": 1998,
+    "yearEnd": 2003,
+    "bodyType": "Sedan",
+    "description": "The Oldsmobile Aurora was a full-size luxury sedan that represented Oldsmobile's most ambitious attempt to compete with imports like the Lexus ES and Acura TL. Powered by a smooth Northstar-derived V8 or later a Shortstar V6, the Aurora featured sleek styling that deliberately omitted Oldsmobile badging to attract new buyers."
+  },
+  {
+    "slug": "grand-marquis",
+    "name": "Grand Marquis",
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "yearStart": 1998,
+    "yearEnd": 2011,
+    "bodyType": "Sedan",
+    "description": "The Mercury Grand Marquis was a full-size body-on-frame sedan that shared its Panther platform with the Ford Crown Victoria and Lincoln Town Car. Known for its smooth V8 power, spacious bench-seat cabin, and comfortable ride, the Grand Marquis was a favorite among traditional American car buyers and fleet operators."
+  },
+  {
+    "slug": "sable",
+    "name": "Sable",
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "yearStart": 2000,
+    "yearEnd": 2009,
+    "bodyType": "Sedan",
+    "description": "The Mercury Sable was a midsize sedan that served as the upscale companion to the Ford Taurus, sharing its platform while offering more premium appointments. The Sable's oval-themed design in its later years was polarizing, but it remained a solid choice for buyers seeking a comfortable, well-equipped family sedan."
+  },
+  {
+    "slug": "mountaineer",
+    "name": "Mountaineer",
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "yearStart": 2002,
+    "yearEnd": 2010,
+    "bodyType": "SUV",
+    "description": "The Mercury Mountaineer was a midsize SUV based on the Ford Explorer, offering a more luxurious take on the popular Explorer formula. The Mountaineer featured a standard V8 engine in early years and added premium interior materials and quieter ride quality to distinguish itself from its Ford sibling."
+  },
+  {
+    "slug": "mariner",
+    "name": "Mariner",
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "yearStart": 2005,
+    "yearEnd": 2011,
+    "bodyType": "SUV",
+    "description": "The Mercury Mariner was a compact SUV based on the Ford Escape, offering a slightly more upscale appearance and additional standard features. The Mariner Hybrid was one of the first hybrid compact SUVs available, demonstrating Mercury's effort to modernize its lineup before the brand's discontinuation."
+  },
+  {
+    "slug": "milan",
+    "name": "Milan",
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "yearStart": 2006,
+    "yearEnd": 2011,
+    "bodyType": "Sedan",
+    "description": "The Mercury Milan was a midsize sedan based on the Ford Fusion that offered a more refined alternative with premium features and styling. The Milan Hybrid matched the Fusion Hybrid's impressive fuel economy while adding Mercury's upscale touches, making it one of the brand's final success stories."
+  },
+  {
+    "slug": "cougar",
+    "name": "Cougar",
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "yearStart": 1999,
+    "yearEnd": 2002,
+    "bodyType": "Coupe",
+    "description": "The Mercury Cougar was a sporty front-wheel-drive coupe based on the Ford Contour platform, aimed at attracting younger buyers to the Mercury brand. With its distinctive new-edge design and available V6 engine, the Cougar was a bold departure from Mercury's traditional conservative image."
+  },
+  {
+    "slug": "h2",
+    "name": "H2",
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "yearStart": 2003,
+    "yearEnd": 2009,
+    "bodyType": "SUV",
+    "description": "The Hummer H2 became a cultural phenomenon of the early 2000s, offering imposing military-inspired styling and genuine off-road capability in a civilian package. Built on a modified Chevrolet Tahoe platform with a Vortec V8, the H2 symbolized the era of large SUVs before rising fuel prices and environmental concerns curtailed its appeal."
+  },
+  {
+    "slug": "h3",
+    "name": "H3",
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "yearStart": 2006,
+    "yearEnd": 2010,
+    "bodyType": "SUV",
+    "description": "The Hummer H3 was a more accessible midsize SUV that brought the Hummer brand to a wider audience with a smaller footprint and better fuel economy than the H2. Based on the Chevrolet Colorado platform, the H3 offered impressive off-road capability with its standard four-wheel drive and available Alpha V8 engine."
+  },
+  {
+    "slug": "h1",
+    "name": "H1",
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "yearStart": 1998,
+    "yearEnd": 2006,
+    "bodyType": "SUV",
+    "description": "The Hummer H1 was the civilian version of the military HMMWV (Humvee), offering unmatched off-road capability with its massive width, portal axles, and central tire inflation system. Famously championed by Arnold Schwarzenegger, the H1 was the most extreme production SUV available and remains a collector vehicle today."
+  },
+  {
+    "slug": "neon",
+    "name": "Neon",
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "yearStart": 1998,
+    "yearEnd": 2001,
+    "bodyType": "Sedan",
+    "description": "The Plymouth Neon was an affordable compact sedan that launched with the memorable 'Hi' marketing campaign and a cheerful, rounded design. Despite its budget-friendly price, the Neon offered a responsive engine and nimble handling, earning a strong following in the SCCA racing community where it became a dominant class competitor."
+  },
+  {
+    "slug": "voyager",
+    "name": "Voyager",
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "yearStart": 1998,
+    "yearEnd": 2000,
+    "bodyType": "Minivan",
+    "description": "The Plymouth Voyager was one of the original minivans that created the segment in 1984, revolutionizing family transportation in America. As the more affordable alternative to the Dodge Caravan, the Voyager offered practical seating for seven and versatile cargo configurations that made it a family favorite throughout the 1990s."
+  },
+  {
+    "slug": "prowler",
+    "name": "Prowler",
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "yearStart": 1999,
+    "yearEnd": 2002,
+    "bodyType": "Convertible",
+    "description": "The Plymouth Prowler was a factory-built hot rod with an open-wheel retro design that made it one of the most visually striking production cars of its era. Powered by a 3.5-liter V6 and featuring an aluminum chassis, the Prowler was a bold statement that demonstrated Chrysler's willingness to take design risks."
+  },
+  {
+    "slug": "breeze",
+    "name": "Breeze",
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "yearStart": 1998,
+    "yearEnd": 2000,
+    "bodyType": "Sedan",
+    "description": "The Plymouth Breeze was a midsize sedan that shared its platform with the Dodge Stratus and Chrysler Cirrus, offering value-oriented transportation with a comfortable ride. As Plymouth's final midsize sedan, the Breeze represented the brand's emphasis on affordable, practical vehicles for everyday American families."
+  },
+  {
+    "slug": "tc",
+    "name": "tC",
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "yearStart": 2005,
+    "yearEnd": 2016,
+    "bodyType": "Coupe",
+    "description": "The Scion tC was a sport coupe that became the brand's best-selling model, offering an affordable entry point to sporty driving with a panoramic moonroof as standard equipment. Built on a Toyota platform with a 2.5-liter four-cylinder engine, the tC attracted young buyers with its extensive customization options and no-haggle pricing."
+  },
+  {
+    "slug": "xb",
+    "name": "xB",
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "yearStart": 2004,
+    "yearEnd": 2015,
+    "bodyType": "Hatchback",
+    "description": "The Scion xB was a boxy compact hatchback that became a cult favorite, with its first generation's distinctive toaster-like shape making it an icon of the customization and tuner scene. The xB offered surprisingly spacious interior room despite its compact exterior, and its blank-canvas design made it one of the most modified cars of the 2000s."
+  },
+  {
+    "slug": "fr-s",
+    "name": "FR-S",
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "yearStart": 2013,
+    "yearEnd": 2016,
+    "bodyType": "Coupe",
+    "description": "The Scion FR-S was a lightweight rear-wheel-drive sports coupe developed jointly with Subaru, emphasizing pure driving engagement over raw power. Powered by a naturally aspirated 2.0-liter boxer engine, the FR-S became a tuner favorite and was later rebranded as the Toyota 86 after Scion's discontinuation."
+  },
+  {
+    "slug": "xd",
+    "name": "xD",
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "yearStart": 2008,
+    "yearEnd": 2014,
+    "bodyType": "Hatchback",
+    "description": "The Scion xD was a subcompact hatchback based on the Toyota Yaris platform, offering a sportier look and additional features compared to its Toyota counterpart. The xD served as an affordable entry point to the Scion lineup with practical interior space and Toyota reliability."
+  },
+  {
+    "slug": "im",
+    "name": "iM",
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "yearStart": 2016,
+    "yearEnd": 2016,
+    "bodyType": "Hatchback",
+    "description": "The Scion iM was a compact hatchback based on the Toyota Auris that served as the brand's final new model before Scion's discontinuation. Offering standard Toyota Safety Sense and a practical five-door hatchback body, the iM was seamlessly transitioned to become the Toyota Corolla iM."
+  },
+  {
+    "slug": "grand-vitara",
+    "name": "Grand Vitara",
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "yearStart": 1999,
+    "yearEnd": 2013,
+    "bodyType": "SUV",
+    "description": "The Suzuki Grand Vitara was a compact SUV that offered genuine body-on-frame off-road capability in an era when most competitors were moving to car-based platforms. With available four-wheel drive and a locking center differential, the Grand Vitara provided real trail capability at a price well below its competitors."
+  },
+  {
+    "slug": "sx4",
+    "name": "SX4",
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "yearStart": 2007,
+    "yearEnd": 2013,
+    "bodyType": "Sedan/Hatchback",
+    "description": "The Suzuki SX4 was a versatile compact car available as both a sedan and a sporty hatchback with available all-wheel drive. The SX4 Crossover model anticipated the subcompact crossover trend years before it became mainstream, offering raised ride height and rugged styling."
+  },
+  {
+    "slug": "kizashi",
+    "name": "Kizashi",
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "yearStart": 2010,
+    "yearEnd": 2013,
+    "bodyType": "Sedan",
+    "description": "The Suzuki Kizashi was a midsize sport sedan that earned critical acclaim for its engaging driving dynamics and refined chassis, often compared favorably to the Volkswagen Passat. Despite strong reviews, the Kizashi suffered from Suzuki's limited dealer network and brand recognition in the US sedan market."
+  },
+  {
+    "slug": "xl-7",
+    "name": "XL-7",
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "yearStart": 2001,
+    "yearEnd": 2009,
+    "bodyType": "SUV",
+    "description": "The Suzuki XL-7 was the brand's largest vehicle, offering three-row seating and V6 power in a midsize SUV package. The second-generation XL-7 was developed jointly with General Motors and offered a more refined on-road experience, though it arrived as fuel prices were rising sharply."
+  },
+  {
+    "slug": "rodeo",
+    "name": "Rodeo",
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "yearStart": 1998,
+    "yearEnd": 2004,
+    "bodyType": "SUV",
+    "description": "The Isuzu Rodeo was a midsize SUV known for its rugged body-on-frame construction and genuine off-road capability. Powered by a 3.2-liter V6 engine with available four-wheel drive, the Rodeo competed with the Ford Explorer and Chevrolet Blazer at a competitive price point."
+  },
+  {
+    "slug": "trooper",
+    "name": "Trooper",
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "yearStart": 1998,
+    "yearEnd": 2002,
+    "bodyType": "SUV",
+    "description": "The Isuzu Trooper was a full-size SUV that earned a reputation for rugged dependability in harsh conditions worldwide. With its Torque-On-Demand four-wheel-drive system and a powerful 3.5-liter V6, the Trooper offered serious off-road capability in a traditional body-on-frame package."
+  },
+  {
+    "slug": "ascender",
+    "name": "Ascender",
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "yearStart": 2003,
+    "yearEnd": 2008,
+    "bodyType": "SUV",
+    "description": "The Isuzu Ascender was a midsize SUV based on the Chevrolet TrailBlazer platform, serving as Isuzu's final passenger vehicle offering in the United States. With available V8 power and a spacious interior, the Ascender aimed to maintain Isuzu's SUV presence as the brand transitioned to commercial trucks only."
+  },
+  {
+    "slug": "axiom",
+    "name": "Axiom",
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "yearStart": 2002,
+    "yearEnd": 2004,
+    "bodyType": "SUV",
+    "description": "The Isuzu Axiom was a midsize SUV with futuristic styling that set it apart from the more conservative Rodeo. Featuring a 3.5-liter V6, available all-wheel drive, and a distinctive fastback roofline, the Axiom was praised for its bold design and comfortable on-road manners."
+  },
+  {
+    "slug": "vehicross",
+    "name": "VehiCROSS",
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "yearStart": 1999,
+    "yearEnd": 2001,
+    "bodyType": "SUV",
+    "description": "The Isuzu VehiCROSS was a limited-production sport utility that brought a near-concept-car design to the road with virtually no changes from the show car. With its aggressive styling, Torque-On-Demand four-wheel drive, and only about 4,153 units produced for the US market, the VehiCROSS has become a collectible cult classic."
+  },
+  {
+    "slug": "fortwo",
+    "name": "Fortwo",
+    "makeSlug": "smart",
+    "makeName": "Smart",
+    "yearStart": 2008,
+    "yearEnd": 2019,
+    "bodyType": "Hatchback",
+    "description": "The Smart Fortwo was an ultra-compact city car measuring under nine feet long, designed specifically for tight urban environments and easy parking. Created through a partnership between Swatch and Mercedes-Benz, the Fortwo offered a surprisingly safe and fun driving experience in the smallest package available on the American market."
+  },
+  {
+    "slug": "forfour",
+    "name": "Forfour",
+    "makeSlug": "smart",
+    "makeName": "Smart",
+    "yearStart": 2016,
+    "yearEnd": 2019,
+    "bodyType": "Hatchback",
+    "description": "The Smart Forfour was a four-seat variant of the microcar brand's lineup, developed in partnership with Renault to offer more passenger space than the tiny Fortwo. Though more practical than its two-seat sibling, the Forfour saw limited availability in the US market before Smart exited North America in 2019."
+  },
+  {
+    "slug": "ocean",
+    "name": "Ocean",
+    "makeSlug": "fisker",
+    "makeName": "Fisker",
+    "yearStart": 2023,
+    "yearEnd": 2024,
+    "bodyType": "SUV",
+    "description": "The Fisker Ocean was a mid-size all-electric SUV that aimed to combine sustainable materials with accessible pricing and striking design by Henrik Fisker. Featuring a solar-panel roof option and a rotating center display, the Ocean showcased innovative ideas but was cut short when Fisker filed for bankruptcy in 2024 due to production and distribution challenges."
+  },
+  {
+    "slug": "xt5",
+    "name": "XT5",
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Cadillac XT5 is a midsize luxury crossover serving as one of Cadillac's most popular models. It delivers a smooth ride, spacious interior, and refined driving experience with available AWD."
+  },
+  {
+    "slug": "ct5",
+    "name": "CT5",
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Cadillac CT5 is a midsize luxury sedan delivering refined comfort with available Blackwing performance. It combines American luxury with sharp handling and advanced Super Cruise hands-free driving technology."
+  },
+  {
+    "slug": "xt4",
+    "name": "XT4",
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Cadillac XT4 is a compact luxury crossover offering bold styling and turbocharged performance. It provides an accessible entry to the Cadillac lineup with modern technology and a comfortable cabin."
+  },
+  {
+    "slug": "xt6",
+    "name": "XT6",
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Cadillac XT6 is a three-row luxury crossover offering premium comfort and versatile seating. It fills the gap between the XT5 and Escalade with an elegant design and composed driving character."
+  },
+  {
+    "slug": "ct4",
+    "name": "CT4",
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Cadillac CT4 is a compact luxury sport sedan offering sharp driving dynamics and bold American styling. It serves as Cadillac's entry-level sedan with available powerful turbocharged engines and the Blackwing performance variant."
+  },
+  {
+    "slug": "lyriq",
+    "name": "Lyriq",
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "yearStart": 2023,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Cadillac Lyriq is an all-electric luxury SUV showcasing Cadillac's electric future. Built on GM's Ultium platform, it delivers impressive range, stunning design, and a 33-inch LED display."
+  },
+  {
+    "slug": "es",
+    "name": "ES",
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Lexus ES is a midsize luxury sedan renowned for its exceptional comfort and reliability. As one of Lexus's best-selling models, it offers a serene driving experience with available hybrid powertrain efficiency."
+  },
+  {
+    "slug": "is",
+    "name": "IS",
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Lexus IS is a compact luxury sport sedan competing with the BMW 3 Series and Mercedes C-Class. Known for its sharp styling, engaging rear-wheel drive dynamics, and Lexus reliability."
+  },
+  {
+    "slug": "nx",
+    "name": "NX",
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "yearStart": 2015,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lexus NX is a compact luxury crossover and one of the brand's best-selling models. It features bold spindle grille styling, hybrid powertrain options, and Lexus's renowned quality and reliability."
+  },
+  {
+    "slug": "gx",
+    "name": "GX",
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lexus GX is a luxury body-on-frame SUV delivering genuine off-road capability with premium refinement. Built on a rugged truck platform, it offers three-row seating and Toyota's legendary reliability."
+  },
+  {
+    "slug": "lx",
+    "name": "LX",
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lexus LX is the brand's flagship luxury SUV based on the Toyota Land Cruiser. It offers unmatched off-road capability combined with opulent luxury appointments and seating for up to eight."
+  },
+  {
+    "slug": "ux",
+    "name": "UX",
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lexus UX is a subcompact luxury crossover designed for urban environments. It offers nimble handling, efficient hybrid powertrain options, and Lexus craftsmanship in a city-friendly package."
+  },
+  {
+    "slug": "mazda3",
+    "name": "Mazda3",
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan/Hatchback",
+    "description": "The Mazda3 is a compact car offering sedan and hatchback body styles with premium build quality. Known for its Skyactiv technology, engaging driving dynamics, and interior refinement that challenges luxury competitors."
+  },
+  {
+    "slug": "cx-50",
+    "name": "CX-50",
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "yearStart": 2023,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mazda CX-50 is a compact crossover with rugged styling designed for outdoor adventures. Built on an all-new platform, it offers Skyactiv powertrain efficiency with increased ground clearance and a wilderness-ready attitude."
+  },
+  {
+    "slug": "cx-30",
+    "name": "CX-30",
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mazda CX-30 is a subcompact crossover bridging the gap between the CX-3 and CX-5. It features Mazda's premium Kodo design language, engaging Skyactiv dynamics, and an upscale interior that rivals luxury brands."
+  },
+  {
+    "slug": "cx-90",
+    "name": "CX-90",
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "yearStart": 2024,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mazda CX-90 is a three-row luxury SUV that replaced the CX-9 with even more premium appointments. It features a new rear-wheel-drive platform with inline-six and plug-in hybrid powertrain options."
+  },
+  {
+    "slug": "mx-5-miata",
+    "name": "MX-5 Miata",
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Convertible",
+    "description": "The Mazda MX-5 Miata is the world's best-selling roadster, celebrated for its pure driving joy and lightweight design. It embodies the Jinba Ittai philosophy of horse-and-rider unity with perfectly balanced handling."
+  },
+  {
+    "slug": "cx-9",
+    "name": "CX-9",
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "yearStart": 2010,
+    "yearEnd": 2024,
+    "bodyType": "SUV",
+    "description": "The Mazda CX-9 is a three-row midsize SUV delivering premium quality and engaging driving dynamics. Known for its upscale interior, turbocharged power, and refined handling unusual for its class."
+  },
+  {
+    "slug": "xc90",
+    "name": "XC90",
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Volvo XC90 is a three-row luxury SUV that reset Volvo's design direction when it debuted. Known for its commanding presence, world-class safety features, and elegant Scandinavian interior with premium materials."
+  },
+  {
+    "slug": "xc40",
+    "name": "XC40",
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Volvo XC40 is a compact luxury crossover and Volvo's entry-level SUV. It features distinctive Scandinavian design, advanced safety technology, and is available in both combustion and fully electric Recharge variants."
+  },
+  {
+    "slug": "s60",
+    "name": "S60",
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Volvo S60 is a compact luxury sedan offering Scandinavian design and advanced safety technology. Available in mild hybrid and plug-in hybrid variants, it competes with the BMW 3 Series and Mercedes C-Class."
+  },
+  {
+    "slug": "s90",
+    "name": "S90",
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Volvo S90 is a midsize luxury sedan showcasing Volvo's elegant Scandinavian design philosophy. It offers a serene cabin with natural materials, advanced safety systems, and refined plug-in hybrid powertrains."
+  },
+  {
+    "slug": "v60",
+    "name": "V60",
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "Wagon",
+    "description": "The Volvo V60 is a luxury sport wagon combining versatile cargo space with sleek design. One of the few premium wagons available, it offers the practicality of an SUV with the driving dynamics of a sedan."
+  },
+  {
+    "slug": "c40",
+    "name": "C40",
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Volvo C40 Recharge is an all-electric coupe-styled crossover combining Volvo's safety leadership with zero-emission driving. Its sleek fastback design distinguishes it from the XC40 on which it's based."
+  },
+  {
+    "slug": "phantom",
+    "name": "Phantom",
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Rolls-Royce Phantom is the ultimate expression of automotive luxury and the brand's flagship sedan. Hand-built at Goodwood, each Phantom offers unparalleled refinement, bespoke customization, and a magic carpet ride."
+  },
+  {
+    "slug": "wraith",
+    "name": "Wraith",
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "yearStart": 2014,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Rolls-Royce Wraith is a luxury grand tourer coupe combining effortless performance with opulent craftsmanship. Its fastback design, starlight headliner, and V12 power create the most dynamic Rolls-Royce driving experience."
+  },
+  {
+    "slug": "dawn",
+    "name": "Dawn",
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "yearStart": 2016,
+    "yearEnd": 2024,
+    "bodyType": "Convertible",
+    "description": "The Rolls-Royce Dawn is a luxury convertible drophead coupe offering open-air grand touring at its finest. Its whisper-quiet fabric roof and hand-crafted interior create the ultimate four-seat convertible experience."
+  },
+  {
+    "slug": "aventador",
+    "name": "Aventador",
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "yearStart": 2012,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Lamborghini Aventador is a flagship supercar powered by a naturally aspirated V12 engine. Its dramatic scissor doors, aggressive styling, and visceral performance make it one of the most iconic modern supercars."
+  },
+  {
+    "slug": "gallardo",
+    "name": "Gallardo",
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "yearStart": 2004,
+    "yearEnd": 2014,
+    "bodyType": "Coupe",
+    "description": "The Lamborghini Gallardo was the brand's most successful model ever, bringing V10 supercar performance to a broader audience. Its mid-engine layout, all-wheel drive, and stunning design made the exotic car dream more attainable."
+  },
+  {
+    "slug": "sf90",
+    "name": "SF90",
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The Ferrari SF90 Stradale is a plug-in hybrid supercar producing a combined 986 horsepower from its V8 and three electric motors. It represents Ferrari's technological pinnacle with all-wheel drive and pure electric driving capability."
+  },
+  {
+    "slug": "f8-tributo",
+    "name": "F8 Tributo",
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "yearStart": 2020,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Ferrari F8 Tributo is a mid-engine supercar paying tribute to Ferrari's legendary V8 heritage. Its twin-turbo V8 delivers 710 horsepower with razor-sharp handling and aerodynamic innovation."
+  },
+  {
+    "slug": "812",
+    "name": "812",
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "yearStart": 2018,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Ferrari 812 Superfast is a front-engine grand tourer powered by Ferrari's most powerful naturally aspirated V12. With 789 horsepower and stunning Italian design, it represents the pinnacle of the GT formula."
+  },
+  {
+    "slug": "720s",
+    "name": "720S",
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "yearStart": 2018,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The McLaren 720S is a supercar that redefined mid-engine performance with its twin-turbo V8 and carbon fiber MonoCell II chassis. Its dihedral doors and prodigious power-to-weight ratio deliver breathtaking speed."
+  },
+  {
+    "slug": "gt",
+    "name": "GT",
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The McLaren GT is a grand touring supercar designed for comfortable long-distance driving without sacrificing performance. Its unique luggage space and refined cabin make it the most practical McLaren ever built."
+  },
+  {
+    "slug": "dbs",
+    "name": "DBS",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The Aston Martin DBS Superleggera is the brand's flagship super GT delivering 715 horsepower from its twin-turbo V12. Its name pays homage to the legendary lightweight construction technique pioneered by Touring Superleggera."
+  },
+  {
+    "slug": "db11",
+    "name": "DB11",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "yearStart": 2017,
+    "yearEnd": 2024,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Aston Martin DB11 is a grand touring coupe that reinvented the brand's GT formula with modern technology. Available with twin-turbo V8 and V12 engines, it combines breathtaking design with cutting-edge aerodynamics."
+  },
+  {
+    "slug": "valkyrie",
+    "name": "Valkyrie",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "yearStart": 2024,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The Aston Martin Valkyrie is a hypercar developed with Red Bull Racing, pushing the boundaries of road-car performance. Its Cosworth V12 and hybrid system produce over 1,100 horsepower with Formula 1-inspired aerodynamics."
+  },
+  {
+    "slug": "flying-spur",
+    "name": "Flying Spur",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Bentley Flying Spur is an ultra-luxury four-door sedan combining handcrafted British elegance with effortless performance. Its rotating display, diamond-knurled controls, and W12 or V8 power define modern grand touring."
+  },
+  {
+    "slug": "veyron",
+    "name": "Veyron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "yearStart": 2005,
+    "yearEnd": 2015,
+    "bodyType": "Coupe",
+    "description": "The Bugatti Veyron redefined automotive performance with its quad-turbo W16 engine producing 1,001 horsepower. As the first production car to exceed 250 mph, it established Bugatti's modern legacy of engineering extremes."
+  },
+  {
+    "slug": "mistral",
+    "name": "Mistral",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "yearStart": 2024,
+    "yearEnd": 2026,
+    "bodyType": "Convertible",
+    "description": "The Bugatti Mistral is a limited-edition open-top hypercar marking the final chapter of the legendary W16 engine era. This roadster delivers 1,577 horsepower while showcasing Bugatti's ultimate engineering artistry."
+  },
+  {
+    "slug": "quattroporte",
+    "name": "Quattroporte",
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Maserati Quattroporte is a full-size luxury sedan combining Italian passion with executive refinement. As one of the first luxury sport sedans ever created, it continues to offer a unique alternative to German flagships."
+  },
+  {
+    "slug": "mc20",
+    "name": "MC20",
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The Maserati MC20 is a mid-engine supercar marking Maserati's return to high-performance racing-inspired vehicles. Its innovative Nettuno twin-turbo V6 with pre-chamber combustion delivers 621 horsepower."
+  },
+  {
+    "slug": "clubman",
+    "name": "Clubman",
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "yearStart": 2010,
+    "yearEnd": 2024,
+    "bodyType": "Wagon",
+    "description": "The Mini Clubman is a compact wagon offering more space and sophistication than the standard Mini. Its distinctive split rear barn doors and premium interior make it a stylish alternative to conventional small wagons."
+  },
+  {
+    "slug": "cooper-se",
+    "name": "Cooper SE",
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Hatchback",
+    "description": "The Mini Cooper SE is an all-electric version of the iconic Mini Cooper hatchback. It brings zero-emission driving to the Mini brand with instant electric torque and the go-kart handling Mini is famous for."
+  },
+  {
+    "slug": "xe",
+    "name": "XE",
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "yearStart": 2017,
+    "yearEnd": 2024,
+    "bodyType": "Sedan",
+    "description": "The Jaguar XE is a sedan from Jaguar offering distinctive styling and performance. Decode any VIN to check for open recalls, full specifications, and vehicle history."
+  },
+  {
+    "slug": "xf",
+    "name": "XF",
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "yearStart": 2010,
+    "yearEnd": 2024,
+    "bodyType": "Sedan",
+    "description": "The Jaguar XF is a sedan from Jaguar offering distinctive styling and performance. Decode any VIN to check for open recalls, full specifications, and vehicle history."
+  },
+  {
+    "slug": "500",
+    "name": "500",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "yearStart": 2012,
+    "yearEnd": 2026,
+    "bodyType": "Hatchback",
+    "description": "The Fiat 500 is an iconic Italian city car blending retro charm with modern practicality. Its compact dimensions and distinctive styling make it a beloved urban commuter available in electric and combustion variants."
+  },
+  {
+    "slug": "polestar-4",
+    "name": "Polestar 4",
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "yearStart": 2025,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Polestar 4 is an electric performance SUV coupe with a unique rear-window-less design replaced by cameras. It represents Polestar's push into the luxury electric crossover segment with distinctive Scandinavian design."
+  },
+  {
+    "slug": "mirage",
+    "name": "Mirage",
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "yearStart": 2014,
+    "yearEnd": 2026,
+    "bodyType": "Hatchback",
+    "description": "The Mitsubishi Mirage is a subcompact hatchback offering exceptional fuel economy and one of the lowest starting prices of any new car. Its lightweight design and efficient engine make it a practical urban commuter."
+  },
+  {
+    "slug": "outlander-sport",
+    "name": "Outlander Sport",
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "yearStart": 2011,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mitsubishi Outlander Sport is a compact crossover delivering all-weather capability at a competitive price. It offers standard all-wheel drive options and Mitsubishi's comprehensive warranty coverage."
+  },
+  {
+    "slug": "evora",
+    "name": "Evora",
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "yearStart": 2010,
+    "yearEnd": 2024,
+    "bodyType": "Coupe",
+    "description": "The Lotus Evora is a mid-engine sports car offering the rare combination of Lotus handling precision with everyday usability. Its Toyota-sourced V6 and available supercharger deliver impressive performance in a surprisingly refined package."
+  },
+  {
+    "slug": "elise",
+    "name": "Elise",
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "yearStart": 2005,
+    "yearEnd": 2022,
+    "bodyType": "Convertible",
+    "description": "The Lotus Elise is a lightweight mid-engine roadster that epitomizes Colin Chapman's philosophy of simplicity and lightness. Its bonded aluminum chassis and minimalist approach create one of the purest driving experiences available."
+  },
+  {
+    "slug": "exige",
+    "name": "Exige",
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "yearStart": 2006,
+    "yearEnd": 2022,
+    "bodyType": "Coupe",
+    "description": "The Lotus Exige is a track-focused coupe based on the Elise platform with added aerodynamic bodywork and supercharged power. It delivers uncompromising performance and handling for enthusiasts who prioritize driving purity."
+  },
+  {
+    "slug": "eqs-maybach",
+    "name": "EQS Maybach",
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "yearStart": 2024,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mercedes-Maybach EQS is an ultra-luxury all-electric SUV representing the pinnacle of Mercedes' EV lineup. It combines Maybach's opulent craftsmanship with the EQS platform's advanced electric technology."
+  },
+  {
+    "slug": "granturismo",
+    "name": "GranTurismo",
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The Maserati GranTurismo is a luxury grand touring coupe embodying Italian elegance and performance. Its Ferrari-derived engine note and sculptural design create one of the most emotionally engaging GT cars on the road."
+  },
+  {
+    "slug": "cherokee",
+    "name": "Cherokee",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "yearStart": 2014,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Jeep Cherokee is a midsize SUV blending everyday comfort with genuine off-road capability. Its Trailhawk trim offers serious trail performance while maintaining civilized on-road manners for daily driving."
+  },
+  {
+    "slug": "compass",
+    "name": "Compass",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Jeep Compass is a compact SUV offering Jeep's legendary off-road heritage in a city-friendly size. It provides available 4x4 systems and Trailhawk capability at an accessible price point."
+  },
+  {
+    "slug": "renegade",
+    "name": "Renegade",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "yearStart": 2015,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Jeep Renegade is a subcompact SUV bringing trail-rated capability to the smallest Jeep. Its distinctive retro-modern styling and available Trailhawk off-road package make it unique in the subcompact segment."
+  },
+  {
+    "slug": "gladiator",
+    "name": "Gladiator",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Truck",
+    "description": "The Jeep Gladiator is a midsize pickup truck combining Wrangler DNA with genuine truck utility. It's the only convertible pickup truck on the market, offering open-air freedom with a five-foot bed."
+  },
+  {
+    "slug": "wagoneer",
+    "name": "Wagoneer",
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Jeep Wagoneer is a full-size luxury SUV reviving a legendary nameplate. It offers premium three-row accommodations, advanced technology, and powerful V8 performance for buyers seeking American luxury."
+  },
+  {
+    "slug": "range-rover-sport",
+    "name": "Range Rover Sport",
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Range Rover Sport is a performance-oriented luxury SUV combining athletic dynamics with Range Rover refinement. It offers powerful engine options including a plug-in hybrid while maintaining impressive off-road capability."
+  },
+  {
+    "slug": "defender",
+    "name": "Defender",
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Land Rover Defender is an iconic off-road SUV reborn with modern capability and technology. It combines legendary go-anywhere ability with premium amenities and distinctive boxy styling."
+  },
+  {
+    "slug": "discovery",
+    "name": "Discovery",
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Land Rover Discovery is a versatile luxury SUV offering genuine seven-seat comfort with off-road prowess. Its ingenious stadium seating and terrain response system make it equally capable on and off the road."
+  },
+  {
+    "slug": "evoque",
+    "name": "Range Rover Evoque",
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "yearStart": 2012,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Range Rover Evoque is a compact luxury crossover with striking coupe-like styling. It brings Range Rover prestige and capability to a city-friendly package with premium materials throughout."
+  },
+  {
+    "slug": "velar",
+    "name": "Range Rover Velar",
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "yearStart": 2018,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Range Rover Velar is a midsize luxury SUV known for its minimalist design and cutting-edge technology. Its flush door handles and dual-touchscreen interior create a sleek, modern aesthetic."
+  },
+  {
+    "slug": "aviator",
+    "name": "Aviator",
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lincoln Aviator is a midsize luxury SUV offering sophisticated styling and serene ride quality. Its available plug-in hybrid Grand Touring powertrain delivers both impressive power and electric capability."
+  },
+  {
+    "slug": "corsair",
+    "name": "Corsair",
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lincoln Corsair is a compact luxury crossover providing a refined alternative to European rivals. It features Lincoln's signature quiet luxury approach with available hybrid powertrain and massage seats."
+  },
+  {
+    "slug": "nautilus",
+    "name": "Nautilus",
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Lincoln Nautilus is a midsize luxury SUV that replaced the MKX with elevated design and technology. Its spacious cabin features premium materials and Lincoln's signature tranquil driving experience."
+  },
+  {
+    "slug": "model-s",
+    "name": "Model S",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "yearStart": 2012,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Tesla Model S is the luxury electric sedan that launched the EV revolution. As Tesla's flagship sedan, it offers blistering acceleration in Plaid trim, industry-leading range, and continuous over-the-air improvements."
+  },
+  {
+    "slug": "model-x",
+    "name": "Model X",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "yearStart": 2016,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Tesla Model X is a luxury electric SUV featuring distinctive falcon wing doors and seating for up to seven. It combines Tesla's electric performance with SUV versatility and advanced autopilot technology."
+  },
+  {
+    "slug": "cybertruck",
+    "name": "Cybertruck",
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "yearStart": 2024,
+    "yearEnd": 2026,
+    "bodyType": "Truck",
+    "description": "The Tesla Cybertruck is a revolutionary all-electric pickup truck with a bold stainless steel exoskeleton. Its angular design and impressive specifications including armor glass windows and vault storage redefine the pickup category."
+  },
+  {
+    "slug": "macan",
+    "name": "Macan",
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "yearStart": 2015,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Porsche Macan is a compact luxury SUV delivering genuine sports car performance in an SUV package. As Porsche's best-selling model, it combines everyday practicality with exhilarating driving dynamics."
+  },
+  {
+    "slug": "taycan",
+    "name": "Taycan",
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Porsche Taycan is an all-electric sport sedan that proved EVs can deliver authentic Porsche driving excitement. Its innovative 800-volt architecture enables rapid charging and repeatable high-performance launches."
+  },
+  {
+    "slug": "panamera",
+    "name": "Panamera",
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Porsche Panamera is a luxury sport sedan proving that four doors and Porsche performance can coexist brilliantly. It offers powerful engine options including plug-in hybrid variants with genuine supercar acceleration."
+  },
+  {
+    "slug": "718",
+    "name": "718",
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "Coupe/Convertible",
+    "description": "The Porsche 718 encompasses the Cayman coupe and Boxster roadster, delivering pure mid-engine sports car thrills. With turbocharged flat-four and flat-six engines, they offer razor-sharp handling and accessible Porsche performance."
+  },
+  {
+    "slug": "q60",
+    "name": "Q60",
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The Infiniti Q60 is a luxury sport coupe offering bold styling and twin-turbo V6 power. Its aggressive design and available Red Sport 400 trim deliver a compelling alternative to German sport coupes."
+  },
+  {
+    "slug": "qx55",
+    "name": "QX55",
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Infiniti QX55 is a coupe-styled luxury crossover reviving the spirit of the original FX. Its fastback roofline and variable compression turbo engine combine distinctive style with innovative technology."
+  },
+  {
+    "slug": "encore",
+    "name": "Encore",
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "yearStart": 2013,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Buick Encore is a subcompact luxury crossover offering Buick's signature quiet ride in a city-friendly package. It provides premium amenities and refined driving experience at an accessible luxury price point."
+  },
+  {
+    "slug": "2500",
+    "name": "2500",
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Truck",
+    "description": "The Ram 2500 is a heavy-duty pickup truck built for serious towing and hauling. Available with a powerful Cummins turbo diesel, it delivers exceptional capability while maintaining Ram's signature refined interior."
+  },
+  {
+    "slug": "3500",
+    "name": "3500",
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Truck",
+    "description": "The Ram 3500 is the ultimate heavy-duty pickup offering class-leading towing capacity. With the available Cummins diesel producing massive torque, it's the choice for the heaviest commercial and recreational towing demands."
+  },
+  {
+    "slug": "promaster",
+    "name": "ProMaster",
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "yearStart": 2014,
+    "yearEnd": 2026,
+    "bodyType": "Van",
+    "description": "The Ram ProMaster is a full-size cargo van designed for commercial use and upfitting versatility. Its front-wheel-drive layout creates a low load floor while the spacious cargo area accommodates diverse business needs."
+  },
+  {
+    "slug": "g90",
+    "name": "G90",
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "yearStart": 2017,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Genesis G90 is the brand's flagship luxury sedan showcasing Korean automotive excellence. It rivals the Mercedes S-Class and BMW 7 Series with opulent appointments, refined ride quality, and exceptional value."
+  },
+  {
+    "slug": "gv60",
+    "name": "GV60",
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "yearStart": 2023,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Genesis GV60 is a compact all-electric luxury crossover built on Hyundai's E-GMP platform. It combines Genesis premium design with cutting-edge EV technology including Face Connect and a crystal sphere gear selector."
+  },
+  {
+    "slug": "5-series",
+    "name": "5 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The BMW 5 Series is a midsize luxury sport sedan that exemplifies the brand's balance of driving dynamics and executive comfort. A perennial benchmark in its class, it offers powerful engines and cutting-edge technology."
+  },
+  {
+    "slug": "x5",
+    "name": "X5",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The BMW X5 is a midsize luxury SUV that pioneered the sports activity vehicle segment. Known for its athletic handling, powerful engine options, and luxurious interior, it remains one of BMW's best-selling models."
+  },
+  {
+    "slug": "x1",
+    "name": "X1",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "yearStart": 2013,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The BMW X1 is a compact luxury crossover combining BMW's sporty driving character with everyday versatility. As the brand's most accessible SUV, it delivers premium features and efficient turbocharged performance."
+  },
+  {
+    "slug": "7-series",
+    "name": "7 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The BMW 7 Series is the brand's flagship luxury sedan, offering the ultimate in comfort, technology, and performance. It showcases BMW's most advanced features and sets the standard for executive sedans."
+  },
+  {
+    "slug": "4-series",
+    "name": "4 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "yearStart": 2014,
+    "yearEnd": 2026,
+    "bodyType": "Coupe",
+    "description": "The BMW 4 Series is a premium coupe and convertible offering athletic performance and elegant styling. It builds on 3 Series underpinnings with a more dramatic design and sport-focused character."
+  },
+  {
+    "slug": "e-class",
+    "name": "E-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Mercedes-Benz E-Class is a midsize luxury sedan that has defined executive motoring for decades. Known for exceptional comfort, cutting-edge safety technology, and refined powertrains."
+  },
+  {
+    "slug": "glc",
+    "name": "GLC",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "yearStart": 2016,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mercedes-Benz GLC is a compact luxury SUV and one of the brand's best-selling models worldwide. It delivers a smooth ride, elegant cabin, and a range of powertrains including plug-in hybrid options."
+  },
+  {
+    "slug": "s-class",
+    "name": "S-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Mercedes-Benz S-Class is the pinnacle of automotive luxury and technology, serving as the brand's flagship sedan. It consistently debuts the most advanced features in the industry before they trickle down to other models."
+  },
+  {
+    "slug": "gla",
+    "name": "GLA",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "yearStart": 2015,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Mercedes-Benz GLA is a subcompact luxury crossover blending urban agility with Mercedes-Benz sophistication. It offers turbocharged power, available 4MATIC AWD, and the brand's signature premium interior."
+  },
+  {
+    "slug": "a-class",
+    "name": "A-Class",
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "yearStart": 2019,
+    "yearEnd": 2025,
+    "bodyType": "Sedan",
+    "description": "The Mercedes-Benz A-Class is a compact luxury sedan serving as the brand's entry point. It features the MBUX infotainment system, turbocharged performance, and Mercedes-Benz build quality in a city-friendly size."
+  },
+  {
+    "slug": "q7",
+    "name": "Q7",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Audi Q7 is a full-size luxury three-row SUV combining spacious seating with refined performance. Known for its smooth ride, advanced technology, and premium materials throughout the cabin."
+  },
+  {
+    "slug": "a6",
+    "name": "A6",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Audi A6 is a midsize luxury sedan known for its elegant design, cutting-edge technology, and refined ride quality. It competes at the heart of the luxury sedan market with powerful engine options and Audi's acclaimed virtual cockpit."
+  },
+  {
+    "slug": "q3",
+    "name": "Q3",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "yearStart": 2015,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Audi Q3 is a subcompact luxury crossover offering premium amenities in a city-friendly package. It features turbocharged power, available Quattro AWD, and Audi's signature interior quality."
+  },
+  {
+    "slug": "a3",
+    "name": "A3",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "yearStart": 2015,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Audi A3 is a premium compact sedan combining sophisticated design with turbocharged performance. As Audi's entry-level luxury offering, it delivers a refined driving experience with the brand's signature Quattro all-wheel drive and advanced technology."
+  },
+  {
+    "slug": "e-tron",
+    "name": "e-tron",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "yearStart": 2019,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Audi e-tron is an all-electric luxury SUV marking Audi's entry into the EV market. It combines typical Audi luxury and build quality with dual-motor all-wheel drive and impressive electric range."
+  },
+  {
+    "slug": "pathfinder",
+    "name": "Pathfinder",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Nissan Pathfinder is a three-row midsize SUV designed for family adventures. It combines capable performance with modern technology and spacious seating for up to eight passengers."
+  },
+  {
+    "slug": "sentra",
+    "name": "Sentra",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Nissan Sentra is a compact sedan delivering an upscale experience at an affordable price. Recent generations feature bold styling, advanced safety tech, and a comfortable interior that punches above its class."
+  },
+  {
+    "slug": "frontier",
+    "name": "Frontier",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Truck",
+    "description": "The Nissan Frontier is a midsize pickup truck offering rugged capability with everyday practicality. Known for its reliable powertrain and competitive value in the midsize truck segment."
+  },
+  {
+    "slug": "murano",
+    "name": "Murano",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Nissan Murano is a midsize luxury-leaning crossover with distinctive styling and a refined cabin. Known for its comfortable ride, Zero Gravity seats, and V6 power."
+  },
+  {
+    "slug": "kicks",
+    "name": "Kicks",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "yearStart": 2018,
+    "yearEnd": 2026,
+    "bodyType": "SUV",
+    "description": "The Nissan Kicks is a subcompact crossover delivering excellent fuel economy and modern technology at an accessible price point. Its bold styling and efficient powertrain make it a smart city vehicle."
+  },
+  {
+    "slug": "versa",
+    "name": "Versa",
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "yearStart": 2010,
+    "yearEnd": 2026,
+    "bodyType": "Sedan",
+    "description": "The Nissan Versa is a subcompact sedan offering exceptional value with standard safety features and a spacious interior for its class. It provides reliable transportation at one of the lowest entry prices in the market."
   }
 ]
