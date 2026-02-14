@@ -1,10 +1,10 @@
 [build]
-  command = "npx @11ty/eleventy"
+  command = "rm -rf _site && npx @11ty/eleventy"
   publish = "_site"
 
 [build.environment]
   NODE_VERSION = "22"
-  NODE_OPTIONS = "--max-old-space-size=8192"
+  NODE_OPTIONS = "--max-old-space-size=14336"
 
 # Dev server
 [dev]
