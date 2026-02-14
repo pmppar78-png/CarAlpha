@@ -108,6 +108,20 @@ eleventyComputed:
       </div>
     </div>
 
+    {# ── {{ make.name }} by State (cross-link to make+state pages) ── #}
+    <div class="mb-12">
+      <h2 class="text-xl font-black text-white mb-6">{{ make.name }} by State</h2>
+      <p class="text-silver-400 text-sm mb-5">Explore {{ make.name }} ownership guides, insurance requirements, and dealer information for each state.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        {% for state in states %}
+          <a href="/makes/{{ make.slug }}/in/{{ state.slug }}/" class="glass-card metallic-border rounded-xl p-3 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-xs">{{ state.name }}</div>
+            <div class="text-[10px] text-silver-500 mt-0.5">{{ state.abbreviation }}</div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
     {# CTA Section #}
     <div class="grid sm:grid-cols-3 gap-4">
       <a href="/vin-decoder/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
