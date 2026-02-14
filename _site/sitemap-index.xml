@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://www.caralpha.com/sitemap.xml</loc>
+    <loc>https://www.caralpha.com/sitemap-core.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelyears-0.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-makestates-0.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelstates-0.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelstates-1.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelstates-2.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelstates-3.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelyearstates-0.xml</loc>
     <lastmod>2026-02-14</lastmod>
   </sitemap>
 </sitemapindex>

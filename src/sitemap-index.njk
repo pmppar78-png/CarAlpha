@@ -5,8 +5,35 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://www.caralpha.com/sitemap.xml</loc>
-    {%- set lastItem = collections.sitemap | last %}
-    <lastmod>{% if lastItem %}{{ lastItem.date | dateFormat("yyyy-LL-dd") }}{% else %}{{ page.date | dateFormat("yyyy-LL-dd") }}{% endif %}</lastmod>
+    <loc>https://www.caralpha.com/sitemap-core.xml</loc>
+    <lastmod>2026-02-14</lastmod>
   </sitemap>
+{%- set myPages = (modelYears | length / 5000) | round(0, "ceil") %}
+{%- for i in range(0, myPages) %}
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelyears-{{ i }}.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+{%- endfor %}
+{%- set msPages = (makeStates | length / 5000) | round(0, "ceil") %}
+{%- for i in range(0, msPages) %}
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-makestates-{{ i }}.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+{%- endfor %}
+{%- set mstPages = (modelStates | length / 5000) | round(0, "ceil") %}
+{%- for i in range(0, mstPages) %}
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelstates-{{ i }}.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+{%- endfor %}
+{%- set mysPages = (modelYearStates | length / 5000) | round(0, "ceil") %}
+{%- for i in range(0, mysPages) %}
+  <sitemap>
+    <loc>https://www.caralpha.com/sitemap-modelyearstates-{{ i }}.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
+{%- endfor %}
 </sitemapindex>

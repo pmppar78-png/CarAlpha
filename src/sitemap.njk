@@ -1,18 +1,82 @@
 ---
-permalink: /sitemap.xml
+permalink: /sitemap-core.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for item in collections.sitemap %}
-{%- if not ("makes/" in item.url and item.url != "/makes/") and not ("states/" in item.url and item.url != "/states/") %}
+  <url>
+    <loc>https://www.caralpha.com/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/makes/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/states/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/vin-decoder/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/recall-checker/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/free-vin-check/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/vin-number-lookup/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{%- for guide in collections.guides %}
+  <url>
+    <loc>https://www.caralpha.com{{ guide.url }}</loc>
+    <lastmod>{{ guide.date | dateFormat("yyyy-LL-dd") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{%- endfor %}
+{%- for post in collections.blog %}
+  <url>
+    <loc>https://www.caralpha.com{{ post.url }}</loc>
+    <lastmod>{{ post.date | dateFormat("yyyy-LL-dd") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{%- endfor %}
+{%- for item in collections.learn %}
   <url>
     <loc>https://www.caralpha.com{{ item.url }}</loc>
     <lastmod>{{ item.date | dateFormat("yyyy-LL-dd") }}</lastmod>
-    <changefreq>{% if item.url == "/" %}daily{% elif "blog" in item.url or "guides" in item.url %}weekly{% else %}monthly{% endif %}</changefreq>
-    <priority>{% if item.url == "/" %}1.0{% elif "tools" in item.url %}0.8{% elif "guides" in item.url or "blog" in item.url %}0.7{% else %}0.5{% endif %}</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-{%- endif %}
+{%- endfor %}
+{%- for tool in collections.tools %}
+  <url>
+    <loc>https://www.caralpha.com{{ tool.url }}</loc>
+    <lastmod>{{ tool.date | dateFormat("yyyy-LL-dd") }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 {%- endfor %}
 {%- for make in makes %}
   <url>
@@ -28,14 +92,6 @@ eleventyExcludeFromCollections: true
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-{%- endfor %}
-{%- for entry in modelYears %}
-  <url>
-    <loc>https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 {%- endfor %}
 {%- for state in states %}
@@ -65,22 +121,6 @@ eleventyExcludeFromCollections: true
   </url>
   <url>
     <loc>https://www.caralpha.com/states/{{ state.slug }}/ev-incentives/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-{%- endfor %}
-{%- for entry in makeStates %}
-  <url>
-    <loc>https://www.caralpha.com/makes/{{ entry.makeSlug }}/in/{{ entry.stateSlug }}/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-{%- endfor %}
-{%- for entry in modelYearStates %}
-  <url>
-    <loc>https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/{{ entry.year }}/in/{{ entry.stateSlug }}/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
