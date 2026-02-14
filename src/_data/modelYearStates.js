@@ -9,17 +9,15 @@ const makes = require("./makes.json");
 const flags = require("./flags.json");
 
 module.exports = function () {
-  const config = flags.modelYearState;
-
-  if (!config || !config.enabled) {
+  if (!flags.enableModelYearStates) {
     return [];
   }
 
   // Collect all make slugs up to and including the current batch
-  const currentBatch = config.batch || 0;
+  const currentBatch = flags.batch || 0;
   const activeMakeSet = new Set();
   for (let i = 0; i <= currentBatch; i++) {
-    const batchMakes = config.batches[String(i)];
+    const batchMakes = flags.batches[String(i)];
     if (batchMakes) {
       batchMakes.forEach(function (s) { activeMakeSet.add(s); });
     }
@@ -54,8 +52,8 @@ module.exports = function () {
   // Use Object.assign to merge shared state data (avoids creating unique string refs)
   const result = [];
   filteredModelYears.forEach(function (my) {
-    const make = makeLookup[my.makeSlug] || { country: "", type: "mainstream" };
-    const baseObj = {
+    var make = makeLookup[my.makeSlug] || { country: "", type: "mainstream" };
+    var baseObj = {
       modelSlug: my.slug,
       modelName: my.name,
       makeSlug: my.makeSlug,
@@ -65,7 +63,7 @@ module.exports = function () {
       bodyType: my.bodyType,
       year: my.year,
     };
-    for (let i = 0; i < stateObjs.length; i++) {
+    for (var i = 0; i < stateObjs.length; i++) {
       result.push(Object.assign({}, baseObj, stateObjs[i]));
     }
   });
