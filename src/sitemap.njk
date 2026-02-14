@@ -78,4 +78,12 @@ eleventyExcludeFromCollections: true
     <priority>0.7</priority>
   </url>
 {%- endfor %}
+{%- for entry in modelYearStates %}
+  <url>
+    <loc>https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/{{ entry.year }}/in/{{ entry.stateSlug }}/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+{%- endfor %}
 </urlset>
