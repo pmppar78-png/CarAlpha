@@ -1,4 +1,6 @@
 const { DateTime } = require("luxon");
+const path = require("path");
+const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
@@ -132,17 +134,82 @@ module.exports = function (eleventyConfig) {
   });
 
   // ───────────────────────────────────────────────
-  // SITEMAP COLLECTION (all pages)
+  // LOOKUP FILTERS (avoid full-array iteration in templates)
   // ───────────────────────────────────────────────
 
-  eleventyConfig.addCollection("sitemap", function (collectionApi) {
-    return collectionApi.getAll().filter(function (item) {
-      var url = item.url || "";
-      if (url === false) return false;
-      if (item.data && item.data.eleventyExcludeFromCollections) return false;
-      if (item.data && item.data.noindex) return false;
-      return url && !url.includes("/404") && !url.endsWith(".xml");
-    });
+  // Build lookups once, lazily, and reuse across all filter calls
+  let _modelYearsByModelKey = null;
+  let _modelsByMakeSlug = null;
+  let _statesByRegion = null;
+
+  function getModelYearsByModelKey() {
+    if (!_modelYearsByModelKey) {
+      const data = JSON.parse(fs.readFileSync(path.join(__dirname, "src", "_data", "modelYears.json"), "utf8"));
+      _modelYearsByModelKey = {};
+      data.forEach(function (my) {
+        const key = my.makeSlug + "/" + my.slug;
+        if (!_modelYearsByModelKey[key]) _modelYearsByModelKey[key] = [];
+        _modelYearsByModelKey[key].push(my.year);
+      });
+      Object.keys(_modelYearsByModelKey).forEach(function (key) {
+        _modelYearsByModelKey[key].sort(function (a, b) { return a - b; });
+      });
+    }
+    return _modelYearsByModelKey;
+  }
+
+  function getModelsByMakeSlug() {
+    if (!_modelsByMakeSlug) {
+      const data = JSON.parse(fs.readFileSync(path.join(__dirname, "src", "_data", "models.json"), "utf8"));
+      _modelsByMakeSlug = {};
+      data.forEach(function (m) {
+        if (!_modelsByMakeSlug[m.makeSlug]) _modelsByMakeSlug[m.makeSlug] = [];
+        _modelsByMakeSlug[m.makeSlug].push({ name: m.name, slug: m.slug, bodyType: m.bodyType, makeSlug: m.makeSlug });
+      });
+    }
+    return _modelsByMakeSlug;
+  }
+
+  function getStatesByRegion() {
+    if (!_statesByRegion) {
+      const data = JSON.parse(fs.readFileSync(path.join(__dirname, "src", "_data", "states.json"), "utf8"));
+      _statesByRegion = {};
+      data.forEach(function (s) {
+        if (!_statesByRegion[s.region]) _statesByRegion[s.region] = [];
+        _statesByRegion[s.region].push({ name: s.name, slug: s.slug, abbreviation: s.abbreviation });
+      });
+    }
+    return _statesByRegion;
+  }
+
+  // lookupYears — get sorted years for a model, excluding a specific year
+  eleventyConfig.addFilter("lookupYears", function (makeSlug, modelSlug, excludeYear) {
+    const lookup = getModelYearsByModelKey();
+    const years = lookup[makeSlug + "/" + modelSlug] || [];
+    if (excludeYear) {
+      return years.filter(function (y) { return y !== excludeYear; });
+    }
+    return years;
+  });
+
+  // lookupModels — get models for a make, optionally excluding a model slug
+  eleventyConfig.addFilter("lookupModels", function (makeSlug, excludeModelSlug) {
+    const lookup = getModelsByMakeSlug();
+    const models = lookup[makeSlug] || [];
+    if (excludeModelSlug) {
+      return models.filter(function (m) { return m.slug !== excludeModelSlug; });
+    }
+    return models;
+  });
+
+  // lookupRegionStates — get states in a region, excluding a specific state
+  eleventyConfig.addFilter("lookupRegionStates", function (region, excludeStateSlug) {
+    const lookup = getStatesByRegion();
+    const states = lookup[region] || [];
+    if (excludeStateSlug) {
+      return states.filter(function (s) { return s.slug !== excludeStateSlug; });
+    }
+    return states;
   });
 
   // ───────────────────────────────────────────────

@@ -285,12 +285,11 @@ eleventyComputed:
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">Other {{ entry.modelName }} Years in {{ entry.stateName }}</h2>
       <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 gap-2">
-        {% for yr in modelYears %}
-          {% if yr.makeSlug == entry.makeSlug and yr.slug == entry.modelSlug and yr.year != entry.year %}
-          <a href="/makes/{{ yr.makeSlug }}/{{ yr.slug }}/{{ yr.year }}/in/{{ entry.stateSlug }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
-            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ yr.year }}</div>
+        {% set otherYears = entry.makeSlug | lookupYears(entry.modelSlug, entry.year) %}
+        {% for yr in otherYears %}
+          <a href="/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/{{ yr }}/in/{{ entry.stateSlug }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ yr }}</div>
           </a>
-          {% endif %}
         {% endfor %}
       </div>
     </div>

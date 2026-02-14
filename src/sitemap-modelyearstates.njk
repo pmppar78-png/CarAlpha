@@ -1,0 +1,19 @@
+---
+pagination:
+  data: modelYearStates
+  size: 5000
+  alias: chunk
+permalink: "/sitemap-modelyearstates-{{ pagination.pageNumber }}.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for entry in chunk %}
+  <url>
+    <loc>https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/{{ entry.year }}/in/{{ entry.stateSlug }}/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+{%- endfor %}
+</urlset>

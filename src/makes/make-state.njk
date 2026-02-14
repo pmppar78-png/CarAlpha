@@ -182,13 +182,12 @@ eleventyComputed:
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">Popular {{ entry.makeName }} Models in {{ entry.stateName }}</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {% for m in models %}
-          {% if m.makeSlug == entry.makeSlug %}
+        {% set makeModels = entry.makeSlug | lookupModels %}
+        {% for m in makeModels %}
           <a href="/makes/{{ m.makeSlug }}/{{ m.slug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
             <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ m.name }}</div>
             <div class="text-[10px] text-silver-500 mt-1">{{ m.bodyType }}</div>
           </a>
-          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -233,29 +232,21 @@ eleventyComputed:
     {# ── Cross-Links: Other Makes in This State ── #}
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">Other Makes in {{ entry.stateName }}</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {% for make in makes %}
-          {% if make.slug != entry.makeSlug %}
-          <a href="/makes/{{ make.slug }}/in/{{ entry.stateSlug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
-            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ make.name }}</div>
-            <div class="text-[10px] text-silver-500 mt-1">{{ make.country }}</div>
-          </a>
-          {% endif %}
-        {% endfor %}
-      </div>
+      <p class="text-silver-400 text-sm mb-4">
+        <a href="/makes/" class="text-volt-400 hover:underline">Browse all makes</a> to find ownership guides for other manufacturers in {{ entry.stateName }}.
+      </p>
     </div>
 
-    {# ── Cross-Links: This Make in Other States ── #}
+    {# ── Cross-Links: This Make in Nearby States ── #}
     <div class="mb-10">
-      <h2 class="text-xl font-black text-white mb-6">{{ entry.makeName }} in Other States</h2>
+      <h2 class="text-xl font-black text-white mb-6">{{ entry.makeName }} in Nearby States</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {% for state in states %}
-          {% if state.slug != entry.stateSlug %}
+        {% set regionStates = entry.stateRegion | lookupRegionStates(entry.stateSlug) %}
+        {% for state in regionStates %}
           <a href="/makes/{{ entry.makeSlug }}/in/{{ state.slug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
             <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ state.name }}</div>
             <div class="text-[10px] text-silver-500 mt-1">{{ state.abbreviation }}</div>
           </a>
-          {% endif %}
         {% endfor %}
       </div>
     </div>
