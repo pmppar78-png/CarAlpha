@@ -1,0 +1,367 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: modelStates
+  size: 1
+  alias: entry
+permalink: "/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/in/{{ entry.stateSlug }}/"
+eleventyComputed:
+  title: "{{ entry.makeName }} {{ entry.modelName }} in {{ entry.stateName }} — Insurance, Ownership & VIN Guide"
+  description: "Complete {{ entry.makeName }} {{ entry.modelName }} ownership guide for {{ entry.stateName }} ({{ entry.stateAbbr }}). Insurance requirements ({{ entry.insuranceMinimum }}), registration, lemon law, VIN decoder, and more."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ entry.makeName }} {{ entry.modelName }} in {{ entry.stateName }} — Ownership Guide",
+  "description": "{{ description }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Car Alpha"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Car Alpha",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.caralpha.com/assets/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/in/{{ entry.stateSlug }}/"
+  },
+  "about": [
+    {
+      "@type": "Car",
+      "name": "{{ entry.makeName }} {{ entry.modelName }}",
+      "brand": {
+        "@type": "Brand",
+        "name": "{{ entry.makeName }}"
+      }
+    },
+    {
+      "@type": "State",
+      "name": "{{ entry.stateName }}"
+    }
+  ]
+}
+</script>
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: entry.makeName, url: "/makes/" + entry.makeSlug + "/" }, { label: entry.modelName, url: "/makes/" + entry.makeSlug + "/" + entry.modelSlug + "/" }, { label: entry.stateName }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+
+    {# ── Hero Header ── #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm carbon-panel mb-10">
+      <div class="steel-header px-8 py-5">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-black text-white">{{ entry.makeName }} {{ entry.modelName }} in <span class="text-gradient">{{ entry.stateName }}</span></h1>
+            <div class="flex items-center gap-4 mt-2 text-sm text-silver-400">
+              <span>{{ entry.bodyType }}</span>
+              <span>&middot;</span>
+              <span>{{ entry.stateAbbr }}</span>
+              <span>&middot;</span>
+              <span>{{ entry.stateRegion }}</span>
+            </div>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-volt-600/10 border border-volt-500/20 text-volt-400 text-xs font-bold uppercase tracking-wider">{{ entry.makeType }}</span>
+        </div>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 leading-relaxed">Everything {{ entry.stateName }} drivers need to know about owning a {{ entry.makeName }} {{ entry.modelName }} — from {{ entry.stateName }} insurance requirements and minimum coverage ({{ entry.insuranceMinimum }}) to lemon law protections, registration fees, and VIN decoding. This guide covers {{ entry.modelName }}-specific ownership considerations for {{ entry.stateName }} residents.</p>
+      </div>
+    </div>
+
+    {# ── Insurance Requirements Card ── #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-8">
+      <div class="steel-header px-6 py-4 flex items-center gap-3">
+        <div class="feature-icon w-11 h-11 rounded-xl grid place-items-center">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        </div>
+        <h2 class="font-bold text-white text-lg">{{ entry.modelName }} Insurance in {{ entry.stateName }}</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <p class="text-silver-400 text-sm leading-relaxed">{{ entry.stateName }} requires minimum liability coverage of {{ entry.insuranceMinimum }} (bodily injury per person / bodily injury per accident / property damage) for all registered vehicles, including the {{ entry.makeName }} {{ entry.modelName }}. Insurance rates for the {{ entry.modelName }} in {{ entry.stateName }} vary based on year, trim, driver history, and location within the state.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+            <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">{{ entry.stateName }} Minimum Coverage</div>
+            <div class="font-bold text-white text-lg mt-1">{{ entry.insuranceMinimum }}</div>
+          </div>
+          {% if entry.averageInsuranceCost > 1 %}
+          <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+            <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">{{ entry.stateName }} Avg. Annual Cost</div>
+            <div class="font-bold text-white text-lg mt-1">${{ entry.averageInsuranceCost | toLocaleString }}</div>
+          </div>
+          {% endif %}
+        </div>
+        {% if entry.makeType == "luxury" %}
+        <p class="text-silver-400 text-sm leading-relaxed">As a luxury vehicle, the {{ entry.makeName }} {{ entry.modelName }} typically carries higher insurance premiums in {{ entry.stateName }} due to elevated repair costs, parts pricing, and vehicle value. Consider comprehensive and collision coverage beyond the state minimum.</p>
+        {% elif entry.makeType == "performance" %}
+        <p class="text-silver-400 text-sm leading-relaxed">Performance vehicles like the {{ entry.makeName }} {{ entry.modelName }} often have higher insurance premiums in {{ entry.stateName }} due to increased horsepower ratings and associated risk profiles. Shop multiple carriers for the best rates.</p>
+        {% elif entry.makeType == "ev" %}
+        <p class="text-silver-400 text-sm leading-relaxed">Electric vehicles like the {{ entry.makeName }} {{ entry.modelName }} may qualify for insurance discounts in {{ entry.stateName }} through select carriers. However, EV repair costs can affect premiums. Compare specialized EV insurance options.</p>
+        {% else %}
+        <p class="text-silver-400 text-sm leading-relaxed">The {{ entry.makeName }} {{ entry.modelName }} is classified as a {{ entry.bodyType | lower }} for insurance purposes in {{ entry.stateName }}. Rates vary by year and trim — compare quotes from multiple carriers to find the best premium.</p>
+        {% endif %}
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="/states/{{ entry.stateSlug }}/insurance/" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-ghost text-volt-400 text-sm font-medium">
+            {{ entry.stateName }} insurance guide
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-primary text-white text-sm font-bold">
+            Compare {{ entry.modelName }} rates in {{ entry.stateAbbr }}
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {# ── Lemon Law Card ── #}
+    {% if entry.hasLemonLaw %}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-8">
+      <div class="steel-header px-6 py-4 flex items-center gap-3">
+        <div class="feature-icon w-11 h-11 rounded-xl grid place-items-center">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"/></svg>
+        </div>
+        <h2 class="font-bold text-white text-lg">{{ entry.modelName }} Lemon Law in {{ entry.stateName }}</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <p class="text-silver-400 text-sm leading-relaxed">{{ entry.stateName }} has a lemon law that protects buyers of new {{ entry.makeName }} {{ entry.modelName }} vehicles. If your new {{ entry.modelName }} has a substantial defect that the manufacturer cannot repair after a reasonable number of attempts, you may be entitled to a replacement vehicle or a full refund under {{ entry.stateName }} law.</p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="/states/{{ entry.stateSlug }}/lemon-law/" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-ghost text-volt-400 text-sm font-medium">
+            {{ entry.stateName }} lemon law details
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="/go/lemon-law/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-primary text-white text-sm font-bold">
+            Talk to a lemon law attorney
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {# ── EV Incentives Card (conditional) ── #}
+    {% if entry.evIncentives %}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-8">
+      <div class="steel-header px-6 py-4 flex items-center gap-3">
+        <div class="feature-icon w-11 h-11 rounded-xl grid place-items-center">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+        </div>
+        <h2 class="font-bold text-white text-lg">{{ entry.modelName }} EV Incentives in {{ entry.stateName }}</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <p class="text-silver-400 text-sm leading-relaxed">{{ entry.stateName }} offers incentives for electric and plug-in hybrid vehicles. If you're considering an electric or hybrid {{ entry.makeName }} {{ entry.modelName }}, you may qualify for state-level tax credits, rebates, or HOV lane access in addition to the federal EV tax credit of up to $7,500.</p>
+        <a href="/states/{{ entry.stateSlug }}/ev-incentives/" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-ghost text-volt-400 text-sm font-medium">
+          {{ entry.stateName }} EV incentive details
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+    {% endif %}
+
+    {# ── Registration Info Card ── #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-8">
+      <div class="steel-header px-6 py-4 flex items-center gap-3">
+        <div class="feature-icon w-11 h-11 rounded-xl grid place-items-center">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+        </div>
+        <h2 class="font-bold text-white text-lg">Registering a {{ entry.modelName }} in {{ entry.stateName }}</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <p class="text-silver-400 text-sm leading-relaxed">All {{ entry.makeName }} {{ entry.modelName }} vehicles driven in {{ entry.stateName }} must be registered with the state DMV. Whether you're buying a new {{ entry.modelName }} from a dealer or transferring a title from another state, {{ entry.stateName }} has specific requirements for registration, titling, and plates.</p>
+        <a href="/states/{{ entry.stateSlug }}/registration/" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-ghost text-volt-400 text-sm font-medium">
+          {{ entry.stateName }} registration guide
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+
+    {# ── Internal Navigation Links ── #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">Explore {{ entry.makeName }} {{ entry.modelName }}</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H18.375a1.125 1.125 0 001.125-1.125V14.25"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.makeName }} {{ entry.modelName }}</div>
+            <div class="text-xs text-silver-500 mt-1">VIN decoder, specs, recalls, and year-by-year details</div>
+          </div>
+        </a>
+        <a href="/makes/{{ entry.makeSlug }}/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">All {{ entry.makeName }} Models</div>
+            <div class="text-xs text-silver-500 mt-1">Browse every {{ entry.makeName }} model, specs, and tools</div>
+          </div>
+        </a>
+        <a href="/states/{{ entry.stateSlug }}/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.stateName }} Vehicle Guide</div>
+            <div class="text-xs text-silver-500 mt-1">Insurance, registration, lemon law, and more</div>
+          </div>
+        </a>
+        <a href="/makes/{{ entry.makeSlug }}/in/{{ entry.stateSlug }}/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.makeName }} in {{ entry.stateName }}</div>
+            <div class="text-xs text-silver-500 mt-1">All {{ entry.makeName }} models ownership guide for {{ entry.stateAbbr }}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    {# ── VIN Decoder CTA ── #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">Decode a {{ entry.makeName }} {{ entry.modelName }} VIN</h2>
+      <div class="vin-card glass-card rounded-2xl p-6 glow-cyan carbon-panel">
+        <label class="block text-sm font-bold text-silver-300 mb-3 tracking-wide uppercase">Enter your {{ entry.modelName }} VIN</label>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input id="vinInput" maxlength="17" placeholder="Enter 17-character VIN" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+          <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Decode VIN</button>
+        </div>
+      </div>
+      <section class="mt-6 space-y-5">
+        <div class="hidden" id="loading"><div class="glass-card rounded-2xl p-6 border-glow text-center carbon-panel"><div class="inline-flex items-center gap-3 text-silver-300"><svg class="animate-spin w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Decoding...</div></div></div>
+        <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300" id="errorText"></div></div>
+        <div class="hidden" id="vehicleCard"></div>
+        <div class="hidden" id="recallCard"></div>
+      </section>
+    </div>
+
+    {# ── State Ownership Topics ── #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">{{ entry.stateName }} Vehicle Ownership Topics</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/states/{{ entry.stateSlug }}/insurance/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.stateName }} Car Insurance</div>
+            <div class="text-xs text-silver-500 mt-1">Requirements, average costs, and tips to save</div>
+          </div>
+        </a>
+        <a href="/states/{{ entry.stateSlug }}/lemon-law/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.stateName }} Lemon Law</div>
+            <div class="text-xs text-silver-500 mt-1">Your rights and how to file a claim</div>
+          </div>
+        </a>
+        <a href="/states/{{ entry.stateSlug }}/registration/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.stateName }} Registration</div>
+            <div class="text-xs text-silver-500 mt-1">Fees, process, and required documents</div>
+          </div>
+        </a>
+        {% if entry.evIncentives %}
+        <a href="/states/{{ entry.stateSlug }}/ev-incentives/" class="glass-card metallic-border rounded-2xl p-5 carbon-panel card-hover flex items-start gap-3 group">
+          <svg class="w-5 h-5 text-volt-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          <div>
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors">{{ entry.stateName }} EV Incentives</div>
+            <div class="text-xs text-silver-500 mt-1">State and federal credits for electric vehicles</div>
+          </div>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    {# ── Related: Same Model in Nearby States (same region) ── #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">{{ entry.modelName }} in Nearby States</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {% for state in states %}
+          {% if state.region == entry.stateRegion and state.slug != entry.stateSlug %}
+          <a href="/makes/{{ entry.makeSlug }}/{{ entry.modelSlug }}/in/{{ state.slug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ state.name }}</div>
+            <div class="text-[10px] text-silver-500 mt-1">{{ state.abbreviation }}</div>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {# ── Related: Other Models from Same Make in This State ── #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">Other {{ entry.makeName }} Models in {{ entry.stateName }}</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {% for m in models %}
+          {% if m.makeSlug == entry.makeSlug and m.slug != entry.modelSlug %}
+          <a href="/makes/{{ m.makeSlug }}/{{ m.slug }}/in/{{ entry.stateSlug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ m.name }}</div>
+            <div class="text-[10px] text-silver-500 mt-1">{{ m.bodyType }}</div>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {# ── Tool Links ── #}
+    <div class="grid sm:grid-cols-3 gap-4">
+      <a href="/vin-decoder/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-10 h-10 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5z"/></svg>
+        </div>
+        <h3 class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">VIN Decoder</h3>
+        <p class="text-xs text-silver-500 mt-1">Decode any VIN instantly</p>
+      </a>
+      <a href="/recall-checker/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-10 h-10 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg>
+        </div>
+        <h3 class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Recall Checker</h3>
+        <p class="text-xs text-silver-500 mt-1">Check for open recalls</p>
+      </a>
+      <a href="/compare/" class="glass-card metallic-border rounded-xl p-5 card-hover carbon-panel group text-center">
+        <div class="feature-icon w-10 h-10 rounded-xl grid place-items-center mx-auto mb-3">
+          <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+        </div>
+        <h3 class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Compare Vehicles</h3>
+        <p class="text-xs text-silver-500 mt-1">Side-by-side comparison</p>
+      </a>
+    </div>
+
+    {# ── Bottom CTA ── #}
+    <div class="mt-12 glass-card metallic-border rounded-2xl p-8 carbon-panel text-center">
+      <h3 class="text-xl font-bold text-white mb-3">Compare {{ entry.modelName }} Insurance Rates in {{ entry.stateName }}</h3>
+      <p class="text-silver-400 mb-6 max-w-lg mx-auto">See how much you could save on {{ entry.makeName }} {{ entry.modelName }} insurance by comparing rates from top carriers in {{ entry.stateName }}. It takes less than 5 minutes.</p>
+      <a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
+        Get Free {{ entry.modelName }} Insurance Quotes in {{ entry.stateAbbr }}
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      </a>
+      <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function(){
+  var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
+  if(!vinInput||!runBtn)return;
+  function setLoading(on){loading.classList.toggle('hidden',!on);}
+  function setError(msg){if(!msg){errorBox.classList.add('hidden');return;}errorText.textContent=msg;errorBox.classList.remove('hidden');}
+  function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
+  async function run(){
+    setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var vin=(vinInput.value||'').trim().toUpperCase();
+    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    setLoading(true);
+    try{
+      var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
+      var dec=(d.Results&&d.Results[0])||{};
+      var f=[['Year',dec.ModelYear],['Make',dec.Make],['Model',dec.Model],['Trim',dec.Trim],['Engine',((dec.DisplacementL||'')+'L '+(dec.FuelTypePrimary||'')).trim()],['Body',dec.BodyClass],['Drive',dec.DriveType]].filter(function(x){return x[1]&&String(x[1]).trim()!=='';});
+      vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Vehicle Specs</h3></div><div class="px-6 py-5"><div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">'+f.map(function(x){return '<div class="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]"><div class="text-[10px] font-semibold text-silver-500 uppercase">'+x[0]+'</div><div class="font-semibold text-white mt-0.5">'+x[1]+'</div></div>';}).join('')+'</div></div></div>';
+      vehicleCard.classList.remove('hidden');
+      try{var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);var cnt=(r&&r.results)?r.results.length:0;recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-2 '+(cnt>0?'text-amber-300':'text-emerald-400')+' text-sm font-bold">'+(cnt>0?cnt+' recall(s) found. <a href="/recall-checker/" class="underline ml-1">View details</a>':'No open recalls found.')+'</div></div>';recallCard.classList.remove('hidden');}}catch(e){}
+    }catch(e){setError('Service unavailable. Try again shortly.');}finally{setLoading(false);}
+  }
+  runBtn.addEventListener('click',run);vinInput.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>
