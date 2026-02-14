@@ -1,21 +1,25 @@
 {
-  "modelYearState": {
-    "enabled": true,
-    "batch": 0,
-    "makesPerBatch": 2,
-    "batches": {
-      "0": ["acura", "alfa-romeo"],
-      "1": ["aston-martin", "audi", "bentley", "bmw", "buick"],
-      "2": ["cadillac", "chevrolet", "chrysler", "dodge", "ferrari"],
-      "3": ["fiat", "fisker", "ford", "genesis", "gmc"],
-      "4": ["honda", "hyundai", "infiniti", "jaguar", "jeep"],
-      "5": ["kia", "lamborghini", "land-rover", "lexus", "lincoln"],
-      "6": ["lucid", "maserati", "maybach", "mazda", "mclaren"],
-      "7": ["mercedes-benz", "mini", "mitsubishi", "nissan", "plymouth"],
-      "8": ["polestar", "pontiac", "porsche", "ram", "rivian"],
-      "9": ["rolls-royce", "saab", "saturn", "smart", "subaru"],
-      "10": ["suzuki", "tesla", "toyota", "volkswagen", "volvo"]
-    },
-    "notes": "Batch 0 = validation (2 makes, ~4k pages). Increase batch number to roll out more makes. Each batch is cumulative."
-  }
+  "batch": 0,
+  "enableMakeStates": true,
+  "enableModelStates": true,
+  "enableModelYearStates": true,
+  "makeBatchSize": 5,
+  "modelBatchSize": 50,
+  "myMakesPerBatch": 5,
+  "batches": {
+    "0": ["acura", "alfa-romeo"],
+    "1": ["aston-martin", "audi", "bentley", "bmw", "buick"],
+    "2": ["cadillac", "chevrolet", "chrysler", "dodge", "ferrari"],
+    "3": ["fiat", "fisker", "ford", "genesis", "gmc"],
+    "4": ["honda", "hyundai", "infiniti", "jaguar", "jeep"],
+    "5": ["kia", "lamborghini", "land-rover", "lexus", "lincoln"],
+    "6": ["lucid", "maserati", "maybach", "mazda", "mclaren"],
+    "7": ["mercedes-benz", "mini", "mitsubishi", "nissan", "plymouth"],
+    "8": ["polestar", "pontiac", "porsche", "ram", "rivian"],
+    "9": ["rolls-royce", "saab", "saturn", "smart", "subaru"],
+    "10": ["suzuki", "tesla", "toyota", "volkswagen", "volvo"],
+    "11": ["oldsmobile", "mercury", "hummer", "scion", "isuzu"],
+    "12": ["lotus", "bugatti", "delorean"]
+  },
+  "notes": "Batch 0 = validation (2 makes). All engines gated by batch number and active make set. makeBatchSize controls makeStates paging, modelBatchSize controls modelStates paging, myMakesPerBatch controls modelYearStates paging. Increase batch to roll out more makes cumulatively."
 }

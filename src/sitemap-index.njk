@@ -8,28 +8,28 @@ eleventyExcludeFromCollections: true
     <loc>https://www.caralpha.com/sitemap-core.xml</loc>
     <lastmod>2026-02-14</lastmod>
   </sitemap>
-{%- set myPages = (modelYears | length / 5000) | round(0, "ceil") %}
+{%- set myPages = (modelYears | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, myPages) %}
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-modelyears-{{ i }}.xml</loc>
     <lastmod>2026-02-14</lastmod>
   </sitemap>
 {%- endfor %}
-{%- set msPages = (makeStates | length / 5000) | round(0, "ceil") %}
+{%- set msPages = (makeStates | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, msPages) %}
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-makestates-{{ i }}.xml</loc>
     <lastmod>2026-02-14</lastmod>
   </sitemap>
 {%- endfor %}
-{%- set mstPages = (modelStates | length / 5000) | round(0, "ceil") %}
+{%- set mstPages = (modelStates | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, mstPages) %}
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-modelstates-{{ i }}.xml</loc>
     <lastmod>2026-02-14</lastmod>
   </sitemap>
 {%- endfor %}
-{%- set mysPages = (modelYearStates | length / 5000) | round(0, "ceil") %}
+{%- set mysPages = (modelYearStates | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, mysPages) %}
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-modelyearstates-{{ i }}.xml</loc>
