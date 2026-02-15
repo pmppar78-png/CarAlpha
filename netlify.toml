@@ -1,11 +1,10 @@
 [build]
-  command = "echo \"NODE_OPTIONS=$NODE_OPTIONS\" && echo \"ELEVENTY_MAX_CONCURRENCY=$ELEVENTY_MAX_CONCURRENCY\" && node -e \"console.log('heap', require('v8').getHeapStatistics().heap_size_limit/1024/1024, 'MB')\" && rm -rf _site && npx @11ty/eleventy && echo '--- Build Output Summary ---' && echo \"Total files: $(find _site -type f | wc -l)\" && echo \"HTML files: $(find _site -type f -name '*.html' | wc -l)\" && echo \"Makes pages: $(find _site/makes -type f -name '*.html' 2>/dev/null | wc -l)\" && echo \"States pages: $(find _site/states -type f -name '*.html' 2>/dev/null | wc -l)\" && echo \"Sitemap files: $(find _site -type f -name 'sitemap*' 2>/dev/null | wc -l)\" && echo '----------------------------'"
+  command = "node scripts/build-edge-data.js && rm -rf _site && npx @11ty/eleventy"
   publish = "_site"
 
 [build.environment]
   NODE_VERSION = "22"
-  NODE_OPTIONS = "--max-old-space-size=14336"
-  ELEVENTY_MAX_CONCURRENCY = "1"
+  NODE_OPTIONS = "--max-old-space-size=4096"
 
 # Dev server
 [dev]
@@ -103,6 +102,21 @@
 [[edge_functions]]
   function = "affiliate-redirect"
   path = "/go/*"
+
+# Dynamic vehicle pages handled by edge function
+# These patterns cover all make/state, model/state, and model-year/state combinations
+# rendered at the edge instead of as static HTML files
+[[edge_functions]]
+  function = "vehicle-pages"
+  path = "/makes/*/in/*"
+
+[[edge_functions]]
+  function = "vehicle-pages"
+  path = "/makes/*/*/in/*"
+
+[[edge_functions]]
+  function = "vehicle-pages"
+  path = "/makes/*/*/*/in/*"
 
 # SPA fallback for 404
 [[redirects]]

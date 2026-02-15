@@ -4,9 +4,10 @@ const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
-  // CONCURRENCY — keep at 1 to prevent OOM/EAGAIN on Netlify builds
+  // CONCURRENCY — deep pages now render via edge functions,
+  // so the static build only produces top-level SEO pages (<1k files)
   // ───────────────────────────────────────────────
-  eleventyConfig.setConcurrency(1);
+  eleventyConfig.setConcurrency(20);
 
   // ───────────────────────────────────────────────
   // CUSTOM FILTERS

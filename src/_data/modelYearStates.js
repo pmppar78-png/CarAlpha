@@ -1,7 +1,6 @@
-// Generates slice-gated modelYearStates data at build time.
-// Reads flags.json to determine which makes are in the current slice.
-// Cross-references modelYears.json x states.json for the active slice's makes only.
-// Slices are NOT cumulative — only the current slice's makes are included.
+// Generates CUMULATIVE modelYearStates data at build time.
+// Reads flags.json to determine the current slice index.
+// Includes ALL makes from slices 0 through (slice - 1) so pages accumulate across runs.
 // Optimized: uses Set for lookups, shared state/make refs to reduce per-entry memory.
 
 const modelYears = require("./modelYears.json");
@@ -14,13 +13,20 @@ module.exports = function () {
     return [];
   }
 
-  // Get makes for the current slice only (not cumulative)
+  // Collect makes from ALL slices 0..(currentSlice - 1) — cumulative
   const currentSlice = flags.slice != null ? flags.slice : 0;
-  const sliceMakes = flags.slices[String(currentSlice)];
-  if (!sliceMakes || !sliceMakes.length) {
+  const activeMakeSet = new Set();
+  for (var i = 0; i < currentSlice; i++) {
+    var sliceMakes = flags.slices[String(i)];
+    if (sliceMakes && sliceMakes.length) {
+      sliceMakes.forEach(function (m) { activeMakeSet.add(m); });
+    }
+  }
+
+  if (activeMakeSet.size === 0) {
+    console.log("[modelYearStates] No cumulative makes yet (slice " + currentSlice + ")");
     return [];
   }
-  const activeMakeSet = new Set(sliceMakes);
 
   // Filter modelYears to only active makes (Set.has is O(1))
   const filteredModelYears = modelYears.filter(function (entry) {
@@ -48,13 +54,8 @@ module.exports = function () {
   });
 
   // Cross-reference: each modelYear x each state
-  // Use Object.assign to merge shared state data (avoids creating unique string refs)
-  const PAGE_CAP = 20000;
   const expectedPages = filteredModelYears.length * stateObjs.length;
-  console.log("[modelYearStates] Slice " + currentSlice + ": " + filteredModelYears.length + " modelYears x " + stateObjs.length + " states = " + expectedPages + " pages (cap: " + PAGE_CAP + ")");
-  if (expectedPages > PAGE_CAP) {
-    console.warn("[modelYearStates] WARNING: Slice " + currentSlice + " exceeds " + PAGE_CAP + " page cap (" + expectedPages + "). Build may OOM.");
-  }
+  console.log("[modelYearStates] Cumulative slices 0.." + (currentSlice - 1) + ": " + filteredModelYears.length + " modelYears x " + stateObjs.length + " states = " + expectedPages + " pages (" + activeMakeSet.size + " makes)");
 
   const result = [];
   filteredModelYears.forEach(function (my) {
