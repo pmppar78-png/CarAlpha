@@ -4,6 +4,11 @@ const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
+  // CONCURRENCY — keep at 1 to prevent OOM/EAGAIN on Netlify builds
+  // ───────────────────────────────────────────────
+  eleventyConfig.setConcurrency(1);
+
+  // ───────────────────────────────────────────────
   // CUSTOM FILTERS
   // ───────────────────────────────────────────────
 
