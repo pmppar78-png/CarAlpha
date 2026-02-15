@@ -1,29 +1,24 @@
 {
-  "batch": 3,
+  "slice": 0,
   "enableMakeStates": true,
   "enableModelStates": true,
   "enableModelYearStates": true,
-  "makeBatchSize": 5,
-  "modelBatchSize": 50,
-  "myMakesPerBatch": 5,
-  "heavyMakes": ["ford", "chevrolet", "toyota", "honda", "nissan", "mercedes-benz", "tesla"],
-  "batches": {
-    "0": ["acura", "alfa-romeo"],
-    "1": ["aston-martin", "audi", "bentley", "bmw", "buick"],
-    "2": ["cadillac", "chevrolet", "chrysler", "dodge", "ferrari"],
-    "3": ["ford", "fiat", "fisker"],
-    "4": ["genesis", "gmc", "infiniti", "jaguar", "jeep"],
-    "5": ["honda", "hyundai", "kia"],
-    "6": ["lamborghini", "land-rover", "lexus", "lincoln", "lucid"],
-    "7": ["mercedes-benz", "maserati", "maybach"],
-    "8": ["mazda", "mclaren", "mini", "mitsubishi", "plymouth"],
-    "9": ["nissan", "polestar", "pontiac"],
-    "10": ["porsche", "ram", "rivian", "rolls-royce", "saab"],
-    "11": ["saturn", "smart", "subaru", "suzuki"],
-    "12": ["tesla", "volkswagen"],
-    "13": ["toyota", "volvo"],
-    "14": ["oldsmobile", "mercury", "hummer", "scion", "isuzu"],
-    "15": ["lotus", "bugatti", "delorean"]
+  "slices": {
+    "0": ["toyota", "nissan"],
+    "1": ["chevrolet", "bmw"],
+    "2": ["lexus", "ford"],
+    "3": ["hyundai", "audi", "kia"],
+    "4": ["honda", "mercedes-benz", "subaru"],
+    "5": ["porsche", "land-rover", "volvo"],
+    "6": ["jeep", "volkswagen", "gmc"],
+    "7": ["mazda", "cadillac", "ram"],
+    "8": ["dodge", "acura", "lotus", "mitsubishi"],
+    "9": ["maserati", "rolls-royce", "infiniti", "mercury"],
+    "10": ["lincoln", "buick", "pontiac", "tesla", "jaguar"],
+    "11": ["genesis", "mini", "lamborghini", "saab", "scion"],
+    "12": ["aston-martin", "suzuki", "ferrari", "saturn", "bentley", "isuzu"],
+    "13": ["fiat", "oldsmobile", "mclaren", "chrysler", "hummer", "alfa-romeo", "bugatti", "maybach", "plymouth", "smart"],
+    "14": ["polestar", "rivian", "lucid", "fisker", "delorean"]
   },
-  "notes": "Batch 0 = validation (2 makes). Heavy makes (ford, chevrolet, toyota, honda, nissan, mercedes-benz, tesla) are isolated in smaller batches to avoid OOM. Each heavy-make batch has at most 1 heavy make + 2 light makes. Batches are cumulative. Increase batch to roll out more makes."
+  "notes": "Slice-based deploys. Each slice generates 15k-25k pages (base 3,675 + state pages for the slice's makes). Slices are NOT cumulative — each deploy only includes makes from the current slice. Increment 'slice' and redeploy to build the next group. 15 total slices cover all 60 makes."
 }
