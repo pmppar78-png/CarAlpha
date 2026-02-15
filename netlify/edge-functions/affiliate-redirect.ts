@@ -1,4 +1,4 @@
-import type { Context } from "https://edge.netlify.com";
+import type { Context, Config } from "@netlify/edge-functions";
 
 // Affiliate partner configuration
 // All affiliate links route through /go/{partner}/ for tracking and easy partner swapping
@@ -79,6 +79,6 @@ export default async (request: Request, context: Context) => {
   });
 };
 
-export const config = {
+export const config: Config = {
   path: "/go/*",
 };

@@ -87,6 +87,12 @@
   to = "/recalls/"
   status = 301
 
+# Sitemap convenience redirect
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+
 # Legacy URL support
 [[redirects]]
   from = "/vin-check"
