@@ -19,7 +19,9 @@ module.exports = function () {
   }
   const activeMakeSet = new Set(sliceMakes);
 
-  return allMakeStates.filter(function (entry) {
+  const filtered = allMakeStates.filter(function (entry) {
     return activeMakeSet.has(entry.makeSlug);
   });
+  console.log("[makeStates] Slice " + currentSlice + ": " + filtered.length + " pages for makes [" + sliceMakes.join(", ") + "]");
+  return filtered;
 };

@@ -49,6 +49,13 @@ module.exports = function () {
 
   // Cross-reference: each modelYear x each state
   // Use Object.assign to merge shared state data (avoids creating unique string refs)
+  const PAGE_CAP = 20000;
+  const expectedPages = filteredModelYears.length * stateObjs.length;
+  console.log("[modelYearStates] Slice " + currentSlice + ": " + filteredModelYears.length + " modelYears x " + stateObjs.length + " states = " + expectedPages + " pages (cap: " + PAGE_CAP + ")");
+  if (expectedPages > PAGE_CAP) {
+    console.warn("[modelYearStates] WARNING: Slice " + currentSlice + " exceeds " + PAGE_CAP + " page cap (" + expectedPages + "). Build may OOM.");
+  }
+
   const result = [];
   filteredModelYears.forEach(function (my) {
     var make = makeLookup[my.makeSlug] || { country: "", type: "mainstream" };
