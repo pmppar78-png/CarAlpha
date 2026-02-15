@@ -1,11 +1,11 @@
 [build]
-  command = "echo \"NODE_OPTIONS=$NODE_OPTIONS\" && echo \"ELEVENTY_MAX_CONCURRENCY=$ELEVENTY_MAX_CONCURRENCY\" && node -e \"console.log('heap', require('v8').getHeapStatistics().heap_size_limit/1024/1024, 'MB')\" && node -e \"var f=require('./src/_data/flags.json'); var s=f.slice||0; var makes=[]; for(var i=0;i<s;i++){var sl=f.slices[String(i)]; if(sl) makes=makes.concat(sl);} console.log('CUMULATIVE BUILD — slice index: '+s+', total makes: '+makes.length);\" && rm -rf _site && npx @11ty/eleventy && echo '--- Build Output Summary ---' && echo \"Total files: $(find _site -type f | wc -l)\" && echo \"HTML files: $(find _site -type f -name '*.html' | wc -l)\" && echo \"Makes pages: $(find _site/makes -type f -name '*.html' 2>/dev/null | wc -l)\" && echo \"States pages: $(find _site/states -type f -name '*.html' 2>/dev/null | wc -l)\" && echo \"Sitemap files: $(find _site -type f -name 'sitemap*' 2>/dev/null | wc -l)\" && echo '----------------------------'"
+  command = "rm -rf _site && npx @11ty/eleventy"
   publish = "_site"
 
 [build.environment]
   NODE_VERSION = "22"
   NODE_OPTIONS = "--max-old-space-size=14336"
-  ELEVENTY_MAX_CONCURRENCY = "50"
+  ELEVENTY_MAX_CONCURRENCY = "10"
 
 # Dev server
 [dev]

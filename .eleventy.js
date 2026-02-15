@@ -4,10 +4,10 @@ const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
-  // CONCURRENCY — higher concurrency for large builds (200k+ pages)
-  // 14GB heap is allocated; concurrency=50 balances speed vs memory
+  // CONCURRENCY — tuned for large builds (200k+ pages)
+  // 14GB heap is allocated; concurrency=10 prevents OOM on full-slice builds
   // ───────────────────────────────────────────────
-  eleventyConfig.setConcurrency(50);
+  eleventyConfig.setConcurrency(10);
 
   // ───────────────────────────────────────────────
   // CUSTOM FILTERS
