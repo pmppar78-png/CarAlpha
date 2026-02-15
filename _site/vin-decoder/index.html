@@ -357,6 +357,22 @@
       100% { transform: translateY(100%); }
     }
 
+    /* === PREFERS-REDUCED-MOTION === */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-sweep { animation: none !important; display: none; }
+      .pulse-dot { animation: none !important; }
+      .ai-btn-glow { animation: none !important; }
+      .shimmer-effect::after { animation: none !important; display: none; }
+      .card-hover:hover { transform: none !important; }
+      .btn-primary:hover { transform: none !important; }
+    }
+
     @keyframes float-up {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -555,6 +571,54 @@
   "operatingSystem": "Any",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "provider": { "@type": "Organization", "name": "Car Alpha", "url": "https://www.caralpha.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a VIN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A VIN (Vehicle Identification Number) is a unique 17-character code assigned to every motor vehicle when it is manufactured. It serves as the vehicle's fingerprint, since no two vehicles in operation have the same VIN. The VIN standard was established in 1981 by the National Highway Traffic Safety Administration (NHTSA)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find my VIN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common locations are the lower-left corner of the dashboard (visible through the windshield), the driver's side door jamb, your vehicle registration card, and your insurance documents. Some vehicles also have the VIN stamped on the engine block or frame rail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this VIN decoder really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Car Alpha's VIN decoder is 100% free with no hidden fees, no account required, and no limits on how many VINs you can decode. We source our data directly from the official NHTSA VPIC database."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the decoded information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our VIN decoder pulls data directly from the official NHTSA Vehicle Product Information Catalog, which is the same database used by law enforcement, insurance companies, and dealerships. The data is as accurate as the information manufacturers report to NHTSA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I decode a VIN for any vehicle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our decoder works for all vehicles manufactured after 1981 that follow the standard 17-character VIN format. This includes cars, trucks, SUVs, vans, motorcycles, and many trailers. Vehicles manufactured before 1981 may have shorter VINs that are not compatible with the NHTSA database."
+      }
+    }
+  ]
 }
 </script>
 
@@ -874,7 +938,7 @@
   
   
 
-<div id="aiOverlay" class="ai-modal-overlay">
+<div id="aiOverlay" class="ai-modal-overlay" role="dialog" aria-modal="true" aria-label="AI Chat Assistant">
   <div class="ai-modal w-full max-w-2xl rounded-2xl shadow-premium flex flex-col carbon-panel" style="max-height: 85vh; border: 1px solid rgba(6,182,212,0.15);">
 
     
@@ -889,7 +953,7 @@
           <div class="text-[11px] text-volt-400/70 font-medium">Recalls &middot; Warranty &middot; Insurance &middot; Lemon Law &middot; Next Steps</div>
         </div>
       </div>
-      <button id="closeAI" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
+      <button id="closeAI" aria-label="Close AI chat" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -951,16 +1015,40 @@
   if (closeAI) {
     closeAI.addEventListener('click', function() {
       aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
     });
   }
 
   aiOverlay.addEventListener('click', function(e) {
-    if (e.target === aiOverlay) aiOverlay.classList.remove('active');
+    if (e.target === aiOverlay) {
+      aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
+    }
   });
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') aiOverlay.classList.remove('active');
+    if (e.key === 'Escape' && aiOverlay.classList.contains('active')) {
+      aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
+    }
   });
+
+  // Focus trap for modal accessibility
+  var modalEl = aiOverlay.querySelector('.ai-modal');
+  if (modalEl) {
+    aiOverlay.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab' || !aiOverlay.classList.contains('active')) return;
+      var focusable = modalEl.querySelectorAll('button, input, [href], [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
 
   function postBubble(container, role, html) {
     var isAI = role === 'ai';

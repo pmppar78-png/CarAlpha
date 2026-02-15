@@ -357,6 +357,22 @@
       100% { transform: translateY(100%); }
     }
 
+    /* === PREFERS-REDUCED-MOTION === */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-sweep { animation: none !important; display: none; }
+      .pulse-dot { animation: none !important; }
+      .ai-btn-glow { animation: none !important; }
+      .shimmer-effect::after { animation: none !important; display: none; }
+      .card-hover:hover { transform: none !important; }
+      .btn-primary:hover { transform: none !important; }
+    }
+
     @keyframes float-up {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -544,6 +560,47 @@
   
   <main id="main-content">
     
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens when a recall is issued?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The manufacturer sends notification letters to registered owners, typically by first-class mail. The letter explains the defect, the potential safety risk, and how to schedule the free repair at an authorized dealership. You can also check for recalls online using your VIN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do recall repairs cost anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. By federal law, manufacturers must remedy safety defects at no charge to vehicle owners. This includes the cost of parts, labor, and any reasonable towing to the dealership. If you already paid for a recall-related repair before the recall was announced, you may be eligible for reimbursement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a time limit to get a recall fixed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most recalls, there is no expiration date. However, tire recalls have a 60-day free remedy period, and child safety seat recalls have different timelines. It is always best to get recall repairs completed as soon as possible for your safety."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I bought a used car with open recalls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recall repairs carry over with the vehicle regardless of ownership changes. If you purchase a used vehicle with open recalls, you are entitled to the same free repair at an authorized dealership. Always check for open recalls before completing a used vehicle purchase."
+      }
+    }
+  ]
+}
+</script>
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -813,7 +870,7 @@
   
   
 
-<div id="aiOverlay" class="ai-modal-overlay">
+<div id="aiOverlay" class="ai-modal-overlay" role="dialog" aria-modal="true" aria-label="AI Chat Assistant">
   <div class="ai-modal w-full max-w-2xl rounded-2xl shadow-premium flex flex-col carbon-panel" style="max-height: 85vh; border: 1px solid rgba(6,182,212,0.15);">
 
     
@@ -828,7 +885,7 @@
           <div class="text-[11px] text-volt-400/70 font-medium">Recalls &middot; Warranty &middot; Insurance &middot; Lemon Law &middot; Next Steps</div>
         </div>
       </div>
-      <button id="closeAI" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
+      <button id="closeAI" aria-label="Close AI chat" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -890,16 +947,40 @@
   if (closeAI) {
     closeAI.addEventListener('click', function() {
       aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
     });
   }
 
   aiOverlay.addEventListener('click', function(e) {
-    if (e.target === aiOverlay) aiOverlay.classList.remove('active');
+    if (e.target === aiOverlay) {
+      aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
+    }
   });
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') aiOverlay.classList.remove('active');
+    if (e.key === 'Escape' && aiOverlay.classList.contains('active')) {
+      aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
+    }
   });
+
+  // Focus trap for modal accessibility
+  var modalEl = aiOverlay.querySelector('.ai-modal');
+  if (modalEl) {
+    aiOverlay.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab' || !aiOverlay.classList.contains('active')) return;
+      var focusable = modalEl.querySelectorAll('button, input, [href], [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
 
   function postBubble(container, role, html) {
     var isAI = role === 'ai';
