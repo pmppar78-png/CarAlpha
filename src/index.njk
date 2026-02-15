@@ -329,12 +329,12 @@ priority: 1.0
 <script>
 (function(){
   var AFFILIATES = {
-    insurance: "https://example.com/aff/insurance?vin={VIN}",
-    warranty:  "https://example.com/aff/warranty?vin={VIN}",
-    loans:     "https://example.com/aff/loans?vin={VIN}",
-    sell:      "https://example.com/aff/sell?vin={VIN}",
-    mechanics: "https://example.com/aff/mechanics?vin={VIN}",
-    lemonlaw:  "https://example.com/aff/lemon?vin={VIN}"
+    insurance: "/go/insurance/?vin={VIN}",
+    warranty:  "/go/warranty/?vin={VIN}",
+    loans:     "/go/loans/?vin={VIN}",
+    sell:      "/go/sell/?vin={VIN}",
+    mechanics: "/go/mechanics/?vin={VIN}",
+    lemonlaw:  "/go/lemon-law/?vin={VIN}"
   };
 
   var vinInput = document.getElementById('vinInput');
