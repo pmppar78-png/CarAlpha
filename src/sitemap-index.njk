@@ -15,24 +15,10 @@ eleventyExcludeFromCollections: true
     <lastmod>2026-02-14</lastmod>
   </sitemap>
 {%- endfor %}
-{%- set msPages = (makeStates | length / 45000) | round(0, "ceil") %}
-{%- for i in range(0, msPages) %}
+{%- set dynPages = (sitemapDynamic | length / 45000) | round(0, "ceil") %}
+{%- for i in range(0, dynPages) %}
   <sitemap>
-    <loc>https://www.caralpha.com/sitemap-makestates-{{ i }}.xml</loc>
-    <lastmod>2026-02-14</lastmod>
-  </sitemap>
-{%- endfor %}
-{%- set mstPages = (modelStates | length / 45000) | round(0, "ceil") %}
-{%- for i in range(0, mstPages) %}
-  <sitemap>
-    <loc>https://www.caralpha.com/sitemap-modelstates-{{ i }}.xml</loc>
-    <lastmod>2026-02-14</lastmod>
-  </sitemap>
-{%- endfor %}
-{%- set mysPages = (modelYearStates | length / 45000) | round(0, "ceil") %}
-{%- for i in range(0, mysPages) %}
-  <sitemap>
-    <loc>https://www.caralpha.com/sitemap-modelyearstates-{{ i }}.xml</loc>
+    <loc>https://www.caralpha.com/sitemap-dynamic-{{ i }}.xml</loc>
     <lastmod>2026-02-14</lastmod>
   </sitemap>
 {%- endfor %}

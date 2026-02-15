@@ -1,8 +1,8 @@
 {
   "slice": 15,
-  "enableMakeStates": true,
-  "enableModelStates": true,
-  "enableModelYearStates": true,
+  "enableMakeStates": false,
+  "enableModelStates": false,
+  "enableModelYearStates": false,
   "slices": {
     "0": ["toyota", "nissan"],
     "1": ["chevrolet", "bmw"],
@@ -20,5 +20,5 @@
     "13": ["fiat", "oldsmobile", "mclaren", "chrysler", "hummer", "alfa-romeo", "bugatti", "maybach", "plymouth", "smart"],
     "14": ["polestar", "rivian", "lucid", "fisker", "delorean"]
   },
-  "notes": "CUMULATIVE slice-based deploys. Each build includes ALL makes from slices 0 through (slice - 1). Incrementing 'slice' adds the next group of makes to the total. With slice=15 (all slices 0-14), the build generates 200k+ pages covering all 60 makes."
+  "notes": "Deep pages (makeStates, modelStates, modelYearStates) are now rendered dynamically via Netlify Edge Functions. The enable flags are set to false so Eleventy no longer generates 200k+ static files. The slices config is retained for reference but is no longer used at build time."
 }

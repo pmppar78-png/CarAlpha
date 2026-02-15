@@ -4,10 +4,10 @@ const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
-  // CONCURRENCY — tuned for large builds (200k+ pages)
-  // 14GB heap is allocated; concurrency=10 prevents OOM on full-slice builds
+  // CONCURRENCY — deep pages now render via edge functions,
+  // so the static build only produces top-level SEO pages (<1k files)
   // ───────────────────────────────────────────────
-  eleventyConfig.setConcurrency(10);
+  eleventyConfig.setConcurrency(20);
 
   // ───────────────────────────────────────────────
   // CUSTOM FILTERS
