@@ -1,5 +1,5 @@
 [build]
-  command = "rm -rf _site && node ./scripts/build-probe.js > buildlog.txt 2>&1 || (tail -n 200 buildlog.txt && exit 1)"
+  command = "echo \"NODE_OPTIONS=$NODE_OPTIONS\" && node -e \"console.log('heap', require('v8').getHeapStatistics().heap_size_limit/1024/1024, 'MB')\" && rm -rf _site && npx @11ty/eleventy"
   publish = "_site"
 
 [build.environment]
