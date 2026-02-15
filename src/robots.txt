@@ -1,5 +1,5 @@
 # Car Alpha — Vehicle Intelligence Platform
-# https://caralpha.netlify.app
+# https://www.caralpha.com
 
 User-agent: *
 Allow: /
