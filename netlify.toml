@@ -1,5 +1,5 @@
 [build]
-  command = "rm -rf _site && npx @11ty/eleventy"
+  command = "rm -rf _site && node ./scripts/build-probe.js > buildlog.txt 2>&1 || (tail -n 200 buildlog.txt && exit 1)"
   publish = "_site"
 
 [build.environment]
