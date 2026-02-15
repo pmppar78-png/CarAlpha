@@ -457,6 +457,34 @@
     {{ jsonLd | jsonStringify | safe }}
   </script>
   {% endif %}
+
+  {# ── Site-wide Organization Schema ── #}
+  {% if page.url != "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Car Alpha",
+    "url": "https://www.caralpha.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.caralpha.com/assets/images/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Automotive data intelligence platform providing free VIN decoding, recall alerts, and vehicle ownership guidance powered by official NHTSA data.",
+    "foundingDate": "2024",
+    "areaServed": "US",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "info@caralpha.com",
+      "url": "https://www.caralpha.com/contact/"
+    },
+    "sameAs": []
+  }
+  </script>
+  {% endif %}
 </head>
 <body class="min-h-screen carbon-bg text-gray-200 antialiased {{ bodyClass or '' }}">
 

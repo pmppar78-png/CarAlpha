@@ -1,0 +1,111 @@
+---
+layout: layouts/base.njk
+title: "About Car Alpha — Vehicle Intelligence Platform"
+description: "Car Alpha is an automotive data intelligence platform that decodes VINs, surfaces recall alerts, and connects vehicle owners with insurance, warranty, and repair resources. Built on official NHTSA data. Free for consumers."
+permalink: /about/
+date: 2026-02-15
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "Organization"
+  name: "Car Alpha"
+  alternateName: "CarAlpha"
+  url: "https://www.caralpha.com"
+  logo:
+    "@type": "ImageObject"
+    url: "https://www.caralpha.com/assets/images/logo.png"
+    width: 512
+    height: 512
+  description: "Automotive data intelligence platform providing free VIN decoding, recall alerts, and vehicle ownership guidance powered by official NHTSA data."
+  foundingDate: "2024"
+  areaServed: "US"
+  knowsAbout:
+    - "Vehicle Identification Numbers"
+    - "NHTSA Safety Recalls"
+    - "Automotive Insurance"
+    - "Vehicle Warranty"
+    - "Lemon Law"
+    - "Vehicle History"
+  contactPoint:
+    "@type": "ContactPoint"
+    contactType: "customer service"
+    email: "info@caralpha.com"
+    url: "https://www.caralpha.com/contact/"
+---
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "About Car Alpha" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-3xl mx-auto px-4 pt-12 pb-20">
+
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-volt-500/15 bg-volt-500/[0.04] text-xs font-semibold text-volt-400 mb-5 uppercase tracking-widest">About</div>
+      <h1 class="text-3xl md:text-4xl lg:text-[2.75rem] font-black text-white tracking-tight leading-tight mb-4">Automotive Data Intelligence. <span class="text-gradient">Free for Consumers.</span></h1>
+      <p class="text-lg text-silver-400 leading-relaxed">Car Alpha is a vehicle intelligence platform built to give every car owner, buyer, and seller access to the same data that professionals use &mdash; without cost, without accounts, without friction.</p>
+    </div>
+
+    <div class="prose-dark">
+
+      <h2>What Car Alpha Does</h2>
+      <p>Car Alpha decodes Vehicle Identification Numbers using the official NHTSA VPIC database and cross-references decoded vehicles against the federal recall database in real time. We surface the data that matters: make, model, year, engine, trim, body type, drive configuration, plant of manufacture, and open safety recalls &mdash; all from a single 17-character input.</p>
+      <p>Beyond raw data, we provide structured vehicle ownership intelligence across all 50 US states: <a href="/states/">state-specific insurance requirements</a>, lemon law protections, registration processes, and EV incentive programs. This information is compiled from official state sources and presented in a consumer-friendly format.</p>
+      <p>We also built one of the few browser-based VIN scanners available on the open web. Using camera-based optical character recognition with frame consensus and check digit validation, the scanner lets users <a href="/learn/how-vin-decoding-works/#ocr-scanning">read VINs directly from the vehicle</a> without installing any app.</p>
+
+      <h2>Why We Built This</h2>
+      <p>The automotive data landscape is fragmented and extractive. Consumers researching a vehicle purchase are funneled through paywalled history reports, lead-generation insurance forms, and gated dealer inventories before they can access basic vehicle facts that are publicly available in federal databases. We believe that is wrong.</p>
+      <p>Every piece of data in the NHTSA VPIC and Recalls databases is taxpayer-funded public information. VIN decoding, recall checking, and safety verification should not require a paid subscription or personal data exchange. Car Alpha makes these tools free, fast, and frictionless.</p>
+
+      <h2>How We Make Money</h2>
+      <p>Car Alpha earns revenue exclusively through affiliate partnerships. When a user decodes a VIN or researches a vehicle, we present optional next steps: comparing insurance rates, exploring warranty coverage, getting repair estimates, checking vehicle history, or reviewing loan offers. If a user clicks through to one of these partner services and takes action, we earn a commission.</p>
+      <p>This model keeps Car Alpha free for consumers while maintaining sustainability. Critically:</p>
+      <ul>
+        <li>We never gate data behind affiliate links. VIN decoding, recall data, and all educational content are always free.</li>
+        <li>Affiliate links are clearly labeled and disclosed on every page, in compliance with FTC guidelines (16 CFR Part 255).</li>
+        <li>Editorial recommendations are independent of affiliate commissions. See our <a href="/editorial-standards/">Editorial Standards</a> for the full policy.</li>
+      </ul>
+
+      <h2>Our Data Foundation</h2>
+      <p>Everything on Car Alpha is built on verifiable data sources:</p>
+      <div class="grid sm:grid-cols-2 gap-4 my-6">
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-xs font-semibold text-volt-400 uppercase tracking-wider mb-2">VIN Specifications</div>
+          <div class="text-sm text-silver-400">NHTSA VPIC (Vehicle Product Information Catalog) &mdash; real-time API, 140+ fields per VIN</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-xs font-semibold text-volt-400 uppercase tracking-wider mb-2">Safety Recalls</div>
+          <div class="text-sm text-silver-400">NHTSA Office of Defects Investigation &mdash; real-time API, every US recall on record</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-xs font-semibold text-volt-400 uppercase tracking-wider mb-2">State Regulations</div>
+          <div class="text-sm text-silver-400">Official state DMV, insurance commissions, and AG offices &mdash; periodically reviewed</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-xs font-semibold text-volt-400 uppercase tracking-wider mb-2">VIN Scanner</div>
+          <div class="text-sm text-silver-400">Client-side OCR via Tesseract.js WebAssembly &mdash; ISO check digit validation, zero server transmission</div>
+        </div>
+      </div>
+
+      <h2>Platform Coverage</h2>
+      <p>Car Alpha provides data and guidance for:</p>
+      <ul>
+        <li><strong>213,000+ indexed pages</strong> covering vehicle makes, models, model years, and state-specific ownership guides</li>
+        <li><strong>50+ vehicle manufacturers</strong> from mainstream brands to luxury and specialty marques</li>
+        <li><strong>3,500+ model-year combinations</strong> with full NHTSA specification data</li>
+        <li><strong>All 50 US states</strong> with insurance, lemon law, registration, and EV incentive coverage</li>
+        <li><strong>Original editorial content</strong> covering VIN education, recall awareness, insurance guidance, and ownership best practices</li>
+      </ul>
+
+      <h2>Technical Architecture</h2>
+      <p>Car Alpha is built on a hybrid static and edge-rendered architecture. Core content pages are statically generated at build time for maximum performance. High-volume dynamic pages (vehicle + state combinations) are rendered at the edge via Netlify Edge Functions using precompiled data, with CDN caching for sub-second response times. The result is a platform that scales to handle millions of page views with no database dependency and no external API calls at request time for content pages.</p>
+      <p>The VIN decoder and recall checker query NHTSA APIs client-side, ensuring real-time data accuracy. The VIN scanner runs entirely in the browser, with no server-side processing of camera data.</p>
+
+      <h2>Contact</h2>
+      <p>For corrections, data accuracy reports, editorial inquiries, or partnership discussions:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:info@caralpha.com">info@caralpha.com</a></li>
+        <li><strong>Editorial Standards:</strong> <a href="/editorial-standards/">Read our editorial policy</a></li>
+        <li><strong>Affiliate Disclosure:</strong> <a href="/affiliate-disclosure/">View full disclosure</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
