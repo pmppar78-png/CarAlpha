@@ -1148,5 +1148,28 @@
     "registrationNotes": "Wyoming charges registration fees based on the vehicle's fair market value and county mills. A 5% use tax applies to vehicle purchases. No state income tax.",
     "titleFee": "$15",
     "plateFee": "$5"
+  },
+  {
+    "name": "Washington DC",
+    "slug": "washington-dc",
+    "abbreviation": "DC",
+    "capital": "Washington",
+    "region": "Mid-Atlantic",
+    "description": "Washington DC has some of the most comprehensive vehicle ownership regulations in the nation. As the nation's capital, DC requires liability insurance, annual vehicle inspections, and offers generous incentives for electric vehicle adoption as part of its sustainability goals.",
+    "insuranceMinimum": "25/50/10",
+    "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
+    "averageInsuranceCost": 1876,
+    "hasLemonLaw": true,
+    "lemonLawSummary": "Washington DC's Lemon Law covers new vehicles with substantial defects within 2 years or 18,000 miles. After four repair attempts or 30 cumulative days out of service, the consumer can demand a refund or replacement from the manufacturer.",
+    "hasEmissions": true,
+    "emissionsDetails": "DC requires biennial emissions inspections for most vehicles 4 or more model years old. OBD-II testing is performed at DC DMV inspection stations. Electric and hybrid vehicles may be exempt from testing.",
+    "hasSafetyInspection": true,
+    "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles in DC. Inspections cover brakes, steering, tires, lights, horn, mirrors, exhaust, and windshield. Cost is typically $35 at authorized inspection stations.",
+    "evIncentives": true,
+    "evIncentiveDetails": "Washington DC offers a reduced excise tax rate for electric vehicles, free residential parking permits for EVs, and access to an expanding public charging network. DC also participates in the Regional Greenhouse Gas Initiative and offers rebates for home charging station installation.",
+    "registrationFeeRange": "$72 - $155 based on weight",
+    "registrationNotes": "DC charges registration fees based on vehicle weight, ranging from $72 to $155 for most passenger vehicles. A 6% excise tax applies to vehicle purchases. Parking permits are required for on-street parking in most neighborhoods.",
+    "titleFee": "$26",
+    "plateFee": "$10"
   }
 ]

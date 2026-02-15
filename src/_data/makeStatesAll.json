@@ -41998,5 +41998,605 @@
     "averageInsuranceCost": 1105,
     "hasLemonLaw": true,
     "evIncentives": false
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "makeCountry": "Germany",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "makeCountry": "Germany",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "makeCountry": "Germany",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "makeCountry": "South Korea",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "makeCountry": "South Korea",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "makeCountry": "Germany",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "makeCountry": "Japan",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "makeCountry": "Japan",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "makeCountry": "Japan",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "makeCountry": "Sweden",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "makeCountry": "United States",
+    "makeType": "truck",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "makeCountry": "United States",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "makeCountry": "United States",
+    "makeType": "truck",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "makeCountry": "United States",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "makeCountry": "United States",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "makeCountry": "United States",
+    "makeType": "ev",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "rivian",
+    "makeName": "Rivian",
+    "makeCountry": "United States",
+    "makeType": "ev",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "lucid",
+    "makeName": "Lucid",
+    "makeCountry": "United States",
+    "makeType": "ev",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "makeCountry": "Germany",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "makeCountry": "United Kingdom",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "makeCountry": "United Kingdom",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "makeCountry": "South Korea",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "makeCountry": "Italy",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "makeCountry": "Italy",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "makeCountry": "United Kingdom",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "makeCountry": "Sweden",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "makeCountry": "United States",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "makeCountry": "United States",
+    "makeType": "truck",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "makeCountry": "United States",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "makeCountry": "Japan",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "makeCountry": "Japan",
+    "makeType": "truck",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "smart",
+    "makeName": "Smart",
+    "makeCountry": "Germany",
+    "makeType": "mainstream",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "makeCountry": "Sweden",
+    "makeType": "ev",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "fisker",
+    "makeName": "Fisker",
+    "makeCountry": "United States",
+    "makeType": "ev",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "makeCountry": "United Kingdom",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "makeCountry": "Italy",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "makeCountry": "United Kingdom",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "makeCountry": "United Kingdom",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "makeCountry": "United Kingdom",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "makeCountry": "Italy",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "makeCountry": "Italy",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "makeCountry": "United Kingdom",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "makeCountry": "France",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "makeCountry": "Germany",
+    "makeType": "luxury",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
+  },
+  {
+    "makeSlug": "delorean",
+    "makeName": "DeLorean",
+    "makeCountry": "United States",
+    "makeType": "performance",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC",
+    "stateRegion": "Mid-Atlantic"
   }
 ]

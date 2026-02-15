@@ -262648,5 +262648,2894 @@
     "averageInsuranceCost": 1105,
     "hasLemonLaw": true,
     "evIncentives": false
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "camry",
+    "modelName": "Camry",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "corolla",
+    "modelName": "Corolla",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "rav4",
+    "modelName": "RAV4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "highlander",
+    "modelName": "Highlander",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "tacoma",
+    "modelName": "Tacoma",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "civic",
+    "modelName": "Civic",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "accord",
+    "modelName": "Accord",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "cr-v",
+    "modelName": "CR-V",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "f-150",
+    "modelName": "F-150",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "explorer",
+    "modelName": "Explorer",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "mustang",
+    "modelName": "Mustang",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "silverado",
+    "modelName": "Silverado",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "equinox",
+    "modelName": "Equinox",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "3-series",
+    "modelName": "3 Series",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "x3",
+    "modelName": "X3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "c-class",
+    "modelName": "C-Class",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "gle",
+    "modelName": "GLE",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "a4",
+    "modelName": "A4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "q5",
+    "modelName": "Q5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "altima",
+    "modelName": "Altima",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "rogue",
+    "modelName": "Rogue",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "elantra",
+    "modelName": "Elantra",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "tucson",
+    "modelName": "Tucson",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "santa-fe",
+    "modelName": "Santa Fe",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "sonata",
+    "modelName": "Sonata",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "kona",
+    "modelName": "Kona",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "palisade",
+    "modelName": "Palisade",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "venue",
+    "modelName": "Venue",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hyundai",
+    "makeName": "Hyundai",
+    "modelSlug": "ioniq-5",
+    "modelName": "IONIQ 5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "sorento",
+    "modelName": "Sorento",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "telluride",
+    "modelName": "Telluride",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "sportage",
+    "modelName": "Sportage",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "forte",
+    "modelName": "Forte",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "soul",
+    "modelName": "Soul",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "k5",
+    "modelName": "K5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "seltos",
+    "modelName": "Seltos",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "kia",
+    "makeName": "Kia",
+    "modelSlug": "ev6",
+    "modelName": "EV6",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "modelSlug": "model-3",
+    "modelName": "Model 3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "modelSlug": "model-y",
+    "modelName": "Model Y",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "wrangler",
+    "modelName": "Wrangler",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "grand-cherokee",
+    "modelName": "Grand Cherokee",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "modelSlug": "1500",
+    "modelName": "1500",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "outback",
+    "modelName": "Outback",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "cx-5",
+    "modelName": "CX-5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "rx",
+    "modelName": "RX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "jetta",
+    "modelName": "Jetta",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "tiguan",
+    "modelName": "Tiguan",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "atlas",
+    "modelName": "Atlas",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "taos",
+    "modelName": "Taos",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "golf",
+    "modelName": "Golf",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "id-4",
+    "modelName": "ID.4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volkswagen",
+    "makeName": "Volkswagen",
+    "modelSlug": "atlas-cross-sport",
+    "modelName": "Atlas Cross Sport",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "modelSlug": "cayenne",
+    "modelName": "Cayenne",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "modelSlug": "911",
+    "modelName": "911",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "xc60",
+    "modelName": "XC60",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "modelSlug": "range-rover",
+    "modelName": "Range Rover",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "escalade",
+    "modelName": "Escalade",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "modelSlug": "navigator",
+    "modelName": "Navigator",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "tundra",
+    "modelName": "Tundra",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "4runner",
+    "modelName": "4Runner",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "toyota",
+    "makeName": "Toyota",
+    "modelSlug": "prius",
+    "modelName": "Prius",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "pilot",
+    "modelName": "Pilot",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "odyssey",
+    "modelName": "Odyssey",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "hr-v",
+    "modelName": "HR-V",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "honda",
+    "makeName": "Honda",
+    "modelSlug": "ridgeline",
+    "modelName": "Ridgeline",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "escape",
+    "modelName": "Escape",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "bronco",
+    "modelName": "Bronco",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "ranger",
+    "modelName": "Ranger",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "expedition",
+    "modelName": "Expedition",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "modelSlug": "edge",
+    "modelName": "Edge",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "tahoe",
+    "modelName": "Tahoe",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "malibu",
+    "modelName": "Malibu",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "traverse",
+    "modelName": "Traverse",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "colorado",
+    "modelName": "Colorado",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "camaro",
+    "modelName": "Camaro",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "modelSlug": "corvette",
+    "modelName": "Corvette",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "forester",
+    "modelName": "Forester",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "crosstrek",
+    "modelName": "Crosstrek",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "impreza",
+    "modelName": "Impreza",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "wrx",
+    "modelName": "WRX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "legacy",
+    "modelName": "Legacy",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "ascent",
+    "modelName": "Ascent",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "subaru",
+    "makeName": "Subaru",
+    "modelSlug": "brz",
+    "modelName": "BRZ",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "modelSlug": "tlx",
+    "modelName": "TLX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "modelSlug": "mdx",
+    "modelName": "MDX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "modelSlug": "rdx",
+    "modelName": "RDX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "modelSlug": "integra",
+    "modelName": "Integra",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "modelSlug": "charger",
+    "modelName": "Charger",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "modelSlug": "challenger",
+    "modelName": "Challenger",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "modelSlug": "durango",
+    "modelName": "Durango",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "dodge",
+    "makeName": "Dodge",
+    "modelSlug": "hornet",
+    "modelName": "Hornet",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "modelSlug": "sierra",
+    "modelName": "Sierra",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "modelSlug": "yukon",
+    "modelName": "Yukon",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "modelSlug": "terrain",
+    "modelName": "Terrain",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "modelSlug": "acadia",
+    "modelName": "Acadia",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "modelSlug": "canyon",
+    "modelName": "Canyon",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "modelSlug": "gv70",
+    "modelName": "GV70",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "modelSlug": "gv80",
+    "modelName": "GV80",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "modelSlug": "g70",
+    "modelName": "G70",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "modelSlug": "g80",
+    "modelName": "G80",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "modelSlug": "outlander",
+    "modelName": "Outlander",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "modelSlug": "eclipse-cross",
+    "modelName": "Eclipse Cross",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "modelSlug": "pacifica",
+    "modelName": "Pacifica",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "modelSlug": "300",
+    "modelName": "300",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "modelSlug": "enclave",
+    "modelName": "Enclave",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "modelSlug": "encore-gx",
+    "modelName": "Encore GX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "modelSlug": "envision",
+    "modelName": "Envision",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "modelSlug": "q50",
+    "modelName": "Q50",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "modelSlug": "qx60",
+    "modelName": "QX60",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "modelSlug": "qx80",
+    "modelName": "QX80",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "modelSlug": "qx50",
+    "modelName": "QX50",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "modelSlug": "cooper",
+    "modelName": "Cooper",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "modelSlug": "countryman",
+    "modelName": "Countryman",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "modelSlug": "f-pace",
+    "modelName": "F-Pace",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "modelSlug": "f-type",
+    "modelName": "F-Type",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "modelSlug": "e-pace",
+    "modelName": "E-Pace",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "modelSlug": "giulia",
+    "modelName": "Giulia",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "modelSlug": "stelvio",
+    "modelName": "Stelvio",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "modelSlug": "tonale",
+    "modelName": "Tonale",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "modelSlug": "ghibli",
+    "modelName": "Ghibli",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "modelSlug": "levante",
+    "modelName": "Levante",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "modelSlug": "grecale",
+    "modelName": "Grecale",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "modelSlug": "500x",
+    "modelName": "500X",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "modelSlug": "500e",
+    "modelName": "500e",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "modelSlug": "polestar-2",
+    "modelName": "Polestar 2",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "modelSlug": "polestar-3",
+    "modelName": "Polestar 3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rivian",
+    "makeName": "Rivian",
+    "modelSlug": "r1t",
+    "modelName": "R1T",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rivian",
+    "makeName": "Rivian",
+    "modelSlug": "r1s",
+    "modelName": "R1S",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lucid",
+    "makeName": "Lucid",
+    "modelSlug": "air",
+    "modelName": "Air",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lucid",
+    "makeName": "Lucid",
+    "modelSlug": "gravity",
+    "modelName": "Gravity",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "modelSlug": "emira",
+    "modelName": "Emira",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "modelSlug": "eletre",
+    "modelName": "Eletre",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "modelSlug": "continental-gt",
+    "modelName": "Continental GT",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "modelSlug": "bentayga",
+    "modelName": "Bentayga",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "modelSlug": "cullinan",
+    "modelName": "Cullinan",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "modelSlug": "ghost",
+    "modelName": "Ghost",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "modelSlug": "spectre",
+    "modelName": "Spectre",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "modelSlug": "urus",
+    "modelName": "Urus",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "modelSlug": "huracan",
+    "modelName": "Huracan",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "modelSlug": "revuelto",
+    "modelName": "Revuelto",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "modelSlug": "roma",
+    "modelName": "Roma",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "modelSlug": "296-gtb",
+    "modelName": "296 GTB",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "modelSlug": "purosangue",
+    "modelName": "Purosangue",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "modelSlug": "750s",
+    "modelName": "750S",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "modelSlug": "artura",
+    "modelName": "Artura",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "modelSlug": "dbx",
+    "modelName": "DBX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "modelSlug": "db12",
+    "modelName": "DB12",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "modelSlug": "vantage",
+    "modelName": "Vantage",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "modelSlug": "chiron",
+    "modelName": "Chiron",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "modelSlug": "tourbillon",
+    "modelName": "Tourbillon",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "modelSlug": "s-class-maybach",
+    "modelName": "S-Class Maybach",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "modelSlug": "gls-maybach",
+    "modelName": "GLS Maybach",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "modelSlug": "9-3",
+    "modelName": "9-3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "modelSlug": "9-5",
+    "modelName": "9-5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "modelSlug": "9-2x",
+    "modelName": "9-2X",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "modelSlug": "9-7x",
+    "modelName": "9-7X",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saab",
+    "makeName": "Saab",
+    "modelSlug": "900",
+    "modelName": "900",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "modelSlug": "aura",
+    "modelName": "Aura",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "modelSlug": "vue",
+    "modelName": "Vue",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "modelSlug": "outlook",
+    "modelName": "Outlook",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "modelSlug": "ion",
+    "modelName": "Ion",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "modelSlug": "sky",
+    "modelName": "Sky",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "saturn",
+    "makeName": "Saturn",
+    "modelSlug": "sl",
+    "modelName": "SL",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "g6",
+    "modelName": "G6",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "grand-am",
+    "modelName": "Grand Am",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "grand-prix",
+    "modelName": "Grand Prix",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "gto",
+    "modelName": "GTO",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "firebird",
+    "modelName": "Firebird",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "solstice",
+    "modelName": "Solstice",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "pontiac",
+    "makeName": "Pontiac",
+    "modelSlug": "vibe",
+    "modelName": "Vibe",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "modelSlug": "cutlass",
+    "modelName": "Cutlass",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "modelSlug": "alero",
+    "modelName": "Alero",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "modelSlug": "intrigue",
+    "modelName": "Intrigue",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "modelSlug": "bravada",
+    "modelName": "Bravada",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "modelSlug": "aurora",
+    "modelName": "Aurora",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "modelSlug": "grand-marquis",
+    "modelName": "Grand Marquis",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "modelSlug": "sable",
+    "modelName": "Sable",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "modelSlug": "mountaineer",
+    "modelName": "Mountaineer",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "modelSlug": "mariner",
+    "modelName": "Mariner",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "modelSlug": "milan",
+    "modelName": "Milan",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercury",
+    "makeName": "Mercury",
+    "modelSlug": "cougar",
+    "modelName": "Cougar",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "modelSlug": "h2",
+    "modelName": "H2",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "modelSlug": "h3",
+    "modelName": "H3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "hummer",
+    "makeName": "Hummer",
+    "modelSlug": "h1",
+    "modelName": "H1",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "modelSlug": "neon",
+    "modelName": "Neon",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "modelSlug": "voyager",
+    "modelName": "Voyager",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "modelSlug": "prowler",
+    "modelName": "Prowler",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "modelSlug": "breeze",
+    "modelName": "Breeze",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "modelSlug": "tc",
+    "modelName": "tC",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "modelSlug": "xb",
+    "modelName": "xB",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "modelSlug": "fr-s",
+    "modelName": "FR-S",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "modelSlug": "xd",
+    "modelName": "xD",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "modelSlug": "im",
+    "modelName": "iM",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "modelSlug": "grand-vitara",
+    "modelName": "Grand Vitara",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "modelSlug": "sx4",
+    "modelName": "SX4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "modelSlug": "kizashi",
+    "modelName": "Kizashi",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "modelSlug": "xl-7",
+    "modelName": "XL-7",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "modelSlug": "rodeo",
+    "modelName": "Rodeo",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "modelSlug": "trooper",
+    "modelName": "Trooper",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "modelSlug": "ascender",
+    "modelName": "Ascender",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "modelSlug": "axiom",
+    "modelName": "Axiom",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "modelSlug": "vehicross",
+    "modelName": "VehiCROSS",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "smart",
+    "makeName": "Smart",
+    "modelSlug": "fortwo",
+    "modelName": "Fortwo",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "smart",
+    "makeName": "Smart",
+    "modelSlug": "forfour",
+    "modelName": "Forfour",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "fisker",
+    "makeName": "Fisker",
+    "modelSlug": "ocean",
+    "modelName": "Ocean",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "xt5",
+    "modelName": "XT5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "ct5",
+    "modelName": "CT5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "xt4",
+    "modelName": "XT4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "xt6",
+    "modelName": "XT6",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "ct4",
+    "modelName": "CT4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "cadillac",
+    "makeName": "Cadillac",
+    "modelSlug": "lyriq",
+    "modelName": "Lyriq",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "es",
+    "modelName": "ES",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "is",
+    "modelName": "IS",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "nx",
+    "modelName": "NX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "gx",
+    "modelName": "GX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "lx",
+    "modelName": "LX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lexus",
+    "makeName": "Lexus",
+    "modelSlug": "ux",
+    "modelName": "UX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "mazda3",
+    "modelName": "Mazda3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "cx-50",
+    "modelName": "CX-50",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "cx-30",
+    "modelName": "CX-30",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "cx-90",
+    "modelName": "CX-90",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "mx-5-miata",
+    "modelName": "MX-5 Miata",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mazda",
+    "makeName": "Mazda",
+    "modelSlug": "cx-9",
+    "modelName": "CX-9",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "xc90",
+    "modelName": "XC90",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "xc40",
+    "modelName": "XC40",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "s60",
+    "modelName": "S60",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "s90",
+    "modelName": "S90",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "v60",
+    "modelName": "V60",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "volvo",
+    "makeName": "Volvo",
+    "modelSlug": "c40",
+    "modelName": "C40",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "modelSlug": "phantom",
+    "modelName": "Phantom",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "modelSlug": "wraith",
+    "modelName": "Wraith",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "rolls-royce",
+    "makeName": "Rolls-Royce",
+    "modelSlug": "dawn",
+    "modelName": "Dawn",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "modelSlug": "aventador",
+    "modelName": "Aventador",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lamborghini",
+    "makeName": "Lamborghini",
+    "modelSlug": "gallardo",
+    "modelName": "Gallardo",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "modelSlug": "sf90",
+    "modelName": "SF90",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "modelSlug": "f8-tributo",
+    "modelName": "F8 Tributo",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ferrari",
+    "makeName": "Ferrari",
+    "modelSlug": "812",
+    "modelName": "812",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "modelSlug": "720s",
+    "modelName": "720S",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "modelSlug": "gt",
+    "modelName": "GT",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "modelSlug": "dbs",
+    "modelName": "DBS",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "modelSlug": "db11",
+    "modelName": "DB11",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "modelSlug": "valkyrie",
+    "modelName": "Valkyrie",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "modelSlug": "flying-spur",
+    "modelName": "Flying Spur",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "modelSlug": "veyron",
+    "modelName": "Veyron",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "modelSlug": "mistral",
+    "modelName": "Mistral",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "modelSlug": "quattroporte",
+    "modelName": "Quattroporte",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "modelSlug": "mc20",
+    "modelName": "MC20",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "modelSlug": "clubman",
+    "modelName": "Clubman",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mini",
+    "makeName": "Mini",
+    "modelSlug": "cooper-se",
+    "modelName": "Cooper SE",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "modelSlug": "xe",
+    "modelName": "XE",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jaguar",
+    "makeName": "Jaguar",
+    "modelSlug": "xf",
+    "modelName": "XF",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "modelSlug": "500",
+    "modelName": "500",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "polestar",
+    "makeName": "Polestar",
+    "modelSlug": "polestar-4",
+    "modelName": "Polestar 4",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "modelSlug": "mirage",
+    "modelName": "Mirage",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mitsubishi",
+    "makeName": "Mitsubishi",
+    "modelSlug": "outlander-sport",
+    "modelName": "Outlander Sport",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "modelSlug": "evora",
+    "modelName": "Evora",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "modelSlug": "elise",
+    "modelName": "Elise",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "modelSlug": "exige",
+    "modelName": "Exige",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maybach",
+    "makeName": "Maybach",
+    "modelSlug": "eqs-maybach",
+    "modelName": "EQS Maybach",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "maserati",
+    "makeName": "Maserati",
+    "modelSlug": "granturismo",
+    "modelName": "GranTurismo",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "cherokee",
+    "modelName": "Cherokee",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "compass",
+    "modelName": "Compass",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "renegade",
+    "modelName": "Renegade",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "gladiator",
+    "modelName": "Gladiator",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "jeep",
+    "makeName": "Jeep",
+    "modelSlug": "wagoneer",
+    "modelName": "Wagoneer",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "modelSlug": "range-rover-sport",
+    "modelName": "Range Rover Sport",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "modelSlug": "defender",
+    "modelName": "Defender",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "modelSlug": "discovery",
+    "modelName": "Discovery",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "modelSlug": "evoque",
+    "modelName": "Range Rover Evoque",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "land-rover",
+    "makeName": "Land Rover",
+    "modelSlug": "velar",
+    "modelName": "Range Rover Velar",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "modelSlug": "aviator",
+    "modelName": "Aviator",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "modelSlug": "corsair",
+    "modelName": "Corsair",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lincoln",
+    "makeName": "Lincoln",
+    "modelSlug": "nautilus",
+    "modelName": "Nautilus",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "modelSlug": "model-s",
+    "modelName": "Model S",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "modelSlug": "model-x",
+    "modelName": "Model X",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "tesla",
+    "makeName": "Tesla",
+    "modelSlug": "cybertruck",
+    "modelName": "Cybertruck",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "modelSlug": "macan",
+    "modelName": "Macan",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "modelSlug": "taycan",
+    "modelName": "Taycan",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "modelSlug": "panamera",
+    "modelName": "Panamera",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "porsche",
+    "makeName": "Porsche",
+    "modelSlug": "718",
+    "modelName": "718",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "modelSlug": "q60",
+    "modelName": "Q60",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "infiniti",
+    "makeName": "Infiniti",
+    "modelSlug": "qx55",
+    "modelName": "QX55",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "modelSlug": "encore",
+    "modelName": "Encore",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "modelSlug": "2500",
+    "modelName": "2500",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "modelSlug": "3500",
+    "modelName": "3500",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "ram",
+    "makeName": "Ram",
+    "modelSlug": "promaster",
+    "modelName": "ProMaster",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "modelSlug": "g90",
+    "modelName": "G90",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "genesis",
+    "makeName": "Genesis",
+    "modelSlug": "gv60",
+    "modelName": "GV60",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "5-series",
+    "modelName": "5 Series",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "x5",
+    "modelName": "X5",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "x1",
+    "modelName": "X1",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "7-series",
+    "modelName": "7 Series",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "modelSlug": "4-series",
+    "modelName": "4 Series",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "e-class",
+    "modelName": "E-Class",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "glc",
+    "modelName": "GLC",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "s-class",
+    "modelName": "S-Class",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "gla",
+    "modelName": "GLA",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mercedes-benz",
+    "makeName": "Mercedes-Benz",
+    "modelSlug": "a-class",
+    "modelName": "A-Class",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "q7",
+    "modelName": "Q7",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "a6",
+    "modelName": "A6",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "q3",
+    "modelName": "Q3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "a3",
+    "modelName": "A3",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "modelSlug": "e-tron",
+    "modelName": "e-tron",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "pathfinder",
+    "modelName": "Pathfinder",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "sentra",
+    "modelName": "Sentra",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "frontier",
+    "modelName": "Frontier",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "murano",
+    "modelName": "Murano",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "kicks",
+    "modelName": "Kicks",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "nissan",
+    "makeName": "Nissan",
+    "modelSlug": "versa",
+    "modelName": "Versa",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "acura",
+    "makeName": "Acura",
+    "modelSlug": "nsx",
+    "modelName": "NSX",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "gmc",
+    "makeName": "GMC",
+    "modelSlug": "hummer-ev",
+    "modelName": "Hummer EV",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "oldsmobile",
+    "makeName": "Oldsmobile",
+    "modelSlug": "442",
+    "modelName": "442",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "modelSlug": "barracuda",
+    "modelName": "Barracuda",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "plymouth",
+    "makeName": "Plymouth",
+    "modelSlug": "road-runner",
+    "modelName": "Road Runner",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "scion",
+    "makeName": "Scion",
+    "modelSlug": "iq",
+    "modelName": "iQ",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "modelSlug": "swift",
+    "modelName": "Swift",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "suzuki",
+    "makeName": "Suzuki",
+    "modelSlug": "samurai",
+    "modelName": "Samurai",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "isuzu",
+    "makeName": "Isuzu",
+    "modelSlug": "hombre",
+    "modelName": "Hombre",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "lotus",
+    "makeName": "Lotus",
+    "modelSlug": "evija",
+    "modelName": "Evija",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "mclaren",
+    "makeName": "McLaren",
+    "modelSlug": "765lt",
+    "modelName": "765LT",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
+  },
+  {
+    "makeSlug": "delorean",
+    "makeName": "DeLorean",
+    "modelSlug": "dmc-12",
+    "modelName": "DMC-12",
+    "stateSlug": "washington-dc",
+    "stateName": "Washington DC",
+    "stateAbbreviation": "DC"
   }
 ]
