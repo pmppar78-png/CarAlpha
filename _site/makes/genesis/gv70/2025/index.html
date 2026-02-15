@@ -357,6 +357,22 @@
       100% { transform: translateY(100%); }
     }
 
+    /* === PREFERS-REDUCED-MOTION === */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-sweep { animation: none !important; display: none; }
+      .pulse-dot { animation: none !important; }
+      .ai-btn-glow { animation: none !important; }
+      .shimmer-effect::after { animation: none !important; display: none; }
+      .card-hover:hover { transform: none !important; }
+      .btn-primary:hover { transform: none !important; }
+    }
+
     @keyframes float-up {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -661,22 +677,22 @@
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">2025 Genesis GV70 Ownership Resources</h2>
       <div class="grid sm:grid-cols-2 gap-4">
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Insurance</h3>
+        <a href="/go/insurance/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Insurance</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Compare insurance rates for the 2025 Genesis GV70 from top carriers. Your 2025 model year, trim level, and safety features all affect your premium.</p>
-        </div>
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Warranty</h3>
+        </a>
+        <a href="/go/warranty/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Warranty</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Extended warranty plans can protect your 2025 GV70 against costly repairs. Coverage typically includes powertrain and major electrical components.</p>
-        </div>
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Financing</h3>
+        </a>
+        <a href="/go/loans/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Financing</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Pre-qualify for new auto loan offers for the 2025 Genesis GV70. Newer model years typically qualify for the lowest APR rates.</p>
-        </div>
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Selling</h3>
+        </a>
+        <a href="/go/sell/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Selling</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Get instant offer quotes for your 2025 Genesis GV70 from multiple buyers. Online platforms often beat dealer trade-in values by 10–20%.</p>
-        </div>
+        </a>
       </div>
     </div>
 
@@ -8302,7 +8318,7 @@
   
   
 
-<div id="aiOverlay" class="ai-modal-overlay">
+<div id="aiOverlay" class="ai-modal-overlay" role="dialog" aria-modal="true" aria-label="AI Chat Assistant">
   <div class="ai-modal w-full max-w-2xl rounded-2xl shadow-premium flex flex-col carbon-panel" style="max-height: 85vh; border: 1px solid rgba(6,182,212,0.15);">
 
     
@@ -8317,7 +8333,7 @@
           <div class="text-[11px] text-volt-400/70 font-medium">Recalls &middot; Warranty &middot; Insurance &middot; Lemon Law &middot; Next Steps</div>
         </div>
       </div>
-      <button id="closeAI" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
+      <button id="closeAI" aria-label="Close AI chat" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -8379,16 +8395,40 @@
   if (closeAI) {
     closeAI.addEventListener('click', function() {
       aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
     });
   }
 
   aiOverlay.addEventListener('click', function(e) {
-    if (e.target === aiOverlay) aiOverlay.classList.remove('active');
+    if (e.target === aiOverlay) {
+      aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
+    }
   });
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') aiOverlay.classList.remove('active');
+    if (e.key === 'Escape' && aiOverlay.classList.contains('active')) {
+      aiOverlay.classList.remove('active');
+      if (openAI) openAI.focus();
+    }
   });
+
+  // Focus trap for modal accessibility
+  var modalEl = aiOverlay.querySelector('.ai-modal');
+  if (modalEl) {
+    aiOverlay.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab' || !aiOverlay.classList.contains('active')) return;
+      var focusable = modalEl.querySelectorAll('button, input, [href], [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
 
   function postBubble(container, role, html) {
     var isAI = role === 'ai';

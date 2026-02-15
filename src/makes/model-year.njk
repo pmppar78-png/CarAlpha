@@ -80,22 +80,22 @@ eleventyComputed:
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} Ownership Resources</h2>
       <div class="grid sm:grid-cols-2 gap-4">
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Insurance</h3>
+        <a href="/go/insurance/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Insurance</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Compare insurance rates for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} from top carriers. Your {{ entry.year }} model year, trim level, and safety features all affect your premium.</p>
-        </div>
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Warranty</h3>
+        </a>
+        <a href="/go/warranty/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Warranty</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Extended warranty plans can protect your {{ entry.year }} {{ entry.name }} against costly repairs{% if entry.year < 2022 %}, especially as the factory warranty has likely expired{% endif %}. Coverage typically includes powertrain and major electrical components.</p>
-        </div>
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Financing</h3>
+        </a>
+        <a href="/go/loans/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Financing</h3>
           <p class="text-xs text-silver-400 leading-relaxed">{% if entry.year >= 2024 %}Pre-qualify for new auto loan offers for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Newer model years typically qualify for the lowest APR rates.{% else %}Explore refinancing options for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Refinancing could lower your monthly payment or reduce your interest rate.{% endif %}</p>
-        </div>
-        <div class="glass-card metallic-border rounded-xl p-5 carbon-panel">
-          <h3 class="font-bold text-white text-sm mb-2">Selling</h3>
+        </a>
+        <a href="/go/sell/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+          <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Selling</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Get instant offer quotes for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} from multiple buyers. Online platforms often beat dealer trade-in values by 10–20%.</p>
-        </div>
+        </a>
       </div>
     </div>
 

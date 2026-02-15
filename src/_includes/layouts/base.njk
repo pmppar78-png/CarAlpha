@@ -357,6 +357,22 @@
       100% { transform: translateY(100%); }
     }
 
+    /* === PREFERS-REDUCED-MOTION === */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-sweep { animation: none !important; display: none; }
+      .pulse-dot { animation: none !important; }
+      .ai-btn-glow { animation: none !important; }
+      .shimmer-effect::after { animation: none !important; display: none; }
+      .card-hover:hover { transform: none !important; }
+      .btn-primary:hover { transform: none !important; }
+    }
+
     @keyframes float-up {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
