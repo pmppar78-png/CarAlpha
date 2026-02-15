@@ -8652,6 +8652,110 @@
     "name": "F-150",
     "makeSlug": "ford",
     "makeName": "Ford",
+    "year": 2009,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2008,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2007,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2006,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2005,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2004,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2003,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2002,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2001,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 2000,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 1999,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 1998,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "year": 1997,
+    "bodyType": "Truck"
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
     "bodyType": "Truck",
     "year": 1996
   },
