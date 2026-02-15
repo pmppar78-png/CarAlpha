@@ -4,9 +4,10 @@ const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
-  // CONCURRENCY — keep at 1 to prevent OOM/EAGAIN on Netlify builds
+  // CONCURRENCY — higher concurrency for large builds (200k+ pages)
+  // 14GB heap is allocated; concurrency=50 balances speed vs memory
   // ───────────────────────────────────────────────
-  eleventyConfig.setConcurrency(1);
+  eleventyConfig.setConcurrency(50);
 
   // ───────────────────────────────────────────────
   // CUSTOM FILTERS

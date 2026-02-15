@@ -20,5 +20,5 @@
     "13": ["fiat", "oldsmobile", "mclaren", "chrysler", "hummer", "alfa-romeo", "bugatti", "maybach", "plymouth", "smart"],
     "14": ["polestar", "rivian", "lucid", "fisker", "delorean"]
   },
-  "notes": "Slice-based deploys. Each slice generates 15k-25k pages (base 3,675 + state pages for the slice's makes). Slices are NOT cumulative — each deploy only includes makes from the current slice. Increment 'slice' and redeploy to build the next group. 15 total slices cover all 60 makes."
+  "notes": "CUMULATIVE slice-based deploys. Each build includes ALL makes from slices 0 through (slice - 1). Incrementing 'slice' adds the next group of makes to the total. With slice=15 (all slices 0-14), the build generates 200k+ pages covering all 60 makes."
 }

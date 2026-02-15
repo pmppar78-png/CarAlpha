@@ -26446,5 +26446,2085 @@
     "makeName": "Fisker",
     "year": 2023,
     "bodyType": "SUV"
+  },
+  {
+    "slug": "giulia",
+    "name": "Giulia",
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "bodyType": "Sedan",
+    "year": 2017
+  },
+  {
+    "slug": "giulia",
+    "name": "Giulia",
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "bodyType": "Sedan",
+    "year": 2018
+  },
+  {
+    "slug": "stelvio",
+    "name": "Stelvio",
+    "makeSlug": "alfa-romeo",
+    "makeName": "Alfa Romeo",
+    "bodyType": "SUV",
+    "year": 2018
+  },
+  {
+    "slug": "vantage",
+    "name": "Vantage",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "bodyType": "Coupe/Convertible",
+    "year": 2019
+  },
+  {
+    "slug": "vantage",
+    "name": "Vantage",
+    "makeSlug": "aston-martin",
+    "makeName": "Aston Martin",
+    "bodyType": "Coupe/Convertible",
+    "year": 2020
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 1996
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 1997
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 1998
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 1999
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2000
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2001
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2002
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2003
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2004
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2005
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2006
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2007
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2008
+  },
+  {
+    "slug": "a4",
+    "name": "A4",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "Sedan",
+    "year": 2009
+  },
+  {
+    "slug": "q5",
+    "name": "Q5",
+    "makeSlug": "audi",
+    "makeName": "Audi",
+    "bodyType": "SUV",
+    "year": 2009
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2004
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2005
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2006
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2007
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2008
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2009
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2010
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2011
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2012
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2013
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2014
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2015
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2016
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2017
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2018
+  },
+  {
+    "slug": "continental-gt",
+    "name": "Continental GT",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "Coupe/Convertible",
+    "year": 2019
+  },
+  {
+    "slug": "bentayga",
+    "name": "Bentayga",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "SUV",
+    "year": 2017
+  },
+  {
+    "slug": "bentayga",
+    "name": "Bentayga",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "SUV",
+    "year": 2018
+  },
+  {
+    "slug": "bentayga",
+    "name": "Bentayga",
+    "makeSlug": "bentley",
+    "makeName": "Bentley",
+    "bodyType": "SUV",
+    "year": 2019
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1975
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1976
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1977
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1978
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1979
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1980
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1981
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1982
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1983
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1984
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1985
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1986
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1987
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1988
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1989
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1990
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1991
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1992
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1993
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1994
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1995
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1996
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1997
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1998
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 1999
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2000
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2001
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2002
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2003
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2004
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2005
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2006
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2007
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2008
+  },
+  {
+    "slug": "3-series",
+    "name": "3 Series",
+    "makeSlug": "bmw",
+    "makeName": "BMW",
+    "bodyType": "Sedan",
+    "year": 2009
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "bodyType": "Coupe",
+    "year": 2017
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "bodyType": "Coupe",
+    "year": 2018
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "bodyType": "Coupe",
+    "year": 2019
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "bodyType": "Coupe",
+    "year": 2020
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "makeSlug": "bugatti",
+    "makeName": "Bugatti",
+    "bodyType": "Coupe",
+    "year": 2021
+  },
+  {
+    "slug": "enclave",
+    "name": "Enclave",
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "bodyType": "SUV",
+    "year": 2008
+  },
+  {
+    "slug": "enclave",
+    "name": "Enclave",
+    "makeSlug": "buick",
+    "makeName": "Buick",
+    "bodyType": "SUV",
+    "year": 2009
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 1995
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 1996
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 1997
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 1998
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 1999
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2000
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2001
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2002
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2003
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2004
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2005
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2006
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2007
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2008
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2009
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2010
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2011
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2012
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2013
+  },
+  {
+    "slug": "tahoe",
+    "name": "Tahoe",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2014
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 1997
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 1998
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 1999
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2000
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2001
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2002
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2003
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2004
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2005
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2006
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2007
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2008
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2009
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2010
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2011
+  },
+  {
+    "slug": "malibu",
+    "name": "Malibu",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Sedan",
+    "year": 2012
+  },
+  {
+    "slug": "traverse",
+    "name": "Traverse",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2009
+  },
+  {
+    "slug": "traverse",
+    "name": "Traverse",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2010
+  },
+  {
+    "slug": "traverse",
+    "name": "Traverse",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2011
+  },
+  {
+    "slug": "traverse",
+    "name": "Traverse",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2012
+  },
+  {
+    "slug": "traverse",
+    "name": "Traverse",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2013
+  },
+  {
+    "slug": "traverse",
+    "name": "Traverse",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "SUV",
+    "year": 2014
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2004
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2005
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2006
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2007
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2008
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2009
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2010
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2011
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2012
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2013
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Truck",
+    "year": 2014
+  },
+  {
+    "slug": "camaro",
+    "name": "Camaro",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2010
+  },
+  {
+    "slug": "camaro",
+    "name": "Camaro",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2011
+  },
+  {
+    "slug": "camaro",
+    "name": "Camaro",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2012
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1953
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1954
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1955
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1956
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1957
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1958
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1959
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1960
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1961
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1962
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1963
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1964
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1965
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1966
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1967
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1968
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1969
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1970
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1971
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1972
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1973
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1974
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1975
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1976
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1977
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1978
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1979
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1980
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1981
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1982
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1983
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1984
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1985
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1986
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1987
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1988
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1989
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1990
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1991
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1992
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1993
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1994
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1995
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1996
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1997
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1998
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 1999
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2000
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2001
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2002
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2003
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2004
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2005
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2006
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2007
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2008
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2009
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2010
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2011
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2012
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2013
+  },
+  {
+    "slug": "corvette",
+    "name": "Corvette",
+    "makeSlug": "chevrolet",
+    "makeName": "Chevrolet",
+    "bodyType": "Coupe/Convertible",
+    "year": 2014
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2005
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2006
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2007
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2008
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2009
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2010
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2011
+  },
+  {
+    "slug": "300",
+    "name": "300",
+    "makeSlug": "chrysler",
+    "makeName": "Chrysler",
+    "bodyType": "Sedan",
+    "year": 2012
+  },
+  {
+    "slug": "500x",
+    "name": "500X",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "bodyType": "SUV",
+    "year": 2016
+  },
+  {
+    "slug": "500x",
+    "name": "500X",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "bodyType": "SUV",
+    "year": 2017
+  },
+  {
+    "slug": "500x",
+    "name": "500X",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "bodyType": "SUV",
+    "year": 2018
+  },
+  {
+    "slug": "500x",
+    "name": "500X",
+    "makeSlug": "fiat",
+    "makeName": "Fiat",
+    "bodyType": "SUV",
+    "year": 2019
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1948
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1949
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1950
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1951
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1952
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1953
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1954
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1955
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1956
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1957
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1958
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1959
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1960
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1961
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1962
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1963
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1964
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1965
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1966
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1967
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1968
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1969
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1970
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1971
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1972
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1973
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1974
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1975
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1976
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1977
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1978
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1979
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1980
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1981
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1982
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1983
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1984
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1985
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1986
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1987
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1988
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1989
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1990
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1991
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1992
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1993
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1994
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1995
+  },
+  {
+    "slug": "f-150",
+    "name": "F-150",
+    "makeSlug": "ford",
+    "makeName": "Ford",
+    "bodyType": "Truck",
+    "year": 1996
   }
 ]
