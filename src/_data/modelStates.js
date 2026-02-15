@@ -1,6 +1,7 @@
-// Generates batch-gated modelStates data at build time.
-// Reads flags.json to determine which makes are active for the current batch.
-// Filters modelStatesAll.json to only include models belonging to active makes.
+// Generates slice-gated modelStates data at build time.
+// Reads flags.json to determine which makes are in the current slice.
+// Filters modelStatesAll.json to only include models belonging to the active slice's makes.
+// Slices are NOT cumulative — only the current slice's makes are included.
 
 const allModelStates = require("./modelStatesAll.json");
 const flags = require("./flags.json");
@@ -10,18 +11,14 @@ module.exports = function () {
     return [];
   }
 
-  // Collect all make slugs up to and including the current batch
-  const currentBatch = flags.batch || 0;
-  const activeMakeSet = new Set();
-  for (let i = 0; i <= currentBatch; i++) {
-    const batchMakes = flags.batches[String(i)];
-    if (batchMakes) {
-      batchMakes.forEach(function (s) { activeMakeSet.add(s); });
-    }
+  // Get makes for the current slice only (not cumulative)
+  const currentSlice = flags.slice != null ? flags.slice : 0;
+  const sliceMakes = flags.slices[String(currentSlice)];
+  if (!sliceMakes || !sliceMakes.length) {
+    return [];
   }
+  const activeMakeSet = new Set(sliceMakes);
 
-  // Apply modelBatchSize gating: limit total model-state entries
-  // based on active makes (all models for active makes are included)
   return allModelStates.filter(function (entry) {
     return activeMakeSet.has(entry.makeSlug);
   });

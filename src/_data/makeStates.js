@@ -1,6 +1,7 @@
-// Generates batch-gated makeStates data at build time.
-// Reads flags.json to determine which makes are active for the current batch.
-// Filters makeStatesAll.json to only include active makes.
+// Generates slice-gated makeStates data at build time.
+// Reads flags.json to determine which makes are in the current slice.
+// Filters makeStatesAll.json to only include makes from the active slice.
+// Slices are NOT cumulative — only the current slice's makes are included.
 
 const allMakeStates = require("./makeStatesAll.json");
 const flags = require("./flags.json");
@@ -10,35 +11,15 @@ module.exports = function () {
     return [];
   }
 
-  // Collect all make slugs up to and including the current batch
-  const currentBatch = flags.batch || 0;
-  const activeMakeSet = new Set();
-  for (let i = 0; i <= currentBatch; i++) {
-    const batchMakes = flags.batches[String(i)];
-    if (batchMakes) {
-      batchMakes.forEach(function (s) { activeMakeSet.add(s); });
-    }
+  // Get makes for the current slice only (not cumulative)
+  const currentSlice = flags.slice != null ? flags.slice : 0;
+  const sliceMakes = flags.slices[String(currentSlice)];
+  if (!sliceMakes || !sliceMakes.length) {
+    return [];
   }
-
-  // Apply makeBatchSize gating: limit to (batch+1)*makeBatchSize makes
-  const makeBatchSize = flags.makeBatchSize || 5;
-  const maxMakes = (currentBatch + 1) * makeBatchSize;
-
-  // Get ordered active makes, capped at maxMakes
-  const activeMakes = [];
-  for (let i = 0; i <= currentBatch; i++) {
-    const batchMakes = flags.batches[String(i)];
-    if (batchMakes) {
-      for (var j = 0; j < batchMakes.length; j++) {
-        if (activeMakes.length < maxMakes) {
-          activeMakes.push(batchMakes[j]);
-        }
-      }
-    }
-  }
-  const finalMakeSet = new Set(activeMakes);
+  const activeMakeSet = new Set(sliceMakes);
 
   return allMakeStates.filter(function (entry) {
-    return finalMakeSet.has(entry.makeSlug);
+    return activeMakeSet.has(entry.makeSlug);
   });
 };
