@@ -1,25 +1,29 @@
 {
-  "batch": 2,
+  "batch": 3,
   "enableMakeStates": true,
   "enableModelStates": true,
   "enableModelYearStates": true,
   "makeBatchSize": 5,
   "modelBatchSize": 50,
   "myMakesPerBatch": 5,
+  "heavyMakes": ["ford", "chevrolet", "toyota", "honda", "nissan", "mercedes-benz", "tesla"],
   "batches": {
     "0": ["acura", "alfa-romeo"],
     "1": ["aston-martin", "audi", "bentley", "bmw", "buick"],
     "2": ["cadillac", "chevrolet", "chrysler", "dodge", "ferrari"],
-    "3": ["fiat", "fisker", "ford", "genesis", "gmc"],
-    "4": ["honda", "hyundai", "infiniti", "jaguar", "jeep"],
-    "5": ["kia", "lamborghini", "land-rover", "lexus", "lincoln"],
-    "6": ["lucid", "maserati", "maybach", "mazda", "mclaren"],
-    "7": ["mercedes-benz", "mini", "mitsubishi", "nissan", "plymouth"],
-    "8": ["polestar", "pontiac", "porsche", "ram", "rivian"],
-    "9": ["rolls-royce", "saab", "saturn", "smart", "subaru"],
-    "10": ["suzuki", "tesla", "toyota", "volkswagen", "volvo"],
-    "11": ["oldsmobile", "mercury", "hummer", "scion", "isuzu"],
-    "12": ["lotus", "bugatti", "delorean"]
+    "3": ["ford", "fiat", "fisker"],
+    "4": ["genesis", "gmc", "infiniti", "jaguar", "jeep"],
+    "5": ["honda", "hyundai", "kia"],
+    "6": ["lamborghini", "land-rover", "lexus", "lincoln", "lucid"],
+    "7": ["mercedes-benz", "maserati", "maybach"],
+    "8": ["mazda", "mclaren", "mini", "mitsubishi", "plymouth"],
+    "9": ["nissan", "polestar", "pontiac"],
+    "10": ["porsche", "ram", "rivian", "rolls-royce", "saab"],
+    "11": ["saturn", "smart", "subaru", "suzuki"],
+    "12": ["tesla", "volkswagen"],
+    "13": ["toyota", "volvo"],
+    "14": ["oldsmobile", "mercury", "hummer", "scion", "isuzu"],
+    "15": ["lotus", "bugatti", "delorean"]
   },
-  "notes": "Batch 0 = validation (2 makes). All engines gated by batch number and active make set. makeBatchSize controls makeStates paging, modelBatchSize controls modelStates paging, myMakesPerBatch controls modelYearStates paging. Increase batch to roll out more makes cumulatively."
+  "notes": "Batch 0 = validation (2 makes). Heavy makes (ford, chevrolet, toyota, honda, nissan, mercedes-benz, tesla) are isolated in smaller batches to avoid OOM. Each heavy-make batch has at most 1 heavy make + 2 light makes. Batches are cumulative. Increase batch to roll out more makes."
 }
