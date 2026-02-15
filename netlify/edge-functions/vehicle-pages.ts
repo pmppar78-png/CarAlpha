@@ -151,6 +151,9 @@ function layoutShell(title: string, description: string, canonicalPath: string, 
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .animate-in { animation: fadeInUp 0.6s ease forwards; }
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Car Alpha","url":"https://www.caralpha.com","logo":{"@type":"ImageObject","url":"https://www.caralpha.com/assets/images/logo.png","width":512,"height":512},"description":"Automotive data intelligence platform providing free VIN decoding, recall alerts, and vehicle ownership guidance powered by official NHTSA data.","foundingDate":"2024","areaServed":"US","contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"info@caralpha.com","url":"https://www.caralpha.com/contact/"}}
+  </script>
 </head>
 <body class="min-h-screen carbon-bg text-gray-200 antialiased">
   ${headerHTML()}
@@ -206,9 +209,9 @@ function footerHTML(): string {
         <div class="text-xs text-silver-500">&copy; <span data-year></span> Car Alpha.<br/>All rights reserved.</div>
       </div>
       <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Tools</h4><ul class="space-y-2.5 text-sm"><li><a href="/tools/vin-decoder/" class="text-silver-500 hover:text-volt-400 transition-colors">VIN Decoder</a></li><li><a href="/recalls/" class="text-silver-500 hover:text-volt-400 transition-colors">Recall Lookup</a></li><li><a href="/tools/compare/" class="text-silver-500 hover:text-volt-400 transition-colors">Compare Vehicles</a></li></ul></div>
-      <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Resources</h4><ul class="space-y-2.5 text-sm"><li><a href="/guides/" class="text-silver-500 hover:text-volt-400 transition-colors">Buying Guides</a></li><li><a href="/learn/" class="text-silver-500 hover:text-volt-400 transition-colors">Learn</a></li><li><a href="/blog/" class="text-silver-500 hover:text-volt-400 transition-colors">Blog</a></li><li><a href="/states/" class="text-silver-500 hover:text-volt-400 transition-colors">State Laws</a></li><li><a href="/makes/" class="text-silver-500 hover:text-volt-400 transition-colors">All Makes</a></li></ul></div>
+      <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Resources</h4><ul class="space-y-2.5 text-sm"><li><a href="/guides/" class="text-silver-500 hover:text-volt-400 transition-colors">Buying Guides</a></li><li><a href="/learn/" class="text-silver-500 hover:text-volt-400 transition-colors">Learn</a></li><li><a href="/learn/how-vin-decoding-works/" class="text-silver-500 hover:text-volt-400 transition-colors">How VIN Decoding Works</a></li><li><a href="/blog/" class="text-silver-500 hover:text-volt-400 transition-colors">Blog</a></li><li><a href="/states/" class="text-silver-500 hover:text-volt-400 transition-colors">State Laws</a></li><li><a href="/makes/" class="text-silver-500 hover:text-volt-400 transition-colors">All Makes</a></li></ul></div>
       <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Legal</h4><ul class="space-y-2.5 text-sm"><li><a href="/privacy/" class="text-silver-500 hover:text-volt-400 transition-colors">Privacy Policy</a></li><li><a href="/terms/" class="text-silver-500 hover:text-volt-400 transition-colors">Terms of Service</a></li><li><a href="/disclaimer/" class="text-silver-500 hover:text-volt-400 transition-colors">Disclaimer</a></li><li><a href="/affiliate-disclosure/" class="text-silver-500 hover:text-volt-400 transition-colors">Affiliate Disclosure</a></li></ul></div>
-      <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Company</h4><ul class="space-y-2.5 text-sm"><li><a href="/about/" class="text-silver-500 hover:text-volt-400 transition-colors">About Us</a></li><li><a href="/contact/" class="text-silver-500 hover:text-volt-400 transition-colors">Contact</a></li><li><a href="/sitemap.xml" class="text-silver-500 hover:text-volt-400 transition-colors">Sitemap</a></li></ul></div>
+      <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Company</h4><ul class="space-y-2.5 text-sm"><li><a href="/about/" class="text-silver-500 hover:text-volt-400 transition-colors">About Us</a></li><li><a href="/editorial-standards/" class="text-silver-500 hover:text-volt-400 transition-colors">Editorial Standards</a></li><li><a href="/contact/" class="text-silver-500 hover:text-volt-400 transition-colors">Contact</a></li><li><a href="/sitemap.xml" class="text-silver-500 hover:text-volt-400 transition-colors">Sitemap</a></li></ul></div>
     </div>
     <div class="divider mb-8"></div>
     <div class="space-y-4">
@@ -310,6 +313,21 @@ function toolLinks(): string {
 }
 
 // ---------------------------------------------------------------------------
+// Authority links (shared internal linking to pillar pages)
+// ---------------------------------------------------------------------------
+function authorityLinks(): string {
+  return `<div class="mt-10 mb-10">
+  <h2 class="text-lg font-bold text-white mb-4">VIN &amp; Vehicle Resources</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
+    <a href="/learn/how-vin-decoding-works/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group"><div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">How VIN Decoding Works</div><div class="text-[10px] text-silver-500 mt-1">Technical deep dive into VIN standards</div></a>
+    <a href="/about/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group"><div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">About Car Alpha</div><div class="text-[10px] text-silver-500 mt-1">Our data sources &amp; mission</div></a>
+    <a href="/editorial-standards/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group"><div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Editorial Standards</div><div class="text-[10px] text-silver-500 mt-1">Data accuracy &amp; methodology</div></a>
+    <a href="/learn/what-is-a-vin/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group"><div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">What is a VIN?</div><div class="text-[10px] text-silver-500 mt-1">Complete VIN guide for consumers</div></a>
+  </div>
+</div>`;
+}
+
+// ---------------------------------------------------------------------------
 // State ownership topics card (shared)
 // ---------------------------------------------------------------------------
 function stateOwnershipTopics(stateSlug: string, stateName: string, hasEvIncentives: boolean): string {
@@ -386,6 +404,7 @@ ${vinDecoderCard(`${year} ${makeName} ${modelName}`)}
 ${stateOwnershipTopics(stateSlug, stateName, evIncentives)}
 <div class="mb-10"><h2 class="text-xl font-black text-white mb-6">Other ${e(modelName)} Years in ${e(stateName)}</h2><div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 gap-2">${otherYears.map(yr => `<a href="/makes/${makeSlug}/${modelSlug}/${yr}/in/${stateSlug}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center"><div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">${yr}</div></a>`).join("")}</div></div>
 ${toolLinks()}
+${authorityLinks()}
 <div class="mt-12 glass-card metallic-border rounded-2xl p-8 carbon-panel text-center"><h3 class="text-xl font-bold text-white mb-3">Compare ${year} ${e(modelName)} Insurance Rates in ${e(stateName)}</h3><p class="text-silver-400 mb-6 max-w-lg mx-auto">See how much you could save on ${year} ${e(makeName)} ${e(modelName)} insurance by comparing rates from top carriers in ${e(stateName)}.</p><a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">Get Free ${year} ${e(modelName)} Insurance Quotes in ${e(stateAbbr)} <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a><p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p></div>
 </div></section>${vinDecoderScript()}`;
 
@@ -437,6 +456,7 @@ ${stateOwnershipTopics(stateSlug, stateName, evIncentives)}
 <div class="mb-10"><h2 class="text-xl font-black text-white mb-6">${e(modelName)} in Nearby States</h2><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">${regionStates.map(s => `<a href="/makes/${makeSlug}/${modelSlug}/in/${s.slug}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center"><div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">${e(s.name)}</div><div class="text-[10px] text-silver-500 mt-1">${e(s.abbreviation)}</div></a>`).join("")}</div></div>
 <div class="mb-10"><h2 class="text-xl font-black text-white mb-6">Other ${e(makeName)} Models in ${e(stateName)}</h2><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">${otherModels.map(m => `<a href="/makes/${makeSlug}/${m.slug}/in/${stateSlug}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center"><div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">${e(m.name)}</div><div class="text-[10px] text-silver-500 mt-1">${e(m.bodyType)}</div></a>`).join("")}</div></div>
 ${toolLinks()}
+${authorityLinks()}
 <div class="mt-12 glass-card metallic-border rounded-2xl p-8 carbon-panel text-center"><h3 class="text-xl font-bold text-white mb-3">Compare ${e(modelName)} Insurance Rates in ${e(stateName)}</h3><p class="text-silver-400 mb-6 max-w-lg mx-auto">See how much you could save on ${e(makeName)} ${e(modelName)} insurance by comparing rates from top carriers in ${e(stateName)}.</p><a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">Get Free ${e(modelName)} Insurance Quotes in ${e(stateAbbr)} <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a><p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p></div>
 </div></section>${vinDecoderScript()}`;
 
@@ -484,6 +504,7 @@ ${stateOwnershipTopics(stateSlug, stateName, evIncentives)}
 <div class="mb-10"><h2 class="text-xl font-black text-white mb-6">${e(makeName)} in Nearby States</h2><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">${regionStates.map(s => `<a href="/makes/${makeSlug}/in/${s.slug}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center"><div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">${e(s.name)}</div><div class="text-[10px] text-silver-500 mt-1">${e(s.abbreviation)}</div></a>`).join("")}</div></div>
 ${vinDecoderCard(makeName)}
 ${toolLinks()}
+${authorityLinks()}
 <div class="mt-12 glass-card metallic-border rounded-2xl p-8 carbon-panel text-center"><h3 class="text-xl font-bold text-white mb-3">Compare ${e(makeName)} Insurance Rates in ${e(stateName)}</h3><p class="text-silver-400 mb-6 max-w-lg mx-auto">See how much you could save on ${e(makeName)} insurance by comparing rates from top carriers in ${e(stateName)}.</p><a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">Get Free ${e(makeName)} Insurance Quotes in ${e(stateAbbr)} <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a><p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p></div>
 </div></section>${vinDecoderScript()}`;
 
