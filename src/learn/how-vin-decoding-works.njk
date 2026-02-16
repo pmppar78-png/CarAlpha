@@ -166,7 +166,7 @@ jsonLd:
         <li>The products are summed.</li>
         <li>The sum is divided by 11. The remainder (modulo 11) is the check digit. If the remainder is 10, the check digit is represented as &ldquo;X&rdquo;.</li>
       </ol>
-      <p>This algorithm guarantees that any single-character alteration to the VIN will produce a different check digit, immediately exposing the modification. Our <a href="/tools/vin-decoder/">VIN Decoder tool</a> validates the check digit before querying the NHTSA database, instantly rejecting invalid VINs. The <a href="/tools/vin-scanner/">VIN Scanner</a> uses this same validation across multiple camera frames to ensure OCR accuracy.</p>
+      <p>This algorithm guarantees that any single-character alteration to the VIN will produce a different check digit, immediately exposing the modification. Our <a href="/vin-decoder/">VIN Decoder tool</a> validates the check digit before querying the NHTSA database, instantly rejecting invalid VINs. The <a href="/vin-decoder/">VIN Scanner</a> uses this same validation across multiple camera frames to ensure OCR accuracy.</p>
 
       <h2 id="vis">6. Vehicle Identifier Section (Positions 10&ndash;17)</h2>
       <p><strong>Position 10: Model Year.</strong> The model year is encoded using a 30-year rotating cycle of letters and digits. The cycle uses A&ndash;Y (excluding I, O, Q, U, and Z) followed by 1&ndash;9, then repeats. Key mappings include: N=2022, P=2023, R=2024, S=2025, T=2026, V=2027. Because the cycle repeats every 30 years, a &ldquo;T&rdquo; could technically mean 2026 or 1996. Context from the other VIN characters and the VPIC database resolves this ambiguity.</p>
@@ -176,7 +176,7 @@ jsonLd:
       <h2 id="nhtsa">7. The NHTSA VPIC Database</h2>
       <p>The Vehicle Product Information Catalog (VPIC) is the authoritative federal database maintained by the National Highway Traffic Safety Administration. Every manufacturer selling vehicles in the United States is required by law to submit its VIN coding scheme to VPIC. This database is the foundation of all legitimate VIN decoding services.</p>
       <p>VPIC contains manufacturer-submitted data for every VIN pattern: the model name, body class, engine configuration, displacement, number of cylinders, fuel type, drivetrain, transmission style, restraint system, GVWR, and dozens of additional attributes. When a VIN is decoded, the system matches the VIN's WMI and VDS characters against this registered data to produce a complete vehicle specification sheet.</p>
-      <p>NHTSA makes the VPIC data publicly available through its API. Car Alpha's <a href="/tools/vin-decoder/">VIN Decoder</a> queries this API in real time, ensuring that decoded results reflect the latest manufacturer submissions. The API returns over 140 data fields per VIN, including make, model, year, trim, engine specs, body dimensions, safety features, and plant information.</p>
+      <p>NHTSA makes the VPIC data publicly available through its API. Car Alpha's <a href="/vin-decoder/">VIN Decoder</a> queries this API in real time, ensuring that decoded results reflect the latest manufacturer submissions. The API returns over 140 data fields per VIN, including make, model, year, trim, engine specs, body dimensions, safety features, and plant information.</p>
       <p>It is important to understand that VPIC data describes what the manufacturer intended to build for a given VIN pattern. It does not reflect aftermarket modifications, damage history, title status, or ownership records. For those data points, a separate vehicle history report from a service like <a href="/go/carfax/" rel="nofollow sponsored noopener" target="_blank">Carfax</a> is necessary.</p>
 
       <h2 id="decode-process">8. The Decoding Process Step by Step</h2>
@@ -229,7 +229,7 @@ jsonLd:
       <hr>
 
       <h2>Put It Into Practice</h2>
-      <p>Now that you understand how VIN decoding works at a technical level, try it yourself. Enter any 17-character VIN into Car Alpha's <a href="/tools/vin-decoder/">free VIN Decoder</a> to see the full decoded specification set and recall status. No account required, no data stored.</p>
+      <p>Now that you understand how VIN decoding works at a technical level, try it yourself. Enter any 17-character VIN into Car Alpha's <a href="/vin-decoder/">free VIN Decoder</a> to see the full decoded specification set and recall status. No account required, no data stored.</p>
       <p>For additional learning, explore our complete VIN education series:</p>
       <ul>
         <li><a href="/learn/what-is-a-vin/">What is a VIN?</a> &mdash; Foundation concepts and why VINs matter</li>
@@ -242,7 +242,7 @@ jsonLd:
 
     {# ── CTA ── #}
     <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 justify-center">
-      <a href="/tools/vin-decoder/" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base inline-flex items-center gap-2">
+      <a href="/vin-decoder/" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base inline-flex items-center gap-2">
         Decode a VIN Now
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
       </a>
