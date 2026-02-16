@@ -16,6 +16,7 @@ const AFFILIATES = {
   mechanics: "/go/mechanics/?ref={{REF}}&vin={{VIN}}",
   "lemon-law": "/go/lemon-law/?ref={{REF}}&state={{STATE}}",
   "ev-charger": "/go/ev-charger/?ref={{REF}}",
+  carfax: "/go/carfax/?ref={{REF}}&vin={{VIN}}",
 };
 
 function affiliateUrl(key, opts = {}) {
@@ -220,14 +221,19 @@ function renderActions(vin, decoded, recallCount) {
     { label: "Sell or Get Instant Offer", key: "sell", desc: "See what you could get right now.", icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/>' },
     { label: "Find Repair Estimates", key: "repair", desc: "Fair prices from trusted mechanics.", icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0l2.12-2.12M6.32 10.07L2.25 14.14M21.75 12a9.75 9.75 0 11-19.5 0 9.75 9.75 0 0119.5 0z"/>' },
     { label: "Lemon Law Help", key: "lemon-law", desc: "If repairs pile up, know your rights.", icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"/>' },
+    { label: "Get Full Vehicle History", key: "carfax", desc: "Accident, title, and ownership records.", icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>' },
+    { label: "Find EV Charging", key: "ev-charger", desc: "Locate chargers near you.", icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>', evOnly: true },
   ];
+
+  const isEV = (decoded.FuelTypePrimary || "").toLowerCase().includes("electric");
+  const filteredActions = actions.filter((a) => !a.evOnly || isEV);
 
   card.innerHTML = `
     <div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel">
       <div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recommended Next Steps</h3></div>
       <div class="px-6 py-5">
         <div class="grid sm:grid-cols-2 gap-3">
-          ${actions.map((a) => `
+          ${filteredActions.map((a) => `
             <a target="_blank" rel="nofollow sponsored noopener" href="${affiliateUrl(a.key, { vin })}"
                class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-volt-500/30 hover:bg-volt-600/[0.04] transition-all group">
               <svg class="w-5 h-5 text-volt-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">${a.icon}</svg>
@@ -325,6 +331,8 @@ async function handleAIChat(inputEl, chatContainer) {
       else if (lower.includes("sell") || lower.includes("trade")) response += "<br>" + affiliateCTA("Get Instant Offer", "sell", vehicleContext.vin);
       else if (lower.includes("repair") || lower.includes("mechanic")) response += "<br>" + affiliateCTA("Find Repair Estimates", "repair", vehicleContext.vin);
       else if (lower.includes("lemon")) response += "<br>" + affiliateCTA("Lemon Law Help", "lemon-law", vehicleContext.vin);
+      else if (lower.includes("ev") || lower.includes("electric") || lower.includes("charg")) response += "<br>" + affiliateCTA("Find EV Charging Stations", "ev-charger", vehicleContext.vin);
+      else if (lower.includes("history") || lower.includes("carfax") || lower.includes("accident") || lower.includes("title check")) response += "<br>" + affiliateCTA("Get Full Vehicle History", "carfax", vehicleContext.vin);
 
       postBubble(chatContainer, "ai", response);
       chatHistory.push({ role: "user", content: text });
@@ -365,7 +373,11 @@ function localAnswer(q) {
     return `Instant-offer marketplaces can beat dealer trade-ins. ${affiliateCTA("Get an instant offer", "sell", c.vin)}`;
   if (query.includes("lemon"))
     return `If repeated repairs affect safety or drivability, you may have remedies under state lemon laws. ${affiliateCTA("Check lemon-law options", "lemon-law", c.vin)}`;
-  return `I can help with: <strong>recalls</strong>, <strong>insurance</strong>, <strong>warranty</strong>, <strong>loan/refi</strong>, <strong>repair estimates</strong>, <strong>selling</strong>, or <strong>lemon law</strong>. Run a VIN for tailored guidance.`;
+  if (query.includes("ev") || query.includes("electric") || query.includes("charg"))
+    return `${isEV ? "Your vehicle is electric — " : "For electric vehicles, "}find nearby charging stations and check EV incentives. ${affiliateCTA("Find EV Charging Stations", "ev-charger", c.vin)}`;
+  if (query.includes("history") || query.includes("carfax") || query.includes("accident") || query.includes("title check"))
+    return `A full vehicle history report reveals accidents, title issues, and ownership history. ${affiliateCTA("Get Full Vehicle History", "carfax", c.vin)}`;
+  return `I can help with: <strong>recalls</strong>, <strong>insurance</strong>, <strong>warranty</strong>, <strong>loan/refi</strong>, <strong>repair estimates</strong>, <strong>selling</strong>, <strong>lemon law</strong>, <strong>EV charging</strong>, or <strong>vehicle history</strong>. Run a VIN for tailored guidance.`;
 }
 
 // ==========================================
