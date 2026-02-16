@@ -7,15 +7,9 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.caralpha.com/sitemap-index.xml
 
-# Block API endpoints from crawling
+# Block API endpoints and affiliate redirects from crawling
 Disallow: /api/
 Disallow: /go/
 
-# Block assets from crawling
-Disallow: /assets/js/
-Disallow: /assets/css/
-
-# Allow images
-Allow: /assets/images/
-
-# No crawl-delay: new site needs fast, aggressive indexing
+# Allow all assets (CSS, JS, images, fonts) for proper rendering
+Allow: /assets/
