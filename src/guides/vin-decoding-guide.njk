@@ -51,7 +51,7 @@ breadcrumbs:
 
 <p>A Vehicle Identification Number (VIN) is a unique 17-character alphanumeric code assigned to every motor vehicle manufactured for sale in the United States since 1981. Think of it as a vehicle's fingerprint &mdash; no two vehicles produced in a 30-year window share the same VIN. This code encodes the manufacturer, vehicle attributes (engine, body style, restraint systems, transmission), production plant, model year, and a unique production sequence number.</p>
 
-<p>VINs are not random strings. Every character is governed by international and federal standards, making VINs both human-readable (with knowledge of the encoding system) and machine-parseable. This standardization is what makes services like Car Alpha's <a href="/tools/vin-decoder/">free VIN decoder</a> possible: we can extract detailed vehicle specifications from the VIN alone.</p>
+<p>VINs are not random strings. Every character is governed by international and federal standards, making VINs both human-readable (with knowledge of the encoding system) and machine-parseable. This standardization is what makes services like Car Alpha's <a href="/vin-decoder/">free VIN decoder</a> possible: we can extract detailed vehicle specifications from the VIN alone.</p>
 
 <h2 id="iso-standards">ISO Standards Behind VINs</h2>
 
@@ -105,7 +105,7 @@ breadcrumbs:
   <li><strong>Sum and modulo:</strong> All weighted values are summed. The sum is divided by 11. The remainder is the check digit. If the remainder is 10, the check digit is "X".</li>
 </ol>
 
-<p>This is why Car Alpha's <a href="/tools/vin-decoder/">VIN decoder</a> validates the check digit before making any API calls &mdash; an invalid check digit means the VIN itself is likely wrong, saving you from misleading results. Our <a href="/learn/how-vin-decoding-works/">VIN scanner</a> also uses multi-frame check digit consensus to avoid OCR errors.</p>
+<p>This is why Car Alpha's <a href="/vin-decoder/">VIN decoder</a> validates the check digit before making any API calls &mdash; an invalid check digit means the VIN itself is likely wrong, saving you from misleading results. Our <a href="/learn/how-vin-decoding-works/">VIN scanner</a> also uses multi-frame check digit consensus to avoid OCR errors.</p>
 
 <h2 id="nhtsa-vpic">NHTSA VPIC Database</h2>
 
@@ -197,4 +197,4 @@ breadcrumbs:
 <h3>Fleet Managers</h3>
 <p>Decode VINs in bulk to verify fleet inventory accuracy, track recall compliance across all vehicles, and ensure maintenance records match the correct model-year-trim combination.</p>
 
-<p>Ready to decode a VIN? Try our <a href="/tools/vin-decoder/">free VIN decoder</a> now &mdash; no account required.</p>
+<p>Ready to decode a VIN? Try our <a href="/vin-decoder/">free VIN decoder</a> now &mdash; no account required.</p>
