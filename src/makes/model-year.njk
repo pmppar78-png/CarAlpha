@@ -155,14 +155,12 @@ eleventyComputed:
       <h2 class="text-xl font-black text-white mb-6">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} by State</h2>
       <p class="text-sm text-silver-400 mb-4">Insurance requirements, lemon law protections, and registration rules vary by state. View state-specific information for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}:</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
-        {% for st in states | limit(12) %}
+        {% for st in states %}
         <a href="/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/in/{{ st.slug }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
           <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-xs">{{ st.abbreviation }}</div>
+          <div class="text-[10px] text-silver-500 mt-0.5">{{ st.name }}</div>
         </a>
         {% endfor %}
-      </div>
-      <div class="mt-3 text-center">
-        <a href="/states/" class="text-sm text-volt-400 hover:underline">View all 50 states &rarr;</a>
       </div>
     </div>
 

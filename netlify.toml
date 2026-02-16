@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/build-edge-data.js && rm -rf _site && npx @11ty/eleventy"
+  command = "node scripts/build-edge-data.js && npx tailwindcss -i src/assets/css/main.css -o src/assets/css/tailwind.css --minify && rm -rf _site && npx @11ty/eleventy"
   publish = "_site"
 
 [build.environment]

@@ -29,6 +29,8 @@ function buildEdgeData() {
       name: make.name,
       type: make.type,
       country: make.country,
+      founded: make.founded,
+      description: make.description,
     };
   }
 
@@ -65,9 +67,21 @@ function buildEdgeData() {
       abbreviation: state.abbreviation,
       region: state.region,
       insuranceMinimum: state.insuranceMinimum,
+      insuranceMinimumDetail: state.insuranceMinimumDetail || "",
       averageInsuranceCost: state.averageInsuranceCost,
       hasLemonLaw: state.hasLemonLaw,
+      lemonLawSummary: state.lemonLawSummary || "",
       evIncentives: state.evIncentives,
+      evIncentiveDetails: state.evIncentiveDetails || "",
+      hasEmissions: state.hasEmissions || false,
+      emissionsDetails: state.emissionsDetails || "",
+      hasSafetyInspection: state.hasSafetyInspection || false,
+      safetyInspectionDetails: state.safetyInspectionDetails || "",
+      registrationFeeRange: state.registrationFeeRange || "",
+      registrationNotes: state.registrationNotes || "",
+      titleFee: state.titleFee || "",
+      plateFee: state.plateFee || "",
+      description: state.description || "",
     };
   }
 
