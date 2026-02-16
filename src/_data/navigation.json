@@ -24,12 +24,24 @@
     { "label": "Repair Costs", "url": "/guides/repairs/" },
     { "label": "Buying Guide", "url": "/guides/buying/" },
     { "label": "Safety Ratings", "url": "/guides/safety/" },
-    { "label": "Title & Registration", "url": "/guides/title/" }
+    { "label": "Title & Registration", "url": "/guides/title/" },
+    { "label": "How to Decode Any VIN", "url": "/guides/how-to-decode-any-vin/" },
+    { "label": "How VIN Fraud Works", "url": "/guides/how-vin-fraud-works/" },
+    { "label": "Salvage Title Warning Signs", "url": "/guides/hidden-salvage-title-warning-signs/" },
+    { "label": "VIN vs. License Plate Lookup", "url": "/guides/vin-vs-license-plate-lookup/" },
+    { "label": "How Dealerships Use VIN Data", "url": "/guides/how-dealerships-use-vin-data/" },
+    { "label": "Car History Report Comparison", "url": "/guides/car-history-report-comparison/" }
   ],
   "learn": [
     { "label": "What Is a VIN?", "url": "/learn/what-is-a-vin/" },
     { "label": "VIN Positions Explained", "url": "/learn/vin-positions/" },
     { "label": "Where to Find Your VIN", "url": "/learn/where-to-find-vin/" }
+  ],
+  "resources": [
+    { "label": "Glossary", "url": "/glossary/" },
+    { "label": "Industry Resources", "url": "/industry-resources/" },
+    { "label": "Data Transparency", "url": "/data-transparency/" },
+    { "label": "Methodology", "url": "/methodology/" }
   ],
   "footer": [
     { "label": "Home", "url": "/" },
@@ -39,6 +51,7 @@
     { "label": "States", "url": "/states/" },
     { "label": "Guides", "url": "/guides/" },
     { "label": "Learn", "url": "/learn/" },
-    { "label": "Blog", "url": "/blog/" }
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "Glossary", "url": "/glossary/" }
   ]
 }
