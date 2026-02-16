@@ -18,5 +18,4 @@ Disallow: /assets/css/
 # Allow images
 Allow: /assets/images/
 
-# Crawl-delay for politeness
-Crawl-delay: 1
+# No crawl-delay: new site needs fast, aggressive indexing

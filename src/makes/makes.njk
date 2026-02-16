@@ -5,6 +5,25 @@ description: "Browse all vehicle makes with VIN decoding, recall checks, and det
 permalink: /makes/
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Vehicle Makes on Car Alpha",
+  "description": "Browse all vehicle makes with VIN decoding, recall checks, and detailed specs.",
+  "url": "https://www.caralpha.com/makes/",
+  "numberOfItems": {{ makes | length }},
+  "itemListElement": [
+    {% for item in makes %}{% if item.active %}{
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": "{{ item.name }}",
+      "url": "https://www.caralpha.com/makes/{{ item.slug }}/"
+    }{% if not loop.last %},{% endif %}{% endif %}{% endfor %}
+  ]
+}
+</script>
+
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes" }] %}
 
 <section class="relative overflow-hidden">
