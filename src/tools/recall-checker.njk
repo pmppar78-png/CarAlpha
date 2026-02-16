@@ -89,12 +89,14 @@ permalink: /recall-checker/
     </div>
 
     <div class="vin-card glass-card rounded-2xl p-6 md:p-8 glow-cyan max-w-xl mx-auto carbon-panel">
-      <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter your 17-character VIN</label>
+      <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter or scan your 17-character VIN</label>
       <div class="flex flex-col sm:flex-row gap-3">
-        <input id="vinInput" maxlength="17" placeholder="e.g., 1HGCM82633A004352" class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
-        <button data-vin-scan="vinInput" aria-label="Scan VIN with camera" title="Scan VIN with camera" style="display:none" class="px-3 py-3 rounded-xl btn-ghost text-volt-400 hover:text-volt-300 hover:bg-volt-500/10 active:scale-95 transition-all shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.04l-.821 1.315z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/></svg>
-        </button>
+        <div class="flex-1 flex items-center gap-0 relative">
+          <input id="vinInput" maxlength="17" placeholder="ENTER OR SCAN YOUR 17-CHARACTER VIN" class="flex-1 px-5 py-4 pr-12 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+          <button data-vin-scan="vinInput" aria-label="Scan VIN with camera" title="Scan VIN with camera" style="display:none" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg text-volt-400 hover:text-volt-300 hover:bg-volt-500/10 active:scale-95 transition-all">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.04l-.821 1.315z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/></svg>
+          </button>
+        </div>
         <button id="runBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide">Check Recalls</button>
       </div>
       <p class="mt-3 text-xs text-silver-500/70 text-left">We decode your VIN to identify the make, model, and year, then check for open recalls.</p>
