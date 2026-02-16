@@ -1,0 +1,461 @@
+---
+layout: layouts/base.njk
+title: "Our Methodology — How Car Alpha Builds Vehicle Intelligence"
+description: "Detailed methodology explaining how Car Alpha collects, processes, and presents automotive data. Covers VIN decoding methodology, recall verification, state data compilation, editorial standards, and AI usage guidelines."
+permalink: /methodology/
+date: 2026-02-16
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li>Methodology</li>
+  </ol>
+</nav>
+
+<article class="prose prose-dark">
+  <h1>Our Methodology</h1>
+  <p class="lead">This page documents how every piece of information on Car Alpha is sourced, verified, and presented. From VIN decoding algorithms to editorial fact-checking processes, here's the complete methodology behind our vehicle intelligence platform.</p>
+
+  <section class="glass-card">
+    <h2>Methodology Overview</h2>
+    <p>Car Alpha is built on a foundation of transparent, verifiable methodologies. We don't rely on proprietary black-box algorithms or undisclosed data sources. Every process — from how we decode VINs to how we compile state insurance requirements — is documented here.</p>
+
+    <p>This methodology serves multiple purposes:</p>
+    <ul>
+      <li><strong>Transparency:</strong> You can verify exactly how we produce the information you see</li>
+      <li><strong>Accountability:</strong> Clear methodologies make us accountable to accuracy standards</li>
+      <li><strong>Reproducibility:</strong> Other researchers can reproduce our processes and verify our results</li>
+      <li><strong>Continuous improvement:</strong> Documented methodologies make it easier to identify areas for improvement</li>
+    </ul>
+
+    <p>If you have questions about any methodology not covered here, contact us at <a href="mailto:corrections@caralpha.com">corrections@caralpha.com</a>.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>VIN Decoding Methodology</h2>
+    <p>Our VIN decoder follows internationally recognized standards and queries authoritative government databases. Here's the complete technical process:</p>
+
+    <h3>ISO 3779 Standard Compliance</h3>
+    <p>Vehicle Identification Numbers are defined by ISO 3779 (Road vehicles — Vehicle identification number — Content and structure). Our decoder validates VINs against this standard:</p>
+    <ul>
+      <li>17 characters (alphanumeric, excluding I, O, and Q to avoid confusion with 1 and 0)</li>
+      <li>Characters 1-3: World Manufacturer Identifier (WMI) identifying the manufacturer and country</li>
+      <li>Characters 4-8: Vehicle Descriptor Section (VDS) describing vehicle attributes</li>
+      <li>Character 9: Check digit for validation</li>
+      <li>Character 10: Model year</li>
+      <li>Character 11: Plant code</li>
+      <li>Characters 12-17: Sequential serial number</li>
+    </ul>
+
+    <h3>Check Digit Validation (49 CFR Part 565)</h3>
+    <p>The 9th character is a mathematical check digit calculated using a weighted formula defined in 49 CFR Part 565. Our validation process:</p>
+    <ol>
+      <li>Assign each character a numerical value (A=1, B=2, etc.; numbers remain unchanged)</li>
+      <li>Multiply each character's value by its position weight factor</li>
+      <li>Sum all weighted values</li>
+      <li>Divide by 11 and take the remainder</li>
+      <li>Compare remainder to the check digit (0-9 or X for 10)</li>
+    </ol>
+    <p>Invalid check digits indicate a typo or fraudulent VIN. We alert users to invalid check digits but still attempt to decode the VIN (NHTSA's database can decode even invalid VINs if the manufacturer data exists).</p>
+
+    <h3>NHTSA VPIC API Integration</h3>
+    <p>After validation, we query the National Highway Traffic Safety Administration's Vehicle Product Information Catalog API:</p>
+    <ul>
+      <li><strong>API endpoint:</strong> <code>https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/</code></li>
+      <li><strong>Request method:</strong> GET request with VIN as parameter</li>
+      <li><strong>Response format:</strong> JSON with 140+ data fields</li>
+      <li><strong>Timeout:</strong> 10-second timeout with user notification if NHTSA's API is unresponsive</li>
+    </ul>
+
+    <h3>Real-Time Querying (No Caching)</h3>
+    <p>Every VIN decode is a fresh query to NHTSA's live database. We intentionally do not cache decode results because:</p>
+    <ul>
+      <li>NHTSA updates manufacturer data in real-time when corrections are submitted</li>
+      <li>Caching could serve outdated information</li>
+      <li>Privacy: we don't store VINs users enter</li>
+      <li>Security: no database of VINs to be breached</li>
+    </ul>
+
+    <h3>Response Parsing Methodology</h3>
+    <p>NHTSA's API returns raw technical data. Our parsing process:</p>
+    <ol>
+      <li><strong>Extract key fields:</strong> Parse JSON response for make, model, year, body type, engine, transmission, etc.</li>
+      <li><strong>Add contextual labels:</strong> Convert technical field names (e.g., "DisplacementL") to user-friendly labels ("Engine Displacement")</li>
+      <li><strong>Format units:</strong> Add units where appropriate (liters, cubic inches, pounds, etc.)</li>
+      <li><strong>Handle null values:</strong> Display "Not Available" for fields where manufacturer didn't provide data</li>
+      <li><strong>Cross-reference recalls:</strong> Automatically query recalls database using decoded make/model/year</li>
+    </ol>
+    <p><strong>Important:</strong> We add labels and formatting, but we never modify the underlying data values from NHTSA.</p>
+
+    <h3>Error Handling</h3>
+    <p>Our decoder handles multiple error scenarios:</p>
+    <ul>
+      <li><strong>Invalid VIN format:</strong> Alert user to format issues before querying NHTSA</li>
+      <li><strong>Invalid check digit:</strong> Warn user but attempt decode anyway</li>
+      <li><strong>VIN not found:</strong> Display NHTSA's "no match" response (could be pre-1981, non-US vehicle, or manufacturer hasn't submitted data)</li>
+      <li><strong>API timeout:</strong> Notify user of temporary NHTSA service issues</li>
+      <li><strong>Partial data:</strong> Display available fields even if NHTSA's response is incomplete</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>Recall Data Methodology</h2>
+    <p>Our recall checker provides real-time access to NHTSA's official recalls database. Here's how we source and present recall information:</p>
+
+    <h3>How Recalls Are Sourced</h3>
+    <p>All recall data comes from NHTSA's Office of Defects Investigation (ODI):</p>
+    <ul>
+      <li><strong>Legal requirement:</strong> 49 CFR Part 573 requires manufacturers to report safety defects to NHTSA within 5 business days</li>
+      <li><strong>Database:</strong> NHTSA maintains a comprehensive recalls database dating back to 1966</li>
+      <li><strong>API access:</strong> <code>https://api.nhtsa.gov/recalls/recallsByVehicle</code></li>
+      <li><strong>Update frequency:</strong> Real-time as recalls are issued</li>
+    </ul>
+
+    <h3>How We Match Recalls to Vehicles</h3>
+    <p>Recalls are matched using make + model + year cross-reference:</p>
+    <ol>
+      <li>Decode VIN to extract make, model, and year (or accept manual input)</li>
+      <li>Query NHTSA Recalls API with these three parameters</li>
+      <li>API returns all recalls matching that make/model/year combination</li>
+      <li>Display results sorted by recall date (most recent first)</li>
+    </ol>
+    <p><strong>Note:</strong> NHTSA matches recalls by make/model/year, not by specific VIN. If a recall affects "some" vehicles of a particular model year, the only way to confirm if your specific VIN is affected is to contact the manufacturer with your full VIN.</p>
+
+    <h3>How Recall Data Is Presented</h3>
+    <p>For each recall campaign, we display:</p>
+    <ul>
+      <li><strong>Campaign number:</strong> NHTSA's unique identifier (format: YY[V/E/T/C]###)</li>
+      <li><strong>Recall summary:</strong> Brief description of the defect</li>
+      <li><strong>Consequence:</strong> What could happen if the defect is not repaired</li>
+      <li><strong>Remedy:</strong> How the manufacturer will fix the issue</li>
+      <li><strong>Component:</strong> What part or system is affected</li>
+      <li><strong>Manufacturer:</strong> Company issuing the recall</li>
+      <li><strong>Report date:</strong> When NHTSA received the recall report</li>
+      <li><strong>Units potentially affected:</strong> How many vehicles the recall covers</li>
+    </ul>
+    <p>All text comes directly from NHTSA's recall database. We do not summarize, paraphrase, or editorialize recall information.</p>
+
+    <h3>Timeliness: Real-Time API</h3>
+    <p>Recall checks query NHTSA's live API in real-time. We do not use periodic synchronization or maintain a separate recalls database. This ensures:</p>
+    <ul>
+      <li>You see recalls the moment NHTSA publishes them</li>
+      <li>Recall status updates (remedies available, campaigns closed) are reflected immediately</li>
+      <li>No lag between NHTSA issuing a recall and it appearing on Car Alpha</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>State Data Methodology</h2>
+    <p>State-specific vehicle information (insurance minimums, lemon laws, registration requirements, EV incentives) is compiled from official state regulatory sources. Here's our process:</p>
+
+    <h3>Insurance Minimums Methodology</h3>
+    <p><strong>Sources:</strong> State insurance commissioner websites, department of insurance official publications, state statutes</p>
+    <p><strong>Process:</strong></p>
+    <ol>
+      <li>Access each state's insurance department website</li>
+      <li>Locate official minimum coverage requirements publication</li>
+      <li>Document liability limits (bodily injury per person, per accident, property damage)</li>
+      <li>Document PIP/medical payments requirements where applicable</li>
+      <li>Document uninsured/underinsured motorist requirements</li>
+      <li>Record statute citation</li>
+      <li>Note effective date of current requirements</li>
+    </ol>
+    <p><strong>Review cadence:</strong> Quarterly review of all states. State insurance requirements change infrequently, but we monitor legislative sessions for proposed changes.</p>
+
+    <h3>Lemon Law Methodology</h3>
+    <p><strong>Sources:</strong> State Attorney General offices, state legislative databases, Magnuson-Moss Warranty Act (federal baseline)</p>
+    <p><strong>Process:</strong></p>
+    <ol>
+      <li>Identify state lemon law statute citation</li>
+      <li>Document coverage period (e.g., "first 2 years or 24,000 miles")</li>
+      <li>Document repair attempt threshold (e.g., "4 attempts for same issue")</li>
+      <li>Document out-of-service threshold (e.g., "30 cumulative days")</li>
+      <li>Document arbitration process and manufacturer obligations</li>
+      <li>Note exclusions (commercial vehicles, motorcycles, etc.)</li>
+      <li>Record presumption triggers and consumer remedies</li>
+    </ol>
+    <p><strong>Review cadence:</strong> Annual review of all states unless notified of legislative changes.</p>
+
+    <h3>Registration Requirements Methodology</h3>
+    <p><strong>Sources:</strong> State DMV/MVD websites, state motor vehicle code</p>
+    <p><strong>Process:</strong></p>
+    <ol>
+      <li>Document registration fees (initial and renewal)</li>
+      <li>Document title fees and requirements</li>
+      <li>Document emissions testing requirements (which counties, frequency, exemptions)</li>
+      <li>Document safety inspection requirements</li>
+      <li>Document special requirements (VIN verification, odometer disclosure, etc.)</li>
+    </ol>
+    <p><strong>Review cadence:</strong> Quarterly review. Registration fees change frequently.</p>
+
+    <h3>EV Incentives Methodology</h3>
+    <p><strong>Sources:</strong> State energy offices, environmental departments, clean vehicle program websites, state revenue departments (tax credits)</p>
+    <p><strong>Process:</strong></p>
+    <ol>
+      <li>Identify all state-level EV purchase incentives (rebates, tax credits)</li>
+      <li>Document eligibility criteria (vehicle MSRP limits, income limits, residency requirements)</li>
+      <li>Document incentive amounts and caps</li>
+      <li>Document HOV lane access rules for EVs/plug-in hybrids</li>
+      <li>Document registration fee waivers or reductions</li>
+      <li>Document charging infrastructure incentives (home charger rebates, installation tax credits)</li>
+      <li>Note program expiration dates and funding status</li>
+    </ol>
+    <p><strong>Review cadence:</strong> Monthly review. EV incentives change frequently due to budget cycles and program funding.</p>
+
+    <h3>State Data Quality Assurance</h3>
+    <ul>
+      <li><strong>Primary source requirement:</strong> We only cite official state government sources (no third-party aggregators)</li>
+      <li><strong>Citation documentation:</strong> Every state data point includes statute or regulation citation</li>
+      <li><strong>Update tracking:</strong> We track when each state's data was last verified</li>
+      <li><strong>Change monitoring:</strong> We subscribe to state legislative tracking services to catch relevant changes</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>Vehicle Database Methodology</h2>
+    <p>Car Alpha's vehicle database powers our make, model, and model-year pages. Here's how we compile and maintain this data:</p>
+
+    <h3>Data Source: NHTSA VPIC</h3>
+    <ul>
+      <li><strong>Coverage:</strong> All vehicles sold in the US since 1981</li>
+      <li><strong>Manufacturer count:</strong> 60+ active manufacturers</li>
+      <li><strong>Model count:</strong> 300+ current model nameplates</li>
+      <li><strong>Model-year combinations:</strong> 3,500+ unique make/model/year combinations</li>
+    </ul>
+
+    <h3>Compilation Process</h3>
+    <ol>
+      <li><strong>Extract make list:</strong> Query VPIC for all manufacturers (World Manufacturer Identifiers)</li>
+      <li><strong>Extract model list:</strong> For each manufacturer, query all models they produce</li>
+      <li><strong>Extract year coverage:</strong> For each model, identify which years it was manufactured</li>
+      <li><strong>Generate page structure:</strong> Create URL structure (<code>/vehicles/{make}/{model}/{year}/</code>)</li>
+      <li><strong>Pull specifications:</strong> For each make/model/year, pull available specifications from VPIC</li>
+      <li><strong>Build static pages:</strong> Generate static HTML pages at build time</li>
+    </ol>
+
+    <h3>Data Verification</h3>
+    <ul>
+      <li>Cross-reference against NHTSA records to verify make/model/year combinations exist</li>
+      <li>Validate that specifications are complete (flag missing data)</li>
+      <li>Verify that recall data loads correctly for each vehicle</li>
+      <li>Test that state-specific information displays correctly on state pages</li>
+    </ul>
+
+    <h3>Edge Rendering for Performance</h3>
+    <p>Vehicle pages are pre-compiled and served from CDN edge locations for optimal performance:</p>
+    <ul>
+      <li><strong>Build time:</strong> Pages generated during CI/CD build process</li>
+      <li><strong>Deployment:</strong> Static pages deployed to Cloudflare Pages</li>
+      <li><strong>Edge caching:</strong> Pages served from 300+ global edge locations</li>
+      <li><strong>Update frequency:</strong> Site rebuilt weekly minimum, more frequently during new model year releases</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>Editorial Content Methodology</h2>
+    <p>Our guides and articles follow rigorous research and fact-checking standards. Here's how editorial content is produced:</p>
+
+    <h3>Primary Source Research</h3>
+    <ul>
+      <li>All factual claims must be sourced from authoritative primary sources (government agencies, manufacturers, academic research, regulatory bodies)</li>
+      <li>We do not cite other blogs, news aggregators, or secondary sources unless discussing media coverage itself</li>
+      <li>Statistical claims must cite the original data source (not a news article summarizing the data)</li>
+    </ul>
+
+    <h3>Expert Review</h3>
+    <ul>
+      <li>Technical content is reviewed by subject matter experts before publication</li>
+      <li>Legal information is reviewed for accuracy (though we always include disclaimer that content is not legal advice)</li>
+      <li>Financial guidance is reviewed to ensure it's general education, not personalized advice</li>
+    </ul>
+
+    <h3>No AI-Generated Content Presented as Fact</h3>
+    <ul>
+      <li><strong>Research assistance:</strong> AI tools may be used to help identify sources or organize research</li>
+      <li><strong>Draft editing:</strong> AI tools may help refine phrasing or structure</li>
+      <li><strong>Not factual content:</strong> AI-generated text is never published as factual content without human verification of every claim</li>
+      <li><strong>Clear labeling:</strong> Any AI-assisted content is labeled as such</li>
+    </ul>
+
+    <h3>Regular Updates</h3>
+    <ul>
+      <li>Guides include "Last updated" dates at the top of each page</li>
+      <li>Time-sensitive information (current model year prices, active incentives) reviewed quarterly</li>
+      <li>Legal/regulatory guides reviewed annually or when relevant legislation changes</li>
+      <li>Evergreen guides reviewed biennially for accuracy</li>
+    </ul>
+
+    <h3>Correction Process</h3>
+    <ol>
+      <li>User reports error to <a href="mailto:corrections@caralpha.com">corrections@caralpha.com</a></li>
+      <li>Editorial team verifies claim against primary sources</li>
+      <li>If error confirmed, content updated within 5 business days</li>
+      <li>Correction note added to page if error was significant</li>
+      <li>Corrections log maintained on <a href="/about/">About page</a></li>
+    </ol>
+  </section>
+
+  <section class="glass-card">
+    <h2>AI Assistant Methodology</h2>
+    <p>Car Alpha's AI chat feature provides vehicle guidance powered by Anthropic's Claude model. Here's the complete methodology:</p>
+
+    <h3>AI Model: Claude by Anthropic</h3>
+    <ul>
+      <li><strong>Model:</strong> Claude (specific version updated periodically)</li>
+      <li><strong>Provider:</strong> Anthropic</li>
+      <li><strong>Training cutoff:</strong> Model knowledge cutoff date disclosed in chat interface</li>
+      <li><strong>Why Claude:</strong> Strong performance on technical and safety-critical information, aligned with human values, constitutional AI training</li>
+    </ul>
+
+    <h3>Vehicle Context Provided</h3>
+    <p>When you decode a VIN before using the AI assistant, the following context is provided to the model:</p>
+    <ul>
+      <li>Decoded vehicle specifications (make, model, year, engine, transmission, etc.)</li>
+      <li>Open recall information for that vehicle</li>
+      <li>User's stated location (for state-specific guidance, if provided)</li>
+    </ul>
+    <p><strong>Privacy note:</strong> We do not provide the VIN itself to the AI, only the decoded specifications. We do not store conversation history beyond the current session.</p>
+
+    <h3>AI-Generated Responses: Guidance, Not Facts</h3>
+    <ul>
+      <li><strong>Information synthesis:</strong> AI synthesizes general automotive knowledge with vehicle-specific context</li>
+      <li><strong>Not database queries:</strong> AI responses are generated text, not lookups from authoritative databases</li>
+      <li><strong>Clearly labeled:</strong> All AI responses are explicitly labeled as AI-generated guidance</li>
+      <li><strong>Not advice:</strong> Responses are general guidance only — not medical, legal, or financial advice</li>
+      <li><strong>Verification encouraged:</strong> Users should verify AI guidance against authoritative sources for critical decisions</li>
+    </ul>
+
+    <h3>Rate Limiting and Quality Control</h3>
+    <ul>
+      <li><strong>Rate limits:</strong> Chat interactions rate-limited per session to ensure quality responses</li>
+      <li><strong>Abuse prevention:</strong> Automated monitoring for misuse or attempts to jailbreak the model</li>
+      <li><strong>Feedback collection:</strong> Users can flag unhelpful or inaccurate responses</li>
+      <li><strong>Response review:</strong> Flagged responses reviewed by editorial team to improve system prompts</li>
+    </ul>
+
+    <h3>What the AI Cannot Access</h3>
+    <p>For privacy and security, the AI assistant cannot access:</p>
+    <ul>
+      <li>Your browsing history beyond the current chat session</li>
+      <li>VINs you've decoded in other sessions</li>
+      <li>Your location unless you explicitly provide it</li>
+      <li>Any personal information not included in the current conversation</li>
+      <li>Real-time data (prices, inventory, current recalls) — relies on training data</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>Monetization Methodology</h2>
+    <p>Car Alpha uses contextual affiliate partnerships to monetize the platform. Here's the complete methodology for how affiliate recommendations work:</p>
+
+    <h3>Contextual Placement Based on Vehicle and Situation</h3>
+    <ul>
+      <li><strong>Vehicle context:</strong> Affiliate links match the user's decoded vehicle type (e.g., car history reports after VIN decode, extended warranty info for high-mileage vehicles)</li>
+      <li><strong>Situation context:</strong> Links match what the user is trying to accomplish (e.g., insurance quotes on state insurance pages, lemon law attorneys after decode showing multiple recalls)</li>
+      <li><strong>Relevance requirement:</strong> Affiliate links must be directly relevant to the content or tool the user is engaging with</li>
+    </ul>
+
+    <h3>Independence from Editorial Content</h3>
+    <ul>
+      <li>Affiliate partnerships do not influence which vehicles we cover or how we present them</li>
+      <li>Editorial guides are researched and written independently of affiliate relationships</li>
+      <li>We do not alter federal data (VIN decodes, recalls) to make vehicles appear better or worse for affiliate purposes</li>
+      <li>State data comes from regulatory sources, not affiliate partner materials</li>
+    </ul>
+
+    <h3>Disclosure of All Partnerships</h3>
+    <ul>
+      <li>All affiliate links clearly marked with disclosure language</li>
+      <li>Complete list of affiliate partners at <a href="/affiliate-disclosure/">Affiliate Disclosure</a> page</li>
+      <li>Inline disclosures on pages with affiliate links</li>
+      <li>FTC compliance with endorsement guidelines</li>
+    </ul>
+
+    <h3>No Data Sharing Beyond Click Attribution</h3>
+    <ul>
+      <li>When you click an affiliate link, the partner knows you came from Car Alpha (standard referrer data)</li>
+      <li>We do not share VINs, decoded vehicle data, or user browsing history with affiliate partners</li>
+      <li>Affiliate networks may use cookies for attribution (disclosed in Privacy Policy)</li>
+      <li>Users can opt out of affiliate tracking without losing access to free tools</li>
+    </ul>
+
+    <h3>Affiliate Partner Selection Criteria</h3>
+    <p>We partner with services that:</p>
+    <ul>
+      <li>Provide legitimate value to vehicle owners</li>
+      <li>Have transparent pricing and terms</li>
+      <li>Have established reputations in the automotive industry</li>
+      <li>Align with our editorial standards for consumer protection</li>
+    </ul>
+    <p>See complete <a href="/editorial-standards/">Editorial Standards</a> for partner evaluation criteria.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Quality Assurance Methodology</h2>
+    <p>Car Alpha employs multiple quality assurance processes to ensure accuracy and reliability:</p>
+
+    <h3>Technical QA</h3>
+    <p><strong>Build verification:</strong></p>
+    <ul>
+      <li>Automated build tests verify all pages generate successfully</li>
+      <li>Link checker verifies internal and external links are valid</li>
+      <li>HTML validator ensures standards compliance</li>
+      <li>Accessibility audits (WCAG 2.1 Level AA compliance)</li>
+    </ul>
+    <p><strong>API monitoring:</strong></p>
+    <ul>
+      <li>Uptime monitoring for NHTSA VPIC API</li>
+      <li>Uptime monitoring for NHTSA Recalls API</li>
+      <li>Automated alerts if APIs are unresponsive</li>
+      <li>Fallback error messages if APIs are temporarily down</li>
+    </ul>
+
+    <h3>Editorial QA</h3>
+    <p><strong>Fact-checking process:</strong></p>
+    <ul>
+      <li>Every factual claim verified against primary source before publication</li>
+      <li>Citations included for all statistics and regulatory information</li>
+      <li>Legal disclaimers reviewed for accuracy and appropriate scope</li>
+    </ul>
+    <p><strong>Update cadence:</strong></p>
+    <ul>
+      <li>Time-sensitive content (incentives, prices) reviewed quarterly</li>
+      <li>Regulatory content (state laws, federal regulations) reviewed annually or when legislation changes</li>
+      <li>Technical content (VIN decoding, recalls) reviewed biennially</li>
+    </ul>
+
+    <h3>User Feedback Integration</h3>
+    <ul>
+      <li><strong>Corrections:</strong> Users can report errors via <a href="mailto:corrections@caralpha.com">corrections@caralpha.com</a></li>
+      <li><strong>Response time:</strong> Corrections verified and implemented within 5 business days</li>
+      <li><strong>Feedback analysis:</strong> User feedback reviewed monthly to identify systematic issues</li>
+      <li><strong>Feature requests:</strong> User suggestions evaluated for implementation feasibility</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>Continuous Improvement</h2>
+    <p>This methodology document is itself subject to continuous improvement. We update our processes based on:</p>
+    <ul>
+      <li>User feedback and reported issues</li>
+      <li>Changes in data source APIs or availability</li>
+      <li>New automotive regulations or data standards</li>
+      <li>Advancements in web technologies and accessibility standards</li>
+      <li>Lessons learned from errors or edge cases</li>
+    </ul>
+    <p>Methodology updates are logged with effective dates. If you have suggestions for improving our methodologies, contact <a href="mailto:corrections@caralpha.com">corrections@caralpha.com</a>.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Related Resources</h2>
+    <ul>
+      <li><a href="/data-transparency/">Data Transparency</a> — Complete transparency into our data sources</li>
+      <li><a href="/editorial-standards/">Editorial Standards</a> — Standards for editorial content and partnerships</li>
+      <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a> — Complete disclosure of commercial relationships</li>
+      <li><a href="/about/">About Car Alpha</a> — Who we are and why we built this platform</li>
+      <li><a href="/vin-decoder/">VIN Decoder</a> — Decode any VIN with data directly from NHTSA</li>
+      <li><a href="/recall-checker/">Recall Checker</a> — Check for open safety recalls</li>
+    </ul>
+  </section>
+</article>

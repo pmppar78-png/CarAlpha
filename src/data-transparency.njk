@@ -1,0 +1,206 @@
+---
+layout: layouts/base.njk
+title: "Data Transparency — How Car Alpha Sources & Processes Vehicle Data"
+description: "Complete transparency into how Car Alpha sources, processes, and presents vehicle data. Every data point on our platform is traceable to its origin. No black boxes."
+permalink: /data-transparency/
+date: 2026-02-16
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li>Data Transparency</li>
+  </ol>
+</nav>
+
+<article class="prose prose-dark">
+  <h1>Data Transparency</h1>
+  <p class="lead">Every data point on Car Alpha is traceable to its origin. No proprietary algorithms hiding methodology. No third-party data aggregation. Complete transparency into how we source, process, and present vehicle information.</p>
+
+  <section class="glass-card">
+    <h2>Our Transparency Commitment</h2>
+    <p>At Car Alpha, transparency isn't a marketing buzzword — it's an operational requirement. Every piece of vehicle data displayed on our platform can be traced back to its authoritative source. We don't use proprietary scoring algorithms, we don't aggregate data from multiple sources and present it as our own analysis, and we don't modify federal data to make it more marketable.</p>
+
+    <p>This page documents exactly how vehicle information flows from government databases and regulatory sources through our systems to your screen. If you can't find the answer to "where did this data come from?" on this page, <a href="mailto:corrections@caralpha.com">email us</a> and we'll add it.</p>
+
+    <p>Our commitment: <strong>No black boxes. No proprietary magic. Just transparent data pipelines you can verify yourself.</strong></p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Primary Data Sources</h2>
+    <p>Car Alpha pulls vehicle information from authoritative government and regulatory sources. Here's the complete list of where our data originates:</p>
+
+    <h3>NHTSA VPIC (Vehicle Product Information Catalog)</h3>
+    <p><strong>What it is:</strong> The Vehicle Product Information Catalog is a database maintained by the National Highway Traffic Safety Administration (NHTSA) that contains detailed specifications for every vehicle sold in the United States since 1981.</p>
+
+    <p><strong>How it works:</strong> Vehicle manufacturers are legally required under 49 CFR Part 565 to submit detailed product information to NHTSA for every model they sell. This includes over 140 data fields covering engine specifications, safety equipment, body type, brake systems, transmission details, and more.</p>
+
+    <p><strong>What data it provides:</strong> Make, model, model year, body class, engine configuration, displacement, cylinders, fuel type, transmission type, drive type, brake system, restraint systems, manufacturer name, plant information, GVWR class, and 130+ additional technical specifications.</p>
+
+    <p><strong>Update frequency:</strong> Manufacturers submit data annually for new model years and whenever new models are introduced mid-cycle. NHTSA maintains the database in real-time.</p>
+
+    <p><strong>Legal basis:</strong> 49 CFR Part 565 (Vehicle Identification Number Requirements) mandates that manufacturers provide this information to NHTSA and make it publicly accessible through the VPIC API.</p>
+
+    <p><strong>How we use it:</strong> Our <a href="/vin-decoder/">VIN Decoder</a> queries the VPIC API directly in real-time. Every decode request goes straight to NHTSA's servers — we don't cache, we don't store, we don't modify. What NHTSA returns is exactly what you see.</p>
+
+    <h3>NHTSA Recalls Database (Office of Defects Investigation)</h3>
+    <p><strong>What it is:</strong> The Recalls Database is maintained by NHTSA's Office of Defects Investigation and contains every safety recall issued for vehicles, equipment, child seats, and tires since 1966.</p>
+
+    <p><strong>How recalls get added:</strong> When a manufacturer identifies a safety defect or non-compliance with federal safety standards, they're required by law (49 CFR Part 573) to report it to NHTSA within 5 business days. NHTSA can also order recalls through its defect investigation process.</p>
+
+    <p><strong>What information is included:</strong> Each recall includes a unique campaign number, affected make/model/year range, number of potentially affected units, defect description, consequence of the defect if not repaired, corrective remedy, manufacturer communication schedule, and recall status.</p>
+
+    <p><strong>How we use it:</strong> Our <a href="/recall-checker/">Recall Checker</a> queries the NHTSA Recalls API in real-time. When you decode a VIN or check recalls for a specific make/model/year, we cross-reference that information against the recalls database and display all matching campaigns with full details.</p>
+
+    <h3>State Regulatory Sources</h3>
+    <p>State-specific vehicle information comes directly from official state regulatory agencies:</p>
+
+    <p><strong>Auto insurance minimums:</strong> Sourced from state insurance commissioner websites and official department of insurance publications. Each state's insurance department publishes required minimum coverage levels for liability, personal injury protection, and uninsured motorist coverage.</p>
+
+    <p><strong>Lemon law protections:</strong> Compiled from state Attorney General offices and legislative databases. We document the statute citation, coverage period, number of repair attempts required, and arbitration process for each state's lemon law.</p>
+
+    <p><strong>Vehicle registration requirements:</strong> Sourced from state Department of Motor Vehicles (DMV) and equivalent agencies. Includes registration fees, title requirements, emissions testing mandates, and inspection requirements.</p>
+
+    <p><strong>EV incentives and rebates:</strong> Compiled from state energy offices, environmental departments, and clean vehicle programs. Includes state-level purchase rebates, tax credits, HOV lane access, registration fee waivers, and charging infrastructure incentives.</p>
+
+    <p><strong>Review cadence:</strong> State data is reviewed and updated quarterly. If you notice outdated state-specific information, please report it to <a href="mailto:corrections@caralpha.com">corrections@caralpha.com</a>.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>How Data Flows Through Car Alpha</h2>
+    <p>Here's the technical detail on how vehicle information moves from authoritative sources through our systems to your browser:</p>
+
+    <h3>VIN Decoder Data Flow</h3>
+    <ol>
+      <li><strong>User enters VIN:</strong> You input a 17-character VIN into our decoder at <a href="/vin-decoder/">/vin-decoder/</a></li>
+      <li><strong>Client-side validation:</strong> Your browser validates the VIN format (17 characters, no I/O/Q, valid year/manufacturer codes) before sending the request</li>
+      <li><strong>Check digit verification:</strong> We calculate the check digit (9th character) using the ISO 3779 algorithm to catch typos</li>
+      <li><strong>Direct API call to NHTSA:</strong> Valid VINs are sent directly to NHTSA's VPIC API at vpic.nhtsa.dot.gov</li>
+      <li><strong>Response parsed and displayed:</strong> NHTSA's response is parsed and formatted for display. We add contextual information (what each field means), but the underlying data values are unchanged</li>
+      <li><strong>No caching, no storage:</strong> We don't cache decode results, we don't store VINs you enter, and we don't log vehicle identification information. Each decode is a fresh query to NHTSA</li>
+    </ol>
+
+    <h3>Recall Checker Data Flow</h3>
+    <ol>
+      <li><strong>Vehicle identification:</strong> Recalls are checked based on decoded VIN data (make + model + year) or manual make/model/year selection</li>
+      <li><strong>Direct API call to NHTSA:</strong> We query NHTSA's Recalls API with the make/model/year parameters</li>
+      <li><strong>Results displayed with full campaign details:</strong> Matching recalls are displayed with summary, consequence, remedy, campaign number, and affected unit count. All text comes directly from NHTSA's recall database</li>
+      <li><strong>Real-time data:</strong> Recall checks query NHTSA in real-time. You're seeing the same recall data that NHTSA's own website displays</li>
+    </ol>
+
+    <h3>Vehicle Pages Data Flow</h3>
+    <ol>
+      <li><strong>Pre-compiled at build time:</strong> Make, model, and year pages (like <code>/vehicles/toyota/camry/2024/</code>) are generated during our build process, not dynamically on request</li>
+      <li><strong>Sourced from NHTSA VPIC:</strong> Vehicle specifications are pulled from the VPIC database during the build process</li>
+      <li><strong>State-specific data compiled:</strong> State insurance, registration, and incentive data is compiled from regulatory sources and embedded in relevant state pages</li>
+      <li><strong>Edge-rendered for performance:</strong> Pre-compiled pages are served from CDN edge locations for fast global access</li>
+    </ol>
+
+    <h3>AI Assistant Data Flow</h3>
+    <ol>
+      <li><strong>Powered by Claude:</strong> Our AI chat feature uses Anthropic's Claude model to provide vehicle guidance</li>
+      <li><strong>Vehicle context provided:</strong> When you've decoded a VIN, that vehicle's specifications are included as context for the AI</li>
+      <li><strong>AI-generated responses:</strong> The AI synthesizes information and provides guidance based on the context. These are AI-generated responses, not factual claims from authoritative databases</li>
+      <li><strong>Clearly labeled:</strong> All AI-generated content is explicitly labeled as such. The AI cannot access your personal information, VIN history, or any data beyond the current conversation</li>
+      <li><strong>Not advice:</strong> AI responses are informational guidance only — not medical, legal, or financial advice</li>
+    </ol>
+  </section>
+
+  <section class="glass-card">
+    <h2>What We Don't Have</h2>
+    <p>Transparency means being honest about limitations. Here's vehicle data that Car Alpha <strong>does not have access to:</strong></p>
+
+    <ul>
+      <li><strong>Accident history:</strong> We cannot tell you if a specific VIN has been in a reported accident</li>
+      <li><strong>Title history:</strong> We don't have access to salvage, rebuilt, flood, or other title brands</li>
+      <li><strong>Odometer records:</strong> We cannot provide mileage history or detect odometer rollback</li>
+      <li><strong>Ownership history:</strong> We don't know how many owners a vehicle has had or where it's been registered</li>
+      <li><strong>Service records:</strong> We cannot access maintenance history or repair records</li>
+      <li><strong>Theft records:</strong> We don't have access to stolen vehicle databases</li>
+      <li><strong>Lien information:</strong> We cannot determine if a vehicle has outstanding liens</li>
+    </ul>
+
+    <p>These data points require access to paid databases maintained by private companies (Carfax, AutoCheck) or state title systems. For comprehensive vehicle history, see our <a href="/guides/car-history-report-comparison/">Car History Report Comparison Guide</a>.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Data Freshness</h2>
+    <p>Different data sources update on different schedules. Here's how current each type of information is:</p>
+
+    <ul>
+      <li><strong>VIN decoding:</strong> Real-time. Every decode queries NHTSA's current database</li>
+      <li><strong>Recall data:</strong> Real-time. Every recall check queries NHTSA's current recalls database</li>
+      <li><strong>Make/model/year specifications:</strong> Updated with each site build (weekly at minimum, more frequently when new model years are released)</li>
+      <li><strong>State insurance minimums:</strong> Reviewed quarterly and updated as states change requirements</li>
+      <li><strong>State lemon laws:</strong> Reviewed annually and updated when legislation changes</li>
+      <li><strong>EV incentives:</strong> Reviewed monthly due to frequent program changes</li>
+      <li><strong>Editorial guides:</strong> Updated on an ongoing basis with review dates noted on each guide</li>
+    </ul>
+  </section>
+
+  <section class="glass-card">
+    <h2>Data Accuracy Guarantee</h2>
+    <p>Car Alpha makes this guarantee: <strong>We do not modify, interpolate, or estimate federal vehicle data.</strong></p>
+
+    <p>What NHTSA reports through the VPIC API is exactly what we display. If NHTSA's database says a vehicle has a 2.5L 4-cylinder engine, that's what we show. We don't "clean up" data, we don't fill in missing fields with estimates, and we don't override federal data with information from other sources.</p>
+
+    <p><strong>Important caveat:</strong> NHTSA's data is only as accurate as what manufacturers submit. If a manufacturer submits incorrect information to NHTSA (wrong engine size, incorrect GVWR, missing safety equipment), that error passes through to our decode results. NHTSA periodically audits manufacturer submissions, but errors do occur.</p>
+
+    <p>If you decode a VIN and the results don't match your vehicle's actual specifications, the most likely explanation is that the manufacturer submitted incorrect data to NHTSA. We recommend verifying critical specifications against your vehicle's door jamb sticker and owner's manual.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Corrections Policy</h2>
+    <p>If you find inaccurate information on Car Alpha, we want to know about it.</p>
+
+    <p><strong>How to report data issues:</strong> Email <a href="mailto:corrections@caralpha.com">corrections@caralpha.com</a> with:</p>
+    <ul>
+      <li>The page URL where you found the issue</li>
+      <li>What information appears to be incorrect</li>
+      <li>What you believe the correct information should be</li>
+      <li>Source documentation if available (state statute, manufacturer spec sheet, official publication)</li>
+    </ul>
+
+    <p><strong>Our correction process:</strong></p>
+    <ol>
+      <li>We verify the reported issue against authoritative sources</li>
+      <li>If confirmed incorrect, we update our data within 5 business days</li>
+      <li>For VIN decode errors, we report the issue to NHTSA since they maintain the authoritative database</li>
+      <li>We respond to the reporter with the outcome</li>
+    </ol>
+
+    <p>We maintain a corrections log at <a href="/about/">our About page</a>.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Third-Party Relationships</h2>
+    <p>Car Alpha has affiliate partnerships with automotive service providers. Here's how those relationships work and what they do (and don't) influence:</p>
+
+    <p><strong>What affiliate partnerships are:</strong> Commercial relationships where we receive a commission if you click a link to a partner service and make a purchase. These partnerships help us keep the free VIN decoder and recall checker available at no cost.</p>
+
+    <p><strong>What affiliate partners don't influence:</strong></p>
+    <ul>
+      <li>Vehicle data we display (sourced exclusively from government databases)</li>
+      <li>Recall information (comes directly from NHTSA)</li>
+      <li>State-specific regulatory information (sourced from official state publications)</li>
+      <li>Editorial content in our guides (researched and written independently)</li>
+    </ul>
+
+    <p><strong>How affiliate links are marked:</strong> All affiliate links are clearly disclosed either inline or in page-level notices. See our complete <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+
+    <p><strong>Data sharing:</strong> We do not share VINs, vehicle information, or user data with affiliate partners. When you click an affiliate link, the partner receives standard click attribution data (that you came from Car Alpha) but no information about your vehicle or browsing history.</p>
+
+    <p>For complete details on how we handle affiliate relationships, see our <a href="/editorial-standards/">Editorial Standards</a>.</p>
+  </section>
+
+  <section class="glass-card">
+    <h2>Related Resources</h2>
+    <ul>
+      <li><a href="/methodology/">Our Methodology</a> — Technical details on how we build vehicle intelligence</li>
+      <li><a href="/editorial-standards/">Editorial Standards</a> — How we research and write guides</li>
+      <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a> — Complete disclosure of commercial relationships</li>
+      <li><a href="/vin-decoder/">VIN Decoder</a> — Decode any VIN with data directly from NHTSA</li>
+      <li><a href="/recall-checker/">Recall Checker</a> — Check for open safety recalls</li>
+    </ul>
+  </section>
+</article>

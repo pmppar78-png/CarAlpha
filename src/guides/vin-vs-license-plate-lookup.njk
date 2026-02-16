@@ -1,0 +1,814 @@
+---
+layout: layouts/guide.njk
+title: "VIN Lookup vs. License Plate Lookup: Key Differences Explained"
+description: "Understand the differences between VIN lookups and license plate lookups. Learn what each reveals, when to use which, privacy considerations, accuracy differences, and which method is better for used car buying."
+permalink: /guides/vin-vs-license-plate-lookup/
+date: 2026-02-16
+author: "Paul Paradis"
+category: "VIN Education"
+readingTime: 16
+sidebar: monetization
+toc:
+  - id: overview
+    text: "VIN vs. License Plate: Quick Comparison"
+  - id: what-is-vin
+    text: "What a VIN Lookup Reveals"
+  - id: what-is-plate
+    text: "What a License Plate Lookup Reveals"
+  - id: data-sources
+    text: "Data Sources Compared"
+  - id: accuracy
+    text: "Accuracy and Reliability"
+  - id: privacy
+    text: "Privacy and Legal Considerations"
+  - id: when-use-vin
+    text: "When to Use a VIN Lookup"
+  - id: when-use-plate
+    text: "When to Use a License Plate Lookup"
+  - id: used-car-buying
+    text: "Which Is Better for Used Car Buying?"
+  - id: limitations
+    text: "Limitations of Each Method"
+  - id: best-approach
+    text: "The Best Approach: Use Both"
+  - id: faq
+    text: "Frequently Asked Questions"
+relatedGuides:
+  - title: "How to Decode Any VIN"
+    url: "/guides/how-to-decode-any-vin/"
+    description: "Complete guide to VIN decoding."
+  - title: "How to Check a Car Before Buying"
+    url: "/guides/how-to-check-car-before-buying/"
+    description: "Pre-purchase inspection guide."
+  - title: "Carfax vs. Free VIN Lookup"
+    url: "/guides/carfax-vs-vin-lookup/"
+    description: "Free vs. paid vehicle reports."
+breadcrumbs:
+  - label: "Home"
+    url: "/"
+  - label: "Guides"
+    url: "/guides/"
+  - label: "VIN vs. License Plate Lookup"
+---
+
+<p class="lead">When researching a vehicle, you have two primary identification methods: VIN lookups and license plate lookups. While they may seem similar, they differ dramatically in what they reveal, their accuracy, legal restrictions, and usefulness for car buyers.</p>
+
+<p>This comprehensive guide explains the critical differences between VIN and license plate lookups, helping you understand which method to use for your specific needs and why VIN lookups are the gold standard for vehicle research.</p>
+
+<section id="overview" class="guide-section">
+  <h2>VIN vs. License Plate: Quick Comparison</h2>
+
+  <p>Before diving into details, here's a side-by-side comparison of VIN lookups versus license plate lookups:</p>
+
+  <div class="comparison-table-wrapper">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>VIN Lookup</th>
+          <th>License Plate Lookup</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Data Revealed</strong></td>
+          <td>140+ manufacturer specs, safety features, recalls, engine details, assembly location</td>
+          <td>Registration info, owner name (restricted), basic make/model/year</td>
+        </tr>
+        <tr>
+          <td><strong>Cost</strong></td>
+          <td>Free (basic decode)</td>
+          <td>Often paid or restricted</td>
+        </tr>
+        <tr>
+          <td><strong>Accuracy</strong></td>
+          <td>Extremely high (federal database with validation)</td>
+          <td>Varies by state (registration data can be outdated)</td>
+        </tr>
+        <tr>
+          <td><strong>Privacy Restrictions</strong></td>
+          <td>None (public information)</td>
+          <td>Heavy restrictions (DPPA compliance required)</td>
+        </tr>
+        <tr>
+          <td><strong>Permanence</strong></td>
+          <td>Permanent (VIN stays with vehicle for life)</td>
+          <td>Temporary (plates change with sale, registration, state)</td>
+        </tr>
+        <tr>
+          <td><strong>Legality</strong></td>
+          <td>Completely legal for anyone</td>
+          <td>Restricted to legitimate uses (law enforcement, insurance, etc.)</td>
+        </tr>
+        <tr>
+          <td><strong>Best For</strong></td>
+          <td>Used car buying, recalls, parts, insurance quotes, specifications</td>
+          <td>Law enforcement, hit-and-run investigation, towing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The fundamental difference: a <strong>VIN (Vehicle Identification Number)</strong> is a permanent, federally-standardized 17-character code assigned by the manufacturer that identifies a specific vehicle and never changes. A <strong>license plate</strong> is a temporary state-issued registration identifier that can change whenever a vehicle is sold, re-registered, or moved to a different state.</p>
+
+  <p>For consumers, especially used car buyers, <a href="/vin-decoder/">VIN lookups</a> provide substantially more useful information with no legal restrictions, while license plate lookups are primarily tools for law enforcement and authorized entities.</p>
+</section>
+
+<section id="what-is-vin" class="guide-section">
+  <h2>What a VIN Lookup Reveals</h2>
+
+  <p>A VIN lookup decodes the 17-character Vehicle Identification Number to reveal comprehensive manufacturer specifications and federal safety data. Here's exactly what you can learn from a <a href="/free-vin-check/">free VIN check</a>:</p>
+
+  <h3>Manufacturer Specifications (140+ NHTSA Fields)</h3>
+
+  <p>When you decode a VIN using the <a href="https://vpic.nhtsa.dot.gov/api/">NHTSA VPIC database</a>, you access the official manufacturer-submitted data that includes:</p>
+
+  <ul>
+    <li><strong>Vehicle Make, Model, and Trim Level:</strong> The exact manufacturer and specific model variant</li>
+    <li><strong>Model Year:</strong> The year the manufacturer designated for the vehicle</li>
+    <li><strong>Body Style:</strong> Sedan, coupe, SUV, truck, hatchback, wagon, convertible, etc.</li>
+    <li><strong>Door Count:</strong> Number of doors including liftgates</li>
+    <li><strong>Seating Capacity:</strong> Total number of designed seating positions</li>
+  </ul>
+
+  <h3>Engine and Drivetrain Details</h3>
+
+  <ul>
+    <li><strong>Engine Type:</strong> Gasoline, diesel, electric, hybrid, plug-in hybrid, flex-fuel</li>
+    <li><strong>Engine Size:</strong> Displacement in liters or cubic inches</li>
+    <li><strong>Cylinder Count:</strong> 3, 4, 6, 8, 10, 12, or 16 cylinders</li>
+    <li><strong>Horsepower and Torque:</strong> Factory-rated power output</li>
+    <li><strong>Transmission Type:</strong> Automatic, manual, CVT, dual-clutch, etc.</li>
+    <li><strong>Transmission Speeds:</strong> Number of gears (e.g., 6-speed, 8-speed, 10-speed)</li>
+    <li><strong>Drivetrain:</strong> Front-wheel drive (FWD), rear-wheel drive (RWD), all-wheel drive (AWD), or four-wheel drive (4WD)</li>
+  </ul>
+
+  <h3>Manufacturing Information</h3>
+
+  <ul>
+    <li><strong>Plant Location:</strong> The specific factory where the vehicle was assembled</li>
+    <li><strong>Country of Origin:</strong> Where the vehicle was manufactured</li>
+    <li><strong>Manufacturer Name:</strong> The official company that built the vehicle</li>
+    <li><strong>Production Sequence:</strong> The vehicle's serial number in the production run</li>
+  </ul>
+
+  <h3>Safety Features and Equipment</h3>
+
+  <ul>
+    <li><strong>Airbag Locations:</strong> Front, side, curtain, knee airbags and their locations</li>
+    <li><strong>Standard Safety Equipment:</strong> ABS, ESC, traction control, lane departure warning, automatic emergency braking</li>
+    <li><strong>Restraint Systems:</strong> Seatbelt types and configurations</li>
+    <li><strong>NCAP Crash Test Eligibility:</strong> Whether the vehicle participates in federal safety testing</li>
+  </ul>
+
+  <h3>Federal Safety Recalls</h3>
+
+  <p>Most importantly, a <a href="/recall-checker/">VIN-based recall check</a> reveals all open safety recalls issued by NHTSA specific to that exact vehicle. This is critical information that a license plate lookup cannot provide.</p>
+
+  <div class="info-box">
+    <h4>Key Advantage: Permanence</h4>
+    <p>The VIN is permanently stamped into the vehicle's frame and never changes throughout the vehicle's entire lifetime. Even if the car is sold 10 times, moves across 5 states, and gets different license plates with each transfer, the VIN remains constant and always reveals the same accurate specifications.</p>
+  </div>
+
+  <p>Learn more about VIN decoding in our guide: <a href="/guides/how-to-decode-any-vin/">How to Decode Any VIN</a>.</p>
+</section>
+
+<section id="what-is-plate" class="guide-section">
+  <h2>What a License Plate Lookup Reveals</h2>
+
+  <p>A license plate lookup queries state Department of Motor Vehicles (DMV) registration databases to reveal information about the current registration status of a vehicle. However, what you can actually access varies dramatically by state and your legal authorization.</p>
+
+  <h3>Registration Information (Varies by State)</h3>
+
+  <p>If you have legal access to perform a license plate lookup, you may find:</p>
+
+  <ul>
+    <li><strong>Registered Owner Name:</strong> The person or entity listed as the vehicle's owner (heavily restricted by privacy laws)</li>
+    <li><strong>Vehicle Make, Model, and Year:</strong> Basic identification of the type of vehicle</li>
+    <li><strong>Vehicle Color:</strong> As recorded in registration records</li>
+    <li><strong>Registration Status:</strong> Whether the registration is current, expired, or suspended</li>
+    <li><strong>Registration Expiration Date:</strong> When the current registration period ends</li>
+    <li><strong>Insurance Status:</strong> In some states, whether the vehicle has valid insurance (varies widely)</li>
+  </ul>
+
+  <h3>State-by-State Availability</h3>
+
+  <p>Access to license plate lookup information is highly inconsistent:</p>
+
+  <ul>
+    <li><strong>No Public Access:</strong> Many states prohibit public license plate lookups entirely</li>
+    <li><strong>Restricted Access:</strong> Some states allow access only for specific legal purposes (insurance claims, law enforcement, towing)</li>
+    <li><strong>Paid Services:</strong> Third-party services claim to offer license plate lookups, but their data sources are often questionable and may violate state law</li>
+    <li><strong>Time Delays:</strong> Registration data can be weeks or months out of date depending on state database update schedules</li>
+  </ul>
+
+  <h3>What License Plate Lookups Do NOT Reveal</h3>
+
+  <p>Critical limitations of license plate lookups include:</p>
+
+  <ul>
+    <li>No manufacturer specifications (engine size, drivetrain, trim level)</li>
+    <li>No safety recall information</li>
+    <li>No accident history or damage records</li>
+    <li>No odometer readings or mileage history</li>
+    <li>No VIN (in most cases, states do not publicly link plates to VINs)</li>
+    <li>No factory equipment or options details</li>
+  </ul>
+
+  <div class="warning-box">
+    <h4>Legal Warning</h4>
+    <p>Attempting to look up someone's license plate for non-authorized purposes may violate the Driver's Privacy Protection Act (DPPA) and state privacy laws. Casual "license plate snooping" is illegal in most jurisdictions and can result in civil and criminal penalties.</p>
+  </div>
+
+  <p>Bottom line: License plate lookups reveal basic registration information (if you have legal access), but they tell you almost nothing useful about the vehicle itself. For vehicle research and used car buying, they are effectively useless compared to VIN lookups.</p>
+</section>
+
+<section id="data-sources" class="guide-section">
+  <h2>Data Sources Compared</h2>
+
+  <p>The stark differences between VIN lookups and license plate lookups stem from their fundamentally different data sources: federal databases versus state databases.</p>
+
+  <h3>VIN Lookup Data Source: NHTSA VPIC</h3>
+
+  <p>VIN lookups access the <strong>National Highway Traffic Safety Administration (NHTSA) Vehicle Product Information Catalog (VPIC)</strong>, a federal database that contains:</p>
+
+  <ul>
+    <li><strong>Manufacturer-Submitted Data:</strong> Automakers are required by federal law to submit detailed specifications for every VIN pattern to NHTSA</li>
+    <li><strong>Standardized Format:</strong> All data follows consistent federal standards regardless of manufacturer or state</li>
+    <li><strong>Real-Time Updates:</strong> The database is continuously updated with new vehicles and recall information</li>
+    <li><strong>Public Access:</strong> The VPIC API is completely free and open to the public with no restrictions</li>
+    <li><strong>Validation System:</strong> VINs include a check digit that validates authenticity and catches errors</li>
+  </ul>
+
+  <p>Our <a href="/vin-decoder/">free VIN decoder</a> uses the official NHTSA VPIC API to provide instant, accurate vehicle specifications with no cost or registration required.</p>
+
+  <h3>License Plate Lookup Data Source: State DMV Databases</h3>
+
+  <p>License plate lookups query <strong>individual state DMV registration databases</strong>, which have significant limitations:</p>
+
+  <ul>
+    <li><strong>Fragmented System:</strong> Each of the 50 states maintains its own separate database with different data standards</li>
+    <li><strong>Varying Access Rules:</strong> Every state has different laws about who can access registration data and for what purposes</li>
+    <li><strong>Delayed Updates:</strong> Registration information is only as current as the last renewal or update, which may be months old</li>
+    <li><strong>No Federal Oversight:</strong> State databases are not federally standardized or validated</li>
+    <li><strong>Privacy Restrictions:</strong> The Driver's Privacy Protection Act (DPPA) heavily restricts access to owner information</li>
+  </ul>
+
+  <h3>Federal vs. State Data: The Critical Difference</h3>
+
+  <p>The federal VPIC database for VIN lookups is designed for <em>vehicle identification and safety</em>. It contains permanent, manufacturer-submitted technical specifications that never change.</p>
+
+  <p>State DMV databases for license plate lookups are designed for <em>registration administration and law enforcement</em>. They contain temporary registration records that change frequently and are protected by privacy laws.</p>
+
+  <div class="info-box">
+    <h4>Why This Matters for Consumers</h4>
+    <p>When researching a vehicle you're considering buying, you need permanent technical specifications and recall information—exactly what VIN lookups provide from federal databases. You don't need temporary registration records—which is all license plate lookups can offer, and even those are legally restricted.</p>
+  </div>
+
+  <p>This fundamental difference in data sources explains why VIN lookups are free, accurate, and useful for car buyers, while license plate lookups are restricted, inconsistent, and provide little value for purchase decisions.</p>
+</section>
+
+<section id="accuracy" class="guide-section">
+  <h2>Accuracy and Reliability</h2>
+
+  <p>When it comes to accuracy and reliability, VIN lookups and license plate lookups are not even close to comparable.</p>
+
+  <h3>VIN Lookup Accuracy: Extremely High</h3>
+
+  <p>VIN lookups provide exceptional accuracy for several reasons:</p>
+
+  <h4>Manufacturer Submission to Federal Database</h4>
+  <p>Automakers are legally required to submit complete and accurate vehicle specifications to NHTSA before vehicles can be sold in the United States. This data goes directly into the VPIC database that VIN decoders access.</p>
+
+  <h4>Built-In Validation: The Check Digit</h4>
+  <p>Every VIN includes a check digit (the 9th character) calculated using a complex mathematical formula based on the other VIN characters. This allows instant validation that a VIN is legitimate and hasn't been mistyped or forged. Our <a href="/vin-decoder/">VIN decoder</a> automatically validates VINs using this check digit.</p>
+
+  <h4>Permanent and Unchanging</h4>
+  <p>Because the VIN is physically stamped into the vehicle's frame and never changes, the data associated with that VIN remains accurate for the vehicle's entire lifetime. A 2015 Honda Accord will decode to the exact same specifications today as it did when new.</p>
+
+  <h4>Standardized Encoding</h4>
+  <p>The VIN structure is standardized by federal regulation (49 CFR Part 565). Every manufacturer must follow the same encoding rules, ensuring consistent and predictable data.</p>
+
+  <h3>License Plate Lookup Accuracy: Highly Variable</h3>
+
+  <p>License plate lookups have significant accuracy challenges:</p>
+
+  <h4>Depends on State Database Accuracy</h4>
+  <p>Each state DMV maintains its own database with varying quality control. Data entry errors, delayed updates, and system limitations can result in inaccurate or outdated information.</p>
+
+  <h4>Registration Can Be Transferred</h4>
+  <p>In some states, license plates can be transferred from one vehicle to another when a person sells a car and buys a new one. This means a license plate number might temporarily be associated with the wrong vehicle in databases during the transfer process.</p>
+
+  <h4>Plates Can Be Swapped</h4>
+  <p>License plates are physically removable and can be (illegally) swapped between vehicles. If you see a license plate on a car in a parking lot, you have no guarantee that plate is actually the one currently registered to that vehicle.</p>
+
+  <h4>Update Delays</h4>
+  <p>DMV databases are updated when vehicles are registered, renewed, or transferred—not in real-time. A vehicle might have been sold weeks ago, but the DMV database may still show the previous owner until the new owner completes registration.</p>
+
+  <h4>No Built-In Validation</h4>
+  <p>Unlike VINs, license plate numbers have no check digit or validation system. Anyone can make up a plausible-sounding plate number, and there's no mathematical way to verify if it's legitimate without querying a DMV database.</p>
+
+  <div class="comparison-box">
+    <h4>Accuracy Comparison Example</h4>
+    <p><strong>VIN Lookup:</strong> Decode VIN <code>1HGBH41JXMN109186</code> and you'll get exact factory specifications for a specific 2021 Honda Accord, including engine size, transmission, drivetrain, safety features—guaranteed accurate because this data came directly from Honda to NHTSA.</p>
+    <p><strong>License Plate Lookup:</strong> Look up plate <code>ABC1234</code> and you might find registration records showing a "2021 Honda Accord" registered to someone—but you won't know the trim level, engine, whether it has recalls, or if those records are even current. The plate might have been transferred to a different vehicle last week.</p>
+  </div>
+
+  <p>For any purpose requiring accurate vehicle identification—especially used car buying—VIN lookups are the only reliable method.</p>
+</section>
+
+<section id="privacy" class="guide-section">
+  <h2>Privacy and Legal Considerations</h2>
+
+  <p>One of the most critical differences between VIN lookups and license plate lookups is their legal status and privacy implications.</p>
+
+  <h3>VIN Lookups: No Privacy Restrictions</h3>
+
+  <p>VIN decoding is completely unrestricted and legal for anyone to perform:</p>
+
+  <ul>
+    <li><strong>Public Information:</strong> VINs are considered public information with no privacy protection under federal law</li>
+    <li><strong>Visible on Vehicles:</strong> VINs are intentionally placed in visible locations (dashboard, driver's door jamb) specifically so anyone can read and decode them</li>
+    <li><strong>No Ownership Information:</strong> A VIN lookup reveals only manufacturing specifications and recalls—it does not reveal who owns or has owned the vehicle</li>
+    <li><strong>Free and Open Access:</strong> NHTSA provides free public API access to VIN decoding with no restrictions, permits, or authorization required</li>
+    <li><strong>Legitimate Consumer Use:</strong> VIN lookups are specifically intended for consumers to research vehicles before purchase, check for recalls, and verify specifications</li>
+  </ul>
+
+  <p>You can decode any VIN at any time for any reason using our <a href="/free-vin-check/">free VIN check tool</a> with no legal concerns whatsoever.</p>
+
+  <h3>License Plate Lookups: Heavy Legal Restrictions</h3>
+
+  <p>License plate lookups are heavily regulated by federal and state privacy laws:</p>
+
+  <h4>Driver's Privacy Protection Act (DPPA)</h4>
+
+  <p>The federal <strong>Driver's Privacy Protection Act of 1994</strong> (18 U.S.C. § 2721-2725) makes it illegal for states to disclose personal information from DMV records, including information obtained through license plate lookups, except for specific authorized purposes:</p>
+
+  <ul>
+    <li>Use by government agencies (law enforcement, courts, regulatory bodies)</li>
+    <li>Motor vehicle safety and theft prevention</li>
+    <li>Motor vehicle emissions and safety recall notices</li>
+    <li>Insurance investigations and underwriting</li>
+    <li>Legitimate business uses (background checks with consent, employment verification)</li>
+    <li>Private investigative services in connection with litigation</li>
+    <li>Service of process and enforcement of judgments</li>
+  </ul>
+
+  <h4>State Privacy Laws</h4>
+
+  <p>Many states have additional privacy laws that further restrict license plate lookups. Some states:</p>
+
+  <ul>
+    <li>Prohibit public access to license plate lookup tools entirely</li>
+    <li>Require proof of permissible purpose before allowing lookups</li>
+    <li>Impose criminal penalties for unauthorized access to DMV records</li>
+    <li>Allow civil lawsuits against parties who unlawfully obtain DMV information</li>
+  </ul>
+
+  <h4>The Key Legal Distinction</h4>
+
+  <p>VIN lookups reveal only <em>vehicle information</em> (specifications, recalls, manufacturing data)—no personal information about any individual. License plate lookups reveal <em>personal information</em> about vehicle owners, which is why they're protected by privacy laws.</p>
+
+  <div class="warning-box">
+    <h4>Legal Risk of Unauthorized License Plate Lookups</h4>
+    <p>Using a license plate lookup service for casual purposes—such as identifying a neighbor's car, finding out who owns an interesting vehicle, or researching someone's registration status out of curiosity—may violate the DPPA and state laws. Violations can result in civil liability up to $2,500 per violation plus attorney's fees, and potentially criminal charges.</p>
+  </div>
+
+  <h3>Bottom Line on Privacy and Legality</h3>
+
+  <p>For consumers, VIN lookups are the safe, legal, and appropriate method for vehicle research. License plate lookups are tools for law enforcement and authorized entities—not for casual consumer use.</p>
+
+  <p>When <a href="/guides/how-to-check-car-before-buying/">checking a car before buying</a>, always ask the seller for the VIN (which they're required to provide) and perform a legal, free VIN lookup rather than attempting to look up their license plate.</p>
+</section>
+
+<section id="when-use-vin" class="guide-section">
+  <h2>When to Use a VIN Lookup</h2>
+
+  <p>VIN lookups are the appropriate choice for virtually all consumer vehicle research needs. Here are the most common and valuable use cases:</p>
+
+  <h3>1. Buying a Used Car</h3>
+  <p>This is the single most important use case. Before purchasing any used vehicle, decode the VIN to:</p>
+  <ul>
+    <li>Verify the seller's claims about make, model, trim level, and features</li>
+    <li>Confirm engine size, transmission type, and drivetrain</li>
+    <li>Check for open safety recalls that the seller may not have disclosed</li>
+    <li>Ensure the vehicle specifications match what you're expecting</li>
+    <li>Identify the exact manufacturing plant and model year</li>
+  </ul>
+  <p>Start with our <a href="/vin-decoder/">free VIN decoder</a> to get complete specifications instantly, then consider a paid vehicle history report if you're serious about the purchase.</p>
+
+  <h3>2. Checking for Safety Recalls</h3>
+  <p>Safety recalls are issued based on VIN ranges, making VIN-based <a href="/recall-checker/">recall checks</a> the only accurate method to determine if a specific vehicle has open recalls. You cannot check recalls by license plate.</p>
+
+  <h3>3. Getting Insurance Quotes</h3>
+  <p>Insurance companies need accurate vehicle specifications to provide quotes. Providing the VIN ensures you get a quote for the exact vehicle with the correct engine, safety features, and trim level. Get instant quotes at <a href="/go/insurance/">top insurance providers</a>.</p>
+
+  <h3>4. Verifying Vehicle Specifications</h3>
+  <p>Use a VIN lookup when you need to confirm:</p>
+  <ul>
+    <li>Engine size and horsepower for performance comparison</li>
+    <li>Whether a vehicle has specific safety features (ESC, airbags, etc.)</li>
+    <li>Exact trim level and factory options</li>
+    <li>Manufacturing origin for "Made in America" or import status</li>
+  </ul>
+
+  <h3>5. Ordering Parts and Accessories</h3>
+  <p>Auto parts retailers and dealerships use VINs to ensure they provide the correct parts for your specific vehicle. Different engine options, transmissions, and trim levels require different parts—the VIN eliminates any guesswork.</p>
+
+  <h3>6. Fleet Management</h3>
+  <p>Businesses managing vehicle fleets use VIN lookups to:</p>
+  <ul>
+    <li>Track recall compliance across all fleet vehicles</li>
+    <li>Maintain accurate records of vehicle specifications</li>
+    <li>Schedule maintenance based on manufacturer specifications</li>
+    <li>Process insurance and registration for fleet vehicles</li>
+  </ul>
+
+  <h3>7. Researching Classic or Collectible Cars</h3>
+  <p>VIN decoding helps collectors verify authenticity, manufacturing details, and originality of classic vehicles. The VIN reveals the original factory specifications, which is critical for valuation and restoration.</p>
+
+  <div class="info-box">
+    <h4>Always Start with the VIN</h4>
+    <p>For any vehicle-related research, get the VIN first. It's printed on the title, registration, insurance card, and visible through the windshield on the dashboard. Sellers are legally required to provide the VIN to potential buyers. Use our <a href="/vin-decoder/">VIN decoder</a> to get instant, free results.</p>
+  </div>
+</section>
+
+<section id="when-use-plate" class="guide-section">
+  <h2>When to Use a License Plate Lookup</h2>
+
+  <p>License plate lookups have limited legitimate use cases, primarily for law enforcement, legal purposes, and specific authorized entities. Here are the situations where license plate lookups are appropriate:</p>
+
+  <h3>1. Parking Lot Hit-and-Run (Report to Police)</h3>
+  <p>If someone damages your vehicle in a parking lot and flees, note the license plate number and report it to police. Law enforcement can use the plate to identify the registered owner and pursue the case. Do not attempt to look up the plate yourself—provide it to the authorities.</p>
+
+  <h3>2. Law Enforcement Purposes</h3>
+  <p>Police use license plate lookups for:</p>
+  <ul>
+    <li>Identifying suspects and witnesses</li>
+    <li>Locating stolen vehicles</li>
+    <li>Verifying registration status during traffic stops</li>
+    <li>Investigating traffic violations and crimes</li>
+  </ul>
+
+  <h3>3. Towing Companies and Parking Enforcement</h3>
+  <p>Licensed towing companies and parking authorities with proper authorization can look up plates to:</p>
+  <ul>
+    <li>Contact vehicle owners about towed vehicles</li>
+    <li>Verify parking permits and registration</li>
+    <li>Enforce parking regulations</li>
+  </ul>
+
+  <h3>4. Insurance Claims and Investigations</h3>
+  <p>Insurance companies investigating claims may use license plate lookups as part of legitimate insurance underwriting and claims processing, which is a DPPA-authorized purpose.</p>
+
+  <h3>5. Identifying a Vehicle When VIN Is Unavailable</h3>
+  <p>In rare situations where you need to identify a vehicle but cannot access the VIN (such as a vehicle seen committing a crime), the license plate may be the only available identifier to provide to authorities.</p>
+
+  <h3>6. Verifying Registration Status (Authorized Users Only)</h3>
+  <p>In some states, authorized entities can verify whether a vehicle's registration is current and valid using the license plate.</p>
+
+  <h3>What License Plate Lookups Are NOT For</h3>
+
+  <p>License plate lookups should <strong>never</strong> be used for:</p>
+
+  <ul>
+    <li>Researching a vehicle you're considering buying (use the VIN instead)</li>
+    <li>Finding out who owns an interesting car you saw</li>
+    <li>Investigating a neighbor or acquaintance's vehicle</li>
+    <li>Dating or romantic purposes ("I saw someone attractive, let me find out who they are")</li>
+    <li>Stalking, harassment, or intimidation</li>
+    <li>Any purpose not explicitly authorized by DPPA</li>
+  </ul>
+
+  <div class="warning-box">
+    <h4>Don't Use License Plate Lookups for Used Car Buying</h4>
+    <p>If you're researching a used car for purchase, DO NOT attempt to look up the seller's license plate. This is legally questionable and practically useless—the plate reveals no meaningful information about the vehicle itself. Instead, ask the seller for the VIN (which they're required to provide) and use our <a href="/free-vin-check/">free VIN check tool</a> to get comprehensive vehicle specifications and recall data legally and instantly.</p>
+  </div>
+
+  <p>For average consumers, license plate lookups have virtually no legitimate use cases. VIN lookups provide everything you need for vehicle research without any legal complications.</p>
+</section>
+
+<section id="used-car-buying" class="guide-section">
+  <h2>Which Is Better for Used Car Buying?</h2>
+
+  <p>For used car buying, VIN lookups are unequivocally and dramatically superior to license plate lookups. This isn't even a close comparison—VIN lookups are the definitive tool for vehicle research during the purchase process.</p>
+
+  <h3>Why VIN Lookups Win for Car Buying</h3>
+
+  <h4>1. VIN Is Permanent—Plates Are Temporary</h4>
+  <p>The VIN is physically stamped into the vehicle's frame and never changes. Even if a car has been sold 20 times and had 20 different license plates in 5 different states, the VIN remains constant and always identifies that specific vehicle with perfect accuracy.</p>
+
+  <p>License plates change with every sale, transfer, or state move. The plate on the car today may have been different last month and will likely be different next month when the new owner registers it. Plates tell you nothing permanent about the vehicle.</p>
+
+  <h4>2. VIN Reveals Detailed Specifications—Plates Reveal Almost Nothing</h4>
+  <p>A VIN lookup provides 140+ fields of manufacturer data including:</p>
+  <ul>
+    <li>Exact trim level and model variant</li>
+    <li>Engine specifications (size, cylinders, horsepower, fuel type)</li>
+    <li>Transmission type and gear count</li>
+    <li>Drivetrain configuration (FWD, RWD, AWD, 4WD)</li>
+    <li>Factory safety equipment and airbag locations</li>
+    <li>Original MSRP category and market class</li>
+  </ul>
+
+  <p>A license plate lookup (if you can even access it legally) reveals only basic registration info like "2021 Honda Accord"—no trim level, no engine details, no specifications that matter for purchase decisions.</p>
+
+  <h4>3. VIN Checks for Safety Recalls—Plates Don't</h4>
+  <p>Safety recalls are issued by VIN range. Our <a href="/recall-checker/">recall checker</a> uses the VIN to determine if a specific vehicle has open recalls that need to be repaired. This is critical safety information that every buyer must check.</p>
+
+  <p>License plate lookups cannot check for recalls because recalls are not associated with license plates—they're associated with VINs.</p>
+
+  <h4>4. VIN Lookups Are Free and Legal—Plate Lookups Are Restricted</h4>
+  <p>You can decode any VIN instantly and freely using our <a href="/vin-decoder/">VIN decoder</a> with no legal concerns. VIN decoding is explicitly intended for consumer vehicle research.</p>
+
+  <p>License plate lookups for casual vehicle research may violate the DPPA and state privacy laws. Even if you find a service that claims to offer license plate lookups, you're entering legally questionable territory for no benefit.</p>
+
+  <h4>5. Sellers Must Provide VINs—Not Plates</h4>
+  <p>Sellers are legally required to provide the VIN to potential buyers. It's printed on the title, registration, and visible on the vehicle itself. You have every right to request and decode the VIN.</p>
+
+  <p>Sellers are not required to allow you to look up their license plate, and attempting to do so without permission is invasive and potentially illegal.</p>
+
+  <h3>Real-World Used Car Buying Workflow</h3>
+
+  <p>Here's the correct approach to researching a used car, as detailed in our guide <a href="/guides/how-to-check-car-before-buying/">How to Check a Car Before Buying</a>:</p>
+
+  <ol>
+    <li><strong>Request the VIN</strong> from the seller before even viewing the vehicle</li>
+    <li><strong>Decode the VIN</strong> using our <a href="/free-vin-check/">free VIN check</a> to verify make, model, trim, engine, and specifications</li>
+    <li><strong>Check for open recalls</strong> using the VIN at our <a href="/recall-checker/">recall checker</a></li>
+    <li><strong>Compare specifications to the listing</strong> to ensure the seller's description is accurate</li>
+    <li><strong>If serious about buying, obtain a vehicle history report</strong> (Carfax, AutoCheck, or alternatives) using the VIN</li>
+    <li><strong>Inspect the vehicle in person</strong> and verify the VIN on the dashboard matches the VIN you researched</li>
+    <li><strong>Test drive and inspect</strong> or hire a pre-purchase inspection service</li>
+  </ol>
+
+  <p>Notice that license plates are not mentioned anywhere in this workflow—because they're completely irrelevant to making an informed purchase decision.</p>
+
+  <div class="comparison-box">
+    <h4>The Bottom Line</h4>
+    <p>For used car buying, VIN lookups provide every piece of information you need to make an informed decision: accurate specifications, safety recalls, vehicle identification, and the foundation for obtaining history reports. License plate lookups provide essentially nothing useful for purchase decisions and carry legal risks.</p>
+    <p>Always use the VIN. Never bother with license plates when researching a vehicle for purchase.</p>
+  </div>
+
+  <p>Compare free VIN lookups to paid services in our guide: <a href="/guides/carfax-vs-vin-lookup/">Carfax vs. Free VIN Lookup</a>.</p>
+</section>
+
+<section id="limitations" class="guide-section">
+  <h2>Limitations of Each Method</h2>
+
+  <p>While VIN lookups are vastly superior for vehicle research, it's important to understand what each method can and cannot tell you.</p>
+
+  <h3>VIN Lookup Limitations</h3>
+
+  <p>Even though VIN lookups provide comprehensive manufacturer specifications, they have boundaries:</p>
+
+  <h4>Does Not Show Accident History</h4>
+  <p>A free VIN decode reveals factory specifications, but it doesn't show if the vehicle has been in accidents or sustained damage. For accident history, you need a paid vehicle history report from Carfax, AutoCheck, or similar services.</p>
+
+  <h4>Does Not Show Mileage or Odometer History</h4>
+  <p>VIN decoding won't reveal how many miles are on the vehicle or whether the odometer has been tampered with. Mileage history requires a vehicle history report that pulls odometer readings from service records, inspections, and title transfers.</p>
+
+  <h4>Does Not Show Ownership History</h4>
+  <p>A VIN lookup doesn't reveal who currently owns the vehicle, who previously owned it, or how many owners it has had. This information is protected by privacy laws and requires authorized access to title records.</p>
+
+  <h4>Does Not Show Service or Maintenance Records</h4>
+  <p>The VIN identifies the vehicle and its specifications, but doesn't show service history, maintenance records, or repair history. Some paid services compile this data if repairs were done at dealerships or chain service centers that report to central databases.</p>
+
+  <h4>Does Not Show Open Liens or Financial Encumbrances</h4>
+  <p>A free VIN decode won't tell you if the vehicle has an outstanding loan or lien. This requires a title check through DMV records or a paid vehicle history report.</p>
+
+  <h4>Does Not Show Title Status (Clean, Salvage, Rebuilt)</h4>
+  <p>While VIN decoding reveals vehicle specifications, it doesn't show if the vehicle has a clean title, salvage title, rebuilt title, or other title brands. This requires accessing state title records through paid services.</p>
+
+  <h3>What VIN Lookups DO Provide</h3>
+
+  <p>To be clear, free VIN lookups provide:</p>
+  <ul>
+    <li>Complete manufacturer specifications (140+ NHTSA fields)</li>
+    <li>Open safety recalls from NHTSA</li>
+    <li>Manufacturing and assembly information</li>
+    <li>Original equipment and factory options</li>
+    <li>VIN validation and error checking</li>
+  </ul>
+
+  <p>This is substantial and valuable information—but for a complete picture before purchase, combine a free VIN decode with a paid vehicle history report.</p>
+
+  <h3>License Plate Lookup Limitations</h3>
+
+  <p>License plate lookups have far more severe limitations:</p>
+
+  <h4>Heavily Restricted Access</h4>
+  <p>The biggest limitation is that most consumers cannot legally perform license plate lookups due to DPPA restrictions. What you can't access, you can't use.</p>
+
+  <h4>No Specifications or Technical Details</h4>
+  <p>License plate lookups reveal no meaningful information about vehicle specifications, equipment, engine, transmission, or features.</p>
+
+  <h4>No Safety Recalls</h4>
+  <p>Recalls are issued by VIN, not license plate. A license plate lookup cannot tell you if a vehicle has open safety recalls.</p>
+
+  <h4>Temporary and Changes Frequently</h4>
+  <p>License plates are reassigned when vehicles are sold or moved between states. A plate lookup today may be completely different next month.</p>
+
+  <h4>State-Dependent Availability</h4>
+  <p>What you can learn from a license plate lookup (if authorized) varies dramatically by state. There is no standardization or consistency.</p>
+
+  <h4>Often Outdated</h4>
+  <p>DMV registration databases are only updated when someone registers or renews—not in real-time. The information may be weeks or months old.</p>
+
+  <h4>No History or Damage Records</h4>
+  <p>Like VIN lookups, license plate lookups don't show accident history, service records, or title status—but unlike VIN lookups, they also don't show specifications or recalls.</p>
+
+  <div class="info-box">
+    <h4>Limitations Summary</h4>
+    <p>VIN lookups have some limitations (no history or ownership data), but they provide enormous value through detailed specifications and recall information. License plate lookups have severe limitations (no specs, no recalls, restricted access, temporary) and provide minimal value for consumers.</p>
+  </div>
+</section>
+
+<section id="best-approach" class="guide-section">
+  <h2>The Best Approach: Use Both (When Appropriate)</h2>
+
+  <p>While VIN lookups are clearly superior for vehicle research, there are rare situations where license plate lookups serve a legitimate complementary purpose. Here's the optimal strategy:</p>
+
+  <h3>Standard Vehicle Research Workflow</h3>
+
+  <h4>Step 1: Start with a Free VIN Decode</h4>
+  <p>For any vehicle research—especially used car buying—begin by decoding the VIN:</p>
+  <ul>
+    <li>Use our <a href="/vin-decoder/">free VIN decoder</a> to get instant specifications</li>
+    <li>Verify the vehicle's make, model, trim, engine, and features</li>
+    <li>Check for open safety recalls using our <a href="/recall-checker/">recall checker</a></li>
+    <li>Confirm the seller's description matches the actual vehicle specifications</li>
+  </ul>
+
+  <h4>Step 2: Get a Vehicle History Report (If Buying)</h4>
+  <p>If you're seriously considering purchasing the vehicle, supplement your free VIN decode with a paid vehicle history report:</p>
+  <ul>
+    <li>Purchase a report from Carfax, AutoCheck, or alternative providers</li>
+    <li>Review accident history, title status, odometer readings, and ownership count</li>
+    <li>Look for red flags like salvage titles, odometer rollback, or structural damage</li>
+  </ul>
+  <p>Learn more about free vs. paid options: <a href="/guides/carfax-vs-vin-lookup/">Carfax vs. Free VIN Lookup</a>.</p>
+
+  <h4>Step 3: Inspect the Vehicle in Person</h4>
+  <p>No amount of research replaces physically inspecting the vehicle:</p>
+  <ul>
+    <li>Verify the VIN on the dashboard matches your research</li>
+    <li>Look for signs of damage, wear, or poor repairs</li>
+    <li>Test drive the vehicle to assess mechanical condition</li>
+    <li>Consider hiring a professional pre-purchase inspection</li>
+  </ul>
+
+  <h3>When to Involve License Plates</h3>
+
+  <p>License plates become relevant only in specific authorized situations:</p>
+
+  <h4>Law Enforcement Scenarios</h4>
+  <p>If you witness a crime, hit-and-run, or traffic violation where you can only see the license plate (not the VIN), note the plate number and report it to police. Do not attempt to look it up yourself.</p>
+
+  <h4>Insurance or Legal Proceedings</h4>
+  <p>If you're involved in an accident and exchange information with another driver, you'll typically note their license plate number along with their insurance information. Your insurance company may use that plate number as part of their authorized investigation.</p>
+
+  <h4>Parking or Towing</h4>
+  <p>If your vehicle is towed, the towing company will have used your license plate to identify and document the vehicle. This is an authorized use under DPPA.</p>
+
+  <h3>Recommended Workflow for Used Car Buying</h3>
+
+  <ol>
+    <li><strong>Request VIN from seller</strong> before viewing the vehicle</li>
+    <li><strong>Decode VIN for free</strong> at <a href="/vin-decoder/">Car Alpha</a> to verify specifications</li>
+    <li><strong>Check recalls</strong> at <a href="/recall-checker/">Car Alpha Recall Checker</a></li>
+    <li><strong>If specifications match expectations, schedule viewing</strong></li>
+    <li><strong>During viewing, verify dashboard VIN matches researched VIN</strong></li>
+    <li><strong>If interested after viewing, purchase vehicle history report</strong></li>
+    <li><strong>Review history report for accidents, title issues, odometer</strong></li>
+    <li><strong>If everything checks out, arrange pre-purchase inspection</strong></li>
+    <li><strong>Negotiate price based on condition and history</strong></li>
+    <li><strong>Complete purchase and transfer title/registration</strong></li>
+  </ol>
+
+  <p>License plates are not part of this workflow for buyers. The seller will handle their registration, and you'll get your own new plates after purchase.</p>
+
+  <div class="info-box">
+    <h4>The Golden Rule</h4>
+    <p>Use VIN lookups for vehicle research and specifications. Use license plates only when legally authorized for specific purposes (law enforcement, insurance, towing). Never substitute a license plate lookup for proper VIN-based vehicle research when buying a car.</p>
+  </div>
+
+  <p>For a complete guide to vehicle inspection before purchase, see <a href="/guides/how-to-check-car-before-buying/">How to Check a Car Before Buying</a>.</p>
+</section>
+
+<section id="faq" class="guide-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h3>Is a VIN lookup or license plate lookup more accurate?</h3>
+    <p>VIN lookups are dramatically more accurate. VINs are permanent identifiers decoded from a federal database (NHTSA VPIC) containing manufacturer-submitted specifications with built-in validation. License plate lookups query state DMV databases that can be outdated, contain errors, and reflect temporary registration information that changes with each sale or transfer. For vehicle specifications and recall information, VIN lookups are the only reliable method.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I find a VIN from a license plate number?</h3>
+    <p>Generally no, at least not legally or easily for consumers. State DMV databases do link license plates to VINs internally, but that information is protected by the Driver's Privacy Protection Act (DPPA) and is not publicly accessible. Law enforcement and authorized entities can access this link, but casual consumers cannot. If you need a vehicle's VIN, look at the dashboard (visible through the windshield), check the driver's door jamb, or ask the owner—don't attempt to reverse-lookup from the license plate.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is it legal to look up a license plate?</h3>
+    <p>It depends on your purpose and authorization. The Driver's Privacy Protection Act (DPPA) restricts access to DMV records, including license plate lookups, to specific authorized purposes like law enforcement, insurance investigations, court proceedings, and towing. Casual lookups for personal curiosity, identifying someone who owns a vehicle, or researching a car you're thinking about buying are not authorized purposes and may violate federal and state law. VIN lookups, by contrast, are completely legal for anyone for any reason.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Why is VIN lookup free but license plate lookup often paid?</h3>
+    <p>VIN decoding is free because the federal government (NHTSA) provides free public API access to the VPIC database as part of its mission to promote vehicle safety and consumer information. Our <a href="/vin-decoder/">VIN decoder</a> uses this free government data. License plate lookups require accessing state DMV databases, which are not free, not standardized, and heavily restricted by privacy laws. Companies that offer license plate lookups must pay for DMV data access (where legally permitted) and pass those costs to users—plus add profit margin. Many such services also operate in legal gray areas.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can a VIN lookup tell me who owns a vehicle?</h3>
+    <p>No. VIN decoding reveals only manufacturing specifications and safety recall information—no ownership data. Vehicle ownership is protected by privacy laws and maintained in state DMV title records, not in the federal VPIC database used for VIN decoding. If you need to verify ownership, you'll need to check the vehicle's title document (if the owner provides it) or obtain a vehicle history report that includes title records (which still won't show the current owner's personal information due to privacy protections).</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do license plates contain any vehicle information?</h3>
+    <p>Physically, no. The license plate number itself is just a random identifier assigned by the state—it doesn't encode any information about the vehicle like a VIN does. However, that plate number is linked in the DMV database to registration records that include basic vehicle info (make, model, year) and owner information. But accessing that database linkage is heavily restricted by law. The plate you see on a vehicle tells you nothing unless you have authorized access to query DMV databases.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Which lookup should I use before buying a used car?</h3>
+    <p>Always use a VIN lookup, never a license plate lookup. The VIN provides detailed manufacturer specifications, trim level, engine details, safety equipment, and open recall information—everything you need to verify the seller's description and make an informed decision. License plate lookups (even if you could access them legally) reveal only basic registration info and tell you nothing useful for evaluating a vehicle purchase. Use our <a href="/free-vin-check/">free VIN check</a> before buying any used car. See our complete guide: <a href="/guides/how-to-check-car-before-buying/">How to Check a Car Before Buying</a>.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I check for recalls using a license plate?</h3>
+    <p>No. Safety recalls are issued by VIN range because recalls affect specific vehicles based on manufacturing specifications, production dates, and component installations. License plates are state-issued registration identifiers that have no connection to federal safety recalls. To check if a vehicle has open recalls, you must use the VIN at our <a href="/recall-checker/">recall checker</a> or the NHTSA website. There is no way to check recalls by license plate.</p>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a VIN lookup or license plate lookup more accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VIN lookups are dramatically more accurate. VINs are permanent identifiers decoded from a federal database (NHTSA VPIC) containing manufacturer-submitted specifications with built-in validation. License plate lookups query state DMV databases that can be outdated, contain errors, and reflect temporary registration information that changes with each sale or transfer. For vehicle specifications and recall information, VIN lookups are the only reliable method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find a VIN from a license plate number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally no, at least not legally or easily for consumers. State DMV databases do link license plates to VINs internally, but that information is protected by the Driver's Privacy Protection Act (DPPA) and is not publicly accessible. Law enforcement and authorized entities can access this link, but casual consumers cannot. If you need a vehicle's VIN, look at the dashboard (visible through the windshield), check the driver's door jamb, or ask the owner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal to look up a license plate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your purpose and authorization. The Driver's Privacy Protection Act (DPPA) restricts access to DMV records, including license plate lookups, to specific authorized purposes like law enforcement, insurance investigations, court proceedings, and towing. Casual lookups for personal curiosity or researching a car you're thinking about buying are not authorized purposes and may violate federal and state law. VIN lookups are completely legal for anyone for any reason."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is VIN lookup free but license plate lookup often paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VIN decoding is free because the federal government (NHTSA) provides free public API access to the VPIC database as part of its mission to promote vehicle safety and consumer information. License plate lookups require accessing state DMV databases, which are not free, not standardized, and heavily restricted by privacy laws. Companies that offer license plate lookups must pay for DMV data access (where legally permitted) and pass those costs to users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a VIN lookup tell me who owns a vehicle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. VIN decoding reveals only manufacturing specifications and safety recall information—no ownership data. Vehicle ownership is protected by privacy laws and maintained in state DMV title records, not in the federal VPIC database used for VIN decoding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do license plates contain any vehicle information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Physically, no. The license plate number itself is just a random identifier assigned by the state—it doesn't encode any information about the vehicle like a VIN does. However, that plate number is linked in the DMV database to registration records that include basic vehicle info (make, model, year) and owner information. But accessing that database linkage is heavily restricted by law."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which lookup should I use before buying a used car?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always use a VIN lookup, never a license plate lookup. The VIN provides detailed manufacturer specifications, trim level, engine details, safety equipment, and open recall information—everything you need to verify the seller's description and make an informed decision. License plate lookups reveal only basic registration info and tell you nothing useful for evaluating a vehicle purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I check for recalls using a license plate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Safety recalls are issued by VIN range because recalls affect specific vehicles based on manufacturing specifications, production dates, and component installations. License plates are state-issued registration identifiers that have no connection to federal safety recalls. To check if a vehicle has open recalls, you must use the VIN."
+      }
+    }
+  ]
+}
+</script>

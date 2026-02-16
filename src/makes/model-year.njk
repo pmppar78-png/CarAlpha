@@ -76,6 +76,28 @@ eleventyComputed:
       </div>
     </div>
 
+    {# Common Issues & Ownership Tips #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} Ownership Guide</h2>
+      </div>
+      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed space-y-4">
+        <p>Understanding common ownership considerations for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} helps you make informed decisions about purchasing, maintaining, and insuring this vehicle.</p>
+
+        <h3 class="text-white font-bold text-base mt-4">Maintenance Considerations</h3>
+        <p>Regular maintenance is critical for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. {{ entry.makeName }} recommends following the manufacturer-specified service intervals for oil changes, fluid inspections, brake checks, and tire rotations. {% if entry.year < 2020 %}As a vehicle that is now several years old, inspect belts, hoses, and battery condition regularly. Vehicles of this age may also need timing belt or chain service depending on the engine type.{% elif entry.year < 2023 %}Pay attention to fluid levels, brake pad wear, and tire condition. Vehicles in this age range benefit from proactive maintenance that can prevent costly repairs down the road.{% else %}Newer vehicles still require regular maintenance to maintain warranty coverage and optimal performance. Follow the maintenance schedule in your owner's manual precisely.{% endif %}</p>
+
+        <h3 class="text-white font-bold text-base mt-4">Insurance Factors</h3>
+        <p>Insurance rates for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} are influenced by the model year, body style, engine specifications, safety equipment, theft rates, and repair costs specific to this vehicle. {% if entry.bodyType == "SUV" or entry.bodyType == "Crossover" %}SUVs and crossovers typically carry moderate insurance rates due to their safety features and lower theft rates compared to sports cars.{% elif entry.bodyType == "Truck" or entry.bodyType == "Pickup" %}Trucks and pickups may have higher insurance rates due to their size and repair costs, though specific rates vary by trim and engine configuration.{% elif entry.bodyType == "Sports Car" or entry.bodyType == "Coupe" %}Sports cars and coupes often carry higher insurance premiums due to performance capabilities, higher repair costs, and driver demographic statistics.{% else %}Sedans and passenger vehicles generally have competitive insurance rates, though specific factors like engine size and safety equipment affect your premium.{% endif %} <a href="/go/insurance/" rel="nofollow sponsored noopener" class="text-volt-400 hover:underline">Compare insurance rates</a> for your specific {{ entry.year }} {{ entry.name }} configuration.</p>
+
+        <h3 class="text-white font-bold text-base mt-4">Market Value Context</h3>
+        <p>{% if entry.year >= 2025 %}As a current or near-new model year, the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} holds strong market value. New and nearly-new vehicles depreciate most significantly in the first two years of ownership, typically losing 20-30% of their original value. If purchasing new, consider how quickly this depreciation affects your equity position.{% elif entry.year >= 2022 %}The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} is in the sweet spot for used car buyers: recent enough to have modern safety features and technology, while having already absorbed the steepest depreciation. Vehicles in this age range typically offer strong value relative to their condition and remaining useful life.{% elif entry.year >= 2018 %}The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} represents a value-oriented choice for buyers who prioritize affordability. Vehicles of this vintage have depreciated significantly, making them more accessible. However, factor in potential maintenance costs and check for any open recalls before purchasing.{% else %}The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} is well into its depreciation curve. While purchase prices are lower, carefully evaluate maintenance history, overall condition, and remaining useful life. A thorough <a href="/guides/how-to-check-car-before-buying/" class="text-volt-400 hover:underline">pre-purchase inspection</a> is essential for vehicles of this age.{% endif %}</p>
+
+        <h3 class="text-white font-bold text-base mt-4">Safety & Recall Awareness</h3>
+        <p>Always verify the recall status of any {{ entry.year }} {{ entry.makeName }} {{ entry.name }} you own or are considering purchasing. NHTSA issues recalls throughout a vehicle's lifetime, meaning new recalls can affect older vehicles at any time. All recall repairs are performed free of charge at authorized {{ entry.makeName }} dealerships, regardless of the vehicle's age or mileage. Use our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> or enter your VIN above to check for open recalls.</p>
+      </div>
+    </div>
+
     {# Ownership CTAs #}
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} Ownership Resources</h2>
@@ -96,6 +118,51 @@ eleventyComputed:
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Selling</h3>
           <p class="text-xs text-silver-400 leading-relaxed">Get instant offer quotes for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} from multiple buyers. Online platforms often beat dealer trade-in values by 10–20%.</p>
         </a>
+      </div>
+    </div>
+
+    {# FAQ Section #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} FAQ</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <details class="group">
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">How do I decode a {{ entry.year }} {{ entry.makeName }} {{ entry.name }} VIN?</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Enter the 17-character VIN from your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} into the decoder above or visit our <a href="/vin-decoder/" class="text-volt-400 hover:underline">free VIN decoder</a>. The VIN is located on the driver's side dashboard (visible through the windshield), the driver's door jamb sticker, your vehicle registration, or your insurance card.</p>
+        </details>
+        <details class="group">
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">Are there any recalls on the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Recall status varies by the specific vehicle. Enter your VIN in the decoder above to check for open recalls on your exact {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. You can also visit our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> for a dedicated recall lookup. All recall repairs are performed free at authorized {{ entry.makeName }} dealerships.</p>
+        </details>
+        <details class="group">
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">What should I check before buying a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Before purchasing, decode the VIN to verify the year, make, model, and trim match the listing. Check for open safety recalls. Get a vehicle history report to check for accidents, title brands, and odometer discrepancies. Have an independent mechanic perform a pre-purchase inspection. See our complete <a href="/guides/how-to-check-car-before-buying/" class="text-volt-400 hover:underline">used car buying guide</a> for detailed steps.</p>
+        </details>
+        <details class="group">
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">How much does insurance cost for a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Insurance costs depend on the specific trim, engine, safety features, your location, driving record, and coverage level. Decode the VIN to get exact vehicle specs, then <a href="/go/insurance/" rel="nofollow sponsored noopener" class="text-volt-400 hover:underline">compare insurance rates</a> from multiple carriers to find the best rate for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }}.</p>
+        </details>
+        <details class="group">
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">{% if entry.year < 2022 %}Is an extended warranty worth it for a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?{% else %}Is the factory warranty still active on a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?{% endif %}</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">{% if entry.year < 2022 %}For a {{ entry.year }} model, the factory warranty has likely expired. Whether an extended warranty makes sense depends on the vehicle's mileage, condition, and your risk tolerance. Decode the VIN to confirm exact specs, then <a href="/go/warranty/" rel="nofollow sponsored noopener" class="text-volt-400 hover:underline">compare extended warranty options</a> to evaluate coverage and pricing.{% else %}Factory warranty coverage depends on the purchase date and mileage. Most manufacturers provide 3-year/36,000-mile basic and 5-year/60,000-mile powertrain warranties. Decode the VIN and check your purchase documentation to determine remaining coverage.{% endif %}</p>
+        </details>
+      </div>
+    </div>
+
+    {# State-Specific Guides #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-6">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} by State</h2>
+      <p class="text-sm text-silver-400 mb-4">Insurance requirements, lemon law protections, and registration rules vary by state. View state-specific information for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}:</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
+        {% for st in states | limit(12) %}
+        <a href="/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/in/{{ st.slug }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
+          <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-xs">{{ st.abbreviation }}</div>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="mt-3 text-center">
+        <a href="/states/" class="text-sm text-volt-400 hover:underline">View all 50 states &rarr;</a>
       </div>
     </div>
 
