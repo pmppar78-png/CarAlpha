@@ -39,6 +39,10 @@ const AFFILIATE_PARTNERS: Record<string, { url: string; name: string }> = {
     url: "https://www.carfax.com/",
     name: "Carfax",
   },
+  mechanic: {
+    url: "https://www.yourmechanic.com/",
+    name: "YourMechanic",
+  },
   mechanics: {
     url: "https://www.yourmechanic.com/",
     name: "YourMechanic",
