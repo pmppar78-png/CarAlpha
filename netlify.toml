@@ -46,7 +46,7 @@
   to = "/"
   status = 301
 
-# Trailing slash normalization
+# Trailing slash normalization — section-level pages
 [[redirects]]
   from = "/vin-decoder"
   to = "/vin-decoder/"
@@ -87,7 +87,83 @@
   to = "/recalls/"
   status = 301
 
-# Sitemap convenience redirect
+# Trailing slash normalization — tool & content pages
+[[redirects]]
+  from = "/compare"
+  to = "/compare/"
+  status = 301
+
+[[redirects]]
+  from = "/free-vin-check"
+  to = "/free-vin-check/"
+  status = 301
+
+[[redirects]]
+  from = "/vin-number-lookup"
+  to = "/vin-number-lookup/"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/glossary"
+  to = "/glossary/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy/"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms/"
+  status = 301
+
+[[redirects]]
+  from = "/disclaimer"
+  to = "/disclaimer/"
+  status = 301
+
+[[redirects]]
+  from = "/cookie-policy"
+  to = "/cookie-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-disclosure"
+  to = "/affiliate-disclosure/"
+  status = 301
+
+[[redirects]]
+  from = "/editorial-standards"
+  to = "/editorial-standards/"
+  status = 301
+
+[[redirects]]
+  from = "/data-transparency"
+  to = "/data-transparency/"
+  status = 301
+
+[[redirects]]
+  from = "/methodology"
+  to = "/methodology/"
+  status = 301
+
+[[redirects]]
+  from = "/industry-resources"
+  to = "/industry-resources/"
+  status = 301
+
+# Sitemap convenience redirect (safety net for external references)
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap-index.xml"
