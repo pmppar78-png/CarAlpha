@@ -35,6 +35,12 @@ eleventyExcludeFromCollections: true
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.caralpha.com/recalls/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.caralpha.com/free-vin-check/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -42,6 +48,12 @@ eleventyExcludeFromCollections: true
   </url>
   <url>
     <loc>https://www.caralpha.com/vin-number-lookup/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.caralpha.com/compare/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -63,72 +75,6 @@ eleventyExcludeFromCollections: true
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/vin-decoding-guide/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/recalls-resale-value/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/state-title-rules-comparison/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/carfax-vs-vin-lookup/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/how-to-check-car-before-buying/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/how-to-decode-any-vin/</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/how-vin-fraud-works/</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/hidden-salvage-title-warning-signs/</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/vin-vs-license-plate-lookup/</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/how-dealerships-use-vin-data/</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.caralpha.com/guides/car-history-report-comparison/</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.caralpha.com/glossary/</loc>
@@ -206,14 +152,6 @@ eleventyExcludeFromCollections: true
     <lastmod>{{ item.date | dateFormat("yyyy-LL-dd") }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-{%- endfor %}
-{%- for tool in collections.tools %}
-  <url>
-    <loc>https://www.caralpha.com{{ tool.url }}</loc>
-    <lastmod>{{ tool.date | dateFormat("yyyy-LL-dd") }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 {%- endfor %}
 {%- for make in makes %}

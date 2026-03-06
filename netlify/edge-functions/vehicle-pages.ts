@@ -167,7 +167,7 @@ function footerHTML(): string {
       <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Tools</h4><ul class="space-y-2.5 text-sm"><li><a href="/vin-decoder/" class="text-silver-500 hover:text-volt-400 transition-colors">VIN Decoder</a></li><li><a href="/recalls/" class="text-silver-500 hover:text-volt-400 transition-colors">Recall Lookup</a></li><li><a href="/compare/" class="text-silver-500 hover:text-volt-400 transition-colors">Compare Vehicles</a></li></ul></div>
       <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Resources</h4><ul class="space-y-2.5 text-sm"><li><a href="/guides/" class="text-silver-500 hover:text-volt-400 transition-colors">Buying Guides</a></li><li><a href="/learn/" class="text-silver-500 hover:text-volt-400 transition-colors">Learn</a></li><li><a href="/learn/how-vin-decoding-works/" class="text-silver-500 hover:text-volt-400 transition-colors">How VIN Decoding Works</a></li><li><a href="/blog/" class="text-silver-500 hover:text-volt-400 transition-colors">Blog</a></li><li><a href="/states/" class="text-silver-500 hover:text-volt-400 transition-colors">State Laws</a></li><li><a href="/makes/" class="text-silver-500 hover:text-volt-400 transition-colors">All Makes</a></li></ul></div>
       <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Legal</h4><ul class="space-y-2.5 text-sm"><li><a href="/privacy/" class="text-silver-500 hover:text-volt-400 transition-colors">Privacy Policy</a></li><li><a href="/terms/" class="text-silver-500 hover:text-volt-400 transition-colors">Terms of Service</a></li><li><a href="/disclaimer/" class="text-silver-500 hover:text-volt-400 transition-colors">Disclaimer</a></li><li><a href="/affiliate-disclosure/" class="text-silver-500 hover:text-volt-400 transition-colors">Affiliate Disclosure</a></li></ul></div>
-      <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Company</h4><ul class="space-y-2.5 text-sm"><li><a href="/about/" class="text-silver-500 hover:text-volt-400 transition-colors">About Us</a></li><li><a href="/editorial-standards/" class="text-silver-500 hover:text-volt-400 transition-colors">Editorial Standards</a></li><li><a href="/contact/" class="text-silver-500 hover:text-volt-400 transition-colors">Contact</a></li><li><a href="/sitemap.xml" class="text-silver-500 hover:text-volt-400 transition-colors">Sitemap</a></li></ul></div>
+      <div><h4 class="text-xs font-bold text-silver-300 uppercase tracking-widest mb-4">Company</h4><ul class="space-y-2.5 text-sm"><li><a href="/about/" class="text-silver-500 hover:text-volt-400 transition-colors">About Us</a></li><li><a href="/editorial-standards/" class="text-silver-500 hover:text-volt-400 transition-colors">Editorial Standards</a></li><li><a href="/contact/" class="text-silver-500 hover:text-volt-400 transition-colors">Contact</a></li><li><a href="/sitemap-index.xml" class="text-silver-500 hover:text-volt-400 transition-colors">Sitemap</a></li></ul></div>
     </div>
     <div class="divider mb-8"></div>
     <div class="space-y-4">
@@ -481,6 +481,17 @@ ${authorityLinks()}
 // ---------------------------------------------------------------------------
 export default async (req: Request, _context: Context) => {
   const url = new URL(req.url);
+
+  // Enforce trailing slash — prevents "Page with redirect" in Google Search Console.
+  // Without this, Google may index both /makes/x/in/y and /makes/x/in/y/ as separate
+  // URLs, flag the canonical mismatch, and report redirect issues.
+  if (!url.pathname.endsWith("/")) {
+    return new Response(null, {
+      status: 301,
+      headers: { "Location": url.pathname + "/" + url.search },
+    });
+  }
+
   const params = parseRoute(url.pathname);
 
   if (!params) {
