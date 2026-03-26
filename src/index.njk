@@ -331,10 +331,73 @@ priority: 1.0
       <p class="mt-4 text-silver-400 max-w-lg mx-auto leading-relaxed">Our VIN intelligence tools work for vehicles registered in every US state and territory.</p>
     </div>
     <div class="flex flex-wrap justify-center gap-2">
-      {% set stateList = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"] %}
-      {% for state in stateList %}
-      <span class="px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.05] text-xs text-silver-400">{{ state }}</span>
+      {% for state in states %}
+      <a href="/states/{{ state.slug }}/" class="px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.05] text-xs text-silver-400 hover:text-volt-400 hover:border-volt-500/25 transition-all">{{ state.name }}</a>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ========== RECENT LOOKUPS ========== #}
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-6xl mx-auto px-4 py-24">
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-volt-500/15 bg-volt-500/[0.04] text-xs font-semibold text-volt-400 mb-5 uppercase tracking-widest">Trending</div>
+      <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">Recent Vehicle Lookups</h2>
+      <p class="mt-4 text-silver-400 max-w-lg mx-auto leading-relaxed">The latest vehicles checked on Car Alpha. Browse specs, recalls, and ownership guides for popular models.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+      {% for my in modelYears | limit(20) %}
+      <a href="/makes/{{ my.makeSlug }}/{{ my.slug }}/{{ my.year }}/" class="glass-card metallic-border rounded-xl p-3 text-center card-hover carbon-panel group">
+        <div class="text-sm font-bold text-white group-hover:text-volt-400 transition-colors">{{ my.year }} {{ my.name }}</div>
+        <div class="text-[10px] text-silver-500 mt-1">{{ my.makeName }}</div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-8">
+      <a href="/recent-lookups/" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-ghost text-volt-400 text-sm font-semibold">
+        View All Recent Lookups
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# ========== EXPLORE HUBS ========== #}
+<section class="relative">
+  <div class="divider"></div>
+  <div class="max-w-6xl mx-auto px-4 py-24">
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-volt-500/15 bg-volt-500/[0.04] text-xs font-semibold text-volt-400 mb-5 uppercase tracking-widest">Explore</div>
+      <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">Explore Our Vehicle Database</h2>
+      <p class="mt-4 text-silver-400 max-w-lg mx-auto leading-relaxed">Over {{ ((makes | length) * (states | length) + (models | length) * (states | length) + modelYears | length) | toLocaleString }} pages of vehicle intelligence — organized for fast access.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <a href="/vin-checker/" class="glass-card metallic-border rounded-2xl p-6 card-hover carbon-panel group">
+        <h3 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">VIN Checker</h3>
+        <p class="text-sm text-silver-400 mt-2 leading-relaxed">Decode any VIN instantly with full specs, recalls, and ownership intel.</p>
+      </a>
+      <a href="/cars-by-make/" class="glass-card metallic-border rounded-2xl p-6 card-hover carbon-panel group">
+        <h3 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">Cars by Make</h3>
+        <p class="text-sm text-silver-400 mt-2 leading-relaxed">Browse all {{ makes | length }} manufacturers from Acura to Volvo.</p>
+      </a>
+      <a href="/cars-by-model/" class="glass-card metallic-border rounded-2xl p-6 card-hover carbon-panel group">
+        <h3 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">Cars by Model</h3>
+        <p class="text-sm text-silver-400 mt-2 leading-relaxed">Find any of {{ models | length }} vehicle models with year-by-year data.</p>
+      </a>
+      <a href="/popular-cars/" class="glass-card metallic-border rounded-2xl p-6 card-hover carbon-panel group">
+        <h3 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">Popular Cars</h3>
+        <p class="text-sm text-silver-400 mt-2 leading-relaxed">Most searched vehicles on Car Alpha, updated regularly.</p>
+      </a>
+      <a href="/recent-lookups/" class="glass-card metallic-border rounded-2xl p-6 card-hover carbon-panel group">
+        <h3 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">Recent Lookups</h3>
+        <p class="text-sm text-silver-400 mt-2 leading-relaxed">Latest vehicles checked on the platform — trending now.</p>
+      </a>
+      <a href="/sitemap-html/" class="glass-card metallic-border rounded-2xl p-6 card-hover carbon-panel group">
+        <h3 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">Full Site Directory</h3>
+        <p class="text-sm text-silver-400 mt-2 leading-relaxed">Complete index of every page on Car Alpha.</p>
+      </a>
     </div>
   </div>
 </section>

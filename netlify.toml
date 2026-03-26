@@ -53,6 +53,36 @@
   status = 301
 
 [[redirects]]
+  from = "/vin-checker"
+  to = "/vin-checker/"
+  status = 301
+
+[[redirects]]
+  from = "/cars-by-make"
+  to = "/cars-by-make/"
+  status = 301
+
+[[redirects]]
+  from = "/cars-by-model"
+  to = "/cars-by-model/"
+  status = 301
+
+[[redirects]]
+  from = "/popular-cars"
+  to = "/popular-cars/"
+  status = 301
+
+[[redirects]]
+  from = "/recent-lookups"
+  to = "/recent-lookups/"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap-html"
+  to = "/sitemap-html/"
+  status = 301
+
+[[redirects]]
   from = "/recall-checker"
   to = "/recall-checker/"
   status = 301

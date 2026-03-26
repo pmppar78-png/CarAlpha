@@ -1,0 +1,88 @@
+---
+layout: layouts/base.njk
+title: "Browse Cars by Model — All Vehicle Models | Car Alpha"
+description: "Browse all vehicle models from every manufacturer. Find VIN decoder, specs, recalls, and year-by-year ownership guides for every car model."
+permalink: /cars-by-model/
+priority: 0.8
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Browse Cars by Model",
+  "description": "Complete directory of all vehicle models with VIN decoding, specifications, and recall information.",
+  "url": "https://www.caralpha.com/cars-by-model/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Car Alpha",
+    "url": "https://www.caralpha.com"
+  }
+}
+</script>
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Cars by Model" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm carbon-panel mb-10">
+      <div class="steel-header px-8 py-5">
+        <h1 class="text-3xl md:text-4xl font-black text-white">Browse Cars by <span class="text-gradient">Model</span></h1>
+        <p class="mt-2 text-sm text-silver-400">{{ models | length }} vehicle models across {{ makes | length }} manufacturers</p>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 leading-relaxed">Find any vehicle model in our comprehensive database. Each model page includes VIN decoding, year-by-year specifications, safety recalls, and state-specific ownership resources from official NHTSA data.</p>
+      </div>
+    </div>
+
+    {# Models grouped by make #}
+    {% for make in makes %}
+    {% set makeModels = [] %}
+    {% for model in models %}{% if model.makeSlug == make.slug %}{% set makeModels = (makeModels.push(model), makeModels) %}{% endif %}{% endfor %}
+    {% if makeModels | length > 0 %}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-6">
+      <div class="steel-header px-8 py-4">
+        <h2 class="text-lg font-bold text-white">
+          <a href="/makes/{{ make.slug }}/" class="hover:text-volt-400 transition-colors">{{ make.name }}</a>
+          <span class="text-sm font-normal text-silver-500 ml-2">{{ makeModels | length }} models</span>
+        </h2>
+      </div>
+      <div class="px-8 py-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          {% for model in makeModels %}
+          <a href="/makes/{{ model.makeSlug }}/{{ model.slug }}/" class="flex items-center justify-between px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.05] hover:border-volt-500/25 hover:text-volt-400 transition-all group">
+            <span class="text-sm text-silver-300 group-hover:text-volt-400">{{ model.name }}</span>
+            <span class="text-xs text-silver-500">{{ model.bodyType }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    {# Cross-links #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel">
+      <div class="steel-header px-8 py-4">
+        <h2 class="text-xl font-bold text-white">More Ways to Browse</h2>
+      </div>
+      <div class="px-8 py-6 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/cars-by-make/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">Cars by Make</h3>
+          <p class="text-xs text-silver-500 mt-1">Browse by manufacturer</p>
+        </a>
+        <a href="/popular-cars/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">Popular Cars</h3>
+          <p class="text-xs text-silver-500 mt-1">Most searched vehicles</p>
+        </a>
+        <a href="/vin-checker/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">VIN Checker</h3>
+          <p class="text-xs text-silver-500 mt-1">Decode any VIN instantly</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

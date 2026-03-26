@@ -10,6 +10,58 @@ eleventyComputed:
   description: "Free VIN decoder and recall check for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Decode any {{ entry.year }} {{ entry.name }} VIN for full specs, safety recalls, and ownership resources."
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Vehicle",
+  "name": "{{ entry.year }} {{ entry.makeName }} {{ entry.name }}",
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "{{ entry.makeName }}"
+  },
+  "model": "{{ entry.name }}",
+  "vehicleModelDate": "{{ entry.year }}",
+  "bodyType": "{{ entry.bodyType }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ entry.makeName }}"
+  },
+  "url": "https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I decode a {{ entry.year }} {{ entry.makeName }} {{ entry.name }} VIN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the 17-character VIN from your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} into Car Alpha's free VIN decoder. The VIN is located on the driver's side dashboard, the driver's door jamb sticker, your vehicle registration, or your insurance card."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any recalls on the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recall status varies by the specific vehicle. Enter your VIN to check for open recalls on your exact {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. All recall repairs are performed free at authorized {{ entry.makeName }} dealerships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I check before buying a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Decode the VIN to verify year, make, model, and trim match the listing. Check for open safety recalls. Get a vehicle history report. Have an independent mechanic perform a pre-purchase inspection."
+      }
+    }
+  ]
+}
+</script>
+
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: entry.makeName, url: "/makes/" + entry.makeSlug + "/" }, { label: entry.name, url: "/makes/" + entry.makeSlug + "/" + entry.slug + "/" }, { label: entry.year | string }] %}
 
 <section class="relative overflow-hidden">
