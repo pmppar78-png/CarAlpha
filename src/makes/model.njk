@@ -6,11 +6,52 @@ pagination:
   alias: model
 permalink: "/makes/{{ model.makeSlug }}/{{ model.slug }}/"
 eleventyComputed:
-  title: "{{ model.makeName }} {{ model.name }} — VIN Decoder & Recalls"
-  description: "Free VIN decoder and recall checker for the {{ model.makeName }} {{ model.name }}. Get full specs, safety recalls, and ownership insights."
+  title: "{{ model.makeName }} {{ model.name }} VIN Decoder & Recalls (2026) — Free"
+  description: "Free VIN decoder and recall checker for the {{ model.makeName }} {{ model.name }} ({{ model.yearStart }}–{% if model.yearEnd %}{{ model.yearEnd }}{% else %}Present{% endif %}). Get full specs, open safety recalls, and ownership insights for any {{ model.name }} VIN."
 ---
 
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: model.makeName, url: "/makes/" + model.makeSlug + "/" }, { label: model.name }] %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I decode a {{ model.makeName }} {{ model.name }} VIN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your 17-character VIN into Car Alpha's free decoder to instantly get full specs, recall history, and ownership guidance for your {{ model.makeName }} {{ model.name }} using official NHTSA data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the {{ model.makeName }} {{ model.name }} have any recalls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ model.makeName }} {{ model.name }} vehicles may have safety recalls issued by NHTSA. Enter your specific VIN to check for open recalls. All recall repairs are free at authorized {{ model.makeName }} dealerships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What years was the {{ model.makeName }} {{ model.name }} produced?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The {{ model.makeName }} {{ model.name }} has been produced from {{ model.yearStart }} to {% if model.yearEnd %}{{ model.yearEnd }}{% else %}present{% endif %}. Browse all available model years on Car Alpha for year-specific specs and recall data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is {{ model.makeName }} {{ model.name }} VIN lookup free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Car Alpha provides 100% free VIN decoding for all {{ model.makeName }} {{ model.name }} model years using official NHTSA VPIC data. No account required — get instant results including specs, recalls, and AI-powered guidance."
+      }
+    }
+  ]
+}
+</script>
 
 <section class="relative overflow-hidden">
   <div class="absolute inset-0 gradient-mesh"></div>
@@ -139,6 +180,37 @@ eleventyComputed:
             <div class="text-[10px] text-silver-500 mt-0.5">{{ state.abbreviation }}</div>
           </a>
         {% endfor %}
+      </div>
+    </div>
+
+    {# Guides & Resources — authority internal links #}
+    <div class="mb-12">
+      <h2 class="text-xl font-black text-white mb-6">{{ model.makeName }} {{ model.name }} Guides & Resources</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <a href="/guides/how-to-decode-any-vin/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">How to Decode Any VIN</div>
+          <div class="text-[10px] text-silver-500 mt-1">Complete guide to reading your {{ model.name }}'s VIN</div>
+        </a>
+        <a href="/guides/how-to-check-car-before-buying/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Pre-Purchase Checklist</div>
+          <div class="text-[10px] text-silver-500 mt-1">What to check before buying a used {{ model.name }}</div>
+        </a>
+        <a href="/guides/recalls-resale-value/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Recalls & Resale Value</div>
+          <div class="text-[10px] text-silver-500 mt-1">How recalls affect your {{ model.name }}'s value</div>
+        </a>
+        <a href="/guides/insurance/best-car-insurance/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Best Car Insurance 2026</div>
+          <div class="text-[10px] text-silver-500 mt-1">Top-rated insurance providers for your {{ model.name }}</div>
+        </a>
+        <a href="/guides/carfax-vs-vin-lookup/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Carfax vs. Free VIN Lookup</div>
+          <div class="text-[10px] text-silver-500 mt-1">When free data is enough</div>
+        </a>
+        <a href="/guides/how-vin-fraud-works/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">How VIN Fraud Works</div>
+          <div class="text-[10px] text-silver-500 mt-1">Protect yourself when buying a {{ model.name }}</div>
+        </a>
       </div>
     </div>
   </div>
