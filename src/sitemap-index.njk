@@ -6,20 +6,20 @@ eleventyExcludeFromCollections: true
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-core.xml</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-03-26</lastmod>
   </sitemap>
 {%- set myPages = (modelYears | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, myPages) %}
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-modelyears-{{ i }}.xml</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-03-26</lastmod>
   </sitemap>
 {%- endfor %}
 {%- set dynPages = (sitemapDynamic | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, dynPages) %}
   <sitemap>
     <loc>https://www.caralpha.com/sitemap-dynamic-{{ i }}.xml</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-03-26</lastmod>
   </sitemap>
 {%- endfor %}
 </sitemapindex>

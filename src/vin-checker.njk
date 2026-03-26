@@ -1,0 +1,164 @@
+---
+layout: layouts/base.njk
+title: "Free VIN Checker — Decode Any Vehicle Identification Number | Car Alpha"
+description: "Use our free VIN checker to decode any 17-character Vehicle Identification Number. Get instant specs, recall data, and ownership intelligence from official NHTSA sources."
+permalink: /vin-checker/
+priority: 0.9
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a VIN checker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A VIN checker is a tool that decodes a 17-character Vehicle Identification Number to reveal a vehicle's make, model, year, engine, body type, manufacturing plant, and safety recall status. Car Alpha's VIN checker uses official NHTSA data for accurate, real-time results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Car Alpha's VIN checker free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Car Alpha provides a completely free VIN checker powered by official NHTSA data. No account, no email, and no payment required. We decode any VIN instantly with full specifications and recall information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many characters are in a VIN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A VIN (Vehicle Identification Number) contains exactly 17 characters — a mix of letters and numbers. VINs never contain the letters I, O, or Q to avoid confusion with the numbers 1 and 0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information does a VIN decode reveal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A VIN decode reveals the vehicle's manufacturer, make, model, year, engine type, body style, transmission, drive type, manufacturing plant, safety features, and whether the vehicle has any open safety recalls."
+      }
+    }
+  ]
+}
+</script>
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "VIN Checker" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-5xl mx-auto px-4 pt-12 pb-20">
+
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden glow-cyan-sm carbon-panel mb-10">
+      <div class="steel-header px-8 py-5">
+        <h1 class="text-3xl md:text-4xl font-black text-white">Free <span class="text-gradient">VIN Checker</span></h1>
+        <p class="mt-2 text-sm text-silver-400">Decode any Vehicle Identification Number instantly using official NHTSA data</p>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 leading-relaxed mb-6">Car Alpha's VIN checker decodes any 17-character Vehicle Identification Number to reveal complete vehicle specifications, open safety recalls, and ownership intelligence. Our data comes directly from the National Highway Traffic Safety Administration (NHTSA), ensuring accuracy and reliability.</p>
+
+        <div class="glass-card rounded-xl p-6 mb-6">
+          <label class="block text-sm font-bold text-silver-300 text-left mb-3 tracking-wide uppercase">Enter your 17-character VIN</label>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input id="vinCheckerInput" maxlength="17" placeholder="e.g. 1HGBH41JXMN109186"
+              class="flex-1 px-5 py-4 rounded-xl input-premium text-white placeholder-silver-500 text-base font-mono tracking-wider" />
+            <a href="/vin-decoder/" id="vinCheckerBtn" class="px-8 py-4 rounded-xl btn-primary text-white font-bold text-base whitespace-nowrap tracking-wide text-center">
+              Check VIN
+            </a>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-bold text-white mt-8 mb-4">What Does a VIN Checker Do?</h2>
+        <p class="text-silver-400 leading-relaxed mb-4">A VIN checker takes a vehicle's unique 17-character identification number and decodes it into readable information. Each position in the VIN encodes specific data about the vehicle — from the country of manufacture to the assembly plant and production sequence.</p>
+        <p class="text-silver-400 leading-relaxed mb-6">When you run a VIN check through Car Alpha, you get the complete vehicle profile: make, model, year, engine specifications, body type, trim level, drive type, and — critically — any open NHTSA safety recalls that may affect the vehicle.</p>
+
+        <h2 class="text-xl font-bold text-white mt-8 mb-4">When Should You Check a VIN?</h2>
+        <ul class="space-y-2 text-silver-400 mb-6">
+          <li class="flex items-start gap-2"><span class="text-volt-400 mt-1">&#x2713;</span> Before buying a used car — verify specs match the listing</li>
+          <li class="flex items-start gap-2"><span class="text-volt-400 mt-1">&#x2713;</span> After a recall notice — confirm if your vehicle is affected</li>
+          <li class="flex items-start gap-2"><span class="text-volt-400 mt-1">&#x2713;</span> When selling — provide buyers with verified specifications</li>
+          <li class="flex items-start gap-2"><span class="text-volt-400 mt-1">&#x2713;</span> For insurance quotes — ensure accurate vehicle details</li>
+          <li class="flex items-start gap-2"><span class="text-volt-400 mt-1">&#x2713;</span> During maintenance — order correct parts for your exact build</li>
+        </ul>
+      </div>
+    </div>
+
+    {# Browse by Make #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-8 py-4">
+        <h2 class="text-xl font-bold text-white">Check VINs by Vehicle Make</h2>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 mb-4 text-sm">Select a make to browse models, model years, and state-specific ownership guides.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+          {% for make in makes %}
+          <a href="/makes/{{ make.slug }}/" class="px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.05] text-sm text-silver-400 hover:text-volt-400 hover:border-volt-500/25 transition-all text-center">{{ make.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {# Related Tools #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-8 py-4">
+        <h2 class="text-xl font-bold text-white">Related VIN Tools</h2>
+      </div>
+      <div class="px-8 py-6 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/vin-decoder/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">VIN Decoder</h3>
+          <p class="text-xs text-silver-500 mt-1">Full specs + AI analysis</p>
+        </a>
+        <a href="/recall-checker/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">Recall Checker</h3>
+          <p class="text-xs text-silver-500 mt-1">NHTSA safety recalls</p>
+        </a>
+        <a href="/free-vin-check/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">Free VIN Check</h3>
+          <p class="text-xs text-silver-500 mt-1">No-cost vehicle report</p>
+        </a>
+        <a href="/vin-number-lookup/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">VIN Number Lookup</h3>
+          <p class="text-xs text-silver-500 mt-1">Search by VIN number</p>
+        </a>
+        <a href="/compare/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">Compare Vehicles</h3>
+          <p class="text-xs text-silver-500 mt-1">Side-by-side comparison</p>
+        </a>
+        <a href="/learn/what-is-a-vin/" class="glass-card rounded-xl p-4 card-hover group">
+          <h3 class="font-bold text-white group-hover:text-volt-400 transition-colors">What is a VIN?</h3>
+          <p class="text-xs text-silver-500 mt-1">Complete VIN guide</p>
+        </a>
+      </div>
+    </div>
+
+    {# Browse by State #}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel">
+      <div class="steel-header px-8 py-4">
+        <h2 class="text-xl font-bold text-white">Vehicle Ownership by State</h2>
+      </div>
+      <div class="px-8 py-6">
+        <p class="text-silver-400 mb-4 text-sm">Explore state-specific insurance requirements, lemon laws, registration fees, and EV incentives.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+          {% for state in states %}
+          <a href="/states/{{ state.slug }}/" class="px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.05] text-sm text-silver-400 hover:text-volt-400 hover:border-volt-500/25 transition-all text-center">{{ state.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.getElementById('vinCheckerBtn').addEventListener('click', function(e) {
+  var vin = document.getElementById('vinCheckerInput').value.trim();
+  if (vin) {
+    e.preventDefault();
+    window.location.href = '/vin-decoder/?vin=' + encodeURIComponent(vin);
+  }
+});
+</script>

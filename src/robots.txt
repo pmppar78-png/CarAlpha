@@ -11,5 +11,15 @@ Sitemap: https://www.caralpha.com/sitemap-index.xml
 Disallow: /api/
 Disallow: /go/
 
-# Allow all assets (CSS, JS, images, fonts) for proper rendering
+# Allow all vehicle pages, assets, and content for proper rendering
+Allow: /makes/
+Allow: /states/
 Allow: /assets/
+Allow: /guides/
+Allow: /learn/
+Allow: /blog/
+Allow: /recalls/
+
+# Googlebot: no crawl-delay — crawl as fast as needed
+User-agent: Googlebot
+Allow: /
