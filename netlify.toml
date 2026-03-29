@@ -193,10 +193,10 @@
   to = "/industry-resources/"
   status = 301
 
-# Sitemap convenience redirect (safety net for external references)
+# Sitemap backward-compatibility redirect (old path → new canonical path)
 [[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap-index.xml"
+  from = "/sitemap-index.xml"
+  to = "/sitemap.xml"
   status = 301
 
 # Legacy URL support
