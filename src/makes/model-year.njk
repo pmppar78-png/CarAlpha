@@ -13,20 +13,19 @@ eleventyComputed:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Vehicle",
-  "name": "{{ entry.year }} {{ entry.makeName }} {{ entry.name }}",
-  "manufacturer": {
+  "@type": "WebPage",
+  "name": "{{ entry.year }} {{ entry.makeName }} {{ entry.name }} — Specs, Recalls & Information",
+  "description": "Free VIN decoder and recall check for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Decode any {{ entry.year }} {{ entry.name }} VIN for full specs, safety recalls, and ownership resources.",
+  "url": "https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/",
+  "publisher": {
     "@type": "Organization",
-    "name": "{{ entry.makeName }}"
-  },
-  "model": "{{ entry.name }}",
-  "vehicleModelDate": "{{ entry.year }}",
-  "bodyType": "{{ entry.bodyType }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "{{ entry.makeName }}"
-  },
-  "url": "https://www.caralpha.com/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/"
+    "name": "Car Alpha",
+    "url": "https://www.caralpha.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.caralpha.com/assets/images/logo.png"
+    }
+  }
 }
 </script>
 <script type="application/ld+json">

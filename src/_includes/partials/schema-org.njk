@@ -61,27 +61,19 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Car",
-  "name": "{{ year }} {{ make }} {{ model }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "{{ make }}"
-  },
-  "manufacturer": {
+  "@type": "WebPage",
+  "name": "{{ year }} {{ make }} {{ model }} — Specs, Recalls & Information",
+  "description": "{{ description | default(year + ' ' + make + ' ' + model + ' specifications, recalls, and vehicle information from Car Alpha.') }}",
+  "url": "{{ 'https://www.caralpha.com' + page.url }}",
+  "publisher": {
     "@type": "Organization",
-    "name": "{{ make }}"
-  },
-  "model": "{{ model }}",
-  "vehicleModelDate": "{{ year }}",
-  {% if bodyStyle %}"bodyType": "{{ bodyStyle }}",{% endif %}
-  {% if driveType %}"driveWheelConfiguration": "{{ driveType }}",{% endif %}
-  {% if engineType %}"vehicleEngine": {
-    "@type": "EngineSpecification",
-    "name": "{{ engineType }}"
-  },{% endif %}
-  {% if fuelType %}"fuelType": "{{ fuelType }}",{% endif %}
-  {% if transmission %}"vehicleTransmission": "{{ transmission }}",{% endif %}
-  "url": "{{ 'https://www.caralpha.com' + page.url }}"
+    "name": "Car Alpha",
+    "url": "https://www.caralpha.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.caralpha.com/assets/images/logo.png"
+    }
+  }
 }
 </script>
 {% endif %}
