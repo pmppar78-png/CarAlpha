@@ -5,21 +5,21 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://www.caralpha.com/sitemap-core.xml</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://caralpha.org/sitemap-core.xml</loc>
+    <lastmod>2026-04-03</lastmod>
   </sitemap>
 {%- set myPages = (modelYears | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, myPages) %}
   <sitemap>
-    <loc>https://www.caralpha.com/sitemap-modelyears-{{ i }}.xml</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://caralpha.org/sitemap-modelyears-{{ i }}.xml</loc>
+    <lastmod>2026-04-03</lastmod>
   </sitemap>
 {%- endfor %}
 {%- set dynPages = (sitemapDynamic | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, dynPages) %}
   <sitemap>
-    <loc>https://www.caralpha.com/sitemap-dynamic-{{ i }}.xml</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://caralpha.org/sitemap-dynamic-{{ i }}.xml</loc>
+    <lastmod>2026-04-03</lastmod>
   </sitemap>
 {%- endfor %}
 </sitemapindex>

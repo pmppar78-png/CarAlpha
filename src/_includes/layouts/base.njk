@@ -9,13 +9,13 @@
 
   {# ── Meta ── #}
   <meta name="description" content="{{ description or 'Free VIN lookup with recalls & specs plus AI that explains next steps: insurance savings, warranty value, repairs, loans/refi, lemon-law options and more.' }}" />
-  <link rel="canonical" href="{{ canonicalUrl or ('https://www.caralpha.com' + page.url) }}" />
+  <link rel="canonical" href="{{ canonicalUrl or ('https://caralpha.org' + page.url) }}" />
 
   {# ── Open Graph ── #}
   <meta property="og:title" content="{{ title or 'Car Alpha — Vehicle Intelligence Platform' }}" />
   <meta property="og:description" content="{{ description or 'Free VIN lookup with recalls & specs plus AI that explains next steps.' }}" />
-  <meta property="og:image" content="{{ ogImage or 'https://www.caralpha.com/assets/images/og-default.jpg' }}" />
-  <meta property="og:url" content="{{ canonicalUrl or ('https://www.caralpha.com' + page.url) }}" />
+  <meta property="og:image" content="{{ ogImage or 'https://caralpha.org/assets/images/og-default.jpg' }}" />
+  <meta property="og:url" content="{{ canonicalUrl or ('https://caralpha.org' + page.url) }}" />
   <meta property="og:type" content="{{ ogType or 'website' }}" />
   <meta property="og:site_name" content="Car Alpha" />
 
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ title or 'Car Alpha — Vehicle Intelligence Platform' }}" />
   <meta name="twitter:description" content="{{ description or 'Free VIN lookup with recalls & specs plus AI that explains next steps.' }}" />
-  <meta name="twitter:image" content="{{ ogImage or 'https://www.caralpha.com/assets/images/og-default.jpg' }}" />
+  <meta name="twitter:image" content="{{ ogImage or 'https://caralpha.org/assets/images/og-default.jpg' }}" />
 
   {# ── Pre-compiled CSS (Tailwind + Custom) ── #}
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
@@ -46,10 +46,10 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Car Alpha",
-    "url": "https://www.caralpha.com",
+    "url": "https://caralpha.org",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.caralpha.com/assets/images/logo.png",
+      "url": "https://caralpha.org/assets/images/logo.png",
       "width": 512,
       "height": 512
     },
@@ -60,7 +60,7 @@
       "@type": "ContactPoint",
       "contactType": "customer service",
       "email": "info@caralpha.com",
-      "url": "https://www.caralpha.com/contact/"
+      "url": "https://caralpha.org/contact/"
     },
     "sameAs": []
   }

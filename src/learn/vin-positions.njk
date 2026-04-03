@@ -6,6 +6,31 @@ permalink: /learn/vin-positions/
 order: 2
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does each VIN position mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Positions 1-3 identify the World Manufacturer Identifier (country, manufacturer, vehicle type). Positions 4-8 describe vehicle attributes like model, body style, engine, and restraint system. Position 9 is a check digit for validation. Position 10 indicates the model year. Position 11 identifies the assembly plant. Positions 12-17 are the unique serial number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the VIN check digit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The check digit is position 9 in the VIN. It is a single number calculated using a mathematical formula applied to the other 16 characters. It is used to verify that the VIN has not been altered or transcribed incorrectly. If the check digit does not match the calculated value, the VIN may be fraudulent or contain errors."
+      }
+    }
+  ]
+}
+</script>
+
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Learn", url: "/learn/" }, { label: "VIN Position Breakdown" }] %}
 
 <section class="relative overflow-hidden">

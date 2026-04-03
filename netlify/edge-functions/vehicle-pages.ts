@@ -85,7 +85,7 @@ function getOtherYears(makeSlug: string, modelSlug: string, excludeYear?: number
 // Shared layout shell
 // ---------------------------------------------------------------------------
 function layoutShell(title: string, description: string, canonicalPath: string, bodyContent: string): string {
-  const canonicalUrl = `https://www.caralpha.com${canonicalPath}`;
+  const canonicalUrl = `https://caralpha.org${canonicalPath}`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,18 +97,18 @@ function layoutShell(title: string, description: string, canonicalPath: string, 
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="${e(title)}" />
   <meta property="og:description" content="${e(description)}" />
-  <meta property="og:image" content="https://www.caralpha.com/assets/images/og-default.jpg" />
+  <meta property="og:image" content="https://caralpha.org/assets/images/og-default.jpg" />
   <meta property="og:url" content="${canonicalUrl}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Car Alpha" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${e(title)}" />
   <meta name="twitter:description" content="${e(description)}" />
-  <meta name="twitter:image" content="https://www.caralpha.com/assets/images/og-default.jpg" />
+  <meta name="twitter:image" content="https://caralpha.org/assets/images/og-default.jpg" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <link rel="stylesheet" href="/assets/css/custom.css" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Car Alpha","url":"https://www.caralpha.com","logo":{"@type":"ImageObject","url":"https://www.caralpha.com/assets/images/logo.png","width":512,"height":512},"description":"Automotive data intelligence platform providing free VIN decoding, recall alerts, and vehicle ownership guidance powered by official NHTSA data.","foundingDate":"2024","areaServed":"US","contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"info@caralpha.com","url":"https://www.caralpha.com/contact/"}}
+  {"@context":"https://schema.org","@type":"Organization","name":"Car Alpha","url":"https://caralpha.org","logo":{"@type":"ImageObject","url":"https://caralpha.org/assets/images/logo.png","width":512,"height":512},"description":"Automotive data intelligence platform providing free VIN decoding, recall alerts, and vehicle ownership guidance powered by official NHTSA data.","foundingDate":"2024","areaServed":"US","contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"info@caralpha.com","url":"https://caralpha.org/contact/"}}
   </script>
 </head>
 <body class="min-h-screen carbon-bg text-gray-200 antialiased">
@@ -189,7 +189,7 @@ function breadcrumbs(items: { label: string; url?: string }[]): string {
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      ...(item.url ? { item: `https://www.caralpha.com${item.url}` } : {}),
+      ...(item.url ? { item: `https://caralpha.org${item.url}` } : {}),
     })),
   });
   let html = `<script type="application/ld+json">${schema}</script>\n<nav aria-label="Breadcrumb" class="mb-6"><ol class="flex flex-wrap items-center gap-1.5 text-sm text-silver-400">`;

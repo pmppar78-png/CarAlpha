@@ -14,7 +14,7 @@
       "@type": "ListItem",
       "position": {{ loop.index }},
       "name": "{{ item.label }}"{% if item.url %},
-      "item": "https://www.caralpha.com{{ item.url }}"{% endif %}
+      "item": "https://caralpha.org{{ item.url }}"{% endif %}
     }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
