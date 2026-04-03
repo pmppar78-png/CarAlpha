@@ -11,14 +11,14 @@ permalink: /makes/
   "@type": "ItemList",
   "name": "Vehicle Makes on Car Alpha",
   "description": "Browse all vehicle makes with VIN decoding, recall checks, and detailed specs.",
-  "url": "https://www.caralpha.com/makes/",
+  "url": "https://caralpha.org/makes/",
   "numberOfItems": {{ makes | length }},
   "itemListElement": [
     {% for item in makes %}{% if item.active %}{
       "@type": "ListItem",
       "position": {{ loop.index }},
       "name": "{{ item.name }}",
-      "url": "https://www.caralpha.com/makes/{{ item.slug }}/"
+      "url": "https://caralpha.org/makes/{{ item.slug }}/"
     }{% if not loop.last %},{% endif %}{% endif %}{% endfor %}
   ]
 }

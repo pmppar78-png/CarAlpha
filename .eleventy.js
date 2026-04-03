@@ -241,7 +241,7 @@ module.exports = function (eleventyConfig) {
         "@type": "ListItem",
         position: idx + 1,
         name: item.label,
-        item: item.url ? "https://www.caralpha.com" + item.url : undefined,
+        item: item.url ? "https://caralpha.org" + item.url : undefined,
       };
     });
 

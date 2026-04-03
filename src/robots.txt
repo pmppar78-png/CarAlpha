@@ -1,11 +1,11 @@
 # Car Alpha — Vehicle Intelligence Platform
-# https://www.caralpha.com
+# https://caralpha.org
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.caralpha.com/sitemap.xml
+Sitemap: https://caralpha.org/sitemap.xml
 
 # Block API endpoints and affiliate redirects from crawling
 Disallow: /api/

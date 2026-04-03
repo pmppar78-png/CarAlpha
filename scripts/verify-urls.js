@@ -17,7 +17,7 @@ const fs = require("fs");
 const path = require("path");
 
 const SITE_DIR = process.argv[2] || path.join(__dirname, "..", "_site");
-const DOMAIN = "https://www.caralpha.com";
+const DOMAIN = "https://caralpha.org";
 const MIN_URLS = 200000;
 
 function countUrlsInFile(filePath) {
