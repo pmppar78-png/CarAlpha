@@ -46,7 +46,9 @@
   to = "/"
   status = 301
 
-# Trailing slash normalization — section-level pages
+# Trailing slash normalization — fallback redirect rules
+# Primary normalization is handled by the trailing-slash edge function (200 rewrite).
+# These 301 rules only fire when the edge function is bypassed (e.g. on error).
 [[redirects]]
   from = "/vin-decoder"
   to = "/vin-decoder/"
@@ -117,7 +119,6 @@
   to = "/recalls/"
   status = 301
 
-# Trailing slash normalization — tool & content pages
 [[redirects]]
   from = "/compare"
   to = "/compare/"
@@ -209,6 +210,14 @@
   from = "/vin-lookup"
   to = "/vin-number-lookup/"
   status = 301
+
+# Universal trailing-slash normalization (runs FIRST)
+# Rewrites /path → /path/ internally (200) instead of letting Netlify's
+# default 301 redirect fire.  Eliminates "Page with redirect" in Google
+# Search Console across ALL pages — static and edge-rendered.
+[[edge_functions]]
+  function = "trailing-slash"
+  path = "/*"
 
 # Affiliate redirects handled by edge function
 [[edge_functions]]
