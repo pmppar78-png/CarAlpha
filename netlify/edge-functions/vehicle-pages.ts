@@ -94,7 +94,7 @@ function layoutShell(title: string, description: string, canonicalPath: string, 
   <title>${e(title)}</title>
   <meta name="description" content="${e(description)}" />
   <link rel="canonical" href="${canonicalUrl}" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="${/\/\d{4}\/in\//.test(canonicalPath) ? "noindex, follow" : "index, follow"}" />
   <meta property="og:title" content="${e(title)}" />
   <meta property="og:description" content="${e(description)}" />
   <meta property="og:image" content="https://caralpha.org/assets/images/og-default.jpg" />

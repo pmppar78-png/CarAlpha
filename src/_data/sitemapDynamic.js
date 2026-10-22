@@ -30,15 +30,7 @@ module.exports = function () {
     }
   }
 
-  // modelYearStates: modelYear × state = ~178,300 entries
-  for (const my of modelYears) {
-    for (const state of states) {
-      result.push({
-        loc: `/makes/${my.makeSlug}/${my.slug}/${my.year}/in/${state.slug}/`,
-        priority: "0.5",
-      });
-    }
-  }
+  // modelYear × state pages are noindexed (near-duplicates) and intentionally left out of the sitemap.
 
   console.log(`[sitemapDynamic] Generated ${result.length} sitemap entries for dynamic pages`);
   return result;

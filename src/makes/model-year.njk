@@ -5,6 +5,7 @@ pagination:
   size: 1
   alias: entry
 permalink: "/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/"
+robots: "noindex, follow"
 eleventyComputed:
   title: "{{ entry.year }} {{ entry.makeName }} {{ entry.name }} — VIN Decoder, Specs & Recalls"
   description: "Free VIN decoder and recall check for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Decode any {{ entry.year }} {{ entry.name }} VIN for full specs, safety recalls, and ownership resources."
@@ -249,7 +250,7 @@ eleventyComputed:
   async function run(){
     setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
     var vin=(vinInput.value||'').trim().toUpperCase();
-    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    var vc=window.caVinCheck?caVinCheck(vin):{vin:vin,error:vin.length!==17?'Please enter a valid 17-character VIN.':''};if(window.caVinShowWarning)caVinShowWarning(vc.warning);if(vc.error){setError(vc.error);return;}vin=vc.vin;
     setLoading(true);
     try{
       var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
