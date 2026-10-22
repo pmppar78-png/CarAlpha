@@ -71,9 +71,16 @@ async function runVIN() {
   const cards = ["#vehicleCard", "#recallCard", "#actionsCard"];
   cards.forEach((id) => { const el = qs(id); if (el) el.classList.add("hidden"); });
 
-  const vin = (vinInput.value || "").trim().toUpperCase();
-  if (vin.length !== 17) { setError("Please enter a valid 17-character VIN."); return; }
-  if (/[IOQ]/.test(vin)) { setError("VINs cannot contain the letters I, O, or Q."); return; }
+  let vin = (vinInput.value || "").trim().toUpperCase();
+  if (window.caVinCheck) {
+    const vc = window.caVinCheck(vin);
+    if (window.caVinShowWarning) window.caVinShowWarning(vc.warning);
+    if (vc.error) { setError(vc.error); return; }
+    vin = vc.vin;
+  } else {
+    if (vin.length !== 17) { setError("Please enter a valid 17-character VIN."); return; }
+    if (/[IOQ]/.test(vin)) { setError("VINs cannot contain the letters I, O, or Q."); return; }
+  }
 
   setLoading(true);
   try {
