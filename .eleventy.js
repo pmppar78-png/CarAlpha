@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const path = require("path");
 const fs = require("fs");
+const vehicleCopy = require("./lib/vehicle-copy");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
@@ -187,6 +188,14 @@ module.exports = function (eleventyConfig) {
     }
     return _statesByRegion;
   }
+
+  eleventyConfig.addFilter("yearCopy", function (entry) {
+    return vehicleCopy.yearCopy(entry);
+  });
+
+  eleventyConfig.addFilter("modelCopy", function (model) {
+    return vehicleCopy.modelCopy(model);
+  });
 
   // lookupYears — get sorted years for a model, excluding a specific year
   eleventyConfig.addFilter("lookupYears", function (makeSlug, modelSlug, excludeYear) {

@@ -19,7 +19,3 @@ Allow: /guides/
 Allow: /learn/
 Allow: /blog/
 Allow: /recalls/
-
-# Googlebot: no crawl-delay — crawl as fast as needed
-User-agent: Googlebot
-Allow: /

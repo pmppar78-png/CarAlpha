@@ -1,0 +1,26 @@
+name: Content checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  boilerplate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build site
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+      - name: Repeated-sentence and hub-depth check
+        run: npm run check:boilerplate
+      - name: Rate limiter tests
+        run: npm test

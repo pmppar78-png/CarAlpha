@@ -6,13 +6,13 @@ eleventyExcludeFromCollections: true
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://caralpha.org/sitemap-core.xml</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>{{ buildInfo.lastmod }}</lastmod>
   </sitemap>
 {%- set dynPages = (sitemapDynamic | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, dynPages) %}
   <sitemap>
     <loc>https://caralpha.org/sitemap-dynamic-{{ i }}.xml</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>{{ buildInfo.lastmod }}</lastmod>
   </sitemap>
 {%- endfor %}
 </sitemapindex>

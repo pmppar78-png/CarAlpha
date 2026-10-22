@@ -371,13 +371,13 @@ function localAnswer(q) {
       ? `At about <strong>${age} years</strong> old, an extended warranty can be cost-effective. ${affiliateCTA("See warranty plans", "warranty", c.vin)}`
       : `Warranty value depends on repair risk and mileage. ${affiliateCTA("Check warranty quotes", "warranty", c.vin)}`;
   if (query.includes("insurance"))
-    return `${isEV ? "EVs sometimes qualify for lower rates. " : ""}Compare at least 3 carriers to save 10-30%. ${affiliateCTA("Compare insurance rates", "insurance", c.vin)}`;
+    return `${isEV ? "EVs are priced from repair cost as well as the driver record. " : ""}Compare carriers on the same liability limits, deductibles, and VIN. ${affiliateCTA("Compare insurance rates", "insurance", c.vin)}`;
   if (query.includes("loan") || query.includes("refi") || query.includes("financ"))
     return `Better credit and newer vehicles often qualify for lower APR. ${affiliateCTA("Get loan/refi offers", "loans", c.vin)}`;
   if (query.includes("mechanic") || query.includes("repair") || query.includes("estimate"))
     return `Get multiple quotes and check common issues for this model. ${affiliateCTA("Check repair estimates", "repair", c.vin)}`;
   if (query.includes("sell") || query.includes("trade"))
-    return `Instant-offer marketplaces can beat dealer trade-ins. ${affiliateCTA("Get an instant offer", "sell", c.vin)}`;
+    return `A trade-in credit, a private sale, and an instant offer are different transactions. Compare the offers in front of you rather than a fixed percent. ${affiliateCTA("Get an instant offer", "sell", c.vin)}`;
   if (query.includes("lemon"))
     return `If repeated repairs affect safety or drivability, you may have remedies under state lemon laws. ${affiliateCTA("Check lemon-law options", "lemon-law", c.vin)}`;
   if (query.includes("ev") || query.includes("electric") || query.includes("charg"))

@@ -10,47 +10,11 @@ eleventyComputed:
   description: "Free VIN decoder and recall checker for the {{ model.makeName }} {{ model.name }} ({{ model.yearStart }}–{% if model.yearEnd %}{{ model.yearEnd }}{% else %}Present{% endif %}). Get full specs, open safety recalls, and ownership insights for any {{ model.name }} VIN."
 ---
 
+{% set copy = model | modelCopy %}
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: model.makeName, url: "/makes/" + model.makeSlug + "/" }, { label: model.name }] %}
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I decode a {{ model.makeName }} {{ model.name }} VIN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Enter your 17-character VIN into Car Alpha's free decoder to instantly get full specs, recall history, and ownership guidance for your {{ model.makeName }} {{ model.name }} using official NHTSA data."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the {{ model.makeName }} {{ model.name }} have any recalls?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ model.makeName }} {{ model.name }} vehicles may have safety recalls issued by NHTSA. Enter your specific VIN to check for open recalls. All recall repairs are free at authorized {{ model.makeName }} dealerships."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What years was the {{ model.makeName }} {{ model.name }} produced?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The {{ model.makeName }} {{ model.name }} has been produced from {{ model.yearStart }} to {% if model.yearEnd %}{{ model.yearEnd }}{% else %}present{% endif %}. Browse all available model years on Car Alpha for year-specific specs and recall data."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is {{ model.makeName }} {{ model.name }} VIN lookup free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Car Alpha provides 100% free VIN decoding for all {{ model.makeName }} {{ model.name }} model years using official NHTSA VPIC data. No account required — get instant results including specs, recalls, and AI-powered guidance."
-      }
-    }
-  ]
-}
+{{ copy.faqSchema | jsonStringify | safe }}
 </script>
 
 <section class="relative overflow-hidden">
@@ -67,24 +31,30 @@ eleventyComputed:
           <span>{{ model.yearStart }}&ndash;{% if model.yearEnd %}{{ model.yearEnd }}{% else %}Present{% endif %}</span>
         </div>
       </div>
-      <div class="px-8 py-6">
-        <p class="text-silver-400 leading-relaxed">{{ model.description }}</p>
+      <div class="px-8 py-6" data-vehicle-copy>
+        {% for paragraph in copy.paragraphs %}
+        <p class="text-silver-400 leading-relaxed {% if not loop.first %}mt-4{% endif %}">{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
 
     {# Year Range Info #}
-    <div class="grid sm:grid-cols-3 gap-4 mb-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
       <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
-        <div class="text-2xl font-black text-volt-400">{{ model.yearStart }}</div>
-        <div class="text-xs text-silver-400 mt-1">First Year</div>
+        <div class="text-2xl font-black text-volt-400">{{ copy.stats.oldest }}</div>
+        <div class="text-xs text-silver-400 mt-1">Oldest year on file</div>
       </div>
       <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
-        <div class="text-2xl font-black text-volt-400">{% if model.yearEnd %}{{ model.yearEnd }}{% else %}2026{% endif %}</div>
-        <div class="text-xs text-silver-400 mt-1">{% if model.yearEnd %}Last Year{% else %}Current Year{% endif %}</div>
+        <div class="text-2xl font-black text-volt-400">{{ copy.stats.newest }}</div>
+        <div class="text-xs text-silver-400 mt-1">Newest year on file</div>
       </div>
       <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
-        <div class="text-2xl font-black text-volt-400">{% if model.yearEnd %}{{ model.yearEnd - model.yearStart }}{% else %}{{ 2026 - model.yearStart }}{% endif %}+</div>
-        <div class="text-xs text-silver-400 mt-1">Years in Production</div>
+        <div class="text-2xl font-black text-volt-400">{{ copy.stats.count }}</div>
+        <div class="text-xs text-silver-400 mt-1">Model-year pages</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-2xl font-black text-volt-400">{{ copy.stats.gaps | length }}</div>
+        <div class="text-xs text-silver-400 mt-1">{% if copy.stats.gaps | length %}Gap{% if copy.stats.gaps | length != 1 %}s{% endif %} in the year list{% else %}Gaps in the year list{% endif %}</div>
       </div>
     </div>
 
@@ -106,27 +76,15 @@ eleventyComputed:
       </section>
     </div>
 
-    {# Common Recalls #}
-    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
-      <div class="steel-header px-6 py-4">
-        <h2 class="font-bold text-white text-lg">{{ model.makeName }} {{ model.name }} Recalls</h2>
-      </div>
-      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed">
-        <p>Like all vehicles, the {{ model.makeName }} {{ model.name }} may be subject to safety recalls issued by NHTSA. Common recall categories for this model include airbag systems, engine components, electrical systems, and brake assemblies. All recall repairs are performed free of charge at authorized {{ model.makeName }} dealerships regardless of vehicle age or mileage.</p>
-        <p class="mt-3">Enter your specific VIN above to check for open recalls on your {{ model.name }}, or visit our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> tool.</p>
-      </div>
-    </div>
-
     {# Model Years #}
     <div class="mb-12">
       <h2 class="text-xl font-black text-white mb-6">{{ model.makeName }} {{ model.name }} by Year</h2>
+      <p class="text-sm text-silver-400 mb-4">Each year has its own VIN year code, neighbor years, and ownership notes. Recall campaigns are not stored on the nameplate. Check the VIN.</p>
       <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 gap-2">
-        {% for yr in modelYears %}
-          {% if yr.makeSlug == model.makeSlug and yr.slug == model.slug %}
-          <a href="/makes/{{ yr.makeSlug }}/{{ yr.slug }}/{{ yr.year }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
-            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ yr.year }}</div>
+        {% for yr in model.makeSlug | lookupYears(model.slug) %}
+          <a href="/makes/{{ model.makeSlug }}/{{ model.slug }}/{{ yr }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ yr }}</div>
           </a>
-          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -137,19 +95,19 @@ eleventyComputed:
       <div class="grid sm:grid-cols-2 gap-4">
         <a href="/go/insurance/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Insurance</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Compare insurance rates for the {{ model.makeName }} {{ model.name }} from top carriers. Factors like model year, trim, and safety features all affect your premium.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.insurance }}</p>
         </a>
         <a href="/go/warranty/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Warranty</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Extended warranty plans can protect against costly repairs, especially for {{ model.name }} models outside the factory warranty period. Coverage typically includes powertrain and major electrical components.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.warranty }}</p>
         </a>
         <a href="/go/loans/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Financing</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Pre-qualify for auto loan or refinancing offers for your {{ model.makeName }} {{ model.name }}. Better credit scores and newer model years typically qualify for lower APR.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.financing }}</p>
         </a>
         <a href="/go/sell/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Selling</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Get instant offer quotes for your {{ model.makeName }} {{ model.name }} from multiple buyers. Online platforms often beat dealer trade-in values by 10-20%.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.selling }}</p>
         </a>
       </div>
     </div>
@@ -158,13 +116,11 @@ eleventyComputed:
     <div class="mb-12">
       <h2 class="text-xl font-black text-white mb-6">More {{ model.makeName }} Models</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {% for m in models %}
-          {% if m.makeSlug == model.makeSlug and m.slug != model.slug %}
+        {% for m in model.makeSlug | lookupModels(model.slug) %}
           <a href="/makes/{{ m.makeSlug }}/{{ m.slug }}/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group text-center">
             <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ m.name }}</div>
             <div class="text-[10px] text-silver-500 mt-1">{{ m.bodyType }}</div>
           </a>
-          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -179,6 +135,20 @@ eleventyComputed:
             <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-xs">{{ state.name }}</div>
             <div class="text-[10px] text-silver-500 mt-0.5">{{ state.abbreviation }}</div>
           </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-12">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">{{ model.makeName }} {{ model.name }} FAQ</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        {% for faq in copy.faqs %}
+        <details class="group">
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">{{ faq.q }}</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4" data-vehicle-copy>{{ faq.a }}</p>
+        </details>
         {% endfor %}
       </div>
     </div>

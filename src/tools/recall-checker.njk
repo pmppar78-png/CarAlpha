@@ -120,6 +120,7 @@ permalink: /recall-checker/
       <div class="hidden" id="errorBox"><div class="p-5 rounded-2xl border border-red-500/30 bg-red-500/10 text-red-300 shadow-card" id="errorText"></div></div>
       <div class="hidden" id="vehicleCard"></div>
       <div class="hidden" id="recallCard"></div>
+      <div class="hidden" id="nextSteps"></div>
     </section>
   </div>
 </section>
@@ -282,6 +283,7 @@ permalink: /recall-checker/
   </div>
 </section>
 
+<script src="/assets/js/next-steps.js"></script>
 <script>
 (function(){
   var vinInput=document.getElementById('vinInput'),runBtn=document.getElementById('runBtn'),loading=document.getElementById('loading'),errorBox=document.getElementById('errorBox'),errorText=document.getElementById('errorText'),vehicleCard=document.getElementById('vehicleCard'),recallCard=document.getElementById('recallCard');
@@ -292,14 +294,16 @@ permalink: /recall-checker/
   function renderRecalls(recalls){
     if(!recalls||!recalls.results||!recalls.results.length){
       recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recall Results</h3></div><div class="px-6 py-5"><div class="flex items-center gap-2 text-emerald-400 text-sm"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No open recalls found. Your vehicle is clear.</div></div></div>';
-      recallCard.classList.remove('hidden');return;
+      recallCard.classList.remove('hidden');return 0;
     }
     var items=recalls.results.map(function(r){return '<details class="p-4 rounded-xl bg-amber-500/[0.06] border border-amber-500/20"><summary class="cursor-pointer font-semibold text-amber-300 text-sm">'+(r.Component||'Recall')+' &mdash; '+(r.ReportReceivedDate||'')+'</summary><div class="mt-3 text-sm text-silver-400 space-y-1.5 pl-4"><div><strong class="text-silver-300">Summary:</strong> '+(r.Summary||'&mdash;')+'</div><div><strong class="text-silver-300">Consequence:</strong> '+(r.Conequence||r.Consequence||'&mdash;')+'</div><div><strong class="text-silver-300">Remedy:</strong> '+(r.Remedy||'&mdash;')+'</div><div><strong class="text-silver-300">NHTSA Campaign:</strong> '+(r.NHTSACampaignNumber||'&mdash;')+'</div></div></details>';}).join('');
     recallCard.innerHTML='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Recalls Found: '+recalls.results.length+'</h3></div><div class="px-6 py-5 space-y-3">'+items+'<p class="mt-4 text-xs text-silver-500">All recall repairs are free at authorized dealerships. Contact your nearest dealer to schedule the repair.</p></div></div>';
     recallCard.classList.remove('hidden');
+    return recalls.results.length;
   }
   async function run(){
     setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
+    var nextSteps=document.getElementById('nextSteps'); if(nextSteps) nextSteps.classList.add('hidden');
     var vin=(vinInput.value||'').trim().toUpperCase();
     var vc=window.caVinCheck?caVinCheck(vin):{vin:vin,error:vin.length!==17?'Please enter a valid 17-character VIN.':''};if(window.caVinShowWarning)caVinShowWarning(vc.warning);if(vc.error){setError(vc.error);return;}vin=vc.vin;
     setLoading(true);
@@ -309,8 +313,10 @@ permalink: /recall-checker/
       vehicleCard.innerHTML='<div class="glass-card metallic-border rounded-2xl p-6 animate-in carbon-panel"><div class="flex items-center gap-4 flex-wrap"><span class="text-sm font-bold text-white">'+(dec.ModelYear||'')+' '+(dec.Make||'')+' '+(dec.Model||'')+'</span><span class="text-xs px-3 py-1 rounded-lg bg-volt-600/10 border border-volt-500/20 text-volt-400 font-mono">VIN: '+vin+'</span></div></div>';
       vehicleCard.classList.remove('hidden');
       var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');
-      if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);renderRecalls(r);}
+      var recallCount=0;
+      if(mk&&md&&yr){var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr);recallCount=renderRecalls(r)||0;}
       else{setError('Could not determine make/model/year from this VIN.');}
+      if(window.caShowNextSteps) caShowNextSteps(nextSteps,{year:dec.ModelYear,recallCount:recallCount});
     }catch(e){setError('Service is busy. Please try again shortly.');}finally{setLoading(false);}
   }
   runBtn.addEventListener('click',run);

@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
 {%- for entry in chunk %}
   <url>
     <loc>https://caralpha.org{{ entry.loc }}</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>{{ buildInfo.lastmod }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>{{ entry.priority }}</priority>
   </url>
