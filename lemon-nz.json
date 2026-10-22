@@ -1,0 +1,577 @@
+[
+  {
+    "slug": "nebraska",
+    "citation": "Neb. Rev. Stat. § 60-2704",
+    "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=60-2704",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Earlier of the express warranty term or one year after original delivery. No mileage cap."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 40,
+      "dayType": "days (statute does not say business or calendar)",
+      "summary": "Same nonconformity repaired four or more times and it continues, or the vehicle is out of service for repair a cumulative total of forty or more days. The statute says \"days\" and does not say business or calendar days."
+    },
+    "notifyNote": "The presumption does not apply unless the manufacturer has received prior written direct notification by certified mail and an opportunity to cure the defect alleged.",
+    "quote": "It shall be presumed that a reasonable number of attempts have been undertaken to conform a motor vehicle to the applicable express warranties, if (1) the same nonconformity has been subject to repair four or more times by the manufacturer, its agents, or authorized dealers within the express warranty term or during the period of one year following the date of original delivery of the motor vehicle to a consumer, whichever is the earlier date, but such nonconformity continues to exist or (2) the vehicle is out of service by reason of repair for a cumulative total of forty or more days during such term or during such period, whichever is the earlier date."
+  },
+  {
+    "slug": "nevada",
+    "citation": "NRS 597.630",
+    "url": "https://www.leg.state.nv.us/NRS/NRS-597.html#NRS597Sec630",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Earlier of the time the express warranty is in effect or 1 year after delivery to the original buyer. No mileage cap. The buyer must report the nonconformity in writing before that deadline under NRS 597.610."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "Same nonconformity repaired four or more times and it continues, or the vehicle is out of service for repairs a cumulative total of 30 or more calendar days. The 30-day count is extended when necessary repairs cannot be made for reasons beyond the manufacturer's, agent's, or authorized dealer's control. No lower safety-defect count."
+    },
+    "notifyNote": "NRS 597.610 requires the buyer to report the nonconformity in writing to the manufacturer before the warranty expires or no later than 1 year after delivery to the original buyer, whichever is earlier. That written report starts the repair duty; it is not the presumption.",
+    "quote": "The motor vehicle is out of service for repairs for a cumulative total of 30 or more calendar days within the time the express warranty is in effect or within 1 year following the date the motor vehicle is delivered to the original buyer, whichever occurs earlier,"
+  },
+  {
+    "slug": "new-hampshire",
+    "citation": "RSA 357-D:3, VII",
+    "url": "https://gc.nh.gov/rsa/html/XXXI/357-D/357-D-mrg.htm",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": null,
+      "miles": null,
+      "whicheverFirst": false,
+      "isWarrantyPeriod": true,
+      "summary": "The presumption is measured during the express warranty term. The statute sets no separate month or mileage cap for that presumption. RSA 357-D:2, II defines a business day as a day the manufacturer's authorized dealers' service departments are normally open."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "business days",
+      "summary": "Same nonconformity repaired at least 3 times during the express warranty term and it continues, or the vehicle is out of service for repair of one or more nonconformities a cumulative total of 30 or more business days during the express warranty. A vehicle is not out of service if it is available to the consumer for a major part of the day. Repair attempts must be on written examination or repair orders, generally by the same agent or dealer. No lower safety-defect repair count in the presumption."
+    },
+    "notifyNote": "RSA 357-D:4 requires written notice to the manufacturer after the third repair attempt or after 30 or more business days out of service, and the manufacturer then has one final repair opportunity. That notice follows the presumption threshold.",
+    "quote": "The vehicle is out of service by reason of repair of one or more nonconformities, defects, or conditions for a cumulative total of 30 or more business days during the term of the express warranty."
+  },
+  {
+    "slug": "new-jersey",
+    "citation": "N.J.S.A. 56:12-33",
+    "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1/54204/54855",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 24000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "Earlier of the first 24,000 miles or two years after original delivery. A farm tractor is covered during the two years after original delivery. A motorhome uses a 45-calendar-day out-of-service figure instead of 20."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": 1,
+      "daysOutOfService": 20,
+      "dayType": "calendar days",
+      "summary": "Substantially the same nonconformity repaired three or more times and it continues; or out of service for repair a cumulative total of 20 or more calendar days (45 or more calendar days for a motorhome) and a nonconformity continues; or a nonconformity likely to cause death or serious bodily injury if the vehicle is driven has been examined or repaired at least once and continues. The three-repair route excludes that serious-safety nonconformity."
+    },
+    "notifyNote": "The presumption applies only if the manufacturer received certified-mail, return-receipt notice of a potential claim and had one opportunity to repair within 10 calendar days after receipt. The consumer may send that notice after the same nonconformity has been repaired two or more times, after 20 cumulative calendar days out of service (45 for a motorhome), or after one examination or repair of a serious safety nonconformity. The two-repair notice is earlier than the three-repair presumption.",
+    "quote": "The motor vehicle is out of service by reason of repair for one or more nonconformities for a cumulative total of 20 or more calendar days, or in the case of a motorhome, 45 or more calendar days, since the original delivery of the motor vehicle and a nonconformity continues to exist"
+  },
+  {
+    "slug": "new-mexico",
+    "citation": "NMSA 1978, § 57-16A-3(C)",
+    "url": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Earlier of the express warranty term or one year after original delivery. No mileage cap in the new-vehicle presumption. Used-vehicle implied-warranty rules in § 57-16A-3.1 are separate."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "business days",
+      "summary": "The same uncorrected nonconformity repaired four or more times and it continues, or the vehicle is in the manufacturer's, agent's, or authorized dealer's possession for repair a cumulative total of thirty or more business days, exclusive of downtime for routine maintenance. No lower safety-defect count."
+    },
+    "notifyNote": "The presumption does not apply unless the manufacturer has received prior direct written notification and an opportunity to cure. The manufacturer must give the consumer written notice, in the warranty or a separate notice, of the duty to file that notification before invoking the Act's remedies.",
+    "quote": "the vehicle is in the possession of the manufacturer, its agent or authorized dealer for repair a cumulative total of thirty or more business days during such term or during such period whichever is the earlier date, exclusive of down time for routine maintenance as prescribed by the manufacturer."
+  },
+  {
+    "slug": "new-york",
+    "citation": "N.Y. General Business Law § 198-a(d)",
+    "url": "https://www.nysenate.gov/legislation/laws/GBS/198-A",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 18000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "ANCHOR MATCH: the general presumption is the first eighteen thousand miles or two years after original delivery, whichever is earlier. Subdivision (d) does not use a lower count for a serious safety defect."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "ANCHOR MATCH: the same nonconformity, defect, or condition repaired four or more times and it continues, or the vehicle out of service by reason of repair for a cumulative total of thirty or more calendar days. Motor homes are covered by a separate rule later in § 198-a: after two repairs or twenty-one days out of service the consumer must give certified-mail notice, and may proceed if there have been three repair attempts or the motor home has been out of service at least thirty days."
+    },
+    "notifyNote": "During the eighteen-thousand-mile or two-year period the consumer reports the nonconformity to the manufacturer, agent, or authorized dealer; the agent or dealer must forward written notice to the manufacturer by certified mail within seven days. For a motor home, certified-mail notice is required after two repairs of the same covered nonconformity or twenty-one days out of service, whichever occurs first, if the manufacturer gave the consumer prior written notice of that requirement.",
+    "quote": "the vehicle is out of service by reason of repair of one or more nonconformities, defects or conditions for a cumulative total of thirty or more calendar days during either period, whichever is the earlier date."
+  },
+  {
+    "slug": "north-carolina",
+    "citation": "N.C.G.S. § 20-351.5",
+    "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_20/Article_15A.html",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 24000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "Replacement or refund under § 20-351.3 is for a defect or series of defects that substantially impairs value and occurred no later than 24 months or 24,000 miles after original delivery. The out-of-service presumption is counted during any 12-month period of the warranty. Section 20-351.2 requires express warranties to remain in effect at least one year or 12,000 miles, and the repair duty runs for one year or the express-warranty term, whichever is greater."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 20,
+      "dayType": "business days",
+      "summary": "The same nonconformity presented for repair four or more times and it continues, or the vehicle out of service during or while awaiting repair for a cumulative total of 20 or more business days during any 12-month period of the warranty. The consumer must have notified the manufacturer directly in writing and allowed a reasonable period, not to exceed 15 calendar days, to correct it, unless the manufacturer failed to disclose that written notice is required. No lower safety-defect count. The consumer may prove substantial impairment another way."
+    },
+    "notifyNote": "Written notice to the manufacturer, plus up to 15 calendar days to correct the nonconformity, is a condition of the § 20-351.5 presumption unless the manufacturer failed to disclose the notice requirement in the warranty or owner's manual. A separate 10-day written notice of intent to sue is required by § 20-351.7 before a consumer action.",
+    "quote": "The vehicle was out of service to the consumer during or while awaiting repair of the nonconformity or a series of nonconformities for a cumulative total of 20 or more business days during any 12-month period of the warranty,"
+  },
+  {
+    "slug": "north-dakota",
+    "citation": "N.D.C.C. § 51-07-19",
+    "url": "https://ndlegis.gov/cencode/t51c07.pdf",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Earlier of the express warranty term or one year after original delivery. The out-of-service presumption is \"during the warranty term or in a year, whichever is less.\" No mileage cap. The repair duty is in § 51-07-17."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "business days",
+      "summary": "The statute says the same nonconformity \"has continued to exist, despite having been subject to repair more than three times,\" which is a fourth repair with the nonconformity still existing. Or the vehicle is out of service for repair a cumulative total of at least thirty business days. No lower safety-defect count."
+    },
+    "notifyNote": "The presumption does not apply against a manufacturer unless the manufacturer has received prior direct notification from or on behalf of the consumer and an opportunity to cure the alleged defect.",
+    "quote": "The passenger motor vehicle is out of service for repair for a cumulative total of at least thirty business days during the warranty term or in a year, whichever is less."
+  },
+  {
+    "slug": "ohio",
+    "citation": "Ohio Rev. Code § 1345.73",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-1345.73",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": 18000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "During one year after original delivery or the first eighteen thousand miles, whichever is earlier. The same window is the repair-report period in § 1345.72. Not the full express-warranty term if the warranty is longer."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": 1,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "Any of the following: substantially the same nonconformity repaired three or more times and it continues or recurs; out of service by reason of repair a cumulative total of thirty or more calendar days; eight or more attempts to repair any nonconformity; or at least one attempt to repair a nonconformity likely to cause death or serious bodily injury if the vehicle is driven, and it continues or recurs."
+    },
+    "notifyNote": "Section 1345.72 requires the consumer to report the nonconformity to the manufacturer, its agent, or its authorized dealer during the one-year or 18,000-mile period. Sections 1345.72 and 1345.73 do not add a separate certified-mail final-chance notice before the presumption.",
+    "quote": "Except as provided in division (B) of this section, it shall be presumed that a reasonable number of attempts have been undertaken by the manufacturer, its dealer, or its authorized agent to conform a motor vehicle to any applicable express warranty if, during the period of one year following the date of original delivery or during the first eighteen thousand miles of operation, whichever is earlier, any of the following apply:"
+  },
+  {
+    "slug": "oklahoma",
+    "citation": "15 O.S. § 901(D)",
+    "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=66311",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Earlier of the express warranty term or one year after original delivery. No mileage cap. Current OSCN 2026 text, last amended by Laws 2022, HB 3217, c. 58, § 1, eff. November 1, 2022."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "business days",
+      "summary": "The same nonconformity repaired four or more times and it continues, or the vehicle out of service by reason of repair a cumulative total of thirty business days. No lower safety-defect count."
+    },
+    "notifyNote": "The consumer must report the nonconformity directly in writing during the warranty or the one-year period, whichever is earlier. Subsection C also says the presumption does not apply unless the manufacturer has received prior direct written notification and had an opportunity to cure.",
+    "quote": "The vehicle is out of service by reason of repair for a cumulative total of thirty (30) business days during such term or during such period, whichever is the earlier date."
+  },
+  {
+    "slug": "oregon",
+    "citation": "ORS 646A.406",
+    "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 24000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "The two-year period after original delivery or the period ending when mileage reaches 24,000 miles, whichever ends first. Not the express-warranty term."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": 1,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "The nonconformity subjected to repair or correction three or more times, with an opportunity to cure, and it continues; or out of service by reason of repair or correction a cumulative total of 30 or more calendar days (60 or more calendar days for a motor home); or a nonconformity likely to cause death or serious bodily injury subjected to repair or correction at least one time plus a final attempt, and it continues."
+    },
+    "notifyNote": "ORS 646A.406(4) and ORS 646A.402(3): the presumption and the remedy require that the manufacturer has received direct written notification from or on behalf of the consumer and has had an opportunity to correct the alleged defect. That notice is a condition of the remedy, not a lower repair-count presumption.",
+    "quote": "The motor vehicle is out of service by reason of repair or correction for a cumulative total of 30 or more calendar days or 60 or more calendar days if the vehicle is a motor home;"
+  },
+  {
+    "slug": "pennsylvania",
+    "citation": "Automobile Lemon Law, Act of Mar. 28, 1984, P.L. 150, No. 28, § 6",
+    "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/1984/0/0028..HTM",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": 12000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Section 4: for a vehicle other than a motorcycle, a nonconformity that may occur within one year after actual delivery, within the first 12,000 miles, or during the warranty, whichever first occurs. For a motorcycle, within one year after actual delivery or during the warranty, whichever first occurs; the statute does not add a motorcycle mileage cap."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "Section 6(a): the same nonconformity subject to repair three times and it still exists, or the vehicle out of service by reason of any nonconformity for a cumulative total of 30 or more calendar days. The statute says \"three times,\" not \"three or more.\" A 2024 motorcycle amendment adds that manufacturer-sourced parts were used in the repair attempts, and special storage rules. No lower serious-safety repair count."
+    },
+    "notifyNote": "Section 7 requires the dealer to notify the manufacturer by certified mail, return receipt requested, within seven days when the purchaser delivers the vehicle to the same dealer for the second time for repair of the same nonconformity. That dealer notice is at the second repair, before the three-repair presumption.",
+    "quote": "It shall be presumed that a reasonable number of attempts have been undertaken to repair or correct a nonconformity if: (1) the same nonconformity has been subject to repair three times by the manufacturer, its agents or authorized dealers and the nonconformity still exists; or (2) the vehicle is out-of-service by reason of any nonconformity for a cumulative total of 30 or more calendar days."
+  },
+  {
+    "slug": "rhode-island",
+    "citation": "R.I. Gen. Laws § 31-5.2-5; term of protection defined in § 31-5.2-1",
+    "url": "https://webserver.rilegislature.gov/Statutes/TITLE31/31-5.2/31-5.2-5.htm",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": 15000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "\"Term of protection\" in § 31-5.2-1 means one year or fifteen thousand miles of use from original delivery, whichever comes first. The repair duty in § 31-5.2-2 runs if the consumer or lessee reports the nonconformity during that term."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "The same nonconformity repaired four or more times within the term of protection and it continues or recurs, or the vehicle out of service for repair of any nonconformity a cumulative total of thirty or more calendar days during the term of protection. The manufacturer also gets one additional cure opportunity of not more than seven calendar days. No lower safety-defect count."
+    },
+    "notifyNote": "Section 31-5.2-2 requires the consumer or lessee to report the nonconformity during the term of protection. The additional seven-calendar-day cure in § 31-5.2-5 starts when the manufacturer first knows or should know that the four-repair or 30-day limit has been met; it is part of the presumption section, not an earlier consumer notice threshold.",
+    "quote": "The vehicle is out of service by reason of the repair of any nonconformity for a cumulative total of thirty (30) or more calendar days during the term of protection;"
+  },
+  {
+    "slug": "south-carolina",
+    "citation": "S.C. Code Ann. § 56-28-40; repair term in § 56-28-30",
+    "url": "https://www.scstatehouse.gov/code/t56c028.php",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": 12000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "Section 56-28-30: nonconformity within the first twelve months of purchase or the first twelve thousand miles, whichever occurs first, reported during the term of the express warranties. The refund or replacement duty in § 56-28-40 applies within that term. The presumption text itself counts repairs \"within the express warranty term\" and days \"during the express warranty.\""
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "The same nonconformity subject to repair three or more times within the express warranty term and it continues, or the vehicle out of service by reason of repair a cumulative total of thirty or more calendar days during the express warranty. No lower safety-defect count. The same subsection then says the warranty term \"and the twenty-day period\" are extended for war, invasion, strike, fire, flood, or other natural disaster; the presumption count in the preceding clause is thirty calendar days."
+    },
+    "notifyNote": "Before using the chapter, the consumer or representative must give the manufacturer written notification of the need for repair so the manufacturer has a final opportunity to cure, if the manufacturer clearly and prominently informed the consumer of that written-notice requirement at the time of sale. The manufacturer then has ten business days to name a franchised repair facility and, after delivery, ten business days to attempt the repair.",
+    "quote": "the vehicle is out of service by reason of repair for a cumulative total of thirty or more calendar days during the express warranty."
+  },
+  {
+    "slug": "south-dakota",
+    "citation": "SDCL 32-6D-5; lemon law rights period defined in SDCL 32-6D-1",
+    "url": "https://sdlegislature.gov/Statutes/32-6D-5",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": 12000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "The lemon law rights period in § 32-6D-1 ends one year after original delivery or at the first twelve thousand miles, whichever first occurs. The nonconformity must first occur during that rights period. The presumption in § 32-6D-5 is measured during twenty-four months after delivery or twenty-four thousand miles, whichever first occurs, and at least one repair attempt must occur during the lemon law rights period. The manufacturer's repair obligation in § 32-6D-2 does not extend beyond twenty-four months or twenty-four thousand miles, whichever occurs first."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "The same nonconforming condition subject to repair attempts four or more times, at least one during the lemon law rights period, plus a final attempt by the manufacturer, and it continues; or the vehicle out of service and in the custody of the manufacturer or authorized dealer due to repair attempts, including the final repair attempt, one of which occurred during the lemon law rights period, for a cumulative total of thirty calendar days. No lower safety-defect count."
+    },
+    "notifyNote": "Before a civil action, § 32-6D-6 requires notice of a nonconforming condition by certified mail to the manufacturer and a demand for correction or repair. If the presumption has already arisen when that notice is given, the manufacturer gets a final opportunity to cure: seven calendar days to name a repair facility, then fourteen calendar days after delivery to correct the condition.",
+    "quote": "The motor vehicle was out of service and in the custody of the manufacturer or an authorized dealer due to repair attempts including the final repair attempt, one of which occurred during the lemon law rights period, for a cumulative total of thirty calendar days, unless the repair could not be performed because of conditions beyond the control of the manufacturer or authorized dealers, such as war, invasion, strike, fire, flood, or other natural disaster."
+  },
+  {
+    "slug": "tennessee",
+    "citation": "Tenn. Code Ann. §§ 55-24-101 to 112",
+    "url": "https://www.tn.gov/attorneygeneral/working-for-tennessee/consumer/resources/laws.html",
+    "verified": false,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": null,
+      "miles": null,
+      "whicheverFirst": null,
+      "isWarrantyPeriod": null,
+      "summary": null
+    },
+    "presumption": {
+      "sameDefectAttempts": null,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": null,
+      "dayType": null,
+      "summary": null
+    },
+    "notifyNote": null,
+    "quote": null
+  },
+  {
+    "slug": "texas",
+    "citation": "Tex. Occ. Code § 2301.605",
+    "url": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.2301.htm",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 24000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "ANCHOR MATCH on the period: attempts must be made before the earlier of the date the express warranty expires or 24 months or 24,000 miles, whichever occurs first, after original delivery."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": 2,
+      "daysOutOfService": 30,
+      "dayType": "days (statute does not say business or calendar)",
+      "summary": "ANCHOR MISMATCH on the 30-day route. The current statute matches four or more repairs of the same nonconformity, and two or more repairs of the same nonconformity that creates a serious safety hazard. Subsection (a)(3) is a nonconformity that still substantially impairs use or market value and the vehicle out of service for repair a cumulative total of 30 or more days, with the attempts made inside the same period. It does not require at least two repair attempts for the 30-day route. \"Days\" is not labeled business or calendar. Subsection (c) excludes time the manufacturer or distributor lends a comparable vehicle while a franchised dealer repairs the owner's vehicle."
+    },
+    "notifyNote": "Section 2301.606(c) bars a refund or replacement order unless the owner, someone on the owner's behalf, or the department gave written notice of the alleged defect or nonconformity and the manufacturer, converter, or distributor had an opportunity to cure. That notice is a condition of an order, not a lower repair-count presumption.",
+    "quote": "a nonconformity still exists that substantially impairs the vehicle's use or market value, the vehicle is out of service for repair for a cumulative total of 30 or more days, and the attempts were made before the earlier of: (A) the date the express warranty expires; or (B) 24 months or 24,000 miles, whichever occurs first, following the date of original delivery of the motor vehicle to the owner."
+  },
+  {
+    "slug": "utah",
+    "citation": "Utah Code § 13-20-5",
+    "url": "https://le.utah.gov/xcode/Title13/Chapter20/C13-20_1800010118000101.pdf",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Earlier of the express warranty term or the one-year period after original delivery. No mileage cap. The repair duty is in § 13-20-3. The current chapter PDF shows § 13-20-5 enacted in 1985 and not later amended; definitions were amended in 2026 and § 13-20-4 in 2025."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "business days",
+      "summary": "The same nonconformity repaired four or more times and it continues, or the vehicle out of service to the consumer because of repair a cumulative total of 30 or more business days. No lower safety-defect count."
+    },
+    "notifyNote": "Section 13-20-3 requires the consumer to report the nonconformity to the manufacturer, its agent, or its authorized dealer during the warranty or the one-year period, whichever is earlier. Section 13-20-5 does not add a separate certified-mail final-chance notice.",
+    "quote": "the vehicle is out of service to the consumer because of repair for a cumulative total of 30 or more business days during the warranty term or during the one-year period, whichever is earlier."
+  },
+  {
+    "slug": "vermont",
+    "citation": "9 V.S.A. § 4172(g)",
+    "url": "https://legislature.vermont.gov/statutes/fullchapter/09/115",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": null,
+      "miles": null,
+      "whicheverFirst": false,
+      "isWarrantyPeriod": true,
+      "summary": "The day count is during the term of the express warranty, and at least the first repair attempt must occur within the express warranty term. No separate month or mileage cap in the presumption."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "The same nonconformity identified in a written examination or repair order repaired at least three times and it continues, or the vehicle out of service by reason of repair a cumulative total of 30 or more calendar days during the express warranty. A vehicle is not out of service if it is available to the consumer for a major part of the day. The three attempts generally must be by the same agent or authorized dealer. No lower safety-defect count."
+    },
+    "notifyNote": "Section 4173 requires the consumer to notify the manufacturer in writing after a reasonable attempt at repair or after the vehicle is out of service for 30 or more calendar days, and then to elect arbitration. That notice follows the presumption threshold. The manufacturer has one final repair opportunity during the arbitration period.",
+    "quote": "the vehicle is out of service by reason of repair of one or more nonconformities, defects, or conditions for a cumulative total of 30 or more calendar days during the term of the express warranty."
+  },
+  {
+    "slug": "virginia",
+    "citation": "Va. Code § 59.1-207.13(B); lemon law rights period defined in § 59.1-207.11",
+    "url": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter17.3/",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 18,
+      "miles": null,
+      "whicheverFirst": false,
+      "isWarrantyPeriod": false,
+      "summary": "\"Lemon law rights period\" means the period ending 18 months after original delivery to the consumer. No mileage cap. It is extended if the manufacturer has been notified but the nonconformity has not been effectively repaired by the end of the period. Section 59.1-207.12 separately requires the consumer to report a nonconformity during the manufacturer's warranty period."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": 1,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "During the lemon law rights period: the same nonconformity repaired three or more times and it continues; or a serious safety defect repaired one or more times and it continues; or the vehicle out of service due to repair a cumulative total of 30 calendar days, unless repairs could not be performed because of conditions beyond the manufacturer's control. A serious safety defect is a life-threatening malfunction or nonconformity that impedes control or operation for ordinary use or reasonable intended purposes or creates a risk of fire or explosion."
+    },
+    "notifyNote": "Before using § 59.1-207.13, the consumer or representative must notify the manufacturer of the need for correction or repair, unless the manufacturer has already been notified as defined in § 59.1-207.11. If the subsection B conditions already exist and the manufacturer has not been notified, the manufacturer gets an additional opportunity, not to exceed 15 days, to correct the nonconformity. The manufacturer must disclose in the warranty or owner's manual that written notification is required.",
+    "quote": "The motor vehicle is out of service due to repair for a cumulative total of 30 calendar days, unless such repairs could not be performed because of conditions beyond the control of the manufacturer, its agents or authorized dealers, including war, invasion, strike, fire, flood or other natural disasters."
+  },
+  {
+    "slug": "washington",
+    "citation": "RCW 19.118.041(2); eligibility period defined in RCW 19.118.021(6)",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.118.041",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 24000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "The eligibility period ends two years after original delivery or at the first twenty-four thousand miles, whichever occurs first. For the presumption, the manufacturer's written warranty shall be at least one year after original delivery or the first twelve thousand miles, whichever occurs first. Motor homes have separate attempt and day counts in RCW 19.118.041(3)."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": 2,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "For a new motor vehicle other than a motor home, within the eligibility period: the same serious safety defect diagnosed or repaired two or more times and it continues; the same nonconformity diagnosed or repaired four or more times and it continues; the vehicle out of service for diagnosis or repair a cumulative total of thirty calendar days, at least fifteen of them during the written warranty; or, within a twelve-month period, two or more different serious safety defects each diagnosed or repaired at least once. A motor home uses one serious-safety attempt plus a final attempt, three repairs of the same nonconformity plus a final attempt, or sixty cumulative calendar days out of service."
+    },
+    "notifyNote": "For a motor home, after one serious-safety attempt, after three attempts on the same nonconformity, or after thirty or more cumulative days out of service, the consumer must give written notice so the motor home manufacturers can make a final coordinated attempt. For other new motor vehicles, RCW 19.118.041(1) requires a written request to a manufacturer office before replacement or repurchase, which follows a reasonable number of attempts.",
+    "quote": "\"Eligibility period\" means the period ending two years after the date of the original delivery to the consumer of a new motor vehicle, or the first twenty-four thousand miles of operation, whichever occurs first."
+  },
+  {
+    "slug": "west-virginia",
+    "citation": "W. Va. Code § 46A-6A-5",
+    "url": "https://code.wvlegislature.gov/46A-6A-5/",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "The presumption uses the express warranty term or one year after original delivery, whichever is the earlier date. No mileage cap. The repair duty in § 46A-6A-3 is different: the warranty term or one year after original delivery, whichever is the longer period."
+    },
+    "presumption": {
+      "sameDefectAttempts": 3,
+      "seriousSafetyAttempts": 1,
+      "daysOutOfService": 30,
+      "dayType": "calendar days",
+      "summary": "The same nonconformity repaired three or more times and it continues, or the vehicle out of service by reason of repair a cumulative total of thirty or more calendar days. If the nonconformity is likely to cause death or serious bodily injury if the vehicle is driven, one repair by the manufacturer that does not cure it is enough. The presumption applies against the manufacturer only after prior written notification and at least one opportunity to cure."
+    },
+    "notifyNote": "Section 46A-6A-5(c) requires prior written notification from or on behalf of the consumer and at least one opportunity to cure before the presumption applies against the manufacturer. That notice is a condition of the presumption, including the one-repair serious-safety route.",
+    "quote": "It is presumed that a reasonable number of attempts have been undertaken to conform a new motor vehicle to the applicable express warranties, if the same nonconformity has been subject to repair three or more times by the manufacturer, its agents or its authorized dealers within the express warranty term or during the period of one year following the date of original delivery of the motor vehicle to the consumer, whichever is the earlier date, and the nonconformity continues to exist, or the vehicle is out of service by reason of repair for a cumulative total of thirty or more calendar days during the term or during the one-year period, whichever is the earlier date."
+  },
+  {
+    "slug": "wisconsin",
+    "citation": "Wis. Stat. § 218.0171(1)(h)",
+    "url": "https://docs.legis.wisconsin.gov/statutes/statutes/218/i/0171",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": true,
+      "summary": "Within the term of an applicable express warranty or within one year after first delivery, whichever is sooner. No mileage cap. The same sooner-of period is the report-and-repair window in § 218.0171(2)(a)."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "days (statute does not say business or calendar)",
+      "summary": "\"Reasonable attempt to repair\" means the same nonconformity is subject to repair at least 4 times and continues, or the motor vehicle is out of service for an aggregate of at least 30 days because of warranty nonconformities. The statute says \"days\" and does not say business or calendar days. Flood, other natural disaster, war, invasion, fire, or strike time is excluded. A vehicle still in the consumer's possession counts as out of service only if a nonconformity substantially affects use or safety and has been subject to a repair attempt at least 2 times. No separate lower safety-defect presumption."
+    },
+    "notifyNote": "After a reasonable attempt to repair fails, § 218.0171(2)(b) requires the consumer to provide the manufacturer the form specified in § 218.0171(8)(a)2. or 3. before the manufacturer must refund or replace. That form follows the presumption; it is not an earlier repair-count trigger.",
+    "quote": "The motor vehicle is out of service for an aggregate of at least 30 days because of warranty nonconformities."
+  },
+  {
+    "slug": "wyoming",
+    "citation": "Wyo. Stat. Ann. § 40-17-101(d)",
+    "url": "https://wyoleg.gov/statutes/compress/title40.pdf",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 12,
+      "miles": null,
+      "whicheverFirst": false,
+      "isWarrantyPeriod": false,
+      "summary": "The repair duty in subsection (b) is within one year after original delivery. Subsection (d) states the presumption \"if within one (1) year following the original delivery of the motor vehicle to the consumer, whichever is later.\" The official text does not pair \"whichever is later\" with a second period in that sentence. No mileage cap."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": null,
+      "daysOutOfService": 30,
+      "dayType": "business days",
+      "summary": "Within that one-year statement: the same nonconformity \"subject to repair more than three (3) times\" and it continues, which is a fourth repair, or the vehicle out of service due to repair a cumulative total of thirty business days. No lower safety-defect count."
+    },
+    "notifyNote": "Subsection (b) requires the consumer to report the nonconformity to the manufacturer, its agent, or its authorized dealer within one year after original delivery. Subsection (f) withholds the refund or replacement remedy if the consumer has not exhausted a manufacturer's informal dispute settlement procedure that complies with federal law. There is no separate certified-mail final-chance count.",
+    "quote": "The vehicle is out of service due to repair for a cumulative total of thirty (30) business days."
+  },
+  {
+    "slug": "washington-dc",
+    "citation": "D.C. Code § 50-502(d)",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/50-502",
+    "verified": true,
+    "verifiedDate": "2026-10-22",
+    "coverage": {
+      "months": 24,
+      "miles": 18000,
+      "whicheverFirst": true,
+      "isWarrantyPeriod": false,
+      "summary": "The first 18,000 miles of operation or two years after delivery to the original purchaser, whichever is the earlier date. Not the warranty term."
+    },
+    "presumption": {
+      "sameDefectAttempts": 4,
+      "seriousSafetyAttempts": 1,
+      "daysOutOfService": 30,
+      "dayType": "days (statute does not say business or calendar)",
+      "summary": "A non-safety nonconformity repaired 4 or more times and it continues; a safety-related nonconformity repaired 1 or more times and it continues; or the vehicle out of service by reason of repair of any significantly impairing nonconformity a cumulative total of 30 days or more. The statute says \"30 days\" and does not say business or calendar days. The 30-day period is extended for war, invasion, strike, fire, flood, or other natural disaster."
+    },
+    "notifyNote": "During the 18,000-mile or two-year period the consumer reports the nonconformity to the manufacturer, agent, or authorized dealer. If the agent or dealer receives it, that person must forward written notice to the manufacturer by certified mail, return receipt requested, within 7 days. Before a court action the consumer must submit a claim to the Board of Consumer Claims Arbitration under § 50-503.",
+    "quote": "If a new motor vehicle does not conform to all warranties during the first 18,000 miles of operation or during the period of 2 years following the date of delivery of the motor vehicle to the original purchaser, whichever is the earlier date, the consumer shall during that period report the nonconformity, defect, or condition to the manufacturer, its agent, or its authorized dealer."
+  }
+]
