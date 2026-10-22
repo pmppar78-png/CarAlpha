@@ -155,14 +155,29 @@
   }
 
   /* ── OCR Processing ── */
+  var ocrWorkerPromise = null;
+  function getWorker() {
+    if (ocrWorkerPromise) return ocrWorkerPromise;
+    if (!window.Tesseract || !window.Tesseract.createWorker) return Promise.resolve(null);
+    ocrWorkerPromise = window.Tesseract.createWorker('eng').then(function (w) {
+      return w.setParameters({ tessedit_char_whitelist: 'ABCDEFGHJKLMNPRSTUVWXYZ0123456789IOQ', tessedit_pageseg_mode: '7' }).then(function () { return w; });
+    }).catch(function () { ocrWorkerPromise = null; return null; });
+    return ocrWorkerPromise;
+  }
+  // VINs never contain I, O or Q, so OCR reads of those letters are almost always 1 or 0.
+  function normalizeOCR(text) {
+    var raw = String(text || '').toUpperCase().replace(/O|Q/g, '0').replace(/I/g, '1').replace(/[^A-HJ-NPR-Z0-9]/g, '');
+    if (raw.length > VIN_LENGTH) {
+      for (var i = 0; i + VIN_LENGTH <= raw.length; i++) { var w = raw.substr(i, VIN_LENGTH); if (isValidVIN(w)) return w; }
+    }
+    return raw;
+  }
   function recognizeFrame(canvas) {
     if (!window.Tesseract) return Promise.resolve({ text: '', confidence: 0 });
-    return window.Tesseract.recognize(canvas, 'eng', {
-      tessedit_char_whitelist: 'ABCDEFGHJKLMNPRSTUVWXYZ0123456789',
-      tessedit_pageseg_mode: '7'
+    return getWorker().then(function (w) {
+      return w ? w.recognize(canvas) : window.Tesseract.recognize(canvas, 'eng');
     }).then(function (result) {
-      var raw = (result.data.text || '').replace(/[^A-HJ-NPR-Z0-9]/gi, '').toUpperCase();
-      return { text: raw, confidence: result.data.confidence || 0 };
+      return { text: normalizeOCR(result.data.text), confidence: result.data.confidence || 0 };
     }).catch(function () {
       return { text: '', confidence: 0 };
     });
@@ -217,7 +232,16 @@
 
   VINScanner.prototype.open = function () {
     var self = this;
-    if (self.overlay) { self._show(); return; }
+    if (self.overlay && self.overlay.parentNode) {
+      self._show();
+      var st = document.getElementById('vinScannerStatus');
+      ['vinScannerResult', 'vinScannerRetry', 'vinScannerConfidence'].forEach(function (id) { var el = document.getElementById(id); if (el) el.style.display = 'none'; });
+      if (st) st.textContent = 'Initializing camera...';
+      document.addEventListener('keydown', self._escHandler);
+      document.addEventListener('keydown', self._focusTrapHandler);
+      self._startCamera(document.getElementById('vinScannerVideo'), st);
+      return;
+    }
 
     self.overlay = createModal();
     self._show();
@@ -305,7 +329,7 @@
         self._beginScan();
       };
     }).catch(function (err) {
-      status.textContent = 'Camera access denied or unavailable. Please enter VIN manually.';
+      status.textContent = (err && err.name === 'NotAllowedError') ? 'Camera permission was blocked. Allow camera access for this site in your browser settings, or type the VIN.' : 'No camera is available right now. Please type the VIN instead.';
       self._announce('Camera is not available. Please enter your VIN manually.');
     });
   };
@@ -405,7 +429,16 @@
           self.close();
         }, 1500);
       } else {
-        status.textContent = 'VIN detected but check digit invalid. Try again or enter manually.';
+        status.textContent = 'We read a VIN, but its check digit doesn’t match, so one character is probably misread. Try again with steadier light, or use it and fix it by hand.';
+        var useBtn = document.getElementById('vinScannerUse');
+        if (!useBtn) {
+          useBtn = document.createElement('button'); useBtn.id = 'vinScannerUse'; useBtn.type = 'button';
+          useBtn.style.cssText = 'padding:10px 24px;background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.4);color:#fff;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;';
+          useBtn.textContent = 'Use it and edit';
+          retryBtn.parentNode.insertBefore(useBtn, retryBtn.nextSibling);
+        }
+        useBtn.style.display = 'inline-block';
+        useBtn.onclick = function () { useBtn.style.display = 'none'; self.close(); self.targetInput.value = consensus.text; self.targetInput.dispatchEvent(new Event('input', { bubbles: true })); self.targetInput.focus(); };
         resultDiv.style.display = 'block';
         resultText.textContent = consensus.text;
         resultDiv.style.borderColor = 'rgba(251,191,36,0.4)';
@@ -428,6 +461,7 @@
     var confBar = document.getElementById('vinScannerConfBar');
     if (resultDiv) resultDiv.style.display = 'none';
     if (retryBtn) retryBtn.style.display = 'none';
+    var useB = document.getElementById('vinScannerUse'); if (useB) useB.style.display = 'none';
     if (confDiv) confDiv.style.display = 'none';
     if (confBar) confBar.style.width = '0%';
     this._beginScan();
