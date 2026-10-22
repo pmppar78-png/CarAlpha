@@ -5,10 +5,10 @@ eleventyExcludeFromCollections: true
 /* Car Alpha service worker. Caches the app shell and OCR engine files only.
    Never caches VIN lookups, API responses or any URL carrying a VIN. */
 const VERSION = "ca-20261022";
-const SHELL = 'ca-shell-20261022';
+const SHELL = 'ca-shell-20261022c';
 const OCR = 'ca-ocr-v5';
-const SHELL_URLS = ['/', '/offline/', '/classic-vin-decoder/', '/assets/css/tailwind.css', '/assets/css/custom.css',
-  '/assets/js/vin-validate.js', '/assets/js/vin-scanner.js?v=20261022', '/assets/js/classic-vin.js?v=20261022', '/assets/js/ca-enhance.js?v=20261022',
+const SHELL_URLS = ['/', '/offline/', '/classic-vin-decoder/', '/assets/css/tailwind.css?v=20261022c', '/assets/css/custom.css?v=20261022c',
+  '/assets/js/vin-validate.js', '/assets/js/vin-scanner.js?v=20261022c', '/assets/js/classic-vin.js?v=20261022', '/assets/js/ca-enhance.js?v=20261022c',
   '/icons/icon-192.png', '/manifest.json'];
 
 self.addEventListener('install', (e) => {
@@ -23,7 +23,7 @@ function neverCache(url) {
     /nhtsa\.(gov|dot\.gov)$/.test(url.hostname) || /vin=/i.test(url.search) || url.pathname.endsWith('/sw.js');
 }
 function isOCR(url) {
-  return (url.hostname === 'cdn.jsdelivr.net' && /\/npm\/tesseract(\.js|\.js-core)@/.test(url.pathname)) || url.hostname === 'tessdata.projectnaptha.com';
+  return (url.hostname === 'cdn.jsdelivr.net' && /\/npm\/(tesseract(\.js|\.js-core)|@zxing\/library)@/.test(url.pathname)) || url.hostname === 'tessdata.projectnaptha.com';
 }
 
 self.addEventListener('fetch', (e) => {

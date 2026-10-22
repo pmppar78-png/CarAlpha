@@ -59,6 +59,7 @@
           '<div id="vinScannerGuide" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;height:22%;border:2px solid rgba(6,182,212,0.7);border-radius:6px;box-shadow:0 0 0 9999px rgba(0,0,0,0.45);pointer-events:none;"></div>' +
           '<div id="vinScannerScanline" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;height:2px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.8),transparent);pointer-events:none;opacity:0;"></div>' +
         '</div>' +
+        '<p id="vinScannerTip" style="margin:0;color:#cbd5e1;font-size:12px;text-align:center;max-width:400px;">Tip: aim at the <strong style="color:#fff;">barcode on the driver\u2019s door-jamb sticker</strong>. It reads more reliably than the printed VIN.</p>' +
         '<canvas id="vinScannerCanvas" style="display:none;"></canvas>' +
         '<div id="vinScannerStatus" style="color:rgba(160,170,184,1);font-size:13px;text-align:center;min-height:20px;">Initializing camera...</div>' +
         '<div id="vinScannerConfidence" style="display:none;width:100%;max-width:400px;">' +
@@ -319,6 +320,95 @@
   }
   function bestPartial(rs) { return null; }
 
+
+  /* ── Barcode (primary mode) ── */
+  // Door-jamb stickers, many windshield VIN labels and registrations carry the VIN as a barcode
+  // (Code 39, Code 128, Data Matrix, QR or PDF417). Decoding it is exact, so we try it before OCR.
+  var ZXING_URL = 'https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js';
+  var BC_FORMATS = ['code_39', 'code_128', 'data_matrix', 'qr_code', 'pdf417'];
+  var bcEnginePromise = null;
+  // Some Code 39 VIN barcodes on imported vehicles prefix an 'I' (18 chars); strip to 17.
+  function vinFromBarcode(text) {
+    var t = String(text || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (t.length === 18 && t[0] === 'I') t = t.slice(1);
+    if (t.length === VIN_LENGTH) return /^[A-HJ-NPR-Z0-9]{17}$/.test(t) ? t : '';
+    // Longer payloads (QR/PDF417 on registrations) may embed the VIN among other fields.
+    var parts = String(text || '').toUpperCase().split(/[^A-Z0-9]+/);
+    for (var i = 0; i < parts.length; i++) {
+      var q = parts[i]; if (q.length === 18 && q[0] === 'I') q = q.slice(1);
+      if (q.length === VIN_LENGTH && isValidVIN(q)) return q;
+    }
+    for (var j = 0; j + VIN_LENGTH <= t.length; j++) { var w = t.substr(j, VIN_LENGTH); if (isValidVIN(w)) return w; }
+    return '';
+  }
+  function loadScript(src) {
+    return new Promise(function (res, rej) {
+      var sc = document.createElement('script'); sc.src = src; sc.async = true;
+      sc.onload = res; sc.onerror = function () { rej(new Error('load failed')); };
+      document.head.appendChild(sc);
+    });
+  }
+  function zxingEngine() {
+    return (window.ZXing ? Promise.resolve() : loadScript(ZXING_URL)).then(function () {
+      var Z = window.ZXing, hints = new Map();
+      hints.set(Z.DecodeHintType.POSSIBLE_FORMATS, [Z.BarcodeFormat.CODE_39, Z.BarcodeFormat.CODE_128, Z.BarcodeFormat.DATA_MATRIX, Z.BarcodeFormat.QR_CODE, Z.BarcodeFormat.PDF_417]);
+      hints.set(Z.DecodeHintType.TRY_HARDER, true);
+      var reader = new Z.MultiFormatReader(); reader.setHints(hints);
+      var cv = document.createElement('canvas');
+      function tryDecode(lum) {
+        try { return reader.decode(new Z.BinaryBitmap(new Z.HybridBinarizer(lum)), hints).getText(); } catch (e) { return null; }
+      }
+      // Attempts: straight, sideways, small tilts (1D codes need near-horizontal scan lines),
+      // and a half-size pass that helps with blur. Live camera cycles one attempt per frame;
+      // still photos try them all.
+      var ATTEMPTS = [[0, 1], [90, 1], [8, 1], [-8, 1], [0, 0.5], [16, 1], [-16, 1], [4, 0.6], [-4, 0.6]];
+      var tick = 0;
+      function attempt(source, w, h, ang, k) {
+        var sc = Math.min(1, 1600 / Math.max(w, h)) * k;
+        var dw = Math.round(w * sc), dh = Math.round(h * sc);
+        var rad = ang * Math.PI / 180, cos = Math.abs(Math.cos(rad)), sin = Math.abs(Math.sin(rad));
+        cv.width = Math.round(dw * cos + dh * sin); cv.height = Math.round(dw * sin + dh * cos);
+        var ctx = cv.getContext('2d', { willReadFrequently: true });
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
+        ctx.save(); ctx.translate(cv.width / 2, cv.height / 2); ctx.rotate(rad); ctx.drawImage(source, -dw / 2, -dh / 2, dw, dh); ctx.restore();
+        return tryDecode(new Z.HTMLCanvasElementLuminanceSource(cv));
+      }
+      return {
+        kind: 'zxing',
+        detect: function (source, all) {
+          var w = source.videoWidth || source.naturalWidth || source.width, h = source.videoHeight || source.naturalHeight || source.height;
+          if (!w || !h) return Promise.resolve([]);
+          var list = all ? ATTEMPTS : [ATTEMPTS[0], ATTEMPTS[1 + (tick++ % (ATTEMPTS.length - 1))]];
+          for (var i = 0; i < list.length; i++) { var txt = attempt(source, w, h, list[i][0], list[i][1]); if (txt) return Promise.resolve([txt]); }
+          return Promise.resolve([]);
+        }
+      };
+    });
+  }
+  function getBarcodeEngine() {
+    if (bcEnginePromise) return bcEnginePromise;
+    var native = ('BarcodeDetector' in window) && window.BarcodeDetector.getSupportedFormats
+      ? window.BarcodeDetector.getSupportedFormats().then(function (fs) {
+          var use = BC_FORMATS.filter(function (f) { return fs.indexOf(f) >= 0; });
+          // Code 39 is the common VIN sticker format; without it, ZXing is the better engine.
+          if (use.indexOf('code_39') < 0) return null;
+          var det = new window.BarcodeDetector({ formats: use });
+          return { kind: 'native', detect: function (src) { return det.detect(src).then(function (r) { return r.map(function (x) { return x.rawValue; }); }).catch(function () { return []; }); } };
+        }).catch(function () { return null; })
+      : Promise.resolve(null);
+    bcEnginePromise = native.then(function (n) { return n || zxingEngine(); }).catch(function () { bcEnginePromise = null; return null; });
+    return bcEnginePromise;
+  }
+  function scanBarcode(source, all) {
+    return getBarcodeEngine().then(function (eng) {
+      if (!eng) return '';
+      return eng.detect(source, all).then(function (texts) {
+        for (var i = 0; i < texts.length; i++) { var v = vinFromBarcode(texts[i]); if (v) return v; }
+        return '';
+      });
+    }).catch(function () { return ''; });
+  }
+
   /* ── Consensus Engine ── */
   function findConsensusVIN(results) {
     var validResults = results.filter(function (r) { return r.text.length === VIN_LENGTH; });
@@ -355,7 +445,7 @@
     return validResults[0];
   }
 
-  window.caVinOCR = { preprocessFrame: preprocessFrame, recognizeFrame: recognizeFrame, recognizeImage: recognizeImage, normalizeOCR: normalizeOCR, repairVIN: repairVIN, vinSuggestions: vinSuggestions, FRAME_PLANS: null, findConsensusVIN: findConsensusVIN, isValidVIN: isValidVIN, loadTesseract: loadTesseract };
+  window.caVinOCR = { preprocessFrame: preprocessFrame, recognizeFrame: recognizeFrame, recognizeImage: recognizeImage, normalizeOCR: normalizeOCR, repairVIN: repairVIN, vinSuggestions: vinSuggestions, FRAME_PLANS: null, findConsensusVIN: findConsensusVIN, isValidVIN: isValidVIN, loadTesseract: loadTesseract, vinFromBarcode: vinFromBarcode, scanBarcode: scanBarcode, getBarcodeEngine: getBarcodeEngine };
 
   // Per-frame preprocessing/page-segmentation plan. In tests on real plate photos, PSM 7
   // (single line) failed whenever the guide box caught a second line; PSM 6/11 held up.
@@ -501,6 +591,27 @@
     // Guide box proportions (relative to video)
     var guideRect = { left: 0.075, top: 0.39, width: 0.85, height: 0.22 };
 
+    // 1) Barcode first: keep looking for a VIN barcode the whole time the camera is open.
+    self._barcodeHit = false;
+    status.textContent = 'Looking for the VIN barcode\u2026 The barcode on the driver\u2019s door-jamb sticker works best.';
+    function barcodeTick() {
+      if (!self.scanning || self._barcodeHit || !self.stream) return;
+      scanBarcode(video).then(function (vin) {
+        if (vin && self.scanning && !self._barcodeHit) {
+          self._barcodeHit = true; self.scanning = false;
+          self._showConfirm(vin, 'barcode');
+          document.getElementById('vinScannerRetry').style.display = 'inline-block';
+          return;
+        }
+        setTimeout(barcodeTick, 250);
+      });
+    }
+    barcodeTick();
+
+    // 2) OCR fallback starts after a few seconds without a barcode.
+    setTimeout(function () { if (self.scanning && !self._barcodeHit) startOCR(); }, 3500);
+    function startOCR() {
+    status.textContent = 'No barcode yet. Reading the VIN text too \u2014 fit it inside the box.';
     loadTesseract(function (err) {
       if (err) {
         status.textContent = 'OCR engine failed to load. Please enter VIN manually.';
@@ -509,6 +620,7 @@
       }
 
       function captureAndRecognize() {
+        if (self._barcodeHit) return;
         if (!self.scanning || frameCount >= self.maxFrames) {
           self._evaluateResults();
           return;
@@ -541,14 +653,14 @@
         });
       }
 
-      // Small delay so camera can focus
-      setTimeout(captureAndRecognize, 1200);
+      captureAndRecognize();
     });
+    }
   };
 
   VINScanner.prototype._evaluateResults = function () {
     var self = this;
-    if (self._uploadMode) return;
+    if (self._uploadMode || self._barcodeHit) return;
     self.scanning = false;
     var status = document.getElementById('vinScannerStatus');
     var resultDiv = document.getElementById('vinScannerResult');
@@ -576,7 +688,7 @@
   };
 
   // Confirm-or-edit step: the scan is never written to the form until the user accepts it.
-  VINScanner.prototype._showConfirm = function (text) {
+  VINScanner.prototype._showConfirm = function (text, source) {
     var self = this;
     var status = document.getElementById('vinScannerStatus');
     var resultDiv = document.getElementById('vinScannerResult');
@@ -619,8 +731,9 @@
     };
     resultDiv.style.display = 'block';
     refresh();
-    status.textContent = isValidVIN(input.value) ? 'VIN read. Please confirm it matches your plate.' : 'We read something. Check it against the plate and fix any wrong character.';
-    self._announce('Scanned VIN ' + text.split('').join(' ') + '. Confirm or edit it.');
+    var fromBc = source === 'barcode';
+    status.textContent = fromBc ? (isValidVIN(input.value) ? 'VIN read from the barcode. Confirm it matches your sticker.' : 'Barcode read. Its check digit doesn\u2019t match (normal for some non-US vehicles), so compare it with the sticker.') : (isValidVIN(input.value) ? 'VIN read from the text. Please confirm it matches your plate.' : 'We read something. Check it against the plate and fix any wrong character.');
+    self._announce((fromBc ? 'Barcode VIN ' : 'Scanned VIN ') + text.split('').join(' ') + '. Confirm or edit it.');
     setTimeout(function () { confirmBtn.focus(); }, 50);
   };
 
@@ -638,7 +751,12 @@
     img.onload = function () {
       loadTesseract(function (err) {
         if (err) { status.textContent = 'OCR engine failed to load. Please type the VIN.'; return; }
-        recognizeImage(img).then(function (res) {
+        scanBarcode(img, true).then(function (bcVin) {
+          if (bcVin) { URL.revokeObjectURL(url); self._showConfirm(bcVin, 'barcode'); retryBtn.style.display = 'inline-block'; return null; }
+          status.textContent = 'No barcode found in the photo. Reading the VIN text\u2026';
+          return recognizeImage(img);
+        }).then(function (res) {
+          if (res === null) return;
           URL.revokeObjectURL(url);
           if (res && res.text && res.text.length === VIN_LENGTH) { self._showConfirm(res.text); }
           else { status.textContent = 'Couldn\u2019t find a 17-character VIN in that photo. Try a closer, straight-on shot, or type it.'; }
