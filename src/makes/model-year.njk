@@ -10,6 +10,7 @@ eleventyComputed:
   title: "{{ entry.year }} {{ entry.makeName }} {{ entry.name }} — VIN Decoder, Specs & Recalls"
   description: "Free VIN decoder and recall check for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Decode any {{ entry.year }} {{ entry.name }} VIN for full specs, safety recalls, and ownership resources."
 ---
+{% set copy = entry | yearCopy %}
 
 <script type="application/ld+json">
 {
@@ -30,36 +31,7 @@ eleventyComputed:
 }
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I decode a {{ entry.year }} {{ entry.makeName }} {{ entry.name }} VIN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Enter the 17-character VIN from your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} into Car Alpha's free VIN decoder. The VIN is located on the driver's side dashboard, the driver's door jamb sticker, your vehicle registration, or your insurance card."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are there any recalls on the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Recall status varies by the specific vehicle. Enter your VIN to check for open recalls on your exact {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. All recall repairs are performed free at authorized {{ entry.makeName }} dealerships."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should I check before buying a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Decode the VIN to verify year, make, model, and trim match the listing. Check for open safety recalls. Get a vehicle history report. Have an independent mechanic perform a pre-purchase inspection."
-      }
-    }
-  ]
-}
+{{ copy.faqSchema | jsonStringify | safe }}
 </script>
 
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: entry.makeName, url: "/makes/" + entry.makeSlug + "/" }, { label: entry.name, url: "/makes/" + entry.makeSlug + "/" + entry.slug + "/" }, { label: entry.year | string }] %}
@@ -78,24 +50,30 @@ eleventyComputed:
           <span>Model Year {{ entry.year }}</span>
         </div>
       </div>
-      <div class="px-8 py-6">
-        <p class="text-silver-400 leading-relaxed">The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} is a {{ entry.bodyType | lower }} from {{ entry.makeName }}. Use the VIN decoder below to look up full specifications, safety ratings, and open recalls for any {{ entry.year }} {{ entry.name }}. Whether you're buying, selling, or maintaining a {{ entry.year }} {{ entry.name }}, a VIN check reveals the complete vehicle history.</p>
+      <div class="px-8 py-6" data-vehicle-copy>
+        {% for paragraph in copy.paragraphs %}
+        <p class="text-silver-400 leading-relaxed {% if not loop.first %}mt-4{% endif %}">{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
 
     {# Year Context Info #}
-    <div class="grid sm:grid-cols-3 gap-4 mb-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
       <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
-        <div class="text-2xl font-black text-volt-400">{{ entry.year }}</div>
-        <div class="text-xs text-silver-400 mt-1">Model Year</div>
-      </div>
-      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
-        <div class="text-2xl font-black text-volt-400">{{ entry.makeName }}</div>
-        <div class="text-xs text-silver-400 mt-1">Manufacturer</div>
+        <div class="text-2xl font-black text-volt-400">{{ copy.ctx.ordinalWord }} of {{ copy.ctx.total }}</div>
+        <div class="text-xs text-silver-400 mt-1">Catalog year</div>
       </div>
       <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
         <div class="text-2xl font-black text-volt-400">{{ entry.bodyType }}</div>
-        <div class="text-xs text-silver-400 mt-1">Body Style</div>
+        <div class="text-xs text-silver-400 mt-1">Body style on file</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-2xl font-black text-volt-400">{% if copy.ctx.vinCode %}{{ copy.ctx.vinCode }}{% else %}—{% endif %}</div>
+        <div class="text-xs text-silver-400 mt-1">VIN year code (position 10)</div>
+      </div>
+      <div class="glass-card metallic-border rounded-xl p-5 text-center carbon-panel">
+        <div class="text-2xl font-black text-volt-400">{{ copy.ctx.age }}</div>
+        <div class="text-xs text-silver-400 mt-1">Years old in 2026</div>
       </div>
     </div>
 
@@ -117,36 +95,34 @@ eleventyComputed:
       </section>
     </div>
 
-    {# Recalls Section #}
-    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
-      <div class="steel-header px-6 py-4">
-        <h2 class="font-bold text-white text-lg">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} Recalls</h2>
-      </div>
-      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed">
-        <p>Safety recalls for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} are issued by NHTSA when a safety-related defect is discovered. Common recall categories include airbag systems, engine components, electrical systems, and brake assemblies. All recall repairs are performed free of charge at authorized {{ entry.makeName }} dealerships regardless of mileage.</p>
-        <p class="mt-3">Enter your specific VIN above to check for open recalls on your {{ entry.year }} {{ entry.name }}, or visit our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> tool.</p>
-      </div>
-    </div>
-
-    {# Common Issues & Ownership Tips #}
-    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
-      <div class="steel-header px-6 py-4">
-        <h2 class="font-bold text-white text-lg">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} Ownership Guide</h2>
-      </div>
-      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed space-y-4">
-        <p>Understanding common ownership considerations for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} helps you make informed decisions about purchasing, maintaining, and insuring this vehicle.</p>
-
-        <h3 class="text-white font-bold text-base mt-4">Maintenance Considerations</h3>
-        <p>Regular maintenance is critical for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. {{ entry.makeName }} recommends following the manufacturer-specified service intervals for oil changes, fluid inspections, brake checks, and tire rotations. {% if entry.year < 2020 %}As a vehicle that is now several years old, inspect belts, hoses, and battery condition regularly. Vehicles of this age may also need timing belt or chain service depending on the engine type.{% elif entry.year < 2023 %}Pay attention to fluid levels, brake pad wear, and tire condition. Vehicles in this age range benefit from proactive maintenance that can prevent costly repairs down the road.{% else %}Newer vehicles still require regular maintenance to maintain warranty coverage and optimal performance. Follow the maintenance schedule in your owner's manual precisely.{% endif %}</p>
-
-        <h3 class="text-white font-bold text-base mt-4">Insurance Factors</h3>
-        <p>Insurance rates for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} are influenced by the model year, body style, engine specifications, safety equipment, theft rates, and repair costs specific to this vehicle. {% if entry.bodyType == "SUV" or entry.bodyType == "Crossover" %}SUVs and crossovers typically carry moderate insurance rates due to their safety features and lower theft rates compared to sports cars.{% elif entry.bodyType == "Truck" or entry.bodyType == "Pickup" %}Trucks and pickups may have higher insurance rates due to their size and repair costs, though specific rates vary by trim and engine configuration.{% elif entry.bodyType == "Sports Car" or entry.bodyType == "Coupe" %}Sports cars and coupes often carry higher insurance premiums due to performance capabilities, higher repair costs, and driver demographic statistics.{% else %}Sedans and passenger vehicles generally have competitive insurance rates, though specific factors like engine size and safety equipment affect your premium.{% endif %} <a href="/go/insurance/" rel="nofollow sponsored noopener" class="text-volt-400 hover:underline">Compare insurance rates</a> for your specific {{ entry.year }} {{ entry.name }} configuration.</p>
-
-        <h3 class="text-white font-bold text-base mt-4">Market Value Context</h3>
-        <p>{% if entry.year >= 2025 %}As a current or near-new model year, the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} holds strong market value. New and nearly-new vehicles depreciate most significantly in the first two years of ownership, typically losing 20-30% of their original value. If purchasing new, consider how quickly this depreciation affects your equity position.{% elif entry.year >= 2022 %}The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} is in the sweet spot for used car buyers: recent enough to have modern safety features and technology, while having already absorbed the steepest depreciation. Vehicles in this age range typically offer strong value relative to their condition and remaining useful life.{% elif entry.year >= 2018 %}The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} represents a value-oriented choice for buyers who prioritize affordability. Vehicles of this vintage have depreciated significantly, making them more accessible. However, factor in potential maintenance costs and check for any open recalls before purchasing.{% else %}The {{ entry.year }} {{ entry.makeName }} {{ entry.name }} is well into its depreciation curve. While purchase prices are lower, carefully evaluate maintenance history, overall condition, and remaining useful life. A thorough <a href="/guides/how-to-check-car-before-buying/" class="text-volt-400 hover:underline">pre-purchase inspection</a> is essential for vehicles of this age.{% endif %}</p>
-
-        <h3 class="text-white font-bold text-base mt-4">Safety & Recall Awareness</h3>
-        <p>Always verify the recall status of any {{ entry.year }} {{ entry.makeName }} {{ entry.name }} you own or are considering purchasing. NHTSA issues recalls throughout a vehicle's lifetime, meaning new recalls can affect older vehicles at any time. All recall repairs are performed free of charge at authorized {{ entry.makeName }} dealerships, regardless of the vehicle's age or mileage. Use our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> or enter your VIN above to check for open recalls.</p>
+    {# Shared guides — the generic advice lives here, not copied onto every year #}
+    <div class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4">Next steps for a {{ entry.year }} {{ entry.name }}</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <a href="/recall-checker/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Check recalls by VIN</div>
+          <div class="text-[10px] text-silver-500 mt-1">NHTSA campaign data for this {{ entry.year }} {{ entry.name }}, then a free dealer remedy</div>
+        </a>
+        <a href="/guides/how-to-check-car-before-buying/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Pre-purchase checklist</div>
+          <div class="text-[10px] text-silver-500 mt-1">The inspection steps, kept in one guide instead of repeated on every year</div>
+        </a>
+        <a href="/guides/lemon-law/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Lemon law, if repairs repeat</div>
+          <div class="text-[10px] text-silver-500 mt-1">Federal warranty law, plus the state statute</div>
+        </a>
+        <a href="/guides/warranties/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Warranty guide</div>
+          <div class="text-[10px] text-silver-500 mt-1">How to read what's left on a {{ copy.ctx.age }}-year-old {{ entry.name }}</div>
+        </a>
+        <a href="/guides/recalls-resale-value/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Recalls and resale value</div>
+          <div class="text-[10px] text-silver-500 mt-1">What an open campaign does to a sale</div>
+        </a>
+        <a href="/blog/how-to-negotiate-used-car-price/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
+          <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Compare sale offers</div>
+          <div class="text-[10px] text-silver-500 mt-1">Trade-in credit and an outright sale are different deals</div>
+        </a>
       </div>
     </div>
 
@@ -156,19 +132,19 @@ eleventyComputed:
       <div class="grid sm:grid-cols-2 gap-4">
         <a href="/go/insurance/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Insurance</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Compare insurance rates for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} from top carriers. Your {{ entry.year }} model year, trim level, and safety features all affect your premium.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.insurance }}</p>
         </a>
         <a href="/go/warranty/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Warranty</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Extended warranty plans can protect your {{ entry.year }} {{ entry.name }} against costly repairs{% if entry.year < 2022 %}, especially as the factory warranty has likely expired{% endif %}. Coverage typically includes powertrain and major electrical components.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.warranty }}</p>
         </a>
         <a href="/go/loans/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Financing</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">{% if entry.year >= 2024 %}Pre-qualify for new auto loan offers for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Newer model years typically qualify for the lowest APR rates.{% else %}Explore refinancing options for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Refinancing could lower your monthly payment or reduce your interest rate.{% endif %}</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.financing }}</p>
         </a>
         <a href="/go/sell/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Selling</h3>
-          <p class="text-xs text-silver-400 leading-relaxed">Get instant offer quotes for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} from multiple buyers. Online platforms often beat dealer trade-in values by 10–20%.</p>
+          <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.selling }}</p>
         </a>
       </div>
     </div>
@@ -179,26 +155,13 @@ eleventyComputed:
         <h2 class="font-bold text-white text-lg">{{ entry.year }} {{ entry.makeName }} {{ entry.name }} FAQ</h2>
       </div>
       <div class="px-6 py-5 space-y-4">
+        {% for faq in copy.faqs %}
         <details class="group">
-          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">How do I decode a {{ entry.year }} {{ entry.makeName }} {{ entry.name }} VIN?</summary>
-          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Enter the 17-character VIN from your {{ entry.year }} {{ entry.makeName }} {{ entry.name }} into the decoder above or visit our <a href="/vin-decoder/" class="text-volt-400 hover:underline">free VIN decoder</a>. The VIN is located on the driver's side dashboard (visible through the windshield), the driver's door jamb sticker, your vehicle registration, or your insurance card.</p>
+          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">{{ faq.q }}</summary>
+          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4" data-vehicle-copy>{{ faq.a }}</p>
         </details>
-        <details class="group">
-          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">Are there any recalls on the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?</summary>
-          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Recall status varies by the specific vehicle. Enter your VIN in the decoder above to check for open recalls on your exact {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. You can also visit our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a> for a dedicated recall lookup. All recall repairs are performed free at authorized {{ entry.makeName }} dealerships.</p>
-        </details>
-        <details class="group">
-          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">What should I check before buying a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?</summary>
-          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Before purchasing, decode the VIN to verify the year, make, model, and trim match the listing. Check for open safety recalls. Get a vehicle history report to check for accidents, title brands, and odometer discrepancies. Have an independent mechanic perform a pre-purchase inspection. See our complete <a href="/guides/how-to-check-car-before-buying/" class="text-volt-400 hover:underline">used car buying guide</a> for detailed steps.</p>
-        </details>
-        <details class="group">
-          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">How much does insurance cost for a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?</summary>
-          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">Insurance costs depend on the specific trim, engine, safety features, your location, driving record, and coverage level. Decode the VIN to get exact vehicle specs, then <a href="/go/insurance/" rel="nofollow sponsored noopener" class="text-volt-400 hover:underline">compare insurance rates</a> from multiple carriers to find the best rate for your {{ entry.year }} {{ entry.makeName }} {{ entry.name }}.</p>
-        </details>
-        <details class="group">
-          <summary class="cursor-pointer text-sm font-bold text-silver-300 group-open:text-volt-400 transition-colors py-2">{% if entry.year < 2022 %}Is an extended warranty worth it for a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?{% else %}Is the factory warranty still active on a {{ entry.year }} {{ entry.makeName }} {{ entry.name }}?{% endif %}</summary>
-          <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">{% if entry.year < 2022 %}For a {{ entry.year }} model, the factory warranty has likely expired. Whether an extended warranty makes sense depends on the vehicle's mileage, condition, and your risk tolerance. Decode the VIN to confirm exact specs, then <a href="/go/warranty/" rel="nofollow sponsored noopener" class="text-volt-400 hover:underline">compare extended warranty options</a> to evaluate coverage and pricing.{% else %}Factory warranty coverage depends on the purchase date and mileage. Most manufacturers provide 3-year/36,000-mile basic and 5-year/60,000-mile powertrain warranties. Decode the VIN and check your purchase documentation to determine remaining coverage.{% endif %}</p>
-        </details>
+        {% endfor %}
+        <p class="text-xs text-silver-500">The inspection checklist, the recall lookup, and the warranty guide are linked above so this page does not repeat them as if they were unique to this year.</p>
       </div>
     </div>
 
@@ -220,12 +183,10 @@ eleventyComputed:
     <div class="mb-10">
       <h2 class="text-xl font-black text-white mb-6">Other {{ entry.makeName }} {{ entry.name }} Model Years</h2>
       <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 gap-2">
-        {% for yr in modelYears %}
-          {% if yr.makeSlug == entry.makeSlug and yr.slug == entry.slug and yr.year != entry.year %}
-          <a href="/makes/{{ yr.makeSlug }}/{{ yr.slug }}/{{ yr.year }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
-            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ yr.year }}</div>
+        {% for yr in entry.makeSlug | lookupYears(entry.slug, entry.year) %}
+          <a href="/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ yr }}/" class="glass-card metallic-border rounded-lg p-2 card-hover carbon-panel group text-center">
+            <div class="font-bold text-white group-hover:text-volt-400 transition-colors text-sm">{{ yr }}</div>
           </a>
-          {% endif %}
         {% endfor %}
       </div>
     </div>

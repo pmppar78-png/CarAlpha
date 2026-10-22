@@ -22,7 +22,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(self), microphone=(), geolocation=()"
-    X-XSS-Protection = "1; mode=block"
 
 [[headers]]
   for = "/assets/*"
@@ -249,6 +248,12 @@
 [[edge_functions]]
   function = "vehicle-pages"
   path = "/makes/*/*/*/in/*"
+
+# AI chat. Must stay above the 404 fallback so the function, not the 404 page, answers.
+[[redirects]]
+  from = "/api/ai-chat"
+  to = "/.netlify/functions/ai-chat"
+  status = 200
 
 # SPA fallback for 404
 [[redirects]]

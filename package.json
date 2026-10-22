@@ -7,7 +7,9 @@
     "build": "npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve",
     "clean": "rm -rf _site",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "check:boilerplate": "node scripts/check-repeated-sentences.js",
+    "test": "node --test test/rate-limit.test.js"
   },
   "keywords": [
     "vin-decoder",

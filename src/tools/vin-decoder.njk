@@ -122,6 +122,7 @@ permalink: /vin-decoder/
       <div class="hidden" id="vehicleCard"></div>
       <div class="hidden" id="recallCard"></div>
       <div class="hidden" id="actionsCard"></div>
+      <div class="hidden" id="nextSteps"></div>
     </section>
   </div>
 </section>
@@ -298,6 +299,7 @@ permalink: /vin-decoder/
   </div>
 </section>
 
+<script src="/assets/js/next-steps.js"></script>
 <script>
 (function(){
   var vinInput = document.getElementById('vinInput');
@@ -336,16 +338,19 @@ permalink: /vin-decoder/
 
   async function run(){
     setError(); vehicleCard.classList.add('hidden'); recallCard.classList.add('hidden'); actionsCard.classList.add('hidden');
+    var nextSteps=document.getElementById('nextSteps'); if(nextSteps) nextSteps.classList.add('hidden');
     var vin=(vinInput.value||'').trim().toUpperCase();
     var vc=window.caVinCheck?caVinCheck(vin):{vin:vin,error:vin.length!==17?'Please enter a valid 17-character VIN.':''};if(window.caVinShowWarning)caVinShowWarning(vc.warning);if(vc.error){setError(vc.error);return;}vin=vc.vin;
     setLoading(true);
+    var dec={}; var recallCount=0;
     try{
       var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
-      var dec=(d.Results&&d.Results[0])||{}; dec.VIN=vin; renderVehicle(dec);
+      dec=(d.Results&&d.Results[0])||{}; dec.VIN=vin; renderVehicle(dec);
       try{
         var mk=encodeURIComponent(dec.Make||''),md=encodeURIComponent(dec.Model||''),yr=encodeURIComponent(dec.ModelYear||'');
-        if(mk&&md&&yr){ var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr); renderRecalls(r); }
+        if(mk&&md&&yr){ var r=await fetchJSON('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+mk+'&model='+md+'&modelYear='+yr); recallCount=renderRecalls(r)||0; }
       }catch(e){ recallCard.innerHTML='<div class="glass-card rounded-2xl p-6 carbon-panel"><p class="text-silver-400 text-sm">Recall check unavailable. Try again later.</p></div>'; recallCard.classList.remove('hidden'); }
+      if(window.caShowNextSteps) caShowNextSteps(nextSteps,{year:dec.ModelYear,recallCount:recallCount});
     }catch(e){setError('Service is busy. Please try again shortly.');}finally{setLoading(false);}
   }
   runBtn.addEventListener('click',run);

@@ -112,45 +112,69 @@
     });
   }
 
-  function postBubble(container, role, html) {
+  var history = [];
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, function (ch) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
+    });
+  }
+
+  function postBubble(container, role, text) {
     var isAI = role === 'ai';
     var wrap = document.createElement('div');
     wrap.className = 'flex items-start gap-3 animate-in';
+    var body = document.createElement('div');
     if (isAI) {
-      wrap.innerHTML =
-        '<div class="shrink-0 h-7 w-7 rounded-lg bg-gradient-to-br from-volt-500 to-volt-700 text-white grid place-items-center text-[10px] font-bold shadow-md shadow-volt-500/20">AI</div>' +
-        '<div class="p-3.5 rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/[0.06] text-silver-300 leading-relaxed max-w-[85%]">' + html + '</div>';
+      var avatar = document.createElement('div');
+      avatar.className = 'shrink-0 h-7 w-7 rounded-lg bg-gradient-to-br from-volt-500 to-volt-700 text-white grid place-items-center text-[10px] font-bold shadow-md shadow-volt-500/20';
+      avatar.textContent = 'AI';
+      body.className = 'p-3.5 rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/[0.06] text-silver-300 leading-relaxed max-w-[85%] whitespace-pre-wrap';
+      body.textContent = text;
+      wrap.appendChild(avatar);
+      wrap.appendChild(body);
     } else {
-      wrap.innerHTML =
-        '<div class="ml-auto p-3.5 rounded-2xl rounded-tr-md bg-volt-600/20 border border-volt-500/20 text-volt-200 leading-relaxed max-w-[85%]">' + html + '</div>';
+      wrap.className += ' justify-end';
+      body.className = 'ml-auto p-3.5 rounded-2xl rounded-tr-md bg-volt-600/20 border border-volt-500/20 text-volt-200 leading-relaxed max-w-[85%] whitespace-pre-wrap';
+      body.textContent = text;
+      wrap.appendChild(body);
     }
     container.appendChild(wrap);
     container.scrollTop = container.scrollHeight;
   }
 
-  function aiAnswer(query) {
-    var q = (query || '').toLowerCase();
-    if (q.includes('recall'))
-      return 'Use our <a href="/recalls/" class="text-volt-400 underline">Recall Lookup</a> tool to check for open recalls on any vehicle by make, model, and year. All recalls require a free dealer fix.';
-    if (q.includes('insurance'))
-      return 'Compare at least 3 carriers to potentially save 10-30% on auto insurance. Factors like vehicle age, safety rating, and your driving record all affect rates.';
-    if (q.includes('warranty'))
-      return 'Extended warranties can be cost-effective for vehicles over 5 years old or with 60k+ miles. Look for plans covering powertrain and major electrical components.';
-    if (q.includes('loan') || q.includes('refi') || q.includes('finance'))
-      return 'Check pre-qualified offers with no hard credit pull first. Refinancing can lower your rate if your credit has improved since the original loan.';
-    if (q.includes('mechanic') || q.includes('repair') || q.includes('estimate'))
-      return 'Always get at least 2-3 quotes for major repairs. Check common issues for your specific make and model to know what to expect.';
-    if (q.includes('sell') || q.includes('trade'))
-      return 'Online instant-offer platforms often beat dealer trade-in values by 10-20%. Compare offers from multiple buyers before deciding.';
-    if (q.includes('lemon'))
-      return 'If your vehicle has had repeated repairs for the same issue affecting safety or drivability, you may have remedies under your state\'s lemon law. Check our <a href="/states/" class="text-volt-400 underline">state guides</a> for details.';
-    return 'I can help with: <strong>recalls</strong>, <strong>insurance</strong>, <strong>warranty</strong>, <strong>loan/refi</strong>, <strong>repair estimates</strong>, <strong>selling</strong>, or <strong>lemon law</strong>. Ask me anything about your vehicle.';
+  function offlineAnswer() {
+    return 'Car Alpha AI is unavailable right now. You can still decode a VIN at /vin-decoder/ or check open recalls at /recall-checker/. Both query NHTSA directly. For a repeating defect, start with /guides/lemon-law/ and confirm the repair threshold with your state attorney general.';
   }
 
-  function handleChat(text) {
-    if (!text || !text.trim()) return;
-    postBubble(chat, 'user', text);
-    postBubble(chat, 'ai', aiAnswer(text));
+  async function handleChat(text) {
+    var message = (text || '').trim();
+    if (!message) return;
+    if (message.length > 2000) message = message.slice(0, 2000);
+    postBubble(chat, 'user', message);
+    postBubble(chat, 'ai', 'Checking…');
+    var pending = chat.lastElementChild;
+    try {
+      var response = await fetch('/api/ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: message, history: history.slice(-6) })
+      });
+      var data = {};
+      try { data = await response.json(); } catch (err) { data = {}; }
+      var reply = (data && (data.reply || data.error)) || offlineAnswer();
+      if (!response.ok && data && data.error) reply = data.error + ' The VIN decoder (/vin-decoder/) and recall checker (/recall-checker/) still query NHTSA directly.';
+      if (pending) pending.remove();
+      postBubble(chat, 'ai', reply);
+      if (response.ok && data && data.reply) {
+        history.push({ role: 'user', content: message });
+        history.push({ role: 'assistant', content: data.reply });
+        if (history.length > 6) history = history.slice(-6);
+      }
+    } catch (err) {
+      if (pending) pending.remove();
+      postBubble(chat, 'ai', offlineAnswer());
+    }
   }
 
   if (chatSend) {
