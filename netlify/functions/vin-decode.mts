@@ -7,6 +7,46 @@ interface DecodeResult {
   vehicle: Record<string, string>;
   recalls: Array<Record<string, string>>;
   recallCount: number;
+  checkDigitValid: boolean;
+}
+
+// Only our own site (caralpha.org) and Car Alpha's own Netlify deploys/previews may call this endpoint.
+const ALLOWED_ORIGIN = /^https:\/\/((www\.)?caralpha\.org|([a-z0-9-]+--)?caralpha\.netlify\.app)$/;
+function requestOrigin(req: Request): string {
+  const o = req.headers.get("origin");
+  if (o) return o;
+  const ref = req.headers.get("referer");
+  if (ref) { try { return new URL(ref).origin; } catch { /* ignore */ } }
+  return "";
+}
+function isAllowedOrigin(req: Request): boolean {
+  return ALLOWED_ORIGIN.test(requestOrigin(req));
+}
+
+// Simple in-memory rate limiting (per IP, 30 lookups per minute)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const limit = rateLimitMap.get(ip);
+  if (!limit || now > limit.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + 60000 });
+    return false;
+  }
+  if (limit.count >= 30) return true;
+  limit.count++;
+  return false;
+}
+
+const TRANSLIT: Record<string, number> = { A:1,B:2,C:3,D:4,E:5,F:6,G:7,H:8,J:1,K:2,L:3,M:4,N:5,P:7,R:9,S:2,T:3,U:4,V:5,W:6,X:7,Y:8,Z:9 };
+const WEIGHTS = [8,7,6,5,4,3,2,10,0,9,8,7,6,5,4,3,2];
+export function vinCheckDigit(vin: string): string {
+  let sum = 0;
+  for (let i = 0; i < 17; i++) {
+    const c = vin[i];
+    sum += (/\d/.test(c) ? Number(c) : TRANSLIT[c]) * WEIGHTS[i];
+  }
+  const r = sum % 11;
+  return r === 10 ? "X" : String(r);
 }
 
 export default async (req: Request, context: Context) => {
@@ -17,12 +57,26 @@ export default async (req: Request, context: Context) => {
     });
   }
 
+  if (!isAllowedOrigin(req)) {
+    return new Response(JSON.stringify({ error: "Forbidden" }), {
+      status: 403,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  if (isRateLimited(context.ip || "unknown")) {
+    return new Response(
+      JSON.stringify({ error: "Too many lookups. Please wait a minute and try again." }),
+      { status: 429, headers: { "Content-Type": "application/json", "Retry-After": "60" } }
+    );
+  }
+
   const url = new URL(req.url);
-  const vin = (url.searchParams.get("vin") || "").trim().toUpperCase();
+  const vin = (url.searchParams.get("vin") || "").toUpperCase().replace(/[\s-]/g, "");
 
   if (!vin || vin.length !== 17) {
     return new Response(
-      JSON.stringify({ error: "Please provide a valid 17-character VIN" }),
+      JSON.stringify({ error: `VINs have exactly 17 characters (this one has ${vin.length}).` }),
       { status: 400, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -92,7 +146,8 @@ export default async (req: Request, context: Context) => {
       }
     }
 
-    const result: DecodeResult = { vehicle, recalls, recallCount };
+    const checkDigitValid = vinCheckDigit(vin) === vin[8];
+    const result: DecodeResult = { vehicle, recalls, recallCount, checkDigitValid };
 
     return new Response(JSON.stringify(result), {
       status: 200,

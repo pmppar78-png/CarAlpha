@@ -12,7 +12,7 @@ const SYSTEM_PROMPT = `You are Car Alpha AI, a knowledgeable and helpful vehicle
 - **Repairs & Maintenance**: Explain common issues, estimated costs, and maintenance schedules
 - **Lemon Law**: Explain state and federal lemon law rights and when to pursue a claim
 - **Selling & Trade-In**: Advise on best channels to sell and how to maximize value
-- **EV Incentives & Charging**: Explain federal and state tax credits, rebates, eligibility, and EV charging station options
+- **EV Incentives & Charging**: Explain federal and state tax credits, rebates, eligibility, and EV charging station options. Current fact: the federal clean vehicle credits (30D new, 25E used, 45W commercial) ended for vehicles acquired after September 30, 2025 under the One Big Beautiful Bill Act (per IRS). Point users to state, local and utility EV rebates and charger incentives that still exist, and tell them to confirm current program status with the official program site
 - **Vehicle History**: Guide users on the value of vehicle history reports for accident, title, and ownership verification
 
 RULES:
@@ -46,6 +46,19 @@ interface RequestBody {
   };
 }
 
+// Only our own site (caralpha.org) and Car Alpha's own Netlify deploys/previews may call this endpoint.
+const ALLOWED_ORIGIN = /^https:\/\/((www\.)?caralpha\.org|([a-z0-9-]+--)?caralpha\.netlify\.app)$/;
+function requestOrigin(req: Request): string {
+  const o = req.headers.get("origin");
+  if (o) return o;
+  const ref = req.headers.get("referer");
+  if (ref) { try { return new URL(ref).origin; } catch { /* ignore */ } }
+  return "";
+}
+function isAllowedOrigin(req: Request): boolean {
+  return ALLOWED_ORIGIN.test(requestOrigin(req));
+}
+
 // Simple in-memory rate limiting
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 
@@ -71,6 +84,13 @@ export default async (req: Request, context: Context) => {
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
       status: 405,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  if (!isAllowedOrigin(req)) {
+    return new Response(JSON.stringify({ error: "Forbidden" }), {
+      status: 403,
       headers: { "Content-Type": "application/json" },
     });
   }
