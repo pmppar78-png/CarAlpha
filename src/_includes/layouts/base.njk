@@ -26,8 +26,18 @@
   <meta name="twitter:image" content="{{ ogImage or 'https://caralpha.org/assets/images/og-default.jpg' }}" />
 
   {# ── Pre-compiled CSS (Tailwind + Custom) ── #}
-  <link rel="stylesheet" href="/assets/css/tailwind.css" />
-  <link rel="stylesheet" href="/assets/css/custom.css" />
+  <link rel="stylesheet" href="/assets/css/tailwind.css?v=20261022" />
+  <link rel="stylesheet" href="/assets/css/custom.css?v=20261022" />
+
+  {# ── PWA / app icons ── #}
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Car Alpha" />
 
   {# ── Robots ── #}
   <meta name="robots" content="{{ robots | default('index, follow') }}" />
@@ -93,6 +103,8 @@
   <script src="/assets/js/vin-validate.js"></script>
 
   {# ── VIN Scanner (lazy, non-blocking) ── #}
-  <script defer src="/assets/js/vin-scanner.js"></script>
+  <script defer src="/assets/js/vin-scanner.js?v=20261022b"></script>
+  <script defer src="/assets/js/classic-vin.js?v=20261022"></script>
+  <script defer src="/assets/js/ca-enhance.js?v=20261022b"></script>
 </body>
 </html>
