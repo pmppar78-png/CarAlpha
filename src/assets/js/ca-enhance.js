@@ -78,7 +78,6 @@
   // Prominent "Scan with camera" button under every VIN field that has a scanner.
   function hasCamera() { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia); }
   function addScanButtons() {
-    if (!hasCamera()) return;
     document.querySelectorAll('[data-vin-scan]').forEach(function (icon) {
       var input = $(icon.getAttribute('data-vin-scan')); if (!input || input.dataset.caScanBtn) return;
       input.dataset.caScanBtn = '1';
@@ -87,19 +86,16 @@
       if (!row.contains(input)) row = input.parentNode;
       var btn = document.createElement('button'); btn.type = 'button';
       btn.className = 'ca-scan-btn mt-3 w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3 rounded-xl border border-volt-500/40 bg-volt-500/[0.08] hover:bg-volt-500/[0.15] text-volt-300 font-bold text-sm tracking-wide';
-      btn.innerHTML = '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2M7 12h10"/></svg>Scan VIN with camera';
+      btn.innerHTML = '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2M7 12h10"/></svg>' + (hasCamera() ? 'Scan VIN with camera' : 'Read VIN from a photo');
       btn.addEventListener('click', function () { icon.click(); });
       row.parentNode.insertBefore(btn, row.nextSibling);
     });
   }
-  // After a successful scan the scanner fills the input and closes; run the check automatically.
-  document.addEventListener('input', function (e) {
+  // After the user confirms a scanned VIN, run the check automatically.
+  document.addEventListener('vinscan:confirmed', function (e) {
     if (!e.target || e.target.id !== 'vinInput') return;
-    var ov = $('vinScannerOverlay');
-    if (ov && ov.style.display !== 'none') {
-      scanned = true;
-      setTimeout(function () { var rb = $('runBtn'); if (rb && String(e.target.value).length === 17) rb.click(); }, 400);
-    }
+    scanned = true;
+    setTimeout(function () { var rb = $('runBtn'); if (rb && String(e.target.value).length === 17) rb.click(); }, 300);
   }, true);
 
   // ---- PWA ----
@@ -130,7 +126,7 @@
     var p = new URLSearchParams(location.search), inp = $('vinInput');
     if (inp && p.get('vin')) { inp.value = p.get('vin').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 17); inp.dispatchEvent(new Event('input', { bubbles: true })); }
     if (inp && p.get('vin') && p.get('go') === '1') setTimeout(function () { var rb = $('runBtn'); if (rb) rb.click(); }, 300);
-    if (p.get('scan') === '1') setTimeout(function () { var b = document.querySelector('[data-vin-scan]'); if (b && hasCamera()) b.click(); else if (inp) inp.focus(); }, 600);
+    if (p.get('scan') === '1') setTimeout(function () { var b = document.querySelector('[data-vin-scan]'); if (b) b.click(); else if (inp) inp.focus(); }, 600);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -71,8 +71,14 @@
           '</div>' +
         '</div>' +
         '<div id="vinScannerResult" style="display:none;width:100%;max-width:400px;padding:12px 16px;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.25);border-radius:10px;text-align:center;">' +
-          '<div style="color:rgba(160,170,184,0.7);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Detected VIN</div>' +
-          '<div id="vinScannerResultText" style="color:#fff;font-size:18px;font-weight:800;font-family:ui-monospace,monospace;letter-spacing:0.12em;"></div>' +
+          '<label for="vinScannerResultText" style="display:block;color:rgba(160,170,184,0.8);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Check the scanned VIN, fix any character, then confirm</label>' +
+          '<input id="vinScannerResultText" maxlength="17" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" style="width:100%;box-sizing:border-box;background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.18);border-radius:8px;color:#fff;font-size:17px;font-weight:800;font-family:ui-monospace,monospace;letter-spacing:0.1em;text-align:center;padding:8px 4px;">' +
+          '<div id="vinScannerCheck" style="font-size:12px;margin-top:6px;min-height:16px;"></div>' +
+          '<div id="vinScannerSuggest" style="display:none;margin-top:6px;"></div>' +
+          '<button id="vinScannerConfirm" type="button" style="margin-top:10px;width:100%;padding:11px 16px;background:linear-gradient(90deg,#06b6d4,#22d3ee);border:0;color:#04121a;border-radius:10px;cursor:pointer;font-size:14px;font-weight:800;">Use this VIN</button>' +
+        '</div>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">' +
+          '<label id="vinScannerUploadLbl" style="padding:10px 18px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;">Upload a photo instead<input id="vinScannerFile" type="file" accept="image/*" style="position:absolute;width:1px;height:1px;opacity:0;"></label>' +
         '</div>' +
         '<button id="vinScannerRetry" style="display:none;padding:10px 24px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;transition:background 0.2s;">Try Again</button>' +
       '</div>';
@@ -92,9 +98,10 @@
   }
 
   /* ── Image Preprocessing ── */
-  function preprocessFrame(video, canvas, guideRect) {
-    var ctx = canvas.getContext('2d');
-    var vw = video.videoWidth, vh = video.videoHeight;
+  // mode: 'gray' (grayscale + contrast stretch, lets Tesseract binarize) or 'bin' (adds Otsu threshold).
+  function preprocessFrame(video, canvas, guideRect, mode, targetH) {
+    var ctx = canvas.getContext('2d', { willReadFrequently: true });
+    var vw = video.videoWidth || video.naturalWidth || video.width, vh = video.videoHeight || video.naturalHeight || video.height;
     if (!vw || !vh) return null;
 
     // Calculate bounding box region from guide overlay
@@ -102,10 +109,16 @@
     var sy = vh * guideRect.top;
     var sw = vw * guideRect.width;
     var sh = vh * guideRect.height;
+    // Upscale small crops: Tesseract reads best with characters roughly 30-60px tall.
+    var scale = Math.min(6, Math.max(1, (targetH || 160) / sh));
+    if (sw * scale > 2400) scale = Math.max(1, 2400 / sw);
+    var cw = Math.round(sw * scale), ch = Math.round(sh * scale);
 
-    canvas.width = sw;
-    canvas.height = sh;
-    ctx.drawImage(video, sx, sy, sw, sh, 0, 0, sw, sh);
+    canvas.width = cw;
+    canvas.height = ch;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(video, sx, sy, sw, sh, 0, 0, cw, ch);
+    sw = cw; sh = ch;
 
     // Grayscale
     var imgData = ctx.getImageData(0, 0, sw, sh);
@@ -126,14 +139,13 @@
       var v = ((d[k] - min) / range) * 255;
       d[k] = d[k + 1] = d[k + 2] = v;
     }
-
     // Otsu threshold
     var histogram = new Array(256).fill(0);
-    for (var h = 0; h < d.length; h += 4) histogram[d[h]]++;
+    for (var h = 0; h < d.length; h += 4) histogram[Math.round(d[h])]++;
     var total = sw * sh;
     var sumAll = 0;
     for (var t = 0; t < 256; t++) sumAll += t * histogram[t];
-    var sumB = 0, wB = 0, maxVar = 0, threshold = 128;
+    var sumB = 0, wB = 0, maxVar = 0, threshold = 128, darkCount = 0;
     for (var tt = 0; tt < 256; tt++) {
       wB += histogram[tt];
       if (wB === 0) continue;
@@ -143,10 +155,14 @@
       var mB = sumB / wB;
       var mF = (sumAll - sumB) / wF;
       var between = wB * wF * (mB - mF) * (mB - mF);
-      if (between > maxVar) { maxVar = between; threshold = tt; }
+      if (between > maxVar) { maxVar = between; threshold = tt; darkCount = wB; }
     }
+    // Text is the minority class. If most pixels are dark, the plate is light-on-dark
+    // (stamped plates, black labels), so invert to dark text on light for Tesseract.
+    var invert = darkCount / total > 0.55;
     for (var b = 0; b < d.length; b += 4) {
-      var bv = d[b] > threshold ? 255 : 0;
+      var g = invert ? 255 - d[b] : d[b];
+      var bv = mode === 'gray' ? g : ((invert ? d[b] <= threshold : d[b] > threshold) ? 255 : 0);
       d[b] = d[b + 1] = d[b + 2] = bv;
     }
 
@@ -156,32 +172,152 @@
 
   /* ── OCR Processing ── */
   var ocrWorkerPromise = null;
+  var currentPSM = '6';
   function getWorker() {
     if (ocrWorkerPromise) return ocrWorkerPromise;
     if (!window.Tesseract || !window.Tesseract.createWorker) return Promise.resolve(null);
     ocrWorkerPromise = window.Tesseract.createWorker('eng').then(function (w) {
-      return w.setParameters({ tessedit_char_whitelist: 'ABCDEFGHJKLMNPRSTUVWXYZ0123456789IOQ', tessedit_pageseg_mode: '7' }).then(function () { return w; });
+      return w.setParameters({ tessedit_char_whitelist: 'ABCDEFGHJKLMNPRSTUVWXYZ0123456789IOQ', tessedit_pageseg_mode: '6' }).then(function () { currentPSM = '6'; return w; });
     }).catch(function () { ocrWorkerPromise = null; return null; });
     return ocrWorkerPromise;
   }
   // VINs never contain I, O or Q, so OCR reads of those letters are almost always 1 or 0.
-  function normalizeOCR(text) {
-    var raw = String(text || '').toUpperCase().replace(/O|Q/g, '0').replace(/I/g, '1').replace(/[^A-HJ-NPR-Z0-9]/g, '');
-    if (raw.length > VIN_LENGTH) {
-      for (var i = 0; i + VIN_LENGTH <= raw.length; i++) { var w = raw.substr(i, VIN_LENGTH); if (isValidVIN(w)) return w; }
-    }
-    return raw;
+  // Common OCR confusions between VIN-legal characters.
+  var CONFUSABLE = { '0':'D8','1':'7LT','2':'Z','3':'8','4':'A','5':'S6','6':'G5','7':'1T','8':'B3','9':'G','A':'4','B':'8','D':'0','G':'6C','L':'1','S':'5','T':'17','U':'V','V':'UY','Z':'24','Y':'V','C':'G' };
+  var LETTER_TO_DIGIT = { 'B':'8','D':'0','G':'6','L':'1','S':'5','T':'7','Z':'2','A':'4' };
+  // VIN grammar used to rank candidates: position 9 is 0-9/X, position 10 (model year) is never
+  // U, Z or 0, and the last five characters are digits for nearly all post-1981 light vehicles.
+  function grammarScore(v) {
+    var sc = 0;
+    if (/[0-9X]/.test(v[8])) sc++;
+    if (!/[UZ0]/.test(v[9])) sc++;
+    if (/^[0-9]{5}$/.test(v.slice(12))) sc++;
+    return sc;
   }
-  function recognizeFrame(canvas) {
+  // Snap letters that cannot appear in the numeric tail (and check digit) back to digits.
+  function positionalFix(v) {
+    if (!v || v.length !== VIN_LENGTH) return v;
+    var a = v.split('');
+    if (LETTER_TO_DIGIT[a[8]]) a[8] = LETTER_TO_DIGIT[a[8]];
+    for (var i = 12; i < 17; i++) if (LETTER_TO_DIGIT[a[i]]) a[i] = LETTER_TO_DIGIT[a[i]];
+    var f = a.join('');
+    return isValidVIN(f) || !isValidVIN(v) ? f : v;
+  }
+  // If a 17-char read fails the check digit, try every single-character swap from the
+  // confusion table. Accept only when exactly one grammar-plausible swap produces a valid VIN.
+  // The result is always shown for confirmation, never trusted silently.
+  function repairVIN(v) {
+    if (!v || v.length !== VIN_LENGTH) return v;
+    v = positionalFix(v);
+    if (isValidVIN(v)) return v;
+    var cheap = [];
+    for (var i = 0; i < VIN_LENGTH; i++) {
+      var alts = CONFUSABLE[v[i]] || '';
+      for (var a = 0; a < alts.length; a++) {
+        var c = v.slice(0, i) + alts[a] + v.slice(i + 1);
+        if (swapCost(v[i], alts[a]) === 0 && isValidVIN(c) && grammarScore(c) >= 3) cheap.push(c);
+      }
+    }
+    return cheap.length === 1 ? cheap[0] : v;
+  }
+  // Shape-alike pairs Tesseract confuses most (B/8, S/5, G/6, D/0, Z/2, A/4) cost less than rarer swaps.
+  var COMMON_PAIRS = 'B8 8B S5 5S G6 6G D0 0D Z2 2Z A4 4A';
+  function swapCost(from, to) { return COMMON_PAIRS.indexOf(from + to) >= 0 ? 0 : 1; }
+  // Check-digit-valid candidates within maxEdits confusable swaps, best grammar first.
+  function vinSuggestions(v, maxEdits) {
+    if (!v || v.length !== VIN_LENGTH) return [];
+    var out = {}, i, j, a, b, c, ai, bj;
+    for (i = 0; i < VIN_LENGTH; i++) {
+      ai = CONFUSABLE[v[i]] || '';
+      for (a = 0; a < ai.length; a++) {
+        c = v.slice(0, i) + ai[a] + v.slice(i + 1);
+        var ca = swapCost(v[i], ai[a]);
+        if (isValidVIN(c)) out[c] = 1 + 2 * ca;
+        if (maxEdits < 2) continue;
+        for (j = i + 1; j < VIN_LENGTH; j++) {
+          bj = CONFUSABLE[v[j]] || '';
+          for (b = 0; b < bj.length; b++) {
+            var c2 = c.slice(0, j) + bj[b] + c.slice(j + 1);
+            if (isValidVIN(c2) && !out[c2]) out[c2] = 1.5 + 2 * (ca + swapCost(v[j], bj[b]));
+          }
+        }
+      }
+    }
+    var list = Object.keys(out).filter(function (k) { return grammarScore(k) >= 3; });
+    list.sort(function (x, y) { return out[x] - out[y]; });
+    return list;
+  }
+  function cleanTok(t) { return t.replace(/O|Q/g, '0').replace(/I/g, '1').replace(/[^A-HJ-NPR-Z0-9]/g, ''); }
+  // Best 17-char window of a token: check-digit-valid first, then grammar-plausible.
+  function bestWindow(tk) {
+    if (tk.length < VIN_LENGTH) return '';
+    var best = '', bs = -1;
+    for (var i = 0; i + VIN_LENGTH <= tk.length; i++) {
+      var w = repairVIN(tk.substr(i, VIN_LENGTH));
+      var g = grammarScore(w), sc = isValidVIN(w) && g >= 3 ? 10 : g;
+      if (sc > bs) { bs = sc; best = w; }
+    }
+    return best;
+  }
+  function normalizeOCR(text) {
+    var tokens = String(text || '').toUpperCase().split(/\s+/).map(cleanTok).filter(Boolean);
+    var raw = tokens.join('');
+    // 1) A check-digit-valid VIN inside one token, or across two tokens that together are
+    //    17-19 chars (a VIN broken by a stray space). Never across unrelated text.
+    var runs = tokens.slice();
+    for (var p = 0; p + 1 < tokens.length; p++) { var j2 = tokens[p] + tokens[p + 1]; if (j2.length >= VIN_LENGTH && j2.length <= VIN_LENGTH + 2) runs.push(j2); }
+    for (var r = 0; r < runs.length; r++) {
+      for (var i = 0; i + VIN_LENGTH <= runs[r].length; i++) { var w = runs[r].substr(i, VIN_LENGTH); if (isValidVIN(w) && grammarScore(w) >= 3) return w; }
+    }
+    // 2) A single 17-19 char token (VINs print as one unbroken run) that fits VIN grammar; trim stray edge characters.
+    var cand = '', cs = -1;
+    runs.forEach(function (tk) {
+      if (tk.length < VIN_LENGTH || tk.length > VIN_LENGTH + 2) return;
+      var bw = bestWindow(tk), g = grammarScore(bw), sc = isValidVIN(bw) && g >= 3 ? 10 : g;
+      if (sc >= 3 && sc > cs) { cs = sc; cand = bw; }
+    });
+    if (cand) return cand;
+    // 3) Short reads are kept as-is (they never pass as a VIN); long junk is dropped.
+    return raw.length < VIN_LENGTH ? raw : '';
+  }
+
+  function recognizeFrame(canvas, psm) {
     if (!window.Tesseract) return Promise.resolve({ text: '', confidence: 0 });
+    psm = psm || '6';
     return getWorker().then(function (w) {
-      return w ? w.recognize(canvas) : window.Tesseract.recognize(canvas, 'eng');
+      if (!w) return window.Tesseract.recognize(canvas, 'eng');
+      var ready = psm === currentPSM ? Promise.resolve() : w.setParameters({ tessedit_pageseg_mode: psm }).then(function () { currentPSM = psm; });
+      return ready.then(function () { return w.recognize(canvas); });
     }).then(function (result) {
-      return { text: normalizeOCR(result.data.text), confidence: result.data.confidence || 0 };
+      return { text: normalizeOCR(result.data.text), raw: result.data.text, confidence: result.data.confidence || 0 };
     }).catch(function () {
       return { text: '', confidence: 0 };
     });
   }
+
+  // Read a still photo (upload fallback). The VIN can be anywhere, so try the whole image as sparse
+  // text, then overlapping horizontal bands as single lines, stopping at the first check-digit-valid read.
+  function recognizeImage(img, canvas) {
+    canvas = canvas || document.createElement('canvas');
+    var plans = [{ r: { left: 0, top: 0, width: 1, height: 1 }, m: 'gray', psm: '11' }];
+    [0.25, 0.15].forEach(function (h) {
+      for (var top = 0; top + h <= 1.0001; top += h / 2) plans.push({ r: { left: 0.02, top: top, width: 0.96, height: h }, m: 'gray', psm: '6' });
+    });
+    plans.push({ r: { left: 0, top: 0, width: 1, height: 1 }, m: 'bin', psm: '11' });
+    var results = [], i = 0;
+    function next() {
+      if (i >= plans.length) return Promise.resolve(results);
+      var p = plans[i++];
+      if (!preprocessFrame(img, canvas, p.r, p.m)) return next();
+      return recognizeFrame(canvas, p.psm).then(function (res) {
+        if (res.text) results.push(res);
+        if (isValidVIN(res.text)) return results;
+        return next();
+      });
+    }
+    return next().then(function (rs) { return findConsensusVIN(rs) || bestPartial(rs); });
+  }
+  function bestPartial(rs) { return null; }
 
   /* ── Consensus Engine ── */
   function findConsensusVIN(results) {
@@ -219,6 +355,14 @@
     return validResults[0];
   }
 
+  window.caVinOCR = { preprocessFrame: preprocessFrame, recognizeFrame: recognizeFrame, recognizeImage: recognizeImage, normalizeOCR: normalizeOCR, repairVIN: repairVIN, vinSuggestions: vinSuggestions, FRAME_PLANS: null, findConsensusVIN: findConsensusVIN, isValidVIN: isValidVIN, loadTesseract: loadTesseract };
+
+  // Per-frame preprocessing/page-segmentation plan. In tests on real plate photos, PSM 7
+  // (single line) failed whenever the guide box caught a second line; PSM 6/11 held up.
+  var FRAME_PLANS = [['gray', '6'], ['gray', '11'], ['bin', '11'], ['gray', '6'], ['bin', '6']];
+
+  window.caVinOCR.FRAME_PLANS = FRAME_PLANS;
+
   /* ── Scanner Controller ── */
   function VINScanner(targetInput) {
     this.targetInput = targetInput;
@@ -253,6 +397,8 @@
 
     closeBtn.addEventListener('click', function () { self.close(); });
     retryBtn.addEventListener('click', function () { self._retry(); });
+    var fileIn = document.getElementById('vinScannerFile');
+    if (fileIn) fileIn.addEventListener('change', function () { var f = fileIn.files && fileIn.files[0]; fileIn.value = ''; if (f) self._handleFile(f); });
 
     // ESC to close
     self._escHandler = function (e) {
@@ -311,6 +457,11 @@
 
   VINScanner.prototype._startCamera = function (video, status) {
     var self = this;
+    self._uploadMode = false;
+    if (!hasCamera()) {
+      status.textContent = window.isSecureContext === false ? 'The camera needs a secure (https) page. Upload a photo of the VIN or type it.' : 'This browser can\u2019t open the camera here. Upload a photo of the VIN or type it.';
+      return;
+    }
     navigator.mediaDevices.getUserMedia({
       video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } }
     }).then(function (stream) {
@@ -329,7 +480,7 @@
         self._beginScan();
       };
     }).catch(function (err) {
-      status.textContent = (err && err.name === 'NotAllowedError') ? 'Camera permission was blocked. Allow camera access for this site in your browser settings, or type the VIN.' : 'No camera is available right now. Please type the VIN instead.';
+      status.textContent = (err && err.name === 'NotAllowedError') ? 'Camera permission was blocked. Allow camera access for this site in your browser settings, upload a photo, or type the VIN.' : 'No camera is available right now. Upload a photo of the VIN or type it instead.';
       self._announce('Camera is not available. Please enter your VIN manually.');
     });
   };
@@ -362,7 +513,8 @@
           self._evaluateResults();
           return;
         }
-        var processed = preprocessFrame(video, canvas, guideRect);
+        var cfg = FRAME_PLANS[frameCount % FRAME_PLANS.length];
+        var processed = preprocessFrame(video, canvas, guideRect, cfg[0]);
         if (!processed) {
           setTimeout(captureAndRecognize, 500);
           return;
@@ -371,7 +523,7 @@
         status.textContent = 'Scanning frame ' + (frameCount + 1) + ' of ' + self.maxFrames + '...';
         confDiv.style.display = 'block';
 
-        recognizeFrame(canvas).then(function (result) {
+        recognizeFrame(canvas, cfg[1]).then(function (result) {
           frameCount++;
           if (result.text) {
             self.results.push(result);
@@ -396,6 +548,7 @@
 
   VINScanner.prototype._evaluateResults = function () {
     var self = this;
+    if (self._uploadMode) return;
     self.scanning = false;
     var status = document.getElementById('vinScannerStatus');
     var resultDiv = document.getElementById('vinScannerResult');
@@ -408,50 +561,93 @@
     var consensus = findConsensusVIN(self.results);
 
     if (consensus && consensus.text.length === VIN_LENGTH) {
-      var isValid = isValidVIN(consensus.text);
       var pct = Math.round(consensus.confidence);
       confBar.style.width = pct + '%';
       confPct.textContent = pct + '%';
       confDiv.style.display = 'block';
-
-      if (isValid) {
-        status.textContent = 'Valid VIN detected!';
-        resultDiv.style.display = 'block';
-        resultText.textContent = consensus.text;
-        resultDiv.style.borderColor = 'rgba(52,211,153,0.4)';
-        resultDiv.style.background = 'rgba(52,211,153,0.08)';
-        self._announce('Valid VIN detected: ' + consensus.text.split('').join(' '));
-
-        // Auto-populate and close after 1.5s
-        setTimeout(function () {
-          self.targetInput.value = consensus.text;
-          self.targetInput.dispatchEvent(new Event('input', { bubbles: true }));
-          self.close();
-        }, 1500);
-      } else {
-        status.textContent = 'We read a VIN, but its check digit doesn’t match, so one character is probably misread. Try again with steadier light, or use it and fix it by hand.';
-        var useBtn = document.getElementById('vinScannerUse');
-        if (!useBtn) {
-          useBtn = document.createElement('button'); useBtn.id = 'vinScannerUse'; useBtn.type = 'button';
-          useBtn.style.cssText = 'padding:10px 24px;background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.4);color:#fff;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;';
-          useBtn.textContent = 'Use it and edit';
-          retryBtn.parentNode.insertBefore(useBtn, retryBtn.nextSibling);
-        }
-        useBtn.style.display = 'inline-block';
-        useBtn.onclick = function () { useBtn.style.display = 'none'; self.close(); self.targetInput.value = consensus.text; self.targetInput.dispatchEvent(new Event('input', { bubbles: true })); self.targetInput.focus(); };
-        resultDiv.style.display = 'block';
-        resultText.textContent = consensus.text;
-        resultDiv.style.borderColor = 'rgba(251,191,36,0.4)';
-        resultDiv.style.background = 'rgba(251,191,36,0.08)';
-        retryBtn.style.display = 'inline-block';
-        self._announce('VIN detected but could not be validated. You may retry or enter the VIN manually.');
-      }
+      retryBtn.style.display = 'inline-block';
+      self._showConfirm(consensus.text);
     } else {
       status.textContent = 'Could not read VIN. Please try again or enter manually.';
       retryBtn.style.display = 'inline-block';
       confDiv.style.display = 'none';
       self._announce('Could not read VIN. Please try again or enter your VIN manually.');
     }
+  };
+
+  // Confirm-or-edit step: the scan is never written to the form until the user accepts it.
+  VINScanner.prototype._showConfirm = function (text) {
+    var self = this;
+    var status = document.getElementById('vinScannerStatus');
+    var resultDiv = document.getElementById('vinScannerResult');
+    var input = document.getElementById('vinScannerResultText');
+    var check = document.getElementById('vinScannerCheck');
+    var sug = document.getElementById('vinScannerSuggest');
+    var confirmBtn = document.getElementById('vinScannerConfirm');
+    function refresh() {
+      var v = input.value.toUpperCase().replace(/[^A-Z0-9]/g, '').replace(/O|Q/g, '0').replace(/I/g, '1').slice(0, 17);
+      if (v !== input.value) input.value = v;
+      var ok = isValidVIN(v);
+      resultDiv.style.borderColor = ok ? 'rgba(52,211,153,0.4)' : 'rgba(251,191,36,0.45)';
+      resultDiv.style.background = ok ? 'rgba(52,211,153,0.08)' : 'rgba(251,191,36,0.08)';
+      if (v.length !== 17) { check.style.color = '#fbbf24'; check.textContent = v.length + ' of 17 characters'; }
+      else if (ok) { check.style.color = '#34d399'; check.textContent = 'Check digit matches. Compare it with the plate, then confirm.'; }
+      else { check.style.color = '#fbbf24'; check.textContent = 'Check digit doesn\u2019t match: a character is probably misread (US/Canada VINs). Compare with the plate.'; }
+      var list = (v.length === 17 && !ok) ? vinSuggestions(v, 2).slice(0, 3) : [];
+      sug.innerHTML = '';
+      if (list.length) {
+        var lab = document.createElement('div'); lab.textContent = 'Did you mean:'; lab.style.cssText = 'color:rgba(160,170,184,0.85);font-size:11px;margin-bottom:4px;'; sug.appendChild(lab);
+        list.forEach(function (c) {
+          var bt = document.createElement('button'); bt.type = 'button'; bt.textContent = c;
+          bt.style.cssText = 'display:block;width:100%;margin:3px 0;padding:6px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-family:ui-monospace,monospace;font-size:14px;letter-spacing:0.08em;cursor:pointer;';
+          bt.onclick = function () { input.value = c; refresh(); };
+          sug.appendChild(bt);
+        });
+      }
+      sug.style.display = list.length ? 'block' : 'none';
+      confirmBtn.disabled = v.length !== 17; confirmBtn.style.opacity = v.length === 17 ? '1' : '0.5';
+    }
+    input.value = text;
+    input.oninput = refresh;
+    confirmBtn.onclick = function () {
+      var v = input.value;
+      if (v.length !== 17) return;
+      self.close();
+      self.targetInput.value = v;
+      self.targetInput.dispatchEvent(new Event('input', { bubbles: true }));
+      self.targetInput.dispatchEvent(new CustomEvent('vinscan:confirmed', { bubbles: true, detail: { vin: v } }));
+    };
+    resultDiv.style.display = 'block';
+    refresh();
+    status.textContent = isValidVIN(input.value) ? 'VIN read. Please confirm it matches your plate.' : 'We read something. Check it against the plate and fix any wrong character.';
+    self._announce('Scanned VIN ' + text.split('').join(' ') + '. Confirm or edit it.');
+    setTimeout(function () { confirmBtn.focus(); }, 50);
+  };
+
+  VINScanner.prototype._handleFile = function (file) {
+    var self = this;
+    var status = document.getElementById('vinScannerStatus');
+    var retryBtn = document.getElementById('vinScannerRetry');
+    if (!file || !/^image\//.test(file.type || 'image/')) { status.textContent = 'That file isn\u2019t a photo. Choose a JPG or PNG of the VIN.'; return; }
+    self.scanning = false;
+    self._uploadMode = true;
+    if (self.stream) { self.stream.getTracks().forEach(function (t) { t.stop(); }); self.stream = null; }
+    status.textContent = 'Reading your photo\u2026 this can take a few seconds.';
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function () {
+      loadTesseract(function (err) {
+        if (err) { status.textContent = 'OCR engine failed to load. Please type the VIN.'; return; }
+        recognizeImage(img).then(function (res) {
+          URL.revokeObjectURL(url);
+          if (res && res.text && res.text.length === VIN_LENGTH) { self._showConfirm(res.text); }
+          else { status.textContent = 'Couldn\u2019t find a 17-character VIN in that photo. Try a closer, straight-on shot, or type it.'; }
+          retryBtn.style.display = 'inline-block';
+        });
+      });
+    };
+    img.onerror = function () { status.textContent = 'Couldn\u2019t open that photo. Try another one, or type the VIN.'; };
+    img.src = url;
   };
 
   VINScanner.prototype._retry = function () {
@@ -464,6 +660,7 @@
     var useB = document.getElementById('vinScannerUse'); if (useB) useB.style.display = 'none';
     if (confDiv) confDiv.style.display = 'none';
     if (confBar) confBar.style.width = '0%';
+    if (!this.stream) { this._startCamera(document.getElementById('vinScannerVideo'), document.getElementById('vinScannerStatus')); return; }
     this._beginScan();
   };
 
@@ -497,7 +694,6 @@
 
   /* ── Initialization ── */
   function initScannerButtons() {
-    if (!hasCamera()) return;
 
     // Inject scanline keyframe into page
     if (!document.getElementById('vinScannerStyles')) {
