@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+title: "Classic VIN Decoder — Free Pre-1981 GM, Ford & Mopar Serial Lookup | Car Alpha"
+description: "Free classic VIN decoder for pre-1981 cars. Decode 11–13 character GM, Chevrolet, Ford/Mustang and Chrysler/Dodge/Plymouth serial numbers, with a confidence level on every field and sources cited."
+permalink: /classic-vin-decoder/
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebApplication", "name": "Car Alpha Classic VIN Decoder", "url": "https://caralpha.org/classic-vin-decoder/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "description": "Decodes pre-1981 GM, Ford and Chrysler serial numbers from documented code tables." },
+    { "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "Why can't a normal VIN decoder read my classic car's VIN?", "acceptedAnswer": { "@type": "Answer", "text": "The standard 17-character VIN became mandatory for the 1981 model year. Before that, each manufacturer used its own shorter serial number, usually 11 to 13 characters, so decoders built on the 17-character standard can't read them." } },
+      { "@type": "Question", "name": "Does a classic VIN tell me the engine?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the maker and year. Ford (1960s–70s) and Chrysler (1968 on) serials include an engine code. 1965–71 GM serials generally don't identify the exact engine; GM added an engine character in 1972." } },
+      { "@type": "Question", "name": "Can a VIN prove a car is a real SS, R/T or Boss?", "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. Some packages are encoded (Charger R/T, Coronet R/T, Boss 302 engine code), others are not (1967–69 Camaro SS, Z/28, RS). Always cross-check the trim or fender tag, engine and transmission stampings and documentation." } }
+    ] }
+  ]
+}
+</script>
+
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Classic VIN Decoder" }] %}
+
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 gradient-mesh"></div>
+  <div class="relative max-w-4xl mx-auto px-4 pt-10 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-volt-500/20 bg-volt-500/[0.06] text-xs font-semibold text-volt-400 mb-5">Pre-1981 · GM · Ford · Mopar</div>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">Classic <span class="text-gradient">VIN Decoder</span></h1>
+    <p class="mt-4 text-base sm:text-lg text-silver-400 max-w-2xl mx-auto leading-relaxed">Before 1981 there was no standard VIN, so most free decoders give up. Ours reads the 11–13 character serial numbers GM, Ford and Chrysler used, shows a confidence level on every field, and tells you plainly when something can’t be confirmed.</p>
+    <div class="mt-8">{% set example = "124377N100001" %}{% include "partials/classic-decoder.njk" %}</div>
+  </div>
+</section>
+
+<article class="max-w-3xl mx-auto px-4 pb-20 prose prose-dark">
+  <h2>What we decode today</h2>
+  <div class="not-prose overflow-x-auto"><table class="w-full text-sm text-left text-silver-300 border border-white/10 rounded-xl overflow-hidden">
+    <thead class="bg-white/5 text-silver-200"><tr><th class="p-3">Maker</th><th class="p-3">Layout</th><th class="p-3">Fully decoded</th><th class="p-3">Structure only</th></tr></thead>
+    <tbody>
+      <tr class="border-t border-white/10"><td class="p-3">Chevrolet (GM)</td><td class="p-3">13 characters, 1965–1971</td><td class="p-3">Camaro 1967–69, Chevelle 1968–69, Corvette 1965–71</td><td class="p-3">Other Chevrolet series; Pontiac, Olds, Buick, Cadillac (division and year only)</td></tr>
+      <tr class="border-t border-white/10"><td class="p-3">Chevrolet (GM)</td><td class="p-3">13 characters, 1972–1980</td><td class="p-3">Corvette 1972–80, engine included</td><td class="p-3">Other GM lines</td></tr>
+      <tr class="border-t border-white/10"><td class="p-3">Ford</td><td class="p-3">11 characters</td><td class="p-3">Mustang 1965–73: year, plant, body, engine</td><td class="p-3">Other Ford lines (year shown as two possible decades)</td></tr>
+      <tr class="border-t border-white/10"><td class="p-3">Chrysler (Dodge, Plymouth, Chrysler, Imperial)</td><td class="p-3">13 characters</td><td class="p-3">1968–70 car line, model, body, engine, plant</td><td class="p-3">1971–80 (structure only)</td></tr>
+    </tbody></table></div>
+  <p>More makes and years are coming. We add a table only when it’s documented well enough to cite. See our <a href="/classic-vin-decoder/methodology/">methodology and sources</a>.</p>
+
+  <h2>How to read the confidence labels</h2>
+  <ul>
+    <li><strong>Documented:</strong> the character’s meaning comes straight from a factory or club reference for that exact year and model.</li>
+    <li><strong>Likely:</strong> the code matches a documented table, but something about the car can’t be proven from the number alone. For example, a Ford year digit that repeats every decade.</li>
+    <li><strong>Can’t confirm:</strong> the code isn’t in a table we can cite. We show the raw code and won’t guess.</li>
+  </ul>
+
+  <h2>Popular classic VIN guides</h2>
+  <div class="not-prose grid sm:grid-cols-2 gap-3">
+    <a class="glass-card rounded-xl p-4 block hover:border-volt-500/40" href="/classic-vin-decoder/camaro-1967-1969/"><div class="font-bold text-white">1967–69 Camaro VIN decoder</div><div class="text-xs text-silver-500 mt-1">12437/12467, Norwood vs Van Nuys, sequence starts</div></a>
+    <a class="glass-card rounded-xl p-4 block hover:border-volt-500/40" href="/classic-vin-decoder/mustang-1965-1973/"><div class="font-bold text-white">1965–73 Mustang VIN decoder</div><div class="text-xs text-silver-500 mt-1">K-code, Boss and Cobra Jet engine letters by year</div></a>
+    <a class="glass-card rounded-xl p-4 block hover:border-volt-500/40" href="/classic-vin-decoder/charger-1968-1970/"><div class="font-bold text-white">1968–70 Charger VIN decoder</div><div class="text-xs text-silver-500 mt-1">XP/XS/XX/XH prefixes, Hemi and 440 codes</div></a>
+    <a class="glass-card rounded-xl p-4 block hover:border-volt-500/40" href="/classic-vin-decoder/chevelle-1968-1969/"><div class="font-bold text-white">1968–69 Chevelle VIN decoder</div><div class="text-xs text-silver-500 mt-1">Series 131–138, what an SS 396 VIN can and can’t prove</div></a>
+    <a class="glass-card rounded-xl p-4 block hover:border-volt-500/40" href="/classic-vin-decoder/corvette-1968-1980/"><div class="font-bold text-white">1968–80 Corvette VIN decoder</div><div class="text-xs text-silver-500 mt-1">C3 serials, L48/L82/LT1/LS4 engine letters</div></a>
+  </div>
+
+  <h2>Where to find a classic car’s VIN</h2>
+  <p>Location changed by maker and year. Common spots are the driver-side door hinge pillar (for example the 1967 Camaro), the top of the dash visible through the windshield (most cars from 1968 on), and the inner fender apron, dash or door on 1960s Mustangs. Many cars also carry a partial VIN stamped on the engine block and transmission. Matching those stampings to the VIN plate is how “numbers-matching” is confirmed.</p>
+
+  <h2>What a classic VIN can’t tell you</h2>
+  <p>A pre-1981 serial won’t show accidents, title brands, past owners, color or most options. Those live on the trim or cowl tag, fender tag, build sheet or Marti report, and in title records. Older cars also aren’t covered by NHTSA’s online recall lookup. If you’re buying, also run a title check through an <a href="https://vehiclehistory.bja.ojp.gov/nmvtis_vehiclehistory" target="_blank" rel="noopener">approved NMVTIS provider</a> and have the car inspected by someone who knows the model.</p>
+
+  <h2>Spotting a re-stamped or swapped VIN</h2>
+  <ul>
+    <li>Rivets that don’t match the factory type for that plant and year (rosette-style rivets were common on GM dash plates).</li>
+    <li>A VIN whose plant, year or sequence doesn’t fit the model. For example, a 1970 Charger not built in St. Louis, or a Camaro sequence below that year’s starting number.</li>
+    <li>Engine or transmission partial VINs that don’t match the plate, or show signs of grinding and re-stamping.</li>
+    <li>A paper trail (title, build sheet, Protect-O-Plate) that disagrees with the plate.</li>
+  </ul>
+  <p class="text-sm">Car Alpha flags some of these automatically when the code tables allow it. It can’t replace a hands-on inspection.</p>
+</article>

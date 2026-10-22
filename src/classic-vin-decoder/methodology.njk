@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: "Classic VIN Decoder Methodology & Sources | Car Alpha"
+description: "How Car Alpha decodes pre-1981 GM, Ford and Chrysler serial numbers: which code tables we use, how confidence levels work, known limits, and every source cited."
+permalink: /classic-vin-decoder/methodology/
+---
+{% breadcrumbs [{ label: "Home", url: "/" }, { label: "Classic VIN Decoder", url: "/classic-vin-decoder/" }, { label: "Methodology" }] %}
+<article class="max-w-3xl mx-auto px-4 pt-10 pb-20 prose prose-dark">
+  <h1>Classic VIN decoder: methodology and sources</h1>
+  <p class="lead">Last reviewed October 22, 2026. Our rule is simple: we decode a character only when its meaning for that maker, model and year is documented in a source we can cite. Everything else is shown as a raw code marked “Can’t confirm.”</p>
+
+  <h2>Why classic VINs need a different decoder</h2>
+  <p>The 17-character VIN format, with its check digit, is set by federal regulation (<a href="https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-565" target="_blank" rel="noopener">49 CFR Part 565</a>) and applies from the 1981 model year. Car Alpha decodes those VINs through NHTSA’s free <a href="https://vpic.nhtsa.dot.gov/api/" target="_blank" rel="noopener">vPIC API</a>. Earlier cars used manufacturer-specific serial numbers with no check digit, so vPIC can’t read them. The classic decoder runs entirely in your browser from the tables below.</p>
+
+  <h2>How we detect the layout</h2>
+  <ul>
+    <li><strong>GM, 1965–1971 (13 characters, all digits except the plant):</strong> division, two-digit series, two-digit body style, year digit, plant letter, six-digit sequence.</li>
+    <li><strong>GM, 1972–1980 (13 characters):</strong> division, series letter, two-digit body, engine character, year (2–9, or A for 1980), plant, sequence.</li>
+    <li><strong>Ford (11 characters):</strong> year digit, plant letter, two-digit body serial code, engine letter, six-digit consecutive unit number.</li>
+    <li><strong>Chrysler Corporation (13 characters):</strong> car line, price class, two-digit body type, engine, year digit, plant, six-digit sequence.</li>
+  </ul>
+  <p>A number that doesn’t fit one of these patterns isn’t decoded. We say so rather than guess.</p>
+
+  <h2>Confidence levels</h2>
+  <ul>
+    <li><strong>Documented:</strong> the code’s meaning is stated in a cited reference for that year and line.</li>
+    <li><strong>Likely:</strong> the code matches a cited table, but the serial alone can’t rule out another reading. Examples: Ford’s year digit repeats every decade; a Chrysler year digit of 8, 9 or 0 could also be 1978–80; plant letters taken from a Chevrolet-wide table; 1970 Chrysler engine letters taken from club registries rather than the factory bulletin.</li>
+    <li><strong>Can’t confirm:</strong> no cited table covers the code. We show the raw character.</li>
+  </ul>
+
+  <h2>Automatic sanity checks</h2>
+  <ul>
+    <li>1967–69 Camaro sequence numbers below that year’s documented starting number (100001, 300001, 500001).</li>
+    <li>1970 Charger built anywhere but St. Louis (plant G).</li>
+    <li>Engine letters that aren’t valid for the decoded year.</li>
+    <li>A reminder to match the VIN to the trim or fender tag and the engine and transmission stampings on Hemi, 440 and other often-cloned cars.</li>
+  </ul>
+
+  <h2>Known limits</h2>
+  <ul>
+    <li>Pre-1965 GM, pre-1968 Chrysler and most non-Mustang Fords aren’t fully decoded yet.</li>
+    <li>For 1965–71 GM cars the VIN doesn’t identify the exact engine or packages like SS, Z/28 or RS.</li>
+    <li>VIN decoding can’t verify authenticity, title status or condition.</li>
+    <li>Canadian-built cars sometimes used different sequence schemes.</li>
+  </ul>
+
+  <h2>Sources</h2>
+  <h3>General Motors / Chevrolet</h3>
+  <ul>
+    <li>Camaro Research Group, <a href="https://www.camaros.org/numbers.shtml" target="_blank" rel="noopener">Camaro VIN, cowl tag and other numbers decoding</a> (1967–69 VIN layout, plants, sequence starts).</li>
+    <li>Chevy-Camaro.com, <a href="https://www.chevy-camaro.com/chevy-camaro-VIN-decode-first-gen.php" target="_blank" rel="noopener">First-generation Camaro VIN decode</a>.</li>
+    <li>ChevelleStuff, <a href="https://www.chevellestuff.net/1968/vin.htm" target="_blank" rel="noopener">1968 Chevelle VINs</a> and <a href="https://www.chevellestuff.net/1969/vin.htm" target="_blank" rel="noopener">1969 Chevelle VINs</a> (series, body and Chevrolet plant codes); <a href="https://chevellestuff.net/1968/pop/pop_vin.htm" target="_blank" rel="noopener">1968 Protect-O-Plate VIN decoding</a>.</li>
+    <li>Corvette Action Center, <a href="https://www.corvetteactioncenter.com/specs/c3/1968/68id.html" target="_blank" rel="noopener">1968 Corvette identification numbers</a>; VetteFacts, <a href="https://vettefacts.com/C3/1968" target="_blank" rel="noopener">1968 Corvette serial decoder</a>.</li>
+    <li>Vettehead, <a href="https://vettehead.com/how-to-decode-a-corvette-vin-1972-1980/" target="_blank" rel="noopener">How to decode a Corvette VIN, 1972–1980</a> (engine letters by year); <a href="https://corvette-c3.com/vin.htm" target="_blank" rel="noopener">C3 Corvette VIN decoder</a>.</li>
+  </ul>
+  <h3>Ford / Mustang</h3>
+  <ul>
+    <li>Mustang Nerd, <a href="https://mustangnerd.com/technical-tools/mustang-vin-decoder" target="_blank" rel="noopener">Mustang VIN decoder for 1964½–1973</a> (plant, body and engine codes by year).</li>
+    <li>JEGS, <a href="https://www.jegs.com/tech-articles/1965-1973-ford-mustang-first-gen-vin-decoder/" target="_blank" rel="noopener">1965–1973 Mustang VIN decoder</a>; CJ Pony Parts, <a href="https://www.cjponyparts.com/resources/1965-mustang-vin-decoder" target="_blank" rel="noopener">1965 Mustang VIN decoder</a>; Unique Cars and Parts, <a href="https://www.uniquecarsandparts.com/ford_mustang_id.htm" target="_blank" rel="noopener">Ford Mustang identification</a>.</li>
+  </ul>
+  <h3>Chrysler Corporation</h3>
+  <ul>
+    <li>American Muscle Car Facts, <a href="https://americanmusclecarfacts.com/vin/schemes/chrysler-1968-1974" target="_blank" rel="noopener">Chrysler 13-character VIN, 1968–1974</a>, which cites Chrysler and Dodge service bulletins 68-25-1, D68-25-1, 69-25-1, D69-25-1, 70-25-1 and D70-25-1.</li>
+    <li><a href="https://dodgechargers.tripod.com/decode.html" target="_blank" rel="noopener">Decoding and documenting Charger VIN plates</a> (1968–70 Charger prefixes, engine and plant codes); <a href="http://1970chargerregistry.com/Production/rt_sheet_decoder.html" target="_blank" rel="noopener">1970 Dodge Charger Registry</a> (1970 R/T engine codes, St. Louis production).</li>
+  </ul>
+  <p>Found an error, or have a factory document that covers a gap? <a href="/contact/">Tell us</a>. We correct the tables and note the change here.</p>
+</article>
