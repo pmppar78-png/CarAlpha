@@ -216,6 +216,19 @@
   to = "/free-vin-check/"
   status = 301
 
+# Old recall-tool path. The live pages are /recalls/ and /recall-checker/.
+[[redirects]]
+  from = "/tools/recall-checker"
+  to = "/recalls/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tools/recall-checker/"
+  to = "/recalls/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/vin-lookup"
   to = "/vin-number-lookup/"

@@ -43,6 +43,6 @@ export default async (req: Request, context: Context) => {
 
 export const config: Config = {
   path: "/*",
-  excludedPath: ["/go/*", "/api/*", "/.netlify/*"],
+  excludedPath: ["/go/*", "/api/*", "/.netlify/*", "/tools/recall-checker"],
   onError: "bypass",
 };
