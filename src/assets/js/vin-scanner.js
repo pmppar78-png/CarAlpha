@@ -58,8 +58,10 @@
           '<video id="vinScannerVideo" autoplay playsinline muted style="width:100%;height:100%;object-fit:cover;"></video>' +
           '<div id="vinScannerGuide" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;height:22%;border:2px solid rgba(6,182,212,0.7);border-radius:6px;box-shadow:0 0 0 9999px rgba(0,0,0,0.45);pointer-events:none;"></div>' +
           '<div id="vinScannerScanline" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;height:2px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.8),transparent);pointer-events:none;opacity:0;"></div>' +
+          '<div id="vinScannerHint" aria-hidden="true" style="position:absolute;left:8px;right:56px;bottom:8px;padding:6px 10px;border-radius:8px;background:rgba(0,0,0,0.65);color:#fff;font-size:13px;font-weight:600;text-align:center;pointer-events:none;display:none;"></div>' +
+          '<button id="vinScannerTorch" type="button" aria-label="Turn on flashlight" aria-pressed="false" style="display:none;position:absolute;right:8px;bottom:8px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);background:rgba(0,0,0,0.6);color:#fff;font-size:20px;cursor:pointer;">\u26A1</button>' +
         '</div>' +
-        '<p id="vinScannerTip" style="margin:0;color:#cbd5e1;font-size:12px;text-align:center;max-width:400px;">Tip: aim at the <strong style="color:#fff;">barcode on the driver\u2019s door-jamb sticker</strong>. It reads more reliably than the printed VIN.</p>' +
+        '<p id="vinScannerTip" style="margin:0;color:#cbd5e1;font-size:12px;text-align:center;max-width:400px;">Tip: aim at the <strong style="color:#fff;">barcode on the driver\u2019s door-jamb sticker</strong> and fill the box with it. Tap the picture to focus.</p>' +
         '<canvas id="vinScannerCanvas" style="display:none;"></canvas>' +
         '<div id="vinScannerStatus" style="color:rgba(160,170,184,1);font-size:13px;text-align:center;min-height:20px;">Initializing camera...</div>' +
         '<div id="vinScannerConfidence" style="display:none;width:100%;max-width:400px;">' +
@@ -348,6 +350,117 @@
       document.head.appendChild(sc);
     });
   }
+  /* Image helpers for hard barcode shots (small, far, blurred, skewed). */
+  // Find likely barcode regions on a small grayscale copy: 1D codes have strong gradients in
+  // one direction only; 2D codes have strong gradients in both. Returns boxes in source pixels.
+  var roiCv = null;
+  function findBarcodeROIs(source, w, h) {
+    roiCv = roiCv || document.createElement('canvas');
+    var s = Math.min(1, 320 / Math.max(w, h)), sw = Math.max(8, Math.round(w * s)), sh = Math.max(8, Math.round(h * s));
+    roiCv.width = sw; roiCv.height = sh;
+    var c = roiCv.getContext('2d', { willReadFrequently: true });
+    c.drawImage(source, 0, 0, sw, sh);
+    var d = c.getImageData(0, 0, sw, sh).data, g = new Float32Array(sw * sh), i, x, y;
+    for (i = 0; i < sw * sh; i++) g[i] = d[i * 4] * 0.299 + d[i * 4 + 1] * 0.587 + d[i * 4 + 2] * 0.114;
+    var maps = [new Float32Array(sw * sh), new Float32Array(sw * sh), new Float32Array(sw * sh)];
+    for (y = 1; y < sh - 1; y++) for (x = 1; x < sw - 1; x++) {
+      i = y * sw + x;
+      var gx = Math.abs(g[i + 1] - g[i - 1]), gy = Math.abs(g[i + sw] - g[i - sw]);
+      maps[0][i] = Math.max(0, gx - gy); maps[1][i] = Math.max(0, gy - gx); maps[2][i] = Math.min(gx, gy);
+    }
+    var boxes = [];
+    maps.forEach(function (m) {
+      // box blur via integral image, radius ~ 4% of size
+      var r = Math.max(2, Math.round(Math.max(sw, sh) * 0.04)), I = new Float64Array((sw + 1) * (sh + 1));
+      for (y = 0; y < sh; y++) { var row = 0; for (x = 0; x < sw; x++) { row += m[y * sw + x]; I[(y + 1) * (sw + 1) + x + 1] = I[y * (sw + 1) + x + 1] + row; } }
+      var bl = new Float32Array(sw * sh), mx = 0, mxi = 0;
+      for (y = 0; y < sh; y++) for (x = 0; x < sw; x++) {
+        var x0 = Math.max(0, x - r), x1 = Math.min(sw, x + r + 1), y0 = Math.max(0, y - r), y1 = Math.min(sh, y + r + 1);
+        var v = (I[y1 * (sw + 1) + x1] - I[y0 * (sw + 1) + x1] - I[y1 * (sw + 1) + x0] + I[y0 * (sw + 1) + x0]) / ((x1 - x0) * (y1 - y0));
+        bl[y * sw + x] = v; if (v > mx) { mx = v; mxi = y * sw + x; }
+      }
+      if (mx < 6) return;
+      var th = mx * 0.35, minX = sw, minY = sh, maxX = 0, maxY = 0;
+      // flood fill from the peak to get the connected strong region
+      var seen = new Uint8Array(sw * sh), st = [mxi]; seen[mxi] = 1;
+      while (st.length) {
+        var p = st.pop(), px = p % sw, py = (p - px) / sw;
+        if (px < minX) minX = px; if (px > maxX) maxX = px; if (py < minY) minY = py; if (py > maxY) maxY = py;
+        var nb = [p - 1, p + 1, p - sw, p + sw];
+        for (var k = 0; k < 4; k++) { var q = nb[k]; if (q >= 0 && q < sw * sh && !seen[q] && bl[q] > th && Math.abs((q % sw) - px) <= 1) { seen[q] = 1; st.push(q); } }
+      }
+      var bw = maxX - minX + 1, bh = maxY - minY + 1, padX = bw * 0.12 + 3, padY = bh * 0.12 + 3;
+      var bx = Math.max(0, minX - padX), by = Math.max(0, minY - padY), ex = Math.min(sw, maxX + 1 + padX), ey = Math.min(sh, maxY + 1 + padY);
+      if ((ex - bx) * (ey - by) > sw * sh * 0.8) return;
+      boxes.push([bx / s, by / s, (ex - bx) / s, (ey - by) / s]);
+    });
+    return boxes;
+  }
+  // Draw a crop of the source scaled by k into cv; optional rotation, unsharp mask and
+  // local-mean binarization. Output is capped near 2200 px wide to keep per-frame cost down.
+  function renderCrop(cv, source, box, k, ang, sharpen, binar) {
+    var sw = box[2] * k, sh = box[3] * k, cap = 2200 / Math.max(sw, sh);
+    if (cap < 1) { sw *= cap; sh *= cap; }
+    sw = Math.max(1, Math.round(sw)); sh = Math.max(1, Math.round(sh));
+    var rad = (ang || 0) * Math.PI / 180, cos = Math.abs(Math.cos(rad)), sin = Math.abs(Math.sin(rad));
+    cv.width = Math.round(sw * cos + sh * sin) + 16; cv.height = Math.round(sw * sin + sh * cos) + 16;
+    var ctx = cv.getContext('2d', { willReadFrequently: true });
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.save(); ctx.translate(cv.width / 2, cv.height / 2); ctx.rotate(rad);
+    ctx.drawImage(source, box[0], box[1], box[2], box[3], -sw / 2, -sh / 2, sw, sh); ctx.restore();
+    if (!sharpen && !binar) return;
+    var W = cv.width, H = cv.height, im = ctx.getImageData(0, 0, W, H), d = im.data, n = W * H, g = new Float32Array(n), i, x, y;
+    for (i = 0; i < n; i++) g[i] = d[i * 4] * 0.299 + d[i * 4 + 1] * 0.587 + d[i * 4 + 2] * 0.114;
+    if (sharpen) { // unsharp mask: separable box blur of radius r, amount from the plan
+      var amt = sharpen === true || sharpen === 1 ? 1.2 : sharpen, rr = amt > 1.5 ? 2 : 1, tmp = new Float32Array(n), bb = new Float32Array(n), kk, sacc;
+      for (y = 0; y < H; y++) for (x = 0; x < W; x++) { sacc = 0; for (kk = -rr; kk <= rr; kk++) sacc += g[y * W + Math.min(W - 1, Math.max(0, x + kk))]; tmp[y * W + x] = sacc / (2 * rr + 1); }
+      for (y = 0; y < H; y++) for (x = 0; x < W; x++) { sacc = 0; for (kk = -rr; kk <= rr; kk++) sacc += tmp[Math.min(H - 1, Math.max(0, y + kk)) * W + x]; bb[y * W + x] = sacc / (2 * rr + 1); }
+      for (i = 0; i < n; i++) g[i] = g[i] + amt * (g[i] - bb[i]);
+    }
+    if (binar) { // compare each pixel to its local row mean (window ~ 1/8 width)
+      var r = Math.max(8, Math.round(W / 16)), out = new Float32Array(n);
+      for (y = 0; y < H; y++) {
+        var acc = 0, cnt = 0, row = y * W;
+        for (x = 0; x < Math.min(W, r); x++) { acc += g[row + x]; cnt++; }
+        for (x = 0; x < W; x++) {
+          if (x + r < W) { acc += g[row + x + r]; cnt++; }
+          if (x - r - 1 >= 0) { acc -= g[row + x - r - 1]; cnt--; }
+          out[row + x] = g[row + x] < acc / cnt - 4 ? 0 : 255;
+        }
+      }
+      g = out;
+    }
+    for (i = 0; i < n; i++) { var v = g[i] < 0 ? 0 : g[i] > 255 ? 255 : g[i]; d[i * 4] = d[i * 4 + 1] = d[i * 4 + 2] = v; }
+    ctx.putImageData(im, 0, 0);
+  }
+
+  // Undo keystone (perspective) on the rendered crop: side 0..3 = right, left, bottom, top edge
+  // appears shorter by fraction a. Bilinear quad mapping, good enough for mild camera tilt.
+  function unkeystone(cv, side, a) {
+    var ctx = cv.getContext('2d', { willReadFrequently: true }), W = cv.width, H = cv.height;
+    var src = ctx.getImageData(0, 0, W, H), sd = src.data, out = ctx.createImageData(W, H), od = out.data;
+    var q = [[0, 0], [1, 0], [1, 1], [0, 1]], h = a / 2; // TL, TR, BR, BL in unit coords
+    if (side === 0) { q[1][1] = h; q[2][1] = 1 - h; } else if (side === 1) { q[0][1] = h; q[3][1] = 1 - h; }
+    else if (side === 2) { q[3][0] = h; q[2][0] = 1 - h; } else { q[0][0] = h; q[1][0] = 1 - h; }
+    for (var y = 0; y < H; y++) {
+      var v = y / (H - 1);
+      for (var x = 0; x < W; x++) {
+        var u = x / (W - 1);
+        var sx = ((1 - u) * (1 - v) * q[0][0] + u * (1 - v) * q[1][0] + u * v * q[2][0] + (1 - u) * v * q[3][0]) * (W - 1);
+        var sy = ((1 - u) * (1 - v) * q[0][1] + u * (1 - v) * q[1][1] + u * v * q[2][1] + (1 - u) * v * q[3][1]) * (H - 1);
+        var ix = sx | 0, iy = sy | 0, fx = sx - ix, fy = sy - iy, o = (y * W + x) * 4;
+        if (ix >= W - 1) { ix = W - 2; fx = 1; } if (iy >= H - 1) { iy = H - 2; fy = 1; }
+        var p = (iy * W + ix) * 4;
+        for (var c = 0; c < 3; c++) {
+          od[o + c] = (sd[p + c] * (1 - fx) + sd[p + 4 + c] * fx) * (1 - fy) + (sd[p + W * 4 + c] * (1 - fx) + sd[p + W * 4 + 4 + c] * fx) * fy;
+        }
+        od[o + 3] = 255;
+      }
+    }
+    ctx.putImageData(out, 0, 0);
+  }
+
   function zxingEngine() {
     return (window.ZXing ? Promise.resolve() : loadScript(ZXING_URL)).then(function () {
       var Z = window.ZXing, hints = new Map();
@@ -355,32 +468,68 @@
       hints.set(Z.DecodeHintType.TRY_HARDER, true);
       var reader = new Z.MultiFormatReader(); reader.setHints(hints);
       var cv = document.createElement('canvas');
-      function tryDecode(lum) {
-        try { return reader.decode(new Z.BinaryBitmap(new Z.HybridBinarizer(lum)), hints).getText(); } catch (e) { return null; }
+      function tryDecode(binz) {
+        try {
+          var lum = new Z.HTMLCanvasElementLuminanceSource(cv);
+          var bm = new Z.BinaryBitmap(binz ? new Z.GlobalHistogramBinarizer(lum) : new Z.HybridBinarizer(lum));
+          return reader.decode(bm, hints).getText();
+        } catch (e) { return null; }
       }
-      // Attempts: straight, sideways, small tilts (1D codes need near-horizontal scan lines),
-      // and a half-size pass that helps with blur. Live camera cycles one attempt per frame;
-      // still photos try them all.
-      var ATTEMPTS = [[0, 1], [90, 1], [8, 1], [-8, 1], [0, 0.5], [16, 1], [-16, 1], [4, 0.6], [-4, 0.6]];
-      var tick = 0;
-      function attempt(source, w, h, ang, k) {
-        var sc = Math.min(1, 1600 / Math.max(w, h)) * k;
-        var dw = Math.round(w * sc), dh = Math.round(h * sc);
-        var rad = ang * Math.PI / 180, cos = Math.abs(Math.cos(rad)), sin = Math.abs(Math.sin(rad));
-        cv.width = Math.round(dw * cos + dh * sin); cv.height = Math.round(dw * sin + dh * cos);
-        var ctx = cv.getContext('2d', { willReadFrequently: true });
-        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
-        ctx.save(); ctx.translate(cv.width / 2, cv.height / 2); ctx.rotate(rad); ctx.drawImage(source, -dw / 2, -dh / 2, dw, dh); ctx.restore();
-        return tryDecode(new Z.HTMLCanvasElementLuminanceSource(cv));
+      // Each attempt: [angle, scale, useROI, sharpen, binarize, globalBinarizer].
+      // Whole-frame passes first (cheap, cover most shots), then crops around the detected
+      // barcode region, upscaled 2-3x and sharpened for small, far or blurred codes.
+      var FULL = [[0, 1], [90, 1], [8, 1], [-8, 1], [0, 0.5], [16, 1], [-16, 1], [4, 0.6], [-4, 0.6], [24, 1], [-24, 1]];
+      var ROI = [[0, 2, 1, 1, 0, 0], [0, 2, 1, 0, 0, 0], [0, 3, 1, 1, 0, 1], [0, 2, 1, 1, 1, 1], [90, 2, 1, 1, 0, 0],
+                 [3, 2, 1, 1, 0, 0], [-3, 2, 1, 1, 0, 0], [0, 1.5, 1, 0, 0, 1], [6, 2, 1, 1, 0, 1], [-6, 2, 1, 1, 0, 1],
+                 [0, 1, 1, 0, 0, 0], [0, 3, 1, 0, 0, 0], [90, 3, 1, 1, 0, 1],
+                 [0, 1, 1, 3, 0, 0], [0, 2, 1, 3, 0, 1], [24, 2, 1, 3, 0, 0], [-24, 2, 1, 3, 0, 0], [24, 1, 1, 0, 0, 0], [-24, 1, 1, 0, 0, 0],
+                 [0, 1, 1, 0, 0, 0, [0, 0.12]], [0, 1, 1, 0, 0, 0, [1, 0.12]], [0, 1, 1, 0, 0, 0, [2, 0.12]], [0, 1, 1, 0, 0, 0, [3, 0.12]],
+                 [0, 1, 1, 0, 0, 0, [0, 0.22]], [0, 1, 1, 0, 0, 0, [1, 0.22]], [0, 1, 1, 0, 0, 0, [2, 0.22]], [0, 1, 1, 0, 0, 0, [3, 0.22]]];
+      var tick = 0, pend = {};
+      function accept(t) {
+        var v = t && vinFromBarcode(t);
+        if (!v) return null;
+        if (isValidVIN(v)) return t;
+        pend[v] = (pend[v] || 0) + 1;
+        return pend[v] >= 2 ? t : null;
+      }
+      function run(source, w, h, a, boxes) {
+        if (!a[2]) {
+          var sc = Math.min(1, 1600 / Math.max(w, h)) * a[1];
+          renderCrop(cv, source, [0, 0, w, h], sc, a[0], false, false);
+          return accept(tryDecode(false));
+        }
+        for (var j = 0; j < boxes.length; j++) {
+          var bx = boxes[j], k = a[1];
+          // Upscale only as much as needed: aim for the crop's long side around 1200-2000 px.
+          k = Math.min(k, Math.max(1, 2000 / Math.max(bx[2], bx[3])));
+          if (a[6]) k = Math.min(k, 900 / Math.max(bx[2], bx[3]));
+          renderCrop(cv, source, bx, k, a[0], a[3], !!a[4]);
+          if (a[6]) unkeystone(cv, a[6][0], a[6][1]);
+          var t = accept(tryDecode(!!a[5])); if (t) return t;
+        }
+        return null;
       }
       return {
         kind: 'zxing',
         detect: function (source, all) {
           var w = source.videoWidth || source.naturalWidth || source.width, h = source.videoHeight || source.naturalHeight || source.height;
           if (!w || !h) return Promise.resolve([]);
-          var list = all ? ATTEMPTS : [ATTEMPTS[0], ATTEMPTS[1 + (tick++ % (ATTEMPTS.length - 1))]];
-          for (var i = 0; i < list.length; i++) { var txt = attempt(source, w, h, list[i][0], list[i][1]); if (txt) return Promise.resolve([txt]); }
-          return Promise.resolve([]);
+          var i, t, boxes = null;
+          if (all) {
+            pend = {};
+            var t0 = Date.now(); // still photos: stop after ~8 s so a photo with no barcode moves on to OCR
+            for (i = 0; i < FULL.length; i++) { t = run(source, w, h, FULL[i]); if (t) return Promise.resolve([t]); }
+            boxes = findBarcodeROIs(source, w, h);
+            for (i = 0; i < ROI.length && boxes.length && Date.now() - t0 < 8000; i++) { t = run(source, w, h, ROI[i], boxes); if (t) return Promise.resolve([t]); }
+            return Promise.resolve([]);
+          }
+          // Live camera: per frame, one whole-frame pass plus one rotating extra attempt.
+          t = run(source, w, h, FULL[0]); if (t) return Promise.resolve([t]);
+          var n = tick++ % (FULL.length - 1 + ROI.length);
+          if (n < FULL.length - 1) t = run(source, w, h, FULL[1 + n]);
+          else { boxes = findBarcodeROIs(source, w, h); t = boxes.length ? run(source, w, h, ROI[n - FULL.length + 1], boxes.slice(0, 2)) : null; }
+          return Promise.resolve(t ? [t] : []);
         }
       };
     });
@@ -393,7 +542,26 @@
           // Code 39 is the common VIN sticker format; without it, ZXing is the better engine.
           if (use.indexOf('code_39') < 0) return null;
           var det = new window.BarcodeDetector({ formats: use });
-          return { kind: 'native', detect: function (src) { return det.detect(src).then(function (r) { return r.map(function (x) { return x.rawValue; }); }).catch(function () { return []; }); } };
+          var ncv = document.createElement('canvas'), ntick = 0;
+          function nd(s) { return det.detect(s).then(function (r) { return r.map(function (x) { return x.rawValue; }); }).catch(function () { return []; }); }
+          return { kind: 'native', detect: function (src, all) {
+            return nd(src).then(function (r) {
+              if (r.length || (!all && ntick++ % 2)) return r;
+              // Nothing on the whole frame: retry on the likely barcode region, upscaled and sharpened.
+              var w = src.videoWidth || src.naturalWidth || src.width, h = src.videoHeight || src.naturalHeight || src.height;
+              var boxes = w && h ? findBarcodeROIs(src, w, h).slice(0, all ? 3 : 1) : [];
+              var plans = all ? [[2, 1], [3, 0], [1, 0]] : [[2, 1]];
+              var chain = Promise.resolve([]);
+              boxes.forEach(function (bx) { plans.forEach(function (p) {
+                chain = chain.then(function (got) {
+                  if (got.length) return got;
+                  renderCrop(ncv, src, bx, Math.min(p[0], Math.max(1, 2000 / Math.max(bx[2], bx[3]))), 0, !!p[1], false);
+                  return nd(ncv);
+                });
+              }); });
+              return chain;
+            });
+          } };
         }).catch(function () { return null; })
       : Promise.resolve(null);
     bcEnginePromise = native.then(function (n) { return n || zxingEngine(); }).catch(function () { bcEnginePromise = null; return null; });
@@ -553,10 +721,11 @@
       return;
     }
     navigator.mediaDevices.getUserMedia({
-      video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } }
+      video: { facingMode: { ideal: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1080 } }
     }).then(function (stream) {
       self.stream = stream;
       video.srcObject = stream;
+      self._setupTrack(stream, video);
       video.onloadedmetadata = function () {
         status.textContent = 'Position VIN inside the guide box. Scanning...';
         // Activate scanline animation
@@ -574,6 +743,68 @@
       self._announce('Camera is not available. Please enter your VIN manually.');
     });
   };
+
+  // Continuous focus, tap-to-focus and a flashlight button where the browser supports them.
+  VINScanner.prototype._setupTrack = function (stream, video) {
+    var self = this, track = stream.getVideoTracks && stream.getVideoTracks()[0];
+    var torchBtn = document.getElementById('vinScannerTorch');
+    if (torchBtn) torchBtn.style.display = 'none';
+    if (!track || !track.getCapabilities) return;
+    var caps = {};
+    try { caps = track.getCapabilities() || {}; } catch (e) { return; }
+    var adv = [];
+    if (caps.focusMode && caps.focusMode.indexOf('continuous') >= 0) adv.push({ focusMode: 'continuous' });
+    if (adv.length) track.applyConstraints({ advanced: adv }).catch(function () {});
+    if (caps.torch && torchBtn) {
+      var on = false;
+      torchBtn.style.display = 'block';
+      torchBtn.onclick = function () {
+        on = !on;
+        track.applyConstraints({ advanced: [{ torch: on }] }).then(function () {
+          torchBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          torchBtn.setAttribute('aria-label', on ? 'Turn off flashlight' : 'Turn on flashlight');
+          torchBtn.style.background = on ? 'rgba(250,204,21,0.85)' : 'rgba(0,0,0,0.6)';
+        }).catch(function () { on = !on; });
+      };
+    }
+    self._hasTorch = !!caps.torch;
+    video.onclick = function (e) {
+      if (!caps.focusMode) return;
+      var r = video.getBoundingClientRect(), c = { advanced: [] };
+      if (caps.pointsOfInterest || 'pointsOfInterest' in caps) c.advanced.push({ pointsOfInterest: [{ x: (e.clientX - r.left) / r.width, y: (e.clientY - r.top) / r.height }] });
+      var mode = caps.focusMode.indexOf('single-shot') >= 0 ? 'single-shot' : (caps.focusMode.indexOf('continuous') >= 0 ? 'continuous' : null);
+      if (mode) c.advanced.push({ focusMode: mode });
+      if (c.advanced.length) track.applyConstraints(c).then(function () {
+        if (mode === 'single-shot' && caps.focusMode.indexOf('continuous') >= 0) setTimeout(function () { track.applyConstraints({ advanced: [{ focusMode: 'continuous' }] }).catch(function () {}); }, 1500);
+      }).catch(function () {});
+    };
+  };
+
+  // Cheap per-frame check (160 px copy) that drives the on-screen hints.
+  var hintCv = null;
+  function frameAdvice(video, hasTorch) {
+    var w = video.videoWidth, h = video.videoHeight;
+    if (!w || !h) return '';
+    hintCv = hintCv || document.createElement('canvas');
+    var sw = 160, sh = Math.max(8, Math.round(160 * h / w));
+    hintCv.width = sw; hintCv.height = sh;
+    var c = hintCv.getContext('2d', { willReadFrequently: true });
+    c.drawImage(video, 0, 0, sw, sh);
+    var d = c.getImageData(0, 0, sw, sh).data, n = sw * sh, g = new Float32Array(n), sum = 0, i;
+    for (i = 0; i < n; i++) { g[i] = d[i * 4] * 0.299 + d[i * 4 + 1] * 0.587 + d[i * 4 + 2] * 0.114; sum += g[i]; }
+    var mean = sum / n;
+    if (mean < 55) return hasTorch ? 'Too dark \u2014 tap \u26A1 for the flashlight' : 'Too dark \u2014 add some light';
+    var boxes = findBarcodeROIs(video, w, h);
+    if (!boxes.length) return 'Point at the barcode on the door-jamb sticker';
+    var b = boxes[0], frac = Math.max(b[2] / w, b[3] / h);
+    if (frac < 0.3) return 'Move closer \u2014 fill the box with the barcode';
+    // sharpness: mean absolute horizontal gradient inside the box on the small copy
+    var s = sw / w, x0 = Math.floor(b[0] * s), y0 = Math.floor(b[1] * s), x1 = Math.min(sw - 1, Math.ceil((b[0] + b[2]) * s)), y1 = Math.min(sh, Math.ceil((b[1] + b[3]) * s));
+    var acc = 0, cnt = 0, mx = 0;
+    for (var y = y0; y < y1; y++) for (var x = x0; x < x1; x++) { var v = Math.abs(g[y * sw + x + 1] - g[y * sw + x]); acc += v; cnt++; if (v > mx) mx = v; }
+    if (cnt && mx < 60) return 'Hold steady \u2014 tap the picture to focus';
+    return 'Barcode found \u2014 hold still\u2026';
+  }
 
   VINScanner.prototype._beginScan = function () {
     var self = this;
@@ -594,10 +825,17 @@
     // 1) Barcode first: keep looking for a VIN barcode the whole time the camera is open.
     self._barcodeHit = false;
     status.textContent = 'Looking for the VIN barcode\u2026 The barcode on the driver\u2019s door-jamb sticker works best.';
+    var hintEl = document.getElementById('vinScannerHint'), ticks = 0, lastRead = '';
     function barcodeTick() {
-      if (!self.scanning || self._barcodeHit || !self.stream) return;
+      if (!self.scanning || self._barcodeHit || !self.stream) { if (hintEl) hintEl.style.display = 'none'; return; }
+      if (hintEl && ticks++ % 3 === 0) {
+        try { var adv = frameAdvice(video, self._hasTorch); hintEl.textContent = adv; hintEl.style.display = adv ? 'block' : 'none'; } catch (e) {}
+      }
       scanBarcode(video).then(function (vin) {
+        // A VIN that fails the check digit (pre-1981, some imports) must read the same on two frames.
+        if (vin && !isValidVIN(vin)) { var again = vin === lastRead; lastRead = vin; if (!again) vin = ''; }
         if (vin && self.scanning && !self._barcodeHit) {
+          if (hintEl) hintEl.style.display = 'none';
           self._barcodeHit = true; self.scanning = false;
           self._showConfirm(vin, 'barcode');
           document.getElementById('vinScannerRetry').style.display = 'inline-block';
@@ -783,6 +1021,7 @@
   };
 
   VINScanner.prototype.close = function () {
+    var hintEl = document.getElementById('vinScannerHint'); if (hintEl) hintEl.style.display = 'none';
     if (this.stream) {
       this.stream.getTracks().forEach(function (t) { t.stop(); });
       this.stream = null;

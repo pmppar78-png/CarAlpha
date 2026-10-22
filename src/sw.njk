@@ -4,11 +4,11 @@ eleventyExcludeFromCollections: true
 ---
 /* Car Alpha service worker. Caches the app shell and OCR engine files only.
    Never caches VIN lookups, API responses or any URL carrying a VIN. */
-const VERSION = "ca-20261022";
+const VERSION = "ca-20261022d";
 const SHELL = 'ca-shell-20261022c';
 const OCR = 'ca-ocr-v5';
 const SHELL_URLS = ['/', '/offline/', '/classic-vin-decoder/', '/assets/css/tailwind.css?v=20261022c', '/assets/css/custom.css?v=20261022c',
-  '/assets/js/vin-validate.js', '/assets/js/vin-scanner.js?v=20261022c', '/assets/js/classic-vin.js?v=20261022', '/assets/js/ca-enhance.js?v=20261022c',
+  '/assets/js/vin-validate.js', '/assets/js/vin-scanner.js?v=20261022d', '/assets/js/classic-vin.js?v=20261022', '/assets/js/ca-enhance.js?v=20261022c',
   '/icons/icon-192.png', '/manifest.json'];
 
 self.addEventListener('install', (e) => {
