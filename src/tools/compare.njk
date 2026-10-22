@@ -134,7 +134,7 @@ permalink: /compare/
     setError();compTable.classList.add('hidden');if(affCTA)affCTA.classList.add('hidden');
     var v1=(vin1El.value||'').trim().toUpperCase();
     var v2=(vin2El.value||'').trim().toUpperCase();
-    if(v1.length!==17||v2.length!==17){setError('Both VINs must be exactly 17 characters.');return;}
+    if(window.caVinCheck){var c1=caVinCheck(v1),c2=caVinCheck(v2);if(c1.error){setError('VIN 1: '+c1.error);return;}if(c2.error){setError('VIN 2: '+c2.error);return;}v1=c1.vin;v2=c2.vin;}else if(v1.length!==17||v2.length!==17){setError('Both VINs must be exactly 17 characters.');return;}
     if(v1===v2){setError('Please enter two different VINs to compare.');return;}
     setLoading(true);
     try{

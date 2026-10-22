@@ -271,7 +271,7 @@ eleventyComputed:
   async function run(){
     setError();vehicleCard.classList.add('hidden');recallCard.classList.add('hidden');
     var vin=(vinInput.value||'').trim().toUpperCase();
-    if(vin.length!==17){setError('Please enter a valid 17-character VIN.');return;}
+    var vc=window.caVinCheck?caVinCheck(vin):{vin:vin,error:vin.length!==17?'Please enter a valid 17-character VIN.':''};if(window.caVinShowWarning)caVinShowWarning(vc.warning);if(vc.error){setError(vc.error);return;}vin=vc.vin;
     setLoading(true);
     try{
       var d=await fetchJSON('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/'+vin+'?format=json');
