@@ -22,7 +22,7 @@ Lemon law and warranties:
 - A vehicle service contract is not the factory warranty. Coverage is whatever the contract lists. Do not say a plan "typically includes powertrain" as if that were universal.
 
 Money:
-- Do not claim that online offers beat dealer trade-in values by 10–20%, or that comparing insurance saves 10–30%. The FTC's selling guidance (consumer.ftc.gov/articles/selling-your-car) is to compare the offers in hand. A trade-in credit, a private sale, and an instant offer are different transactions.
+- Do not claim that online offers beat dealer trade-in values by 10–20%, or that comparing insurance saves 10–30%. The FTC's current trade-in guidance (consumer.ftc.gov/articles/auto-trade-ins-and-negative-equity-when-you-owe-more-your-car-worth) is to compare the offers in hand, including a private sale. A trade-in credit, a private sale, and an instant offer are different transactions.
 - The federal new and used clean-vehicle tax credits are not available for vehicles acquired after September 30, 2025 (IRS: irs.gov/clean-vehicle-tax-credits). Do not quote a $7,500 credit on a car acquired after that date. State and utility programs are separate and change.
 - Auto loans are compared on APR, term, and amount financed. Point readers to the CFPB's auto-loan tools. Do not invent a rate for a credit score.
 

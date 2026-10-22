@@ -25,6 +25,10 @@ eleventyComputed:
 {% if state.hasLemonLaw %}
 <p>{{ state.name }} has a lemon law designed to protect consumers who purchase new vehicles that turn out to have serious, unrepairable defects. {{ state.lemonLawSummary }}</p>
 
+{% if state.lemonLawCitation %}
+<p>The statute is <a href="{{ state.lemonLawUrl }}" rel="noopener">{{ state.lemonLawCitation }}</a>. The numbers in the summary were checked against that text on {{ state.lemonLawVerified }}. A later amendment would control. Used-car coverage, when a state has it, is usually a different section with a shorter window.</p>
+{% endif %}
+
 <p>The purpose of lemon laws is to hold manufacturers accountable when they sell vehicles with substantial defects that cannot be corrected after a reasonable number of repair attempts. If your vehicle qualifies as a "lemon," you may be entitled to a full refund, a replacement vehicle, or a cash settlement.</p>
 {% else %}
 <p>{{ state.name }} does not have a specific state lemon law. However, consumers may still have protection under the federal Magnuson-Moss Warranty Act, which applies to all states and covers products sold with written warranties.</p>
@@ -102,8 +106,8 @@ eleventyComputed:
 <p>Three different laws get blended together in casual lemon-law advice. They are not interchangeable, and this page does not pretend {{ state.name }}'s code is the same as the state next door.</p>
 
 <ul>
-  <li><strong>{{ state.name }} lemon law.</strong> A state statute. Enforcement and the complaint process run through the courts and, often, the state attorney general. You can find that office through the <a href="https://www.naag.org/find-my-ag/" rel="noopener">National Association of Attorneys General</a>.</li>
-  <li><strong>Magnuson-Moss Warranty Act.</strong> Federal warranty law, 15 U.S.C. sections 2301 through 2312. The Federal Trade Commission explains it in the context of <a href="https://consumer.ftc.gov/articles/auto-warranties-and-service-contracts" rel="noopener">auto warranties and service contracts</a>. It does not impose a nationwide "three repairs or 30 days" test.</li>
+  <li><strong>{{ state.name }} lemon law.</strong> {% if state.lemonLawCitation %}<a href="{{ state.lemonLawUrl }}" rel="noopener">{{ state.lemonLawCitation }}</a>. {% endif %}Enforcement and the complaint process run through the courts and, often, the state attorney general. You can find that office through the <a href="https://www.naag.org/find-my-ag/" rel="noopener">National Association of Attorneys General</a>.</li>
+  <li><strong>Magnuson-Moss Warranty Act.</strong> Federal warranty law, 15 U.S.C. sections 2301 through 2312. The Federal Trade Commission explains the difference between a warranty and a service contract in <a href="https://consumer.ftc.gov/consumer-alerts/2023/03/what-know-about-auto-service-contracts-extended-warranty-scams" rel="noopener">what to know about auto service contracts and extended warranty scams</a>. Magnuson-Moss does not impose a nationwide "three repairs or 30 days" test.</li>
   <li><strong>Safety recalls.</strong> A free repair for a safety defect under <a href="https://www.nhtsa.gov/recalls" rel="noopener">NHTSA</a> and 49 U.S.C. Chapter 301. An open recall is not, by itself, a lemon-law case.</li>
 </ul>
 

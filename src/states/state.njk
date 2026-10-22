@@ -108,7 +108,7 @@ eleventyComputed:
     </div>
     <div class="px-6 py-5 space-y-4">
       <p class="text-silver-400 text-sm leading-relaxed">{{ state.lemonLawSummary }}</p>
-      <p class="text-xs text-silver-500 leading-relaxed">This is a plain-language summary of {{ state.name }} law, not the statute. Repair-attempt counts are set by the state and are not a national "three or four visits or 30 days" rule. Confirm the current threshold with the {{ state.name }} attorney general. Federal warranty rights under the Magnuson-Moss Warranty Act are a separate claim, covered in the <a href="/guides/lemon-law/federal-lemon-law/" class="text-volt-400 hover:underline">federal lemon-law guide</a>.</p>
+      <p class="text-xs text-silver-500 leading-relaxed">This is a plain-language summary of {{ state.name }} law, not the statute.{% if state.lemonLawCitation %} The section is <a href="{{ state.lemonLawUrl }}" class="text-volt-400 hover:underline" rel="noopener">{{ state.lemonLawCitation }}</a>, checked {{ state.lemonLawVerified }}.{% endif %} Repair-attempt counts are set by the state and are not a national "three or four visits or 30 days" rule. Confirm the current threshold with the {{ state.name }} attorney general. Federal warranty rights under the Magnuson-Moss Warranty Act are a separate claim, covered in the <a href="/guides/lemon-law/federal-lemon-law/" class="text-volt-400 hover:underline">federal lemon-law guide</a>.</p>
       <div class="flex flex-wrap gap-3 pt-2">
         <a href="/states/{{ state.slug }}/lemon-law/" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-ghost text-volt-400 text-sm font-medium">
           Full lemon law guide
