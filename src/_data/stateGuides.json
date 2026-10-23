@@ -178,5 +178,77 @@
     "insurance": true,
     "registration": true,
     "ev": true
+  },
+  "new-jersey": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "new-mexico": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "new-york": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "north-carolina": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "north-dakota": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "ohio": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "oklahoma": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "oregon": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "pennsylvania": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "rhode-island": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "south-carolina": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "south-dakota": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
   }
 }
