@@ -55,12 +55,12 @@
         </div>
       </nav>
 
-      {# ── AI Co-Pilot Button ── #}
-      <button id="openAI" class="group relative flex items-center gap-2.5 px-5 py-3 rounded-xl btn-primary ai-btn-glow shimmer-effect text-white text-sm font-bold tracking-wide" style="transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);">
-        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+      {# ── Next-steps button. Opens the offline guide panel; it does not call the assistant. ── #}
+      <button id="openAI" type="button" aria-haspopup="dialog" aria-controls="aiOverlay" class="group relative flex items-center gap-2.5 px-5 py-3 rounded-xl btn-primary text-white text-sm font-bold tracking-wide" style="transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);">
+        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
         <div class="flex flex-col items-start leading-tight">
-          <span class="text-sm font-bold">Ask Car Alpha AI</span>
-          <span class="hidden lg:block text-[10px] font-medium text-cyan-200/60 tracking-wide">Recalls &middot; Warranty &middot; Lemon Law &middot; Insurance &middot; Repairs</span>
+          <span class="text-sm font-bold">Next steps</span>
+          <span class="hidden lg:block text-[10px] font-medium text-cyan-200/60 tracking-wide">VIN &middot; Recalls &middot; Lemon law &middot; Guides</span>
         </div>
       </button>
 

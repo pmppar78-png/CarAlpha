@@ -10,7 +10,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Alabama's Lemon Law covers new motor vehicles that develop substantial defects within the first year or 12,000 miles. Manufacturers must be given a reasonable number of repair attempts before a refund or replacement is required.",
+    "lemonLawSummary": "Alabama gives a new-car buyer a lemon-law rights period of one year or 12,000 miles, whichever comes first, under Ala. Code §§ 8-20A-1(8) and 8-20A-2. The repair presumption is measured over 24 months or 24,000 miles, and at least one repair attempt has to fall inside that first year or 12,000 miles. The law treats the car as having had a reasonable number of attempts after three repairs of the same problem plus a final try by the manufacturer, or after 30 calendar days out of service, counting that final try. Before a lawsuit, send the manufacturer certified mail; once the presumption is already in place, the manufacturer gets seven calendar days to name a shop and 14 calendar days after you drop the car off to fix it.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -20,7 +20,10 @@
     "registrationFeeRange": "$15 - $23 plus county fees",
     "registrationNotes": "Alabama charges a flat registration fee plus additional county-level taxes. Title fees are $18. Plates must be renewed annually by the owner's birthday.",
     "titleFee": "$18",
-    "plateFee": "$23"
+    "plateFee": "$23",
+    "lemonLawCitation": "Ala. Code §§ 8-20A-1(8), 8-20A-2",
+    "lemonLawUrl": "https://alison.legislature.state.al.us/code-of-alabama?section=8-20A-2",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Alaska",
@@ -33,7 +36,7 @@
     "insuranceMinimumDetail": "$50,000 bodily injury per person / $100,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1262,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Alaska's Lemon Law protects buyers of new vehicles that have substantial defects. The manufacturer must be given a reasonable number of attempts to repair the defect before the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "Under AS 45.45.320, Alaska measures the presumption during the express warranty or the year after delivery to the original owner, whichever ends first, and the statute sets no mileage cap. Three repairs of the same problem, if it is still there, or 30 business days in the shop, is enough attempts. Days when the shop cannot work for reasons outside its control do not count. To demand a refund or replacement, mail written notice before 60 days have passed after the warranty or that one-year period ends; the manufacturer then has 30 days to try one last repair.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -43,7 +46,10 @@
     "registrationFeeRange": "$100 for most vehicles",
     "registrationNotes": "Alaska charges a biennial registration fee of $100 for most passenger vehicles. There is no state sales tax, but some municipalities charge local taxes on vehicle purchases.",
     "titleFee": "$15",
-    "plateFee": "Included in registration"
+    "plateFee": "Included in registration",
+    "lemonLawCitation": "AS 45.45.320",
+    "lemonLawUrl": "https://www.akleg.gov/basis/Journal/Pages/33?Bill=HB+233&Chamber=H&Page=02716",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Arizona",
@@ -56,7 +62,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
     "averageInsuranceCost": 1374,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Arizona's Lemon Law requires manufacturers to repair defects within a reasonable number of attempts. If the vehicle remains defective, the buyer can request a replacement or refund through the state's arbitration program.",
+    "lemonLawSummary": "Arizona measures lemon-law repairs under Ariz. Rev. Stat. §§ 44-1262 and 44-1264 during the shorter of the express warranty or two years and 24,000 miles after the car was delivered. The presumption is four repairs of the same defect that still exists, or 30 calendar days the car spends out of service. Before that presumption can be used, the manufacturer has to have received direct written notice of the defect. It also has to have had a chance to repair the car.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in the Phoenix and Tucson metro areas for vehicles older than five model years. Vehicles are tested every other year. Testing costs approximately $17.",
     "hasSafetyInspection": false,
@@ -66,7 +72,10 @@
     "registrationFeeRange": "$8 base fee plus vehicle license tax",
     "registrationNotes": "Arizona charges a low base registration fee of $8 but adds a vehicle license tax based on assessed value. New vehicles are assessed at 60% of MSRP, decreasing by 16.25% each year.",
     "titleFee": "$4",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "Ariz. Rev. Stat. §§ 44-1262, 44-1264",
+    "lemonLawUrl": "https://www.azleg.gov/ars/44/01264.htm",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Arkansas",
@@ -79,7 +88,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1478,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Arkansas's New Motor Vehicle Quality Assurance Act covers vehicles with substantial defects reported within 24 months or 24,000 miles. The manufacturer gets a reasonable number of repair attempts before a buyback is required.",
+    "lemonLawSummary": "Arkansas runs its quality period to 24 months or 24,000 miles, whichever is later, in Ark. Code §§ 4-90-403(12), 4-90-406, and 4-90-410. After three tries at the same problem that substantially impairs the car, or one try at a problem likely to cause death or serious injury, send certified or registered mail so the manufacturer can make a final repair. A presumption also arises if that path was followed and the problem remains, if the car spent 30 calendar days in the shop, or if there were five or more attempts on separate occasions at problems that together substantially impair use and value. The manufacturer has ten days after the letter to offer a shop and ten days after you deliver the car to fix it; if it misses those deadlines, the final-attempt requirement drops and the presumption can no longer be rebutted.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -89,7 +98,10 @@
     "registrationFeeRange": "$17 - $30 depending on vehicle weight",
     "registrationNotes": "Arkansas registration fees are based on vehicle weight. An annual personal property tax is also assessed on vehicles. Title transfers cost $10.",
     "titleFee": "$10",
-    "plateFee": "$1 - $3"
+    "plateFee": "$1 - $3",
+    "lemonLawCitation": "Ark. Code §§ 4-90-403(12), 4-90-406, 4-90-410",
+    "lemonLawUrl": "https://www.dfa.arkansas.gov/office/taxes/tax-credits-special-refunds/new-car-lemon-law/",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "California",
@@ -102,7 +114,7 @@
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $5,000 property damage",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
-    "lemonLawSummary": "California's Song-Beverly Consumer Warranty Act is one of the strongest lemon laws in the nation. It covers new and used certified vehicles with manufacturer warranties. After two or more repair attempts for serious defects, or 30+ days out of service, buyers may be entitled to a refund or replacement.",
+    "lemonLawSummary": "California's Tanner presumption is Cal. Civ. Code § 1793.22. It applies during the first 18 months after delivery or the first 18,000 miles, whichever comes first. Within that time, two repairs of a defect likely to cause death or serious bodily injury, four repairs of the same defect, or more than 30 calendar days in the shop is a reasonable number of attempts. Direct notice to the manufacturer is required for the two-repair and four-repair counts only when the warranty or owner's manual clearly told the buyer to send it.",
     "hasEmissions": true,
     "emissionsDetails": "California requires biennial smog checks for vehicles older than eight model years in most areas. The state sets its own emissions standards through CARB, which are stricter than federal standards. Testing typically costs $30-$70.",
     "hasSafetyInspection": false,
@@ -112,7 +124,10 @@
     "registrationFeeRange": "$46 base fee plus additional fees",
     "registrationNotes": "California charges a base registration fee of $46, a vehicle license fee (0.65% of vehicle value), plus various surcharges. Total first-year costs for a new vehicle can exceed $400. Renewal is annual.",
     "titleFee": "$23",
-    "plateFee": "$23"
+    "plateFee": "$23",
+    "lemonLawCitation": "Cal. Civ. Code § 1793.22",
+    "lemonLawUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1793.22",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Colorado",
@@ -125,7 +140,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
     "averageInsuranceCost": 1835,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Colorado's Lemon Law covers new motor vehicles that develop nonconformities within the first year. After four repair attempts or 30 business days out of service, the manufacturer must replace the vehicle or refund the purchase price.",
+    "lemonLawSummary": "For vehicles sold or leased on or after August 7, 2024, Colo. Rev. Stat. § 42-10-103, as amended by SB 24-192, uses the first two years or 24,000 miles. Three repairs of the same problem, two repairs of a safety-based problem, or 24 business days out of service is the presumption, and the problem has to still be there. The manufacturer needs prior written notice by certified mail and then has ten business days after receiving it to try a cure. That cure counts as one repair.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in the Denver-Boulder-Greeley-Fort Collins metro area for vehicles 4-11 model years old. Testing is performed at Air Care Colorado stations and costs approximately $25.",
     "hasSafetyInspection": false,
@@ -135,7 +150,10 @@
     "registrationFeeRange": "$50 - $100+ based on weight and year",
     "registrationNotes": "Colorado registration fees are based on vehicle weight and taxable value. A specific ownership tax is assessed that decreases with vehicle age. Registration is annual, due on the owner's birth month.",
     "titleFee": "$7.20",
-    "plateFee": "$5.56"
+    "plateFee": "$5.56",
+    "lemonLawCitation": "Colo. Rev. Stat. § 42-10-103",
+    "lemonLawUrl": "https://leg.colorado.gov/bills/sb24-192",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Connecticut",
@@ -148,7 +166,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1702,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Connecticut's Lemon Law covers new vehicles that develop defects within 2 years or 24,000 miles. After four repair attempts or 30+ days out of service, buyers can request arbitration for a refund or replacement.",
+    "lemonLawSummary": "Connecticut's lemon law is Conn. Gen. Stat. § 42-179. The ordinary presumption runs during the first two years or 24,000 miles: four repairs of the same problem, or 30 calendar days out of service, if the problem continues. A defect likely to cause death or serious injury uses a shorter window, the express warranty or one year after delivery, and it takes two repairs. You do not have to notify the manufacturer unless the warranty or the owner's manual clearly says written notice is required.",
     "hasEmissions": true,
     "emissionsDetails": "Biennial emissions testing is required for most vehicles registered in Connecticut. Testing follows the OBD-II protocol for vehicles 4+ model years old. Cost is approximately $20.",
     "hasSafetyInspection": false,
@@ -158,7 +176,10 @@
     "registrationFeeRange": "$80 for most passenger vehicles",
     "registrationNotes": "Connecticut charges a biennial registration fee of $80 for most passenger vehicles. A supplemental fee applies to vehicles with a value above $50,000. Title fee is $25.",
     "titleFee": "$25",
-    "plateFee": "Included in registration"
+    "plateFee": "Included in registration",
+    "lemonLawCitation": "Conn. Gen. Stat. § 42-179",
+    "lemonLawUrl": "https://www.cga.ct.gov/current/pub/chap_743b.htm",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Delaware",
@@ -171,7 +192,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
     "averageInsuranceCost": 1573,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Delaware's Lemon Law covers new vehicles with defects reported within the express warranty period. The manufacturer must be given a reasonable opportunity to repair before arbitration can be pursued.",
+    "lemonLawSummary": "Del. Code tit. 6, § 5004 covers a new car for the warranty term or the first year after delivery, whichever ends first. Mileage does not cut that period short. The presumption is in place when substantially the same problem has been repaired four times and is still there, or when the car has been out of service for more than 30 calendar days. Use it against the manufacturer only after the manufacturer got a direct written notice and a chance to fix the car.",
     "hasEmissions": true,
     "emissionsDetails": "Delaware requires biennial emissions testing for vehicles in New Castle County that are more than 4 model years old. Testing uses OBD-II diagnostics and costs approximately $20.",
     "hasSafetyInspection": true,
@@ -181,7 +202,10 @@
     "registrationFeeRange": "$40 for most vehicles",
     "registrationNotes": "Delaware charges a flat registration fee and a 4.25% document fee on the purchase price in lieu of sales tax. Title fee is $55. No state sales tax applies to vehicle purchases.",
     "titleFee": "$55",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "Del. Code tit. 6, § 5004",
+    "lemonLawUrl": "https://delcode.delaware.gov/title6/c050/index.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Florida",
@@ -194,7 +218,7 @@
     "insuranceMinimumDetail": "$10,000 personal injury protection (PIP) / $10,000 property damage liability. Bodily injury liability is only required if the driver has had license or registration suspended.",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Florida's Lemon Law covers new or demonstrator vehicles within 24 months of delivery. After three repair attempts for the same defect or 15+ cumulative days out of service, the buyer can seek arbitration for a full refund or replacement.",
+    "lemonLawSummary": "Fla. Stat. §§ 681.102(9) and 681.104 give a rights period of 24 months after delivery, and the statute does not use a mileage cap. The presumption is three repairs of the same problem plus a final attempt by the manufacturer, if that attempt is undertaken, or 30 cumulative days out of service, 60 for a recreational vehicle. When the car has been out of service for 15 days, send written notice by registered or express mail so the manufacturer can inspect or repair. After three attempts on the same problem, a separate written notice gives the manufacturer one last repair.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -204,7 +228,10 @@
     "registrationFeeRange": "$14.50 - $32.50 based on weight",
     "registrationNotes": "Florida registration fees are based on vehicle weight. An initial registration fee applies, plus a $225 new wheels fee for first-time registrations. Title fee is $77.25 including lien recording.",
     "titleFee": "$77.25",
-    "plateFee": "$28"
+    "plateFee": "$28",
+    "lemonLawCitation": "Fla. Stat. §§ 681.102(9), 681.104",
+    "lemonLawUrl": "https://www.flsenate.gov/Laws/Statutes/2026/681.104",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Georgia",
@@ -217,7 +244,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1876,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Georgia's Lemon Law covers new vehicles that develop defects within the first 24 months or 24,000 miles. After three repair attempts or 30 days out of service, the buyer may be entitled to a replacement or refund.",
+    "lemonLawSummary": "Georgia's lemon law, O.C.G.A. §§ 10-1-782 and 10-1-784, ends the rights period at two years or 24,000 miles, whichever comes first. One unsuccessful repair of a serious safety defect, three unsuccessful repairs of the same problem, or 30 calendar days out of service counts as a reasonable number of attempts. After that, notify the manufacturer. It then has 28 days from receiving the notice to try one last repair.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in the 13-county metro Atlanta area for vehicles 3-25 model years old. Annual OBD-II testing costs $25 at Georgia Clean Air Force stations.",
     "hasSafetyInspection": false,
@@ -227,7 +254,10 @@
     "registrationFeeRange": "$20 for most vehicles",
     "registrationNotes": "Georgia charges a $20 annual registration fee plus a title ad valorem tax (TAVT) of 7% of the vehicle's fair market value at the time of purchase. This replaces the traditional annual ad valorem tax.",
     "titleFee": "$18",
-    "plateFee": "$25"
+    "plateFee": "$25",
+    "lemonLawCitation": "O.C.G.A. §§ 10-1-782, 10-1-784",
+    "lemonLawUrl": "https://consumer.georgia.gov/document/document/lemon-law-jan-2025/download",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Hawaii",
@@ -240,7 +270,7 @@
     "insuranceMinimumDetail": "$20,000 bodily injury per person / $40,000 bodily injury per accident / $10,000 property damage / $10,000 PIP",
     "averageInsuranceCost": 1218,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Hawaii's Lemon Law covers new vehicles with defects reported within the express warranty period or 2 years, whichever comes first. After three repair attempts or 30 days out of service, consumers may seek a refund or replacement.",
+    "lemonLawSummary": "Hawaii's lemon law, Haw. Rev. Stat. §§ 481I-2 and 481I-3, sets the rights period as the express warranty, two years, or 24,000 miles, whichever comes first. Three exams or repairs of the same problem, one exam or repair of a problem likely to cause death or serious injury, or 30 business days out of service, is the presumption. The manufacturer has to have received a written report and a reasonable chance to repair. A dealer also notifies the manufacturer after a second report or after the car has been out more than 20 business days.",
     "hasEmissions": true,
     "emissionsDetails": "Oahu requires annual emissions inspections for gasoline-powered vehicles as part of the safety inspection process. Other islands only require safety inspections.",
     "hasSafetyInspection": true,
@@ -250,7 +280,10 @@
     "registrationFeeRange": "$45 plus county weight tax",
     "registrationNotes": "Hawaii charges a state registration fee plus a county-specific vehicle weight tax that varies by island. Registration is annual. Title fee is $5.",
     "titleFee": "$5",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "Haw. Rev. Stat. §§ 481I-2, 481I-3",
+    "lemonLawUrl": "https://cca.hawaii.gov/wp-content/uploads/2026/01/481I-L.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Idaho",
@@ -263,7 +296,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
     "averageInsuranceCost": 1064,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Idaho's Lemon Law covers new motor vehicles with defects that substantially impair use, value, or safety. The manufacturer must be given a reasonable number of repair attempts within the warranty period.",
+    "lemonLawSummary": "Idaho Code § 48-903 looks at the express warranty, two years, or 24,000 miles, whichever date comes first. If the problem was first reported during the warranty, repair attempts within three years of delivery can still support a refund or replacement. Four repairs of the same problem, 30 business days out of service, or one repair of a complete brake or steering failure likely to cause death or serious injury, is the presumption, and the manufacturer still gets one chance to repair that brake or steering failure. The four-repair and 30-day paths apply against the manufacturer only after written notice and a chance to cure.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -273,7 +306,10 @@
     "registrationFeeRange": "$45 - $69 based on vehicle age",
     "registrationNotes": "Idaho registration fees are based on the age of the vehicle, ranging from $69 for newer vehicles to $45 for those over 8 years old. An additional county fee and plate fee may apply.",
     "titleFee": "$14",
-    "plateFee": "$8"
+    "plateFee": "$8",
+    "lemonLawCitation": "Idaho Code § 48-903",
+    "lemonLawUrl": "https://legislature.idaho.gov/statutesrules/idstat/title48/t48ch9/sect48-903/",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Illinois",
@@ -286,7 +322,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
     "averageInsuranceCost": 1499,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Illinois's New Vehicle Buyer Protection Act covers vehicles in the first 12 months or 12,000 miles. After four repair attempts or 30 business days out of service, consumers can demand a replacement or refund.",
+    "lemonLawSummary": "Illinois sets its own lemon-law period in 815 ILCS 380/2 and 380/3: one year or 12,000 miles after delivery, whichever comes first. Four repairs of the same problem that still exists, or 30 business days out of service, is the presumption inside that period. The manufacturer must have received direct written notice from the buyer, or from someone acting for the buyer. It also needs a chance to correct the defect before the presumption applies.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in the greater Chicago area and Metro East St. Louis region for most vehicles 4-13 model years old. OBD-II testing is used, and testing costs $20.",
     "hasSafetyInspection": false,
@@ -296,7 +332,10 @@
     "registrationFeeRange": "$151 for most passenger vehicles",
     "registrationNotes": "Illinois charges an annual registration fee of $151 for standard passenger vehicles. Electric vehicles pay an additional $100 annual fee. Title fee is $150.",
     "titleFee": "$150",
-    "plateFee": "$29"
+    "plateFee": "$29",
+    "lemonLawCitation": "815 ILCS 380/2, 815 ILCS 380/3",
+    "lemonLawUrl": "https://ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2341&ChapterID=67",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Indiana",
@@ -309,7 +348,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1288,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Indiana's Motor Vehicle Protection Act covers new vehicles within 18 months or 18,000 miles. After four repair attempts or 30 business days out of service, the consumer is entitled to a replacement or refund.",
+    "lemonLawSummary": "Indiana calls the coverage a term of protection under Ind. Code §§ 24-5-13-7, 24-5-13-8, and 24-5-13-15. It ends at the earlier of 18 months or 18,000 miles, and the buyer has to report the problem before that term runs out. Four repairs that leave the problem in place, or 30 business days out of service with the problem still there, counts as a reasonable number of attempts. If the manufacturer made the disclosure in § 24-5-13-9, the buyer notifies the manufacturer of the claim first.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -319,7 +358,10 @@
     "registrationFeeRange": "$21.35 plus excise tax",
     "registrationNotes": "Indiana charges a base registration fee of $21.35 plus an annual excise tax based on the vehicle's value and age. The excise tax decreases as the vehicle ages.",
     "titleFee": "$15",
-    "plateFee": "$9.40"
+    "plateFee": "$9.40",
+    "lemonLawCitation": "Ind. Code §§ 24-5-13-7, 24-5-13-8, 24-5-13-15",
+    "lemonLawUrl": "https://iga.in.gov/ic/2026/Title_24/Article_5/Chapter_13.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Iowa",
@@ -332,7 +374,7 @@
     "insuranceMinimumDetail": "$20,000 bodily injury per person / $40,000 bodily injury per accident / $15,000 property damage",
     "averageInsuranceCost": 1139,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Iowa's Lemon Law protects purchasers of new vehicles that develop nonconformities within 2 years or 24,000 miles. After three repair attempts or 30 days out of service, the buyer may seek a refund or replacement.",
+    "lemonLawSummary": "Iowa's lemon law, Iowa Code §§ 322G.2 and 322G.4, uses the written warranty, two years, or 24,000 miles, whichever expires first, and it counts calendar days. The presumption is three exams or repairs of the same problem plus a final attempt if one is undertaken, one exam or repair of a problem likely to cause death or serious injury plus that final attempt, or 30 days out of service. You can send written notice after 20 cumulative days out of service, after three attempts, or after one attempt on a dangerous defect. The manufacturer then has a final chance to conform the car, including 10 cumulative out-of-service days after the 20-day notice.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -342,7 +384,10 @@
     "registrationFeeRange": "1% of value annually, decreasing with age",
     "registrationNotes": "Iowa charges a fee-for-new-registration that is 5% of the purchase price, plus an annual registration fee based on the vehicle's book value (1% for the first year, decreasing to a minimum). Title fee is $25.",
     "titleFee": "$25",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "Iowa Code §§ 322G.2, 322G.4",
+    "lemonLawUrl": "https://www.legis.iowa.gov/docs/code/2026/322G.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Kansas",
@@ -355,7 +400,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1515,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Kansas's Lemon Law covers new vehicles with defects reported within the warranty period or 1 year, whichever is shorter. After four repair attempts or 30 days out of service, arbitration can be requested.",
+    "lemonLawSummary": "Kansas applies Kan. Stat. Ann. § 50-645 during the express warranty or the first year after delivery, whichever ends sooner, and the statute sets no mileage limit. Four repairs of the same problem, 30 calendar days out of service, or ten attempts on any problems that substantially impair use and value, is the presumption. Those counts matter once the manufacturer has actual notice of the trouble. Get that notice to the manufacturer while the warranty or the one-year period is still open.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in Johnson and Wyandotte counties (Kansas City metro area) for vehicles 4+ model years old. Biennial OBD-II testing costs approximately $17.",
     "hasSafetyInspection": true,
@@ -365,7 +410,10 @@
     "registrationFeeRange": "$39 - $59 based on weight",
     "registrationNotes": "Kansas registration fees are based on vehicle weight. Personal property taxes are also assessed on vehicles. Registration is annual.",
     "titleFee": "$10",
-    "plateFee": "$3 - $5"
+    "plateFee": "$3 - $5",
+    "lemonLawCitation": "Kan. Stat. Ann. § 50-645",
+    "lemonLawUrl": "https://www.ksrevisor.org/statutes/chapters/ch50/050_006_0045.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Kentucky",
@@ -378,7 +426,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1740,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Kentucky's Lemon Law covers new vehicles with defects within the first 12 months or 12,000 miles. After four repair attempts or 30 days out of service, the consumer can request arbitration.",
+    "lemonLawSummary": "Kentucky's window under Ky. Rev. Stat. § 367.842 is the first 12 months or 12,000 miles, whichever arrives first. The presumption looks at that same defect: four repair attempts, or 30 calendar days the car is out of service because of it. When a reasonable number of attempts still leaves the car unrepaired, the buyer puts the problem in writing to the manufacturer.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -388,7 +436,10 @@
     "registrationFeeRange": "$21 for most vehicles",
     "registrationNotes": "Kentucky charges a $21 annual registration fee for most passenger vehicles plus county clerk fees. A 6% usage tax applies to vehicle purchases. Personal property tax is assessed annually.",
     "titleFee": "$9",
-    "plateFee": "$21"
+    "plateFee": "$21",
+    "lemonLawCitation": "Ky. Rev. Stat. § 367.842",
+    "lemonLawUrl": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=40103",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Louisiana",
@@ -401,7 +452,7 @@
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 2724,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Louisiana's Lemon Law covers new vehicles with defects within the warranty period. After four repair attempts or 30 days out of service, the consumer can seek a refund or replacement through arbitration.",
+    "lemonLawSummary": "La. Rev. Stat. § 51:1943 gives the manufacturer the warranty period or one year after delivery, and the presumption uses the date that arrives first. The section does not cut the period off by mileage. Four repairs of the same problem, or 45 calendar days out of service, is the presumption, and § 51:1944 uses those same numbers for the refund or replacement. If the manufacturer misses the response or repair time in § 51:1943(A), it loses the right to a final attempt.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": true,
@@ -411,7 +462,10 @@
     "registrationFeeRange": "$20 - $82 depending on purchase price",
     "registrationNotes": "Louisiana registration fees are based on the vehicle purchase price. Vehicles priced under $10,000 pay $20, while more expensive vehicles pay up to $82. License plate fees vary by parish.",
     "titleFee": "$68.50",
-    "plateFee": "$8 - $15"
+    "plateFee": "$8 - $15",
+    "lemonLawCitation": "La. Rev. Stat. § 51:1943",
+    "lemonLawUrl": "https://legis.la.gov/legis/Law.aspx?d=104205",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Maine",
@@ -424,7 +478,7 @@
     "insuranceMinimumDetail": "$50,000 bodily injury per person / $100,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1002,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Maine's Lemon Law covers new vehicles within 3 years or 18,000 miles. After three repair attempts or 15 business days out of service, the consumer can invoke arbitration for a refund or replacement.",
+    "lemonLawSummary": "Maine's repair duty in Me. Rev. Stat. tit. 10, § 1163 runs during the express warranties, three years, or 18,000 miles, whichever comes first. Three repairs of the same problem, one repair of a serious brake or steering failure, or 15 business days out of service, is the presumption. Write the manufacturer that you want a refund or a replacement. It then has a final repair chance during the seven business days after it receives the letter, and that letter can go out after a single brake or steering failure.",
     "hasEmissions": true,
     "emissionsDetails": "Maine follows California's CARB emissions standards and requires OBD-II emissions testing in Cumberland County for vehicles older than the current plus one model year. Testing is annual.",
     "hasSafetyInspection": true,
@@ -434,7 +488,10 @@
     "registrationFeeRange": "$35 for most passenger vehicles",
     "registrationNotes": "Maine charges an annual registration fee based on vehicle weight, typically $35 for most passenger vehicles. Excise tax is also assessed based on the vehicle's MSRP and age.",
     "titleFee": "$33",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "Me. Rev. Stat. tit. 10, § 1163",
+    "lemonLawUrl": "https://legislature.maine.gov/statutes/10/title10sec1163.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Maryland",
@@ -447,7 +504,7 @@
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $15,000 property damage",
     "averageInsuranceCost": 1639,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Maryland's Lemon Law covers new vehicles within 15 months or 15,000 miles. After four repair attempts or 30 days out of service, the manufacturer must accept the vehicle for arbitration. The law also covers used vehicles through the Used Vehicle Warranty Enforcement Act.",
+    "lemonLawSummary": "Maryland's lemon law is Md. Code, Com. Law §§ 14-1501 and 14-1502. For this statute the manufacturer's warranty period is the earlier of 18,000 miles or 24 months after delivery. The presumption is four repairs of the same problem, 30 or more days out of service, or one repair of a brake or steering failure that still will not pass the state safety inspection after the manufacturer had a chance to cure. Report the problem by certified mail, return receipt requested, and the manufacturer is supposed to finish the corrections within 30 days of getting that letter.",
     "hasEmissions": true,
     "emissionsDetails": "Maryland requires biennial emissions testing in most counties for vehicles 4+ model years old using OBD-II testing. The Vehicle Emissions Inspection Program (VEIP) test is free at state-operated stations.",
     "hasSafetyInspection": true,
@@ -457,7 +514,10 @@
     "registrationFeeRange": "$135 - $187 for most vehicles",
     "registrationNotes": "Maryland charges a biennial registration fee based on vehicle weight. The state also charges a 6% excise tax on vehicle purchases. Title fee is $100.",
     "titleFee": "$100",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "Md. Code Ann., Com. Law §§ 14-1501, 14-1502",
+    "lemonLawUrl": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-1502",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Massachusetts",
@@ -470,7 +530,7 @@
     "insuranceMinimumDetail": "$20,000 bodily injury per person / $40,000 bodily injury per accident / $5,000 property damage",
     "averageInsuranceCost": 1388,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Massachusetts's Lemon Law covers new vehicles within the first year or 15,000 miles. After three repair attempts or 15 business days out of service, the consumer can invoke the law. The state also has strong used car warranty protections.",
+    "lemonLawSummary": "Massachusetts calls the coverage a term of protection of one year or 15,000 miles in Mass. Gen. Laws ch. 90, § 7N 1/2, and a business day is a day the authorized dealers' service departments are normally open. Three repairs of the same problem that continues or comes back, or 15 business days out of service, is a reasonable number of attempts. The manufacturer gets one more chance to cure, and that extra chance cannot run longer than seven business days. The buyer does not have to notify the manufacturer directly before using the state's certified new-car arbitration.",
     "hasEmissions": true,
     "emissionsDetails": "Massachusetts requires annual emissions testing as part of the combined safety and emissions inspection for vehicles older than the current plus one model year. OBD-II testing is used.",
     "hasSafetyInspection": true,
@@ -480,7 +540,10 @@
     "registrationFeeRange": "$60 for most passenger vehicles",
     "registrationNotes": "Massachusetts charges a $60 biennial registration fee for most passenger vehicles. A 6.25% sales tax applies to vehicle purchases. Title fee is $75.",
     "titleFee": "$75",
-    "plateFee": "Included in registration"
+    "plateFee": "Included in registration",
+    "lemonLawCitation": "Mass. Gen. Laws ch. 90, § 7N 1/2",
+    "lemonLawUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIV/Chapter90/Section7N1~2",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Michigan",
@@ -493,7 +556,7 @@
     "insuranceMinimumDetail": "$50,000 bodily injury per person / $100,000 bodily injury per accident / $10,000 property damage / PIP coverage required",
     "averageInsuranceCost": 2541,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Michigan's Lemon Law covers new vehicles within the warranty period. After four repair attempts for the same defect or 30 days out of service, the consumer can request arbitration. Michigan also uniquely allows claims for used vehicles under certain conditions.",
+    "lemonLawSummary": "Michigan's lemon law, Mich. Comp. Laws §§ 257.1402 and 257.1403, asks the owner to report the defect during the express warranty or within one year of delivery, whichever is earlier, and it sets no mileage cap. The presumption is four repairs of the same defect within two years of the first repair attempt, or 30 days out of service during the warranty or that first year. After the third repair, send written notice by return receipt; the manufacturer then has five business days to repair. On the days-out path, written notice goes out after 25 days in the shop, and the manufacturer again has five business days.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -503,7 +566,10 @@
     "registrationFeeRange": "$100 - $200+ based on MSRP",
     "registrationNotes": "Michigan registration fees are based on the vehicle's list price (MSRP). Fees range from $100 for vehicles with an MSRP below $6,000 to over $200 for more expensive vehicles. No annual property tax on vehicles.",
     "titleFee": "$15",
-    "plateFee": "Included in registration"
+    "plateFee": "Included in registration",
+    "lemonLawCitation": "Mich. Comp. Laws §§ 257.1402, 257.1403",
+    "lemonLawUrl": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-257-1403.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Minnesota",
@@ -516,7 +582,7 @@
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $10,000 property damage / $40,000 PIP",
     "averageInsuranceCost": 1426,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Minnesota's Lemon Law covers new vehicles within the warranty period or 2 years, whichever comes first. After four repair attempts or 30 business days out of service, the consumer may seek a refund or replacement.",
+    "lemonLawSummary": "Minn. Stat. § 325F.665 places the presumption in the express warranty or in the two years after delivery, and the date that comes first ends it. Miles do not shorten that window. A problem first reported while the warranty was still running can still support a refund or replacement from attempts made within three years of delivery. The presumption is four repairs, 30 business days out of service, or a single repair of a complete brake or steering failure that is likely to cause death or serious injury, and the four-repair and 30-day routes need written notice plus a chance to cure.",
     "hasEmissions": true,
     "emissionsDetails": "Minnesota requires emissions testing in the seven-county Twin Cities metro area for most vehicles. Testing is performed at state-contracted stations. Newer vehicles and electric vehicles are exempt.",
     "hasSafetyInspection": false,
@@ -526,7 +592,10 @@
     "registrationFeeRange": "$35 plus registration tax",
     "registrationNotes": "Minnesota charges a $35 base registration fee plus a registration tax based on the vehicle's value (1.285% of base value, which decreases with age). Title fee is $8.25.",
     "titleFee": "$8.25",
-    "plateFee": "$6.75"
+    "plateFee": "$6.75",
+    "lemonLawCitation": "Minn. Stat. § 325F.665",
+    "lemonLawUrl": "https://www.revisor.mn.gov/statutes/cite/325F.665",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Mississippi",
@@ -539,7 +608,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1593,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Mississippi's Lemon Law covers new vehicles within the first year or 12,000 miles. After three repair attempts or 15 business days out of service, the consumer can pursue arbitration for a refund or replacement.",
+    "lemonLawSummary": "Miss. Code Ann. § 63-17-159 keeps the repair presumption inside the express warranty or the first year after delivery, whichever finishes sooner. The section does not add a mileage limit. Substantially the same problem repaired three times, or 15 working days in the shop for that problem, is enough, and routine maintenance is not part of the 15 days. Write the manufacturer before you rely on the section; once the car is at the shop the manufacturer names, that shop has ten working days to make it conform.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -549,7 +618,10 @@
     "registrationFeeRange": "$12.75 - $24.75 based on vehicle class",
     "registrationNotes": "Mississippi has some of the lowest registration fees in the nation. Fees range from $12.75 for vehicles under 6,500 lbs to $24.75 for larger vehicles. A 5% use tax applies to vehicle purchases.",
     "titleFee": "$9",
-    "plateFee": "$3.75"
+    "plateFee": "$3.75",
+    "lemonLawCitation": "Miss. Code Ann. § 63-17-159",
+    "lemonLawUrl": "https://www.mmvc.ms.gov/sites/mmvc/files/Statutes/WarrantyEnforcementAct.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Missouri",
@@ -562,7 +634,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1569,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Missouri's Lemon Law covers new vehicles within the first year or 12,000 miles. After four repair attempts or 30 business days out of service, the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "Under Mo. Rev. Stat. §§ 407.565 and 407.571, the clock runs for the express warranty or for one year after delivery, and the period that ends first controls. There is no mileage cutoff in that test. The same problem repaired four times, or the car held for repair for 30 working days, meets the presumption, and days spent on ordinary maintenance stay out of the count. Tell the manufacturer or its agent about the problem before that window closes.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in the St. Louis and Kansas City metro areas for gasoline-powered vehicles from 2 to 25 model years old. Biennial OBD-II testing costs approximately $24.",
     "hasSafetyInspection": true,
@@ -572,7 +644,10 @@
     "registrationFeeRange": "$18.25 - $51.25 based on horsepower",
     "registrationNotes": "Missouri registration fees are uniquely based on vehicle horsepower. Fees range from $18.25 for vehicles under 12 hp to $51.25 for vehicles over 72 hp. Personal property tax is also assessed annually.",
     "titleFee": "$8.50",
-    "plateFee": "$8.50"
+    "plateFee": "$8.50",
+    "lemonLawCitation": "Mo. Rev. Stat. §§ 407.565, 407.571",
+    "lemonLawUrl": "https://revisor.mo.gov/main/OneSection.aspx?section=407.571",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Montana",
@@ -585,7 +660,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
     "averageInsuranceCost": 1341,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Montana's Lemon Law covers new vehicles within 2 years or 18,000 miles. After four repair attempts or 30 business days out of service, the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "Montana defines the warranty period in Mont. Code Ann. §§ 61-4-501 and 61-4-504 as two years or 18,000 miles, whichever is earlier. The presumption is four repairs of the same problem, or 30 business days out of service after the manufacturer, its agent, or a dealer was notified. Send written notice to the manufacturer or its agent while the warranty period is still open. The manufacturer has to tell the buyer that written notice is required, and the presumption is not used against a manufacturer that never received that notice and a chance to cure.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -595,7 +670,10 @@
     "registrationFeeRange": "Based on vehicle age, typically $100-$300 for newer vehicles",
     "registrationNotes": "Montana does not charge a sales tax on vehicle purchases, making it popular for out-of-state registrations. Registration fees are based on the vehicle's age, with newer vehicles paying more. A county option tax may also apply.",
     "titleFee": "$12",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "Mont. Code Ann. §§ 61-4-501, 61-4-504",
+    "lemonLawUrl": "https://mca.legmt.gov/bills/mca/title_0610/chapter_0040/part_0050/section_0040/0610-0040-0050-0040.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Nebraska",
@@ -608,7 +686,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1305,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Nebraska's Lemon Law covers new vehicles within the manufacturer's express warranty period. After four repair attempts or 40 days out of service, the consumer may be entitled to a refund or replacement.",
+    "lemonLawSummary": "Neb. Rev. Stat. § 60-2704 times the presumption to the express warranty or to one year after delivery, and the earlier of those two dates ends it. The statute does not set a mileage limit. The car meets the test after four repairs of the same problem or after 40 days out of service. That test is available only once the manufacturer has notice by certified mail and a chance to cure.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -618,7 +696,10 @@
     "registrationFeeRange": "$15 plus motor vehicle tax",
     "registrationNotes": "Nebraska charges a $15 registration fee plus a motor vehicle tax based on the vehicle's value and age. The tax decreases as the vehicle ages. Title fee is $10.",
     "titleFee": "$10",
-    "plateFee": "$3.30"
+    "plateFee": "$3.30",
+    "lemonLawCitation": "Neb. Rev. Stat. § 60-2704",
+    "lemonLawUrl": "https://nebraskalegislature.gov/laws/statutes.php?statute=60-2704",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Nevada",
@@ -631,7 +712,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
     "averageInsuranceCost": 1860,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Nevada's Lemon Law covers new vehicles within the first year or 12,000 miles. After four repair attempts or 30 calendar days out of service, the consumer can demand a replacement or refund.",
+    "lemonLawSummary": "Nevada asks the buyer to report the problem in writing under NRS 597.610 before the express warranty ends or one year after delivery to the original buyer, whichever is earlier. NRS 597.630 then presumes enough attempts after four repairs of the same problem or 30 calendar days out of service. The 30-day count can run longer when the needed repair is delayed for reasons outside the manufacturer's or dealer's control.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in Clark County (Las Vegas) and Washoe County (Reno) for vehicles of certain ages. Testing uses OBD-II for newer vehicles and costs approximately $21.",
     "hasSafetyInspection": false,
@@ -641,7 +722,10 @@
     "registrationFeeRange": "$33 plus governmental services tax",
     "registrationNotes": "Nevada charges a $33 registration fee plus a governmental services tax based on the vehicle's depreciated MSRP. Registration is annual. The state does not have a state income tax.",
     "titleFee": "$28.25",
-    "plateFee": "$8"
+    "plateFee": "$8",
+    "lemonLawCitation": "NRS 597.630",
+    "lemonLawUrl": "https://www.leg.state.nv.us/NRS/NRS-597.html#NRS597Sec630",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "New Hampshire",
@@ -654,7 +738,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage. Note: Insurance is not mandatory in New Hampshire, but these minimums apply if you carry coverage.",
     "averageInsuranceCost": 1014,
     "hasLemonLaw": true,
-    "lemonLawSummary": "New Hampshire's Lemon Law covers new vehicles within the warranty period. After three repair attempts or 30 business days out of service, the consumer can request arbitration.",
+    "lemonLawSummary": "New Hampshire's presumption in RSA 357-D:3, VII is measured during the express warranty. Three repairs of the same problem, or 30 business days out of service, meets the presumption, counting a business day as a day those dealers normally keep a service department open. Repair attempts should be on written repair orders, generally at the same dealer, and a car the owner can use for a major part of the day is not out of service. After the third repair or after those 30 business days, RSA 357-D:4 requires written notice to the manufacturer, which then gets one final chance to repair.",
     "hasEmissions": true,
     "emissionsDetails": "New Hampshire requires annual OBD-II emissions testing as part of the annual safety inspection for vehicles 2 or more model years old. Diesel vehicles are exempt.",
     "hasSafetyInspection": true,
@@ -664,7 +748,10 @@
     "registrationFeeRange": "$31.20 - $43.20 based on weight",
     "registrationNotes": "New Hampshire registration fees are based on vehicle weight. A municipal permit fee based on vehicle value is also assessed by the town or city. No sales tax on vehicle purchases.",
     "titleFee": "$25",
-    "plateFee": "$4"
+    "plateFee": "$4",
+    "lemonLawCitation": "RSA 357-D:3, VII",
+    "lemonLawUrl": "https://gc.nh.gov/rsa/html/XXXI/357-D/357-D-mrg.htm",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "New Jersey",
@@ -677,7 +764,7 @@
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $5,000 property damage / $15,000 PIP",
     "averageInsuranceCost": 1592,
     "hasLemonLaw": true,
-    "lemonLawSummary": "New Jersey's Lemon Law covers new vehicles within 2 years or 24,000 miles. After three repair attempts or 20 days out of service, the consumer can seek a refund or replacement. The state also covers leased vehicles.",
+    "lemonLawSummary": "New Jersey's lemon law, N.J.S.A. 56:12-33, uses the first 24,000 miles or two years, and a motorhome uses 45 calendar days out of service where a passenger car uses 20. Three repairs of substantially the same problem, that days-out total, or one exam of a problem likely to cause death or serious injury, is the presumption. It applies only after the manufacturer received certified-mail notice, return receipt requested, and had one chance to repair within 10 calendar days. That letter may go out after two repairs, after the car has been out 20 calendar days (45 for a motorhome), or after one exam of a serious safety problem.",
     "hasEmissions": true,
     "emissionsDetails": "New Jersey requires biennial emissions inspections for most vehicles 5+ model years old. Testing is performed at state Motor Vehicle Commission inspection stations at no charge.",
     "hasSafetyInspection": false,
@@ -687,7 +774,10 @@
     "registrationFeeRange": "$46.50 - $84 based on weight",
     "registrationNotes": "New Jersey charges annual registration fees based on vehicle weight. A 6.625% sales tax applies to vehicle purchases (EVs are exempt). Title fee is $60.",
     "titleFee": "$60",
-    "plateFee": "$6"
+    "plateFee": "$6",
+    "lemonLawCitation": "N.J.S.A. 56:12-33",
+    "lemonLawUrl": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1/54204/54855",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "New Mexico",
@@ -700,7 +790,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
     "averageInsuranceCost": 1275,
     "hasLemonLaw": true,
-    "lemonLawSummary": "New Mexico's Lemon Law covers new vehicles within the warranty period or 1 year. After four repair attempts or 30 business days out of service, the consumer can seek a replacement or refund.",
+    "lemonLawSummary": "NMSA 1978 § 57-16A-3(C) covers a new vehicle for the express warranty or for the year after delivery, and the presumption follows the date that arrives first. Miles are not a separate cutoff. Four repairs that leave the same problem uncorrected, or 30 business days the car sits with the manufacturer, an agent, or a dealer, meets the test, not counting routine maintenance. Direct written notice and a chance to cure have to come first, and the manufacturer must say so in the warranty or in a separate notice.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in Bernalillo County (Albuquerque) for most vehicles 2+ model years old. Biennial OBD-II testing is performed at authorized stations.",
     "hasSafetyInspection": false,
@@ -710,7 +800,10 @@
     "registrationFeeRange": "$27 - $62 based on vehicle age",
     "registrationNotes": "New Mexico registration fees are based on vehicle year. Newer vehicles (0-2 years) pay $62, with fees decreasing to $27 for vehicles 7+ years old. Registration is annual.",
     "titleFee": "$5",
-    "plateFee": "$7 - $14"
+    "plateFee": "$7 - $14",
+    "lemonLawCitation": "NMSA 1978, § 57-16A-3(C)",
+    "lemonLawUrl": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "New York",
@@ -723,7 +816,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage / $50,000 PIP (no-fault) required",
     "averageInsuranceCost": 2321,
     "hasLemonLaw": true,
-    "lemonLawSummary": "New York's Lemon Law covers new vehicles within 2 years or 18,000 miles. After four repair attempts or 30 days out of service, the consumer can seek a refund or replacement. New York also has a strong Used Car Lemon Law covering recent-model used vehicles.",
+    "lemonLawSummary": "New York's general presumption in General Business Law § 198-a(d) covers the first 18,000 miles or two years. Four repairs of the same problem, or 30 calendar days out of service, is the test for a car. During that period, report the problem to the manufacturer, its agent, or an authorized dealer, and the agent or dealer has seven days to forward written notice by certified mail. Motor homes in the same section follow a different path: certified-mail notice after two repairs or 21 days out of service, and the owner may proceed after three repairs or 30 days out, if the manufacturer gave prior written notice of that requirement.",
     "hasEmissions": true,
     "emissionsDetails": "Annual emissions testing is required statewide as part of the annual safety inspection for most vehicles 2+ model years old. OBD-II testing is used for 1996+ model year vehicles.",
     "hasSafetyInspection": true,
@@ -733,7 +826,10 @@
     "registrationFeeRange": "$26 - $140 based on weight",
     "registrationNotes": "New York registration fees are based on vehicle weight, ranging from $26 to $140 for a biennial period. NYC residents also pay a supplemental registration fee. Sales tax varies by county.",
     "titleFee": "$50",
-    "plateFee": "$25"
+    "plateFee": "$25",
+    "lemonLawCitation": "N.Y. General Business Law § 198-a(d)",
+    "lemonLawUrl": "https://www.nysenate.gov/legislation/laws/GBS/198-A",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "North Carolina",
@@ -746,7 +842,7 @@
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1220,
     "hasLemonLaw": true,
-    "lemonLawSummary": "North Carolina's Lemon Law covers new vehicles within 24 months or 24,000 miles. After four repair attempts or 20 cumulative business days out of service, the consumer can seek a replacement or refund.",
+    "lemonLawSummary": "North Carolina allows a refund or replacement under N.C.G.S. § 20-351.3 for a defect that substantially impairs value and showed up no later than 24 months or 24,000 miles after delivery. The presumption in § 20-351.5 is four repairs of the same problem that still exists, or 20 business days out of service during any 12-month period of the warranty. Express warranties have to last at least one year or 12,000 miles, and the repair duty runs for one year or the express-warranty term, whichever is longer. Notify the manufacturer directly in writing and allow up to 15 calendar days to correct the problem, unless it never disclosed that written notice was required; § 20-351.7 also requires a separate 10-day written notice before you sue.",
     "hasEmissions": true,
     "emissionsDetails": "Annual emissions and safety inspections are required in 47 of 100 counties for vehicles 3-20 model years old. OBD-II testing is used and costs approximately $30.",
     "hasSafetyInspection": true,
@@ -756,7 +852,10 @@
     "registrationFeeRange": "$38.75 for most passenger vehicles",
     "registrationNotes": "North Carolina charges a $38.75 annual registration fee for most vehicles. A 3% highway use tax (capped at $250) applies to vehicle purchases. Title fee is $56.",
     "titleFee": "$56",
-    "plateFee": "$38.75"
+    "plateFee": "$38.75",
+    "lemonLawCitation": "N.C.G.S. § 20-351.5",
+    "lemonLawUrl": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_20/Article_15A.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "North Dakota",
@@ -769,7 +868,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1148,
     "hasLemonLaw": true,
-    "lemonLawSummary": "North Dakota's Lemon Law covers new vehicles within the express warranty period or 1 year. After three repair attempts or 30 business days out of service, the consumer can seek a replacement or refund.",
+    "lemonLawSummary": "N.D.C.C. § 51-07-19 measures repairs during the express warranty or during the year after delivery, and the shorter of those two periods is the one that counts. There is no mileage cap on that presumption. More than three repairs of the same problem, which means a fourth visit while the trouble is still present, or 30 business days out of service, is the presumption. It does not run against the manufacturer until the manufacturer has had direct notice and a chance to cure.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -779,7 +878,10 @@
     "registrationFeeRange": "$49 - $274 based on weight and year",
     "registrationNotes": "North Dakota registration fees are based on vehicle weight and model year. Fees decrease as the vehicle ages. Annual renewal is required.",
     "titleFee": "$5",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "N.D.C.C. § 51-07-19",
+    "lemonLawUrl": "https://ndlegis.gov/cencode/t51c07.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Ohio",
@@ -792,7 +894,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1083,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Ohio's Lemon Law covers new vehicles within 1 year or 18,000 miles. After three repair attempts or 30 days out of service, the consumer can request arbitration for a refund or replacement.",
+    "lemonLawSummary": "Ohio's lemon law, Ohio Rev. Code § 1345.73, uses the first year or 18,000 miles, whichever is earlier, the same window § 1345.72 uses for reporting a repair. Three repairs of substantially the same problem, 30 calendar days out of service, eight attempts to repair any problems, or one attempt at a problem likely to cause death or serious bodily injury, is enough if the problem continues or comes back. Report the nonconformity to the manufacturer, its agent, or its authorized dealer during that year or 18,000 miles.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing (E-Check) is required in select urban counties including parts of greater Cleveland and greater Akron for vehicles 4-25 model years old. Testing is free at designated stations.",
     "hasSafetyInspection": false,
@@ -802,7 +904,10 @@
     "registrationFeeRange": "$31 - $55 for most vehicles",
     "registrationNotes": "Ohio charges a base registration fee of $31 plus a highway use tax and county-specific permissive taxes that vary. Electric vehicles pay an additional $200 annual fee. Title fee is $15.",
     "titleFee": "$15",
-    "plateFee": "$7.50"
+    "plateFee": "$7.50",
+    "lemonLawCitation": "Ohio Rev. Code § 1345.73",
+    "lemonLawUrl": "https://codes.ohio.gov/ohio-revised-code/section-1345.73",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Oklahoma",
@@ -815,7 +920,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1577,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Oklahoma's Lemon Law covers new vehicles within the first year or 12,000 miles. After four repair attempts or 45 days out of service, the consumer can seek a replacement or refund through arbitration.",
+    "lemonLawSummary": "15 O.S. § 901(D) places Oklahoma's presumption inside the express warranty or the year after delivery, and the period that ends first is the one that applies. Mileage is not part of that cutoff. The same problem repaired four times, or 30 business days in the shop, creates the presumption. Put the report in writing to the manufacturer during the warranty or that year; without that notice and a chance to cure, the presumption does not apply.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -825,7 +930,10 @@
     "registrationFeeRange": "$16 - $96 based on age and value",
     "registrationNotes": "Oklahoma charges a registration fee based on the vehicle's age and original factory price. An excise tax of 1.25% of the purchase price or NADA book value applies for first-time registrations.",
     "titleFee": "$11",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "15 O.S. § 901(D)",
+    "lemonLawUrl": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=66311",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Oregon",
@@ -838,7 +946,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
     "averageInsuranceCost": 1302,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Oregon's Lemon Law covers new vehicles within the warranty period or 1 year. After four repair attempts or 30 business days out of service, the consumer can seek a replacement or refund.",
+    "lemonLawSummary": "Oregon's lemon law, ORS 646A.406, uses two years after delivery or 24,000 miles, whichever ends first. The presumption is three repairs plus a chance to cure, 30 calendar days out of service (60 for a motor home), or one repair plus a final attempt on a problem likely to cause death or serious injury, if the problem continues. Before the presumption is used, the manufacturer needs a direct letter about the defect and a chance to correct it.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in the Portland metro area and Rogue Valley for vehicles 1975 and newer. DEQ testing is performed every two years and costs $21-$25.",
     "hasSafetyInspection": false,
@@ -848,7 +956,10 @@
     "registrationFeeRange": "$122 - $306 for most vehicles",
     "registrationNotes": "Oregon charges registration fees based on vehicle fuel type and MPG rating. Standard vehicles pay $122 for 2 years. Electric vehicles pay $306 for 2 years. No sales tax applies.",
     "titleFee": "$98.50",
-    "plateFee": "$26.50"
+    "plateFee": "$26.50",
+    "lemonLawCitation": "ORS 646A.406",
+    "lemonLawUrl": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Pennsylvania",
@@ -861,7 +972,7 @@
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $5,000 property damage",
     "averageInsuranceCost": 1419,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Pennsylvania's Lemon Law covers new vehicles within the first year, warranty period, or 12,000 miles, whichever comes first. After three repair attempts or 30 days out of service, the consumer can invoke the law.",
+    "lemonLawSummary": "Pennsylvania's Automobile Lemon Law, the Act of March 28, 1984, P.L. 150, No. 28, covers a car for one year, 12,000 miles, or the warranty, whichever comes first. A motorcycle uses one year or the warranty, and the statute does not add a mileage cap for motorcycles. Three repairs of the same problem, or 30 calendar days out of service, is the presumption in section 6. When the car comes back to the same dealer a second time for the same problem, section 7 says the dealer notifies the manufacturer by certified mail within seven days.",
     "hasEmissions": true,
     "emissionsDetails": "Annual emissions testing is required in 25 counties, including the Pittsburgh and Philadelphia metro areas. Testing follows OBD-II protocols for 1996+ model year vehicles. Cost is typically $34-$38.",
     "hasSafetyInspection": true,
@@ -871,7 +982,10 @@
     "registrationFeeRange": "$38 for most passenger vehicles",
     "registrationNotes": "Pennsylvania charges a flat $38 annual registration fee for most passenger vehicles. A 6% sales tax applies to vehicle purchases. Title fee is $55.",
     "titleFee": "$55",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "Automobile Lemon Law, Act of Mar. 28, 1984, P.L. 150, No. 28, § 6",
+    "lemonLawUrl": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/1984/0/0028..HTM",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Rhode Island",
@@ -884,7 +998,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1537,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Rhode Island's Lemon Law covers new vehicles within 1 year or 15,000 miles. After four repair attempts or 30 days out of service, the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "Rhode Island's term of protection in R.I. Gen. Laws § 31-5.2-1 is one year or 15,000 miles, and the presumption is in § 31-5.2-5. Four repairs of the same problem, or 30 calendar days out of service, during that term is the test, and the manufacturer also gets one more cure of not more than seven calendar days. Report the nonconformity during the term of protection. The extra seven days starts when the manufacturer first knows the four-repair or 30-day limit has been met.",
     "hasEmissions": true,
     "emissionsDetails": "Rhode Island requires biennial emissions inspections for all vehicles 2 or more model years old. OBD-II testing is used for 1996+ model year vehicles. Testing is performed at private stations.",
     "hasSafetyInspection": true,
@@ -894,7 +1008,10 @@
     "registrationFeeRange": "$30 biennial for most vehicles",
     "registrationNotes": "Rhode Island charges a biennial registration fee of $30 for most vehicles. A 7% sales tax applies to vehicle purchases. Title fee is $52.50.",
     "titleFee": "$52.50",
-    "plateFee": "$6"
+    "plateFee": "$6",
+    "lemonLawCitation": "R.I. Gen. Laws § 31-5.2-5; term of protection defined in § 31-5.2-1",
+    "lemonLawUrl": "https://webserver.rilegislature.gov/Statutes/TITLE31/31-5.2/31-5.2-5.htm",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "South Carolina",
@@ -907,7 +1024,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1579,
     "hasLemonLaw": true,
-    "lemonLawSummary": "South Carolina's Lemon Law covers new vehicles within the warranty period or 1 year. After three repair attempts or 30 days out of service, the consumer can request arbitration for a refund or replacement.",
+    "lemonLawSummary": "South Carolina, in S.C. Code §§ 56-28-30 and 56-28-40, asks for a report within the first 12 months or 12,000 miles, while the presumption counts repairs and days during the express warranty. The presumption is met by three repairs aimed at the same problem, or by 30 calendar days the car spends out of service. If the manufacturer clearly said at the sale that written notice is required, send that notice so it can make a final repair. It then has ten business days to name a franchised shop and ten business days after delivery to attempt the repair.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -917,7 +1034,10 @@
     "registrationFeeRange": "$40 biennial for most vehicles",
     "registrationNotes": "South Carolina charges a $40 biennial registration fee for most vehicles. A 5% infrastructure maintenance fee (IMF) applies in lieu of sales tax, capped at $500. Personal property tax is also assessed.",
     "titleFee": "$15",
-    "plateFee": "$8"
+    "plateFee": "$8",
+    "lemonLawCitation": "S.C. Code Ann. § 56-28-40; repair term in § 56-28-30",
+    "lemonLawUrl": "https://www.scstatehouse.gov/code/t56c028.php",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "South Dakota",
@@ -930,7 +1050,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1192,
     "hasLemonLaw": true,
-    "lemonLawSummary": "South Dakota's Lemon Law covers new vehicles within the warranty period. After four repair attempts or 30 days out of service, the consumer can seek a replacement or refund through arbitration.",
+    "lemonLawSummary": "South Dakota's rights period in SDCL 32-6D-1 and 32-6D-5 is one year or 12,000 miles, and the problem has to start during that period. Repairs that count toward the presumption can run out to 24 months or 24,000 miles, so long as one attempt happened during the rights period. The test is four repairs plus a final attempt by the manufacturer, or 30 calendar days out of service with that final attempt included. Before a lawsuit, mail a certified demand to correct the problem; once the presumption is already met, the manufacturer has seven calendar days to designate a facility and 14 calendar days after the car arrives to finish the repair.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -940,7 +1060,10 @@
     "registrationFeeRange": "$36 - $144 based on weight and age",
     "registrationNotes": "South Dakota charges registration fees based on vehicle weight and age. A 4% excise tax applies to all vehicle purchases. No annual personal property tax on vehicles.",
     "titleFee": "$10",
-    "plateFee": "$4 - $6"
+    "plateFee": "$4 - $6",
+    "lemonLawCitation": "SDCL 32-6D-5; lemon law rights period defined in SDCL 32-6D-1",
+    "lemonLawUrl": "https://sdlegislature.gov/Statutes/32-6D-5",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Tennessee",
@@ -953,7 +1076,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
     "averageInsuranceCost": 1370,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Tennessee's Motor Vehicle Warranty Enforcement Act covers new vehicles within the warranty period. After four repair attempts or 30 days out of service, the consumer can seek a replacement or refund.",
+    "lemonLawSummary": "Tenn. Code Ann. §§ 55-24-101(7) and 55-24-105 call the coverage a term of protection. It lasts for the express warranty or for one year after delivery, whichever finishes first, and miles do not shorten it. Inside that term, three repairs of the same problem or 30 calendar days out of service is the presumption. Send certified mail before you go further, and if the presumption is already met the manufacturer gets one more chance of not more than ten days.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in Davidson, Hamilton, Rutherford, Sumner, Williamson, and Wilson counties for vehicles 3-25 model years old. Annual OBD-II testing costs $9.",
     "hasSafetyInspection": false,
@@ -963,7 +1086,10 @@
     "registrationFeeRange": "$26.50 for most vehicles",
     "registrationNotes": "Tennessee charges a flat $26.50 annual registration fee for most passenger vehicles. A state and local sales tax (typically 7-9.75%) applies to vehicle purchases. Title fee is $11.",
     "titleFee": "$11",
-    "plateFee": "$1"
+    "plateFee": "$1",
+    "lemonLawCitation": "Tenn. Code Ann. §§ 55-24-101(7), 55-24-105",
+    "lemonLawUrl": "https://www.tn.gov/attorneygeneral/working-for-tennessee/consumer/resources/laws.html",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Texas",
@@ -976,7 +1102,7 @@
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1823,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Texas's Lemon Law covers new vehicles within the warranty period or 24 months. After four repair attempts, two attempts for a serious safety defect, or 30 days out of service, the consumer can file a complaint with the Texas Department of Motor Vehicles.",
+    "lemonLawSummary": "Texas requires the repair attempts in Tex. Occ. Code § 2301.605 before the express warranty expires or before 24 months or 24,000 miles, whichever comes first. The presumption is four repairs of the same problem, two repairs of a serious safety hazard, or 30 days out of service. Time when the manufacturer lends a comparable car while a franchised dealer works on the owner's car does not count. A refund or replacement order under § 2301.606(c) requires written notice of the defect and a chance for the manufacturer, converter, or distributor to cure.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required as part of the annual safety inspection in 17 urban counties including Dallas-Fort Worth, Houston, Austin, San Antonio, and El Paso. Cost is approximately $11.50 for the emissions portion.",
     "hasSafetyInspection": true,
@@ -986,7 +1112,10 @@
     "registrationFeeRange": "$50.75 for most passenger vehicles",
     "registrationNotes": "Texas charges a base registration fee of $50.75 for most passenger vehicles. A 6.25% motor vehicle sales tax applies to purchases. Title fee is $33.",
     "titleFee": "$33",
-    "plateFee": "Included in registration"
+    "plateFee": "Included in registration",
+    "lemonLawCitation": "Tex. Occ. Code § 2301.605",
+    "lemonLawUrl": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.2301.htm",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Utah",
@@ -999,7 +1128,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $65,000 bodily injury per accident / $15,000 property damage / $3,000 PIP",
     "averageInsuranceCost": 1375,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Utah's New Motor Vehicle Warranties Act covers new vehicles within the warranty period. After four repair attempts or 30 business days out of service, the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "Utah Code § 13-20-5 starts from the express warranty and from the first anniversary of delivery, and it uses whichever of those dates arrives sooner. The section does not limit the presumption by miles. A reasonable number of attempts is four tries at the same problem, or 30 business days the car is out for repair. Section 13-20-3 is the report rule: tell the manufacturer, its agent, or its authorized dealer during the warranty or during that same year.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in Salt Lake, Davis, Utah, Weber, and Cache counties. Testing frequency varies by county and vehicle age (annual or biennial). OBD-II testing costs approximately $30.",
     "hasSafetyInspection": true,
@@ -1009,7 +1138,10 @@
     "registrationFeeRange": "$44 - $69 based on vehicle age",
     "registrationNotes": "Utah charges registration fees based on vehicle age. Newer vehicles pay $69, with fees decreasing to $44 for vehicles 12+ years old. A uniform fee of $150 applies to all new vehicle registrations.",
     "titleFee": "$6",
-    "plateFee": "$6"
+    "plateFee": "$6",
+    "lemonLawCitation": "Utah Code § 13-20-5",
+    "lemonLawUrl": "https://le.utah.gov/xcode/Title13/Chapter20/C13-20_1800010118000101.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Vermont",
@@ -1022,7 +1154,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
     "averageInsuranceCost": 1031,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Vermont's Lemon Law covers new vehicles within the warranty period or 2 years. After three repair attempts or 30 days out of service, the consumer can seek a refund or replacement through arbitration.",
+    "lemonLawSummary": "Vermont's presumption in 9 V.S.A. § 4172(g) is tied to the express warranty, and at least the first repair attempt has to happen while that warranty is still in effect. Three repairs of the same problem, documented on written repair orders and generally at the same dealer, or 30 calendar days out of service, is the test. A car the owner can still drive for most of the day is not treated as out of service. After a reasonable repair attempt or after those 30 days, § 4173 says notify the manufacturer in writing and then choose arbitration; the manufacturer gets one final repair chance during the arbitration.",
     "hasEmissions": true,
     "emissionsDetails": "Annual OBD-II emissions testing is required as part of the annual safety inspection for vehicles 2+ model years old. Vermont follows California's vehicle emission standards (CARB).",
     "hasSafetyInspection": true,
@@ -1032,7 +1164,10 @@
     "registrationFeeRange": "$76 for most passenger vehicles",
     "registrationNotes": "Vermont charges an annual registration fee of $76 for most vehicles. A 6% purchase and use tax applies to vehicle purchases. Title fee is $35.",
     "titleFee": "$35",
-    "plateFee": "Included in registration"
+    "plateFee": "Included in registration",
+    "lemonLawCitation": "9 V.S.A. § 4172(g)",
+    "lemonLawUrl": "https://legislature.vermont.gov/statutes/fullchapter/09/115",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Virginia",
@@ -1045,7 +1180,7 @@
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $20,000 property damage",
     "averageInsuranceCost": 1336,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Virginia's Lemon Law covers new vehicles within 18 months of purchase. After three repair attempts or 30 days out of service, the consumer can invoke the Virginia Motor Vehicle Warranty Enforcement Act.",
+    "lemonLawSummary": "Virginia's lemon-law rights period in Va. Code §§ 59.1-207.11 and 59.1-207.13(B) is 18 months after delivery, with no mileage cap, and it can run longer if the manufacturer was notified and the problem is still unrepaired at the end. The presumption is three repairs of the same problem, one repair of a serious safety defect, or 30 calendar days out of service, unless the repairs could not be performed for reasons beyond the manufacturer's control. A serious safety defect means a life-threatening malfunction that interferes with ordinary control of the car or creates a risk of fire or explosion. Notify the manufacturer of the need for repair unless it was already notified, and if the presumption is already met the manufacturer gets up to 15 more days to correct it; the warranty or owner's manual has to disclose that written notification is required.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in Northern Virginia and certain other localities as part of the annual safety inspection. OBD-II testing is used for 1996+ model year vehicles.",
     "hasSafetyInspection": true,
@@ -1055,7 +1190,10 @@
     "registrationFeeRange": "$30.75 - $46.75 based on weight",
     "registrationNotes": "Virginia charges annual registration fees based on vehicle weight. An annual personal property tax is also assessed by the locality, with partial state relief available. Title fee is $15.",
     "titleFee": "$15",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "Va. Code § 59.1-207.13(B); lemon law rights period defined in § 59.1-207.11",
+    "lemonLawUrl": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter17.3/",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Washington",
@@ -1068,7 +1206,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
     "averageInsuranceCost": 1394,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Washington's Lemon Law covers new vehicles within 24 months or 24,000 miles. After four repair attempts, two for a condition likely to cause death or serious injury, or 30 days out of service, the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "Washington sets eligibility in RCW 19.118.021(6) at two years or 24,000 miles, and the written warranty used for the presumption in RCW 19.118.041(2) is at least one year or 12,000 miles. For a car that is not a motor home, the presumption is two repairs of the same serious safety defect, two or more different serious safety defects each repaired at least once within a 12-month period, four repairs of the same problem, or 30 calendar days out of service with at least 15 of those days during the written warranty. A motor home uses one serious-safety repair plus a final attempt, three repairs plus a final attempt, or 60 days out of service. Make a written request to the manufacturer before a replacement or repurchase; a motor-home owner sends written notice so the manufacturers can make one last coordinated attempt after one serious-safety repair, three attempts, or 30 days out.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required in parts of Clark, King, Pierce, Snohomish, and Spokane counties for vehicles 5-25 model years old. Biennial OBD-II testing costs $15.",
     "hasSafetyInspection": false,
@@ -1078,7 +1216,10 @@
     "registrationFeeRange": "$30 base plus RTA tax in some areas",
     "registrationNotes": "Washington charges a $30 base registration fee. In areas with regional transit authority (Sound Transit), an additional RTA excise tax of 1.1% of vehicle value applies. EV owners pay a $225 annual fee.",
     "titleFee": "$15",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "RCW 19.118.041(2); eligibility period defined in RCW 19.118.021(6)",
+    "lemonLawUrl": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.118.041",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "West Virginia",
@@ -1091,7 +1232,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1285,
     "hasLemonLaw": true,
-    "lemonLawSummary": "West Virginia's Lemon Law covers new vehicles within the first year or warranty period. After three repair attempts or 30 days out of service, the consumer can seek a refund or replacement.",
+    "lemonLawSummary": "The presumption in W. Va. Code § 46A-6A-5 stops at the end of the express warranty or at one year after delivery, whichever date is sooner. Miles do not limit it. A different clock, the repair duty in § 46A-6A-3, runs for the longer of those two periods. Three repairs of the same problem, 30 calendar days out of service, or one unsuccessful repair of a problem likely to cause death or serious injury, meets the presumption, but only after written notice and at least one chance to cure.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": true,
@@ -1101,7 +1242,10 @@
     "registrationFeeRange": "$51.50 for most passenger vehicles",
     "registrationNotes": "West Virginia charges a $51.50 annual registration fee for most passenger vehicles. A 6% sales tax applies to vehicle purchases. Title fee is $15. Personal property tax is also assessed.",
     "titleFee": "$15",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "W. Va. Code § 46A-6A-5",
+    "lemonLawUrl": "https://code.wvlegislature.gov/46A-6A-5/",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Wisconsin",
@@ -1114,7 +1258,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
     "averageInsuranceCost": 1099,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Wisconsin's Lemon Law covers new vehicles within the warranty period or 1 year. After four repair attempts or 30 days out of service, the consumer can seek a replacement or refund through the state's dispute resolution program.",
+    "lemonLawSummary": "Wis. Stat. § 218.0171(1)(h) starts the clock at the end of the express warranty or one year after the first delivery, whichever happens sooner, and miles are not part of the test. Four repairs of the same problem, or 30 days out of service because of warranty problems, is a reasonable attempt to repair, and time lost to a flood, other natural disaster, war, invasion, fire, or strike does not count. A car the owner is still driving counts as out of service only when a problem substantially affects use or safety and has already had at least two repair attempts. After a reasonable attempt fails, give the manufacturer the form described in the statute before it has to refund or replace the car.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -1124,7 +1268,10 @@
     "registrationFeeRange": "$85 for most passenger vehicles",
     "registrationNotes": "Wisconsin charges an $85 annual registration fee for most passenger vehicles. A 5% sales tax applies to vehicle purchases, plus a 0.5% county tax. Title fee is $164.50.",
     "titleFee": "$164.50",
-    "plateFee": "$2"
+    "plateFee": "$2",
+    "lemonLawCitation": "Wis. Stat. § 218.0171(1)(h)",
+    "lemonLawUrl": "https://docs.legis.wisconsin.gov/statutes/statutes/218/i/0171",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Wyoming",
@@ -1137,7 +1284,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
     "averageInsuranceCost": 1105,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Wyoming's Lemon Law covers new vehicles within the warranty period or 1 year. After three repair attempts or 30 days out of service, the consumer can seek a replacement or refund.",
+    "lemonLawSummary": "Wyoming's lemon law, Wyo. Stat. Ann. § 40-17-101, places the repair duty and the presumption within one year after delivery. More than three repairs of the same problem, or 30 business days out of service, is the presumption. During that year, tell the manufacturer, its agent, or the dealer authorized to do the repair. The refund or replacement remedy is withheld if the owner has not finished a manufacturer's informal dispute program that meets federal rules.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": false,
@@ -1147,7 +1294,10 @@
     "registrationFeeRange": "Based on value, typically $30 - $90",
     "registrationNotes": "Wyoming charges registration fees based on the vehicle's fair market value and county mills. A 5% use tax applies to vehicle purchases. No state income tax.",
     "titleFee": "$15",
-    "plateFee": "$5"
+    "plateFee": "$5",
+    "lemonLawCitation": "Wyo. Stat. Ann. § 40-17-101(d)",
+    "lemonLawUrl": "https://wyoleg.gov/statutes/compress/title40.pdf",
+    "lemonLawVerified": "2026-10-22"
   },
   {
     "name": "Washington DC",
@@ -1160,7 +1310,7 @@
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
     "averageInsuranceCost": 1876,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Washington DC's Lemon Law covers new vehicles with substantial defects within 2 years or 18,000 miles. After four repair attempts or 30 cumulative days out of service, the consumer can demand a refund or replacement from the manufacturer.",
+    "lemonLawSummary": "D.C. Code § 50-502(d) uses the first 18,000 miles or two years after delivery to the original purchaser. Four repairs of a non-safety problem, one repair of a safety-related problem, or 30 days out of service, is the presumption, and those 30 days can be extended for a war, invasion, strike, fire, flood, or similar disaster. While that window is open, tell the manufacturer, an agent, or an authorized dealer, and if the agent or dealer is the one who receives it, that person has seven days to forward certified mail to the manufacturer. A lawsuit waits until the claim has been submitted to the Board of Consumer Claims Arbitration under § 50-503.",
     "hasEmissions": true,
     "emissionsDetails": "DC requires biennial emissions inspections for most vehicles 4 or more model years old. OBD-II testing is performed at DC DMV inspection stations. Electric and hybrid vehicles may be exempt from testing.",
     "hasSafetyInspection": true,
@@ -1170,6 +1320,9 @@
     "registrationFeeRange": "$72 - $155 based on weight",
     "registrationNotes": "DC charges registration fees based on vehicle weight, ranging from $72 to $155 for most passenger vehicles. A 6% excise tax applies to vehicle purchases. Parking permits are required for on-street parking in most neighborhoods.",
     "titleFee": "$26",
-    "plateFee": "$10"
+    "plateFee": "$10",
+    "lemonLawCitation": "D.C. Code § 50-502(d)",
+    "lemonLawUrl": "https://code.dccouncil.gov/us/dc/council/code/sections/50-502",
+    "lemonLawVerified": "2026-10-22"
   }
 ]

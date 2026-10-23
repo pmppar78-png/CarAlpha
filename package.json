@@ -1,7 +1,7 @@
 {
   "name": "caralpha",
   "version": "1.0.0",
-  "description": "Car Alpha — Vehicle Intelligence Platform. Free VIN decoder, recall checker, and AI-powered vehicle intelligence.",
+  "description": "Car Alpha — Vehicle Intelligence Platform. Free VIN decoder, recall checker, and written ownership guides.",
   "private": true,
   "scripts": {
     "build": "npx @11ty/eleventy",

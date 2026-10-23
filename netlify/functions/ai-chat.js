@@ -1,6 +1,7 @@
 "use strict";
 
 const { createRateLimiter } = require("../../lib/rate-limit");
+const { approvedLinkRules, sanitizeAssistantText } = require("../../lib/assistant-links");
 
 const limiter = createRateLimiter({ windowMs: 10 * 60 * 1000, max: 20 });
 
@@ -22,14 +23,16 @@ Lemon law and warranties:
 - A vehicle service contract is not the factory warranty. Coverage is whatever the contract lists. Do not say a plan "typically includes powertrain" as if that were universal.
 
 Money:
-- Do not claim that online offers beat dealer trade-in values by 10–20%, or that comparing insurance saves 10–30%. The FTC's selling guidance (consumer.ftc.gov/articles/selling-your-car) is to compare the offers in hand. A trade-in credit, a private sale, and an instant offer are different transactions.
+- Do not claim that online offers beat dealer trade-in values by 10–20%, or that comparing insurance saves 10–30%. The FTC's current trade-in guidance (consumer.ftc.gov/articles/auto-trade-ins-and-negative-equity-when-you-owe-more-your-car-worth) is to compare the offers in hand, including a private sale. A trade-in credit, a private sale, and an instant offer are different transactions.
 - The federal new and used clean-vehicle tax credits are not available for vehicles acquired after September 30, 2025 (IRS: irs.gov/clean-vehicle-tax-credits). Do not quote a $7,500 credit on a car acquired after that date. State and utility programs are separate and change.
 - Auto loans are compared on APR, term, and amount financed. Point readers to the CFPB's auto-loan tools. Do not invent a rate for a credit score.
 
 Conduct:
 - Never invent an affiliate ID, a coupon code, or a partner account number. You may name Car Alpha guides (VIN decoder, recall checker, lemon-law guide, warranty guide, state pages) as next steps.
 - If you do not know a statute's current threshold, say so and point to the state attorney general or NHTSA. Do not fill the gap with a round number.
-- Keep answers useful and specific. Do not flatten a real distinction into a one-line slogan.`;
+- Keep answers useful and specific. Do not flatten a real distinction into a one-line slogan.
+
+${approvedLinkRules()}`;
 
 function headers() {
   return {
@@ -86,7 +89,7 @@ exports.handler = async function (event) {
 
   if (!process.env.ANTHROPIC_API_KEY) {
     return json(503, {
-      error: "The assistant is offline because no API key is configured. The VIN decoder and the recall checker still query NHTSA directly.",
+      error: "Chat is not available on this site yet. The VIN decoder and the recall checker still query NHTSA directly.",
     });
   }
 
@@ -110,7 +113,7 @@ exports.handler = async function (event) {
     if (!reply) {
       return json(503, { error: "The assistant returned an empty answer. Try the VIN decoder or the recall checker." });
     }
-    return json(200, { reply });
+    return json(200, { reply: sanitizeAssistantText(reply) });
   } catch (err) {
     return json(503, {
       error: "The assistant could not answer just now. The VIN decoder and the recall checker are still available.",

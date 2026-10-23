@@ -135,12 +135,16 @@ ogType: "article"
 
       {# ── Bottom CTA ── #}
       <div class="mt-12 glass-card metallic-border rounded-2xl p-8 carbon-panel text-center">
-        <h3 class="text-xl font-bold text-white mb-3">Need Personalized Guidance?</h3>
-        <p class="text-silver-400 mb-6 max-w-lg mx-auto">Ask Car Alpha AI about your specific vehicle. Get tailored advice on insurance, warranty, repairs, and more.</p>
-        <button onclick="document.getElementById('aiOverlay').classList.add('active')" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
-          Ask Car Alpha AI
-        </button>
+        <h3 class="text-xl font-bold text-white mb-3">Need the next step for this vehicle?</h3>
+        <p class="text-silver-400 mb-6 max-w-lg mx-auto">Decode the VIN, check open recalls, and read the lemon-law, insurance, and warranty guides. Each of those pages names its source.</p>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <a href="/vin-decoder/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn-primary text-white font-bold text-sm">VIN decoder</a>
+          <a href="/recall-checker/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn-ghost text-volt-400 font-bold text-sm">Recall checker</a>
+          <a href="/guides/lemon-law/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn-ghost text-volt-400 font-bold text-sm">Lemon law</a>
+          <a href="/guides/insurance/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn-ghost text-volt-400 font-bold text-sm">Insurance</a>
+          <a href="/guides/warranties/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn-ghost text-volt-400 font-bold text-sm">Warranties</a>
+          <button type="button" data-open-next-steps class="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn-ghost text-silver-300 font-bold text-sm">More next steps</button>
+        </div>
       </div>
 
       {# ── Related Resources Cross-Links ── #}
