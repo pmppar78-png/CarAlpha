@@ -43,6 +43,12 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(value, null, 2);
   });
 
+  // mpgRange — "19" when both ends match, otherwise "19–24"
+  eleventyConfig.addFilter("mpgRange", function (pair) {
+    if (!Array.isArray(pair) || !pair.length) return "";
+    return pair[0] === pair[1] || pair.length === 1 ? String(pair[0]) : pair[0] + "–" + pair[1];
+  });
+
   // limit — return first N items from array
   eleventyConfig.addFilter("limit", function (arr, count) {
     if (!Array.isArray(arr)) return [];
