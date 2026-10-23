@@ -64,7 +64,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -120,7 +120,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -764,7 +764,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -820,7 +820,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -1464,7 +1464,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -1520,7 +1520,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2164,7 +2164,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -2220,7 +2220,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2864,7 +2864,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -2920,7 +2920,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -3564,7 +3564,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -3620,7 +3620,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4264,7 +4264,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -4320,7 +4320,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4964,7 +4964,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -5020,7 +5020,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -5664,7 +5664,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -5720,7 +5720,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6364,7 +6364,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -6420,7 +6420,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -7064,7 +7064,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -7120,7 +7120,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -7764,7 +7764,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -7820,7 +7820,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -8464,7 +8464,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -8520,7 +8520,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9164,7 +9164,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -9220,7 +9220,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9864,7 +9864,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -9920,7 +9920,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -10564,7 +10564,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -10620,7 +10620,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11264,7 +11264,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -11320,7 +11320,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11964,7 +11964,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -12020,7 +12020,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -12664,7 +12664,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -12720,7 +12720,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13364,7 +13364,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -13420,7 +13420,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -14064,7 +14064,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -14120,7 +14120,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -14764,7 +14764,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -14820,7 +14820,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -15464,7 +15464,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -15520,7 +15520,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16164,7 +16164,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -16220,7 +16220,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16864,7 +16864,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -16920,7 +16920,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -17564,7 +17564,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -17620,7 +17620,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18264,7 +18264,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -18320,7 +18320,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18964,7 +18964,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -19020,7 +19020,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -19664,7 +19664,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -19720,7 +19720,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20364,7 +20364,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -20420,7 +20420,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -21064,7 +21064,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -21120,7 +21120,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -21764,7 +21764,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -21820,7 +21820,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -22464,7 +22464,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -22520,7 +22520,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23164,7 +23164,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -23220,7 +23220,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23864,7 +23864,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -23920,7 +23920,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -24564,7 +24564,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -24620,7 +24620,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25264,7 +25264,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -25320,7 +25320,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25964,7 +25964,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -26020,7 +26020,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -26664,7 +26664,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -26720,7 +26720,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27364,7 +27364,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -27420,7 +27420,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -28064,7 +28064,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -28120,7 +28120,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -28764,7 +28764,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -28820,7 +28820,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -29464,7 +29464,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -29520,7 +29520,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30164,7 +30164,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -30220,7 +30220,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30864,7 +30864,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -30920,7 +30920,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -31564,7 +31564,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -31620,7 +31620,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32264,7 +32264,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -32320,7 +32320,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32964,7 +32964,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -33020,7 +33020,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -33664,7 +33664,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -33720,7 +33720,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34364,7 +34364,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -34420,7 +34420,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -35064,7 +35064,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -35120,7 +35120,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -35764,7 +35764,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -35820,7 +35820,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -36464,7 +36464,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -36520,7 +36520,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37164,7 +37164,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -37220,7 +37220,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37864,7 +37864,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -37920,7 +37920,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -38564,7 +38564,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -38620,7 +38620,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39264,7 +39264,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -39320,7 +39320,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39964,7 +39964,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -40020,7 +40020,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -40664,7 +40664,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -40720,7 +40720,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41364,7 +41364,7 @@
     "stateName": "California",
     "stateAbbreviation": "CA",
     "stateRegion": "West",
-    "insuranceMinimum": "15/30/5",
+    "insuranceMinimum": "30/60/15",
     "averageInsuranceCost": 2003,
     "hasLemonLaw": true,
     "evIncentives": true
@@ -41420,7 +41420,7 @@
     "stateName": "Florida",
     "stateAbbreviation": "FL",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "10/20/10 (PIP required)",
+    "insuranceMinimum": "$10,000 PIP / $10,000 PDL",
     "averageInsuranceCost": 2560,
     "hasLemonLaw": true,
     "evIncentives": false
