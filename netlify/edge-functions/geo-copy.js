@@ -425,3 +425,14 @@ function faqSchemaScript(faqs) {
 
 
 export { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, recordedLines, faqHtml, faqSchemaScript };
+
+// Netlify bundles every file in this directory as an edge function.
+// This module is a helper imported by vehicle-pages. The handler is not
+// routed at a public path, so it does not change production responses.
+export default async (request, context) => {
+  return context.next();
+};
+
+export const config = {
+  path: "/.netlify/geo-copy",
+};
