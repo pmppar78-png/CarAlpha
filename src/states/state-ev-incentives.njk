@@ -19,6 +19,10 @@ eleventyComputed:
 ---
 
 <div class="prose-dark">
+{% set guide = stateGuides[state.slug] %}
+{% if guide and guide.ev %}
+{% include "state-guides/" + state.slug + "/ev-incentives.html" %}
+{% else %}
 
 <h2 id="state-incentives">{{ state.name }} EV Incentives</h2>
 
@@ -26,6 +30,9 @@ eleventyComputed:
 <p>{{ state.evIncentiveDetails }}</p>
 {% else %}
 <p>No statewide EV purchase rebate or tax credit is confirmed here for {{ state.name }} in 2026. Current programs are listed by the <a href="https://afdc.energy.gov/laws/state" rel="noopener">U.S. Department of Energy Alternative Fuels Data Center</a>.</p>
+{% endif %}
+
+
 {% endif %}
 
 <h2 id="federal-incentives">Federal EV Tax Credits in 2026</h2>
