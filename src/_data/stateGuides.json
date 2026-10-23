@@ -58,5 +58,65 @@
     "insurance": true,
     "registration": true,
     "ev": true
+  },
+  "georgia": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "hawaii": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "idaho": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "illinois": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "indiana": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "iowa": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "kansas": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "kentucky": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "louisiana": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "maine": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
   }
 }
