@@ -50,7 +50,7 @@ eleventyComputed:
 <h2 id="average-costs">Average Car Insurance Costs in {{ state.name }}</h2>
 
 {% if state.averageInsuranceCost %}
-<p>The average annual car insurance premium in {{ state.name }} is approximately <strong>${{ state.averageInsuranceCost }}</strong>. However, your actual rate will vary significantly based on several factors:</p>
+<p>The average annual car insurance premium in {{ state.name }} is approximately <strong>${{ state.averageInsuranceCost }}</strong>.{% if state.averageInsuranceSource %} {{ state.averageInsuranceSource }}{% endif %} Your own rate will vary based on several factors:</p>
 {% else %}
 <p>Car insurance rates in {{ state.name }} vary significantly based on several factors:</p>
 {% endif %}

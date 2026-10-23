@@ -44,6 +44,10 @@ test("numbers and you-sound words", function () {
   assert.equal(articleFor("ugly"), "an");
   assert.equal(articleFor("one"), "a");
   assert.equal(articleFor("hour"), "an");
+  assert.equal(articleFor("unibody"), "a");
+  assert.equal(fixArticles("The Honda Ridgeline is an unibody truck"), "The Honda Ridgeline is a unibody truck");
+  assert.equal(articleFor("A4"), "an");
+  assert.equal(articleFor("Outback"), "an");
   assert.equal(fixArticles("a 8-year-old Escape"), "an 8-year-old Escape");
   assert.equal(fixArticles("a 2018 Audi"), "a 2018 Audi");
 });

@@ -4,8 +4,9 @@
 /**
  * Content checks for the strict re-audit:
  * indefinite articles, FAQ JSON-LD that matches the visible answer,
- * and ownership sentences that repeat on 10 or more geo pages after
- * make, model, year, and state name are masked.
+ * and ownership sentences that are byte-for-byte the same on 10 or more
+ * geo pages. Names are not masked: a repeated sentence is one a reader
+ * could see copied from page to page. Catalog positions are not a fix.
  */
 
 const fs = require("fs");
@@ -43,14 +44,22 @@ function maskName(sentence, name) {
   return sentence.replace(new RegExp("\\b" + escaped + "\\b", flags), "{name}");
 }
 
-function normalize(sentence, page) {
-  let s = sentence;
-  const names = [page.state, page.make, page.model].filter(Boolean)
-    .sort(function (a, b) { return b.length - a.length; });
-  for (const name of names) s = maskName(s, name);
-  if (page.year) s = s.replace(new RegExp("\\b" + page.year + "\\b", "g"), "{year}");
-  return s.toLowerCase().replace(/\s+/g, " ").trim();
+function exactKey(sentence) {
+  return String(sentence).toLowerCase().replace(/\s+/g, " ").trim();
 }
+
+const PADDING = [
+  /is the state figure, not a quote/,
+  /keyed to the delivery date/,
+  /file the years on file/,
+  /\bcatalog year\b/i,
+  /\bmodel \d+ of \d+\b/i,
+  /plate Included/,
+  /Massachusetts's/,
+  /Arkansas's/,
+  /Illinois's/,
+  /Kansas's/,
+];
 
 function firstClause(text) {
   const raw = String(text || "").replace(/\s+/g, " ").trim();
@@ -105,6 +114,7 @@ function bundle(input) {
     country: input.make.country,
     fact: factKey && input.facts ? input.facts[factKey] : undefined,
     evIncentives: input.state.evIncentives,
+    evDetail: input.state.evIncentiveDetails,
   };
 }
 
@@ -113,6 +123,7 @@ function pageText(p) {
   const parts = [geo.insuranceLead(p), geo.registrationLead(p), geo.lemonLead(p)];
   if (p.evIncentives) parts.push(geo.incentiveLine(p));
   faqs.forEach(function (faq) { parts.push(faq.q, faq.a); });
+  if (p.fact) geo.factSentences(p).forEach(function (line) { parts.push(line); });
   return parts.join("\n");
 }
 
@@ -143,16 +154,27 @@ function checkGeo() {
   const seen = new Map();
   const within = [];
   const articles = [];
+  const padding = [];
   let pages = 0;
 
-  function consider(id, p, label) {
+  function consider(id, p) {
     pages += 1;
     const text = pageText(p);
     if (articles.length < 8) articles.push.apply(articles, articleErrors(text, id));
-    const page = { make: p.make, model: p.model, year: p.year, state: p.stateName };
+    if (padding.length < 8) {
+      PADDING.forEach(function (re) {
+        if (re.test(text)) padding.push(id + " contains padding: " + re);
+      });
+      if (p.clause && p.clause.length > 40 && text.indexOf(p.clause.slice(0, 80)) !== -1) {
+        padding.push(id + " pastes the model description");
+      }
+    }
     const local = new Set();
     sentencesOf(text).forEach(function (sentence) {
-      const key = normalize(sentence, page);
+      if (!/[.?!]$/.test(sentence)) {
+        if (padding.length < 8) padding.push(id + " sentence does not end with a period: " + sentence.slice(0, 120));
+      }
+      const key = exactKey(sentence);
       if (local.has(key)) {
         if (within.length < 5) within.push(id + " repeats: " + sentence.slice(0, 180));
         return;
@@ -165,7 +187,6 @@ function checkGeo() {
       }
       row.count += 1;
     });
-    if (label) return;
   }
 
   states.forEach(function (state) {
@@ -209,7 +230,7 @@ function checkGeo() {
     if (row.count >= REPEAT_LIMIT) dupes.push({ count: row.count, id: row.id, key: key.slice(0, 220) });
   });
   dupes.sort(function (a, b) { return b.count - a.count; });
-  return { pages: pages, dupes: dupes.slice(0, 5), within: within, articles: articles };
+  return { pages: pages, dupes: dupes.slice(0, 5), within: within, articles: articles, padding: padding.slice(0, 8) };
 }
 
 function walkHtml(dir, visit) {
@@ -279,7 +300,7 @@ function checkEdgeSource() {
   const file = path.join(ROOT, "netlify", "edge-functions", "vehicle-pages.ts");
   const text = fs.readFileSync(file, "utf8");
   const errors = [];
-  ["must be registered with the state DMV", "requires minimum liability coverage of", "See how much you could save"].forEach(function (needle) {
+  ["must be registered with the state DMV", "requires minimum liability coverage of", "See how much you could save", "Registering a ${"].forEach(function (needle) {
     if (text.includes(needle)) errors.push("vehicle-pages.ts still contains " + JSON.stringify(needle));
   });
   const parts = text.split("function render");
@@ -301,6 +322,7 @@ function main() {
   }
   geoResult.within.forEach(function (item) { errors.push("within-page geo repeat: " + item); });
   geoResult.articles.forEach(function (item) { errors.push(item); });
+  geoResult.padding.forEach(function (item) { errors.push(item); });
 
   let generatedArticles = 0;
   for (const page of iterPages()) {

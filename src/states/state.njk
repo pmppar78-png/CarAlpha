@@ -78,6 +78,7 @@ eleventyComputed:
         <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
           <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Average Annual Cost</div>
           <div class="font-bold text-white text-lg mt-1">${{ state.averageInsuranceCost | toLocaleString }}</div>
+          {% if state.averageInsuranceSource %}<p class="text-silver-500 text-xs mt-2">{{ state.averageInsuranceSource }}</p>{% endif %}
         </div>
         {% endif %}
       </div>

@@ -9,7 +9,7 @@
 const LETTER_AN = new Set(["a", "e", "f", "h", "i", "l", "m", "n", "o", "r", "s", "x"]);
 
 const SILENT_H = /^(hour|honest|honor|honour|heir|heiress|herb)s?\b/i;
-const YOU_SOUND = /^(uni(que|versity|ted|on|form|t)|user|useful|useless|username|use[drs]?|usual|utility|utensil|european|euro|eucalyptus|eulogy|euphem|one|once)\b/i;
+const YOU_SOUND = /^(uni(que|versity|ted|on|form|t|body)|user|useful|useless|username|use[drs]?|usual|utility|utensil|european|euro|eucalyptus|eulogy|euphem|one|once)\b/i;
 
 function isLetterCode(word) {
   const w = String(word || "").replace(/[’']/g, "");
@@ -66,10 +66,9 @@ function fixArticles(text) {
 
 
 /**
- * Insurance, registration, and lemon openers for make/model/year state pages.
- * Each sentence includes a state figure and a catalog fact so the sentence
- * changes when the vehicle or the state changes. The state lemon-law summary
- * is not pasted here; that text lives on the state page.
+ * Short ownership sentences for one make, model, or year in one state.
+ * Each sentence names that vehicle and that state and uses a published figure.
+ * Model descriptions and catalog positions are not repeated here.
  */
 
 function money(n) {
@@ -77,149 +76,220 @@ function money(n) {
   return "$" + Number(n).toLocaleString("en-US");
 }
 
-function span(p) {
-  const end = p.yearEnd ? String(p.yearEnd) : "current";
-  if (!p.yearStart) return "the years on file";
-  return p.yearStart + "–" + end;
+function who(p) {
+  const parts = [];
+  if (p.year) parts.push(String(p.year));
+  if (p.make) parts.push(p.make);
+  if (p.model) parts.push(p.model);
+  return parts.join(" ");
 }
 
-function position(p) {
+function named(p) {
+  const name = who(p);
+  const first = name.split(" ")[0];
+  return articleFor(first) + " " + name;
+}
+
+function sentence(text) {
+  let s = fixArticles(String(text).replace(/\s+/g, " ").trim());
+  if (s) s = s.charAt(0).toUpperCase() + s.slice(1);
+  if (!/[.?!]$/.test(s)) s += ".";
+  return s;
+}
+
+function feeList(p) {
   const bits = [];
-  if (p.modelOrdinal && p.modelCount) bits.push("model " + p.modelOrdinal + " of " + p.modelCount);
-  if (p.ordinal && p.total) bits.push("catalog year " + p.ordinal + " of " + p.total);
-  if (!bits.length && p.modelCount) bits.push(p.modelCount + " models on file");
-  if (!bits.length) return "the catalog file";
-  return bits.join(", ");
-}
-
-function tail(p) {
-  return " (" + position(p) + ", file " + span(p) + ", " + subject(p) + ")";
-}
-
-function subject(p) {
-  if (p.year && p.model) return p.year + " " + p.make + " " + p.model;
-  if (p.model) return p.make + " " + p.model;
-  return p.make;
-}
-
-function snapshotBit(p) {
-  const fact = p.fact;
-  if (!fact) return "";
-  const bits = [];
-  if (fact.combMin) {
-    const range = fact.combMax && fact.combMax !== fact.combMin ? fact.combMin + "–" + fact.combMax : String(fact.combMin);
-    bits.push(range + " combined mpg on fueleconomy.gov");
+  if (p.registrationFee) bits.push("a registration fee of " + feePhrase(p.registrationFee));
+  if (p.titleFee) bits.push("a title fee of " + feePhrase(p.titleFee));
+  if (p.plateFee) {
+    if (/^included in registration$/i.test(String(p.plateFee).trim())) bits.push("plates included in the registration fee");
+    else bits.push("a plate fee of " + feePhrase(p.plateFee));
   }
-  if (fact.recalls != null) bits.push(fact.recalls + " NHTSA recall campaigns");
-  if (fact.complaints != null) bits.push(fact.complaints + " NHTSA complaints");
-  if (fact.starsMin) {
-    const stars = fact.starsMax && fact.starsMax !== fact.starsMin ? fact.starsMin + "–" + fact.starsMax : String(fact.starsMin);
-    bits.push(stars + "-star overall NHTSA rating on the saved variants");
+  if (!bits.length) return "the fees on the state registration page";
+  if (bits.length === 1) return bits[0];
+  return bits.slice(0, -1).join(", ") + ", and " + bits[bits.length - 1];
+}
+
+function feePhrase(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  if (/^included in registration$/i.test(raw)) return "included in the registration fee";
+  if (/^\$/.test(raw) || /^[0-9]/.test(raw)) return raw;
+  return raw.charAt(0).toLowerCase() + raw.slice(1);
+}
+
+function insuranceLines(p) {
+  const lines = [
+    sentence(named(p) + " in " + p.stateName + " has to carry at least " + p.minimum + " liability coverage"),
+  ];
+  const avg = money(p.avgCost);
+  if (avg) {
+    lines.push(sentence("The average annual premium on file for " + named(p) + " in " + p.stateName + " is " + avg));
   }
-  if (!bits.length) return "";
-  return "; the October 23, 2026 snapshot for this file lists " + bits.join(", ");
+  return lines;
 }
 
 function insuranceLead(p) {
-  const avg = money(p.avgCost);
-  const premium = avg ? " and an average annual premium of " + avg + " on the state guide" : "";
-  return fixArticles(
-    p.clause +
-      ", and " + p.stateName + "'s liability minimum of " + p.minimum +
-      premium +
-      " is the state figure, not a quote, for the " + subject(p) +
-      " (" + (p.body || "vehicle") + ", " + position(p) + ", file " + span(p) +
-      (p.founded ? ", " + p.make + " founded " + p.founded : "") +
-      ")" + snapshotBit(p)
-  );
+  return insuranceLines(p).join(" ");
 }
 
-function incentiveLine(p) {
-  const avg = money(p.avgCost);
-  return fixArticles(
-    p.clause +
-      ", and the incentive note for the " + subject(p) +
-      " (" + position(p) + ", file " + span(p) + ") in " + p.stateName +
-      " is that federal clean-vehicle credits are not available for vehicles acquired after September 30, 2025, while the state write-up sits on the incentives page next to the " +
-      p.minimum + " liability minimum" +
-      (avg ? " and the " + avg + " average premium" : "") +
-      snapshotBit(p)
-  );
+function registrationLines(p) {
+  const lines = [];
+  if (p.registrationFee) {
+    lines.push(sentence("The registration fee for " + named(p) + " in " + p.stateName + " is " + feePhrase(p.registrationFee)));
+  }
+  if (p.titleFee) {
+    lines.push(sentence("The title fee for " + named(p) + " in " + p.stateName + " is " + feePhrase(p.titleFee)));
+  }
+  if (p.plateFee) {
+    lines.push(sentence("The plate fee for " + named(p) + " in " + p.stateName + " is " + feePhrase(p.plateFee)));
+  }
+  if (!lines.length) {
+    lines.push(sentence("Registration fees for " + named(p) + " in " + p.stateName + " are on the state registration page"));
+  }
+  if (p.hasEmissions) {
+    lines.push(sentence(p.stateName + " requires an emissions test to register " + named(p)));
+  }
+  if (p.hasSafetyInspection) {
+    lines.push(sentence(p.stateName + " requires a safety inspection to register " + named(p)));
+  }
+  return lines;
 }
 
 function registrationLead(p) {
-  const fees = [];
-  if (p.registrationFee) fees.push("registration " + p.registrationFee);
-  if (p.titleFee) fees.push("title " + p.titleFee);
-  if (p.plateFee) fees.push("plate " + p.plateFee);
-  const feeText = fees.length ? fees.join(", ") : "the fee schedule on the state registration page";
-  const emissions = p.hasEmissions ? ", and an emissions test is part of registering in " + p.stateName : "";
-  const inspection = p.hasSafetyInspection ? ", and a safety inspection is part of registering in " + p.stateName : "";
-  return fixArticles(
-    "Registering the " + subject(p) + " (" + (p.body || "vehicle") + ", " + position(p) +
-      ", file " + span(p) + ") in " + p.stateName + " uses " + feeText + emissions + inspection +
-      ": " + p.clause
-  );
+  return registrationLines(p).join(" ");
+}
+
+function lemonLines(p) {
+  if (!p.hasLemonLaw || !p.citation) {
+    return [
+      sentence(p.stateName + " does not publish a state lemon-law presumption for " + named(p)),
+      sentence("The federal warranty statute that still applies to " + named(p) + " is the Magnuson-Moss Warranty Act, 15 U.S.C. sections 2301 through 2312"),
+    ];
+  }
+  return [
+    sentence("The lemon-law citation for " + named(p) + " in " + p.stateName + " is " + p.citation),
+    sentence("Repair counts and the notice step for " + named(p) + " are on the " + p.stateName + " lemon-law page"),
+  ];
 }
 
 function lemonLead(p) {
-  const who = subject(p) + " (" + (p.body || "vehicle") + ", " + position(p) + ", file " + span(p) + ")";
-  if (!p.hasLemonLaw || !p.citation) {
-    return fixArticles(
-      p.clause +
-        ", and " + p.stateName + " does not publish a state lemon-law presumption for the " + who +
-        "; the federal warranty statute is the Magnuson-Moss Warranty Act, 15 USC sections 2301 through 2312, which does not set a repair count"
-    );
-  }
-  return fixArticles(
-    p.clause +
-      ", and the lemon-law citation for a new " + who + " in " + p.stateName + " is " + p.citation +
-      "; the repair counts and the notice rule are on the " + p.stateName + " lemon-law page, keyed to the delivery date and mileage this page does not have" +
-      tail(p)
-  );
+  return lemonLines(p).join(" ");
 }
 
-function ask(p, lead) {
-  return fixArticles(
-    lead + " for the " + subject(p) + " (" + position(p) + ", file " + span(p) +
-      ", registration " + (p.registrationFee || "fee unlisted") + ") in " + p.stateName + "?"
-  );
+function incentiveLines(p) {
+  const lines = [
+    sentence("Federal clean-vehicle credits are not available for " + named(p) + " in " + p.stateName + " acquired after September 30, 2025"),
+  ];
+  const detail = String(p.evDetail || "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/[.?!]+$/, "")
+    .replace(/[.?!]\s+([A-Za-z][A-Za-z'’-]*)/g, function (_m, word) {
+      if (/^[A-Z]{2,}$/.test(word)) return "; " + word;
+      return "; " + word.charAt(0).toLowerCase() + word.slice(1);
+    });
+  if (detail) {
+    lines.push(sentence("For " + named(p) + " in " + p.stateName + ", " + detail));
+  }
+  return lines;
+}
+
+function incentiveLine(p) {
+  return incentiveLines(p).join(" ");
+}
+
+function ask(text) {
+  return sentence(text).replace(/\.$/, "?");
 }
 
 function geoFaqs(p) {
-  const who = subject(p);
-  const fees = [];
-  if (p.registrationFee) fees.push("registration " + p.registrationFee);
-  if (p.titleFee) fees.push("title " + p.titleFee);
-  if (p.plateFee) fees.push("plate " + p.plateFee);
-  const feeText = fees.length ? fees.join(", ") : "the fee schedule on the state registration page";
+  const avg = money(p.avgCost);
+  const feeText = feeList(p);
+  const insuranceAnswer = [
+    sentence("The minimum that applies to " + named(p) + " in " + p.stateName + " is " + p.minimum),
+  ];
+  if (avg) {
+    insuranceAnswer.push(sentence("Alongside that minimum, the average annual premium on file for " + named(p) + " in " + p.stateName + " is " + avg));
+  }
+  const lemonAnswer = p.hasLemonLaw && p.citation
+    ? [sentence("For " + named(p) + " in " + p.stateName + ", start with " + p.citation)]
+    : [sentence("No state lemon-law presumption is published for " + named(p) + " in " + p.stateName)];
   return [
     {
-      q: ask(p, "What liability minimum applies"),
-      a: fixArticles(
-        p.stateName + " publishes " + p.minimum +
-          " as the liability minimum before the " + who + " (" + position(p) + ", file " + span(p) + ") can be registered, and " +
-          (money(p.avgCost) ? "the state guide's average annual premium is " + money(p.avgCost) : "the state guide does not publish one average premium") +
-          "; " + p.clause
-      ),
+      q: ask("What liability minimum applies to " + named(p) + " in " + p.stateName),
+      a: insuranceAnswer.join(" "),
     },
     {
-      q: ask(p, "Which registration fees are published"),
-      a: fixArticles(
-        "The fee line published for " + who + " (" + position(p) + ", file " + span(p) + ") in " + p.stateName +
-          " is " + feeText + ", separate from the model note that " + p.clause
-      ),
+      q: ask("What registration fees are published for " + named(p) + " in " + p.stateName),
+      a: sentence(p.stateName + " lists " + feeText + " for " + named(p)),
     },
     {
-      q: ask(p, "Which lemon-law citation applies"),
-      a: fixArticles(
-        (p.hasLemonLaw && p.citation
-          ? "The citation to read for " + who + " (" + position(p) + ", file " + span(p) + ") in " + p.stateName + " is " + p.citation + ", and the day count plus the notice step are on the " + p.stateName + " lemon-law page"
-          : "No state lemon-law presumption is published for " + who + " (" + position(p) + ", file " + span(p) + ") in " + p.stateName + ", so the federal warranty statute stays the Magnuson-Moss Warranty Act, 15 USC sections 2301 through 2312") +
-          "; " + p.clause + tail(p)
-      ),
+      q: ask("Which lemon-law citation covers " + named(p) + " in " + p.stateName),
+      a: lemonAnswer.join(" "),
     },
   ];
+}
+
+function mpgRange(min, max) {
+  if (min == null) return "";
+  if (max == null || Number(max) === Number(min)) return String(min);
+  return min + "–" + max;
+}
+
+function factSentences(p) {
+  const fact = p && p.fact;
+  if (!fact) return [];
+  const car = who(p);
+  const place = p.stateName ? " in " + p.stateName : "";
+  const lines = [];
+  if (fact.combMin) {
+    const count = fact.epaConfigs || 1;
+    if (count === 1) {
+      const bits = [];
+      if (fact.epaName) bits.push(fact.epaName);
+      if (fact.displ) bits.push(fact.displ + "L");
+      if (fact.cylinders) bits.push(fact.cylinders + "-cylinder");
+      if (fact.drive) bits.push(fact.drive);
+      if (fact.trans) bits.push(fact.trans);
+      const label = bits.length ? " (" + bits.join(", ") + ")" : "";
+      lines.push(sentence(
+        "On October 23, 2026, fueleconomy.gov listed one configuration of the " + car + place + label +
+        " at " + fact.combMin + " combined mpg, " + fact.cityMin + " city and " + fact.hwyMin + " highway"
+      ));
+    } else {
+      const low = fact.epaLow && fact.epaLow !== fact.epaHigh ? " on the " + fact.epaLow : "";
+      const high = fact.epaHigh && fact.epaHigh !== fact.epaLow ? " on the " + fact.epaHigh : "";
+      lines.push(sentence(
+        "On October 23, 2026, fueleconomy.gov listed " + count + " configurations of the " + car + place
+      ));
+      lines.push(sentence(
+        "Combined mileage for the " + car + place + " runs from " + fact.combMin + " mpg" + low + " to " + fact.combMax + " mpg" + high
+      ));
+      lines.push(sentence(
+        "City mileage for the " + car + place + " is " + mpgRange(fact.cityMin, fact.cityMax) +
+        " mpg, and highway mileage is " + mpgRange(fact.hwyMin, fact.hwyMax) + " mpg"
+      ));
+    }
+  }
+  if (fact.recalls != null) {
+    const word = Number(fact.recalls) === 1 ? "campaign" : "campaigns";
+    lines.push(sentence(
+      "NHTSA recalls-by-vehicle listed " + fact.recalls + " " + word + " for the " + car + place + " on October 23, 2026"
+    ));
+  }
+  if (fact.complaints != null) {
+    lines.push(sentence(
+      "The NHTSA complaint count for the " + car + place + " was " + fact.complaints + " on that date, which is not a defect finding"
+    ));
+  }
+  if (fact.starsMin) {
+    const stars = fact.starsMax && fact.starsMax !== fact.starsMin
+      ? fact.starsMin + " to " + fact.starsMax
+      : String(fact.starsMin);
+    lines.push(sentence("Tested " + car + " vehicles" + place + " earned " + stars + " stars overall"));
+  }
+  return lines;
 }
 
 function faqHtml(faqs) {
@@ -253,4 +323,4 @@ function faqSchemaScript(faqs) {
 }
 
 
-export { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, faqHtml, faqSchemaScript };
+export { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, faqHtml, faqSchemaScript };

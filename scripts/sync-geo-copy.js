@@ -12,11 +12,11 @@ const root = path.join(__dirname, "..");
 const article = fs.readFileSync(path.join(root, "lib", "article.js"), "utf8")
   .replace(/module\.exports[\s\S]*$/, "");
 const geo = fs.readFileSync(path.join(root, "lib", "geo-copy.js"), "utf8")
-  .replace(/const \{ fixArticles \} = require\("\.\/article"\);\n/, "")
+  .replace(/const \{[^}]+\} = require\("\.\/article"\);\n/, "")
   .replace(/module\.exports[\s\S]*$/, "");
 
 const out = article + "\n" + geo +
-  "\nexport { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, faqHtml, faqSchemaScript };\n";
+  "\nexport { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, faqHtml, faqSchemaScript };\n";
 
 const dest = path.join(root, "netlify", "edge-functions", "geo-copy.js");
 fs.writeFileSync(dest, out);

@@ -113,6 +113,7 @@ async function pool(items, limit, worker) {
 async function main() {
   const modelYears = JSON.parse(fs.readFileSync(path.join(ROOT, "src", "_data", "modelYears.json"), "utf8"));
   const models = JSON.parse(fs.readFileSync(path.join(ROOT, "src", "_data", "models.json"), "utf8"));
+  const existing = fs.existsSync(OUT) ? (JSON.parse(fs.readFileSync(OUT, "utf8")).vehicles || {}) : {};
   const byMake = new Map();
   for (const model of models) {
     if (!byMake.has(model.makeName)) byMake.set(model.makeName, []);
@@ -151,6 +152,9 @@ async function main() {
     const complaintCount = countFrom(complaints);
     if (complaintCount != null) fact.complaints = complaintCount;
 
+    // Fuel-economy ranges come from the full EPA vehicles.csv via
+    // scripts/apply-epa-ranges.js. Sampling a few trims here published the
+    // wrong span (a 2020 Camry V6 instead of the 25–52 mpg file).
     const ratings = await get(ratingsUrl);
     const variants = ratings && Array.isArray(ratings.Results) ? ratings.Results.slice(0, 2) : [];
     const stars = [];
@@ -166,48 +170,12 @@ async function main() {
       fact.starsMax = Math.max.apply(null, stars);
     }
 
-    try {
-      const menu = await epaModels(row.year, row.makeName);
-      const longer = byMake.get(row.makeName) || [];
-      const hits = menu.filter(function (item) { return matchesModel(item.text, row.name, longer); }).slice(0, 3);
-      const mpgs = [];
-      let sample = null;
-      for (const hit of hits) {
-        const optionsUrl = "https://www.fueleconomy.gov/ws/rest/vehicle/menu/options?year=" + row.year +
-          "&make=" + encodeURIComponent(row.makeName) + "&model=" + encodeURIComponent(hit.value);
-        const options = menuItems(await get(optionsUrl)).slice(0, 1);
-        for (const option of options) {
-          const vehicle = await get("https://www.fueleconomy.gov/ws/rest/vehicle/" + option.value);
-          if (!vehicle || vehicle.comb08 == null) continue;
-          mpgs.push({
-            city: Number(vehicle.city08),
-            hwy: Number(vehicle.highway08),
-            comb: Number(vehicle.comb08),
-          });
-          if (!sample) {
-            sample = {
-              displ: vehicle.displ || null,
-              cylinders: vehicle.cylinders ? Number(vehicle.cylinders) : null,
-              drive: vehicle.drive || null,
-              trans: vehicle.trany || null,
-            };
-          }
-        }
-      }
-      if (mpgs.length) {
-        fact.cityMin = Math.min.apply(null, mpgs.map(function (m) { return m.city; }));
-        fact.cityMax = Math.max.apply(null, mpgs.map(function (m) { return m.city; }));
-        fact.hwyMin = Math.min.apply(null, mpgs.map(function (m) { return m.hwy; }));
-        fact.hwyMax = Math.max.apply(null, mpgs.map(function (m) { return m.hwy; }));
-        fact.combMin = Math.min.apply(null, mpgs.map(function (m) { return m.comb; }));
-        fact.combMax = Math.max.apply(null, mpgs.map(function (m) { return m.comb; }));
-        fact.epaTrims = mpgs.length;
-        if (sample && sample.displ) fact.displ = sample.displ;
-        if (sample && sample.cylinders) fact.cylinders = sample.cylinders;
-        if (sample && sample.drive) fact.drive = sample.drive;
-        if (sample && sample.trans) fact.trans = sample.trans;
-      }
-    } catch (_err) { /* omit EPA */ }
+    const previous = existing[key];
+    if (previous) {
+      ["cityMin", "cityMax", "hwyMin", "hwyMax", "combMin", "combMax", "epaConfigs", "epaLow", "epaHigh", "epaName", "displ", "cylinders", "drive", "trans"].forEach(function (field) {
+        if (previous[field] != null) fact[field] = previous[field];
+      });
+    }
 
     if (Object.keys(fact).length) vehicles[key] = fact;
     done += 1;

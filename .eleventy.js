@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const vehicleCopy = require("./lib/vehicle-copy");
 const { articleFor } = require("./lib/article");
+const geoCopy = require("./lib/geo-copy");
 const { applyFaqJsonLd } = require("./lib/faq-jsonld");
 
 module.exports = function (eleventyConfig) {
@@ -203,6 +204,18 @@ module.exports = function (eleventyConfig) {
     const data = factsData();
     if (!entry || !data || !data.vehicles) return null;
     return data.vehicles[entry.makeSlug + "/" + entry.slug + "/" + entry.year] || null;
+  });
+
+  eleventyConfig.addFilter("factSentences", function (entry) {
+    const fact = factsData();
+    const row = fact && fact.vehicles ? fact.vehicles[entry.makeSlug + "/" + entry.slug + "/" + entry.year] : null;
+    if (!row) return [];
+    return geoCopy.factSentences({
+      year: entry.year,
+      make: entry.makeName,
+      model: entry.name,
+      fact: row,
+    });
   });
 
   let _facts = undefined;
