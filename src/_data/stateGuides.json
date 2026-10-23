@@ -1,0 +1,26 @@
+{
+  "alabama": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "alaska": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "arizona": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "arkansas": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  }
+}
