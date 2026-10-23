@@ -112,6 +112,8 @@ function bundle(input) {
     minimumDetail: input.state.insuranceMinimumDetail,
     registrationFee: input.state.registrationFeeRange,
     registrationNotes: input.state.registrationNotes,
+    evRegistration: input.state.evRegistrationDetails,
+    evFeeReplaces: input.state.evFeeReplaces,
     titleFee: input.state.titleFee,
     plateFee: input.state.plateFee,
     hasEmissions: input.state.hasEmissions,

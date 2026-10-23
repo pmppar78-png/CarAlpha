@@ -25,6 +25,8 @@ function bundle(state, extra) {
     avgCost: state.averageInsuranceCost,
     registrationFee: state.registrationFeeRange,
     registrationNotes: state.registrationNotes,
+    evRegistration: state.evRegistrationDetails,
+    evFeeReplaces: state.evFeeReplaces,
     titleFee: state.titleFee,
     plateFee: state.plateFee,
     hasEmissions: state.hasEmissions,
@@ -114,6 +116,49 @@ test("geo pages answer with figures and do not pad", function () {
   assert.equal(vaText.split("59.1-207.11").length - 1, 1);
   assert.match(vaText, /15 more days/);
   assert.match(vaText, /written notification is required/);
+
+  const txReg = geo.registrationLines(camry).join(" ");
+  assert.equal(txReg.split("$50.75").length - 1, 1);
+  assert.equal(txReg.split("$7.50").length - 1, 1);
+  assert.equal(txReg.split("HB 3297").length - 1, 1);
+
+  assert.match(vaText, /\$30\.75/);
+  assert.match(vaText, /\$35\.75/);
+  assert.equal(vaText.split("$10").length - 1, 0);
+  assert.match(vaText, /separate biennial test/);
+  assert.equal(/part of the annual safety inspection/i.test(vaText), false);
+  const teslaVa = bundle(va, {
+    make: "Tesla",
+    model: "Model 3",
+    year: 2024,
+    years: yearsOf("tesla", "model-3"),
+    fact: facts["tesla/model-3/2024"],
+  });
+  assert.match(pageText(teslaVa), /\$135\.63/);
+  assert.equal(pageText(virginia).split("$135.63").length - 1, 0);
+
+  const mi = states.find(function (s) { return s.slug === "michigan"; });
+  const miText = pageText(bundle(mi, {
+    make: "Toyota",
+    model: "Camry",
+    year: 2020,
+    years: yearsOf("toyota", "camry"),
+    fact: facts["toyota/camry/2020"],
+  }));
+  assert.equal(/\$100 - \$200|over \$200/i.test(miText), false);
+  assert.match(miText, /list price/);
+  assert.match(miText, /257\.801/);
+
+  const maybach = bundle(tx, {
+    make: "Maybach",
+    model: "S-Class Maybach",
+    year: 2020,
+    years: yearsOf("maybach", "s-class-maybach"),
+    fact: facts["maybach/s-class-maybach/2020"],
+  });
+  const maybachRecorded = geo.recordedLines(maybach).join(" ");
+  assert.match(maybachRecorded, /No fueleconomy\.gov configuration or NHTSA/);
+  assert.equal(/neighboring model years/i.test(maybachRecorded), false);
 });
 
 test("every state keeps a readable lemon citation and no padded sentence", function () {

@@ -81,6 +81,8 @@ function buildEdgeData() {
       safetyInspectionDetails: state.safetyInspectionDetails || "",
       registrationFeeRange: state.registrationFeeRange || "",
       registrationNotes: state.registrationNotes || "",
+      evRegistrationDetails: state.evRegistrationDetails || "",
+      evFeeReplaces: state.evFeeReplaces || false,
       titleFee: state.titleFee || "",
       plateFee: state.plateFee || "",
       description: state.description || "",

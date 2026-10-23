@@ -8,7 +8,7 @@ import { articleFor, insuranceLead, insuranceLines, registrationLines, lemonLine
 interface MakeData { name: string; type: string; country: string; founded: number; description: string }
 interface ModelData { name: string; bodyType: string; makeName: string; makeSlug: string; yearStart: number; yearEnd: number | null; description?: string }
 interface ModelYearData { name: string; makeName: string; bodyType: string }
-interface StateData { name: string; abbreviation: string; region: string; insuranceMinimum: string; insuranceMinimumDetail: string; averageInsuranceCost: number; hasLemonLaw: boolean; lemonLawSummary: string; lemonLawCitation: string; evIncentives: boolean; evIncentiveDetails: string; hasEmissions: boolean; emissionsDetails: string; hasSafetyInspection: boolean; safetyInspectionDetails: string; registrationFeeRange: string; registrationNotes: string; titleFee: string; plateFee: string; description: string }
+interface StateData { name: string; abbreviation: string; region: string; insuranceMinimum: string; insuranceMinimumDetail: string; averageInsuranceCost: number; hasLemonLaw: boolean; lemonLawSummary: string; lemonLawCitation: string; evIncentives: boolean; evIncentiveDetails: string; hasEmissions: boolean; emissionsDetails: string; hasSafetyInspection: boolean; safetyInspectionDetails: string; registrationFeeRange: string; registrationNotes: string; titleFee: string; plateFee: string; evRegistrationDetails: string; evFeeReplaces: boolean; description: string }
 interface FactData {
   combMin?: number; combMax?: number; cityMin?: number; cityMax?: number; hwyMin?: number; hwyMax?: number;
   epaConfigs?: number; epaLow?: string; epaHigh?: string; epaName?: string;
@@ -397,6 +397,8 @@ function geoBundle(input: {
     evIncentives: input.state.evIncentives,
     evDetail: input.state.evIncentiveDetails,
     registrationNotes: input.state.registrationNotes,
+    evRegistration: input.state.evRegistrationDetails,
+    evFeeReplaces: input.state.evFeeReplaces,
     minimumDetail: input.state.insuranceMinimumDetail,
   };
 }
