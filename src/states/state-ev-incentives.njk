@@ -8,14 +8,6 @@ permalink: "/states/{{ state.slug }}/ev-incentives/"
 eleventyComputed:
   title: "{{ state.name }} EV Incentives 2026"
   description: "{% if state.evIncentiveDetails %}{{ state.evIncentiveDetails | truncate(160) }}{% else %}No statewide EV purchase rebate is confirmed for {{ state.name }} in 2026.{% endif %}"
-  breadcrumbs:
-    - label: Home
-      url: /
-    - label: States
-      url: /states/
-    - label: "{{ state.name }}"
-      url: "/states/{{ state.slug }}/"
-    - label: EV Incentives
 ---
 
 <div class="prose-dark">
