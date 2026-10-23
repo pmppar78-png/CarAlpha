@@ -70,13 +70,64 @@ eleventyComputed:
             <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">NHTSA campaigns</th><td class="py-2 text-silver-400">{{ copy.facts.recalls.count }}{% if copy.facts.recalls.campaigns.length %} ({% for row in copy.facts.recalls.campaigns %}{{ row.id }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</td></tr>
             {% endif %}
             {% if copy.facts.ncap %}
-            <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">NCAP overall</th><td class="py-2 text-silver-400">{% for row in copy.facts.ncap.rows %}{{ row.desc }}: {{ row.overall }} stars{% if not loop.last %}; {% endif %}{% endfor %}</td></tr>
+            <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">NCAP overall</th><td class="py-2 text-silver-400">{% for row in copy.facts.ncap.rows %}{{ row.desc }}: {{ row.overall }} stars overall{% if row.front and row.front != "Not Rated" %}, frontal {{ row.front }}{% endif %}{% if row.side and row.side != "Not Rated" %}, side {{ row.side }}{% endif %}{% if row.rollover and row.rollover != "Not Rated" %}, rollover {{ row.rollover }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</td></tr>
             {% endif %}
             {% if copy.facts.generation %}
             <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">Generation</th><td class="py-2 text-silver-400">{{ copy.facts.generation.name }}, year {{ copy.facts.generation.index }} of {{ copy.facts.generation.start }}–{% if copy.facts.generation.end %}{{ copy.facts.generation.end }}{% else %}present{% endif %}</td></tr>
             {% endif %}
           </tbody>
         </table>
+        {% endif %}
+        {% if copy.facts and copy.facts.epa and copy.facts.epa.configs and copy.facts.epa.configs.length %}
+        <div class="mt-6 overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <caption class="text-left text-xs font-bold uppercase tracking-wider text-silver-500 mb-2">EPA configurations from fueleconomy.gov</caption>
+            <thead>
+              <tr class="text-silver-500 text-xs">
+                <th class="py-2 pr-3 font-semibold">Engine</th>
+                <th class="py-2 pr-3 font-semibold">Transmission</th>
+                <th class="py-2 pr-3 font-semibold">Drive</th>
+                <th class="py-2 pr-3 font-semibold">City</th>
+                <th class="py-2 pr-3 font-semibold">Hwy</th>
+                <th class="py-2 pr-3 font-semibold">Comb</th>
+                <th class="py-2 pr-3 font-semibold">Fuel</th>
+                <th class="py-2 pr-3 font-semibold">Annual fuel</th>
+                <th class="py-2 pr-3 font-semibold">CO2 g/mi</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in copy.facts.epa.configs %}
+              <tr class="border-t border-white/10 text-silver-400">
+                <td class="py-2 pr-3">{{ row.engine }}</td>
+                <td class="py-2 pr-3">{{ row.trans }}</td>
+                <td class="py-2 pr-3">{{ row.drive }}</td>
+                <td class="py-2 pr-3">{{ row.city }}</td>
+                <td class="py-2 pr-3">{{ row.hwy }}</td>
+                <td class="py-2 pr-3">{{ row.comb }}</td>
+                <td class="py-2 pr-3">{{ row.fuel }}</td>
+                <td class="py-2 pr-3">{% if row.fuelCost %}${{ row.fuelCost }}{% else %}—{% endif %}</td>
+                <td class="py-2 pr-3">{% if row.co2 == null %}—{% else %}{{ row.co2 }}{% endif %}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% endif %}
+        {% if copy.facts and copy.facts.recalls and copy.facts.recalls.campaigns.length %}
+        <div class="mt-6 space-y-4">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-silver-500">NHTSA campaigns</h2>
+          {% for row in copy.facts.recalls.campaigns %}
+          <div class="text-sm text-silver-400 leading-relaxed">
+            <p class="text-silver-300 font-semibold">{{ row.id }}{% if row.kind %}, {{ row.kind }}{% endif %}{% if row.label %} — {{ row.label }}{% endif %}</p>
+            {% if row.summary %}<p class="mt-1">{{ row.summary }}</p>{% endif %}
+            {% if row.consequence %}<p class="mt-1">{{ row.consequence }}</p>{% endif %}
+            {% if row.remedy %}<p class="mt-1">{{ row.remedy }}</p>{% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if copy.facts and copy.facts.complaints %}
+        <p class="text-sm text-silver-400 leading-relaxed mt-4">NHTSA had received {{ copy.facts.complaints.count }} owner complaints for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }} as of October 23, 2026.{% if copy.facts.complaints.top and copy.facts.complaints.top.length %} The most common components were {% for row in copy.facts.complaints.top %}{{ row.name }} ({{ row.count }}){% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %}{% endfor %}.{% endif %}</p>
         {% endif %}
         {% include "partials/recall-remedy.njk" %}
       </div>
@@ -145,7 +196,7 @@ eleventyComputed:
         </a>
         <a href="/guides/how-to-check-car-before-buying/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Pre-purchase checklist</div>
-          <div class="text-[10px] text-silver-500 mt-1">The inspection steps, kept in one guide instead of repeated on every year</div>
+          <div class="text-[10px] text-silver-500 mt-1">Used-car inspection checklist</div>
         </a>
         <a href="/guides/lemon-law/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Lemon law, if repairs repeat</div>
@@ -201,7 +252,6 @@ eleventyComputed:
           <p class="text-sm text-silver-400 leading-relaxed pb-3 pl-4">{{ faq.a }}</p>
         </details>
         {% endfor %}
-        <p class="text-xs text-silver-500">The inspection checklist, the recall lookup, and the warranty guide are linked above so this page does not repeat them as if they were unique to this year.</p>
       </div>
     </div>
 

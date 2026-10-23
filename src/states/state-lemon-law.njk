@@ -26,7 +26,8 @@ eleventyComputed:
 <p>{{ state.lemonLawSummary }}</p>
 
 {% if state.lemonLawCitation %}
-<p>The statute is <a href="{{ state.lemonLawUrl }}" rel="noopener">{{ state.lemonLawCitation }}</a>. The {{ state.name }} figures were read from that text on {% if state.slug == "texas" %}October 23, 2026{% else %}October 22, 2026{% endif %}, and a later amendment would control. Used-car coverage, when {{ state.name }} has a separate section, is not the new-car rule above.</p>
+<p>The statute is <a href="{{ state.lemonLawUrl }}" rel="noopener">{{ state.lemonLawCitation }}</a>.</p>
+{% if state.usedCarLemonLaw %}<p>{{ state.usedCarLemonLaw }}</p>{% endif %}
 {% endif %}
 {% else %}
 <p>{{ state.name }} does not have a specific state lemon law on file here. A written warranty can still be enforced under the federal Magnuson-Moss Warranty Act, 15 U.S.C. sections 2301 through 2312.</p>

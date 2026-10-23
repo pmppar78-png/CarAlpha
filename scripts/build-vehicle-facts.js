@@ -478,7 +478,17 @@ async function main() {
   console.log(`wrote ${OUT} years=${payload.yearCount} models=${payload.modelCount} bytes=${fs.statSync(OUT).size}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  norm,
+  loadEpaRows,
+  indexEpa,
+  rowsForModel,
+  num,
+};

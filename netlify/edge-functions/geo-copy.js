@@ -419,8 +419,9 @@ function factSentences(p) {
     const word = Number(fact.recalls) === 1 ? "campaign" : "campaigns";
     lines.push(sentence("NHTSA recalls-by-vehicle listed " + fact.recalls + " " + word + " for " + car + " on October 23, 2026"));
   }
-  if (fact.complaints != null) {
-    lines.push(sentence("The NHTSA complaint count for " + car + " was " + fact.complaints + " on October 23, 2026, which is not a defect finding"));
+  if (Number(fact.complaints) > 0) {
+    const named = [p.year, p.make, p.model].filter(Boolean).join(" ") || car;
+    lines.push(sentence("NHTSA had received " + fact.complaints + " owner complaints for the " + named + " as of October 23, 2026"));
   }
   if (fact.starsMin) {
     const stars = fact.starsMax && fact.starsMax !== fact.starsMin
