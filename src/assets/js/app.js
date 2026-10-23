@@ -16,7 +16,7 @@ const AFFILIATES = {
   mechanics: "/go/mechanics/?ref={{REF}}&vin={{VIN}}",
   "lemon-law": "/go/lemon-law/?ref={{REF}}&state={{STATE}}",
   "ev-charger": "/go/ev-charger/?ref={{REF}}",
-  carfax: "/go/carfax/?ref={{REF}}&vin={{VIN}}",
+  carfax: "https://www.carfax.com/",
 };
 
 function affiliateUrl(key, opts = {}) {
@@ -276,7 +276,8 @@ function postBubble(container, role, html) {
 
 function affiliateCTA(label, key, vin) {
   const href = affiliateUrl(key, { vin: vin || "" });
-  return `<a target="_blank" rel="nofollow sponsored noopener" href="${href}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-volt-600/15 border border-volt-500/25 hover:border-volt-400/40 hover:bg-volt-600/25 text-volt-300 text-xs font-medium mt-2 mr-1 transition-all">${label} <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a>`;
+  const rel = key === "carfax" ? "noopener" : "nofollow sponsored noopener";
+  return `<a target="_blank" rel="${rel}" href="${href}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-volt-600/15 border border-volt-500/25 hover:border-volt-400/40 hover:bg-volt-600/25 text-volt-300 text-xs font-medium mt-2 mr-1 transition-all">${label} <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a>`;
 }
 
 // Whole-word match. Keep these patterns in step with lib/assistant-links.js.
