@@ -275,7 +275,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -288,8 +288,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -302,10 +302,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "toyota",
@@ -317,9 +317,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "toyota",
@@ -331,7 +331,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -345,7 +345,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -359,7 +359,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -373,7 +373,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -387,9 +387,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "toyota",
@@ -400,8 +400,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -975,7 +975,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -988,8 +988,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -1002,10 +1002,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "honda",
@@ -1017,9 +1017,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "honda",
@@ -1031,7 +1031,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1045,7 +1045,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1059,7 +1059,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1073,7 +1073,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1087,9 +1087,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "honda",
@@ -1100,8 +1100,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1675,7 +1675,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -1688,8 +1688,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -1702,10 +1702,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ford",
@@ -1717,9 +1717,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ford",
@@ -1731,7 +1731,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1745,7 +1745,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1759,7 +1759,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1773,7 +1773,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -1787,9 +1787,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ford",
@@ -1800,8 +1800,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -2375,7 +2375,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -2388,8 +2388,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -2402,10 +2402,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "chevrolet",
@@ -2417,9 +2417,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "chevrolet",
@@ -2431,7 +2431,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -2445,7 +2445,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -2459,7 +2459,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -2473,7 +2473,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -2487,9 +2487,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "chevrolet",
@@ -2500,8 +2500,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3075,7 +3075,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -3088,8 +3088,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -3102,10 +3102,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bmw",
@@ -3117,9 +3117,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bmw",
@@ -3131,7 +3131,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3145,7 +3145,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3159,7 +3159,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3173,7 +3173,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3187,9 +3187,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bmw",
@@ -3200,8 +3200,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3775,7 +3775,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -3788,8 +3788,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -3802,10 +3802,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mercedes-benz",
@@ -3817,9 +3817,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mercedes-benz",
@@ -3831,7 +3831,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3845,7 +3845,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3859,7 +3859,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3873,7 +3873,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -3887,9 +3887,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mercedes-benz",
@@ -3900,8 +3900,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -4475,7 +4475,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -4488,8 +4488,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -4502,10 +4502,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "audi",
@@ -4517,9 +4517,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "audi",
@@ -4531,7 +4531,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -4545,7 +4545,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -4559,7 +4559,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -4573,7 +4573,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -4587,9 +4587,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "audi",
@@ -4600,8 +4600,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5175,7 +5175,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -5188,8 +5188,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -5202,10 +5202,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "nissan",
@@ -5217,9 +5217,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "nissan",
@@ -5231,7 +5231,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5245,7 +5245,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5259,7 +5259,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5273,7 +5273,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5287,9 +5287,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "nissan",
@@ -5300,8 +5300,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5875,7 +5875,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -5888,8 +5888,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -5902,10 +5902,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "hyundai",
@@ -5917,9 +5917,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "hyundai",
@@ -5931,7 +5931,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5945,7 +5945,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5959,7 +5959,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5973,7 +5973,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -5987,9 +5987,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "hyundai",
@@ -6000,8 +6000,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -6575,7 +6575,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -6588,8 +6588,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -6602,10 +6602,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "kia",
@@ -6617,9 +6617,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "kia",
@@ -6631,7 +6631,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -6645,7 +6645,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -6659,7 +6659,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -6673,7 +6673,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -6687,9 +6687,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "kia",
@@ -6700,8 +6700,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -7275,7 +7275,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -7288,8 +7288,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -7302,10 +7302,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "volkswagen",
@@ -7317,9 +7317,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "volkswagen",
@@ -7331,7 +7331,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -7345,7 +7345,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -7359,7 +7359,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -7373,7 +7373,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -7387,9 +7387,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "volkswagen",
@@ -7400,8 +7400,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -7975,7 +7975,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -7988,8 +7988,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -8002,10 +8002,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "subaru",
@@ -8017,9 +8017,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "subaru",
@@ -8031,7 +8031,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8045,7 +8045,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8059,7 +8059,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8073,7 +8073,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8087,9 +8087,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "subaru",
@@ -8100,8 +8100,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8675,7 +8675,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -8688,8 +8688,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -8702,10 +8702,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mazda",
@@ -8717,9 +8717,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mazda",
@@ -8731,7 +8731,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8745,7 +8745,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8759,7 +8759,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8773,7 +8773,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -8787,9 +8787,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mazda",
@@ -8800,8 +8800,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -9375,7 +9375,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -9388,8 +9388,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -9402,10 +9402,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lexus",
@@ -9417,9 +9417,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lexus",
@@ -9431,7 +9431,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -9445,7 +9445,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -9459,7 +9459,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -9473,7 +9473,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -9487,9 +9487,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lexus",
@@ -9500,8 +9500,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10075,7 +10075,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -10088,8 +10088,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -10102,10 +10102,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "acura",
@@ -10117,9 +10117,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "acura",
@@ -10131,7 +10131,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10145,7 +10145,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10159,7 +10159,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10173,7 +10173,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10187,9 +10187,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "acura",
@@ -10200,8 +10200,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10775,7 +10775,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -10788,8 +10788,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -10802,10 +10802,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "infiniti",
@@ -10817,9 +10817,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "infiniti",
@@ -10831,7 +10831,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10845,7 +10845,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10859,7 +10859,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10873,7 +10873,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -10887,9 +10887,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "infiniti",
@@ -10900,8 +10900,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -11475,7 +11475,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -11488,8 +11488,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -11502,10 +11502,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "volvo",
@@ -11517,9 +11517,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "volvo",
@@ -11531,7 +11531,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -11545,7 +11545,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -11559,7 +11559,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -11573,7 +11573,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -11587,9 +11587,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "volvo",
@@ -11600,8 +11600,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12175,7 +12175,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -12188,8 +12188,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -12202,10 +12202,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "jeep",
@@ -12217,9 +12217,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "jeep",
@@ -12231,7 +12231,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12245,7 +12245,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12259,7 +12259,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12273,7 +12273,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12287,9 +12287,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "jeep",
@@ -12300,8 +12300,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12875,7 +12875,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -12888,8 +12888,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -12902,10 +12902,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ram",
@@ -12917,9 +12917,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ram",
@@ -12931,7 +12931,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12945,7 +12945,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12959,7 +12959,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12973,7 +12973,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -12987,9 +12987,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ram",
@@ -13000,8 +13000,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -13575,7 +13575,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -13588,8 +13588,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -13602,10 +13602,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "dodge",
@@ -13617,9 +13617,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "dodge",
@@ -13631,7 +13631,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -13645,7 +13645,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -13659,7 +13659,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -13673,7 +13673,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -13687,9 +13687,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "dodge",
@@ -13700,8 +13700,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -14275,7 +14275,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -14288,8 +14288,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -14302,10 +14302,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "chrysler",
@@ -14317,9 +14317,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "chrysler",
@@ -14331,7 +14331,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -14345,7 +14345,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -14359,7 +14359,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -14373,7 +14373,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -14387,9 +14387,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "chrysler",
@@ -14400,8 +14400,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -14975,7 +14975,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -14988,8 +14988,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -15002,10 +15002,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "buick",
@@ -15017,9 +15017,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "buick",
@@ -15031,7 +15031,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15045,7 +15045,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15059,7 +15059,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15073,7 +15073,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15087,9 +15087,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "buick",
@@ -15100,8 +15100,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15675,7 +15675,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -15688,8 +15688,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -15702,10 +15702,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "gmc",
@@ -15717,9 +15717,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "gmc",
@@ -15731,7 +15731,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15745,7 +15745,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15759,7 +15759,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15773,7 +15773,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -15787,9 +15787,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "gmc",
@@ -15800,8 +15800,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -16375,7 +16375,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -16388,8 +16388,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -16402,10 +16402,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "cadillac",
@@ -16417,9 +16417,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "cadillac",
@@ -16431,7 +16431,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -16445,7 +16445,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -16459,7 +16459,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -16473,7 +16473,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -16487,9 +16487,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "cadillac",
@@ -16500,8 +16500,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17075,7 +17075,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -17088,8 +17088,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -17102,10 +17102,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lincoln",
@@ -17117,9 +17117,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lincoln",
@@ -17131,7 +17131,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17145,7 +17145,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17159,7 +17159,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17173,7 +17173,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17187,9 +17187,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lincoln",
@@ -17200,8 +17200,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17775,7 +17775,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -17788,8 +17788,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -17802,10 +17802,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "tesla",
@@ -17817,9 +17817,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "tesla",
@@ -17831,7 +17831,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17845,7 +17845,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17859,7 +17859,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17873,7 +17873,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -17887,9 +17887,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "tesla",
@@ -17900,8 +17900,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -18475,7 +18475,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -18488,8 +18488,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -18502,10 +18502,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "rivian",
@@ -18517,9 +18517,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "rivian",
@@ -18531,7 +18531,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -18545,7 +18545,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -18559,7 +18559,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -18573,7 +18573,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -18587,9 +18587,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "rivian",
@@ -18600,8 +18600,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19175,7 +19175,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -19188,8 +19188,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -19202,10 +19202,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lucid",
@@ -19217,9 +19217,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lucid",
@@ -19231,7 +19231,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19245,7 +19245,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19259,7 +19259,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19273,7 +19273,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19287,9 +19287,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lucid",
@@ -19300,8 +19300,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19875,7 +19875,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -19888,8 +19888,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -19902,10 +19902,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "porsche",
@@ -19917,9 +19917,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "porsche",
@@ -19931,7 +19931,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19945,7 +19945,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19959,7 +19959,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19973,7 +19973,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -19987,9 +19987,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "porsche",
@@ -20000,8 +20000,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -20575,7 +20575,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -20588,8 +20588,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -20602,10 +20602,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "land-rover",
@@ -20617,9 +20617,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "land-rover",
@@ -20631,7 +20631,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -20645,7 +20645,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -20659,7 +20659,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -20673,7 +20673,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -20687,9 +20687,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "land-rover",
@@ -20700,8 +20700,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -21275,7 +21275,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -21288,8 +21288,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -21302,10 +21302,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "jaguar",
@@ -21317,9 +21317,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "jaguar",
@@ -21331,7 +21331,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -21345,7 +21345,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -21359,7 +21359,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -21373,7 +21373,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -21387,9 +21387,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "jaguar",
@@ -21400,8 +21400,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -21975,7 +21975,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -21988,8 +21988,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -22002,10 +22002,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mitsubishi",
@@ -22017,9 +22017,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mitsubishi",
@@ -22031,7 +22031,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22045,7 +22045,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22059,7 +22059,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22073,7 +22073,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22087,9 +22087,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mitsubishi",
@@ -22100,8 +22100,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22675,7 +22675,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -22688,8 +22688,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -22702,10 +22702,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "genesis",
@@ -22717,9 +22717,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "genesis",
@@ -22731,7 +22731,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22745,7 +22745,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22759,7 +22759,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22773,7 +22773,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -22787,9 +22787,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "genesis",
@@ -22800,8 +22800,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -23375,7 +23375,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -23388,8 +23388,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -23402,10 +23402,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "alfa-romeo",
@@ -23417,9 +23417,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "alfa-romeo",
@@ -23431,7 +23431,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -23445,7 +23445,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -23459,7 +23459,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -23473,7 +23473,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -23487,9 +23487,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "alfa-romeo",
@@ -23500,8 +23500,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24075,7 +24075,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -24088,8 +24088,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -24102,10 +24102,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "fiat",
@@ -24117,9 +24117,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "fiat",
@@ -24131,7 +24131,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24145,7 +24145,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24159,7 +24159,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24173,7 +24173,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24187,9 +24187,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "fiat",
@@ -24200,8 +24200,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24775,7 +24775,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -24788,8 +24788,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -24802,10 +24802,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mini",
@@ -24817,9 +24817,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mini",
@@ -24831,7 +24831,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24845,7 +24845,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24859,7 +24859,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24873,7 +24873,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -24887,9 +24887,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mini",
@@ -24900,8 +24900,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -25475,7 +25475,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -25488,8 +25488,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -25502,10 +25502,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "saab",
@@ -25517,9 +25517,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "saab",
@@ -25531,7 +25531,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -25545,7 +25545,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -25559,7 +25559,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -25573,7 +25573,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -25587,9 +25587,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "saab",
@@ -25600,8 +25600,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26175,7 +26175,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -26188,8 +26188,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -26202,10 +26202,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "saturn",
@@ -26217,9 +26217,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "saturn",
@@ -26231,7 +26231,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26245,7 +26245,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26259,7 +26259,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26273,7 +26273,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26287,9 +26287,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "saturn",
@@ -26300,8 +26300,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26875,7 +26875,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -26888,8 +26888,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -26902,10 +26902,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "pontiac",
@@ -26917,9 +26917,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "pontiac",
@@ -26931,7 +26931,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26945,7 +26945,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26959,7 +26959,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26973,7 +26973,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -26987,9 +26987,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "pontiac",
@@ -27000,8 +27000,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -27575,7 +27575,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -27588,8 +27588,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -27602,10 +27602,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "oldsmobile",
@@ -27617,9 +27617,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "oldsmobile",
@@ -27631,7 +27631,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -27645,7 +27645,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -27659,7 +27659,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -27673,7 +27673,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -27687,9 +27687,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "oldsmobile",
@@ -27700,8 +27700,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -28275,7 +28275,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -28288,8 +28288,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -28302,10 +28302,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mercury",
@@ -28317,9 +28317,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mercury",
@@ -28331,7 +28331,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -28345,7 +28345,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -28359,7 +28359,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -28373,7 +28373,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -28387,9 +28387,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mercury",
@@ -28400,8 +28400,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -28975,7 +28975,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -28988,8 +28988,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -29002,10 +29002,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "hummer",
@@ -29017,9 +29017,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "hummer",
@@ -29031,7 +29031,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29045,7 +29045,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29059,7 +29059,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29073,7 +29073,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29087,9 +29087,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "hummer",
@@ -29100,8 +29100,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29675,7 +29675,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -29688,8 +29688,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -29702,10 +29702,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "plymouth",
@@ -29717,9 +29717,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "plymouth",
@@ -29731,7 +29731,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29745,7 +29745,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29759,7 +29759,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29773,7 +29773,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -29787,9 +29787,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "plymouth",
@@ -29800,8 +29800,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -30375,7 +30375,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -30388,8 +30388,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -30402,10 +30402,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "scion",
@@ -30417,9 +30417,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "scion",
@@ -30431,7 +30431,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -30445,7 +30445,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -30459,7 +30459,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -30473,7 +30473,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -30487,9 +30487,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "scion",
@@ -30500,8 +30500,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31075,7 +31075,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -31088,8 +31088,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -31102,10 +31102,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "suzuki",
@@ -31117,9 +31117,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "suzuki",
@@ -31131,7 +31131,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31145,7 +31145,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31159,7 +31159,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31173,7 +31173,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31187,9 +31187,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "suzuki",
@@ -31200,8 +31200,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31775,7 +31775,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -31788,8 +31788,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -31802,10 +31802,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "isuzu",
@@ -31817,9 +31817,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "isuzu",
@@ -31831,7 +31831,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31845,7 +31845,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31859,7 +31859,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31873,7 +31873,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -31887,9 +31887,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "isuzu",
@@ -31900,8 +31900,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -32475,7 +32475,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -32488,8 +32488,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -32502,10 +32502,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "smart",
@@ -32517,9 +32517,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "smart",
@@ -32531,7 +32531,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -32545,7 +32545,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -32559,7 +32559,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -32573,7 +32573,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -32587,9 +32587,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "smart",
@@ -32600,8 +32600,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33175,7 +33175,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -33188,8 +33188,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -33202,10 +33202,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "polestar",
@@ -33217,9 +33217,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "polestar",
@@ -33231,7 +33231,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33245,7 +33245,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33259,7 +33259,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33273,7 +33273,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33287,9 +33287,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "polestar",
@@ -33300,8 +33300,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33875,7 +33875,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -33888,8 +33888,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -33902,10 +33902,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "fisker",
@@ -33917,9 +33917,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "fisker",
@@ -33931,7 +33931,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33945,7 +33945,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33959,7 +33959,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33973,7 +33973,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -33987,9 +33987,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "fisker",
@@ -34000,8 +34000,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -34575,7 +34575,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -34588,8 +34588,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -34602,10 +34602,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lotus",
@@ -34617,9 +34617,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lotus",
@@ -34631,7 +34631,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -34645,7 +34645,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -34659,7 +34659,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -34673,7 +34673,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -34687,9 +34687,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lotus",
@@ -34700,8 +34700,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -35275,7 +35275,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -35288,8 +35288,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -35302,10 +35302,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "maserati",
@@ -35317,9 +35317,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "maserati",
@@ -35331,7 +35331,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -35345,7 +35345,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -35359,7 +35359,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -35373,7 +35373,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -35387,9 +35387,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "maserati",
@@ -35400,8 +35400,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -35975,7 +35975,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -35988,8 +35988,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -36002,10 +36002,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "aston-martin",
@@ -36017,9 +36017,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "aston-martin",
@@ -36031,7 +36031,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36045,7 +36045,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36059,7 +36059,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36073,7 +36073,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36087,9 +36087,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "aston-martin",
@@ -36100,8 +36100,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36675,7 +36675,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -36688,8 +36688,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -36702,10 +36702,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bentley",
@@ -36717,9 +36717,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bentley",
@@ -36731,7 +36731,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36745,7 +36745,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36759,7 +36759,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36773,7 +36773,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -36787,9 +36787,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bentley",
@@ -36800,8 +36800,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -37375,7 +37375,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -37388,8 +37388,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -37402,10 +37402,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "rolls-royce",
@@ -37417,9 +37417,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "rolls-royce",
@@ -37431,7 +37431,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -37445,7 +37445,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -37459,7 +37459,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -37473,7 +37473,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -37487,9 +37487,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "rolls-royce",
@@ -37500,8 +37500,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38075,7 +38075,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -38088,8 +38088,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -38102,10 +38102,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lamborghini",
@@ -38117,9 +38117,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lamborghini",
@@ -38131,7 +38131,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38145,7 +38145,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38159,7 +38159,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38173,7 +38173,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38187,9 +38187,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "lamborghini",
@@ -38200,8 +38200,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38775,7 +38775,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -38788,8 +38788,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -38802,10 +38802,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ferrari",
@@ -38817,9 +38817,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ferrari",
@@ -38831,7 +38831,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38845,7 +38845,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38859,7 +38859,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38873,7 +38873,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -38887,9 +38887,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "ferrari",
@@ -38900,8 +38900,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -39475,7 +39475,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -39488,8 +39488,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -39502,10 +39502,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mclaren",
@@ -39517,9 +39517,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mclaren",
@@ -39531,7 +39531,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -39545,7 +39545,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -39559,7 +39559,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -39573,7 +39573,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -39587,9 +39587,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "mclaren",
@@ -39600,8 +39600,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40175,7 +40175,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -40188,8 +40188,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -40202,10 +40202,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bugatti",
@@ -40217,9 +40217,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bugatti",
@@ -40231,7 +40231,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40245,7 +40245,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40259,7 +40259,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40273,7 +40273,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40287,9 +40287,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "bugatti",
@@ -40300,8 +40300,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40875,7 +40875,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -40888,8 +40888,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -40902,10 +40902,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "maybach",
@@ -40917,9 +40917,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "maybach",
@@ -40931,7 +40931,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40945,7 +40945,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40959,7 +40959,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40973,7 +40973,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -40987,9 +40987,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "maybach",
@@ -41000,8 +41000,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -41575,7 +41575,7 @@
     "stateAbbreviation": "MD",
     "stateRegion": "Mid-Atlantic",
     "insuranceMinimum": "30/60/15",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -41588,8 +41588,8 @@
     "stateName": "Massachusetts",
     "stateAbbreviation": "MA",
     "stateRegion": "New England",
-    "insuranceMinimum": "20/40/5",
-    "averageInsuranceCost": 1388,
+    "insuranceMinimum": "25/50/30",
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "evIncentives": true
   },
@@ -41602,10 +41602,10 @@
     "stateName": "Michigan",
     "stateAbbreviation": "MI",
     "stateRegion": "Midwest",
-    "insuranceMinimum": "50/100/10 (PIP required)",
-    "averageInsuranceCost": 2541,
+    "insuranceMinimum": "50/100/10 (PIP and PPI required)",
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "delorean",
@@ -41617,9 +41617,9 @@
     "stateAbbreviation": "MN",
     "stateRegion": "Midwest",
     "insuranceMinimum": "30/60/10",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "delorean",
@@ -41631,7 +41631,7 @@
     "stateAbbreviation": "MS",
     "stateRegion": "South",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -41645,7 +41645,7 @@
     "stateAbbreviation": "MO",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -41659,7 +41659,7 @@
     "stateAbbreviation": "MT",
     "stateRegion": "Mountain West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -41673,7 +41673,7 @@
     "stateAbbreviation": "NE",
     "stateRegion": "Midwest",
     "insuranceMinimum": "25/50/25",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "evIncentives": false
   },
@@ -41687,9 +41687,9 @@
     "stateAbbreviation": "NV",
     "stateRegion": "West",
     "insuranceMinimum": "25/50/20",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
-    "evIncentives": true
+    "evIncentives": false
   },
   {
     "makeSlug": "delorean",
@@ -41700,8 +41700,8 @@
     "stateName": "New Hampshire",
     "stateAbbreviation": "NH",
     "stateRegion": "New England",
-    "insuranceMinimum": "25/50/25 (not mandatory)",
-    "averageInsuranceCost": 1014,
+    "insuranceMinimum": "25/50/25, not mandatory",
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "evIncentives": false
   },
