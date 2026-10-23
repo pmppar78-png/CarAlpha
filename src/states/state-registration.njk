@@ -36,10 +36,12 @@ eleventyComputed:
         <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Title Fee</div>
         <div class="font-bold text-white mt-1">{{ state.titleFee }}</div>
       </div>
+      {% if state.plateFee %}
       <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
         <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Plate Fee</div>
         <div class="font-bold text-white mt-1">{{ state.plateFee | feeLabel }}</div>
       </div>
+      {% endif %}
     </div>
     <p class="text-silver-400 text-sm leading-relaxed mt-4">{{ state.registrationNotes }}</p>
   </div>
