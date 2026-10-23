@@ -22,5 +22,41 @@
     "insurance": true,
     "registration": true,
     "ev": true
+  },
+  "california": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "colorado": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "connecticut": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "delaware": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "washington-dc": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "florida": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
   }
 }
