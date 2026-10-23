@@ -5,6 +5,10 @@ const path = require('path');
 
 const MODELS_PATH = path.join(__dirname, '..', 'src', '_data', 'models.json');
 const MODEL_YEARS_PATH = path.join(__dirname, '..', 'src', '_data', 'modelYears.json');
+const ABSENT_PATH = path.join(__dirname, '..', 'src', '_data', 'absentModelYears.json');
+const absent = fs.existsSync(ABSENT_PATH)
+  ? new Set(JSON.parse(fs.readFileSync(ABSENT_PATH, 'utf-8')).years || [])
+  : new Set();
 
 const MAX_YEAR = 2026;
 const PRODUCTION_GAP_THRESHOLD = 5; // gaps of 5+ consecutive years are treated as production gaps
@@ -80,6 +84,11 @@ for (const model of models) {
       skippedGaps.push(gap);
     } else {
       for (let y = gap.start; y <= gap.end; y++) {
+        const id = `${model.makeSlug}/${model.slug}/${y}`;
+        if (absent.has(id)) {
+          console.log(`  SKIPPED ${model.makeName} ${model.name} ${y}: not a real model year`);
+          continue;
+        }
         yearsToAdd.push(y);
       }
     }

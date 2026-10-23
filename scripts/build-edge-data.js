@@ -45,6 +45,7 @@ function buildEdgeData() {
       makeSlug: model.makeSlug,
       yearStart: model.yearStart,
       yearEnd: model.yearEnd ?? null,
+      description: model.description || "",
     };
   }
 
@@ -71,6 +72,7 @@ function buildEdgeData() {
       averageInsuranceCost: state.averageInsuranceCost,
       hasLemonLaw: state.hasLemonLaw,
       lemonLawSummary: state.lemonLawSummary || "",
+      lemonLawCitation: state.lemonLawCitation || "",
       evIncentives: state.evIncentives,
       evIncentiveDetails: state.evIncentiveDetails || "",
       hasEmissions: state.hasEmissions || false,
@@ -79,6 +81,8 @@ function buildEdgeData() {
       safetyInspectionDetails: state.safetyInspectionDetails || "",
       registrationFeeRange: state.registrationFeeRange || "",
       registrationNotes: state.registrationNotes || "",
+      evRegistrationDetails: state.evRegistrationDetails || "",
+      evFeeReplaces: state.evFeeReplaces || false,
       titleFee: state.titleFee || "",
       plateFee: state.plateFee || "",
       description: state.description || "",
@@ -119,6 +123,13 @@ function buildEdgeData() {
     statesByRegion[state.region].push(state.slug);
   }
 
+  let facts = {};
+  const factsPath = path.join(DATA_DIR, "vehicleFacts.json");
+  if (fs.existsSync(factsPath)) {
+    const saved = readJSON("vehicleFacts.json");
+    facts = saved.vehicles || {};
+  }
+
   const output = {
     makes,
     models,
@@ -127,6 +138,7 @@ function buildEdgeData() {
     modelsByMake,
     yearsByModel,
     statesByRegion,
+    facts,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });

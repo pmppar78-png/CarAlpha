@@ -5,7 +5,6 @@ pagination:
   size: 1
   alias: entry
 permalink: "/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/"
-robots: "noindex, follow"
 eleventyComputed:
   title: "{{ entry.year }} {{ entry.makeName }} {{ entry.name }} — VIN Decoder, Specs & Recalls"
   description: "Free VIN decoder and recall check for the {{ entry.year }} {{ entry.makeName }} {{ entry.name }}. Decode any {{ entry.year }} {{ entry.name }} VIN for full specs, safety recalls, and ownership resources."
@@ -77,9 +76,24 @@ eleventyComputed:
       </div>
     </div>
 
+    {% set facts = entry | factSentences %}
+    {% if facts.length %}
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">Recorded figures, October 23, 2026</h2>
+      </div>
+      <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed space-y-3">
+        {% for line in facts %}
+        <p>{{ line }}</p>
+        {% endfor %}
+        <p class="text-xs text-silver-500"><a href="https://www.fueleconomy.gov/" class="text-volt-400 hover:underline" rel="noopener">fueleconomy.gov</a> · <a href="https://api.nhtsa.gov/" class="text-volt-400 hover:underline" rel="noopener">api.nhtsa.gov</a></p>
+      </div>
+    </div>
+    {% endif %}
+
     {# VIN Decoder #}
     <div class="mb-12">
-      <h2 class="text-xl font-black text-white mb-6">Decode a {{ entry.year }} {{ entry.makeName }} {{ entry.name }} VIN</h2>
+      <h2 class="text-xl font-black text-white mb-6">Decode {{ entry.year | aan }} {{ entry.year }} {{ entry.makeName }} {{ entry.name }} VIN</h2>
       <div class="vin-card glass-card rounded-2xl p-6 glow-cyan carbon-panel">
         <label class="block text-sm font-bold text-silver-300 mb-3 tracking-wide uppercase">Enter VIN</label>
         <div class="flex flex-col sm:flex-row gap-3">
@@ -97,7 +111,7 @@ eleventyComputed:
 
     {# Shared guides — the generic advice lives here, not copied onto every year #}
     <div class="mb-10">
-      <h2 class="text-xl font-black text-white mb-4">Next steps for a {{ entry.year }} {{ entry.name }}</h2>
+      <h2 class="text-xl font-black text-white mb-4">Next steps for {{ entry.year | aan }} {{ entry.year }} {{ entry.name }}</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
         <a href="/recall-checker/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Check recalls by VIN</div>
@@ -113,7 +127,7 @@ eleventyComputed:
         </a>
         <a href="/guides/warranties/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Warranty guide</div>
-          <div class="text-[10px] text-silver-500 mt-1">How to read what's left on a {{ copy.ctx.age }}-year-old {{ entry.name }}</div>
+          <div class="text-[10px] text-silver-500 mt-1">How to read what's left on {{ copy.ctx.age | aan }} {{ copy.ctx.age }}-year-old {{ entry.name }}</div>
         </a>
         <a href="/guides/recalls-resale-value/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Recalls and resale value</div>
@@ -138,11 +152,11 @@ eleventyComputed:
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Warranty</h3>
           <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.warranty }}</p>
         </a>
-        <a href="/go/loans/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+        <a href="/guides/financing/" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Financing</h3>
           <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.financing }}</p>
         </a>
-        <a href="/go/sell/" rel="nofollow sponsored noopener" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
+        <a href="/blog/how-to-negotiate-used-car-price/" class="glass-card metallic-border rounded-xl p-5 carbon-panel card-hover group">
           <h3 class="font-bold text-white text-sm mb-2 group-hover:text-volt-400 transition-colors">Selling</h3>
           <p class="text-xs text-silver-400 leading-relaxed" data-vehicle-copy>{{ copy.blurbs.selling }}</p>
         </a>

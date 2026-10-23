@@ -1,0 +1,120 @@
+---
+layout: layouts/page.njk
+title: "Lemon Law Notice Letter — Car Alpha"
+description: "Fill in a lemon-law notice letter with the VIN, delivery date, mileage, and repair visits. Copy it and send it the way your state's statute describes. It is a draft, not a filing."
+permalink: /guides/lemon-law/notice-letter/
+breadcrumbs:
+  - label: Home
+    url: /
+  - label: Guides
+    url: /guides/
+  - label: Lemon Law
+    url: /guides/lemon-law/
+  - label: Notice Letter
+---
+
+<p class="text-lg text-silver-400 leading-relaxed mb-6">
+  Many state lemon laws require the owner, or someone writing for the owner, to tell the manufacturer about the defect in writing and to give that manufacturer a chance to repair it. This page builds that letter from the facts you type. It does not pick a deadline, it does not address the letter for you, and it is not a complaint you file with a court or an arbitration board.
+</p>
+<p class="text-sm text-silver-400 leading-relaxed mb-8">
+  Read the <a href="/guides/lemon-law/qualification-checker/" class="text-volt-400 hover:underline">qualification checker</a> and the state page linked in the draft. If that page says certified mail, return receipt, or a specific manufacturer address, follow that instruction. Keep a copy of the letter and the repair orders.
+</p>
+
+<form id="letter-form" class="glass-card metallic-border rounded-2xl p-6 carbon-panel mb-8 grid sm:grid-cols-2 gap-4">
+  <div>
+    <label for="owner" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Your name</label>
+    <input id="owner" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="Alex Morgan" />
+  </div>
+  <div>
+    <label for="address" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Your mailing address</label>
+    <input id="address" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="Street, city, state, ZIP" />
+  </div>
+  <div>
+    <label for="state" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">State</label>
+    <select id="state" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm">
+      {% for state in states %}
+      <option value="{{ state.slug }}">{{ state.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="vehicle" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Year, make, and model</label>
+    <input id="vehicle" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="2019 Honda Civic" />
+  </div>
+  <div>
+    <label for="vin" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">VIN</label>
+    <input id="vin" maxlength="17" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm font-mono" placeholder="17 characters" />
+  </div>
+  <div>
+    <label for="delivered" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Delivery date</label>
+    <input id="delivered" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="March 2, 2019" />
+  </div>
+  <div>
+    <label for="miles" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Mileage now</label>
+    <input id="miles" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="18400" />
+  </div>
+  <div>
+    <label for="dealer" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Selling or servicing dealer</label>
+    <input id="dealer" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" />
+  </div>
+  <div class="sm:col-span-2">
+    <label for="problem" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">The defect, in your words</label>
+    <textarea id="problem" rows="3" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="The transmission slips between second and third and the dealer has not corrected it."></textarea>
+  </div>
+  <div class="sm:col-span-2">
+    <label for="visits" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Repair visits (date, mileage, what the order says)</label>
+    <textarea id="visits" rows="4" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" placeholder="June 1, 2019, 4,200 miles, repair order 4412, transmission slip"></textarea>
+  </div>
+  <div class="sm:col-span-2">
+    <button type="submit" class="px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">Build the draft</button>
+  </div>
+</form>
+
+<pre id="letter" class="hidden whitespace-pre-wrap text-sm text-silver-200 bg-black/30 border border-white/10 rounded-2xl p-6 mb-6"></pre>
+<p id="letter-note" class="hidden text-sm text-silver-400 mb-8"></p>
+
+<script id="letter-states" type="application/json">[{% for state in states %}{"slug":{{ state.slug | jsonStringify | safe }},"name":{{ state.name | jsonStringify | safe }},"citation":{{ state.lemonLawCitation | jsonStringify | safe }}}{% if not loop.last %},{% endif %}{% endfor %}]</script>
+<script>
+(function () {
+  var states = JSON.parse(document.getElementById("letter-states").textContent);
+  var bySlug = {};
+  states.forEach(function (s) { bySlug[s.slug] = s; });
+  var form = document.getElementById("letter-form");
+  var out = document.getElementById("letter");
+  var note = document.getElementById("letter-note");
+  function val(id) { return (document.getElementById(id).value || "").trim(); }
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var state = bySlug[document.getElementById("state").value];
+    var owner = val("owner") || "[Your name]";
+    var lines = [
+      owner,
+      val("address") || "[Your mailing address]",
+      "",
+      "[Date you mail this]",
+      "",
+      "[Manufacturer name]",
+      "[Manufacturer address from the warranty or the state page]",
+      "",
+      "Re: Written notice of a defect — " + (val("vehicle") || "[year, make, model]") + ", VIN " + (val("vin") || "[VIN]"),
+      "",
+      "I am the owner of the vehicle named above. It was delivered to me on " + (val("delivered") || "[delivery date]") + ". The odometer today reads " + (val("miles") || "[mileage]") + " miles. The selling or servicing dealer is " + (val("dealer") || "[dealer]") + ".",
+      "",
+      "The defect is: " + (val("problem") || "[describe the defect]"),
+      "",
+      "Repair visits I can document:",
+      val("visits") || "[date, mileage, and repair-order number for each visit]",
+      "",
+      "Please treat this letter as written notice of that defect and as a request for the repair or the remedy provided under " + (state.citation || (state.name + "'s lemon law")) + ". I will make the car available for the chance to cure that the statute requires.",
+      "",
+      "Copies of the repair orders are enclosed.",
+      "",
+      owner
+    ];
+    out.textContent = lines.join("\n");
+    out.classList.remove("hidden");
+    note.innerHTML = "Send this the way the <a class=\"text-volt-400 hover:underline\" href=\"/states/" + state.slug + "/lemon-law/\">" + state.name + " lemon-law page</a> describes. The page's summary is the notice rule. This draft does not calculate a deadline.";
+    note.classList.remove("hidden");
+  });
+})();
+</script>

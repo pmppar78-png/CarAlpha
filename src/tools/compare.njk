@@ -95,15 +95,14 @@ permalink: /compare/
 <section class="relative">
   <div class="divider"></div>
   <div class="max-w-4xl mx-auto px-4 py-20 prose-dark">
-    <h2>How Vehicle Comparison Works</h2>
-    <p>Our vehicle comparison tool decodes both VINs using the official NHTSA VPIC database and presents the specifications in a clear side-by-side format. This makes it easy to spot differences in engine size, body style, drivetrain, transmission, and manufacturing details.</p>
-
-    <h2>When to Compare Vehicles</h2>
+    <h2>What the two VIN calls return</h2>
+    <p>Each VIN is sent to NHTSA's DecodeVinValuesExtended endpoint on vPIC. The table shows the fields that endpoint actually fills in: model year, make, model, series, trim, engine, cylinders, displacement, fuel, body, drive, transmission, doors, gross vehicle weight rating, and the plant that built it. A highlighted cell means the two decoded values differ. An em dash means vPIC returned that field blank for that VIN. Blank means this decoder did not receive a value.</p>
+    <p>vPIC does not return a price, an accident history, a title brand, an odometer reading, or a list of owners. Those questions belong to a title record, an NMVTIS report at vehiclehistory.gov, and the car itself. The recall line under the table is a separate call to NHTSA's recalls-by-vehicle feed for the decoded year, make, and model. That count is campaigns for the nameplate and year, not a statement that this VIN still has an open recall. A dealer has to match the campaign to the VIN.</p>
+    <h2>How to read a difference</h2>
     <ul>
-      <li><strong>Shopping for a car:</strong> Compare two vehicles you are considering to see which better fits your needs.</li>
-      <li><strong>Trading up:</strong> See how your current vehicle compares to the one you want to buy.</li>
-      <li><strong>Insurance shopping:</strong> Understand how different specs might affect insurance rates.</li>
-      <li><strong>Verifying listings:</strong> Compare the VIN data against what a seller claims about two similar vehicles.</li>
+      <li><strong>Plant and model year.</strong> If the seller's ad names a different year or a different assembly plant than the VIN, stop and re-read the VIN. Those two fields are stamped into the identifier.</li>
+      <li><strong>Engine, drive, and transmission.</strong> Use these when you are choosing between two cars of the same name. They change insurance and repair cost more than the paint does. They do not, by themselves, tell you which car is safer.</li>
+      <li><strong>Recall campaigns.</strong> A higher count is not a worse car in your driveway. It is how many campaigns NHTSA has on file for that year and model. Check the VIN before you treat any of them as open.</li>
     </ul>
   </div>
 </section>
@@ -117,17 +116,33 @@ permalink: /compare/
   function fetchJSON(url,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||12000);return fetch(url,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).finally(function(){clearTimeout(t);});}
 
   function renderComparison(d1,d2){
-    var rows=[['Year','ModelYear'],['Make','Make'],['Model','Model'],['Trim','Trim'],['Engine','EngineConfiguration'],['Displacement','DisplacementL'],['Fuel Type','FuelTypePrimary'],['Body Style','BodyClass'],['Drive Type','DriveType'],['Transmission','TransmissionStyle'],['Doors','Doors'],['Plant Country','PlantCountry'],['Plant City','PlantCity']];
+    var rows=[['Year','ModelYear'],['Make','Make'],['Model','Model'],['Series','Series'],['Trim','Trim'],['Engine','EngineConfiguration'],['Cylinders','EngineCylinders'],['Displacement','DisplacementL'],['Fuel Type','FuelTypePrimary'],['Body Style','BodyClass'],['Drive Type','DriveType'],['Transmission','TransmissionStyle'],['Doors','Doors'],['GVWR','GVWR'],['Plant Country','PlantCountry'],['Plant City','PlantCity']];
     var html='<div class="glass-card metallic-border rounded-2xl overflow-hidden animate-in carbon-panel"><div class="steel-header px-6 py-4"><h3 class="text-lg font-bold text-white">Side-by-Side Comparison</h3></div><div class="px-6 py-5"><table class="w-full"><thead><tr><th class="text-left text-xs font-bold text-silver-400 uppercase tracking-wider pb-3 pr-4">Spec</th><th class="text-left text-xs font-bold text-volt-400 uppercase tracking-wider pb-3 pr-4">Vehicle 1</th><th class="text-left text-xs font-bold text-volt-400 uppercase tracking-wider pb-3">Vehicle 2</th></tr></thead><tbody>';
     rows.forEach(function(r){
       var v1=d1[r[1]]||'&mdash;';var v2=d2[r[1]]||'&mdash;';
       var diff=String(v1).toLowerCase()!==String(v2).toLowerCase();
       html+='<tr class="border-t border-white/[0.04]"><td class="py-3 pr-4 text-sm text-silver-400 font-medium">'+r[0]+'</td><td class="py-3 pr-4 text-sm '+(diff?'text-volt-300 font-semibold':'text-white')+'">'+v1+'</td><td class="py-3 text-sm '+(diff?'text-volt-300 font-semibold':'text-white')+'">'+v2+'</td></tr>';
     });
-    html+='</tbody></table></div></div>';
+    html+='</tbody></table><p class="mt-4 text-xs text-silver-500" id="recallNote">Looking up NHTSA recall campaigns for both nameplates.</p></div></div>';
     compTable.innerHTML=html;
     compTable.classList.remove('hidden');
     if(affCTA)affCTA.classList.remove('hidden');
+    Promise.all([recallCount(d1), recallCount(d2)]).then(function (counts) {
+      var note = document.getElementById('recallNote');
+      if (!note) return;
+      function label(n) { return n == null ? 'not returned' : String(n); }
+      note.textContent = 'NHTSA recall campaigns on file for the decoded year, make, and model: ' + label(counts[0]) + ' and ' + label(counts[1]) + '. A campaign count is not an open-recall finding for these two VINs.';
+    });
+  }
+
+  function recallCount(d) {
+    if (!d.Make || !d.Model || !d.ModelYear) return Promise.resolve(null);
+    var url = 'https://api.nhtsa.gov/recalls/recallsByVehicle?make=' + encodeURIComponent(d.Make) + '&model=' + encodeURIComponent(d.Model) + '&modelYear=' + encodeURIComponent(d.ModelYear);
+    return fetchJSON(url).then(function (j) {
+      if (j && typeof j.Count === 'number') return j.Count;
+      if (j && Array.isArray(j.results)) return j.results.length;
+      return null;
+    }).catch(function () { return null; });
   }
 
   async function compare(){

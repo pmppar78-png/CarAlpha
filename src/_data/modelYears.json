@@ -76,14 +76,6 @@
     "name": "MDX",
     "makeSlug": "acura",
     "makeName": "Acura",
-    "year": 2021,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "mdx",
-    "name": "MDX",
-    "makeSlug": "acura",
-    "makeName": "Acura",
     "year": 2020,
     "bodyType": "SUV"
   },
@@ -1165,14 +1157,6 @@
     "makeSlug": "audi",
     "makeName": "Audi",
     "year": 2022,
-    "bodyType": "Sedan"
-  },
-  {
-    "slug": "a3",
-    "name": "A3",
-    "makeSlug": "audi",
-    "makeName": "Audi",
-    "year": 2021,
     "bodyType": "Sedan"
   },
   {
@@ -7452,14 +7436,6 @@
     "name": "Durango",
     "makeSlug": "dodge",
     "makeName": "Dodge",
-    "year": 2010,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "durango",
-    "name": "Durango",
-    "makeSlug": "dodge",
-    "makeName": "Dodge",
     "year": 2009,
     "bodyType": "SUV"
   },
@@ -9348,14 +9324,6 @@
     "name": "Ranger",
     "makeSlug": "ford",
     "makeName": "Ford",
-    "year": 2018,
-    "bodyType": "Truck"
-  },
-  {
-    "slug": "ranger",
-    "name": "Ranger",
-    "makeSlug": "ford",
-    "makeName": "Ford",
     "year": 2017,
     "bodyType": "Truck"
   },
@@ -9365,14 +9333,6 @@
     "makeSlug": "ford",
     "makeName": "Ford",
     "year": 2016,
-    "bodyType": "Truck"
-  },
-  {
-    "slug": "ranger",
-    "name": "Ranger",
-    "makeSlug": "ford",
-    "makeName": "Ford",
-    "year": 2015,
     "bodyType": "Truck"
   },
   {
@@ -11196,14 +11156,6 @@
     "name": "Ridgeline",
     "makeSlug": "honda",
     "makeName": "Honda",
-    "year": 2016,
-    "bodyType": "Truck"
-  },
-  {
-    "slug": "ridgeline",
-    "name": "Ridgeline",
-    "makeSlug": "honda",
-    "makeName": "Honda",
     "year": 2015,
     "bodyType": "Truck"
   },
@@ -12509,14 +12461,6 @@
     "makeSlug": "infiniti",
     "makeName": "Infiniti",
     "year": 2022,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "qx60",
-    "name": "QX60",
-    "makeSlug": "infiniti",
-    "makeName": "Infiniti",
-    "year": 2021,
     "bodyType": "SUV"
   },
   {
@@ -13269,22 +13213,6 @@
     "makeSlug": "jeep",
     "makeName": "Jeep",
     "year": 2026,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "cherokee",
-    "name": "Cherokee",
-    "makeSlug": "jeep",
-    "makeName": "Jeep",
-    "year": 2025,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "cherokee",
-    "name": "Cherokee",
-    "makeSlug": "jeep",
-    "makeName": "Jeep",
-    "year": 2024,
     "bodyType": "SUV"
   },
   {
@@ -21484,14 +21412,6 @@
     "name": "Pathfinder",
     "makeSlug": "nissan",
     "makeName": "Nissan",
-    "year": 2021,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "pathfinder",
-    "name": "Pathfinder",
-    "makeSlug": "nissan",
-    "makeName": "Nissan",
     "year": 2020,
     "bodyType": "SUV"
   },
@@ -25820,14 +25740,6 @@
     "name": "BRZ",
     "makeSlug": "subaru",
     "makeName": "Subaru",
-    "year": 2021,
-    "bodyType": "Coupe"
-  },
-  {
-    "slug": "brz",
-    "name": "BRZ",
-    "makeSlug": "subaru",
-    "makeName": "Subaru",
     "year": 2020,
     "bodyType": "Coupe"
   },
@@ -29197,14 +29109,6 @@
     "makeSlug": "volvo",
     "makeName": "Volvo",
     "year": 2011,
-    "bodyType": "Sedan"
-  },
-  {
-    "slug": "s60",
-    "name": "S60",
-    "makeSlug": "volvo",
-    "makeName": "Volvo",
-    "year": 2010,
     "bodyType": "Sedan"
   },
   {

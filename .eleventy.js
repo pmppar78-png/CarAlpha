@@ -2,6 +2,9 @@ const { DateTime } = require("luxon");
 const path = require("path");
 const fs = require("fs");
 const vehicleCopy = require("./lib/vehicle-copy");
+const { articleFor } = require("./lib/article");
+const geoCopy = require("./lib/geo-copy");
+const { applyFaqJsonLd } = require("./lib/faq-jsonld");
 
 module.exports = function (eleventyConfig) {
   // ───────────────────────────────────────────────
@@ -58,6 +61,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("toLocaleString", function (value) {
     if (!value) return "0";
     return Number(value).toLocaleString();
+  });
+
+  eleventyConfig.addFilter("naicDollars", function (value) {
+    return Number(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  });
+
+  eleventyConfig.addFilter("feeLabel", function (value) {
+    const raw = String(value || "").trim();
+    if (/^included in registration$/i.test(raw)) return "Included in the registration fee";
+    return raw;
   });
 
   // getMakeName — look up make name from a model object
@@ -189,6 +202,41 @@ module.exports = function (eleventyConfig) {
     return _statesByRegion;
   }
 
+  eleventyConfig.addFilter("aan", function (word) {
+    return articleFor(word);
+  });
+
+  eleventyConfig.addFilter("makeFaqs", function (make) {
+    return vehicleCopy.makeFaqs(make);
+  });
+
+  eleventyConfig.addFilter("factFor", function (entry) {
+    const data = factsData();
+    if (!entry || !data || !data.vehicles) return null;
+    return data.vehicles[entry.makeSlug + "/" + entry.slug + "/" + entry.year] || null;
+  });
+
+  eleventyConfig.addFilter("factSentences", function (entry) {
+    const fact = factsData();
+    const row = fact && fact.vehicles ? fact.vehicles[entry.makeSlug + "/" + entry.slug + "/" + entry.year] : null;
+    if (!row) return [];
+    return geoCopy.factSentences({
+      year: entry.year,
+      make: entry.makeName,
+      model: entry.name,
+      fact: row,
+    });
+  });
+
+  let _facts = undefined;
+  function factsData() {
+    if (_facts === undefined) {
+      const file = path.join(__dirname, "src", "_data", "vehicleFacts.json");
+      _facts = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : null;
+    }
+    return _facts;
+  }
+
   eleventyConfig.addFilter("yearCopy", function (entry) {
     return vehicleCopy.yearCopy(entry);
   });
@@ -237,6 +285,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy({ "src/assets/favicons": "/" });
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  eleventyConfig.addTransform("faq-jsonld", function (content) {
+    if (!this.outputPath || !String(this.outputPath).endsWith(".html")) return content;
+    return applyFaqJsonLd(content);
+  });
 
   // ───────────────────────────────────────────────
   // BREADCRUMBS UNIVERSAL SHORTCODE

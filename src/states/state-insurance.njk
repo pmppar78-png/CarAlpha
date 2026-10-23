@@ -37,8 +37,8 @@ eleventyComputed:
       </div>
       {% if state.averageInsuranceCost %}
       <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Average Annual Premium</div>
-        <div class="font-bold text-white text-lg mt-1">${{ state.averageInsuranceCost }}</div>
+        <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">2024 combined average</div>
+        <div class="font-bold text-white text-lg mt-1">${{ state.averageInsuranceCost | naicDollars }}</div>
       </div>
       {% endif %}
     </div>
@@ -50,7 +50,7 @@ eleventyComputed:
 <h2 id="average-costs">Average Car Insurance Costs in {{ state.name }}</h2>
 
 {% if state.averageInsuranceCost %}
-<p>The average annual car insurance premium in {{ state.name }} is approximately <strong>${{ state.averageInsuranceCost }}</strong>. However, your actual rate will vary significantly based on several factors:</p>
+<p>The statewide all-vehicle average premium in {{ state.name }} is <strong>${{ state.averageInsuranceCost | naicDollars }}</strong>.{% if state.averageInsuranceSource %} {{ state.averageInsuranceSource }}{% endif %} Your own rate will vary based on several factors:</p>
 {% else %}
 <p>Car insurance rates in {{ state.name }} vary significantly based on several factors:</p>
 {% endif %}
