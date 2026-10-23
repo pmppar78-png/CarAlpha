@@ -20,47 +20,7 @@ eleventyComputed:
 }
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I decode a {{ make.name }} VIN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Enter your 17-character {{ make.name }} VIN into Car Alpha's free VIN decoder to instantly get full specs, recall history, manufacturing details, and ownership guidance using official NHTSA VPIC data."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I check {{ make.name }} recalls?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use Car Alpha's free recall checker or enter your {{ make.name }} VIN to search the official NHTSA recall database. All recall repairs are performed free of charge at authorized {{ make.name }} dealerships regardless of vehicle age or mileage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What {{ make.name }} models are available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ make.name }} currently produces a range of vehicles including {{ make.popularModels | join(', ') | replace('-', ' ') | title }}. Browse all {{ make.name }} models on Car Alpha for VIN decoding, specs, and recall information."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is {{ make.name }} VIN decoding free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Car Alpha provides 100% free {{ make.name }} VIN decoding using official NHTSA data. No account or payment required. Get instant results including make, model, year, engine, body type, trim, recalls, and more."
-      }
-    }
-  ]
-}
-</script>
-
+{% set faqs = make | makeFaqs %}
 {% breadcrumbs [{ label: "Home", url: "/" }, { label: "Makes", url: "/makes/" }, { label: make.name }] %}
 
 <section class="relative overflow-hidden">
@@ -122,7 +82,7 @@ eleventyComputed:
 
     {# VIN Decoder for this make #}
     <div class="mb-12">
-      <h2 class="text-xl font-black text-white mb-6">Decode a {{ make.name }} VIN</h2>
+      <h2 class="text-xl font-black text-white mb-6">Decode {{ make.name | aan }} {{ make.name }} VIN</h2>
       <div class="vin-card glass-card rounded-2xl p-6 glow-cyan carbon-panel">
         <label class="block text-sm font-bold text-silver-300 mb-3 tracking-wide uppercase">Enter your {{ make.name }} VIN</label>
         <div class="flex flex-col sm:flex-row gap-3">
@@ -146,6 +106,20 @@ eleventyComputed:
       <div class="px-6 py-5 text-sm text-silver-400 leading-relaxed">
         <p>{{ make.name }} vehicles, like all manufacturers, are subject to safety recalls issued by the National Highway Traffic Safety Administration (NHTSA). Recalls address safety-related defects or non-compliance with federal safety standards. All recall repairs are performed free of charge at authorized {{ make.name }} dealerships.</p>
         <p class="mt-3">To check if a specific {{ make.name }} vehicle has open recalls, enter the VIN above or use our <a href="/recall-checker/" class="text-volt-400 hover:underline">Recall Checker</a>.</p>
+      </div>
+    </div>
+
+    <div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel mb-10" id="faq">
+      <div class="steel-header px-6 py-4">
+        <h2 class="font-bold text-white text-lg">{{ make.name }} questions</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        {% for faq in faqs %}
+        <div class="faq-item">
+          <h3 class="text-sm font-bold text-silver-300">{{ faq.q }}</h3>
+          <p class="text-sm text-silver-400 leading-relaxed mt-1">{{ faq.a }}</p>
+        </div>
+        {% endfor %}
       </div>
     </div>
 
@@ -184,20 +158,6 @@ eleventyComputed:
               <div class="text-xs text-silver-500 mt-0.5">Get coverage quotes for your vehicle</div>
             </div>
           </a>
-          <a href="/go/mechanic/" rel="nofollow sponsored noopener" class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-volt-500/30 hover:bg-volt-600/[0.04] transition-all group">
-            <svg class="w-5 h-5 text-volt-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z"/></svg>
-            <div>
-              <div class="font-semibold text-white text-sm group-hover:text-volt-400 transition-colors">Find a {{ make.name }} Mechanic</div>
-              <div class="text-xs text-silver-500 mt-0.5">Certified repair shops near you</div>
-            </div>
-          </a>
-          <a href="/go/refinance/" rel="nofollow sponsored noopener" class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-volt-500/30 hover:bg-volt-600/[0.04] transition-all group">
-            <svg class="w-5 h-5 text-volt-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
-            <div>
-              <div class="font-semibold text-white text-sm group-hover:text-volt-400 transition-colors">Refinance Your Loan</div>
-              <div class="text-xs text-silver-500 mt-0.5">Lower your monthly payment</div>
-            </div>
-          </a>
         </div>
         <p class="mt-4 text-[10px] text-silver-500/50">Affiliate disclosure: We may earn when you click a partner link, at no cost to you.</p>
       </div>
@@ -225,7 +185,7 @@ eleventyComputed:
         </a>
         <a href="/guides/how-vin-fraud-works/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">How VIN Fraud Works</div>
-          <div class="text-[10px] text-silver-500 mt-1">Protect yourself when buying a {{ make.name }}</div>
+          <div class="text-[10px] text-silver-500 mt-1">Protect yourself when buying {{ make.name | aan }} {{ make.name }}</div>
         </a>
         <a href="/guides/carfax-vs-vin-lookup/" class="glass-card metallic-border rounded-xl p-4 card-hover carbon-panel group">
           <div class="font-bold text-white text-sm group-hover:text-volt-400 transition-colors">Carfax vs. Free VIN Lookup</div>

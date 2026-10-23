@@ -1102,7 +1102,7 @@
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $25,000 property damage",
     "averageInsuranceCost": 1823,
     "hasLemonLaw": true,
-    "lemonLawSummary": "Texas requires the repair attempts in Tex. Occ. Code § 2301.605 before the express warranty expires or before 24 months or 24,000 miles, whichever comes first. The presumption is four repairs of the same problem, two repairs of a serious safety hazard, or 30 days out of service. Time when the manufacturer lends a comparable car while a franchised dealer works on the owner's car does not count. A refund or replacement order under § 2301.606(c) requires written notice of the defect and a chance for the manufacturer, converter, or distributor to cure.",
+    "lemonLawSummary": "Tex. Occ. Code § 2301.605 sets the presumption before the express warranty expires or before 24 months or 24,000 miles, whichever comes first. The same nonconformity after four or more repairs is one path. A serious safety hazard after two or more repairs is the second path. A nonconformity that still substantially impairs use or market value after 30 or more cumulative days out of service is the third path. Subsection (b) extends those periods for war, invasion, strike, fire, flood, or another natural disaster, and subsection (c) leaves out any days the manufacturer or distributor lends a comparable vehicle while a franchised dealer repairs the owner's car. An order under § 2301.606(c) requires written notice of the defect and a chance for the manufacturer, converter, or distributor to cure.",
     "hasEmissions": true,
     "emissionsDetails": "Emissions testing is required as part of the annual safety inspection in 17 urban counties including Dallas-Fort Worth, Houston, Austin, San Antonio, and El Paso. Cost is approximately $11.50 for the emissions portion.",
     "hasSafetyInspection": true,
@@ -1115,7 +1115,7 @@
     "plateFee": "Included in registration",
     "lemonLawCitation": "Tex. Occ. Code § 2301.605",
     "lemonLawUrl": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.2301.htm",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-23"
   },
   {
     "name": "Utah",

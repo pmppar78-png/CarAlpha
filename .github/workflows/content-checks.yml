@@ -22,5 +22,7 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=4096
       - name: Repeated-sentence and hub-depth check
         run: npm run check:boilerplate
-      - name: Rate limiter tests
+      - name: Article, FAQ parity, and repeated-sentence check
+        run: npm run check:content
+      - name: Unit tests
         run: npm test

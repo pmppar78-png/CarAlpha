@@ -1,0 +1,130 @@
+---
+layout: layouts/page.njk
+title: "Lemon Law Qualification Checker — Car Alpha"
+description: "Compare months, miles, repair visits, and days out of service with the published lemon-law count for your state. The checker prints that state's summary. It is not a legal determination."
+permalink: /guides/lemon-law/qualification-checker/
+breadcrumbs:
+  - label: Home
+    url: /
+  - label: Guides
+    url: /guides/
+  - label: Lemon Law
+    url: /guides/lemon-law/
+  - label: Qualification Checker
+---
+
+<p class="text-lg text-silver-400 leading-relaxed mb-8">
+  Pick the state where the car was bought or registered, then enter the numbers you can document. The checker compares them with the repair count, the days-out count, and the outer time or mileage window published in that state's summary on this site. It does not know your warranty end date, it does not know whether the defect substantially impairs the car, and it does not decide a claim.
+</p>
+
+<form id="lemon-check" class="glass-card metallic-border rounded-2xl p-6 carbon-panel mb-8 space-y-5">
+  <div>
+    <label for="state" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">State</label>
+    <select id="state" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm">
+      {% for state in states %}
+      <option value="{{ state.slug }}">{{ state.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label for="months" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Months since delivery</label>
+      <input id="months" type="number" min="0" value="10" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" />
+    </div>
+    <div>
+      <label for="miles" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Miles since delivery</label>
+      <input id="miles" type="number" min="0" value="9000" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" />
+    </div>
+    <div>
+      <label for="repairs" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Repair visits for the same problem</label>
+      <input id="repairs" type="number" min="0" value="2" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" />
+    </div>
+    <div>
+      <label for="safety" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Visits for a serious safety defect</label>
+      <input id="safety" type="number" min="0" value="0" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" />
+    </div>
+    <div>
+      <label for="days" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Days out of service</label>
+      <input id="days" type="number" min="0" value="12" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm" />
+    </div>
+    <div>
+      <label for="notice" class="block text-xs font-bold text-silver-400 mb-2 tracking-wide uppercase">Written notice sent?</label>
+      <select id="notice" class="w-full px-4 py-3 rounded-xl input-premium text-white text-sm">
+        <option value="no">Not yet</option>
+        <option value="yes">Yes, to the manufacturer</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">Compare with the published count</button>
+</form>
+
+<div id="lemon-result" class="hidden glass-card metallic-border rounded-2xl p-6 carbon-panel mb-8 space-y-4 text-sm text-silver-300 leading-relaxed"></div>
+
+<p class="text-sm text-silver-500 mb-8">The counts come from the state summaries on Car Alpha, which were read from the cited statutes. A later amendment controls. <a href="/guides/lemon-law/notice-letter/" class="text-volt-400 hover:underline">Draft a notice letter</a> when the summary tells you to write the manufacturer.</p>
+
+<script id="lemon-checks" type="application/json">{{ lemonChecks | jsonStringify | safe }}</script>
+<script id="lemon-states" type="application/json">[{% for state in states %}{"slug":{{ state.slug | jsonStringify | safe }},"name":{{ state.name | jsonStringify | safe }},"citation":{{ state.lemonLawCitation | jsonStringify | safe }},"summary":{{ state.lemonLawSummary | jsonStringify | safe }},"url":"/states/{{ state.slug }}/lemon-law/"}{% if not loop.last %},{% endif %}{% endfor %}]</script>
+<script>
+(function () {
+  var checks = JSON.parse(document.getElementById("lemon-checks").textContent);
+  var states = JSON.parse(document.getElementById("lemon-states").textContent);
+  var bySlug = {};
+  states.forEach(function (s) { bySlug[s.slug] = s; });
+  var form = document.getElementById("lemon-check");
+  var box = document.getElementById("lemon-result");
+
+  function num(id) {
+    var n = parseInt(document.getElementById(id).value, 10);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function windowLine(rule, months, miles) {
+    if (!rule || rule.window === "warranty") {
+      return "The summary ties the presumption to the express warranty. Months and miles alone cannot show whether that warranty is still open.";
+    }
+    var monthOk = rule.months == null || months <= rule.months;
+    var mileOk = rule.miles == null || miles <= rule.miles;
+    var inside = rule.window === "later" ? (monthOk || mileOk) : (monthOk && mileOk);
+    var bits = [];
+    if (rule.months != null) bits.push(rule.months + " months");
+    if (rule.miles != null) bits.push(rule.miles.toLocaleString("en-US") + " miles");
+    var how = rule.window === "later" ? "whichever is later" : "whichever comes first";
+    var status = inside ? "The numbers you entered are still inside that outer window." : "The numbers you entered are past that outer window.";
+    var extra = rule.warrantyCaps ? " The express warranty can end the window sooner than those outer numbers, and this form does not know your warranty date." : "";
+    return "The summary's outer window is " + bits.join(" or ") + ", " + how + ". " + status + extra;
+  }
+
+  function countLine(label, have, need, exclusive) {
+    if (need == null) return "";
+    var met = exclusive ? have > need : have >= need;
+    var phrase = exclusive ? "more than " + need : need + " or more";
+    return label + ": you entered " + have + ", and the published count is " + phrase + ". " + (met ? "That count is met on the numbers alone." : "That count is not met on the numbers alone.");
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var slug = document.getElementById("state").value;
+    var state = bySlug[slug];
+    var rule = checks[slug];
+    var months = num("months");
+    var miles = num("miles");
+    var repairs = num("repairs");
+    var safety = num("safety");
+    var days = num("days");
+    var notice = document.getElementById("notice").value === "yes";
+    var lines = [];
+    lines.push("<p><strong class=\"text-white\">" + state.name + "</strong> — <a class=\"text-volt-400 hover:underline\" href=\"" + state.url + "\">state lemon-law page</a>" + (state.citation ? ". Citation on that page: " + state.citation + "." : "") + "</p>");
+    lines.push("<p>" + windowLine(rule, months, miles) + "</p>");
+    if (rule.repairs != null) lines.push("<p>" + countLine("Same-problem repair visits", repairs, rule.repairs, false) + "</p>");
+    if (rule.safetyRepairs != null) lines.push("<p>" + countLine("Serious-safety repair visits", safety, rule.safetyRepairs, false) + "</p>");
+    if (rule.days != null) lines.push("<p>" + countLine("Days out of service (" + (rule.dayUnit || "calendar") + ")", days, rule.days, !!rule.daysExclusive) + "</p>");
+    if (rule.finalAttempt) lines.push("<p>The summary also describes a final attempt by the manufacturer. This form does not score that attempt.</p>");
+    lines.push("<p>" + (notice ? "You marked written notice as sent. Read the summary for who has to receive it and how it has to be sent." : "You marked written notice as not sent. Several summaries require notice, and a chance to cure, before an order or a presumption can be used.") + "</p>");
+    if (rule.caution) lines.push("<p>" + rule.caution + "</p>");
+    lines.push("<p>" + state.summary + "</p>");
+    lines.push("<p>This is not a determination that the car is a lemon, and it is not advice to file. Substantial impairment, owner abuse, and the warranty end date are not in the form.</p>");
+    box.innerHTML = lines.join("");
+    box.classList.remove("hidden");
+  });
+})();
+</script>
