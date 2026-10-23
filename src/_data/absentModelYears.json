@@ -1,8 +1,11 @@
 {
-  "reason": "These model years were not sold. fueleconomy.gov has the nameplate on both sides of the gap and has no configuration for the missing year, and the October 23, 2026 NHTSA snapshot has no recall, complaint, or rating. The 2021 Acura MDX is the example: EPA lists the 2020 and the 2022, and not the 2021.",
+  "reason": "These model years were not sold in the United States. fueleconomy.gov has the nameplate on both sides of the gap and has no configuration for the missing year, and the October 23, 2026 NHTSA snapshot has no recall, complaint, or rating. The 2021 Acura MDX is the example: EPA lists the 2020 and the 2022, and not the 2021. The same test, checked against the Wikipedia generation span or the maker's model-year list, also drops Chevrolet Colorado 2013 and 2014, Kia Sorento 2010, Lexus LX 2012, Mercury Sable 2006 and 2007, Mini Clubman 2015, Oldsmobile Aurora 2000, Mitsubishi Eclipse Cross 2021, Bentley Flying Spur 2019, and Maserati GranTurismo 2020 through 2022.",
   "years": [
     "acura/mdx/2021",
     "audi/a3/2021",
+    "bentley/flying-spur/2019",
+    "chevrolet/colorado/2013",
+    "chevrolet/colorado/2014",
     "dodge/durango/2010",
     "ford/ranger/2015",
     "ford/ranger/2018",
@@ -10,7 +13,17 @@
     "infiniti/qx60/2021",
     "jeep/cherokee/2024",
     "jeep/cherokee/2025",
+    "kia/sorento/2010",
+    "lexus/lx/2012",
+    "maserati/granturismo/2020",
+    "maserati/granturismo/2021",
+    "maserati/granturismo/2022",
+    "mercury/sable/2006",
+    "mercury/sable/2007",
+    "mini/clubman/2015",
+    "mitsubishi/eclipse-cross/2021",
     "nissan/pathfinder/2021",
+    "oldsmobile/aurora/2000",
     "subaru/brz/2021",
     "volvo/s60/2010"
   ]

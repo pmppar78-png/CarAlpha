@@ -35,7 +35,12 @@ eleventyComputed:
         </div>
       </div>
       <div class="px-8 py-6">
-        <div>
+        {% set photo = false %}
+        {% if vehicleImages and vehicleImages.models %}
+          {% set photo = vehicleImages.models[model.makeSlug + "/" + model.slug] %}
+        {% endif %}
+        {% include "partials/vehicle-photo.njk" %}
+        <div class="{% if photo %}mt-6{% endif %}">
         {% for paragraph in copy.paragraphs %}
         <p class="text-silver-400 leading-relaxed {% if not loop.first %}mt-4{% endif %}">{{ paragraph }}</p>
         {% endfor %}

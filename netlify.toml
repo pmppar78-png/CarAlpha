@@ -820,6 +820,240 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/makes/chevrolet/colorado/2013"
+  to = "/makes/chevrolet/colorado/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/chevrolet/colorado/2013/"
+  to = "/makes/chevrolet/colorado/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/chevrolet/colorado/2013/*"
+  to = "/makes/chevrolet/colorado/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/chevrolet/colorado/2014"
+  to = "/makes/chevrolet/colorado/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/chevrolet/colorado/2014/"
+  to = "/makes/chevrolet/colorado/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/chevrolet/colorado/2014/*"
+  to = "/makes/chevrolet/colorado/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/kia/sorento/2010"
+  to = "/makes/kia/sorento/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/kia/sorento/2010/"
+  to = "/makes/kia/sorento/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/kia/sorento/2010/*"
+  to = "/makes/kia/sorento/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/lexus/lx/2012"
+  to = "/makes/lexus/lx/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/lexus/lx/2012/"
+  to = "/makes/lexus/lx/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/lexus/lx/2012/*"
+  to = "/makes/lexus/lx/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mercury/sable/2006"
+  to = "/makes/mercury/sable/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mercury/sable/2006/"
+  to = "/makes/mercury/sable/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mercury/sable/2006/*"
+  to = "/makes/mercury/sable/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mercury/sable/2007"
+  to = "/makes/mercury/sable/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mercury/sable/2007/"
+  to = "/makes/mercury/sable/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mercury/sable/2007/*"
+  to = "/makes/mercury/sable/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mini/clubman/2015"
+  to = "/makes/mini/clubman/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mini/clubman/2015/"
+  to = "/makes/mini/clubman/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mini/clubman/2015/*"
+  to = "/makes/mini/clubman/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/oldsmobile/aurora/2000"
+  to = "/makes/oldsmobile/aurora/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/oldsmobile/aurora/2000/"
+  to = "/makes/oldsmobile/aurora/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/oldsmobile/aurora/2000/*"
+  to = "/makes/oldsmobile/aurora/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/eclipse-cross/2021"
+  to = "/makes/mitsubishi/eclipse-cross/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/eclipse-cross/2021/"
+  to = "/makes/mitsubishi/eclipse-cross/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/eclipse-cross/2021/*"
+  to = "/makes/mitsubishi/eclipse-cross/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/bentley/flying-spur/2019"
+  to = "/makes/bentley/flying-spur/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/bentley/flying-spur/2019/"
+  to = "/makes/bentley/flying-spur/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/bentley/flying-spur/2019/*"
+  to = "/makes/bentley/flying-spur/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2020"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2020/"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2020/*"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2021"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2021/"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2021/*"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2022"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2022/"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/maserati/granturismo/2022/*"
+  to = "/makes/maserati/granturismo/"
+  status = 301
+  force = true
+
 # SPA fallback for 404
 [[redirects]]
   from = "/*"

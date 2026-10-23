@@ -1,0 +1,12 @@
+{% if photo %}
+<figure class="mt-6">
+  <img src="{{ photo.src }}" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ photo.alt }}" loading="lazy" decoding="async" class="w-full max-h-[28rem] object-cover rounded-xl bg-white/[0.03]">
+  <figcaption class="mt-2 flex items-start gap-2 text-xs text-silver-500 leading-relaxed">
+    <svg class="w-4 h-4 shrink-0 mt-0.5 text-silver-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 8.5h3.2l1.3-2h7l1.3 2H20a1.5 1.5 0 011.5 1.5v8A1.5 1.5 0 0120 19.5H4A1.5 1.5 0 012.5 18V10A1.5 1.5 0 014 8.5z"/>
+      <circle cx="12" cy="13.5" r="3.2"/>
+    </svg>
+    <span>Photograph by {{ photo.author }} on <a href="{{ photo.source }}" class="text-volt-400 hover:underline" rel="noopener">Wikimedia Commons</a>, {{ photo.license }}{% if photo.licenseUrl %} (<a href="{{ photo.licenseUrl }}" class="text-volt-400 hover:underline" rel="noopener">license</a>){% endif %}.</span>
+  </figcaption>
+</figure>
+{% endif %}
