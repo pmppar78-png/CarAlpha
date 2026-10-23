@@ -321,13 +321,12 @@
     "source": "Commons category Honda Pilot (fourth generation) and the description A 2026 Honda Pilot Elite. The fourth generation began in 2023."
   },
   "honda/odyssey": {
-    "file": "File:2023-2026 Honda Odyssey e-HEV Absolute EX.jpg",
-    "modelYear": null,
-    "yearRange": "2023-2026",
-    "generation": "RC",
-    "generationStart": 2013,
+    "file": "File:2021 Honda Odyssey (United States).jpg",
+    "modelYear": 2021,
+    "generation": "fifth generation",
+    "generationStart": 2018,
     "generationEnd": null,
-    "source": "Commons category Honda Odyssey hybrid (RC1/RC2/RC4) and the file title 2023-2026 Honda Odyssey e-HEV Absolute. RC is that hybrid generation, from 2013."
+    "source": "Commons file title 2021 Honda Odyssey (United States) and the description 2021 Honda Odyssey. The US fifth generation began in 2018."
   },
   "honda/hr-v": {
     "file": "File:2015 Honda HR-V.jpg",
@@ -492,13 +491,12 @@
     "source": "Commons category 2021 Genesis automobiles and the description 2021 Genesis GV80. The GV80 is the first generation, from 2021."
   },
   "mitsubishi/outlander": {
-    "file": "File:2021-2024 Mitsubishi Outlander PHEV P rear.jpg",
-    "modelYear": null,
-    "yearRange": "2021-2024",
+    "file": "File:2022 Mitsubishi Outlander SE Launch Edition (United States) front view 03.jpg",
+    "modelYear": 2022,
     "generation": "fourth generation",
     "generationStart": 2021,
     "generationEnd": null,
-    "source": "Commons category Mitsubishi Outlander PHEV (fourth generation) and the file title 2021-2024 Mitsubishi Outlander PHEV. The fourth generation began in 2021."
+    "source": "Commons description 2022 Mitsubishi Outlander SE Launch Edition (United States). The fourth generation began in 2021."
   },
   "chrysler/300": {
     "file": "File:2007 Chrysler 300.jpg",
@@ -1162,7 +1160,7 @@
     "modelYear": 2021,
     "generation": "sixth generation",
     "generationStart": 2012,
-    "generationEnd": null,
+    "generationEnd": 2024,
     "source": "Commons description A 2021 Mitsubishi Mirage photographed in Sunset Park, Brooklyn, New York. Sixth-generation hatchback, from 2012."
   },
   "mitsubishi/outlander-sport": {
@@ -1215,8 +1213,7 @@
   },
   "jeep/gladiator": {
     "file": "File:Gobi Jeep gladiator (JT) on W Ann Rd.jpg",
-    "modelYear": null,
-    "yearRange": "2019-2020",
+    "modelYear": 2020,
     "generation": "JT",
     "generationStart": 2020,
     "generationEnd": null,

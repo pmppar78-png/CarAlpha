@@ -354,10 +354,34 @@ function pureFilenameRange(file) {
   return unique[0];
 }
 
+function captionYearRanges(source) {
+  const found = [];
+  for (const match of String(source).matchAll(/(?:description|file title|Bauzeit)\s+([^.]*)/gi)) {
+    for (const range of match[1].matchAll(/\b((?:19|20)\d{2})\s*[-–]\s*(\d{2,4})\b/g)) {
+      const start = Number(range[1]);
+      let end = Number(range[2]);
+      if (end < 100) end = Math.floor(start / 100) * 100 + end;
+      if (end < start) end += 100;
+      if (end - start <= 14) found.push([start, end]);
+    }
+  }
+  return found;
+}
+
+function depictedSpan(makeSlug, photo, models, spans) {
+  const hay = `${photo.file} ${photo.alt}`.toLowerCase();
+  const hits = models
+    .filter((model) => model.makeSlug === makeSlug && hay.includes(model.name.toLowerCase()))
+    .sort((a, b) => b.name.length - a.name.length);
+  if (!hits.length) return null;
+  return spans[`${makeSlug}/${hits[0].slug}`] || null;
+}
+
 test("model photo years fall inside the page years or the generation matches", () => {
   const images = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImages.json"), "utf8"));
   const models = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "models.json"), "utf8"));
   const modelYears = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "modelYears.json"), "utf8"));
+  const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImageManifest.json"), "utf8"));
   const spans = {};
   for (const row of modelYears) {
     const key = `${row.makeSlug}/${row.slug}`;
@@ -401,6 +425,25 @@ test("model photo years fall inside the page years or the generation matches", (
     } else {
       assert.ok(alt.includes(String(photo.year)) || alt.includes(generation), photo.alt);
     }
+    if (photo.yearRange) {
+      const [rangeStartText, rangeEndText] = photo.yearRange.split("-");
+      assert.match(photo.alt, new RegExp(`${rangeStartText}–${rangeEndText}`), photo.alt);
+      assert.doesNotMatch(photo.alt, new RegExp(`${rangeStartText}-${rangeEndText}`), photo.alt);
+    }
+    if (!named.length) for (const [start, end] of captionYearRanges(manifest[key].source)) {
+      const overlaps = start <= max && end >= min;
+      if (!overlaps || (start >= min && end <= max)) continue;
+      const clipStart = Math.max(start, min);
+      const clipEnd = Math.min(end, max);
+      if (clipStart === clipEnd) {
+        assert.equal(photo.year, clipStart, `${key} description ${start}-${end} is outside ${min}-${max}`);
+        assert.equal(photo.yearRange, undefined, key);
+      } else {
+        assert.equal(photo.year, null, key);
+        assert.equal(photo.yearRange, `${clipStart}-${clipEnd}`, key);
+      }
+      assert.equal(photo.alt.includes(`${start}-${end}`) || photo.alt.includes(`${start}–${end}`), false, photo.alt);
+    }
     assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
     assert.doesNotMatch(photo.alt, /\bsuv\b/, photo.alt);
     assert.doesNotMatch(photo.generation, /model year$/i, `${key} ${photo.generation}`);
@@ -410,14 +453,36 @@ test("model photo years fall inside the page years or the generation matches", (
   for (const [key, photo] of Object.entries(images.makes)) {
     const range = pureFilenameRange(photo.file);
     if (range) {
-      assert.equal(photo.year, null, `${key} stores ${photo.year} for filename range ${range}`);
-      assert.equal(photo.yearRange, range, key);
-      assert.ok(photo.alt.replace(/[–—]/g, "-").includes(range), photo.alt);
+      const [start, end] = range.split("-").map(Number);
+      const span = depictedSpan(key, photo, models, spans);
+      const overlaps = span && start <= span[1] && end >= span[0];
+      const clipStart = overlaps && start < span[0] ? span[0] : start;
+      const clipEnd = overlaps && end > span[1] ? span[1] : end;
+      if (span) {
+        if (clipStart === clipEnd) {
+          assert.equal(photo.year, clipStart, key);
+          assert.equal(photo.yearRange, undefined, key);
+        } else {
+          assert.equal(photo.year, null, key);
+          assert.equal(photo.yearRange, `${clipStart}-${clipEnd}`, key);
+        }
+      } else {
+        const [storedStart, storedEnd] = String(photo.yearRange).split("-").map(Number);
+        assert.equal(photo.year, null, key);
+        assert.ok(storedStart >= start && storedEnd <= end && storedStart <= storedEnd, `${key} ${photo.yearRange} is outside ${range}`);
+      }
+      if (photo.yearRange) {
+        const [rangeStartText, rangeEndText] = photo.yearRange.split("-");
+        assert.match(photo.alt, new RegExp(`${rangeStartText}–${rangeEndText}`), photo.alt);
+        assert.doesNotMatch(photo.alt, new RegExp(`${rangeStartText}-${rangeEndText}`), photo.alt);
+      }
     }
     assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
     assert.doesNotMatch(photo.alt, /\bsuv\b/, photo.alt);
     assert.ok(photo.alt.split(/\s+/).length >= 2, photo.alt);
   }
+  assert.equal(images.makes.infiniti.yearRange, "1990-1993");
+  assert.match(images.makes.infiniti.alt, /1990–1993 Infiniti Q45 sedan/);
 });
 
 test("filename years ignore photo dates and read MY codes", () => {
@@ -438,6 +503,8 @@ test("filename years ignore photo dates and read MY codes", () => {
   assert.equal(pureFilenameRange("File:1996-1998 Saab 900 (MY97) S 5-door hatchback (2008-10-28).jpg"), null);
   assert.equal(pureFilenameRange("File:2005 Saab 9-7X Linear.jpg"), null);
   assert.equal(pureFilenameRange("File:07-Saturn-Outlook-XR.jpg"), null);
+  assert.deepEqual(captionYearRanges("Commons description A Gobi 2019-20 Jeep Gladiator. JT is the Gladiator generation."), [[2019, 2020]]);
+  assert.deepEqual(captionYearRanges("Commons description 2000-2002 Saturn SL. The third generation ran 2000–2002."), [[2000, 2002]]);
 });
 
 test("reviewed photo manifest matches every model photo", () => {
