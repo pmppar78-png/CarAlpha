@@ -1,38 +1,8 @@
-// Generates sitemap URL entries for dynamically-rendered deep pages.
-// These pages are served by Netlify Edge Functions, not as static HTML,
-// but still need to appear in sitemaps for SEO crawling.
-
-const makes = require("./makes.json");
-const models = require("./models.json");
-const states = require("./states.json");
-const { modelIndexable } = require("../../lib/vehicle-copy");
+// Sitemap entries for edge-rendered deep pages.
+// make/in/state and model/in/state pages are served by the vehicle-pages edge
+// function with noindex,follow until they carry model-specific state data, and
+// model-year/in/state pages are near-duplicates, so none of them are listed.
 
 module.exports = function () {
-  const result = [];
-
-  // makeStates: make × state = ~3,000 entries
-  for (const make of makes) {
-    for (const state of states) {
-      result.push({
-        loc: `/makes/${make.slug}/in/${state.slug}/`,
-        priority: "0.7",
-      });
-    }
-  }
-
-  // model × state only when the nameplate has EPA, NHTSA, or generation data
-  for (const model of models) {
-    if (!modelIndexable(model)) continue;
-    for (const state of states) {
-      result.push({
-        loc: `/makes/${model.makeSlug}/${model.slug}/in/${state.slug}/`,
-        priority: "0.6",
-      });
-    }
-  }
-
-  // modelYear × state pages are noindexed (near-duplicates) and intentionally left out of the sitemap.
-
-  console.log(`[sitemapDynamic] Generated ${result.length} sitemap entries for dynamic pages`);
-  return result;
+  return [];
 };

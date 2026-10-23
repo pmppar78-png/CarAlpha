@@ -35,10 +35,6 @@ const AFFILIATE_PARTNERS: Record<string, { url: string; name: string }> = {
     url: "https://www.chargepoint.com/",
     name: "ChargePoint",
   },
-  carfax: {
-    url: "https://www.carfax.com/",
-    name: "Carfax",
-  },
   mechanic: {
     url: "https://www.yourmechanic.com/",
     name: "YourMechanic",
@@ -53,6 +49,11 @@ export default async (request: Request, context: Context) => {
   const url = new URL(request.url);
   const pathParts = url.pathname.replace(/^\/go\//, "").replace(/\/$/, "").split("/");
   const partnerKey = pathParts[0];
+
+  // Carfax has no open program. Old /go/carfax links go to the plain site.
+  if (partnerKey === "carfax") {
+    return new Response(null, { status: 301, headers: { Location: "https://www.carfax.com/" } });
+  }
 
   const partner = AFFILIATE_PARTNERS[partnerKey];
 
