@@ -62,10 +62,7 @@ breadcrumbs:
 <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mb-12 text-sm">
   {% for state in states %}
   <li>
-    <a href="/states/{{ state.slug }}/lemon-law/" class="text-volt-400 hover:underline">{{ state.name }}</a>
-    {% if state.lemonLawCitation %}
-    — <a href="{{ state.lemonLawUrl }}" class="text-silver-400 hover:text-white" rel="noopener">{{ state.lemonLawCitation }}</a>
-    {% endif %}
+    <a href="/states/{{ state.slug }}/lemon-law/" class="text-volt-400 hover:underline">{{ state.name }}</a>{% if state.lemonLawCitation %} — <a href="{{ state.lemonLawUrl }}" class="text-silver-400 hover:text-white" rel="noopener">{{ state.lemonLawCitation }}</a>{% endif %}.
   </li>
   {% endfor %}
 </ul>
