@@ -191,6 +191,201 @@ test("a catalog year with no recorded source is noindex copy", () => {
   assert.ok(copy.plain.split(/\s+/).length < 8);
 });
 
+test("generation and rival sentences read as prose", () => {
+  const vehicleCopy = require("../lib/vehicle-copy");
+  const data = vehicleCopy.load();
+  assert.doesNotMatch(copySrc, /Wikipedia infobox places/);
+  assert.doesNotMatch(copySrc, /when combined mileage runs/);
+  const malibu = data.modelYears.find((row) => row.makeSlug === "chevrolet" && row.slug === "malibu" && row.year === 2004);
+  const malibuCopy = vehicleCopy.yearCopy(malibu);
+  assert.match(malibuCopy.plain, /According to the Wikipedia infobox, the 2004 Chevrolet Malibu is the first model year of the Sixth generation, which ran from 2004 to 2007\./);
+  const camry = data.modelYears.find((row) => row.makeSlug === "toyota" && row.slug === "camry" && row.year === 2020);
+  const camryCopy = vehicleCopy.yearCopy(camry);
+  assert.match(camryCopy.plain, /According to the Wikipedia infobox, the 2020 Toyota Camry is the third model year of the XV70, which ran from 2018 to 2024\./);
+  assert.match(camryCopy.plain, /Other .+ models sold for 2020 include .+\. Fueleconomy\.gov combined mileage for this model runs .+ mpg\./);
+  const rivalFaq = camryCopy.faqs.find((faq) => faq.q === "Which same-year rivals are on file?");
+  assert.ok(rivalFaq);
+  assert.match(rivalFaq.a, /^Other /);
+  assert.equal(camryCopy.faqSchema.mainEntity.find((item) => item.name === rivalFaq.q).acceptedAnswer.text, rivalFaq.a);
+});
+
+test("years that were never sold are removed and redirected", () => {
+  const absent = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "absentModelYears.json"), "utf8"));
+  const modelYears = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "modelYears.json"), "utf8"));
+  const toml = fs.readFileSync(path.join(__dirname, "..", "netlify.toml"), "utf8");
+  const never = [
+    "chevrolet/colorado/2013",
+    "chevrolet/colorado/2014",
+    "kia/sorento/2010",
+    "lexus/lx/2012",
+    "mercury/sable/2006",
+    "mercury/sable/2007",
+    "mini/clubman/2015",
+    "oldsmobile/aurora/2000",
+    "mitsubishi/eclipse-cross/2021",
+    "bentley/flying-spur/2019",
+    "maserati/granturismo/2020",
+    "maserati/granturismo/2021",
+    "maserati/granturismo/2022",
+  ];
+  const keys = new Set(modelYears.map((row) => `${row.makeSlug}/${row.slug}/${row.year}`));
+  for (const id of never) {
+    assert.equal(keys.has(id), false, id);
+    assert.ok(absent.years.includes(id), id);
+    const [make, model, year] = id.split("/");
+    const target = `/makes/${make}/${model}/`;
+    for (const from of [`/makes/${make}/${model}/${year}`, `/makes/${make}/${model}/${year}/`, `/makes/${make}/${model}/${year}/*`]) {
+      assert.match(toml, new RegExp(`from = "${from.replace(/\*/g, "\\*")}"\\n  to = "${target}"\\n  status = 301\\n  force = true`));
+    }
+  }
+});
+
+test("vehicle photos are licensed Commons files with dimensions and a credit", () => {
+  const images = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImages.json"), "utf8"));
+  const allow = /^(CC BY|CC BY-SA|CC0|Public domain|PD)/i;
+  const partial = fs.readFileSync(path.join(__dirname, "..", "src", "_includes", "partials", "vehicle-photo.njk"), "utf8");
+  const makeTemplate = fs.readFileSync(path.join(__dirname, "..", "src", "makes", "make.njk"), "utf8");
+  const modelTemplate = fs.readFileSync(path.join(__dirname, "..", "src", "makes", "model.njk"), "utf8");
+  assert.match(partial, /loading="lazy"/);
+  assert.match(partial, /figcaption/);
+  assert.match(partial, /width="\{\{ photo\.width \}\}"/);
+  assert.match(partial, /height="\{\{ photo\.height \}\}"/);
+  assert.match(makeTemplate, /vehicle-photo\.njk/);
+  assert.match(modelTemplate, /vehicle-photo\.njk/);
+  const photos = Object.values(images.makes || {}).concat(Object.values(images.models || {}));
+  assert.ok(Object.keys(images.makes || {}).length >= 30, "make pages keep a licensed photo when Commons has one");
+  assert.ok(Object.keys(images.models || {}).length >= 40, "model pages keep a licensed photo when Commons has one");
+  for (const photo of photos) {
+    assert.match(photo.license, allow, photo.license);
+    assert.doesNotMatch(photo.license, /NC|ND/i);
+    assert.ok(photo.width > 0 && photo.height > 0);
+    assert.ok(photo.alt && photo.author && photo.source);
+    assert.match(photo.source, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    assert.match(photo.src, /^\/assets\/images\/vehicles\/.+\.webp$/);
+    assert.equal(fs.existsSync(path.join(__dirname, "..", "src", photo.src)), true, photo.src);
+  }
+  assert.match(partial, /, cropped and resized/);
+});
+
+function filenameModelYears(file) {
+  let text = String(file).replace(/^File:/, "").replace(/\.[A-Za-z0-9]+$/, "");
+  text = text.replace(/\b[A-Za-z]*\d[A-Za-z]+\d+[A-Za-z0-9]*\b/g, " ");
+  text = text.replace(/\b\d{1,2}[-/.]\d{1,2}[-/.](?:19|20)\d{2}\b/g, " ");
+  text = text.replace(/\b(?:19|20)\d{2}[-/.]\d{1,2}[-/.]\d{1,2}\b/g, " ");
+  text = text.replace(/\b\d{2}-(?:19|20)\d{6}\b/g, " ");
+  text = text.replace(/\b(?:19|20)\d{6,}\b/g, " ");
+  const month = "Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?";
+  text = text.replace(new RegExp(`\\b\\d{1,2}\\s+(?:${month})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b(?:${month})\\s+\\d{1,2},?\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b(?:${month})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b\\d{1,2}\\.\\s*(?:${month})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(/(?:\s[-–]+\s+)(?:19|20)\d{2}\s*$/g, " ");
+  const event = "Auto\\s+Z(?:u|ue|ü)rich|IAA|GIMS|NYIAS|NYC|Sonoma|Greenwich|Hirschaid|EMS|Goodwood|Motor\\s+Show|Concours|ePrix|E-Prix|Auto\\s+Show|Nationals";
+  text = text.replace(new RegExp(`\\b(?:${event})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b(?:19|20)\\d{2}\\s+(?:${event})\\b`, "gi"), " ");
+  const found = new Set();
+  for (const match of text.matchAll(/\bMY\s?(\d{2})\b/gi)) {
+    const number = Number(match[1]);
+    found.add(number >= 30 ? 1900 + number : 2000 + number);
+  }
+  for (const match of text.matchAll(/\b((?:19|20)\d{2})\s*[-–]\s*(\d{2,4})\b/g)) {
+    const start = Number(match[1]);
+    let end = Number(match[2]);
+    if (end < 100) end = Math.floor(start / 100) * 100 + end;
+    if (end < start) end += 100;
+    for (let year = start; year <= Math.min(end, start + 14); year += 1) found.add(year);
+  }
+  for (const match of text.matchAll(/(?:^|[^\d])'(\d{2})\b/g)) {
+    const number = Number(match[1]);
+    found.add(number >= 30 ? 1900 + number : 2000 + number);
+  }
+  for (const match of text.matchAll(/(?:^|[\s(])(\d{2})\s*[-–]\s*(\d{2})(?!\d)/g)) {
+    const toYear = (number) => (number >= 30 ? 1900 + number : 2000 + number);
+    const start = toYear(Number(match[1]));
+    const end = toYear(Number(match[2]));
+    const low = Math.min(start, end);
+    const high = Math.max(start, end);
+    for (let year = low; year <= Math.min(high, low + 11); year += 1) found.add(year);
+  }
+  for (const match of text.matchAll(/(?:^|[\s(])(\d{2})[- ](?=[A-Z])/g)) {
+    const number = Number(match[1]);
+    if (number >= 1 && number <= 26) found.add(2000 + number);
+  }
+  const stripped = text.replace(/\b((?:19|20)\d{2})\s*[-–]\s*\d{2,4}\b/g, " ");
+  for (const match of stripped.matchAll(/\b((?:19|20)\d{2})\b/g)) found.add(Number(match[1]));
+  return [...found];
+}
+
+test("model photo years fall inside the page years or the generation matches", () => {
+  const images = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImages.json"), "utf8"));
+  const models = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "models.json"), "utf8"));
+  const modelYears = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "modelYears.json"), "utf8"));
+  const spans = {};
+  for (const row of modelYears) {
+    const key = `${row.makeSlug}/${row.slug}`;
+    if (!spans[key]) spans[key] = [row.year, row.year];
+    spans[key][0] = Math.min(spans[key][0], row.year);
+    spans[key][1] = Math.max(spans[key][1], row.year);
+  }
+  const byKey = new Map(models.map((row) => [`${row.makeSlug}/${row.slug}`, row]));
+  for (const [key, photo] of Object.entries(images.models)) {
+    const [min, max] = spans[key];
+    const model = byKey.get(key);
+    assert.equal(typeof photo.year, "number", key);
+    assert.ok(photo.generation, key);
+    assert.equal(typeof photo.generationStart, "number", key);
+    const end = photo.generationEnd == null ? max : photo.generationEnd;
+    const generationMatches = photo.generationStart <= max && end >= min;
+    const yearMatches = photo.year >= min && photo.year <= max;
+    assert.ok(yearMatches || generationMatches, `${key} ${photo.year} ${photo.generation} is outside ${min}-${max}`);
+    const named = filenameModelYears(photo.file);
+    if (named.length) assert.ok(named.includes(photo.year), `${key} records ${photo.year} but the filename years are ${named.join(",")}`);
+    const alt = photo.alt.toLowerCase().replace(/-/g, " ");
+    const generation = String(photo.generation).toLowerCase().replace(/-/g, " ");
+    assert.ok(alt.includes(String(photo.year)) || alt.includes(generation), photo.alt);
+    assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
+    assert.doesNotMatch(photo.alt, /\bsuv\b/, photo.alt);
+    assert.doesNotMatch(photo.generation, /model year$/i, `${key} ${photo.generation}`);
+    const name = model.name.toLowerCase().replace(/-/g, " ").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    assert.match(alt, new RegExp(name), photo.alt);
+  }
+  for (const photo of Object.values(images.makes)) {
+    assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
+    assert.doesNotMatch(photo.alt, /\bsuv\b/, photo.alt);
+    assert.ok(photo.alt.split(/\s+/).length >= 2, photo.alt);
+  }
+});
+
+test("filename years ignore photo dates and read MY codes", () => {
+  assert.deepEqual(filenameModelYears("Land Rover Range Rover Sport (G18 JJH) - 7 June 2026.jpg"), []);
+  assert.deepEqual(filenameModelYears("Second Gen Toyota Tacoma on Snowy Mountain - 2019.jpg"), []);
+  const saab = filenameModelYears("1996-1998 Saab 900 (MY97) S 5-door hatchback (2008-10-28).jpg");
+  assert.ok(saab.includes(1997), saab.join(","));
+  assert.ok(!saab.includes(2008), saab.join(","));
+  const impreza = filenameModelYears("2017-2019 Subaru Impreza hatchback 7-12-2026.jpg");
+  assert.deepEqual(impreza, [2017, 2018, 2019]);
+  const outback = filenameModelYears("2026 Subaru Outback Rear Left Quater NYC 2025.png");
+  assert.deepEqual(outback, [2026]);
+});
+
+test("reviewed photo manifest matches every model photo", () => {
+  const images = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImages.json"), "utf8"));
+  const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImageManifest.json"), "utf8"));
+  const photos = images.models;
+  assert.deepEqual(Object.keys(manifest).sort(), Object.keys(photos).sort());
+  for (const [key, row] of Object.entries(manifest)) {
+    const photo = photos[key];
+    assert.equal(photo.file, row.file, key);
+    assert.equal(photo.year, row.modelYear, key);
+    assert.equal(photo.generation, row.generation, key);
+    assert.equal(photo.generationStart, row.generationStart, key);
+    assert.equal(photo.generationEnd, row.generationEnd, key);
+    assert.equal(typeof row.source, "string", key);
+    assert.ok(row.source.length > 20, key);
+    assert.doesNotMatch(row.generation, /model year$/i, key);
+  }
+});
+
 test("recall summaries never print the NHTSA 'see the recall report' pointer", () => {
   const { oneSentence } = require("../lib/recall-labels");
   const out = oneSentence("Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models.");

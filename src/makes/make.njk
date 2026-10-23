@@ -50,6 +50,11 @@ eleventyComputed:
       </div>
       <div class="px-8 py-6">
         <p class="text-silver-400 leading-relaxed">{{ make.description }}</p>
+        {% set photo = false %}
+        {% if vehicleImages and vehicleImages.makes %}
+          {% set photo = vehicleImages.makes[make.slug] %}
+        {% endif %}
+        {% include "partials/vehicle-photo.njk" %}
       </div>
     </div>
 

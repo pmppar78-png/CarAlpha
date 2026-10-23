@@ -2356,14 +2356,6 @@
     "name": "Flying Spur",
     "makeSlug": "bentley",
     "makeName": "Bentley",
-    "year": 2019,
-    "bodyType": "Sedan"
-  },
-  {
-    "slug": "flying-spur",
-    "name": "Flying Spur",
-    "makeSlug": "bentley",
-    "makeName": "Bentley",
     "year": 2018,
     "bodyType": "Sedan"
   },
@@ -5030,22 +5022,6 @@
     "makeName": "Chevrolet",
     "year": 2015,
     "bodyType": "Truck"
-  },
-  {
-    "slug": "colorado",
-    "name": "Colorado",
-    "makeSlug": "chevrolet",
-    "makeName": "Chevrolet",
-    "bodyType": "Truck",
-    "year": 2014
-  },
-  {
-    "slug": "colorado",
-    "name": "Colorado",
-    "makeSlug": "chevrolet",
-    "makeName": "Chevrolet",
-    "bodyType": "Truck",
-    "year": 2013
   },
   {
     "slug": "colorado",
@@ -14028,14 +14004,6 @@
     "name": "Sorento",
     "makeSlug": "kia",
     "makeName": "Kia",
-    "year": 2010,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "sorento",
-    "name": "Sorento",
-    "makeSlug": "kia",
-    "makeName": "Kia",
     "year": 2009,
     "bodyType": "SUV"
   },
@@ -15933,14 +15901,6 @@
     "makeSlug": "lexus",
     "makeName": "Lexus",
     "year": 2013,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "lx",
-    "name": "LX",
-    "makeSlug": "lexus",
-    "makeName": "Lexus",
-    "year": 2012,
     "bodyType": "SUV"
   },
   {
@@ -17373,30 +17333,6 @@
     "makeSlug": "maserati",
     "makeName": "Maserati",
     "year": 2023,
-    "bodyType": "Coupe"
-  },
-  {
-    "slug": "granturismo",
-    "name": "GranTurismo",
-    "makeSlug": "maserati",
-    "makeName": "Maserati",
-    "year": 2022,
-    "bodyType": "Coupe"
-  },
-  {
-    "slug": "granturismo",
-    "name": "GranTurismo",
-    "makeSlug": "maserati",
-    "makeName": "Maserati",
-    "year": 2021,
-    "bodyType": "Coupe"
-  },
-  {
-    "slug": "granturismo",
-    "name": "GranTurismo",
-    "makeSlug": "maserati",
-    "makeName": "Maserati",
-    "year": 2020,
     "bodyType": "Coupe"
   },
   {
@@ -19852,22 +19788,6 @@
     "name": "Sable",
     "makeSlug": "mercury",
     "makeName": "Mercury",
-    "year": 2007,
-    "bodyType": "Sedan"
-  },
-  {
-    "slug": "sable",
-    "name": "Sable",
-    "makeSlug": "mercury",
-    "makeName": "Mercury",
-    "year": 2006,
-    "bodyType": "Sedan"
-  },
-  {
-    "slug": "sable",
-    "name": "Sable",
-    "makeSlug": "mercury",
-    "makeName": "Mercury",
     "year": 2005,
     "bodyType": "Sedan"
   },
@@ -19981,14 +19901,6 @@
     "makeSlug": "mini",
     "makeName": "Mini",
     "year": 2016,
-    "bodyType": "Wagon"
-  },
-  {
-    "slug": "clubman",
-    "name": "Clubman",
-    "makeSlug": "mini",
-    "makeName": "Mini",
-    "year": 2015,
     "bodyType": "Wagon"
   },
   {
@@ -20269,14 +20181,6 @@
     "makeSlug": "mitsubishi",
     "makeName": "Mitsubishi",
     "year": 2022,
-    "bodyType": "SUV"
-  },
-  {
-    "slug": "eclipse-cross",
-    "name": "Eclipse Cross",
-    "makeSlug": "mitsubishi",
-    "makeName": "Mitsubishi",
-    "year": 2021,
     "bodyType": "SUV"
   },
   {
@@ -21861,14 +21765,6 @@
     "makeSlug": "oldsmobile",
     "makeName": "Oldsmobile",
     "year": 2001,
-    "bodyType": "Sedan"
-  },
-  {
-    "slug": "aurora",
-    "name": "Aurora",
-    "makeSlug": "oldsmobile",
-    "makeName": "Oldsmobile",
-    "year": 2000,
     "bodyType": "Sedan"
   },
   {
