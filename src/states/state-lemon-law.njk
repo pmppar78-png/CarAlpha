@@ -19,6 +19,10 @@ eleventyComputed:
 ---
 
 <div class="prose-dark">
+{% set guide = stateGuides[state.slug] %}
+{% if guide and guide.lemon %}
+{% include "state-guides/" + state.slug + "/lemon-law.html" %}
+{% else %}
 
 <h2 id="overview">{{ state.name }} lemon law</h2>
 
@@ -36,6 +40,7 @@ eleventyComputed:
 
 <p><a href="/guides/lemon-law/qualification-checker/">Qualification checker</a>. <a href="/guides/lemon-law/notice-letter/">Notice-letter draft</a>.</p>
 
+{% endif %}
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
   <h3 class="text-xl font-bold text-white mb-3">Think You Have a Lemon?</h3>
   <p class="text-silver-400 mb-6 max-w-lg mx-auto">Connect with an experienced {{ state.name }} lemon law attorney for a free case evaluation. Most work on contingency with no upfront costs.</p>

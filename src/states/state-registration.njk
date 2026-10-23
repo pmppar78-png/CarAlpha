@@ -19,6 +19,10 @@ eleventyComputed:
 ---
 
 <div class="prose-dark">
+{% set guide = stateGuides[state.slug] %}
+{% if guide and guide.registration %}
+{% include "state-guides/" + state.slug + "/registration.html" %}
+{% else %}
 
 <h2 id="fees">{{ state.name }} Registration Fees</h2>
 
@@ -72,6 +76,7 @@ eleventyComputed:
 
 <p>When a vehicle changes hands in {{ state.name }}, the title fee on file is <strong>{{ state.titleFee }}</strong>.{% if state.plateFee %} The plate charge on file is {{ state.plateFee | feeLabel }}.{% endif %} Read the fee note above for county add-ons, and confirm the current form with the {{ state.name }} motor vehicle office before you pay.</p>
 
+{% endif %}
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
   <h3 class="text-xl font-bold text-white mb-3">Need Insurance for Your New Vehicle?</h3>
   <p class="text-silver-400 mb-6 max-w-lg mx-auto">You will need proof of insurance before you can register your vehicle in {{ state.name }}. Compare rates from top carriers in minutes.</p>
