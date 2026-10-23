@@ -8,8 +8,8 @@
     "description": "Alabama requires liability insurance for all registered vehicles. The state has a lemon law that covers new vehicles purchased or leased in Alabama, and does not require emissions testing statewide.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1388,
-    "averageInsuranceSource": "That figure is the NAIC combined average premium for 2024, liability plus collision plus comprehensive, rounded from $1,388.11 in the NAIC 2024 Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf).",
+    "averageInsuranceCost": 1388.11,
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf).",
     "hasLemonLaw": true,
     "lemonLawSummary": "Alabama gives a new-car buyer a lemon-law rights period of one year or 12,000 miles, whichever comes first, under Ala. Code §§ 8-20A-1(8) and 8-20A-2. The repair presumption is measured over 24 months or 24,000 miles, and at least one repair attempt has to fall inside that first year or 12,000 miles. The law treats the car as having had a reasonable number of attempts after three repairs of the same problem plus a final try by the manufacturer, or after 30 calendar days out of service, counting that final try. Before a lawsuit, send the manufacturer certified mail; once the presumption is already in place, the manufacturer gets seven calendar days to name a shop and 14 calendar days after you drop the car off to fix it.",
     "hasEmissions": false,
@@ -35,7 +35,7 @@
     "description": "Alaska has some of the most unique vehicle ownership requirements in the nation. While liability insurance is mandatory, the state does not require emissions testing or safety inspections for most vehicles.",
     "insuranceMinimum": "50/100/25",
     "insuranceMinimumDetail": "$50,000 bodily injury per person / $100,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1262,
+    "averageInsuranceCost": 1398.93,
     "hasLemonLaw": true,
     "lemonLawSummary": "Under AS 45.45.320, Alaska measures the presumption during the express warranty or the year after delivery to the original owner, whichever ends first, and the statute sets no mileage cap. Three repairs of the same problem, if it is still there, or 30 business days in the shop, is enough attempts. Days when the shop cannot work for reasons outside its control do not count. To demand a refund or replacement, mail written notice before 60 days have passed after the warranty or that one-year period ends; the manufacturer then has 30 days to try one last repair.",
     "hasEmissions": false,
@@ -50,7 +50,8 @@
     "plateFee": "Included in registration",
     "lemonLawCitation": "AS 45.45.320",
     "lemonLawUrl": "https://www.akleg.gov/basis/Journal/Pages/33?Bill=HB+233&Chamber=H&Page=02716",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Arizona",
@@ -61,11 +62,11 @@
     "description": "Arizona vehicle owners benefit from relatively low insurance minimums but must comply with emissions testing in the Phoenix and Tucson metro areas. The state offers incentives for electric and alternative fuel vehicles.",
     "insuranceMinimum": "25/50/15",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
-    "averageInsuranceCost": 1374,
+    "averageInsuranceCost": 1647.25,
     "hasLemonLaw": true,
     "lemonLawSummary": "Arizona measures lemon-law repairs under Ariz. Rev. Stat. §§ 44-1262 and 44-1264 during the shorter of the express warranty or two years and 24,000 miles after the car was delivered. The presumption is four repairs of the same defect that still exists, or 30 calendar days the car spends out of service. Before that presumption can be used, the manufacturer has to have received direct written notice of the defect. It also has to have had a chance to repair the car.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in the Phoenix and Tucson metro areas for vehicles older than five model years. Vehicles are tested every other year. Testing costs approximately $17.",
+    "emissionsDetails": "Emissions testing is required in the Phoenix and Tucson metro areas for vehicles older than five model years. Vehicles are tested every other year. Testing costs approximately $17. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -76,7 +77,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "Ariz. Rev. Stat. §§ 44-1262, 44-1264",
     "lemonLawUrl": "https://www.azleg.gov/ars/44/01264.htm",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Arkansas",
@@ -84,10 +86,10 @@
     "abbreviation": "AR",
     "capital": "Little Rock",
     "region": "South",
-    "description": "Arkansas requires liability insurance and has a lemon law protecting new vehicle buyers. The state does not mandate emissions testing but does require annual safety inspections in some counties.",
+    "description": "Arkansas requires liability insurance and has a lemon law protecting new vehicle buyers. The state does not mandate emissions testing or a periodic safety inspection.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1478,
+    "averageInsuranceCost": 1465.02,
     "hasLemonLaw": true,
     "lemonLawSummary": "Arkansas runs its quality period to 24 months or 24,000 miles, whichever is later, in Ark. Code §§ 4-90-403(12), 4-90-406, and 4-90-410. After three tries at the same problem that substantially impairs the car, or one try at a problem likely to cause death or serious injury, send certified or registered mail so the manufacturer can make a final repair. A presumption also arises if that path was followed and the problem remains, if the car spent 30 calendar days in the shop, or if there were five or more attempts on separate occasions at problems that together substantially impair use and value. The manufacturer has ten days after the letter to offer a shop and ten days after you deliver the car to fix it; if it misses those deadlines, the final-attempt requirement drops and the presumption can no longer be rebutted.",
     "hasEmissions": false,
@@ -102,7 +104,8 @@
     "plateFee": "$1 - $3",
     "lemonLawCitation": "Ark. Code §§ 4-90-403(12), 4-90-406, 4-90-410",
     "lemonLawUrl": "https://www.dfa.arkansas.gov/office/taxes/tax-credits-special-refunds/new-car-lemon-law/",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "California",
@@ -113,11 +116,11 @@
     "description": "California has the most comprehensive vehicle regulations in the country, including strict emissions standards, generous EV incentives, and strong consumer protection laws including a robust lemon law.",
     "insuranceMinimum": "15/30/5",
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $5,000 property damage",
-    "averageInsuranceCost": 2003,
+    "averageInsuranceCost": 1690.23,
     "hasLemonLaw": true,
     "lemonLawSummary": "California's Tanner presumption is Cal. Civ. Code § 1793.22. It applies during the first 18 months after delivery or the first 18,000 miles, whichever comes first. Within that time, two repairs of a defect likely to cause death or serious bodily injury, four repairs of the same defect, or more than 30 calendar days in the shop is a reasonable number of attempts. Direct notice to the manufacturer is required for the two-repair and four-repair counts only when the warranty or owner's manual clearly told the buyer to send it.",
     "hasEmissions": true,
-    "emissionsDetails": "California requires biennial smog checks for vehicles older than eight model years in most areas. The state sets its own emissions standards through CARB, which are stricter than federal standards. Testing typically costs $30-$70.",
+    "emissionsDetails": "California requires biennial smog checks for vehicles older than eight model years in most areas. The state sets its own emissions standards through CARB, which are stricter than federal standards. Testing typically costs $30-$70. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": true,
@@ -128,7 +131,8 @@
     "plateFee": "$23",
     "lemonLawCitation": "Cal. Civ. Code § 1793.22",
     "lemonLawUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1793.22",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Colorado",
@@ -139,11 +143,11 @@
     "description": "Colorado combines mandatory liability insurance with emissions testing in the Denver metro area. The state is a leader in EV incentives, offering substantial tax credits for electric vehicle purchases.",
     "insuranceMinimum": "25/50/15",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
-    "averageInsuranceCost": 1835,
+    "averageInsuranceCost": 1835.17,
     "hasLemonLaw": true,
     "lemonLawSummary": "For vehicles sold or leased on or after August 7, 2024, Colo. Rev. Stat. § 42-10-103, as amended by SB 24-192, uses the first two years or 24,000 miles. Three repairs of the same problem, two repairs of a safety-based problem, or 24 business days out of service is the presumption, and the problem has to still be there. The manufacturer needs prior written notice by certified mail and then has ten business days after receiving it to try a cure. That cure counts as one repair.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in the Denver-Boulder-Greeley-Fort Collins metro area for vehicles 4-11 model years old. Testing is performed at Air Care Colorado stations and costs approximately $25.",
+    "emissionsDetails": "Emissions testing is required in the Denver-Boulder-Greeley-Fort Collins metro area for vehicles 4-11 model years old. Testing is performed at Air Care Colorado stations and costs approximately $25. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": true,
@@ -154,7 +158,8 @@
     "plateFee": "$5.56",
     "lemonLawCitation": "Colo. Rev. Stat. § 42-10-103",
     "lemonLawUrl": "https://leg.colorado.gov/bills/sb24-192",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Connecticut",
@@ -165,11 +170,11 @@
     "description": "Connecticut requires emissions testing for most vehicles and has strong consumer protection laws. The state mandates relatively high insurance minimums compared to the national average.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1702,
+    "averageInsuranceCost": 1690.07,
     "hasLemonLaw": true,
     "lemonLawSummary": "Connecticut's lemon law is Conn. Gen. Stat. § 42-179. The ordinary presumption runs during the first two years or 24,000 miles: four repairs of the same problem, or 30 calendar days out of service, if the problem continues. A defect likely to cause death or serious injury uses a shorter window, the express warranty or one year after delivery, and it takes two repairs. You do not have to notify the manufacturer unless the warranty or the owner's manual clearly says written notice is required.",
     "hasEmissions": true,
-    "emissionsDetails": "Biennial emissions testing is required for most vehicles registered in Connecticut. Testing follows the OBD-II protocol for vehicles 4+ model years old. Cost is approximately $20.",
+    "emissionsDetails": "Biennial emissions testing is required for most vehicles registered in Connecticut. Testing follows the OBD-II protocol for vehicles 4+ model years old. Cost is approximately $20. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": true,
@@ -180,7 +185,8 @@
     "plateFee": "Included in registration",
     "lemonLawCitation": "Conn. Gen. Stat. § 42-179",
     "lemonLawUrl": "https://www.cga.ct.gov/current/pub/chap_743b.htm",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Delaware",
@@ -191,11 +197,11 @@
     "description": "Delaware requires liability insurance and biennial vehicle inspections. The state has no sales tax on vehicle purchases, which can represent significant savings for car buyers.",
     "insuranceMinimum": "25/50/10",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
-    "averageInsuranceCost": 1573,
+    "averageInsuranceCost": 1745.95,
     "hasLemonLaw": true,
     "lemonLawSummary": "Del. Code tit. 6, § 5004 covers a new car for the warranty term or the first year after delivery, whichever ends first. Mileage does not cut that period short. The presumption is in place when substantially the same problem has been repaired four times and is still there, or when the car has been out of service for more than 30 calendar days. Use it against the manufacturer only after the manufacturer got a direct written notice and a chance to fix the car.",
     "hasEmissions": true,
-    "emissionsDetails": "Delaware requires biennial emissions testing for vehicles in New Castle County that are more than 4 model years old. Testing uses OBD-II diagnostics and costs approximately $20.",
+    "emissionsDetails": "Delaware requires biennial emissions testing for vehicles in New Castle County that are more than 4 model years old. Testing uses OBD-II diagnostics and costs approximately $20. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Delaware requires biennial safety inspections for all registered vehicles. Inspections cover brakes, tires, lights, windshield, exhaust, and other safety systems. Cost is approximately $35-$50 at authorized inspection stations.",
     "evIncentives": false,
@@ -206,7 +212,8 @@
     "plateFee": "$10",
     "lemonLawCitation": "Del. Code tit. 6, § 5004",
     "lemonLawUrl": "https://delcode.delaware.gov/title6/c050/index.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Florida",
@@ -217,7 +224,7 @@
     "description": "Florida is a no-fault insurance state, meaning your own insurance covers your injuries regardless of who caused the accident. The state does not require emissions testing or safety inspections.",
     "insuranceMinimum": "10/20/10 (PIP required)",
     "insuranceMinimumDetail": "$10,000 personal injury protection (PIP) / $10,000 property damage liability. Bodily injury liability is only required if the driver has had license or registration suspended.",
-    "averageInsuranceCost": 2560,
+    "averageInsuranceCost": 2174.55,
     "hasLemonLaw": true,
     "lemonLawSummary": "Fla. Stat. §§ 681.102(9) and 681.104 give a rights period of 24 months after delivery, and the statute does not use a mileage cap. The presumption is three repairs of the same problem plus a final attempt by the manufacturer, if that attempt is undertaken, or 30 cumulative days out of service, 60 for a recreational vehicle. When the car has been out of service for 15 days, send written notice by registered or express mail so the manufacturer can inspect or repair. After three attempts on the same problem, a separate written notice gives the manufacturer one last repair.",
     "hasEmissions": false,
@@ -232,7 +239,8 @@
     "plateFee": "$28",
     "lemonLawCitation": "Fla. Stat. §§ 681.102(9), 681.104",
     "lemonLawUrl": "https://www.flsenate.gov/Laws/Statutes/2026/681.104",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Georgia",
@@ -243,11 +251,11 @@
     "description": "Georgia requires liability insurance and emissions testing in the metro Atlanta area. The state replaced its traditional sales tax on vehicles with a one-time title ad valorem tax (TAVT).",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1876,
+    "averageInsuranceCost": 1972.56,
     "hasLemonLaw": true,
     "lemonLawSummary": "Georgia's lemon law, O.C.G.A. §§ 10-1-782 and 10-1-784, ends the rights period at two years or 24,000 miles, whichever comes first. One unsuccessful repair of a serious safety defect, three unsuccessful repairs of the same problem, or 30 calendar days out of service counts as a reasonable number of attempts. After that, notify the manufacturer. It then has 28 days from receiving the notice to try one last repair.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in the 13-county metro Atlanta area for vehicles 3-25 model years old. Annual OBD-II testing costs $25 at Georgia Clean Air Force stations.",
+    "emissionsDetails": "Emissions testing is required in the 13-county metro Atlanta area for vehicles 3-25 model years old. Annual OBD-II testing costs $25 at Georgia Clean Air Force stations. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -258,7 +266,8 @@
     "plateFee": "$25",
     "lemonLawCitation": "O.C.G.A. §§ 10-1-782, 10-1-784",
     "lemonLawUrl": "https://consumer.georgia.gov/document/document/lemon-law-jan-2025/download",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Hawaii",
@@ -269,13 +278,13 @@
     "description": "Hawaii requires all registered vehicles to pass a periodic safety inspection. The state has mandatory no-fault insurance and offers growing incentives for electric vehicles as part of its clean energy goals.",
     "insuranceMinimum": "20/40/10 (PIP required)",
     "insuranceMinimumDetail": "$20,000 bodily injury per person / $40,000 bodily injury per accident / $10,000 property damage / $10,000 PIP",
-    "averageInsuranceCost": 1218,
+    "averageInsuranceCost": 1051,
     "hasLemonLaw": true,
     "lemonLawSummary": "Hawaii's lemon law, Haw. Rev. Stat. §§ 481I-2 and 481I-3, sets the rights period as the express warranty, two years, or 24,000 miles, whichever comes first. Three exams or repairs of the same problem, one exam or repair of a problem likely to cause death or serious injury, or 30 business days out of service, is the presumption. The manufacturer has to have received a written report and a reasonable chance to repair. A dealer also notifies the manufacturer after a second report or after the car has been out more than 20 business days.",
-    "hasEmissions": true,
-    "emissionsDetails": "Oahu requires annual emissions inspections for gasoline-powered vehicles as part of the safety inspection process. Other islands only require safety inspections.",
+    "hasEmissions": false,
+    "emissionsDetails": "Hawaii's periodic inspection is a safety check under HRS § 286-26. It is not an emissions test. The inspection looks at the exhaust system because a noncompliant muffler fails the safety check.",
     "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles in Hawaii. Inspections cover brakes, lights, tires, steering, and exhaust systems. Cost is typically $20-$30.",
+    "safetyInspectionDetails": "Hawaii requires a periodic safety inspection under HRS § 286-26. Most passenger vehicles are inspected every 12 months. A new vehicle does not need that annual inspection until two years after its first inspection. Since July 1, 2025, the fee is $25.75 for automobiles and trucks.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$45 plus county weight tax",
@@ -284,7 +293,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "Haw. Rev. Stat. §§ 481I-2, 481I-3",
     "lemonLawUrl": "https://cca.hawaii.gov/wp-content/uploads/2026/01/481I-L.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Idaho",
@@ -295,7 +305,7 @@
     "description": "Idaho has relatively low insurance requirements and does not mandate emissions testing or safety inspections for most personal vehicles. The state has a straightforward registration process.",
     "insuranceMinimum": "25/50/15",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
-    "averageInsuranceCost": 1064,
+    "averageInsuranceCost": 1086.21,
     "hasLemonLaw": true,
     "lemonLawSummary": "Idaho Code § 48-903 looks at the express warranty, two years, or 24,000 miles, whichever date comes first. If the problem was first reported during the warranty, repair attempts within three years of delivery can still support a refund or replacement. Four repairs of the same problem, 30 business days out of service, or one repair of a complete brake or steering failure likely to cause death or serious injury, is the presumption, and the manufacturer still gets one chance to repair that brake or steering failure. The four-repair and 30-day paths apply against the manufacturer only after written notice and a chance to cure.",
     "hasEmissions": false,
@@ -310,7 +320,8 @@
     "plateFee": "$8",
     "lemonLawCitation": "Idaho Code § 48-903",
     "lemonLawUrl": "https://legislature.idaho.gov/statutesrules/idstat/title48/t48ch9/sect48-903/",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Illinois",
@@ -321,11 +332,11 @@
     "description": "Illinois requires liability insurance and emissions testing in the Chicago metro area and Metro East St. Louis. The state has a strong lemon law and offers incentives for electric vehicle purchases.",
     "insuranceMinimum": "25/50/20",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
-    "averageInsuranceCost": 1499,
+    "averageInsuranceCost": 1382.89,
     "hasLemonLaw": true,
     "lemonLawSummary": "Illinois sets its own lemon-law period in 815 ILCS 380/2 and 380/3: one year or 12,000 miles after delivery, whichever comes first. Four repairs of the same problem that still exists, or 30 business days out of service, is the presumption inside that period. The manufacturer must have received direct written notice from the buyer, or from someone acting for the buyer. It also needs a chance to correct the defect before the presumption applies.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in the greater Chicago area and Metro East St. Louis region for most vehicles 4-13 model years old. OBD-II testing is used, and testing costs $20.",
+    "emissionsDetails": "Emissions testing is required for most gasoline vehicles registered in Cook, DuPage, and Lake counties, and in designated parts of Kane, Kendall, McHenry, Will, Madison, Monroe, and St. Clair counties, under the Vehicle Emissions Inspection Law of 2005. Most 1996 and newer gasoline passenger vehicles are tested after they are four years old, on the biennial schedule that matches the license-plate year. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": true,
@@ -336,7 +347,8 @@
     "plateFee": "$29",
     "lemonLawCitation": "815 ILCS 380/2, 815 ILCS 380/3",
     "lemonLawUrl": "https://ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2341&ChapterID=67",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Indiana",
@@ -347,7 +359,7 @@
     "description": "Indiana requires liability insurance for all registered vehicles and has a lemon law covering new car purchases. The state does not require emissions testing or safety inspections.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1288,
+    "averageInsuranceCost": 1142.11,
     "hasLemonLaw": true,
     "lemonLawSummary": "Indiana calls the coverage a term of protection under Ind. Code §§ 24-5-13-7, 24-5-13-8, and 24-5-13-15. It ends at the earlier of 18 months or 18,000 miles, and the buyer has to report the problem before that term runs out. Four repairs that leave the problem in place, or 30 business days out of service with the problem still there, counts as a reasonable number of attempts. If the manufacturer made the disclosure in § 24-5-13-9, the buyer notifies the manufacturer of the claim first.",
     "hasEmissions": false,
@@ -362,7 +374,8 @@
     "plateFee": "$9.40",
     "lemonLawCitation": "Ind. Code §§ 24-5-13-7, 24-5-13-8, 24-5-13-15",
     "lemonLawUrl": "https://iga.in.gov/ic/2026/Title_24/Article_5/Chapter_13.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Iowa",
@@ -373,7 +386,7 @@
     "description": "Iowa requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing but does have some of the most affordable vehicle registration fees in the nation.",
     "insuranceMinimum": "20/40/15",
     "insuranceMinimumDetail": "$20,000 bodily injury per person / $40,000 bodily injury per accident / $15,000 property damage",
-    "averageInsuranceCost": 1139,
+    "averageInsuranceCost": 1132.96,
     "hasLemonLaw": true,
     "lemonLawSummary": "Iowa's lemon law, Iowa Code §§ 322G.2 and 322G.4, uses the written warranty, two years, or 24,000 miles, whichever expires first, and it counts calendar days. The presumption is three exams or repairs of the same problem plus a final attempt if one is undertaken, one exam or repair of a problem likely to cause death or serious injury plus that final attempt, or 30 days out of service. You can send written notice after 20 cumulative days out of service, after three attempts, or after one attempt on a dangerous defect. The manufacturer then has a final chance to conform the car, including 10 cumulative out-of-service days after the 20-day notice.",
     "hasEmissions": false,
@@ -388,7 +401,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "Iowa Code §§ 322G.2, 322G.4",
     "lemonLawUrl": "https://www.legis.iowa.gov/docs/code/2026/322G.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Kansas",
@@ -396,16 +410,16 @@
     "abbreviation": "KS",
     "capital": "Topeka",
     "region": "Midwest",
-    "description": "Kansas requires liability insurance and has a lemon law for new vehicles. Some counties in the Kansas City metro area require emissions testing. The state has a relatively straightforward registration process.",
+    "description": "Kansas requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing. A VIN inspection applies when a vehicle is titled from another state.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1515,
+    "averageInsuranceCost": 1295.4,
     "hasLemonLaw": true,
     "lemonLawSummary": "Kansas applies Kan. Stat. Ann. § 50-645 during the express warranty or the first year after delivery, whichever ends sooner, and the statute sets no mileage limit. Four repairs of the same problem, 30 calendar days out of service, or ten attempts on any problems that substantially impair use and value, is the presumption. Those counts matter once the manufacturer has actual notice of the trouble. Get that notice to the manufacturer while the warranty or the one-year period is still open.",
-    "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in Johnson and Wyandotte counties (Kansas City metro area) for vehicles 4+ model years old. Biennial OBD-II testing costs approximately $17.",
-    "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Kansas requires a safety inspection when a vehicle is first registered in the state. Annual inspections are not required for most vehicles after initial registration.",
+    "hasEmissions": false,
+    "emissionsDetails": "The Kansas Highway Patrol says the state does not require emissions testing, and Johnson County tells vehicle owners the same thing.",
+    "hasSafetyInspection": false,
+    "safetyInspectionDetails": "Kansas does not require a periodic safety inspection for ordinary passenger vehicles. A VIN inspection by the Highway Patrol, or a designee, is required before titling a vehicle that comes in on an out-of-state title. Salvage and rebuilt vehicles have a separate inspection.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$39 - $59 based on weight",
@@ -414,7 +428,8 @@
     "plateFee": "$3 - $5",
     "lemonLawCitation": "Kan. Stat. Ann. § 50-645",
     "lemonLawUrl": "https://www.ksrevisor.org/statutes/chapters/ch50/050_006_0045.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Kentucky",
@@ -425,7 +440,7 @@
     "description": "Kentucky requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing but mandates personal property taxes on all vehicles.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1740,
+    "averageInsuranceCost": 1337.15,
     "hasLemonLaw": true,
     "lemonLawSummary": "Kentucky's window under Ky. Rev. Stat. § 367.842 is the first 12 months or 12,000 miles, whichever arrives first. The presumption looks at that same defect: four repair attempts, or 30 calendar days the car is out of service because of it. When a reasonable number of attempts still leaves the car unrepaired, the buyer puts the problem in writing to the manufacturer.",
     "hasEmissions": false,
@@ -440,7 +455,8 @@
     "plateFee": "$21",
     "lemonLawCitation": "Ky. Rev. Stat. § 367.842",
     "lemonLawUrl": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=40103",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Louisiana",
@@ -448,16 +464,16 @@
     "abbreviation": "LA",
     "capital": "Baton Rouge",
     "region": "South",
-    "description": "Louisiana requires liability insurance and has a lemon law for new vehicles. The state requires periodic safety inspections but does not mandate emissions testing statewide.",
+    "description": "Louisiana requires liability insurance and has a lemon law for new vehicles. Act 701 stops inspection-sticker citations for personal vehicles from June 30, 2026 through January 1, 2027, when that sticker requirement ends outside federal inspection-and-maintenance parishes.",
     "insuranceMinimum": "15/30/25",
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 2724,
+    "averageInsuranceCost": 2151.12,
     "hasLemonLaw": true,
     "lemonLawSummary": "La. Rev. Stat. § 51:1943 gives the manufacturer the warranty period or one year after delivery, and the presumption uses the date that arrives first. The section does not cut the period off by mileage. Four repairs of the same problem, or 45 calendar days out of service, is the presumption, and § 51:1944 uses those same numbers for the refund or replacement. If the manufacturer misses the response or repair time in § 51:1943(A), it loses the right to a final attempt.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Louisiana requires an annual or biennial safety inspection for all registered vehicles. Inspections cover brakes, steering, lights, horn, mirrors, and tires. Cost is typically $10-$20.",
+    "safetyInspectionDetails": "Act 701 prohibits inspection-sticker citations for personal non-commercial vehicles from June 30, 2026 through January 1, 2027. The sticker requirement for those vehicles ends January 1, 2027, except in parishes that stay in a federal inspection-and-maintenance program until EPA approves a change. Commercial vehicles, school buses, and certain farm vehicles still have inspection rules.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$20 - $82 depending on purchase price",
@@ -466,7 +482,8 @@
     "plateFee": "$8 - $15",
     "lemonLawCitation": "La. Rev. Stat. § 51:1943",
     "lemonLawUrl": "https://legis.la.gov/legis/Law.aspx?d=104205",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Maine",
@@ -477,11 +494,11 @@
     "description": "Maine requires liability insurance and annual vehicle inspections. The state has a strong lemon law and participates in the Regional Greenhouse Gas Initiative, promoting cleaner transportation.",
     "insuranceMinimum": "50/100/25",
     "insuranceMinimumDetail": "$50,000 bodily injury per person / $100,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1002,
+    "averageInsuranceCost": 1000.13,
     "hasLemonLaw": true,
     "lemonLawSummary": "Maine's repair duty in Me. Rev. Stat. tit. 10, § 1163 runs during the express warranties, three years, or 18,000 miles, whichever comes first. Three repairs of the same problem, one repair of a serious brake or steering failure, or 15 business days out of service, is the presumption. Write the manufacturer that you want a refund or a replacement. It then has a final repair chance during the seven business days after it receives the letter, and that letter can go out after a single brake or steering failure.",
     "hasEmissions": true,
-    "emissionsDetails": "Maine follows California's CARB emissions standards and requires OBD-II emissions testing in Cumberland County for vehicles older than the current plus one model year. Testing is annual.",
+    "emissionsDetails": "Maine follows California's CARB emissions standards and requires OBD-II emissions testing in Cumberland County for vehicles older than the current plus one model year. Testing is annual. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Maine requires annual safety inspections for all registered vehicles. Inspections cover brakes, tires, lights, steering, exhaust, glass, and other safety components. Cost is typically $12.50.",
     "evIncentives": true,
@@ -492,7 +509,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "Me. Rev. Stat. tit. 10, § 1163",
     "lemonLawUrl": "https://legislature.maine.gov/statutes/10/title10sec1163.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Maryland",
@@ -503,11 +521,11 @@
     "description": "Maryland requires liability insurance, safety inspections for vehicle transfers, and has a strong lemon law. The state mandates emissions testing and offers growing EV incentive programs.",
     "insuranceMinimum": "30/60/15",
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $15,000 property damage",
-    "averageInsuranceCost": 1639,
+    "averageInsuranceCost": 1767.57,
     "hasLemonLaw": true,
     "lemonLawSummary": "Maryland's lemon law is Md. Code, Com. Law §§ 14-1501 and 14-1502. For this statute the manufacturer's warranty period is the earlier of 18,000 miles or 24 months after delivery. The presumption is four repairs of the same problem, 30 or more days out of service, or one repair of a brake or steering failure that still will not pass the state safety inspection after the manufacturer had a chance to cure. Report the problem by certified mail, return receipt requested, and the manufacturer is supposed to finish the corrections within 30 days of getting that letter.",
     "hasEmissions": true,
-    "emissionsDetails": "Maryland requires biennial emissions testing in most counties for vehicles 4+ model years old using OBD-II testing. The Vehicle Emissions Inspection Program (VEIP) test is free at state-operated stations.",
+    "emissionsDetails": "Maryland requires biennial emissions testing in most counties for vehicles 4+ model years old using OBD-II testing. The Vehicle Emissions Inspection Program (VEIP) test is free at state-operated stations. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Maryland requires a safety inspection when a vehicle is sold or changes ownership. The inspection covers major safety systems. Cost varies by inspection station, typically $60-$100.",
     "evIncentives": false,
@@ -518,7 +536,8 @@
     "plateFee": "$10",
     "lemonLawCitation": "Md. Code Ann., Com. Law §§ 14-1501, 14-1502",
     "lemonLawUrl": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-1502",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Massachusetts",
@@ -526,16 +545,16 @@
     "abbreviation": "MA",
     "capital": "Boston",
     "region": "New England",
-    "description": "Massachusetts requires annual vehicle inspections that include both safety and emissions components. The state has strong consumer protections and significant EV incentive programs.",
+    "description": "Massachusetts requires an annual safety inspection. A vehicle that runs only on electricity does not take the emissions portion. The state has strong consumer protections and EV incentive programs.",
     "insuranceMinimum": "20/40/5",
     "insuranceMinimumDetail": "$20,000 bodily injury per person / $40,000 bodily injury per accident / $5,000 property damage",
-    "averageInsuranceCost": 1388,
+    "averageInsuranceCost": 1610.84,
     "hasLemonLaw": true,
     "lemonLawSummary": "Massachusetts calls the coverage a term of protection of one year or 15,000 miles in Mass. Gen. Laws ch. 90, § 7N 1/2, and a business day is a day the authorized dealers' service departments are normally open. Three repairs of the same problem that continues or comes back, or 15 business days out of service, is a reasonable number of attempts. The manufacturer gets one more chance to cure, and that extra chance cannot run longer than seven business days. The buyer does not have to notify the manufacturer directly before using the state's certified new-car arbitration.",
     "hasEmissions": true,
-    "emissionsDetails": "Massachusetts requires annual emissions testing as part of the combined safety and emissions inspection for vehicles older than the current plus one model year. OBD-II testing is used.",
+    "emissionsDetails": "Mass Vehicle Check does not require the emissions portion for a vehicle operated exclusively by electric power. Passenger cars, trucks, and SUVs from model years before 2012 are also outside that emissions test. Newer gasoline vehicles in the program take an OBD test with the safety inspection.",
     "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Annual combined safety and emissions inspections are required for all registered vehicles. Inspections cover brakes, tires, lights, windshield, exhaust, and OBD-II emissions. Cost is $35.",
+    "safetyInspectionDetails": "Massachusetts requires an annual safety inspection for every registered vehicle. The inspection is $35 for most vehicles. A vehicle operated only on electricity still needs the safety inspection.",
     "evIncentives": true,
     "evIncentiveDetails": "Massachusetts MOR-EV pays $3,500 for new battery EVs with an MSRP up to $55,000 and for income-eligible used EVs, plus $1,500 MOR-EV+ for income-qualified residents and a $1,000 trade-in bonus (mor-ev.org).",
     "registrationFeeRange": "$60 for most passenger vehicles",
@@ -544,7 +563,8 @@
     "plateFee": "Included in registration",
     "lemonLawCitation": "Mass. Gen. Laws ch. 90, § 7N 1/2",
     "lemonLawUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIV/Chapter90/Section7N1~2",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Michigan",
@@ -555,7 +575,7 @@
     "description": "Michigan is a no-fault insurance state with unique auto insurance requirements. As the heart of the American auto industry, the state has comprehensive vehicle laws and strong consumer protections.",
     "insuranceMinimum": "50/100/10 (PIP required)",
     "insuranceMinimumDetail": "$50,000 bodily injury per person / $100,000 bodily injury per accident / $10,000 property damage / PIP coverage required",
-    "averageInsuranceCost": 2541,
+    "averageInsuranceCost": 1791.22,
     "hasLemonLaw": true,
     "lemonLawSummary": "Michigan's lemon law, Mich. Comp. Laws §§ 257.1402 and 257.1403, asks the owner to report the defect during the express warranty or within one year of delivery, whichever is earlier, and it sets no mileage cap. The presumption is four repairs of the same defect within two years of the first repair attempt, or 30 days out of service during the warranty or that first year. After the third repair, send written notice by return receipt; the manufacturer then has five business days to repair. On the days-out path, written notice goes out after 25 days in the shop, and the manufacturer again has five business days.",
     "hasEmissions": false,
@@ -570,7 +590,8 @@
     "plateFee": "Included in registration",
     "lemonLawCitation": "Mich. Comp. Laws §§ 257.1402, 257.1403",
     "lemonLawUrl": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-257-1403.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Minnesota",
@@ -581,11 +602,11 @@
     "description": "Minnesota requires liability insurance and has a no-fault insurance component. The state has a lemon law for new vehicles and offers growing incentives for EV adoption.",
     "insuranceMinimum": "30/60/10",
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $10,000 property damage / $40,000 PIP",
-    "averageInsuranceCost": 1426,
+    "averageInsuranceCost": 1372.61,
     "hasLemonLaw": true,
     "lemonLawSummary": "Minn. Stat. § 325F.665 places the presumption in the express warranty or in the two years after delivery, and the date that comes first ends it. Miles do not shorten that window. A problem first reported while the warranty was still running can still support a refund or replacement from attempts made within three years of delivery. The presumption is four repairs, 30 business days out of service, or a single repair of a complete brake or steering failure that is likely to cause death or serious injury, and the four-repair and 30-day routes need written notice plus a chance to cure.",
-    "hasEmissions": true,
-    "emissionsDetails": "Minnesota requires emissions testing in the seven-county Twin Cities metro area for most vehicles. Testing is performed at state-contracted stations. Newer vehicles and electric vehicles are exempt.",
+    "hasEmissions": false,
+    "emissionsDetails": "Minnesota's Twin Cities auto emissions inspection program ended on March 1, 2000, when the Legislature repealed it. The state does not require an emissions test to register a vehicle.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -596,7 +617,8 @@
     "plateFee": "$6.75",
     "lemonLawCitation": "Minn. Stat. § 325F.665",
     "lemonLawUrl": "https://www.revisor.mn.gov/statutes/cite/325F.665",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Mississippi",
@@ -607,7 +629,7 @@
     "description": "Mississippi requires liability insurance for all registered vehicles and has a lemon law for new vehicle purchases. The state does not require emissions testing or annual safety inspections.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1593,
+    "averageInsuranceCost": 1542.36,
     "hasLemonLaw": true,
     "lemonLawSummary": "Miss. Code Ann. § 63-17-159 keeps the repair presumption inside the express warranty or the first year after delivery, whichever finishes sooner. The section does not add a mileage limit. Substantially the same problem repaired three times, or 15 working days in the shop for that problem, is enough, and routine maintenance is not part of the 15 days. Write the manufacturer before you rely on the section; once the car is at the shop the manufacturer names, that shop has ten working days to make it conform.",
     "hasEmissions": false,
@@ -622,7 +644,8 @@
     "plateFee": "$3.75",
     "lemonLawCitation": "Miss. Code Ann. § 63-17-159",
     "lemonLawUrl": "https://www.mmvc.ms.gov/sites/mmvc/files/Statutes/WarrantyEnforcementAct.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Missouri",
@@ -630,16 +653,16 @@
     "abbreviation": "MO",
     "capital": "Jefferson City",
     "region": "Midwest",
-    "description": "Missouri requires liability insurance and safety inspections. The state has emissions testing in the St. Louis and Kansas City metro areas and a lemon law protecting new vehicle buyers.",
+    "description": "Missouri requires liability insurance. Safety inspections are biennial, with an exemption for many newer low-mileage vehicles. Emissions testing applies in the St. Louis area and not in Kansas City. The state has a lemon law for new vehicles.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1569,
+    "averageInsuranceCost": 1462.03,
     "hasLemonLaw": true,
     "lemonLawSummary": "Under Mo. Rev. Stat. §§ 407.565 and 407.571, the clock runs for the express warranty or for one year after delivery, and the period that ends first controls. There is no mileage cutoff in that test. The same problem repaired four times, or the car held for repair for 30 working days, meets the presumption, and days spent on ordinary maintenance stay out of the count. Tell the manufacturer or its agent about the problem before that window closes.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in the St. Louis and Kansas City metro areas for gasoline-powered vehicles from 2 to 25 model years old. Biennial OBD-II testing costs approximately $24.",
+    "emissionsDetails": "The Gateway Vehicle Inspection Program tests gasoline vehicles from model year 1996 and diesel vehicles from model year 1997, at or under 8,500 pounds, that are registered in St. Louis City or in St. Louis, St. Charles, or Jefferson County. Franklin County residents have been exempt since July 1, 2022. Kansas City is not in the program. The state cap on the emissions inspection fee is $24. Even model years are tested in even calendar years, and odd model years in odd calendar years. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Missouri requires safety inspections every two years or when a vehicle changes ownership. Inspections cover brakes, lights, steering, tires, glass, and horn. Cost is typically $12.",
+    "safetyInspectionDetails": "RSMo § 307.350 requires a biennial safety inspection, in the even calendar year for an even model year and in the odd calendar year for an odd model year, and also when ownership changes. A vehicle is exempt for the first ten model years if it has fewer than 150,000 miles, other than a prior salvage vehicle right after it is rebuilt. The certificate is generally valid for 60 days. The Department of Revenue said on January 6, 2026, that these rules had not changed.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$18.25 - $51.25 based on horsepower",
@@ -648,7 +671,8 @@
     "plateFee": "$8.50",
     "lemonLawCitation": "Mo. Rev. Stat. §§ 407.565, 407.571",
     "lemonLawUrl": "https://revisor.mo.gov/main/OneSection.aspx?section=407.571",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Montana",
@@ -659,7 +683,7 @@
     "description": "Montana is popular for vehicle registration due to its lack of sales tax. The state requires liability insurance but does not mandate emissions testing or safety inspections for most vehicles.",
     "insuranceMinimum": "25/50/20",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
-    "averageInsuranceCost": 1341,
+    "averageInsuranceCost": 1321.59,
     "hasLemonLaw": true,
     "lemonLawSummary": "Montana defines the warranty period in Mont. Code Ann. §§ 61-4-501 and 61-4-504 as two years or 18,000 miles, whichever is earlier. The presumption is four repairs of the same problem, or 30 business days out of service after the manufacturer, its agent, or a dealer was notified. Send written notice to the manufacturer or its agent while the warranty period is still open. The manufacturer has to tell the buyer that written notice is required, and the presumption is not used against a manufacturer that never received that notice and a chance to cure.",
     "hasEmissions": false,
@@ -674,7 +698,8 @@
     "plateFee": "$10",
     "lemonLawCitation": "Mont. Code Ann. §§ 61-4-501, 61-4-504",
     "lemonLawUrl": "https://mca.legmt.gov/bills/mca/title_0610/chapter_0040/part_0050/section_0040/0610-0040-0050-0040.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Nebraska",
@@ -685,7 +710,7 @@
     "description": "Nebraska requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing and has a motor vehicle tax based on vehicle value.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1305,
+    "averageInsuranceCost": 1345.35,
     "hasLemonLaw": true,
     "lemonLawSummary": "Neb. Rev. Stat. § 60-2704 times the presumption to the express warranty or to one year after delivery, and the earlier of those two dates ends it. The statute does not set a mileage limit. The car meets the test after four repairs of the same problem or after 40 days out of service. That test is available only once the manufacturer has notice by certified mail and a chance to cure.",
     "hasEmissions": false,
@@ -700,7 +725,8 @@
     "plateFee": "$3.30",
     "lemonLawCitation": "Neb. Rev. Stat. § 60-2704",
     "lemonLawUrl": "https://nebraskalegislature.gov/laws/statutes.php?statute=60-2704",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Nevada",
@@ -711,11 +737,11 @@
     "description": "Nevada requires liability insurance and emissions testing in the Las Vegas and Reno metro areas. The state has a lemon law for new vehicles and offers growing EV incentive programs.",
     "insuranceMinimum": "25/50/20",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
-    "averageInsuranceCost": 1860,
+    "averageInsuranceCost": 1865.83,
     "hasLemonLaw": true,
     "lemonLawSummary": "Nevada asks the buyer to report the problem in writing under NRS 597.610 before the express warranty ends or one year after delivery to the original buyer, whichever is earlier. NRS 597.630 then presumes enough attempts after four repairs of the same problem or 30 calendar days out of service. The 30-day count can run longer when the needed repair is delayed for reasons outside the manufacturer's or dealer's control.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in Clark County (Las Vegas) and Washoe County (Reno) for vehicles of certain ages. Testing uses OBD-II for newer vehicles and costs approximately $21.",
+    "emissionsDetails": "Emissions testing is required in Clark County (Las Vegas) and Washoe County (Reno) for vehicles of certain ages. Testing uses OBD-II for newer vehicles and costs approximately $21. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -726,7 +752,8 @@
     "plateFee": "$8",
     "lemonLawCitation": "NRS 597.630",
     "lemonLawUrl": "https://www.leg.state.nv.us/NRS/NRS-597.html#NRS597Sec630",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "New Hampshire",
@@ -734,16 +761,16 @@
     "abbreviation": "NH",
     "capital": "Concord",
     "region": "New England",
-    "description": "New Hampshire is unique in that it does not require auto insurance by law, though drivers remain financially responsible for damages. The state mandates annual safety inspections.",
+    "description": "New Hampshire does not require drivers to carry auto insurance, though they remain financially responsible for damages. The DMV's February 13, 2026 guidance suspends the vehicle inspection program until further notice.",
     "insuranceMinimum": "25/50/25 (not mandatory)",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage. Note: Insurance is not mandatory in New Hampshire, but these minimums apply if you carry coverage.",
-    "averageInsuranceCost": 1014,
+    "averageInsuranceCost": 1103.33,
     "hasLemonLaw": true,
     "lemonLawSummary": "New Hampshire's presumption in RSA 357-D:3, VII is measured during the express warranty. Three repairs of the same problem, or 30 business days out of service, meets the presumption, counting a business day as a day those dealers normally keep a service department open. Repair attempts should be on written repair orders, generally at the same dealer, and a car the owner can use for a major part of the day is not out of service. After the third repair or after those 30 business days, RSA 357-D:4 requires written notice to the manufacturer, which then gets one final chance to repair.",
-    "hasEmissions": true,
-    "emissionsDetails": "New Hampshire requires annual OBD-II emissions testing as part of the annual safety inspection for vehicles 2 or more model years old. Diesel vehicles are exempt.",
-    "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles. Inspections cover brakes, exhaust, lights, steering, tires, glass, and emissions (OBD-II). Cost is typically $25-$50.",
+    "hasEmissions": false,
+    "emissionsDetails": "",
+    "hasSafetyInspection": false,
+    "safetyInspectionDetails": "The New Hampshire DMV's February 13, 2026 guidance says the vehicle inspection program is suspended until further notice. Stations are not issuing state inspection stickers, and an annual inspection is not required while that suspension stands. Drivers remain responsible for the equipment rules in RSA 266. OBD emissions testing was part of that inspection. The status can change.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$31.20 - $43.20 based on weight",
@@ -752,7 +779,8 @@
     "plateFee": "$4",
     "lemonLawCitation": "RSA 357-D:3, VII",
     "lemonLawUrl": "https://gc.nh.gov/rsa/html/XXXI/357-D/357-D-mrg.htm",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "New Jersey",
@@ -763,11 +791,11 @@
     "description": "New Jersey requires no-fault insurance with some of the highest minimum coverage requirements in the nation. The state mandates emissions testing and has strong consumer protection laws.",
     "insuranceMinimum": "15/30/5 (PIP required)",
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $5,000 property damage / $15,000 PIP",
-    "averageInsuranceCost": 1592,
+    "averageInsuranceCost": 1878.38,
     "hasLemonLaw": true,
     "lemonLawSummary": "New Jersey's lemon law, N.J.S.A. 56:12-33, uses the first 24,000 miles or two years, and a motorhome uses 45 calendar days out of service where a passenger car uses 20. Three repairs of substantially the same problem, that days-out total, or one exam of a problem likely to cause death or serious injury, is the presumption. It applies only after the manufacturer received certified-mail notice, return receipt requested, and had one chance to repair within 10 calendar days. That letter may go out after two repairs, after the car has been out 20 calendar days (45 for a motorhome), or after one exam of a serious safety problem.",
     "hasEmissions": true,
-    "emissionsDetails": "New Jersey requires biennial emissions inspections for most vehicles 5+ model years old. Testing is performed at state Motor Vehicle Commission inspection stations at no charge.",
+    "emissionsDetails": "New Jersey requires biennial emissions inspections for most vehicles 5+ model years old. Testing is performed at state Motor Vehicle Commission inspection stations at no charge. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": true,
@@ -778,7 +806,8 @@
     "plateFee": "$6",
     "lemonLawCitation": "N.J.S.A. 56:12-33",
     "lemonLawUrl": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1/54204/54855",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "New Mexico",
@@ -789,11 +818,11 @@
     "description": "New Mexico requires liability insurance for all registered vehicles. The state has emissions testing in the Albuquerque area and a lemon law covering new vehicle purchases.",
     "insuranceMinimum": "25/50/10",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
-    "averageInsuranceCost": 1275,
+    "averageInsuranceCost": 1421.95,
     "hasLemonLaw": true,
     "lemonLawSummary": "NMSA 1978 § 57-16A-3(C) covers a new vehicle for the express warranty or for the year after delivery, and the presumption follows the date that arrives first. Miles are not a separate cutoff. Four repairs that leave the same problem uncorrected, or 30 business days the car sits with the manufacturer, an agent, or a dealer, meets the test, not counting routine maintenance. Direct written notice and a chance to cure have to come first, and the manufacturer must say so in the warranty or in a separate notice.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in Bernalillo County (Albuquerque) for most vehicles 2+ model years old. Biennial OBD-II testing is performed at authorized stations.",
+    "emissionsDetails": "Emissions testing is required in Bernalillo County (Albuquerque) for most vehicles 2+ model years old. Biennial OBD-II testing is performed at authorized stations. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -804,7 +833,8 @@
     "plateFee": "$7 - $14",
     "lemonLawCitation": "NMSA 1978, § 57-16A-3(C)",
     "lemonLawUrl": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "New York",
@@ -815,11 +845,11 @@
     "description": "New York has comprehensive vehicle ownership requirements including no-fault insurance, annual safety and emissions inspections, and one of the strongest lemon laws in the nation.",
     "insuranceMinimum": "25/50/10 (PIP required)",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage / $50,000 PIP (no-fault) required",
-    "averageInsuranceCost": 2321,
+    "averageInsuranceCost": 2149.87,
     "hasLemonLaw": true,
     "lemonLawSummary": "New York's general presumption in General Business Law § 198-a(d) covers the first 18,000 miles or two years. Four repairs of the same problem, or 30 calendar days out of service, is the test for a car. During that period, report the problem to the manufacturer, its agent, or an authorized dealer, and the agent or dealer has seven days to forward written notice by certified mail. Motor homes in the same section follow a different path: certified-mail notice after two repairs or 21 days out of service, and the owner may proceed after three repairs or 30 days out, if the manufacturer gave prior written notice of that requirement.",
     "hasEmissions": true,
-    "emissionsDetails": "Annual emissions testing is required statewide as part of the annual safety inspection for most vehicles 2+ model years old. OBD-II testing is used for 1996+ model year vehicles.",
+    "emissionsDetails": "Annual emissions testing is required statewide as part of the annual safety inspection for most vehicles 2+ model years old. OBD-II testing is used for 1996+ model year vehicles. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles. Inspections cover brakes, steering, tires, lights, glass, exhaust, and emissions. Cost varies by shop but is typically $10-$37.",
     "evIncentives": true,
@@ -830,7 +860,8 @@
     "plateFee": "$25",
     "lemonLawCitation": "N.Y. General Business Law § 198-a(d)",
     "lemonLawUrl": "https://www.nysenate.gov/legislation/laws/GBS/198-A",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "North Carolina",
@@ -838,16 +869,16 @@
     "abbreviation": "NC",
     "capital": "Raleigh",
     "region": "Southeast",
-    "description": "North Carolina requires liability insurance and annual safety and emissions inspections. The state has a lemon law for new vehicles and collects a highway use tax on vehicle purchases.",
+    "description": "North Carolina requires liability insurance and an annual safety inspection statewide. Emissions testing remains in 19 counties until EPA approves the end of that program.",
     "insuranceMinimum": "30/60/25",
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1220,
+    "averageInsuranceCost": 1233.32,
     "hasLemonLaw": true,
     "lemonLawSummary": "North Carolina allows a refund or replacement under N.C.G.S. § 20-351.3 for a defect that substantially impairs value and showed up no later than 24 months or 24,000 miles after delivery. The presumption in § 20-351.5 is four repairs of the same problem that still exists, or 20 business days out of service during any 12-month period of the warranty. Express warranties have to last at least one year or 12,000 miles, and the repair duty runs for one year or the express-warranty term, whichever is longer. Notify the manufacturer directly in writing and allow up to 15 calendar days to correct the problem, unless it never disclosed that written notice was required; § 20-351.7 also requires a separate 10-day written notice before you sue.",
     "hasEmissions": true,
-    "emissionsDetails": "Annual emissions and safety inspections are required in 47 of 100 counties for vehicles 3-20 model years old. OBD-II testing is used and costs approximately $30.",
+    "emissionsDetails": "Emissions testing is part of the annual inspection in 19 counties. Session Law 2023-134 and Session Law 2026-41 end that emissions program after EPA approval, and the annual safety inspection remains statewide. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Annual safety inspections are required statewide for all registered vehicles. In some counties, the inspection includes both safety and emissions components. Cost is approximately $13.60 for safety only.",
+    "safetyInspectionDetails": "North Carolina requires an annual safety inspection statewide for registered vehicles. The emissions portion, where it still applies, is limited to 19 counties and is separate from the statewide safety inspection.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$38.75 for most passenger vehicles",
@@ -856,7 +887,8 @@
     "plateFee": "$38.75",
     "lemonLawCitation": "N.C.G.S. § 20-351.5",
     "lemonLawUrl": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_20/Article_15A.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "North Dakota",
@@ -867,7 +899,7 @@
     "description": "North Dakota requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing or safety inspections and has some of the lowest insurance rates in the nation.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1148,
+    "averageInsuranceCost": 1077.51,
     "hasLemonLaw": true,
     "lemonLawSummary": "N.D.C.C. § 51-07-19 measures repairs during the express warranty or during the year after delivery, and the shorter of those two periods is the one that counts. There is no mileage cap on that presumption. More than three repairs of the same problem, which means a fourth visit while the trouble is still present, or 30 business days out of service, is the presumption. It does not run against the manufacturer until the manufacturer has had direct notice and a chance to cure.",
     "hasEmissions": false,
@@ -882,7 +914,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "N.D.C.C. § 51-07-19",
     "lemonLawUrl": "https://ndlegis.gov/cencode/t51c07.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Ohio",
@@ -893,11 +926,11 @@
     "description": "Ohio requires liability insurance but is unique in that it uses a financial responsibility law rather than mandatory insurance. The state requires emissions testing in certain urban counties.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1083,
+    "averageInsuranceCost": 1133.98,
     "hasLemonLaw": true,
     "lemonLawSummary": "Ohio's lemon law, Ohio Rev. Code § 1345.73, uses the first year or 18,000 miles, whichever is earlier, the same window § 1345.72 uses for reporting a repair. Three repairs of substantially the same problem, 30 calendar days out of service, eight attempts to repair any problems, or one attempt at a problem likely to cause death or serious bodily injury, is enough if the problem continues or comes back. Report the nonconformity to the manufacturer, its agent, or its authorized dealer during that year or 18,000 miles.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing (E-Check) is required in select urban counties including parts of greater Cleveland and greater Akron for vehicles 4-25 model years old. Testing is free at designated stations.",
+    "emissionsDetails": "Emissions testing (E-Check) is required in select urban counties including parts of greater Cleveland and greater Akron for vehicles 4-25 model years old. Testing is free at designated stations. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -908,7 +941,8 @@
     "plateFee": "$7.50",
     "lemonLawCitation": "Ohio Rev. Code § 1345.73",
     "lemonLawUrl": "https://codes.ohio.gov/ohio-revised-code/section-1345.73",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Oklahoma",
@@ -919,7 +953,7 @@
     "description": "Oklahoma requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing but mandates personal property taxes on vehicles, known as excise tax.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1577,
+    "averageInsuranceCost": 1453.74,
     "hasLemonLaw": true,
     "lemonLawSummary": "15 O.S. § 901(D) places Oklahoma's presumption inside the express warranty or the year after delivery, and the period that ends first is the one that applies. Mileage is not part of that cutoff. The same problem repaired four times, or 30 business days in the shop, creates the presumption. Put the report in writing to the manufacturer during the warranty or that year; without that notice and a chance to cure, the presumption does not apply.",
     "hasEmissions": false,
@@ -934,7 +968,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "15 O.S. § 901(D)",
     "lemonLawUrl": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=66311",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Oregon",
@@ -945,11 +980,11 @@
     "description": "Oregon has no sales tax on vehicle purchases and requires emissions testing in the Portland metro area. The state has a strong lemon law and offers significant incentives for electric vehicles.",
     "insuranceMinimum": "25/50/20",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
-    "averageInsuranceCost": 1302,
+    "averageInsuranceCost": 1374.74,
     "hasLemonLaw": true,
     "lemonLawSummary": "Oregon's lemon law, ORS 646A.406, uses two years after delivery or 24,000 miles, whichever ends first. The presumption is three repairs plus a chance to cure, 30 calendar days out of service (60 for a motor home), or one repair plus a final attempt on a problem likely to cause death or serious injury, if the problem continues. Before the presumption is used, the manufacturer needs a direct letter about the defect and a chance to correct it.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in the Portland metro area and Rogue Valley for vehicles 1975 and newer. DEQ testing is performed every two years and costs $21-$25.",
+    "emissionsDetails": "Emissions testing is required in the Portland metro area and Rogue Valley for vehicles 1975 and newer. DEQ testing is performed every two years and costs $21-$25. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": true,
@@ -960,7 +995,8 @@
     "plateFee": "$26.50",
     "lemonLawCitation": "ORS 646A.406",
     "lemonLawUrl": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Pennsylvania",
@@ -971,11 +1007,11 @@
     "description": "Pennsylvania requires liability insurance and annual safety and emissions inspections. The state has a lemon law for new vehicles and is part of a multi-state emissions standards agreement.",
     "insuranceMinimum": "15/30/5",
     "insuranceMinimumDetail": "$15,000 bodily injury per person / $30,000 bodily injury per accident / $5,000 property damage",
-    "averageInsuranceCost": 1419,
+    "averageInsuranceCost": 1395.99,
     "hasLemonLaw": true,
     "lemonLawSummary": "Pennsylvania's Automobile Lemon Law, the Act of March 28, 1984, P.L. 150, No. 28, covers a car for one year, 12,000 miles, or the warranty, whichever comes first. A motorcycle uses one year or the warranty, and the statute does not add a mileage cap for motorcycles. Three repairs of the same problem, or 30 calendar days out of service, is the presumption in section 6. When the car comes back to the same dealer a second time for the same problem, section 7 says the dealer notifies the manufacturer by certified mail within seven days.",
     "hasEmissions": true,
-    "emissionsDetails": "Annual emissions testing is required in 25 counties, including the Pittsburgh and Philadelphia metro areas. Testing follows OBD-II protocols for 1996+ model year vehicles. Cost is typically $34-$38.",
+    "emissionsDetails": "Annual emissions testing is required in 25 counties, including the Pittsburgh and Philadelphia metro areas. Testing follows OBD-II protocols for 1996+ model year vehicles. Cost is typically $34-$38. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles. Inspections cover brakes, steering, suspension, tires, lights, glass, body, and chassis. Cost is typically $35-$50.",
     "evIncentives": false,
@@ -986,7 +1022,8 @@
     "plateFee": "$10",
     "lemonLawCitation": "Automobile Lemon Law, Act of Mar. 28, 1984, P.L. 150, No. 28, § 6",
     "lemonLawUrl": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/1984/0/0028..HTM",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Rhode Island",
@@ -997,11 +1034,11 @@
     "description": "Rhode Island requires liability insurance and biennial safety and emissions inspections. The state has a lemon law for new vehicles and eliminated the car excise tax in recent years.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1537,
+    "averageInsuranceCost": 1849.8,
     "hasLemonLaw": true,
     "lemonLawSummary": "Rhode Island's term of protection in R.I. Gen. Laws § 31-5.2-1 is one year or 15,000 miles, and the presumption is in § 31-5.2-5. Four repairs of the same problem, or 30 calendar days out of service, during that term is the test, and the manufacturer also gets one more cure of not more than seven calendar days. Report the nonconformity during the term of protection. The extra seven days starts when the manufacturer first knows the four-repair or 30-day limit has been met.",
     "hasEmissions": true,
-    "emissionsDetails": "Rhode Island requires biennial emissions inspections for all vehicles 2 or more model years old. OBD-II testing is used for 1996+ model year vehicles. Testing is performed at private stations.",
+    "emissionsDetails": "Rhode Island requires biennial emissions inspections for all vehicles 2 or more model years old. OBD-II testing is used for 1996+ model year vehicles. Testing is performed at private stations. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Biennial safety inspections are required for all registered vehicles. Inspections cover brakes, tires, lights, steering, exhaust, glass, and wipers. Cost varies by station.",
     "evIncentives": false,
@@ -1012,7 +1049,8 @@
     "plateFee": "$6",
     "lemonLawCitation": "R.I. Gen. Laws § 31-5.2-5; term of protection defined in § 31-5.2-1",
     "lemonLawUrl": "https://webserver.rilegislature.gov/Statutes/TITLE31/31-5.2/31-5.2-5.htm",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "South Carolina",
@@ -1023,7 +1061,7 @@
     "description": "South Carolina requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing or annual safety inspections and has a low personal property tax on vehicles.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1579,
+    "averageInsuranceCost": 1664.69,
     "hasLemonLaw": true,
     "lemonLawSummary": "South Carolina, in S.C. Code §§ 56-28-30 and 56-28-40, asks for a report within the first 12 months or 12,000 miles, while the presumption counts repairs and days during the express warranty. The presumption is met by three repairs aimed at the same problem, or by 30 calendar days the car spends out of service. If the manufacturer clearly said at the sale that written notice is required, send that notice so it can make a final repair. It then has ten business days to name a franchised shop and ten business days after delivery to attempt the repair.",
     "hasEmissions": false,
@@ -1038,7 +1076,8 @@
     "plateFee": "$8",
     "lemonLawCitation": "S.C. Code Ann. § 56-28-40; repair term in § 56-28-30",
     "lemonLawUrl": "https://www.scstatehouse.gov/code/t56c028.php",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "South Dakota",
@@ -1049,7 +1088,7 @@
     "description": "South Dakota requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing or safety inspections and has no state income tax.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1192,
+    "averageInsuranceCost": 1290.69,
     "hasLemonLaw": true,
     "lemonLawSummary": "South Dakota's rights period in SDCL 32-6D-1 and 32-6D-5 is one year or 12,000 miles, and the problem has to start during that period. Repairs that count toward the presumption can run out to 24 months or 24,000 miles, so long as one attempt happened during the rights period. The test is four repairs plus a final attempt by the manufacturer, or 30 calendar days out of service with that final attempt included. Before a lawsuit, mail a certified demand to correct the problem; once the presumption is already met, the manufacturer has seven calendar days to designate a facility and 14 calendar days after the car arrives to finish the repair.",
     "hasEmissions": false,
@@ -1064,7 +1103,8 @@
     "plateFee": "$4 - $6",
     "lemonLawCitation": "SDCL 32-6D-5; lemon law rights period defined in SDCL 32-6D-1",
     "lemonLawUrl": "https://sdlegislature.gov/Statutes/32-6D-5",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Tennessee",
@@ -1072,14 +1112,14 @@
     "abbreviation": "TN",
     "capital": "Nashville",
     "region": "Southeast",
-    "description": "Tennessee requires liability insurance and has emissions testing in select metro counties. The state has a lemon law for new vehicles and charges no state income tax on wages.",
+    "description": "Tennessee requires liability insurance. Emissions testing is no longer required. The state has a lemon law for new vehicles and charges no state income tax on wages.",
     "insuranceMinimum": "25/50/15",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $15,000 property damage",
-    "averageInsuranceCost": 1370,
+    "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "lemonLawSummary": "Tenn. Code Ann. §§ 55-24-101(7) and 55-24-105 call the coverage a term of protection. It lasts for the express warranty or for one year after delivery, whichever finishes first, and miles do not shorten it. Inside that term, three repairs of the same problem or 30 calendar days out of service is the presumption. Send certified mail before you go further, and if the presumption is already met the manufacturer gets one more chance of not more than ten days.",
-    "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in Davidson, Hamilton, Rutherford, Sumner, Williamson, and Wilson counties for vehicles 3-25 model years old. Annual OBD-II testing costs $9.",
+    "hasEmissions": false,
+    "emissionsDetails": "Emissions testing is no longer required in Tennessee. The county clerk registration guide says the requirement ended in February 2022. Davidson County ended its program on February 5, 2022. EPA removed the inspection-and-maintenance programs for Davidson, Sumner, Rutherford, Williamson, Wilson, and Hamilton counties from the state plan.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -1090,7 +1130,8 @@
     "plateFee": "$1",
     "lemonLawCitation": "Tenn. Code Ann. §§ 55-24-101(7), 55-24-105",
     "lemonLawUrl": "https://www.tn.gov/attorneygeneral/working-for-tennessee/consumer/resources/laws.html",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Texas",
@@ -1098,25 +1139,26 @@
     "abbreviation": "TX",
     "capital": "Austin",
     "region": "South Central",
-    "description": "Texas requires liability insurance and annual safety inspections. The state has emissions testing in select urban counties and is one of the largest vehicle markets in the country.",
+    "description": "Texas requires liability insurance. Personal-vehicle safety inspections ended on January 1, 2025. Registration includes a $7.50 inspection-program replacement fee, and emissions testing applies to gasoline vehicles in 17 counties.",
     "insuranceMinimum": "30/60/25",
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1823,
+    "averageInsuranceCost": 1917.05,
     "hasLemonLaw": true,
     "lemonLawSummary": "Tex. Occ. Code § 2301.605 sets the presumption before the express warranty expires or before 24 months or 24,000 miles, whichever comes first. The same nonconformity after four or more repairs is one path. A serious safety hazard after two or more repairs is the second path. A nonconformity that still substantially impairs use or market value after 30 or more cumulative days out of service is the third path. Subsection (b) extends those periods for war, invasion, strike, fire, flood, or another natural disaster, and subsection (c) leaves out any days the manufacturer or distributor lends a comparable vehicle while a franchised dealer repairs the owner's car. An order under § 2301.606(c) requires written notice of the defect and a chance for the manufacturer, converter, or distributor to cure.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required as part of the annual safety inspection in 17 urban counties including Dallas-Fort Worth, Houston, Austin, San Antonio, and El Paso. Cost is approximately $11.50 for the emissions portion.",
-    "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles in Texas. Inspections cover brakes, horn, lights, mirrors, steering, tires, exhaust, glass, and other safety systems. Cost is $7.50 for non-commercial vehicles.",
+    "emissionsDetails": "Emissions testing applies to gasoline vehicles registered in Brazoria, Collin, Dallas, Denton, El Paso, Ellis, Fort Bend, Galveston, Harris, Johnson, Kaufman, Montgomery, Parker, Rockwall, Tarrant, Travis, and Williamson counties. A vehicle operated only on electricity does not take this test. Bexar County gasoline vehicles that are 2 to 24 model years old start emissions testing on November 1, 2026.",
+    "hasSafetyInspection": false,
+    "safetyInspectionDetails": "Personal-vehicle safety inspections ended on January 1, 2025, under HB 3297. Non-commercial vehicles pay a $7.50 inspection-program replacement fee at registration. A qualifying new passenger car or light truck pays $16.75 once, covering two years. Commercial vehicles still need a safety inspection and do not pay the replacement fee.",
     "evIncentives": false,
-    "evIncentiveDetails": "Texas's 2026 Light-Duty Motor Vehicle Purchase or Lease Incentive round for EVs is closed.",
+    "evIncentiveDetails": "The 2026 Texas Light-Duty Motor Vehicle Purchase or Lease Incentive round for EVs is closed.",
     "registrationFeeRange": "$50.75 for most passenger vehicles",
-    "registrationNotes": "Texas charges a base registration fee of $50.75 for most passenger vehicles. A 6.25% motor vehicle sales tax applies to purchases. Title fee is $33.",
+    "registrationNotes": "Texas charges a base registration fee of $50.75 for most passenger vehicles. A 6.25% motor vehicle sales tax applies to purchases. The title fee is $33. HB 3297 ended personal-vehicle safety inspections on January 1, 2025, and registration includes a $7.50 inspection-program replacement fee.",
     "titleFee": "$33",
     "plateFee": "Included in registration",
     "lemonLawCitation": "Tex. Occ. Code § 2301.605",
     "lemonLawUrl": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.2301.htm",
-    "lemonLawVerified": "2026-10-23"
+    "lemonLawVerified": "2026-10-23",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Utah",
@@ -1124,16 +1166,16 @@
     "abbreviation": "UT",
     "capital": "Salt Lake City",
     "region": "Mountain West",
-    "description": "Utah requires liability insurance and has emissions testing in several Wasatch Front counties. The state has a lemon law for new vehicles and safety inspections based on vehicle age.",
+    "description": "Utah requires liability insurance and emissions testing in Cache, Davis, Salt Lake, Utah, and Weber counties. A safety inspection is not required for most passenger vehicles.",
     "insuranceMinimum": "25/65/15",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $65,000 bodily injury per accident / $15,000 property damage / $3,000 PIP",
-    "averageInsuranceCost": 1375,
+    "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "lemonLawSummary": "Utah Code § 13-20-5 starts from the express warranty and from the first anniversary of delivery, and it uses whichever of those dates arrives sooner. The section does not limit the presumption by miles. A reasonable number of attempts is four tries at the same problem, or 30 business days the car is out for repair. Section 13-20-3 is the report rule: tell the manufacturer, its agent, or its authorized dealer during the warranty or during that same year.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in Salt Lake, Davis, Utah, Weber, and Cache counties. Testing frequency varies by county and vehicle age (annual or biennial). OBD-II testing costs approximately $30.",
-    "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Safety inspections are required annually for vehicles 10+ years old in most counties. Newer vehicles are exempt until they reach 4-8 years old, depending on county. Cost is approximately $30.",
+    "emissionsDetails": "Emissions testing applies to many gasoline vehicles in Salt Lake, Davis, Utah, Weber, and Cache counties. Frequency depends on the county and the model year. A vehicle operated only on electricity does not take this emissions test.",
+    "hasSafetyInspection": false,
+    "safetyInspectionDetails": "Utah ended the safety-inspection requirement for most passenger vehicles on January 1, 2018. A safety inspection is still required for a rebuilt salvage title, a first-time street-legal ATV, and certain commercial vehicles and three-axle motor homes. It is not a prerequisite for ordinary passenger registration.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$44 - $69 based on vehicle age",
@@ -1142,7 +1184,8 @@
     "plateFee": "$6",
     "lemonLawCitation": "Utah Code § 13-20-5",
     "lemonLawUrl": "https://le.utah.gov/xcode/Title13/Chapter20/C13-20_1800010118000101.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Vermont",
@@ -1153,11 +1196,11 @@
     "description": "Vermont requires liability insurance and annual safety and emissions inspections. The state follows California emissions standards and offers incentives for electric and plug-in hybrid vehicles.",
     "insuranceMinimum": "25/50/10",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
-    "averageInsuranceCost": 1031,
+    "averageInsuranceCost": 1039.63,
     "hasLemonLaw": true,
     "lemonLawSummary": "Vermont's presumption in 9 V.S.A. § 4172(g) is tied to the express warranty, and at least the first repair attempt has to happen while that warranty is still in effect. Three repairs of the same problem, documented on written repair orders and generally at the same dealer, or 30 calendar days out of service, is the test. A car the owner can still drive for most of the day is not treated as out of service. After a reasonable repair attempt or after those 30 days, § 4173 says notify the manufacturer in writing and then choose arbitration; the manufacturer gets one final repair chance during the arbitration.",
     "hasEmissions": true,
-    "emissionsDetails": "Annual OBD-II emissions testing is required as part of the annual safety inspection for vehicles 2+ model years old. Vermont follows California's vehicle emission standards (CARB).",
+    "emissionsDetails": "Annual OBD-II emissions testing is required as part of the annual safety inspection for vehicles 2+ model years old. Vermont follows California's vehicle emission standards (CARB). A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles. Inspections cover brakes, steering, tires, lights, exhaust, glass, and OBD-II emissions. Cost is typically $35.",
     "evIncentives": false,
@@ -1168,7 +1211,8 @@
     "plateFee": "Included in registration",
     "lemonLawCitation": "9 V.S.A. § 4172(g)",
     "lemonLawUrl": "https://legislature.vermont.gov/statutes/fullchapter/09/115",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Virginia",
@@ -1179,11 +1223,11 @@
     "description": "Virginia requires liability insurance and annual safety inspections statewide. The state has emissions testing in Northern Virginia and has a lemon law protecting new vehicle buyers.",
     "insuranceMinimum": "30/60/20",
     "insuranceMinimumDetail": "$30,000 bodily injury per person / $60,000 bodily injury per accident / $20,000 property damage",
-    "averageInsuranceCost": 1336,
+    "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "lemonLawSummary": "Virginia's lemon-law rights period in Va. Code §§ 59.1-207.11 and 59.1-207.13(B) is 18 months after delivery, with no mileage cap, and it can run longer if the manufacturer was notified and the problem is still unrepaired at the end. The presumption is three repairs of the same problem, one repair of a serious safety defect, or 30 calendar days out of service, unless the repairs could not be performed for reasons beyond the manufacturer's control. A serious safety defect means a life-threatening malfunction that interferes with ordinary control of the car or creates a risk of fire or explosion. Notify the manufacturer of the need for repair unless it was already notified, and if the presumption is already met the manufacturer gets up to 15 more days to correct it; the warranty or owner's manual has to disclose that written notification is required.",
     "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in Northern Virginia and certain other localities as part of the annual safety inspection. OBD-II testing is used for 1996+ model year vehicles.",
+    "emissionsDetails": "Emissions testing is required in Northern Virginia and certain other localities as part of the annual safety inspection. OBD-II testing is used for 1996+ model year vehicles. A vehicle operated only on electricity does not take this emissions test.",
     "hasSafetyInspection": true,
     "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles statewide. Inspections cover brakes, steering, suspension, tires, lights, glass, horn, exhaust, and mirrors. Cost is $20.",
     "evIncentives": false,
@@ -1194,7 +1238,8 @@
     "plateFee": "$10",
     "lemonLawCitation": "Va. Code § 59.1-207.13(B); lemon law rights period defined in § 59.1-207.11",
     "lemonLawUrl": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter17.3/",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Washington",
@@ -1202,14 +1247,14 @@
     "abbreviation": "WA",
     "capital": "Olympia",
     "region": "Pacific Northwest",
-    "description": "Washington requires liability insurance and has emissions testing in certain areas. The state has no income tax, a strong lemon law, and significant incentives for electric vehicle adoption.",
+    "description": "Washington requires liability insurance. The state emission-check program ended on January 1, 2020, so registration no longer depends on an emissions test. Washington has no income tax, a strong lemon law, and had incentives for electric vehicles.",
     "insuranceMinimum": "25/50/10",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
-    "averageInsuranceCost": 1394,
+    "averageInsuranceCost": 1521.63,
     "hasLemonLaw": true,
     "lemonLawSummary": "Washington sets eligibility in RCW 19.118.021(6) at two years or 24,000 miles, and the written warranty used for the presumption in RCW 19.118.041(2) is at least one year or 12,000 miles. For a car that is not a motor home, the presumption is two repairs of the same serious safety defect, two or more different serious safety defects each repaired at least once within a 12-month period, four repairs of the same problem, or 30 calendar days out of service with at least 15 of those days during the written warranty. A motor home uses one serious-safety repair plus a final attempt, three repairs plus a final attempt, or 60 days out of service. Make a written request to the manufacturer before a replacement or repurchase; a motor-home owner sends written notice so the manufacturers can make one last coordinated attempt after one serious-safety repair, three attempts, or 30 days out.",
-    "hasEmissions": true,
-    "emissionsDetails": "Emissions testing is required in parts of Clark, King, Pierce, Snohomish, and Spokane counties for vehicles 5-25 model years old. Biennial OBD-II testing costs $15.",
+    "hasEmissions": false,
+    "emissionsDetails": "Washington's emission-check program ended on January 1, 2020. Vehicle owners no longer need an emissions test to renew registration. The Department of Ecology repealed the obsolete testing rules in 2021. Driving a vehicle with modified emissions equipment, or a vehicle that smokes, is still illegal.",
     "hasSafetyInspection": false,
     "safetyInspectionDetails": "",
     "evIncentives": false,
@@ -1220,7 +1265,8 @@
     "plateFee": "$10",
     "lemonLawCitation": "RCW 19.118.041(2); eligibility period defined in RCW 19.118.021(6)",
     "lemonLawUrl": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.118.041",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "West Virginia",
@@ -1228,16 +1274,16 @@
     "abbreviation": "WV",
     "capital": "Charleston",
     "region": "Mid-Atlantic",
-    "description": "West Virginia requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing but mandates annual vehicle safety inspections.",
+    "description": "West Virginia requires liability insurance and a safety inspection every 24 months. The state does not require emissions testing.",
     "insuranceMinimum": "25/50/25",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $25,000 property damage",
-    "averageInsuranceCost": 1285,
+    "averageInsuranceCost": 1367.18,
     "hasLemonLaw": true,
     "lemonLawSummary": "The presumption in W. Va. Code § 46A-6A-5 stops at the end of the express warranty or at one year after delivery, whichever date is sooner. Miles do not limit it. A different clock, the repair duty in § 46A-6A-3, runs for the longer of those two periods. Three repairs of the same problem, 30 calendar days out of service, or one unsuccessful repair of a problem likely to cause death or serious injury, meets the presumption, but only after written notice and at least one chance to cure.",
     "hasEmissions": false,
     "emissionsDetails": "",
     "hasSafetyInspection": true,
-    "safetyInspectionDetails": "Annual safety inspections are required for all registered vehicles. Inspections cover brakes, steering, tires, lights, glass, exhaust, horn, and mirrors. Cost is typically $10-$19.",
+    "safetyInspectionDetails": "West Virginia requires a safety inspection every 24 months under W. Va. Code § 17C-16-4, effective January 1, 2024. The maximum sticker fee is $19 for that two-year period. The inspection covers brakes, steering, tires, lights, glass, exhaust, horn, and mirrors.",
     "evIncentives": false,
     "evIncentiveDetails": "",
     "registrationFeeRange": "$51.50 for most passenger vehicles",
@@ -1246,7 +1292,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "W. Va. Code § 46A-6A-5",
     "lemonLawUrl": "https://code.wvlegislature.gov/46A-6A-5/",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Wisconsin",
@@ -1257,7 +1304,7 @@
     "description": "Wisconsin requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing or safety inspections for most personal vehicles.",
     "insuranceMinimum": "25/50/10",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
-    "averageInsuranceCost": 1099,
+    "averageInsuranceCost": 1112.23,
     "hasLemonLaw": true,
     "lemonLawSummary": "Wis. Stat. § 218.0171(1)(h) starts the clock at the end of the express warranty or one year after the first delivery, whichever happens sooner, and miles are not part of the test. Four repairs of the same problem, or 30 days out of service because of warranty problems, is a reasonable attempt to repair, and time lost to a flood, other natural disaster, war, invasion, fire, or strike does not count. A car the owner is still driving counts as out of service only when a problem substantially affects use or safety and has already had at least two repair attempts. After a reasonable attempt fails, give the manufacturer the form described in the statute before it has to refund or replace the car.",
     "hasEmissions": false,
@@ -1272,7 +1319,8 @@
     "plateFee": "$2",
     "lemonLawCitation": "Wis. Stat. § 218.0171(1)(h)",
     "lemonLawUrl": "https://docs.legis.wisconsin.gov/statutes/statutes/218/i/0171",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Wyoming",
@@ -1283,7 +1331,7 @@
     "description": "Wyoming requires liability insurance and has a lemon law for new vehicles. The state does not require emissions testing or safety inspections and has no state income tax.",
     "insuranceMinimum": "25/50/20",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $20,000 property damage",
-    "averageInsuranceCost": 1105,
+    "averageInsuranceCost": 1261.71,
     "hasLemonLaw": true,
     "lemonLawSummary": "Wyoming's lemon law, Wyo. Stat. Ann. § 40-17-101, places the repair duty and the presumption within one year after delivery. More than three repairs of the same problem, or 30 business days out of service, is the presumption. During that year, tell the manufacturer, its agent, or the dealer authorized to do the repair. The refund or replacement remedy is withheld if the owner has not finished a manufacturer's informal dispute program that meets federal rules.",
     "hasEmissions": false,
@@ -1298,7 +1346,8 @@
     "plateFee": "$5",
     "lemonLawCitation": "Wyo. Stat. Ann. § 40-17-101(d)",
     "lemonLawUrl": "https://wyoleg.gov/statutes/compress/title40.pdf",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   },
   {
     "name": "Washington DC",
@@ -1309,7 +1358,7 @@
     "description": "Washington DC has some of the most comprehensive vehicle ownership regulations in the nation. As the nation's capital, DC requires liability insurance, annual vehicle inspections, and offers generous incentives for electric vehicle adoption as part of its sustainability goals.",
     "insuranceMinimum": "25/50/10",
     "insuranceMinimumDetail": "$25,000 bodily injury per person / $50,000 bodily injury per accident / $10,000 property damage",
-    "averageInsuranceCost": 1876,
+    "averageInsuranceCost": 1986.5,
     "hasLemonLaw": true,
     "lemonLawSummary": "D.C. Code § 50-502(d) uses the first 18,000 miles or two years after delivery to the original purchaser. Four repairs of a non-safety problem, one repair of a safety-related problem, or 30 days out of service, is the presumption, and those 30 days can be extended for a war, invasion, strike, fire, flood, or similar disaster. While that window is open, tell the manufacturer, an agent, or an authorized dealer, and if the agent or dealer is the one who receives it, that person has seven days to forward certified mail to the manufacturer. A lawsuit waits until the claim has been submitted to the Board of Consumer Claims Arbitration under § 50-503.",
     "hasEmissions": true,
@@ -1324,6 +1373,7 @@
     "plateFee": "$10",
     "lemonLawCitation": "D.C. Code § 50-502(d)",
     "lemonLawUrl": "https://code.dccouncil.gov/us/dc/council/code/sections/50-502",
-    "lemonLawVerified": "2026-10-22"
+    "lemonLawVerified": "2026-10-22",
+    "averageInsuranceSource": "The 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement (https://content.naic.org/sites/default/files/2024-adb-average-premium-supplement.pdf)."
   }
 ]

@@ -63,6 +63,16 @@ module.exports = function (eleventyConfig) {
     return Number(value).toLocaleString();
   });
 
+  eleventyConfig.addFilter("naicDollars", function (value) {
+    return Number(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  });
+
+  eleventyConfig.addFilter("feeLabel", function (value) {
+    const raw = String(value || "").trim();
+    if (/^included in registration$/i.test(raw)) return "Included in the registration fee";
+    return raw;
+  });
+
   // getMakeName — look up make name from a model object
   eleventyConfig.addFilter("getMakeName", function (model) {
     if (!model) return "";

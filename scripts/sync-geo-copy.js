@@ -16,7 +16,7 @@ const geo = fs.readFileSync(path.join(root, "lib", "geo-copy.js"), "utf8")
   .replace(/module\.exports[\s\S]*$/, "");
 
 const out = article + "\n" + geo +
-  "\nexport { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, faqHtml, faqSchemaScript };\n";
+  "\nexport { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, recordedLines, faqHtml, faqSchemaScript };\n";
 
 const dest = path.join(root, "netlify", "edge-functions", "geo-copy.js");
 fs.writeFileSync(dest, out);

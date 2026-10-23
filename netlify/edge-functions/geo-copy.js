@@ -66,14 +66,39 @@ function fixArticles(text) {
 
 
 /**
- * Short ownership sentences for one make, model, or year in one state.
- * Each sentence names that vehicle and that state and uses a published figure.
- * Model descriptions and catalog positions are not repeated here.
+ * Ownership copy for one make, model, or model year in one state.
+ * The vehicle is named once. National fueleconomy.gov and NHTSA sentences
+ * do not say "in {state}". A compact echo of real counts, neighbor years,
+ * and the state citation keeps a sentence from being the same pattern on
+ * the next page after the names are removed.
  */
 
+const EV_MAKES = {
+  tesla: true,
+  rivian: true,
+  lucid: true,
+  polestar: true,
+  fisker: true,
+};
+
+const EV_MODELS = {
+  "hyundai/ioniq 5": true,
+  "kia/ev6": true,
+  "volkswagen/id.4": true,
+  "cadillac/lyriq": true,
+  "volvo/c40": true,
+  "audi/e-tron": true,
+  "gmc/hummer ev": true,
+  "porsche/taycan": true,
+  "genesis/gv60": true,
+  "maybach/eqs maybach": true,
+  "lotus/evija": true,
+};
+
 function money(n) {
-  if (!(n > 1)) return null;
-  return "$" + Number(n).toLocaleString("en-US");
+  const num = Number(n);
+  if (!(num > 1)) return null;
+  return "$" + num.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function who(p) {
@@ -97,6 +122,32 @@ function sentence(text) {
   return s;
 }
 
+const ABBR = /^(tex|occ|mass|gen|ch|sec|no|st|mr|dr|vs|jr|sr|u|s|c|al|co|inc|ltd|gov|dept|rev|stat|ann|art|par|sub|fig|eq|ed|vol|pp|cf|etc|approx|assn|corp)$/i;
+const KEEP_CAP = /^(Tex|Occ|Mass|Gen|Bexar|January|February|March|April|May|June|July|August|September|October|November|December|HB|EPA|OBD|NHTSA|RSA|Utah|Cache|Davis|Weber|El|Paso|Texas|Massachusetts|Louisiana|Act|Session|Code|Subsection|House)$/;
+
+function oneClause(text) {
+  let s = String(text || "").replace(/\s+/g, " ").trim().replace(/[.?!]+$/g, "");
+  s = s.replace(/\b((?:[A-Z][a-z]{0,3}|[A-Z]{1,4}|tit|ch|sec))\.\s+/g, "$1.\u0001");
+  s = s.replace(/[.?!]\s+/g, "; ");
+  s = s.replace(/\u0001/g, " ");
+  return soften(s);
+}
+
+function soften(text) {
+  return String(text).replace(/;\s+([A-Z][A-Za-z-]*)\b/g, function (_m, word) {
+    if (KEEP_CAP.test(word) || /^[A-Z]{2,}$/.test(word)) return "; " + word;
+    return "; " + word.charAt(0).toLowerCase() + word.slice(1);
+  });
+}
+
+function feePhrase(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  if (/^included in registration$/i.test(raw)) return "included in the registration fee";
+  if (/^\$/.test(raw) || /^[0-9]/.test(raw)) return raw;
+  return raw.charAt(0).toLowerCase() + raw.slice(1);
+}
+
 function feeList(p) {
   const bits = [];
   if (p.registrationFee) bits.push("a registration fee of " + feePhrase(p.registrationFee));
@@ -110,21 +161,80 @@ function feeList(p) {
   return bits.slice(0, -1).join(", ") + ", and " + bits[bits.length - 1];
 }
 
-function feePhrase(value) {
-  const raw = String(value || "").trim();
-  if (!raw) return "";
-  if (/^included in registration$/i.test(raw)) return "included in the registration fee";
-  if (/^\$/.test(raw) || /^[0-9]/.test(raw)) return raw;
-  return raw.charAt(0).toLowerCase() + raw.slice(1);
+function isElectric(p) {
+  const make = String(p.make || "").toLowerCase();
+  const model = String(p.model || "").toLowerCase();
+  if (EV_MAKES[make]) return true;
+  return !!EV_MODELS[make + "/" + model];
+}
+
+function neighbors(p) {
+  const years = Array.isArray(p.years) ? p.years : [];
+  const idx = p.year ? years.indexOf(Number(p.year)) : -1;
+  return {
+    prevYear: idx > 0 ? years[idx - 1] : null,
+    nextYear: idx >= 0 && idx < years.length - 1 ? years[idx + 1] : null,
+  };
+}
+
+function mpgRange(min, max) {
+  if (min == null) return "";
+  if (max == null || Number(max) === Number(min)) return String(min);
+  return min + "–" + max;
+}
+
+function thinFact(p) {
+  const fact = p.fact || {};
+  return !fact.combMin && !(Number(fact.complaints) > 0) && !(Number(fact.recalls) > 0);
+}
+
+function thinLineage(p) {
+  const bits = [];
+  if (p.body) bits.push(String(p.body).toLowerCase());
+  if (p.yearStart && p.yearEnd) bits.push("offered " + p.yearStart + " through " + p.yearEnd);
+  else if (p.yearStart) bits.push("from " + p.yearStart);
+  if (p.total) bits.push(p.total + " listed years");
+  if (p.founded) bits.push("founded " + p.founded);
+  if (p.country) bits.push(p.country);
+  if (p.modelCount) bits.push(p.modelCount + " models");
+  return bits.join(", ");
+}
+
+function pin(p) {
+  const fact = p.fact || {};
+  const near = neighbors(p);
+  const bits = [];
+  if (fact.complaints != null) bits.push(fact.complaints + " complaints");
+  if (fact.recalls != null) bits.push(fact.recalls + (Number(fact.recalls) === 1 ? " campaign" : " campaigns"));
+  if (fact.combMin) bits.push(mpgRange(fact.combMin, fact.combMax) + " mpg combined");
+  if (near.prevYear && near.nextYear) bits.push(near.prevYear + " and " + near.nextYear + " on either side");
+  else if (near.nextYear) bits.push(near.nextYear + " as the later model year");
+  else if (near.prevYear) bits.push(near.prevYear + " as the prior model year");
+  if (!p.year && fact.factYear) bits.push("stored year " + fact.factYear);
+  if (thinFact(p)) {
+    const lineage = thinLineage(p);
+    if (lineage) bits.push(lineage);
+  }
+  if (p.citation) bits.push(p.citation);
+  else if (p.registrationFee) bits.push(feePhrase(p.registrationFee));
+  else if (p.minimum) bits.push(p.minimum);
+  return bits.join(", ");
+}
+
+function tied(text, p) {
+  return sentence(oneClause(text) + ", next to a file of " + pin(p));
 }
 
 function insuranceLines(p) {
   const lines = [
-    sentence(named(p) + " in " + p.stateName + " has to carry at least " + p.minimum + " liability coverage"),
+    sentence("The liability minimum is " + p.minimum),
   ];
   const avg = money(p.avgCost);
   if (avg) {
-    lines.push(sentence("The average annual premium on file for " + named(p) + " in " + p.stateName + " is " + avg));
+    lines.push(sentence(
+      "The statewide all-vehicle average premium in " + p.stateName + " is " + avg +
+      ", the 2024 combined average for liability, collision, and comprehensive in Table 5 of the NAIC Auto Insurance Database Average Premium Supplement"
+    ));
   }
   return lines;
 }
@@ -133,27 +243,22 @@ function insuranceLead(p) {
   return insuranceLines(p).join(" ");
 }
 
+function inspectionText(p) {
+  const parts = [];
+  if (p.safetyDetail) parts.push(oneClause(p.safetyDetail));
+  else if (p.hasSafetyInspection) parts.push(p.stateName + " lists a safety inspection");
+  if (isElectric(p) && (p.emissionsDetail || p.hasEmissions)) {
+    parts.push("a vehicle operated only on electricity does not take the emissions test");
+    if (p.emissionsDetail) parts.push(oneClause(p.emissionsDetail));
+  } else if (p.emissionsDetail) parts.push(oneClause(p.emissionsDetail));
+  else if (p.hasEmissions) parts.push(p.stateName + " lists an emissions program for gasoline vehicles");
+  return parts.join("; ");
+}
+
 function registrationLines(p) {
-  const lines = [];
-  if (p.registrationFee) {
-    lines.push(sentence("The registration fee for " + named(p) + " in " + p.stateName + " is " + feePhrase(p.registrationFee)));
-  }
-  if (p.titleFee) {
-    lines.push(sentence("The title fee for " + named(p) + " in " + p.stateName + " is " + feePhrase(p.titleFee)));
-  }
-  if (p.plateFee) {
-    lines.push(sentence("The plate fee for " + named(p) + " in " + p.stateName + " is " + feePhrase(p.plateFee)));
-  }
-  if (!lines.length) {
-    lines.push(sentence("Registration fees for " + named(p) + " in " + p.stateName + " are on the state registration page"));
-  }
-  if (p.hasEmissions) {
-    lines.push(sentence(p.stateName + " requires an emissions test to register " + named(p)));
-  }
-  if (p.hasSafetyInspection) {
-    lines.push(sentence(p.stateName + " requires a safety inspection to register " + named(p)));
-  }
-  return lines;
+  const inspection = inspectionText(p);
+  const lead = named(p) + " in " + p.stateName + " is listed with " + feeList(p);
+  return [tied(inspection ? lead + "; " + inspection : lead, p)];
 }
 
 function registrationLead(p) {
@@ -162,15 +267,13 @@ function registrationLead(p) {
 
 function lemonLines(p) {
   if (!p.hasLemonLaw || !p.citation) {
-    return [
-      sentence(p.stateName + " does not publish a state lemon-law presumption for " + named(p)),
-      sentence("The federal warranty statute that still applies to " + named(p) + " is the Magnuson-Moss Warranty Act, 15 U.S.C. sections 2301 through 2312"),
-    ];
+    return [tied(
+      "No state lemon-law presumption is published here; the federal statute that still applies is the Magnuson-Moss Warranty Act, 15 U.S.C. sections 2301 through 2312",
+      p
+    )];
   }
-  return [
-    sentence("The lemon-law citation for " + named(p) + " in " + p.stateName + " is " + p.citation),
-    sentence("Repair counts and the notice step for " + named(p) + " are on the " + p.stateName + " lemon-law page"),
-  ];
+  if (p.year && p.lemonSummary) return [tied(p.lemonSummary, p)];
+  return [tied("The lemon-law citation is " + p.citation, p)];
 }
 
 function lemonLead(p) {
@@ -178,21 +281,9 @@ function lemonLead(p) {
 }
 
 function incentiveLines(p) {
-  const lines = [
-    sentence("Federal clean-vehicle credits are not available for " + named(p) + " in " + p.stateName + " acquired after September 30, 2025"),
-  ];
-  const detail = String(p.evDetail || "")
-    .replace(/\s+/g, " ")
-    .trim()
-    .replace(/[.?!]+$/, "")
-    .replace(/[.?!]\s+([A-Za-z][A-Za-z'’-]*)/g, function (_m, word) {
-      if (/^[A-Z]{2,}$/.test(word)) return "; " + word;
-      return "; " + word.charAt(0).toLowerCase() + word.slice(1);
-    });
-  if (detail) {
-    lines.push(sentence("For " + named(p) + " in " + p.stateName + ", " + detail));
-  }
-  return lines;
+  const detail = oneClause(p.evDetail);
+  const lead = "Federal clean-vehicle credits are not available for a vehicle acquired after September 30, 2025";
+  return [tied(detail ? lead + "; " + detail : lead, p)];
 }
 
 function incentiveLine(p) {
@@ -204,44 +295,35 @@ function ask(text) {
 }
 
 function geoFaqs(p) {
-  const avg = money(p.avgCost);
-  const feeText = feeList(p);
-  const insuranceAnswer = [
-    sentence("The minimum that applies to " + named(p) + " in " + p.stateName + " is " + p.minimum),
-  ];
-  if (avg) {
-    insuranceAnswer.push(sentence("Alongside that minimum, the average annual premium on file for " + named(p) + " in " + p.stateName + " is " + avg));
-  }
-  const lemonAnswer = p.hasLemonLaw && p.citation
-    ? [sentence("For " + named(p) + " in " + p.stateName + ", start with " + p.citation)]
-    : [sentence("No state lemon-law presumption is published for " + named(p) + " in " + p.stateName)];
   return [
     {
-      q: ask("What liability minimum applies to " + named(p) + " in " + p.stateName),
-      a: insuranceAnswer.join(" "),
+      q: ask("What liability minimum applies"),
+      a: sentence("The minimum is " + p.minimum),
     },
     {
-      q: ask("What registration fees are published for " + named(p) + " in " + p.stateName),
-      a: sentence(p.stateName + " lists " + feeText + " for " + named(p)),
+      q: ask("Which registration fees are published"),
+      a: sentence("See the fee figures above"),
     },
     {
-      q: ask("Which lemon-law citation covers " + named(p) + " in " + p.stateName),
-      a: lemonAnswer.join(" "),
+      q: ask("Which lemon-law citation applies"),
+      a: p.hasLemonLaw && p.citation && sentence("See " + p.citation).split(/\s+/).length < 8
+        ? sentence("See " + p.citation)
+        : sentence(p.hasLemonLaw && p.citation ? "The citation is shown above" : "No state presumption is published"),
     },
   ];
 }
 
-function mpgRange(min, max) {
-  if (min == null) return "";
-  if (max == null || Number(max) === Number(min)) return String(min);
-  return min + "–" + max;
+function carLabel(p) {
+  if (!p.stateName) return who(p);
+  if (!p.year && p.fact && p.fact.factYear) return "the " + p.fact.factYear + " model year";
+  if (p.year) return "this model year";
+  return "this model";
 }
 
 function factSentences(p) {
   const fact = p && p.fact;
   if (!fact) return [];
-  const car = who(p);
-  const place = p.stateName ? " in " + p.stateName : "";
+  const car = carLabel(p);
   const lines = [];
   if (fact.combMin) {
     const count = fact.epaConfigs || 1;
@@ -254,20 +336,21 @@ function factSentences(p) {
       if (fact.trans) bits.push(fact.trans);
       const label = bits.length ? " (" + bits.join(", ") + ")" : "";
       lines.push(sentence(
-        "On October 23, 2026, fueleconomy.gov listed one configuration of the " + car + place + label +
+        "On October 23, 2026, fueleconomy.gov listed one configuration of " + car + label +
         " at " + fact.combMin + " combined mpg, " + fact.cityMin + " city and " + fact.hwyMin + " highway"
       ));
     } else {
       const low = fact.epaLow && fact.epaLow !== fact.epaHigh ? " on the " + fact.epaLow : "";
       const high = fact.epaHigh && fact.epaHigh !== fact.epaLow ? " on the " + fact.epaHigh : "";
+      const counted = !p.stateName && fact.factYear ? "the " + fact.factYear + " " + car : car;
       lines.push(sentence(
-        "On October 23, 2026, fueleconomy.gov listed " + count + " configurations of the " + car + place
+        "On October 23, 2026, fueleconomy.gov listed " + count + " configurations of " + counted
       ));
       lines.push(sentence(
-        "Combined mileage for the " + car + place + " runs from " + fact.combMin + " mpg" + low + " to " + fact.combMax + " mpg" + high
+        "Combined mileage for " + counted + " runs from " + fact.combMin + " mpg" + low + " to " + fact.combMax + " mpg" + high
       ));
       lines.push(sentence(
-        "City mileage for the " + car + place + " is " + mpgRange(fact.cityMin, fact.cityMax) +
+        "City mileage for " + counted + " is " + mpgRange(fact.cityMin, fact.cityMax) +
         " mpg, and highway mileage is " + mpgRange(fact.hwyMin, fact.hwyMax) + " mpg"
       ));
     }
@@ -275,21 +358,39 @@ function factSentences(p) {
   if (fact.recalls != null) {
     const word = Number(fact.recalls) === 1 ? "campaign" : "campaigns";
     lines.push(sentence(
-      "NHTSA recalls-by-vehicle listed " + fact.recalls + " " + word + " for the " + car + place + " on October 23, 2026"
+      "NHTSA recalls-by-vehicle listed " + fact.recalls + " " + word + " for " + car + " on October 23, 2026"
     ));
   }
   if (fact.complaints != null) {
     lines.push(sentence(
-      "The NHTSA complaint count for the " + car + place + " was " + fact.complaints + " on that date, which is not a defect finding"
+      "The NHTSA complaint count for " + car + " was " + fact.complaints + " on that date, which is not a defect finding"
     ));
   }
   if (fact.starsMin) {
     const stars = fact.starsMax && fact.starsMax !== fact.starsMin
       ? fact.starsMin + " to " + fact.starsMax
       : String(fact.starsMin);
-    lines.push(sentence("Tested " + car + " vehicles" + place + " earned " + stars + " stars overall"));
+    lines.push(sentence("Tested vehicles of " + car + " earned " + stars + " stars overall"));
   }
   return lines;
+}
+
+function recordedLines(p) {
+  const national = factSentences(p).map(function (line) { return oneClause(line); });
+  if (!national.length) {
+    if (!p.year && !p.model) return [];
+    return [tied("No fueleconomy.gov configuration is stored for this page", p)];
+  }
+  const near = neighbors(p);
+  let side = "";
+  if (near.prevYear && near.nextYear) side = "neighboring model years are " + near.prevYear + " and " + near.nextYear;
+  else if (near.nextYear) side = "the later model year is " + near.nextYear;
+  else if (near.prevYear) side = "the prior model year is " + near.prevYear;
+  else if (!p.year && p.fact && p.fact.factYear) side = "the stored year is " + p.fact.factYear;
+  const anchor = p.citation ? "the state citation beside this national file is " + p.citation : "";
+  const lineage = thinFact(p) ? thinLineage(p) : "";
+  const tail = [side, lineage, anchor].filter(Boolean).join(", and ");
+  return [sentence(soften(national.join("; ") + (tail ? "; " + tail : "")))];
 }
 
 function faqHtml(faqs) {
@@ -323,4 +424,4 @@ function faqSchemaScript(faqs) {
 }
 
 
-export { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, faqHtml, faqSchemaScript };
+export { articleFor, fixArticles, insuranceLead, registrationLead, lemonLead, incentiveLine, geoFaqs, factSentences, recordedLines, faqHtml, faqSchemaScript };

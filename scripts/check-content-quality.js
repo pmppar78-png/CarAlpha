@@ -5,8 +5,11 @@
  * Content checks for the strict re-audit:
  * indefinite articles, FAQ JSON-LD that matches the visible answer,
  * and ownership sentences that are byte-for-byte the same on 10 or more
- * geo pages. Names are not masked: a repeated sentence is one a reader
- * could see copied from page to page. Catalog positions are not a fix.
+ * geo pages. A second check masks make, model, year, and state and fails
+ * when that pattern is still shared by 10 or more pages. Dollar amounts,
+ * mpg, complaint counts, and statute text stay visible to the mask.
+ * The one statewide NAIC sentence is the same published figure on every
+ * page in a state, so it is not counted as a cloned template.
  */
 
 const fs = require("fs");
@@ -98,8 +101,12 @@ function bundle(input) {
     plateFee: input.state.plateFee,
     hasEmissions: input.state.hasEmissions,
     hasSafetyInspection: input.state.hasSafetyInspection,
+    safetyDetail: input.state.safetyInspectionDetails,
+    emissionsDetail: input.state.emissionsDetails,
     hasLemonLaw: input.state.hasLemonLaw,
     citation: input.state.lemonLawCitation,
+    lemonSummary: input.state.lemonLawSummary,
+    years: input.modelSlug ? (input.yearsByModel[input.makeSlug + "/" + input.modelSlug] || []) : [],
     make: input.makeName,
     model: input.modelName,
     year: input.year,
@@ -112,7 +119,16 @@ function bundle(input) {
     modelCount: makeModels.length || undefined,
     founded: input.make.founded,
     country: input.make.country,
-    fact: factKey && input.facts ? input.facts[factKey] : undefined,
+    fact: (function () {
+      if (factKey && input.facts && input.facts[factKey]) return input.facts[factKey];
+      if (input.year || !input.modelSlug || !input.facts) return undefined;
+      const list = input.yearsByModel[input.makeSlug + "/" + input.modelSlug] || [];
+      for (let i = list.length - 1; i >= 0; i--) {
+        const candidate = input.facts[input.makeSlug + "/" + input.modelSlug + "/" + list[i]];
+        if (candidate) return Object.assign({ factYear: list[i] }, candidate);
+      }
+      return undefined;
+    })(),
     evIncentives: input.state.evIncentives,
     evDetail: input.state.evIncentiveDetails,
   };
@@ -123,8 +139,28 @@ function pageText(p) {
   const parts = [geo.insuranceLead(p), geo.registrationLead(p), geo.lemonLead(p)];
   if (p.evIncentives) parts.push(geo.incentiveLine(p));
   faqs.forEach(function (faq) { parts.push(faq.q, faq.a); });
-  if (p.fact) geo.factSentences(p).forEach(function (line) { parts.push(line); });
+  geo.recordedLines(p).forEach(function (line) { parts.push(line); });
   return parts.join("\n");
+}
+
+function sharedStateAverage(sentence) {
+  return /statewide all-vehicle average premium/i.test(sentence);
+}
+
+function maskPattern(sentence, p) {
+  let s = " " + sentence + " ";
+  const tokens = [
+    [p.stateName, "{state}"],
+    [p.make, "{make}"],
+    [p.model, "{model}"],
+  ].filter(function (pair) { return pair[0]; });
+  tokens.sort(function (a, b) { return String(b[0]).length - String(a[0]).length; });
+  tokens.forEach(function (pair) {
+    const escaped = String(pair[0]).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    s = s.replace(new RegExp("\\b" + escaped + "\\b", "gi"), " " + pair[1] + " ");
+  });
+  if (p.year) s = s.replace(new RegExp("\\b" + p.year + "\\b", "g"), "{year}");
+  return s.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
 function checkGeo() {
@@ -152,9 +188,11 @@ function checkGeo() {
   Object.keys(yearsByModel).forEach(function (key) { yearsByModel[key].sort(function (a, b) { return a - b; }); });
 
   const seen = new Map();
+  const masked = new Map();
   const within = [];
   const articles = [];
   const padding = [];
+  const names = [];
   let pages = 0;
 
   function consider(id, p) {
@@ -174,6 +212,7 @@ function checkGeo() {
       if (!/[.?!]$/.test(sentence)) {
         if (padding.length < 8) padding.push(id + " sentence does not end with a period: " + sentence.slice(0, 120));
       }
+      if (sharedStateAverage(sentence)) return;
       const key = exactKey(sentence);
       if (local.has(key)) {
         if (within.length < 5) within.push(id + " repeats: " + sentence.slice(0, 180));
@@ -182,11 +221,40 @@ function checkGeo() {
       local.add(key);
       let row = seen.get(key);
       if (!row) {
-        row = { count: 0, id: id };
+        row = { count: 0, id: id, key: key };
         seen.set(key, row);
       }
       row.count += 1;
+      const pattern = maskPattern(sentence, p);
+      let maskedRow = masked.get(pattern);
+      if (!maskedRow) {
+        maskedRow = { count: 0, id: id, key: pattern };
+        masked.set(pattern, maskedRow);
+      }
+      maskedRow.count += 1;
     });
+    if (names.length < 8 && p.year && p.make && p.model && p.stateName) {
+      const lower = text.toLowerCase();
+      const full = (p.year + " " + p.make + " " + p.model).toLowerCase();
+      const inState = full + " in " + String(p.stateName).toLowerCase();
+      const nameCount = lower.split(full).length - 1;
+      const inCount = lower.split(inState).length - 1;
+      if (nameCount > 2) names.push(id + " names the vehicle " + nameCount + " times");
+      else if (inCount > 1) names.push(id + " uses the vehicle-in-state phrase " + inCount + " times");
+    }
+    if (padding.length < 8 && p.stateName) {
+      const stateRe = new RegExp("\\bin\\s+" + String(p.stateName).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
+      sentencesOf(text).forEach(function (sentence) {
+        if (/fueleconomy\.gov|nhtsa/i.test(sentence) && stateRe.test(sentence) && padding.length < 8) {
+          padding.push(id + " puts a national figure in " + p.stateName + ": " + sentence.slice(0, 160));
+        }
+      });
+    }
+    if (padding.length < 8 && geo.isElectric(p) && p.hasEmissions && !/does not take the emissions test/i.test(text)) {
+      padding.push(id + " is electric but never says the emissions test does not apply");
+    }
+    const premiums = text.toLowerCase().split("statewide all-vehicle average").length - 1;
+    if (premiums > 1 && padding.length < 8) padding.push(id + " states the statewide average " + premiums + " times");
   }
 
   states.forEach(function (state) {
@@ -225,12 +293,23 @@ function checkGeo() {
     });
   });
 
-  const dupes = [];
-  seen.forEach(function (row, key) {
-    if (row.count >= REPEAT_LIMIT) dupes.push({ count: row.count, id: row.id, key: key.slice(0, 220) });
-  });
-  dupes.sort(function (a, b) { return b.count - a.count; });
-  return { pages: pages, dupes: dupes.slice(0, 5), within: within, articles: articles, padding: padding.slice(0, 8) };
+  function top(map) {
+    const dupes = [];
+    map.forEach(function (row) {
+      if (row.count >= REPEAT_LIMIT) dupes.push({ count: row.count, id: row.id, key: row.key.slice(0, 220) });
+    });
+    dupes.sort(function (a, b) { return b.count - a.count; });
+    return dupes.slice(0, 5);
+  }
+  return {
+    pages: pages,
+    dupes: top(seen),
+    masked: top(masked),
+    within: within,
+    articles: articles,
+    padding: padding.slice(0, 8),
+    names: names.slice(0, 8),
+  };
 }
 
 function walkHtml(dir, visit) {
@@ -318,9 +397,13 @@ function main() {
   const geoResult = checkGeo();
   console.log("geo pages: " + geoResult.pages);
   if (geoResult.dupes.length) {
-    errors.push(geoResult.dupes.length + " sentence(s) repeat on " + REPEAT_LIMIT + "+ geo pages. First: " + JSON.stringify(geoResult.dupes[0]));
+    errors.push(geoResult.dupes.length + " sentence(s) repeat on " + REPEAT_LIMIT + "+ geo pages. First: " + JSON.stringify(geoResult.dupes.slice(0, 5)));
+  }
+  if (geoResult.masked.length) {
+    errors.push(geoResult.masked.length + " masked sentence pattern(s) repeat on " + REPEAT_LIMIT + "+ geo pages. First: " + JSON.stringify(geoResult.masked.slice(0, 5)));
   }
   geoResult.within.forEach(function (item) { errors.push("within-page geo repeat: " + item); });
+  geoResult.names.forEach(function (item) { errors.push(item); });
   geoResult.articles.forEach(function (item) { errors.push(item); });
   geoResult.padding.forEach(function (item) { errors.push(item); });
 

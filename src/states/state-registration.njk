@@ -38,7 +38,7 @@ eleventyComputed:
       </div>
       <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
         <div class="text-[10px] font-semibold text-silver-500 uppercase tracking-wider">Plate Fee</div>
-        <div class="font-bold text-white mt-1">{{ state.plateFee }}</div>
+        <div class="font-bold text-white mt-1">{{ state.plateFee | feeLabel }}</div>
       </div>
     </div>
     <p class="text-silver-400 text-sm leading-relaxed mt-4">{{ state.registrationNotes }}</p>
@@ -51,7 +51,7 @@ eleventyComputed:
 
 <ol>
   <li><strong>Complete the sale.</strong> The dealer will collect the necessary sales tax or use tax at the time of purchase and submit the title application to the state.</li>
-  <li><strong>Provide proof of insurance.</strong> You must have valid auto insurance meeting {{ state.name }}'s minimum requirements ({{ state.insuranceMinimum }}) before the vehicle can be registered.</li>
+  <li><strong>Provide proof of insurance.</strong> You must have valid auto insurance meeting the {{ state.name }} minimum requirements ({{ state.insuranceMinimum }}) before the vehicle can be registered.</li>
   <li><strong>Receive temporary plates.</strong> The dealer will issue temporary tags that allow you to drive the vehicle while your permanent registration and plates are processed.</li>
   <li><strong>Receive your title and registration.</strong> Your permanent registration card and license plates will be mailed to you or available for pickup at your local DMV, typically within 4-8 weeks.</li>
 </ol>
@@ -66,10 +66,10 @@ eleventyComputed:
   <li><strong>Signed title (certificate of origin):</strong> The seller must sign the title over to you, including the odometer reading and sale price.</li>
   <li><strong>Bill of sale:</strong> A written record of the transaction including the date, price, vehicle description, and both parties' signatures.</li>
   <li><strong>Valid photo ID:</strong> Your driver's license or state-issued identification card.</li>
-  <li><strong>Proof of insurance:</strong> A current insurance card or policy declaration page showing coverage that meets {{ state.name }}'s requirements.</li>
+  <li><strong>Proof of insurance:</strong> A current insurance card or policy declaration page showing coverage that meets the {{ state.name }} requirements.</li>
   <li><strong>Lien release (if applicable):</strong> If the previous owner had a loan on the vehicle, a lien release from the lender is required.</li>
-  {% if state.hasEmissions %}<li><strong>Emissions test certificate:</strong> A valid emissions test result may be required before registration in applicable {{ state.name }} counties.</li>{% endif %}
-  {% if state.hasSafetyInspection %}<li><strong>Safety inspection certificate:</strong> A current safety inspection is required for registration in {{ state.name }}.</li>{% endif %}
+  {% if state.emissionsDetails %}<li><strong>{% if state.hasEmissions %}Emissions test{% else %}Emissions{% endif %}:</strong> {{ state.emissionsDetails }}</li>{% elif state.hasEmissions %}<li><strong>Emissions test certificate:</strong> A valid emissions test result may be required before registration in applicable {{ state.name }} counties. A vehicle operated only on electricity does not take that test.</li>{% endif %}
+  {% if state.safetyInspectionDetails %}<li><strong>Safety inspection:</strong> {{ state.safetyInspectionDetails }}</li>{% elif state.hasSafetyInspection %}<li><strong>Safety inspection certificate:</strong> A current safety inspection is required for registration in {{ state.name }}.</li>{% endif %}
   <li><strong>Payment:</strong> Be prepared to pay the title fee ({{ state.titleFee }}), registration fee ({{ state.registrationFeeRange }}), and any applicable sales or use tax.</li>
 </ul>
 
@@ -82,8 +82,8 @@ eleventyComputed:
   <li><strong>Renewal notice:</strong> The state DMV typically sends a renewal notice by mail 30-60 days before your registration expires.</li>
   <li><strong>Online renewal:</strong> Many states, including {{ state.name }}, offer online registration renewal for eligible vehicles, saving you a trip to the DMV.</li>
   <li><strong>Late fees:</strong> Driving with expired registration can result in fines and penalties. Renew on time to avoid additional costs.</li>
-  {% if state.hasEmissions %}<li><strong>Emissions compliance:</strong> You may need a current emissions test before you can renew your registration in applicable {{ state.name }} counties.</li>{% endif %}
-  {% if state.hasSafetyInspection %}<li><strong>Safety inspection:</strong> A current safety inspection may be required for renewal in {{ state.name }}.</li>{% endif %}
+  {% if state.hasEmissions %}<li><strong>Emissions compliance:</strong> Renewal can depend on the emissions rule above. A vehicle operated only on electricity does not take that test.</li>{% endif %}
+  {% if state.hasSafetyInspection %}<li><strong>Safety inspection:</strong> Renewal can depend on the safety-inspection rule above.</li>{% endif %}
 </ul>
 
 <h2 id="title-transfer">Title Transfer in {{ state.name }}</h2>

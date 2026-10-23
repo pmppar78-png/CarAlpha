@@ -268,6 +268,151 @@
   to = "/.netlify/functions/ai-chat"
   status = 200
 
+# Model years removed from the catalog. Old URLs resolve to the model page.
+[[redirects]]
+  from = "/makes/acura/mdx/2021"
+  to = "/makes/acura/mdx/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/acura/mdx/2021/"
+  to = "/makes/acura/mdx/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/audi/a3/2021"
+  to = "/makes/audi/a3/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/audi/a3/2021/"
+  to = "/makes/audi/a3/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/dodge/durango/2010"
+  to = "/makes/dodge/durango/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/dodge/durango/2010/"
+  to = "/makes/dodge/durango/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/ford/ranger/2015"
+  to = "/makes/ford/ranger/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/ford/ranger/2015/"
+  to = "/makes/ford/ranger/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/ford/ranger/2018"
+  to = "/makes/ford/ranger/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/ford/ranger/2018/"
+  to = "/makes/ford/ranger/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/honda/ridgeline/2016"
+  to = "/makes/honda/ridgeline/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/honda/ridgeline/2016/"
+  to = "/makes/honda/ridgeline/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/infiniti/qx60/2021"
+  to = "/makes/infiniti/qx60/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/infiniti/qx60/2021/"
+  to = "/makes/infiniti/qx60/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/jeep/cherokee/2024"
+  to = "/makes/jeep/cherokee/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/jeep/cherokee/2024/"
+  to = "/makes/jeep/cherokee/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/jeep/cherokee/2025"
+  to = "/makes/jeep/cherokee/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/jeep/cherokee/2025/"
+  to = "/makes/jeep/cherokee/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/nissan/pathfinder/2021"
+  to = "/makes/nissan/pathfinder/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/nissan/pathfinder/2021/"
+  to = "/makes/nissan/pathfinder/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/subaru/brz/2021"
+  to = "/makes/subaru/brz/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/subaru/brz/2021/"
+  to = "/makes/subaru/brz/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/volvo/s60/2010"
+  to = "/makes/volvo/s60/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/volvo/s60/2010/"
+  to = "/makes/volvo/s60/"
+  status = 301
+  force = true
+
 # SPA fallback for 404
 [[redirects]]
   from = "/*"
