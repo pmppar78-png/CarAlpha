@@ -6,8 +6,8 @@ pagination:
   alias: state
 permalink: "/states/{{ state.slug }}/ev-incentives/"
 eleventyComputed:
-  title: "{{ state.name }} EV Incentives 2026 — Tax Credits, Rebates & Savings"
-  description: "Complete guide to electric vehicle incentives in {{ state.name }}: state rebates and tax credits, utility programs, the end of the federal EV credits, and how to claim what is still available in 2026."
+  title: "{{ state.name }} EV Incentives 2026"
+  description: "{% if state.evIncentiveDetails %}{{ state.evIncentiveDetails | truncate(160) }}{% else %}No statewide EV purchase rebate is confirmed for {{ state.name }} in 2026.{% endif %}"
   breadcrumbs:
     - label: Home
       url: /
@@ -22,69 +22,26 @@ eleventyComputed:
 
 <h2 id="state-incentives">{{ state.name }} EV Incentives</h2>
 
-{% if state.evIncentives %}
-<p>{{ state.name }} offers incentives designed to encourage the adoption of electric and alternative-fuel vehicles. With the federal EV tax credits gone for vehicles acquired after September 30, 2025, state and utility programs like these are now the main way to save. Program funding and amounts change often, so confirm the current terms on the official program site before you buy.</p>
-
-<div class="glass-card metallic-border rounded-2xl overflow-hidden carbon-panel my-8 not-prose">
-  <div class="steel-header px-6 py-4 flex items-center gap-3">
-    <div class="feature-icon w-11 h-11 rounded-xl grid place-items-center">
-      <svg class="w-5 h-5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-    </div>
-    <h3 class="font-bold text-white text-lg">{{ state.name }} EV Programs</h3>
-  </div>
-  <div class="px-6 py-5">
-    <p class="text-silver-400 text-sm leading-relaxed">{{ state.evIncentiveDetails }}</p>
-  </div>
-</div>
+{% if state.evIncentives and state.evIncentiveDetails %}
+<p>{{ state.evIncentiveDetails }}</p>
 {% else %}
-<p>We have not confirmed a statewide EV purchase rebate or tax credit in {{ state.name }} for 2026. You may still save through your electric utility (charger rebates and off-peak EV charging rates), local programs and automaker incentives. Search the <a href="https://afdc.energy.gov/laws/state">U.S. DOE Alternative Fuels Data Center</a> for current {{ state.name }} programs.</p>
+<p>No statewide EV purchase rebate or tax credit is confirmed here for {{ state.name }} in 2026. Current programs are listed by the <a href="https://afdc.energy.gov/laws/state" rel="noopener">U.S. Department of Energy Alternative Fuels Data Center</a>.</p>
 {% endif %}
 
 <h2 id="federal-incentives">Federal EV Tax Credits in 2026</h2>
 
 {% include "partials/ev-federal-2026.njk" %}
 
-<h2 id="eligible-vehicles">Choosing an Eligible Vehicle</h2>
-
-<p>State programs set their own vehicle rules, usually an MSRP cap, a minimum electric range, and a requirement that you buy or lease from an in-state dealer. Check the program's eligible-vehicle list before you sign, and ask the dealer whether the rebate is applied at the point of sale or claimed afterward. Before buying a used EV, run its VIN through our <a href="/">free VIN decoder and recall check</a>.</p>
-
-<h2 id="how-to-claim">How to Claim EV Incentives</h2>
-
-<ol>
-  <li><strong>Check the program is open.</strong> Many state rebates run in funding rounds and pause when money runs out.</li>
-  <li><strong>Confirm the vehicle and price qualify</strong> on the official eligible-vehicle list.</li>
-  <li><strong>Apply in the right order.</strong> Some programs require pre-approval before you buy (especially income-qualified ones); others are applied by the dealer at the point of sale or claimed within a set number of days after purchase.</li>
-  <li><strong>Keep your paperwork:</strong> purchase or lease contract, registration and proof of residency.</li>
-  <li><strong>Add your utility's rebate.</strong> Utilities often pay toward a Level 2 charger and offer cheaper off-peak charging rates.</li>
-</ol>
-
-{% if state.evIncentives %}
-<h3>Claiming {{ state.name }} State Incentives</h3>
-
-<p>State incentive programs in {{ state.name }} may require separate applications. Check with your state's energy office or DMV for specific application requirements, deadlines, and documentation needed. Many state programs have limited funding and operate on a first-come, first-served basis.</p>
-{% endif %}
+<p>Nationwide context is in the <a href="/guides/ev/ev-tax-credits/">2026 EV incentives guide</a>.</p>
 
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
   <h3 class="text-xl font-bold text-white mb-3">Ready to Go Electric?</h3>
-  <p class="text-silver-400 mb-6 max-w-lg mx-auto">Compare insurance rates for electric vehicles in {{ state.name }}. EV owners often qualify for special discounts with certain carriers.</p>
+  <p class="text-silver-400 mb-6 max-w-lg mx-auto">Compare insurance rates for electric vehicles in {{ state.name }}.</p>
   <a href="/go/insurance/" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-bold text-sm">
     Compare EV Insurance Rates
     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
   </a>
   <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
 </div>
-
-<h2 id="charging">Home Charging Considerations</h2>
-
-<p>Beyond the vehicle purchase incentives, {{ state.name }} residents should factor in the cost and benefits of home charging:</p>
-
-<ul>
-  <li><strong>Level 1 charging (120V):</strong> Uses a standard household outlet. Adds approximately 3-5 miles of range per hour. No installation cost, but slow charging makes it best suited for plug-in hybrids or low-mileage drivers.</li>
-  <li><strong>Level 2 charging (240V):</strong> Requires a 240V outlet or hardwired installation. Adds 20-40 miles of range per hour. Installation typically costs $500-$2,000 depending on your home's electrical capacity.</li>
-  <li><strong>Federal charging credit:</strong> The federal 30C charger credit (30%, up to $1,000 for homes) ended for chargers placed in service after June 30, 2026. Utility and state charger rebates are now the main help with installation costs.</li>
-  <li><strong>Utility incentives:</strong> Many electric utility companies in {{ state.name }} offer time-of-use rates that make overnight EV charging significantly cheaper. Some also offer rebates for charger installation.</li>
-</ul>
-
-<p>For a complete overview of EV incentives nationwide, see our <a href="/guides/ev/ev-tax-credits/">2026 EV Incentives Guide</a>.</p>
 
 </div>

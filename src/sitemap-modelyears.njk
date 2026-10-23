@@ -3,17 +3,19 @@ pagination:
   data: modelYears
   size: 45000
   alias: chunk
-permalink: false
+permalink: "/sitemap-modelyears-{{ pagination.pageNumber }}.xml"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for entry in chunk %}
+{%- if entry | indexableYear %}
   <url>
     <loc>https://caralpha.org/makes/{{ entry.makeSlug }}/{{ entry.slug }}/{{ entry.year }}/</loc>
     <lastmod>{{ buildInfo.lastmod }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+{%- endif %}
 {%- endfor %}
 </urlset>

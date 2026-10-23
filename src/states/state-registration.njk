@@ -43,61 +43,34 @@ eleventyComputed:
       </div>
       {% endif %}
     </div>
+    {% if state.registrationNotes %}
     <p class="text-silver-400 text-sm leading-relaxed mt-4">{{ state.registrationNotes }}</p>
+    {% endif %}
   </div>
 </div>
 
-<h2 id="new-vehicle">Registering a New Vehicle in {{ state.name }}</h2>
+<p>Proof of insurance at the {{ state.name }} minimum ({{ state.insuranceMinimum }}) is part of getting the title and plates. The title fee on file is {{ state.titleFee }}, and the registration charge on file is {{ state.registrationFeeRange }}.</p>
 
-<p>When you purchase a new vehicle from a dealership in {{ state.name }}, the dealer typically handles the title and registration paperwork on your behalf. However, it helps to understand the process and know what to expect:</p>
+<h2 id="renewal">Renewing a registration in {{ state.name }}</h2>
 
-<ol>
-  <li><strong>Complete the sale.</strong> The dealer will collect the necessary sales tax or use tax at the time of purchase and submit the title application to the state.</li>
-  <li><strong>Provide proof of insurance.</strong> You must have valid auto insurance meeting the {{ state.name }} minimum requirements ({{ state.insuranceMinimum }}) before the vehicle can be registered.</li>
-  <li><strong>Receive temporary plates.</strong> The dealer will issue temporary tags that allow you to drive the vehicle while your permanent registration and plates are processed.</li>
-  <li><strong>Receive your title and registration.</strong> Your permanent registration card and license plates will be mailed to you or available for pickup at your local DMV, typically within 4-8 weeks.</li>
-</ol>
+<p>The fee note above is the published {{ state.name }} registration rule, including any renewal term that note already states, and this page does not add {{ state.name | aan }} {{ state.name }} renewal cycle beyond that note.</p>
+{% if state.emissionsDetails %}
+<p><strong>{% if state.hasEmissions %}Emissions:{% else %}Emissions:{% endif %}</strong> {{ state.emissionsDetails }}</p>
+{% elif state.hasEmissions %}
+<p>{{ state.name }} lists an emissions program for gasoline vehicles. A vehicle operated only on electricity does not take that test.</p>
+{% endif %}
+{% if state.safetyInspectionDetails %}
+<p><strong>Safety inspection:</strong> {{ state.safetyInspectionDetails }}</p>
+{% elif state.hasSafetyInspection %}
+<p>{{ state.name }} requires a safety inspection before registration.</p>
+{% endif %}
+{% if state.evRegistrationDetails %}
+<p>{{ state.evRegistrationDetails }}</p>
+{% endif %}
 
-<h2 id="used-vehicle">Registering a Used Vehicle in {{ state.name }}</h2>
+<h2 id="title-transfer">Title transfer in {{ state.name }}</h2>
 
-<p>If you purchase a used vehicle from a private seller in {{ state.name }}, you will need to handle the registration and title transfer yourself. Gather the following documents and visit your local DMV or tag office:</p>
-
-<h3>Required Documents</h3>
-
-<ul>
-  <li><strong>Signed title (certificate of origin):</strong> The seller must sign the title over to you, including the odometer reading and sale price.</li>
-  <li><strong>Bill of sale:</strong> A written record of the transaction including the date, price, vehicle description, and both parties' signatures.</li>
-  <li><strong>Valid photo ID:</strong> Your driver's license or state-issued identification card.</li>
-  <li><strong>Proof of insurance:</strong> A current insurance card or policy declaration page showing coverage that meets the {{ state.name }} requirements.</li>
-  <li><strong>Lien release (if applicable):</strong> If the previous owner had a loan on the vehicle, a lien release from the lender is required.</li>
-  {% if state.emissionsDetails %}<li><strong>{% if state.hasEmissions %}Emissions test{% else %}Emissions{% endif %}:</strong> {{ state.emissionsDetails }}</li>{% elif state.hasEmissions %}<li><strong>Emissions test certificate:</strong> A valid emissions test result may be required before registration in applicable {{ state.name }} counties. A vehicle operated only on electricity does not take that test.</li>{% endif %}
-  {% if state.safetyInspectionDetails %}<li><strong>Safety inspection:</strong> {{ state.safetyInspectionDetails }}</li>{% elif state.hasSafetyInspection %}<li><strong>Safety inspection certificate:</strong> A current safety inspection is required for registration in {{ state.name }}.</li>{% endif %}
-  <li><strong>Payment:</strong> Be prepared to pay the title fee ({{ state.titleFee }}), registration fee ({{ state.registrationFeeRange }}), and any applicable sales or use tax.</li>
-</ul>
-
-<h2 id="renewal">Renewing Your Registration in {{ state.name }}</h2>
-
-<p>Vehicle registration in {{ state.name }} must be renewed periodically. Here is what you need to know about the renewal process:</p>
-
-<ul>
-  <li><strong>Renewal frequency:</strong> Registration is typically renewed annually or biennially, depending on the state and vehicle type.</li>
-  <li><strong>Renewal notice:</strong> The state DMV typically sends a renewal notice by mail 30-60 days before your registration expires.</li>
-  <li><strong>Online renewal:</strong> Many states, including {{ state.name }}, offer online registration renewal for eligible vehicles, saving you a trip to the DMV.</li>
-  <li><strong>Late fees:</strong> Driving with expired registration can result in fines and penalties. Renew on time to avoid additional costs.</li>
-  {% if state.hasEmissions %}<li><strong>Emissions compliance:</strong> Renewal can depend on the emissions rule above. A vehicle operated only on electricity does not take that test.</li>{% endif %}
-  {% if state.hasSafetyInspection %}<li><strong>Safety inspection:</strong> Renewal can depend on the safety-inspection rule above.</li>{% endif %}
-</ul>
-
-<h2 id="title-transfer">Title Transfer in {{ state.name }}</h2>
-
-<p>When a vehicle changes ownership in {{ state.name }}, the title must be transferred to the new owner. The title fee is <strong>{{ state.titleFee }}</strong>. Here are important things to know:</p>
-
-<ul>
-  <li>Title transfers must typically be completed within 30 days of the sale to avoid late fees.</li>
-  <li>If the title is lost, the seller must apply for a duplicate title before the vehicle can be transferred.</li>
-  <li>If there is a lien on the vehicle, the lienholder must provide a release before the title can be transferred.</li>
-  <li>Out-of-state titles are accepted but may require additional verification steps.</li>
-</ul>
+<p>When a vehicle changes hands in {{ state.name }}, the title fee on file is <strong>{{ state.titleFee }}</strong>.{% if state.plateFee %} The plate charge on file is {{ state.plateFee | feeLabel }}.{% endif %} Read the fee note above for county add-ons, and confirm the current form with the {{ state.name }} motor vehicle office before you pay.</p>
 
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
   <h3 class="text-xl font-bold text-white mb-3">Need Insurance for Your New Vehicle?</h3>
@@ -108,14 +81,5 @@ eleventyComputed:
   </a>
   <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
 </div>
-
-<h2 id="special">Special Registration Situations</h2>
-
-<ul>
-  <li><strong>Moving to {{ state.name }}:</strong> New residents typically have 30-90 days to register their out-of-state vehicle. You will need to transfer your title and obtain {{ state.name }} plates.</li>
-  <li><strong>Military personnel:</strong> Active duty military members stationed in {{ state.name }} may be exempt from certain registration requirements or fees.</li>
-  <li><strong>Inherited vehicles:</strong> Vehicles received through inheritance may require additional documentation, such as a death certificate and probate documents.</li>
-  <li><strong>Rebuilt or salvage titles:</strong> Vehicles with salvage or rebuilt titles have additional inspection requirements before they can be registered for road use.</li>
-</ul>
 
 </div>

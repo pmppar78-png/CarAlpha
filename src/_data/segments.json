@@ -1,0 +1,286 @@
+{
+  "compact-car": {
+    "label": "compact car",
+    "models": [
+      "toyota/corolla",
+      "honda/civic",
+      "hyundai/elantra",
+      "nissan/sentra",
+      "volkswagen/jetta",
+      "volkswagen/golf",
+      "mazda/mazda3",
+      "subaru/impreza",
+      "kia/forte",
+      "saturn/ion",
+      "plymouth/neon",
+      "pontiac/vibe",
+      "scion/im",
+      "scion/xd"
+    ]
+  },
+  "subcompact-car": {
+    "label": "subcompact car",
+    "models": [
+      "nissan/versa",
+      "mitsubishi/mirage",
+      "fiat/500",
+      "smart/fortwo",
+      "scion/iq"
+    ]
+  },
+  "midsize-sedan": {
+    "label": "midsize sedan",
+    "models": [
+      "toyota/camry",
+      "honda/accord",
+      "hyundai/sonata",
+      "nissan/altima",
+      "chevrolet/malibu",
+      "subaru/legacy",
+      "kia/k5",
+      "saturn/aura",
+      "pontiac/g6",
+      "mercury/milan",
+      "mercury/sable",
+      "pontiac/grand-prix"
+    ]
+  },
+  "large-sedan": {
+    "label": "large sedan",
+    "models": ["chrysler/300", "dodge/charger"]
+  },
+  "subcompact-crossover": {
+    "label": "subcompact crossover",
+    "models": [
+      "honda/hr-v",
+      "subaru/crosstrek",
+      "kia/seltos",
+      "kia/soul",
+      "hyundai/kona",
+      "hyundai/venue",
+      "mazda/cx-30",
+      "volkswagen/taos",
+      "nissan/kicks",
+      "jeep/renegade",
+      "buick/encore",
+      "buick/encore-gx",
+      "mitsubishi/outlander-sport"
+    ]
+  },
+  "compact-crossover": {
+    "label": "compact crossover",
+    "models": [
+      "toyota/rav4",
+      "honda/cr-v",
+      "hyundai/tucson",
+      "kia/sportage",
+      "nissan/rogue",
+      "chevrolet/equinox",
+      "ford/escape",
+      "mazda/cx-5",
+      "subaru/forester",
+      "jeep/compass",
+      "jeep/cherokee",
+      "mitsubishi/outlander",
+      "volkswagen/tiguan"
+    ]
+  },
+  "three-row-crossover": {
+    "label": "three-row crossover",
+    "models": [
+      "toyota/highlander",
+      "honda/pilot",
+      "hyundai/palisade",
+      "hyundai/santa-fe",
+      "kia/telluride",
+      "kia/sorento",
+      "nissan/pathfinder",
+      "volkswagen/atlas",
+      "chevrolet/traverse",
+      "ford/explorer",
+      "subaru/ascent",
+      "mazda/cx-9",
+      "mazda/cx-90",
+      "gmc/acadia",
+      "dodge/durango"
+    ]
+  },
+  "full-size-suv": {
+    "label": "full-size SUV",
+    "models": [
+      "chevrolet/tahoe",
+      "gmc/yukon",
+      "ford/expedition",
+      "jeep/wagoneer"
+    ]
+  },
+  "luxury-full-size-suv": {
+    "label": "luxury full-size SUV",
+    "models": [
+      "cadillac/escalade",
+      "lincoln/navigator",
+      "infiniti/qx80",
+      "lexus/lx"
+    ]
+  },
+  "off-road-suv": {
+    "label": "off-road SUV",
+    "models": [
+      "jeep/wrangler",
+      "ford/bronco",
+      "toyota/4runner",
+      "land-rover/defender"
+    ]
+  },
+  "midsize-truck": {
+    "label": "midsize pickup",
+    "models": [
+      "toyota/tacoma",
+      "chevrolet/colorado",
+      "gmc/canyon",
+      "ford/ranger",
+      "nissan/frontier",
+      "honda/ridgeline",
+      "jeep/gladiator"
+    ]
+  },
+  "full-size-truck": {
+    "label": "full-size half-ton pickup",
+    "models": [
+      "ford/f-150",
+      "chevrolet/silverado",
+      "gmc/sierra",
+      "ram/1500",
+      "toyota/tundra"
+    ]
+  },
+  "minivan": {
+    "label": "minivan",
+    "models": ["honda/odyssey", "chrysler/pacifica", "plymouth/voyager"]
+  },
+  "pony-car": {
+    "label": "pony car",
+    "models": ["ford/mustang", "chevrolet/camaro", "dodge/challenger"]
+  },
+  "affordable-sports": {
+    "label": "affordable sports car",
+    "models": [
+      "mazda/mx-5-miata",
+      "subaru/brz",
+      "scion/fr-s",
+      "pontiac/solstice",
+      "saturn/sky"
+    ]
+  },
+  "entry-luxury-sedan": {
+    "label": "entry luxury sedan",
+    "models": [
+      "bmw/3-series",
+      "mercedes-benz/c-class",
+      "audi/a4",
+      "lexus/is",
+      "genesis/g70",
+      "alfa-romeo/giulia",
+      "jaguar/xe",
+      "infiniti/q50"
+    ]
+  },
+  "midsize-luxury-sedan": {
+    "label": "midsize luxury sedan",
+    "models": [
+      "bmw/5-series",
+      "mercedes-benz/e-class",
+      "audi/a6",
+      "genesis/g80",
+      "jaguar/xf",
+      "cadillac/ct5",
+      "volvo/s60"
+    ]
+  },
+  "comfort-luxury-sedan": {
+    "label": "comfort-oriented luxury sedan",
+    "models": ["lexus/es", "acura/tlx"]
+  },
+  "flagship-luxury-sedan": {
+    "label": "flagship luxury sedan",
+    "models": [
+      "bmw/7-series",
+      "mercedes-benz/s-class",
+      "genesis/g90",
+      "maybach/s-class-maybach"
+    ]
+  },
+  "ultra-luxury-sedan": {
+    "label": "ultra-luxury sedan",
+    "models": [
+      "rolls-royce/ghost",
+      "rolls-royce/phantom",
+      "bentley/flying-spur"
+    ]
+  },
+  "subcompact-luxury-crossover": {
+    "label": "subcompact luxury crossover",
+    "models": [
+      "bmw/x1",
+      "mercedes-benz/gla",
+      "audi/q3",
+      "volvo/xc40",
+      "lexus/ux",
+      "cadillac/xt4"
+    ]
+  },
+  "compact-luxury-crossover": {
+    "label": "compact luxury crossover",
+    "models": [
+      "bmw/x3",
+      "mercedes-benz/glc",
+      "audi/q5",
+      "volvo/xc60",
+      "lexus/nx",
+      "acura/rdx",
+      "lincoln/corsair",
+      "genesis/gv70",
+      "alfa-romeo/stelvio",
+      "porsche/macan",
+      "jaguar/e-pace"
+    ]
+  },
+  "midsize-luxury-crossover": {
+    "label": "midsize luxury crossover",
+    "models": [
+      "bmw/x5",
+      "mercedes-benz/gle",
+      "lexus/rx",
+      "genesis/gv80",
+      "cadillac/xt5"
+    ]
+  },
+  "three-row-luxury-crossover": {
+    "label": "three-row luxury crossover",
+    "models": [
+      "audi/q7",
+      "volvo/xc90",
+      "acura/mdx",
+      "cadillac/xt6",
+      "infiniti/qx60",
+      "lincoln/aviator"
+    ]
+  },
+  "electric-crossover": {
+    "label": "electric crossover",
+    "models": [
+      "tesla/model-y",
+      "volkswagen/id-4",
+      "hyundai/ioniq-5",
+      "kia/ev6"
+    ]
+  },
+  "electric-sedan": {
+    "label": "compact electric sedan",
+    "models": ["tesla/model-3", "polestar/polestar-2"]
+  },
+  "luxury-electric-sedan": {
+    "label": "luxury electric sedan",
+    "models": ["tesla/model-s", "lucid/air", "porsche/taycan"]
+  }
+}

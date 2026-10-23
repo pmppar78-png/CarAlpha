@@ -4,8 +4,8 @@
 
 const makes = require("./makes.json");
 const models = require("./models.json");
-const modelYears = require("./modelYears.json");
 const states = require("./states.json");
+const { modelIndexable } = require("../../lib/vehicle-copy");
 
 module.exports = function () {
   const result = [];
@@ -20,8 +20,9 @@ module.exports = function () {
     }
   }
 
-  // modelStates: model × state = ~15,450 entries
+  // model × state only when the nameplate has EPA, NHTSA, or generation data
   for (const model of models) {
+    if (!modelIndexable(model)) continue;
     for (const state of states) {
       result.push({
         loc: `/makes/${model.makeSlug}/${model.slug}/in/${state.slug}/`,
