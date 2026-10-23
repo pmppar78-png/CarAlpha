@@ -97,11 +97,12 @@
   },
   "audi/a4": {
     "file": "File:Audi A4 B6 TDI Cabrio (2019-03-27 Sp r).JPG",
-    "modelYear": 2004,
+    "modelYear": null,
+    "yearRange": "2000-2004",
     "generation": "B6",
     "generationStart": 2001,
     "generationEnd": 2006,
-    "source": "Commons file Audi A4 B6 TDI Cabrio (2019-03-27 Sp r).JPG states the model year. Audi A4 2.5 TDI Cabriolet, Baureihe B6, Bauzeit 2000\u20132004"
+    "source": "Commons description Audi A4 2.5 TDI Cabriolet, Baureihe B6, Bauzeit 2000-2004. The 2019-03-27 in the filename is the photo date."
   },
   "nissan/rogue": {
     "file": "File:2014 Nissan Rogue S AWD front left.jpg",
@@ -321,7 +322,8 @@
   },
   "honda/odyssey": {
     "file": "File:2023-2026 Honda Odyssey e-HEV Absolute EX.jpg",
-    "modelYear": 2026,
+    "modelYear": null,
+    "yearRange": "2023-2026",
     "generation": "RC",
     "generationStart": 2013,
     "generationEnd": null,
@@ -377,7 +379,8 @@
   },
   "subaru/forester": {
     "file": "File:2015-2018 Subaru Forester XT.jpg",
-    "modelYear": 2018,
+    "modelYear": null,
+    "yearRange": "2015-2018",
     "generation": "SJ",
     "generationStart": 2014,
     "generationEnd": 2018,
@@ -385,7 +388,8 @@
   },
   "subaru/impreza": {
     "file": "File:2017-2019 Subaru Impreza hatchback 7-12-2026.jpg",
-    "modelYear": 2019,
+    "modelYear": null,
+    "yearRange": "2017-2019",
     "generation": "GT",
     "generationStart": 2017,
     "generationEnd": 2023,
@@ -489,7 +493,8 @@
   },
   "mitsubishi/outlander": {
     "file": "File:2021-2024 Mitsubishi Outlander PHEV P rear.jpg",
-    "modelYear": 2024,
+    "modelYear": null,
+    "yearRange": "2021-2024",
     "generation": "fourth generation",
     "generationStart": 2021,
     "generationEnd": null,
@@ -681,7 +686,8 @@
   },
   "saturn/vue": {
     "file": "File:02-05 Saturn Vue.jpg",
-    "modelYear": 2005,
+    "modelYear": null,
+    "yearRange": "2002-2005",
     "generation": "first generation",
     "generationStart": 2002,
     "generationEnd": 2007,
@@ -713,7 +719,8 @@
   },
   "saturn/sl": {
     "file": "File:00-02 Saturn SL 2.jpg",
-    "modelYear": 2002,
+    "modelYear": null,
+    "yearRange": "2000-2002",
     "generation": "third generation",
     "generationStart": 2000,
     "generationEnd": 2002,
@@ -729,7 +736,8 @@
   },
   "pontiac/grand-am": {
     "file": "File:2003-2005 Pontiac Grand Am GT Sedan.jpg",
-    "modelYear": 2005,
+    "modelYear": null,
+    "yearRange": "2003-2005",
     "generation": "fifth generation",
     "generationStart": 1999,
     "generationEnd": 2005,
@@ -753,7 +761,8 @@
   },
   "pontiac/firebird": {
     "file": "File:1998\u20132002 Pontiac Firebird Trans Am, white, Golden Super Cruise 2026-09-05.jpg",
-    "modelYear": 2002,
+    "modelYear": null,
+    "yearRange": "1998-2002",
     "generation": "fourth generation",
     "generationStart": 1993,
     "generationEnd": 2002,
@@ -761,7 +770,8 @@
   },
   "pontiac/solstice": {
     "file": "File:06-09 Pontiac Solstice base convertible.jpg",
-    "modelYear": 2009,
+    "modelYear": null,
+    "yearRange": "2006-2009",
     "generation": "Kappa",
     "generationStart": 2006,
     "generationEnd": 2010,
@@ -769,7 +779,8 @@
   },
   "pontiac/vibe": {
     "file": "File:03-04 Pontiac Vibe base.jpg",
-    "modelYear": 2004,
+    "modelYear": null,
+    "yearRange": "2003-2004",
     "generation": "first generation",
     "generationStart": 2003,
     "generationEnd": 2007,
@@ -777,7 +788,8 @@
   },
   "oldsmobile/cutlass": {
     "file": "File:1997-1999 Oldsmobile Cutlass.jpg",
-    "modelYear": 1999,
+    "modelYear": null,
+    "yearRange": "1997-1999",
     "generation": "N-body",
     "generationStart": 1997,
     "generationEnd": 1999,
@@ -801,7 +813,8 @@
   },
   "oldsmobile/bravada": {
     "file": "File:02-04 Oldsmobile Bravada.jpg",
-    "modelYear": 2004,
+    "modelYear": null,
+    "yearRange": "2002-2004",
     "generation": "third generation",
     "generationStart": 2002,
     "generationEnd": 2004,
@@ -809,7 +822,8 @@
   },
   "oldsmobile/aurora": {
     "file": "File:1995-1999 Oldsmobile Aurora.jpg",
-    "modelYear": 1999,
+    "modelYear": null,
+    "yearRange": "1995-1999",
     "generation": "first generation",
     "generationStart": 1995,
     "generationEnd": 1999,
@@ -817,7 +831,8 @@
   },
   "mercury/grand-marquis": {
     "file": "File:03-05 Mercury Grand Marquis .jpg",
-    "modelYear": 2005,
+    "modelYear": null,
+    "yearRange": "2003-2005",
     "generation": "fourth generation",
     "generationStart": 2003,
     "generationEnd": 2011,
@@ -841,7 +856,8 @@
   },
   "mercury/mariner": {
     "file": "File:2005-07 Mercury Mariner.jpg",
-    "modelYear": 2007,
+    "modelYear": null,
+    "yearRange": "2005-2007",
     "generation": "first generation",
     "generationStart": 2005,
     "generationEnd": 2007,
@@ -849,7 +865,8 @@
   },
   "mercury/milan": {
     "file": "File:2006-2007 Mercury Milan.jpg",
-    "modelYear": 2007,
+    "modelYear": null,
+    "yearRange": "2006-2007",
     "generation": "first generation",
     "generationStart": 2006,
     "generationEnd": 2011,
@@ -857,7 +874,8 @@
   },
   "mercury/cougar": {
     "file": "File:01-02 Mercury Cougar.jpg",
-    "modelYear": 2002,
+    "modelYear": null,
+    "yearRange": "2001-2002",
     "generation": "eighth generation",
     "generationStart": 1999,
     "generationEnd": 2002,
@@ -873,7 +891,8 @@
   },
   "plymouth/neon": {
     "file": "File:00-01 Plymouth Neon.jpg",
-    "modelYear": 2001,
+    "modelYear": null,
+    "yearRange": "2000-2001",
     "generation": "second generation",
     "generationStart": 2000,
     "generationEnd": 2005,
@@ -881,7 +900,8 @@
   },
   "plymouth/voyager": {
     "file": "File:'97-'00 Plymouth Voyager 3-Door.jpg",
-    "modelYear": 2000,
+    "modelYear": null,
+    "yearRange": "1997-2000",
     "generation": "NS",
     "generationStart": 1996,
     "generationEnd": 2000,
@@ -953,7 +973,8 @@
   },
   "suzuki/xl-7": {
     "file": "File:2001-2003 Suzuki Grand Vitara XL-7 (JA) wagon (2009-11-17).jpg",
-    "modelYear": 2003,
+    "modelYear": null,
+    "yearRange": "2001-2003",
     "generation": "JA",
     "generationStart": 2001,
     "generationEnd": 2006,
@@ -961,7 +982,8 @@
   },
   "isuzu/rodeo": {
     "file": "File:2003-2004 Isuzu Rodeo.jpg",
-    "modelYear": 2004,
+    "modelYear": null,
+    "yearRange": "2003-2004",
     "generation": "second generation",
     "generationStart": 1998,
     "generationEnd": 2004,
@@ -1136,12 +1158,12 @@
     "source": "Commons description 2017 Jaguar XE Portfolio. The XE (X760) ran 2015\u20132024."
   },
   "mitsubishi/mirage": {
-    "file": "File:Mitsubishi Mirage G4 1.2 GLX 2026 (1).jpg",
-    "modelYear": 2026,
+    "file": "File:2021 Mitsubishi Mirage (facelift), rear 5.14.22.jpg",
+    "modelYear": 2021,
     "generation": "sixth generation",
     "generationStart": 2012,
     "generationEnd": null,
-    "source": "Commons category 2026 Mitsubishi automobiles and the file title Mitsubishi Mirage G4 1.2 GLX 2026. The G4 is the sixth-generation sedan, from 2012."
+    "source": "Commons description A 2021 Mitsubishi Mirage photographed in Sunset Park, Brooklyn, New York. Sixth-generation hatchback, from 2012."
   },
   "mitsubishi/outlander-sport": {
     "file": "File:19 Mitsubishi Outlander Sport LE.jpg",
@@ -1193,11 +1215,12 @@
   },
   "jeep/gladiator": {
     "file": "File:Gobi Jeep gladiator (JT) on W Ann Rd.jpg",
-    "modelYear": 2020,
+    "modelYear": null,
+    "yearRange": "2019-2020",
     "generation": "JT",
     "generationStart": 2020,
     "generationEnd": null,
-    "source": "Commons description A Gobi 2019-20 Jeep Gladiator. The recorded 2022 was not a model year. JT is the Gladiator, and 2020 is inside the stated 2019\u201320 span."
+    "source": "Commons description A Gobi 2019-20 Jeep Gladiator. JT is the Gladiator generation."
   },
   "jeep/wagoneer": {
     "file": "File:Jeep Wagoneer (2024) (54166842821).jpg",
@@ -1425,7 +1448,8 @@
   },
   "suzuki/swift": {
     "file": "File:'95-'01 Suzuki Swift Hatchback.jpg",
-    "modelYear": 2001,
+    "modelYear": null,
+    "yearRange": "1995-2001",
     "generation": "third generation",
     "generationStart": 1995,
     "generationEnd": 2001,
@@ -1465,7 +1489,8 @@
   },
   "delorean/dmc-12": {
     "file": "File:1981-1983 DeLorean DMC-12.jpg",
-    "modelYear": 1983,
+    "modelYear": null,
+    "yearRange": "1981-1983",
     "generation": "DMC-12",
     "generationStart": 1981,
     "generationEnd": 1983,

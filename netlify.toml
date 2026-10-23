@@ -983,6 +983,42 @@
   force = true
 
 [[redirects]]
+  from = "/makes/mitsubishi/mirage/2025"
+  to = "/makes/mitsubishi/mirage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/mirage/2025/"
+  to = "/makes/mitsubishi/mirage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/mirage/2025/*"
+  to = "/makes/mitsubishi/mirage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/mirage/2026"
+  to = "/makes/mitsubishi/mirage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/mirage/2026/"
+  to = "/makes/mitsubishi/mirage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/makes/mitsubishi/mirage/2026/*"
+  to = "/makes/mitsubishi/mirage/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/makes/bentley/flying-spur/2019"
   to = "/makes/bentley/flying-spur/"
   status = 301
