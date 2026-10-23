@@ -13,6 +13,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
+const { rowMatchesModel } = require("./build-vehicle-facts");
 
 const ROOT = path.join(__dirname, "..");
 const DATA = path.join(ROOT, "src", "_data");
@@ -89,39 +90,34 @@ function main() {
     if (!catalog || !year) continue;
     const epaModel = row[index.model] || "";
     const base = row[index.baseModel] || "";
-    const epaNorm = norm(epaModel);
-    const baseNorm = norm(base);
-    let match = null;
-    for (const model of catalog) {
-      const name = norm(model.name);
-      if (!name || name.length < 2) continue;
-      const epaStarts = epaNorm === name || epaNorm.indexOf(name) === 0;
-      const catalogStarts = baseNorm.length >= 3 && (name === baseNorm || name.indexOf(baseNorm) === 0);
-      if (epaStarts || catalogStarts) {
-        match = model;
-        break;
-      }
-    }
-    if (!match) continue;
+    const epaRow = {
+      model: epaModel,
+      baseModel: base,
+      fuelType1: index.fuelType1 != null ? row[index.fuelType1] || "" : "",
+    };
+    const matches = catalog.filter(function (model) { return rowMatchesModel(model, epaRow); });
+    if (!matches.length) continue;
     const comb = Number(row[index.comb08]);
     const city = Number(row[index.city08]);
     const hwy = Number(row[index.highway08]);
     if (!comb) continue;
-    const key = match.makeSlug + "/" + match.slug + "/" + year;
-    let bucket = buckets.get(key);
-    if (!bucket) {
-      bucket = { rows: [] };
-      buckets.set(key, bucket);
-    }
-    bucket.rows.push({
-      name: epaModel,
-      comb: comb,
-      city: city,
-      hwy: hwy,
-      displ: row[index.displ] || "",
-      cylinders: row[index.cylinders] || "",
-      drive: row[index.drive] || "",
-      trans: row[index.trany] || "",
+    matches.forEach(function (match) {
+      const key = match.makeSlug + "/" + match.slug + "/" + year;
+      let bucket = buckets.get(key);
+      if (!bucket) {
+        bucket = { rows: [] };
+        buckets.set(key, bucket);
+      }
+      bucket.rows.push({
+        name: epaModel,
+        comb: comb,
+        city: city,
+        hwy: hwy,
+        displ: row[index.displ] || "",
+        cylinders: row[index.cylinders] || "",
+        drive: row[index.drive] || "",
+        trans: row[index.trany] || "",
+      });
     });
   }
 

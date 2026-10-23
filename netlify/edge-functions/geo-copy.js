@@ -410,7 +410,11 @@ function factSentences(p) {
       const high = fact.epaHigh && fact.epaHigh !== fact.epaLow ? " on the " + fact.epaHigh : "";
       const counted = !p.stateName && fact.factYear ? "the " + fact.factYear + " " + car : car;
       lines.push(sentence("On October 23, 2026, fueleconomy.gov listed " + count + " configurations of " + counted));
-      lines.push(sentence("Combined mileage runs from " + fact.combMin + " mpg" + low + " to " + fact.combMax + " mpg" + high));
+      if (Number(fact.combMin) === Number(fact.combMax)) {
+        lines.push(sentence("Combined mileage is " + fact.combMin + " mpg"));
+      } else {
+        lines.push(sentence("Combined mileage runs from " + fact.combMin + " mpg" + low + " to " + fact.combMax + " mpg" + high));
+      }
       lines.push(sentence("City mileage is " + mpgRange(fact.cityMin, fact.cityMax) + " mpg"));
       lines.push(sentence("Highway mileage is " + mpgRange(fact.hwyMin, fact.hwyMax) + " mpg"));
     }

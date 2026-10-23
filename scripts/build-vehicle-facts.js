@@ -140,21 +140,21 @@ function indexEpa(rows) {
   return byMake;
 }
 
+function rowMatchesModel(model, row) {
+  const id = `${model.makeSlug}/${model.slug}`;
+  const filter = ROW_FILTERS[id];
+  if (filter) return Boolean(filter(row));
+  const aliases = new Set(BASE_ALIASES[id] || []);
+  aliases.add(norm(model.name));
+  return aliases.has(norm(row.baseModel));
+}
+
 function rowsForModel(model, byMake) {
   const makeKey = MAKE_EPA[norm(model.makeName)] || norm(model.makeName);
   const pool = byMake.get(makeKey) || [];
-  const id = `${model.makeSlug}/${model.slug}`;
-  const aliases = new Set(BASE_ALIASES[id] || []);
-  aliases.add(norm(model.name));
-  const filter = ROW_FILTERS[id];
   const matched = [];
   for (const row of pool) {
-    const base = norm(row.baseModel);
-    if (filter) {
-      if (!filter(row)) continue;
-    } else if (!aliases.has(base)) {
-      continue;
-    }
+    if (!rowMatchesModel(model, row)) continue;
     const year = Number(row.year);
     if (!year) continue;
     matched.push(row);
@@ -281,7 +281,7 @@ async function nhtsaFor(entry) {
       seen.add(row.id);
       unique.push(row);
     }
-    recalls = { count: unique.length, campaigns: unique.slice(0, 8) };
+    recalls = { count: unique.length, campaigns: unique };
   } catch (err) {
     recalls = null;
   }
@@ -489,6 +489,7 @@ module.exports = {
   norm,
   loadEpaRows,
   indexEpa,
+  rowMatchesModel,
   rowsForModel,
   num,
 };

@@ -27,13 +27,14 @@ eleventyComputed:
 
 {% if state.lemonLawCitation %}
 <p>The statute is <a href="{{ state.lemonLawUrl }}" rel="noopener">{{ state.lemonLawCitation }}</a>.</p>
-{% if state.usedCarLemonLaw %}<p>{{ state.usedCarLemonLaw }}</p>{% endif %}
 {% endif %}
+{% if state.usedCarLemonLaw %}<p>{{ state.usedCarLemonLaw }}</p>{% endif %}
+{% if state.lemonArbitration %}<p>{{ state.lemonArbitration }}</p>{% endif %}
 {% else %}
 <p>{{ state.name }} does not have a specific state lemon law on file here. A written warranty can still be enforced under the federal Magnuson-Moss Warranty Act, 15 U.S.C. sections 2301 through 2312.</p>
 {% endif %}
 
-<p><a href="/guides/lemon-law/qualification-checker/">Qualification checker</a>. <a href="/guides/lemon-law/notice-letter/">Notice-letter draft</a>. The <a href="/guides/lemon-law/">lemon-law hub</a> separates the {{ state.name }} statute from Magnuson-Moss and from a safety recall.</p>
+<p><a href="/guides/lemon-law/qualification-checker/">Qualification checker</a>. <a href="/guides/lemon-law/notice-letter/">Notice-letter draft</a>.</p>
 
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
   <h3 class="text-xl font-bold text-white mb-3">Think You Have a Lemon?</h3>
@@ -45,14 +46,5 @@ eleventyComputed:
   <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
 </div>
 
-<h2 id="sources">Where the {{ state.name }} rule comes from</h2>
-
-<ul>
-  <li><strong>{{ state.name }} lemon law.</strong> {% if state.lemonLawCitation %}<a href="{{ state.lemonLawUrl }}" rel="noopener">{{ state.lemonLawCitation }}</a>. {% endif %}The attorney general office for {{ state.name }} is listed by the <a href="https://www.naag.org/find-my-ag/" rel="noopener">National Association of Attorneys General</a>.</li>
-  <li><strong>Magnuson-Moss, separate from the {{ state.name }} statute.</strong> The Federal Trade Commission explains a warranty versus a service contract in <a href="https://consumer.ftc.gov/articles/auto-warranties-and-auto-service-contracts" rel="noopener">Auto Warranties and Auto Service Contracts</a>. 15 U.S.C. sections 2301 through 2312 do not impose a nationwide repair-count test on {{ state.name | aan }} {{ state.name }} claim.</li>
-  <li><strong>Safety recalls are not the {{ state.name }} lemon law.</strong> A no-charge safety repair on {{ state.name | aan }} {{ state.name }} vehicle follows <a href="https://www.nhtsa.gov/recalls" rel="noopener">NHTSA</a> and 49 U.S.C. Chapter 301, including the 15-year first-sale limit in § 30120(g)(1), and an open campaign is not, by itself, {{ state.name | aan }} {{ state.name }} lemon-law case.</li>
-</ul>
-
-<p>{{ state.name }} can amend {% if state.lemonLawCitation %}{{ state.lemonLawCitation }}{% else %}its consumer statute{% endif %}. If a number of repair attempts decides the case, read that text or ask the attorney general.</p>
 
 </div>

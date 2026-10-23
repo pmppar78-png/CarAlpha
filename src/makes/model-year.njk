@@ -84,6 +84,7 @@ eleventyComputed:
             <caption class="text-left text-xs font-bold uppercase tracking-wider text-silver-500 mb-2">EPA configurations from fueleconomy.gov</caption>
             <thead>
               <tr class="text-silver-500 text-xs">
+                <th class="py-2 pr-3 font-semibold">Configuration</th>
                 <th class="py-2 pr-3 font-semibold">Engine</th>
                 <th class="py-2 pr-3 font-semibold">Transmission</th>
                 <th class="py-2 pr-3 font-semibold">Drive</th>
@@ -91,13 +92,14 @@ eleventyComputed:
                 <th class="py-2 pr-3 font-semibold">Hwy</th>
                 <th class="py-2 pr-3 font-semibold">Comb</th>
                 <th class="py-2 pr-3 font-semibold">Fuel</th>
-                <th class="py-2 pr-3 font-semibold">Annual fuel</th>
+                <th class="py-2 pr-3 font-semibold">Annual fuel as of {{ copy.facts.epa.fuelCostAsOf or "October 23, 2026" }}</th>
                 <th class="py-2 pr-3 font-semibold">CO2 g/mi</th>
               </tr>
             </thead>
             <tbody>
               {% for row in copy.facts.epa.configs %}
               <tr class="border-t border-white/10 text-silver-400">
+                <td class="py-2 pr-3">{{ row.name }}</td>
                 <td class="py-2 pr-3">{{ row.engine }}</td>
                 <td class="py-2 pr-3">{{ row.trans }}</td>
                 <td class="py-2 pr-3">{{ row.drive }}</td>
