@@ -11,7 +11,7 @@ const fs = require("fs");
 const path = require("path");
 const { loadEpaRows, indexEpa, rowsForModel, num } = require("./build-vehicle-facts");
 const { campaignKind } = require("../lib/vehicle-copy");
-const { plainRecallLabel } = require("../lib/recall-labels");
+const { plainRecallLabel, splitSentences } = require("../lib/recall-labels");
 const { fixArticles } = require("../lib/article");
 
 const ROOT = path.join(__dirname, "..");
@@ -27,6 +27,52 @@ function cacheFile(kind, make, model, year) {
 
 const KEEP_CAPS = ["NHTSA", "NCAP", "EPA", "ABS", "ECU", "VIN", "SUV", "MPV", "TPMS", "ESC", "OBD", "IIHS"];
 
+const PROPER = (function () {
+  const words = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
+    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Inc.", "Corp.", "Ltd.", "LLC", "GM", "FCA", "BMW", "VW", "GMC", "AMC",
+    "Mopar", "Motorcraft", "Takata"];
+  let names = [];
+  try {
+    names = JSON.parse(fs.readFileSync(path.join(ROOT, "src", "_data", "makes.json"), "utf8")).map((m) => m.name);
+  } catch (_err) { names = []; }
+  return words.concat(names).filter(Boolean).sort((a, b) => b.length - a.length);
+})();
+
+const MODELS = (function () {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, "src", "_data", "models.json"), "utf8"))
+      .filter((m) => m && m.name && m.name.length >= 2)
+      .sort((a, b) => b.name.length - a.name.length);
+  } catch (_err) { return []; }
+})();
+
+function escapeRe(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Text NHTSA filed in all caps is lowercased for reading; put back the
+// capitals on months, days, company suffixes and every make in the catalog.
+function restoreProperNouns(raw) {
+  let out = raw;
+  for (const word of PROPER) {
+    const re = new RegExp("(^|[^A-Za-z])" + escapeRe(word) + "(?![A-Za-z])", "gi");
+    out = out.replace(re, (_m, lead) => lead + word);
+  }
+  // Model names: codes such as DTS, CTS, H2 or RX 350 anywhere; word names
+  // (Lucerne, Escape) only right after their make, so "escape" stays a verb.
+  for (const model of MODELS) {
+    const name = model.name;
+    if ((/\d/.test(name) && name.length >= 2) || /^[A-Z]{3,4}$/.test(name)) {
+      out = out.replace(new RegExp("(^|[^A-Za-z0-9])" + escapeRe(name) + "(?![A-Za-z0-9])", "gi"), (_m, lead) => lead + name);
+    } else {
+      out = out.replace(new RegExp("(" + escapeRe(model.makeName) + ",? )" + escapeRe(name) + "(?![A-Za-z])", "gi"), (_m, lead) => lead + name);
+    }
+  }
+  // "May" only as a month: keep the modal verb lowercase.
+  out = out.replace(/\bMay (?!\d)/g, "may ");
+  return out.replace(/(^|[.?!]\s+)([a-z])/g, (_m, lead, ch) => lead + ch.toUpperCase());
+}
+
 function readableRecord(text) {
   let raw = String(text || "").replace(/\s+/g, " ").trim();
   if (!raw) return "";
@@ -38,19 +84,13 @@ function readableRecord(text) {
     for (const word of KEEP_CAPS) {
       raw = raw.replace(new RegExp("\\b" + word.toLowerCase() + "\\b", "g"), word);
     }
+    raw = restoreProperNouns(raw);
   }
-  const pieces = raw.split(/(?<=[.?!])\s+/);
-  const normalized = [];
-  for (const piece of pieces) {
-    const semis = (piece.match(/;/g) || []).length;
-    if (semis >= 4) {
-      piece.split(/\s*;\s*/).forEach((bit) => normalized.push(bit));
-    } else {
-      normalized.push(piece);
-    }
-  }
+  // Split only at real sentence ends ("Inc." and "U.S." are not ends), and
+  // never at semicolons: NHTSA uses them between model names, so a split there
+  // leaves fragments like "cadillac dts."
   const kept = [];
-  for (const part of normalized) {
+  for (const part of splitSentences(raw)) {
     const bit = part.replace(/\s+/g, " ").trim();
     if (!bit || kept.length >= 2) continue;
     kept.push(/[.?!]$/.test(bit) ? bit : `${bit}.`);
@@ -434,7 +474,11 @@ async function main() {
   console.log(`wrote ${OUT} bytes=${fs.statSync(OUT).size}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+module.exports = { recallFromCache, cacheFile, clipRecord, CACHE };
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

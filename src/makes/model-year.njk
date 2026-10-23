@@ -63,8 +63,8 @@ eleventyComputed:
           <caption class="text-left text-xs font-bold uppercase tracking-wider text-silver-500 mb-2">Recorded figures</caption>
           <tbody>
             {% if copy.facts.epa %}
-            <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">EPA combined</th><td class="py-2 text-silver-400">{{ copy.facts.epa.comb[0] }}–{{ copy.facts.epa.comb[1] }} mpg</td></tr>
-            <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">EPA city / highway</th><td class="py-2 text-silver-400">{{ copy.facts.epa.city[0] }}–{{ copy.facts.epa.city[1] }} / {{ copy.facts.epa.hwy[0] }}–{{ copy.facts.epa.hwy[1] }} mpg</td></tr>
+            <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">EPA combined</th><td class="py-2 text-silver-400">{{ copy.facts.epa.comb | mpgRange }} mpg</td></tr>
+            <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">EPA city / highway</th><td class="py-2 text-silver-400">{{ copy.facts.epa.city | mpgRange }} / {{ copy.facts.epa.hwy | mpgRange }} mpg</td></tr>
             {% endif %}
             {% if copy.facts.recalls %}
             <tr class="border-t border-white/10"><th class="py-2 pr-4 font-semibold text-silver-300">NHTSA campaigns</th><td class="py-2 text-silver-400">{{ copy.facts.recalls.count }}{% if copy.facts.recalls.campaigns.length %} ({% for row in copy.facts.recalls.campaigns %}{{ row.id }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</td></tr>

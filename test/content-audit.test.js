@@ -190,3 +190,10 @@ test("a catalog year with no recorded source is noindex copy", () => {
   assert.equal(copy.faqs.length, 0);
   assert.ok(copy.plain.split(/\s+/).length < 8);
 });
+
+test("recall summaries never print the NHTSA 'see the recall report' pointer", () => {
+  const { oneSentence } = require("../lib/recall-labels");
+  const out = oneSentence("Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models.");
+  assert.doesNotMatch(out, /recall report/i);
+  assert.match(out, /Panoramic View Monitor/);
+});
