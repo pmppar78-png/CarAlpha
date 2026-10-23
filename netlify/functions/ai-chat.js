@@ -89,7 +89,7 @@ exports.handler = async function (event) {
 
   if (!process.env.ANTHROPIC_API_KEY) {
     return json(503, {
-      error: "The assistant is offline because no API key is configured. The VIN decoder and the recall checker still query NHTSA directly.",
+      error: "Chat is not available on this site yet. The VIN decoder and the recall checker still query NHTSA directly.",
     });
   }
 

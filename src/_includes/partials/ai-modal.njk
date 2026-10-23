@@ -1,4 +1,4 @@
-{# ── Next-steps panel. The chat assistant stays offline until ANTHROPIC_API_KEY is set. #}
+{# ── Next-steps panel. Links to the tools and guides. No chat request is sent. #}
 
 <div id="aiOverlay" class="ai-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="nextStepsTitle">
   <div class="ai-modal w-full max-w-2xl rounded-2xl shadow-premium flex flex-col carbon-panel" style="max-height: 85vh; border: 1px solid rgba(6,182,212,0.15);">
@@ -11,7 +11,7 @@
         </div>
         <div>
           <div id="nextStepsTitle" class="font-bold text-white text-sm tracking-tight">Next steps</div>
-          <div class="text-[11px] text-amber-300/80 font-medium">Assistant offline &middot; These tools still work</div>
+          <div class="text-[11px] text-silver-400 font-medium">VIN, recalls, and guides</div>
         </div>
       </div>
       <button id="closeAI" aria-label="Close next steps" class="p-2 rounded-lg hover:bg-white/[0.05] text-silver-400 hover:text-white transition-colors">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="scrollbox flex-1 px-6 py-5 text-sm overflow-y-auto">
-      <p class="text-silver-300 leading-relaxed">The chat assistant is turned off. This site does not have an API key configured, so it cannot answer a typed question and this panel does not send one. Use the pages below. The VIN decoder and the recall checker query NHTSA directly. The lemon-law pages cite the statute that was checked. Insurance and warranty guides name the source for any dollar figure.</p>
+      <p class="text-silver-300 leading-relaxed">Chat is coming soon. The VIN decoder and the recall checker query NHTSA directly. Lemon-law pages cite the statute. Insurance and warranty guides name the source for any dollar figure.</p>
       <div class="mt-5 grid sm:grid-cols-2 gap-3">
         <a href="/vin-decoder/" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-volt-500/30 hover:bg-volt-600/[0.04] transition-all group">
           <div>
@@ -63,8 +63,7 @@
 
     <div class="px-6 py-4" style="border-top: 1px solid rgba(6,182,212,0.08);">
       <div class="flex items-center justify-between gap-4">
-        <span class="text-[10px] text-silver-500/70">Chat stays off until an API key is configured for this site.</span>
-        <span class="text-[10px] text-silver-500/40 shrink-0">We never sell your data</span>
+        <span class="text-[10px] text-silver-500/40">We never sell your data</span>
       </div>
     </div>
   </div>
