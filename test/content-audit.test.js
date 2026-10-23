@@ -142,6 +142,44 @@ test("lemon pages drop the repeated sentences and keep a forum for each state", 
   });
 });
 
+test("a year with no EPA, recall, complaint, or NCAP rating is noindex and off the sitemap", () => {
+  const vehicleCopy = require("../lib/vehicle-copy");
+  const data = vehicleCopy.load();
+  const sitemap = fs.readFileSync(path.join(__dirname, "..", "src", "sitemap-modelyears.njk"), "utf8");
+  assert.match(sitemap, /indexableYear/);
+  const required = [
+    ["lotus", "evora", 2015],
+    ["lotus", "evora", 2016],
+    ["lotus", "evora", 2019],
+    ["maserati", "granturismo", 2023],
+    ["bentley", "continental-gt", 2019],
+  ];
+  required.forEach(([makeSlug, slug, year]) => {
+    const entry = data.modelYears.find((row) => row.makeSlug === makeSlug && row.slug === slug && row.year === year);
+    assert.ok(entry, `${makeSlug}/${slug}/${year} is in the catalog`);
+    const rec = data.yearFacts[`${makeSlug}/${slug}/${year}`] || {};
+    const epa = rec.epa && (Number(rec.epa.count) > 0 || (rec.epa.configs && rec.epa.configs.length > 0));
+    const recalls = rec.recalls && (Number(rec.recalls.count) > 0 || (rec.recalls.campaigns && rec.recalls.campaigns.length > 0));
+    const complaints = rec.complaints && Number(rec.complaints.count) > 0;
+    const ncap = rec.ncap && (rec.ncap.rows || []).some((row) => /^[1-5]$/.test(String(row.overall == null ? "" : row.overall).trim()));
+    assert.equal(Boolean(epa || recalls || complaints || ncap), false, `${makeSlug}/${slug}/${year} has a real source`);
+    assert.equal(vehicleCopy.yearIndexable(entry), false, `${makeSlug}/${slug}/${year} stays indexable`);
+    assert.equal(vehicleCopy.yearCopy(entry).indexable, false);
+  });
+  data.modelYears.forEach((entry) => {
+    const rec = data.yearFacts[`${entry.makeSlug}/${entry.slug}/${entry.year}`];
+    if (!rec) {
+      assert.equal(vehicleCopy.yearIndexable(entry), false);
+      return;
+    }
+    const epa = rec.epa && (Number(rec.epa.count) > 0 || (rec.epa.configs && rec.epa.configs.length > 0));
+    const recalls = rec.recalls && (Number(rec.recalls.count) > 0 || (rec.recalls.campaigns && rec.recalls.campaigns.length > 0));
+    const complaints = rec.complaints && Number(rec.complaints.count) > 0;
+    const ncap = rec.ncap && (rec.ncap.rows || []).some((row) => /^[1-5]$/.test(String(row.overall == null ? "" : row.overall).trim()));
+    assert.equal(vehicleCopy.yearIndexable(entry), Boolean(epa || recalls || complaints || ncap), `${entry.makeSlug}/${entry.slug}/${entry.year}`);
+  });
+});
+
 test("a catalog year with no recorded source is noindex copy", () => {
   const vehicleCopy = require("../lib/vehicle-copy");
   const data = vehicleCopy.load();
