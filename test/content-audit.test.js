@@ -270,11 +270,24 @@ test("vehicle photos are licensed Commons files with dimensions and a credit", (
 function filenameModelYears(file) {
   let text = String(file).replace(/^File:/, "").replace(/\.[A-Za-z0-9]+$/, "");
   text = text.replace(/\b[A-Za-z]*\d[A-Za-z]+\d+[A-Za-z0-9]*\b/g, " ");
-  text = text.replace(/\b\d{2}-\d{2}-(19|20)\d{2}\b/g, " ");
-  text = text.replace(/\b(19|20)\d{2}[-/]\d{2}[-/]\d{2}\b/g, " ");
-  text = text.replace(/\b\d{2}-(19|20)\d{6}\b/g, " ");
-  text = text.replace(/\b(19|20)\d{6,}\b/g, " ");
+  text = text.replace(/\b\d{1,2}[-/.]\d{1,2}[-/.](?:19|20)\d{2}\b/g, " ");
+  text = text.replace(/\b(?:19|20)\d{2}[-/.]\d{1,2}[-/.]\d{1,2}\b/g, " ");
+  text = text.replace(/\b\d{2}-(?:19|20)\d{6}\b/g, " ");
+  text = text.replace(/\b(?:19|20)\d{6,}\b/g, " ");
+  const month = "Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?";
+  text = text.replace(new RegExp(`\\b\\d{1,2}\\s+(?:${month})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b(?:${month})\\s+\\d{1,2},?\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b(?:${month})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b\\d{1,2}\\.\\s*(?:${month})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(/(?:\s[-–]+\s+)(?:19|20)\d{2}\s*$/g, " ");
+  const event = "Auto\\s+Z(?:u|ue|ü)rich|IAA|GIMS|NYIAS|NYC|Sonoma|Greenwich|Hirschaid|EMS|Goodwood|Motor\\s+Show|Concours|ePrix|E-Prix|Auto\\s+Show|Nationals";
+  text = text.replace(new RegExp(`\\b(?:${event})\\s+(?:19|20)\\d{2}\\b`, "gi"), " ");
+  text = text.replace(new RegExp(`\\b(?:19|20)\\d{2}\\s+(?:${event})\\b`, "gi"), " ");
   const found = new Set();
+  for (const match of text.matchAll(/\bMY\s?(\d{2})\b/gi)) {
+    const number = Number(match[1]);
+    found.add(number >= 30 ? 1900 + number : 2000 + number);
+  }
   for (const match of text.matchAll(/\b((?:19|20)\d{2})\s*[-–]\s*(\d{2,4})\b/g)) {
     const start = Number(match[1]);
     let end = Number(match[2]);
@@ -331,12 +344,45 @@ test("model photo years fall inside the page years or the generation matches", (
     const generation = String(photo.generation).toLowerCase().replace(/-/g, " ");
     assert.ok(alt.includes(String(photo.year)) || alt.includes(generation), photo.alt);
     assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
+    assert.doesNotMatch(photo.alt, /\bsuv\b/, photo.alt);
+    assert.doesNotMatch(photo.generation, /model year$/i, `${key} ${photo.generation}`);
     const name = model.name.toLowerCase().replace(/-/g, " ").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     assert.match(alt, new RegExp(name), photo.alt);
   }
   for (const photo of Object.values(images.makes)) {
     assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
+    assert.doesNotMatch(photo.alt, /\bsuv\b/, photo.alt);
     assert.ok(photo.alt.split(/\s+/).length >= 2, photo.alt);
+  }
+});
+
+test("filename years ignore photo dates and read MY codes", () => {
+  assert.deepEqual(filenameModelYears("Land Rover Range Rover Sport (G18 JJH) - 7 June 2026.jpg"), []);
+  assert.deepEqual(filenameModelYears("Second Gen Toyota Tacoma on Snowy Mountain - 2019.jpg"), []);
+  const saab = filenameModelYears("1996-1998 Saab 900 (MY97) S 5-door hatchback (2008-10-28).jpg");
+  assert.ok(saab.includes(1997), saab.join(","));
+  assert.ok(!saab.includes(2008), saab.join(","));
+  const impreza = filenameModelYears("2017-2019 Subaru Impreza hatchback 7-12-2026.jpg");
+  assert.deepEqual(impreza, [2017, 2018, 2019]);
+  const outback = filenameModelYears("2026 Subaru Outback Rear Left Quater NYC 2025.png");
+  assert.deepEqual(outback, [2026]);
+});
+
+test("reviewed photo manifest matches every model photo", () => {
+  const images = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImages.json"), "utf8"));
+  const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImageManifest.json"), "utf8"));
+  const photos = images.models;
+  assert.deepEqual(Object.keys(manifest).sort(), Object.keys(photos).sort());
+  for (const [key, row] of Object.entries(manifest)) {
+    const photo = photos[key];
+    assert.equal(photo.file, row.file, key);
+    assert.equal(photo.year, row.modelYear, key);
+    assert.equal(photo.generation, row.generation, key);
+    assert.equal(photo.generationStart, row.generationStart, key);
+    assert.equal(photo.generationEnd, row.generationEnd, key);
+    assert.equal(typeof row.source, "string", key);
+    assert.ok(row.source.length > 20, key);
+    assert.doesNotMatch(row.generation, /model year$/i, key);
   }
 });
 
