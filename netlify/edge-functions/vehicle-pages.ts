@@ -605,6 +605,18 @@ export default async (req: Request, _context: Context) => {
     return new Response("Not Found", { status: 404 });
   }
 
+  if (params.type === "modelYearState" && params.modelSlug && params.year) {
+    const model = models[`${params.makeSlug}/${params.modelSlug}`];
+    const beforeStart = !!model && params.year < model.yearStart;
+    const afterEnd = !!model && model.yearEnd != null && params.year > model.yearEnd;
+    if (beforeStart || afterEnd) {
+      return new Response(null, {
+        status: 301,
+        headers: { Location: `${url.origin}/makes/${params.makeSlug}/${params.modelSlug}/` },
+      });
+    }
+  }
+
   let html = "";
   switch (params.type) {
     case "modelYearState":

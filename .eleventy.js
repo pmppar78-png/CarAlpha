@@ -245,6 +245,22 @@ module.exports = function (eleventyConfig) {
     return vehicleCopy.modelCopy(model);
   });
 
+  eleventyConfig.addFilter("yearRobots", function (entry) {
+    return vehicleCopy.yearIndexable(entry) ? "index, follow" : "noindex, follow";
+  });
+
+  eleventyConfig.addFilter("modelRobots", function (model) {
+    return vehicleCopy.modelIndexable(model) ? "index, follow" : "noindex, follow";
+  });
+
+  eleventyConfig.addFilter("indexableModel", function (model) {
+    return vehicleCopy.modelIndexable(model);
+  });
+
+  eleventyConfig.addFilter("indexableYear", function (entry) {
+    return vehicleCopy.yearIndexable(entry);
+  });
+
   // lookupYears — get sorted years for a model, excluding a specific year
   eleventyConfig.addFilter("lookupYears", function (makeSlug, modelSlug, excludeYear) {
     const lookup = getModelYearsByModelKey();

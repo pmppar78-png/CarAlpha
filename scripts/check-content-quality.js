@@ -326,42 +326,8 @@ function visibleText(html) {
     .replace(/\s+/g, " ");
 }
 
-function stripSealedCopy(html) {
-  const attr = /<([a-z0-9]+)\b[^>]*\sdata-vehicle-copy\b[^>]*>/gi;
-  let out = "";
-  let last = 0;
-  let match;
-  while ((match = attr.exec(html))) {
-    out += html.slice(last, match.index);
-    const tag = match[1].toLowerCase();
-    const start = attr.lastIndex;
-    if (tag !== "div") {
-      const close = html.toLowerCase().indexOf("</" + tag + ">", start);
-      last = close === -1 ? html.length : close + tag.length + 3;
-      attr.lastIndex = last;
-      continue;
-    }
-    const token = /<\/?div\b[^>]*>/gi;
-    token.lastIndex = start;
-    let depth = 1;
-    let found = false;
-    let step;
-    while ((step = token.exec(html))) {
-      depth += step[0][1] === "/" ? -1 : 1;
-      if (depth === 0) {
-        last = token.lastIndex;
-        found = true;
-        break;
-      }
-    }
-    if (!found) last = html.length;
-    attr.lastIndex = last;
-  }
-  return out + html.slice(last);
-}
-
 function blockText(html) {
-  const source = stripSealedCopy(String(html))
+  const source = String(html)
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ");
   const chunks = [];
@@ -400,9 +366,6 @@ function checkSite() {
     if (/next to a file of/i.test(plain) && errors.length < 12) {
       errors.push(path.relative(ROOT, file) + " contains a next-to-a-file padding tail");
     }
-    // Sentence boundaries are the paragraph, not the tag-stripped page.
-    // Catalog paragraphs marked data-vehicle-copy stay sealed for the
-    // boilerplate check and are not scored here.
     if (errors.length < 12) {
       semicolonHits(blockText(html), path.relative(ROOT, file)).slice(0, 1).forEach(function (hit) { errors.push(hit); });
     }

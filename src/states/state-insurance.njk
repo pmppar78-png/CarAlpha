@@ -45,38 +45,22 @@ eleventyComputed:
   </div>
 </div>
 
-<p>While these are the state minimums, insurance experts generally recommend carrying higher limits to fully protect your assets. A common recommended policy is 100/300/100, especially if you have significant savings, own a home, or could be held personally liable in a serious accident.</p>
-
-<h2 id="average-costs">Average Car Insurance Costs in {{ state.name }}</h2>
-
 {% if state.averageInsuranceCost %}
-<p>The statewide all-vehicle average premium in {{ state.name }} is <strong>${{ state.averageInsuranceCost | naicDollars }}</strong>.{% if state.averageInsuranceSource %} {{ state.averageInsuranceSource }}{% endif %} Your own rate will vary based on several factors:</p>
-{% else %}
-<p>Car insurance rates in {{ state.name }} vary significantly based on several factors:</p>
+<p>The statewide all-vehicle average premium in {{ state.name }} is <strong>${{ state.averageInsuranceCost | naicDollars }}</strong>.{% if state.averageInsuranceSource %} {{ state.averageInsuranceSource }}{% endif %}</p>
 {% endif %}
 
-<ul>
-  <li><strong>Driving record:</strong> Clean records qualify for the lowest rates. A single at-fault accident can increase premiums by 20-40%.</li>
-  <li><strong>Age and experience:</strong> Drivers under 25 and over 70 typically pay more. The lowest rates are generally available to drivers aged 30-60.</li>
-  <li><strong>Vehicle type:</strong> Newer, more expensive vehicles cost more to insure. Safety features and good crash test ratings can help lower rates.</li>
-  <li><strong>Credit score:</strong> In most states, including {{ state.name }}, insurers use credit-based insurance scores as a rating factor.</li>
-  <li><strong>Location:</strong> Urban areas with higher traffic density and theft rates typically have higher premiums than rural areas.</li>
-  <li><strong>Coverage level:</strong> Higher deductibles lower premiums, while comprehensive and collision coverage adds cost but protects your vehicle.</li>
-</ul>
+{% if state.uninsuredPercent %}
+<h2 id="uninsured">Uninsured motorists in {{ state.name }}</h2>
+<p>The Insurance Research Council estimated that {{ state.uninsuredPercent }} percent of motorists in {{ state.name }} were uninsured in 2023, rank {{ state.uninsuredRank }} of 51 jurisdictions, against a countrywide 15.4 percent in the same 2025 study. The Insurance Information Institute republishes the IRC estimates in <a href="https://www.iii.org/fact-statistic/facts-statistics-uninsured-motorists" rel="noopener">Facts + Statistics: Uninsured motorists</a>.</p>
+{% if state.slug == "florida" %}
+<p>The IRC note for Florida says compulsory auto laws there apply to personal injury protection and property damage, not to third-party bodily injury coverage.</p>
+{% endif %}
+{% endif %}
 
-<h2 id="tips">Tips to Save on Car Insurance in {{ state.name }}</h2>
+<h2 id="department">{{ state.name }} insurance department</h2>
+<p>Complaints, rate filings, and the current {{ state.name }} minimums are handled by the {{ state.name }} insurance department, which the NAIC lists in the <a href="https://content.naic.org/state-insurance-departments" rel="noopener">state insurance department directory</a>, so confirm {{ state.name | aan }} {{ state.name }} limit there before relying on this page.</p>
 
-<p>There are several proven strategies to reduce your car insurance costs in {{ state.name }} without sacrificing the coverage you need:</p>
-
-<ol>
-  <li><strong>Compare at least 3-5 carriers.</strong> Rates vary dramatically between insurers for the same coverage. Shopping around is the single most effective way to save money.</li>
-  <li><strong>Bundle policies.</strong> Many carriers offer discounts of 10-25% when you combine auto and home or renters insurance.</li>
-  <li><strong>Ask about discounts.</strong> Good driver, good student, military, professional organization, and low-mileage discounts are widely available but not always automatically applied.</li>
-  <li><strong>Raise your deductible.</strong> Increasing your deductible from $250 to $1,000 can lower your premium by 15-30%. Just make sure you can afford the deductible if you need to file a claim.</li>
-  <li><strong>Maintain a clean record.</strong> Avoiding tickets and accidents is the best long-term strategy for low rates. Many states offer point reduction courses.</li>
-  <li><strong>Review your coverage annually.</strong> As your vehicle ages, you may want to drop comprehensive and collision coverage if the car's value no longer justifies the premium cost.</li>
-  <li><strong>Consider telematics programs.</strong> Many insurers offer usage-based insurance programs that can save safe drivers 10-40% by tracking driving behavior.</li>
-</ol>
+<p>The <a href="/guides/insurance/best-car-insurance/">car insurance guide</a> explains how to read a quote, and that guide is not {{ state.name | aan }} {{ state.name }} rate filing.</p>
 
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center my-10 not-prose">
   <h3 class="text-xl font-bold text-white mb-3">Compare {{ state.name }} Insurance Rates</h3>
@@ -87,33 +71,5 @@ eleventyComputed:
   </a>
   <p class="mt-3 text-[10px] text-silver-500/50">Affiliate link. We may earn a commission at no cost to you.</p>
 </div>
-
-<h2 id="types">Types of Coverage Available in {{ state.name }}</h2>
-
-<p>Beyond the state minimum, {{ state.name }} drivers should consider the following coverage types for comprehensive protection:</p>
-
-<ul>
-  <li><strong>Collision coverage:</strong> Pays for damage to your vehicle after an accident, regardless of fault. Required if your vehicle is financed or leased.</li>
-  <li><strong>Comprehensive coverage:</strong> Covers theft, vandalism, weather damage, animal strikes, and other non-collision events. Also typically required for financed vehicles.</li>
-  <li><strong>Uninsured/underinsured motorist coverage:</strong> Protects you if you are hit by a driver with no insurance or insufficient coverage. Highly recommended in every state.</li>
-  <li><strong>Medical payments / PIP:</strong> Covers medical expenses for you and your passengers regardless of fault. PIP (Personal Injury Protection) may be required in {{ state.name }}.</li>
-  <li><strong>Roadside assistance:</strong> Covers towing, battery jumps, flat tire changes, and lockout services. Usually affordable at $2-5 per month.</li>
-  <li><strong>Gap coverage:</strong> Pays the difference between your vehicle's actual cash value and what you owe on your loan if the car is totaled. Essential for new cars with loans.</li>
-</ul>
-
-<h2 id="filing-claim">Filing an Insurance Claim in {{ state.name }}</h2>
-
-<p>If you are involved in an accident in {{ state.name }}, follow these steps to protect your insurance claim:</p>
-
-<ol>
-  <li>Ensure everyone is safe and call 911 if there are injuries.</li>
-  <li>Exchange information with the other driver(s): name, phone, insurance company, policy number, and license plate.</li>
-  <li>Document the scene with photos and video from multiple angles.</li>
-  <li>File a police report, even for minor accidents. This creates an official record that supports your claim.</li>
-  <li>Contact your insurance company as soon as possible. Most insurers have 24/7 claims lines.</li>
-  <li>Keep records of all expenses related to the accident, including medical bills, rental car costs, and lost wages.</li>
-</ol>
-
-<p>If your claim is denied or you believe you are not receiving fair compensation, consider consulting with an auto accident attorney who is licensed in {{ state.name }}.</p>
 
 </div>

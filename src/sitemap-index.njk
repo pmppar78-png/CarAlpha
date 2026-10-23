@@ -8,6 +8,13 @@ eleventyExcludeFromCollections: true
     <loc>https://caralpha.org/sitemap-core.xml</loc>
     <lastmod>{{ buildInfo.lastmod }}</lastmod>
   </sitemap>
+{%- set myPages = (modelYears | length / 45000) | round(0, "ceil") %}
+{%- for i in range(0, myPages) %}
+  <sitemap>
+    <loc>https://caralpha.org/sitemap-modelyears-{{ i }}.xml</loc>
+    <lastmod>{{ buildInfo.lastmod }}</lastmod>
+  </sitemap>
+{%- endfor %}
 {%- set dynPages = (sitemapDynamic | length / 45000) | round(0, "ceil") %}
 {%- for i in range(0, dynPages) %}
   <sitemap>

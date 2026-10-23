@@ -259,12 +259,14 @@ eleventyExcludeFromCollections: true
   </url>
 {%- endfor %}
 {%- for model in models %}
+{%- if model | indexableModel %}
   <url>
     <loc>https://caralpha.org/makes/{{ model.makeSlug }}/{{ model.slug }}/</loc>
     <lastmod>{{ buildInfo.lastmod }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+{%- endif %}
 {%- endfor %}
 {%- for state in states %}
   <url>

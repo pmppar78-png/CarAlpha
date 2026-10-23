@@ -2,9 +2,12 @@
 "use strict";
 
 /**
- * Fails when make/model/year copy repeats a sentence across pages after the
- * page's own make, model, and year are masked. Also fails thin hub pages and
- * a short list of boilerplate phrases that the audit called out.
+ * Fails on padding and on template sentences that are not a recorded fact.
+ * The same EPA row, recall, NCAP score, generation, or rival list can be
+ * true for more than one model year. Masking the year and then requiring
+ * every remaining sentence to be unique is what produced the id-tail
+ * padding. Those shared facts are logged. A repeated sentence that does
+ * not cite a source still fails, and so does a fingerprint tail.
  */
 
 const fs = require("fs");
@@ -42,12 +45,19 @@ function normalize(sentence, page) {
   return s.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
+const SOURCE = /fueleconomy\.gov|nhtsa|ncap|wikipedia|models sold for/i;
+const FINGERPRINT = /fueleconomy\.gov vehicle id|not a loan rate|not an interest rate|\bnot rated\b|next to a file of/i;
+
 function checkGenerator() {
   const seen = new Map();
   const pages = iterPages();
+  const fingerprints = [];
   for (const page of pages) {
     const local = new Set();
     for (const sentence of sentencesOf(page.plain)) {
+      if (FINGERPRINT.test(sentence) && fingerprints.length < 5) {
+        fingerprints.push(page.id + ": " + sentence.slice(0, 160));
+      }
       const key = normalize(sentence, page);
       if (local.has(key)) continue;
       local.add(key);
@@ -57,11 +67,17 @@ function checkGenerator() {
     }
   }
   const dupes = [];
+  let sharedFacts = 0;
   for (const [key, ids] of seen) {
-    if (ids.length >= 2) dupes.push({ key, ids, count: ids.length });
+    if (ids.length < 2) continue;
+    if (SOURCE.test(key)) {
+      sharedFacts += 1;
+      continue;
+    }
+    dupes.push({ key, ids, count: ids.length });
   }
   dupes.sort(function (a, b) { return b.count - a.count; });
-  return { pages: pages.length, dupes };
+  return { pages: pages.length, dupes, sharedFacts, fingerprints };
 }
 
 function stripTags(html) {
@@ -220,13 +236,16 @@ function bannedPhrases() {
 function main() {
   const errors = [];
   const generated = checkGenerator();
+  console.log(
+    "generator: " + generated.pages + " pages, " + generated.sharedFacts +
+    " shared source sentences kept, " + generated.dupes.length + " unsourced repeats"
+  );
+  generated.fingerprints.forEach(function (hit) { errors.push("fingerprint: " + hit); });
   if (generated.dupes.length) {
     errors.push(
-      generated.dupes.length + " repeated sentence(s) across " + generated.pages + " generated pages. First: " +
+      generated.dupes.length + " unsourced repeated sentence(s) across " + generated.pages + " generated pages. First: " +
       JSON.stringify(generated.dupes[0])
     );
-  } else {
-    console.log("generator: " + generated.pages + " pages, no repeated sentence of " + MIN_WORDS + "+ words");
   }
 
   const built = checkBuiltHtml();

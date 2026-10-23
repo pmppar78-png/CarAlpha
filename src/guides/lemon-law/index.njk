@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
-title: "Lemon Law Guides — Car Alpha"
-description: "Comprehensive lemon law guides covering federal and state protections, how to file claims, and what to do when your new vehicle has recurring defects."
+title: "Lemon Law Guides — State Statutes and the Federal Warranty Act"
+description: "State lemon laws are not one national repair-count rule. This hub lists each statute, separates them from the Magnuson-Moss Warranty Act, and separates both from a safety recall under 49 U.S.C. § 30120."
 permalink: /guides/lemon-law/
 breadcrumbs:
   - label: Home
@@ -11,9 +11,18 @@ breadcrumbs:
   - label: Lemon Law
 ---
 
-<p class="text-lg text-silver-400 leading-relaxed mb-10">
-  Lemon laws protect consumers who purchase vehicles with serious, unrepairable defects. Both federal and state laws provide remedies including refunds, replacement vehicles, and cash settlements. Our guides explain your rights and walk you through the claims process.
+<p class="text-lg text-silver-400 leading-relaxed mb-6">
+  There is no single national lemon law that sets one number of repair attempts for every new car. Each state writes its own statute. The repair count, the out-of-service time, who is covered, and whether a used car qualifies are in that statute, not in a slogan.
 </p>
+
+<h2 class="text-xl font-bold text-white mb-4">Three laws that get mixed together</h2>
+
+<div class="space-y-4 text-silver-400 leading-relaxed mb-10">
+  <p>A state lemon law is a state statute. It usually runs through the motor-vehicle or consumer-protection title of that state's code. The attorney general or a state arbitration program is often the office that explains the process. The statute text, not this site, controls if the legislature has amended it. The state pages below were checked against those statutes on October 22, 2026, and the Texas page on October 23, 2026.</p>
+  <p>The Magnuson-Moss Warranty Act, <a href="https://www.law.cornell.edu/uscode/text/15/2301" rel="noopener">15 U.S.C. §§ 2301–2312</a>, is a federal warranty statute. It applies when a product is sold with a written warranty and the warrantor does not honor it. It does not enact a nationwide "three repairs or 30 days" test. The <a href="/guides/lemon-law/federal-lemon-law/">federal lemon-law guide</a> covers that act. The Federal Trade Commission explains the difference between a warranty and a service contract in <a href="https://consumer.ftc.gov/articles/auto-warranties-and-auto-service-contracts" rel="noopener">Auto Warranties and Auto Service Contracts</a>.</p>
+  <p>{{ recallRemedy.text }} A safety recall is not a lemon-law case. The recall statute is <a href="{{ recallRemedy.source }}" rel="noopener">{{ recallRemedy.citation }}</a>, in 49 U.S.C. Chapter 301. An open campaign can be a reason to visit a dealer. It does not, by itself, meet a state's lemon-law test.</p>
+  <p>Used-car coverage, when a state has it, is often a different section with a shorter window than the new-car rule. Read that section before treating a used purchase as a new-car claim. The state page states the rule that was in the statute on the review date above.</p>
+</div>
 
 <div class="grid sm:grid-cols-2 gap-5 mb-12">
   <a href="/guides/lemon-law/qualification-checker/" class="glass-card metallic-border rounded-2xl overflow-hidden card-hover carbon-panel block group">
@@ -39,7 +48,7 @@ breadcrumbs:
       <h2 class="font-bold text-white text-base group-hover:text-volt-400 transition-colors">Federal Lemon Law Guide</h2>
     </div>
     <div class="px-5 py-4">
-      <p class="text-sm text-silver-400 leading-relaxed">The Magnuson-Moss Warranty Act is the federal lemon law that applies in all 50 states. Learn how it works, who qualifies, and how to file a federal claim.</p>
+      <p class="text-sm text-silver-400 leading-relaxed">The Magnuson-Moss Warranty Act is the federal warranty statute. It is not a nationwide repair-count rule. The guide covers who it applies to and where the statute text lives.</p>
       <span class="inline-flex items-center gap-1 text-xs font-medium text-volt-400 mt-3">
         Read guide <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
       </span>
@@ -47,8 +56,16 @@ breadcrumbs:
   </a>
 </div>
 
-<h2 class="text-xl font-bold text-white mb-5">State Lemon Law Guides</h2>
-<p class="text-silver-400 mb-6">Each state has its own lemon law with specific requirements. Visit our <a href="/states/" class="text-volt-400 hover:text-volt-300 underline">state directory</a> to find detailed lemon law guides for your state.</p>
+<h2 class="text-xl font-bold text-white mb-4">State statutes</h2>
+<p class="text-silver-400 mb-6">Each link opens that state's page. The citation is the section the summary on that page was taken from. The opening paragraph on each page is that state's own summary, not a shared introduction.</p>
+
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mb-12 text-sm">
+  {% for state in states %}
+  <li>
+    <a href="/states/{{ state.slug }}/lemon-law/" class="text-volt-400 hover:underline">{{ state.name }}</a>{% if state.lemonLawCitation %} — <a href="{{ state.lemonLawUrl }}" class="text-silver-400 hover:text-white" rel="noopener">{{ state.lemonLawCitation }}</a>{% endif %}.
+  </li>
+  {% endfor %}
+</ul>
 
 <div class="glass-card metallic-border rounded-2xl p-8 carbon-panel text-center">
   <h3 class="text-xl font-bold text-white mb-3">Think You Have a Lemon?</h3>
