@@ -264,6 +264,80 @@ test("vehicle photos are licensed Commons files with dimensions and a credit", (
     assert.match(photo.src, /^\/assets\/images\/vehicles\/.+\.webp$/);
     assert.equal(fs.existsSync(path.join(__dirname, "..", "src", photo.src)), true, photo.src);
   }
+  assert.match(partial, /, cropped and resized/);
+});
+
+function filenameModelYears(file) {
+  let text = String(file).replace(/^File:/, "").replace(/\.[A-Za-z0-9]+$/, "");
+  text = text.replace(/\b[A-Za-z]*\d[A-Za-z]+\d+[A-Za-z0-9]*\b/g, " ");
+  text = text.replace(/\b\d{2}-\d{2}-(19|20)\d{2}\b/g, " ");
+  text = text.replace(/\b(19|20)\d{2}[-/]\d{2}[-/]\d{2}\b/g, " ");
+  text = text.replace(/\b\d{2}-(19|20)\d{6}\b/g, " ");
+  text = text.replace(/\b(19|20)\d{6,}\b/g, " ");
+  const found = new Set();
+  for (const match of text.matchAll(/\b((?:19|20)\d{2})\s*[-–]\s*(\d{2,4})\b/g)) {
+    const start = Number(match[1]);
+    let end = Number(match[2]);
+    if (end < 100) end = Math.floor(start / 100) * 100 + end;
+    if (end < start) end += 100;
+    for (let year = start; year <= Math.min(end, start + 14); year += 1) found.add(year);
+  }
+  for (const match of text.matchAll(/(?:^|[^\d])'(\d{2})\b/g)) {
+    const number = Number(match[1]);
+    found.add(number >= 30 ? 1900 + number : 2000 + number);
+  }
+  for (const match of text.matchAll(/(?:^|[\s(])(\d{2})\s*[-–]\s*(\d{2})(?!\d)/g)) {
+    const toYear = (number) => (number >= 30 ? 1900 + number : 2000 + number);
+    const start = toYear(Number(match[1]));
+    const end = toYear(Number(match[2]));
+    const low = Math.min(start, end);
+    const high = Math.max(start, end);
+    for (let year = low; year <= Math.min(high, low + 11); year += 1) found.add(year);
+  }
+  for (const match of text.matchAll(/(?:^|[\s(])(\d{2})[- ](?=[A-Z])/g)) {
+    const number = Number(match[1]);
+    if (number >= 1 && number <= 26) found.add(2000 + number);
+  }
+  const stripped = text.replace(/\b((?:19|20)\d{2})\s*[-–]\s*\d{2,4}\b/g, " ");
+  for (const match of stripped.matchAll(/\b((?:19|20)\d{2})\b/g)) found.add(Number(match[1]));
+  return [...found];
+}
+
+test("model photo years fall inside the page years or the generation matches", () => {
+  const images = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "vehicleImages.json"), "utf8"));
+  const models = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "models.json"), "utf8"));
+  const modelYears = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "_data", "modelYears.json"), "utf8"));
+  const spans = {};
+  for (const row of modelYears) {
+    const key = `${row.makeSlug}/${row.slug}`;
+    if (!spans[key]) spans[key] = [row.year, row.year];
+    spans[key][0] = Math.min(spans[key][0], row.year);
+    spans[key][1] = Math.max(spans[key][1], row.year);
+  }
+  const byKey = new Map(models.map((row) => [`${row.makeSlug}/${row.slug}`, row]));
+  for (const [key, photo] of Object.entries(images.models)) {
+    const [min, max] = spans[key];
+    const model = byKey.get(key);
+    assert.equal(typeof photo.year, "number", key);
+    assert.ok(photo.generation, key);
+    assert.equal(typeof photo.generationStart, "number", key);
+    const end = photo.generationEnd == null ? max : photo.generationEnd;
+    const generationMatches = photo.generationStart <= max && end >= min;
+    const yearMatches = photo.year >= min && photo.year <= max;
+    assert.ok(yearMatches || generationMatches, `${key} ${photo.year} ${photo.generation} is outside ${min}-${max}`);
+    const named = filenameModelYears(photo.file);
+    if (named.length) assert.ok(named.includes(photo.year), `${key} records ${photo.year} but the filename years are ${named.join(",")}`);
+    const alt = photo.alt.toLowerCase().replace(/-/g, " ");
+    const generation = String(photo.generation).toLowerCase().replace(/-/g, " ");
+    assert.ok(alt.includes(String(photo.year)) || alt.includes(generation), photo.alt);
+    assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
+    const name = model.name.toLowerCase().replace(/-/g, " ").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    assert.match(alt, new RegExp(name), photo.alt);
+  }
+  for (const photo of Object.values(images.makes)) {
+    assert.doesNotMatch(photo.alt, /\bvehicle$/i, photo.alt);
+    assert.ok(photo.alt.split(/\s+/).length >= 2, photo.alt);
+  }
 });
 
 test("recall summaries never print the NHTSA 'see the recall report' pointer", () => {
