@@ -124,7 +124,7 @@ test("geo pages answer with figures and do not pad", function () {
 
   assert.match(vaText, /\$30\.75/);
   assert.match(vaText, /\$35\.75/);
-  assert.equal(vaText.split("$10").length - 1, 0);
+  assert.equal((vaText.match(/\$10(?![0-9,])/g) || []).length, 0);
   assert.match(vaText, /separate biennial test/);
   assert.equal(/part of the annual safety inspection/i.test(vaText), false);
   const teslaVa = bundle(va, {

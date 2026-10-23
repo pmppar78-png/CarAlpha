@@ -582,7 +582,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -610,7 +610,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -638,7 +638,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -1282,7 +1282,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -1310,7 +1310,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -1338,7 +1338,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -1982,7 +1982,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2010,7 +2010,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2038,7 +2038,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2682,7 +2682,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2710,7 +2710,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -2738,7 +2738,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -3382,7 +3382,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -3410,7 +3410,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -3438,7 +3438,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4082,7 +4082,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4110,7 +4110,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4138,7 +4138,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4782,7 +4782,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4810,7 +4810,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -4838,7 +4838,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -5482,7 +5482,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -5510,7 +5510,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -5538,7 +5538,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6182,7 +6182,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6210,7 +6210,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6238,7 +6238,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6882,7 +6882,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6910,7 +6910,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -6938,7 +6938,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -7582,7 +7582,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -7610,7 +7610,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -7638,7 +7638,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -8282,7 +8282,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -8310,7 +8310,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -8338,7 +8338,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -8982,7 +8982,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9010,7 +9010,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9038,7 +9038,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9682,7 +9682,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9710,7 +9710,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -9738,7 +9738,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -10382,7 +10382,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -10410,7 +10410,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -10438,7 +10438,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11082,7 +11082,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11110,7 +11110,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11138,7 +11138,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11782,7 +11782,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11810,7 +11810,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -11838,7 +11838,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -12482,7 +12482,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -12510,7 +12510,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -12538,7 +12538,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13182,7 +13182,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13210,7 +13210,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13238,7 +13238,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13882,7 +13882,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13910,7 +13910,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -13938,7 +13938,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -14582,7 +14582,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -14610,7 +14610,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -14638,7 +14638,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -15282,7 +15282,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -15310,7 +15310,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -15338,7 +15338,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -15982,7 +15982,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16010,7 +16010,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16038,7 +16038,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16682,7 +16682,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16710,7 +16710,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -16738,7 +16738,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -17382,7 +17382,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -17410,7 +17410,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -17438,7 +17438,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18082,7 +18082,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18110,7 +18110,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18138,7 +18138,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18782,7 +18782,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18810,7 +18810,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -18838,7 +18838,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -19482,7 +19482,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -19510,7 +19510,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -19538,7 +19538,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20182,7 +20182,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20210,7 +20210,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20238,7 +20238,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20882,7 +20882,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20910,7 +20910,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -20938,7 +20938,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -21582,7 +21582,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -21610,7 +21610,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -21638,7 +21638,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -22282,7 +22282,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -22310,7 +22310,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -22338,7 +22338,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -22982,7 +22982,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23010,7 +23010,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23038,7 +23038,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23682,7 +23682,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23710,7 +23710,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -23738,7 +23738,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -24382,7 +24382,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -24410,7 +24410,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -24438,7 +24438,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25082,7 +25082,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25110,7 +25110,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25138,7 +25138,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25782,7 +25782,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25810,7 +25810,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -25838,7 +25838,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -26482,7 +26482,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -26510,7 +26510,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -26538,7 +26538,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27182,7 +27182,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27210,7 +27210,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27238,7 +27238,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27882,7 +27882,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27910,7 +27910,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -27938,7 +27938,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -28582,7 +28582,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -28610,7 +28610,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -28638,7 +28638,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -29282,7 +29282,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -29310,7 +29310,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -29338,7 +29338,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -29982,7 +29982,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30010,7 +30010,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30038,7 +30038,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30682,7 +30682,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30710,7 +30710,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -30738,7 +30738,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -31382,7 +31382,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -31410,7 +31410,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -31438,7 +31438,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32082,7 +32082,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32110,7 +32110,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32138,7 +32138,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32782,7 +32782,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32810,7 +32810,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -32838,7 +32838,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -33482,7 +33482,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -33510,7 +33510,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -33538,7 +33538,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34182,7 +34182,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34210,7 +34210,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34238,7 +34238,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34882,7 +34882,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34910,7 +34910,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -34938,7 +34938,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -35582,7 +35582,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -35610,7 +35610,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -35638,7 +35638,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -36282,7 +36282,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -36310,7 +36310,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -36338,7 +36338,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -36982,7 +36982,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37010,7 +37010,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37038,7 +37038,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37682,7 +37682,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37710,7 +37710,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -37738,7 +37738,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -38382,7 +38382,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -38410,7 +38410,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -38438,7 +38438,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39082,7 +39082,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39110,7 +39110,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39138,7 +39138,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39782,7 +39782,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39810,7 +39810,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -39838,7 +39838,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -40482,7 +40482,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -40510,7 +40510,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -40538,7 +40538,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41182,7 +41182,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41210,7 +41210,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41238,7 +41238,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41882,7 +41882,7 @@
     "stateName": "Tennessee",
     "stateAbbreviation": "TN",
     "stateRegion": "Southeast",
-    "insuranceMinimum": "25/50/15",
+    "insuranceMinimum": "25/50/25",
     "averageInsuranceCost": 1353.62,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41910,7 +41910,7 @@
     "stateName": "Utah",
     "stateAbbreviation": "UT",
     "stateRegion": "Mountain West",
-    "insuranceMinimum": "25/65/15",
+    "insuranceMinimum": "30/65/25",
     "averageInsuranceCost": 1402.65,
     "hasLemonLaw": true,
     "evIncentives": false
@@ -41938,7 +41938,7 @@
     "stateName": "Virginia",
     "stateAbbreviation": "VA",
     "stateRegion": "Mid-Atlantic",
-    "insuranceMinimum": "30/60/20",
+    "insuranceMinimum": "50/100/25",
     "averageInsuranceCost": 1358.32,
     "hasLemonLaw": true,
     "evIncentives": false

@@ -250,5 +250,59 @@
     "insurance": true,
     "registration": true,
     "ev": true
+  },
+  "tennessee": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "texas": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "utah": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "vermont": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "virginia": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "washington": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "west-virginia": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "wisconsin": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
+  },
+  "wyoming": {
+    "lemon": true,
+    "insurance": true,
+    "registration": true,
+    "ev": true
   }
 }
