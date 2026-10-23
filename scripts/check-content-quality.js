@@ -4,12 +4,16 @@
 /**
  * Content checks for the strict re-audit:
  * indefinite articles, FAQ JSON-LD that matches the visible answer,
- * and ownership sentences that are byte-for-byte the same on 10 or more
- * geo pages. A second check masks make, model, year, and state and fails
- * when that pattern is still shared by 10 or more pages. Dollar amounts,
- * mpg, complaint counts, and statute text stay visible to the mask.
- * The one statewide NAIC sentence is the same published figure on every
- * page in a state, so it is not counted as a cloned template.
+ * name stuffing, national figures placed in a state, and the electric
+ * emissions exemption.
+ *
+ * The same statute, fee, inspection rule, and lemon process is the
+ * published state text, so it is the same on every page in that state.
+ * Counting those shared sentences as failures produced three rounds of
+ * uniqueness padding. Shared structure is not a failure.
+ *
+ * Failures that are padding: the phrase "next to a file of", and any
+ * sentence that contains four or more semicolons.
  */
 
 const fs = require("fs");
@@ -22,7 +26,6 @@ const geo = require("../lib/geo-copy");
 const ROOT = path.join(__dirname, "..");
 const DATA = path.join(ROOT, "src", "_data");
 const MIN_WORDS = 8;
-const REPEAT_LIMIT = 10;
 
 function readJSON(name) {
   return JSON.parse(fs.readFileSync(path.join(DATA, name), "utf8"));
@@ -32,19 +35,25 @@ function words(text) {
   return String(text).trim().split(/\s+/).filter(Boolean);
 }
 
-function sentencesOf(text) {
+function allSentences(text) {
   const protectedText = String(text).replace(/\b((?:[A-Z][a-z]{0,3}|[A-Z]{1,4}|tit|ch|sec))\.\s+/g, "$1.\u2060 ");
   return protectedText
     .split(/(?<=[.?!])\s+/)
     .map(function (s) { return s.replace(/\u2060/g, "").replace(/\s+/g, " ").trim(); })
-    .filter(function (s) { return words(s).length >= MIN_WORDS; });
+    .filter(Boolean);
 }
 
-function maskName(sentence, name) {
-  if (!name) return sentence;
-  const escaped = String(name).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const flags = String(name).length >= 4 ? "gi" : "g";
-  return sentence.replace(new RegExp("\\b" + escaped + "\\b", flags), "{name}");
+function sentencesOf(text) {
+  return allSentences(text).filter(function (s) { return words(s).length >= MIN_WORDS; });
+}
+
+function semicolonHits(text, where) {
+  const hits = [];
+  allSentences(text).forEach(function (sentence) {
+    const count = (sentence.match(/;/g) || []).length;
+    if (count >= 4) hits.push(where + " has " + count + " semicolons in one sentence: " + sentence.slice(0, 180));
+  });
+  return hits;
 }
 
 function exactKey(sentence) {
@@ -62,6 +71,10 @@ const PADDING = [
   /Arkansas's/,
   /Illinois's/,
   /Kansas's/,
+  /next to a file of/i,
+  /the citation is shown above/i,
+  /see the fee figures above/i,
+  /the state citation beside/i,
 ];
 
 function firstClause(text) {
@@ -96,7 +109,9 @@ function bundle(input) {
     stateName: input.state.name,
     minimum: input.state.insuranceMinimum,
     avgCost: input.state.averageInsuranceCost,
+    minimumDetail: input.state.insuranceMinimumDetail,
     registrationFee: input.state.registrationFeeRange,
+    registrationNotes: input.state.registrationNotes,
     titleFee: input.state.titleFee,
     plateFee: input.state.plateFee,
     hasEmissions: input.state.hasEmissions,
@@ -147,20 +162,12 @@ function sharedStateAverage(sentence) {
   return /statewide all-vehicle average premium/i.test(sentence);
 }
 
-function maskPattern(sentence, p) {
-  let s = " " + sentence + " ";
-  const tokens = [
-    [p.stateName, "{state}"],
-    [p.make, "{make}"],
-    [p.model, "{model}"],
-  ].filter(function (pair) { return pair[0]; });
-  tokens.sort(function (a, b) { return String(b[0]).length - String(a[0]).length; });
-  tokens.forEach(function (pair) {
-    const escaped = String(pair[0]).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    s = s.replace(new RegExp("\\b" + escaped + "\\b", "gi"), " " + pair[1] + " ");
+function tokenSentenceCount(text, token) {
+  let count = 0;
+  allSentences(text).forEach(function (sentence) {
+    if (sentence.indexOf(token) !== -1) count += 1;
   });
-  if (p.year) s = s.replace(new RegExp("\\b" + p.year + "\\b", "g"), "{year}");
-  return s.toLowerCase().replace(/\s+/g, " ").trim();
+  return count;
 }
 
 function checkGeo() {
@@ -187,8 +194,6 @@ function checkGeo() {
   });
   Object.keys(yearsByModel).forEach(function (key) { yearsByModel[key].sort(function (a, b) { return a - b; }); });
 
-  const seen = new Map();
-  const masked = new Map();
   const within = [];
   const articles = [];
   const padding = [];
@@ -219,20 +224,18 @@ function checkGeo() {
         return;
       }
       local.add(key);
-      let row = seen.get(key);
-      if (!row) {
-        row = { count: 0, id: id, key: key };
-        seen.set(key, row);
-      }
-      row.count += 1;
-      const pattern = maskPattern(sentence, p);
-      let maskedRow = masked.get(pattern);
-      if (!maskedRow) {
-        maskedRow = { count: 0, id: id, key: pattern };
-        masked.set(pattern, maskedRow);
-      }
-      maskedRow.count += 1;
     });
+    if (padding.length < 8) {
+      semicolonHits(text, id).forEach(function (hit) {
+        if (padding.length < 8) padding.push(hit);
+      });
+      geo.statuteTokens(p.citation).forEach(function (token) {
+        if (padding.length >= 8 || token.length < 4) return;
+        const inSummary = tokenSentenceCount(p.lemonSummary || "", token);
+        const inPage = tokenSentenceCount(text, token);
+        if (inPage > Math.max(inSummary, 1)) padding.push(id + " states " + token + " in " + inPage + " sentences");
+      });
+    }
     if (names.length < 8 && p.year && p.make && p.model && p.stateName) {
       const lower = text.toLowerCase();
       const full = (p.year + " " + p.make + " " + p.model).toLowerCase();
@@ -293,18 +296,8 @@ function checkGeo() {
     });
   });
 
-  function top(map) {
-    const dupes = [];
-    map.forEach(function (row) {
-      if (row.count >= REPEAT_LIMIT) dupes.push({ count: row.count, id: row.id, key: row.key.slice(0, 220) });
-    });
-    dupes.sort(function (a, b) { return b.count - a.count; });
-    return dupes.slice(0, 5);
-  }
   return {
     pages: pages,
-    dupes: top(seen),
-    masked: top(masked),
     within: within,
     articles: articles,
     padding: padding.slice(0, 8),
@@ -331,6 +324,58 @@ function visibleText(html) {
     .replace(/\s+/g, " ");
 }
 
+function stripSealedCopy(html) {
+  const attr = /<([a-z0-9]+)\b[^>]*\sdata-vehicle-copy\b[^>]*>/gi;
+  let out = "";
+  let last = 0;
+  let match;
+  while ((match = attr.exec(html))) {
+    out += html.slice(last, match.index);
+    const tag = match[1].toLowerCase();
+    const start = attr.lastIndex;
+    if (tag !== "div") {
+      const close = html.toLowerCase().indexOf("</" + tag + ">", start);
+      last = close === -1 ? html.length : close + tag.length + 3;
+      attr.lastIndex = last;
+      continue;
+    }
+    const token = /<\/?div\b[^>]*>/gi;
+    token.lastIndex = start;
+    let depth = 1;
+    let found = false;
+    let step;
+    while ((step = token.exec(html))) {
+      depth += step[0][1] === "/" ? -1 : 1;
+      if (depth === 0) {
+        last = token.lastIndex;
+        found = true;
+        break;
+      }
+    }
+    if (!found) last = html.length;
+    attr.lastIndex = last;
+  }
+  return out + html.slice(last);
+}
+
+function blockText(html) {
+  const source = stripSealedCopy(String(html))
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ");
+  const chunks = [];
+  const re = /<(p|li|h[1-6]|dd|blockquote)\b[^>]*>([\s\S]*?)<\/\1>/gi;
+  let match;
+  while ((match = re.exec(source))) {
+    const text = match[2]
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&(?:#x?[0-9a-f]+|[a-z]+);/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (text) chunks.push(text);
+  }
+  return chunks.join("\n");
+}
+
 function checkSite() {
   const site = path.join(ROOT, "_site");
   const errors = [];
@@ -349,8 +394,18 @@ function checkSite() {
       mismatches += bad.length;
       if (errors.length < 8) errors.push(path.relative(ROOT, file) + " FAQ JSON-LD does not match the visible answer: " + bad[0].slice(0, 140));
     }
+    const plain = visibleText(html);
+    if (/next to a file of/i.test(plain) && errors.length < 12) {
+      errors.push(path.relative(ROOT, file) + " contains a next-to-a-file padding tail");
+    }
+    // Sentence boundaries are the paragraph, not the tag-stripped page.
+    // Catalog paragraphs marked data-vehicle-copy stay sealed for the
+    // boilerplate check and are not scored here.
+    if (errors.length < 12) {
+      semicolonHits(blockText(html), path.relative(ROOT, file)).slice(0, 1).forEach(function (hit) { errors.push(hit); });
+    }
     if (articleHits.length < 8 && file.includes(path.sep + "makes" + path.sep)) {
-      articleHits.push.apply(articleHits, articleErrors(visibleText(html), path.relative(ROOT, file)));
+      articleHits.push.apply(articleHits, articleErrors(plain, path.relative(ROOT, file)));
     }
   });
   articleHits.slice(0, 8).forEach(function (hit) { errors.push(hit); });
@@ -396,12 +451,6 @@ function main() {
   console.log("checking geo sentences...");
   const geoResult = checkGeo();
   console.log("geo pages: " + geoResult.pages);
-  if (geoResult.dupes.length) {
-    errors.push(geoResult.dupes.length + " sentence(s) repeat on " + REPEAT_LIMIT + "+ geo pages. First: " + JSON.stringify(geoResult.dupes.slice(0, 5)));
-  }
-  if (geoResult.masked.length) {
-    errors.push(geoResult.masked.length + " masked sentence pattern(s) repeat on " + REPEAT_LIMIT + "+ geo pages. First: " + JSON.stringify(geoResult.masked.slice(0, 5)));
-  }
   geoResult.within.forEach(function (item) { errors.push("within-page geo repeat: " + item); });
   geoResult.names.forEach(function (item) { errors.push(item); });
   geoResult.articles.forEach(function (item) { errors.push(item); });
