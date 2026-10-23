@@ -1,5 +1,9 @@
 import type { Context } from "@netlify/functions";
+import { createRequire } from "node:module";
 import Anthropic from "@anthropic-ai/sdk";
+
+const require = createRequire(import.meta.url);
+const { approvedLinkRules, sanitizeAssistantText } = require("../../lib/assistant-links.js");
 
 const anthropic = new Anthropic();
 
@@ -17,13 +21,15 @@ const SYSTEM_PROMPT = `You are Car Alpha AI, a knowledgeable and helpful vehicle
 
 RULES:
 1. Always be helpful, accurate, and consumer-focused
-2. When you recommend an action (get insurance quote, check warranty, etc.), mention that the user can use our partner links for quick access
+2. When you recommend an action, use only a URL from the approved list below. Do not invent a partner link. A recall goes to NHTSA or /recall-checker/, not to a mobile-mechanic site.
 3. Never make up specific prices, rates, or legal advice — give ranges and direct to professionals
 4. Keep responses concise but thorough (2-4 paragraphs max)
 5. If vehicle context is provided, tailor your response to that specific vehicle
 6. Use plain language — avoid jargon unless explaining a technical term
 7. For safety-related recalls, emphasize urgency
-8. Always mention that users should verify details with qualified professionals for legal or financial decisions`;
+8. Always mention that users should verify details with qualified professionals for legal or financial decisions
+
+${approvedLinkRules()}`;
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -177,8 +183,9 @@ export default async (req: Request, context: Context) => {
       messages: messages,
     });
 
-    const assistantMessage =
-      response.content[0].type === "text" ? response.content[0].text : "";
+    const assistantMessage = sanitizeAssistantText(
+      response.content[0].type === "text" ? response.content[0].text : ""
+    );
 
     return new Response(
       JSON.stringify({

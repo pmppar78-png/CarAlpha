@@ -1,6 +1,7 @@
 "use strict";
 
 const { createRateLimiter } = require("../../lib/rate-limit");
+const { approvedLinkRules, sanitizeAssistantText } = require("../../lib/assistant-links");
 
 const limiter = createRateLimiter({ windowMs: 10 * 60 * 1000, max: 20 });
 
@@ -29,7 +30,9 @@ Money:
 Conduct:
 - Never invent an affiliate ID, a coupon code, or a partner account number. You may name Car Alpha guides (VIN decoder, recall checker, lemon-law guide, warranty guide, state pages) as next steps.
 - If you do not know a statute's current threshold, say so and point to the state attorney general or NHTSA. Do not fill the gap with a round number.
-- Keep answers useful and specific. Do not flatten a real distinction into a one-line slogan.`;
+- Keep answers useful and specific. Do not flatten a real distinction into a one-line slogan.
+
+${approvedLinkRules()}`;
 
 function headers() {
   return {
@@ -110,7 +113,7 @@ exports.handler = async function (event) {
     if (!reply) {
       return json(503, { error: "The assistant returned an empty answer. Try the VIN decoder or the recall checker." });
     }
-    return json(200, { reply });
+    return json(200, { reply: sanitizeAssistantText(reply) });
   } catch (err) {
     return json(503, {
       error: "The assistant could not answer just now. The VIN decoder and the recall checker are still available.",

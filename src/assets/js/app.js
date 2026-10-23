@@ -279,6 +279,30 @@ function affiliateCTA(label, key, vin) {
   return `<a target="_blank" rel="nofollow sponsored noopener" href="${href}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-volt-600/15 border border-volt-500/25 hover:border-volt-400/40 hover:bg-volt-600/25 text-volt-300 text-xs font-medium mt-2 mr-1 transition-all">${label} <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a>`;
 }
 
+// Whole-word match. Keep these patterns in step with lib/assistant-links.js.
+function mentions(text, pattern) {
+  return new RegExp("\\b(?:" + pattern + ")\\b", "i").test(String(text || ""));
+}
+
+const NHTSA_RECALLS = "https://www.nhtsa.gov/recalls";
+
+function nhtsaRecallCTA() {
+  return `<a target="_blank" rel="noopener" href="${NHTSA_RECALLS}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-volt-600/15 border border-volt-500/25 hover:border-volt-400/40 hover:bg-volt-600/25 text-volt-300 text-xs font-medium mt-2 mr-1 transition-all">NHTSA recall lookup <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a>`;
+}
+
+function topicCTA(text, vin) {
+  if (mentions(text, "recalls?")) return nhtsaRecallCTA();
+  if (mentions(text, "insurance")) return affiliateCTA("Compare Insurance Rates", "insurance", vin);
+  if (mentions(text, "warrant(?:y|ies)")) return affiliateCTA("Check Warranty Options", "warranty", vin);
+  if (mentions(text, "loans?|refi(?:nance|nancing)?|financ(?:e|es|ed|ing)")) return affiliateCTA("Get Loan/Refi Offers", "loans", vin);
+  if (mentions(text, "sell(?:s|ing)?|trades?|trade-ins?")) return affiliateCTA("Get Instant Offer", "sell", vin);
+  if (mentions(text, "repairs?|mechanics?")) return affiliateCTA("Find Repair Estimates", "repair", vin);
+  if (mentions(text, "lemons?")) return affiliateCTA("Lemon Law Help", "lemon-law", vin);
+  if (mentions(text, "evs?|electric|chargers?|charging")) return affiliateCTA("Find EV Charging Stations", "ev-charger", vin);
+  if (mentions(text, "history|carfax|accidents?|title checks?")) return affiliateCTA("Get Full Vehicle History", "carfax", vin);
+  return "";
+}
+
 async function handleAIChat(inputEl, chatContainer) {
   const text = typeof inputEl === "string" ? inputEl : (inputEl.value || "").trim();
   if (!text) return;
@@ -323,23 +347,14 @@ async function handleAIChat(inputEl, chatContainer) {
 
     if (res.ok) {
       const data = await res.json();
-      let response = data.response || "I apologize, I could not process that request.";
-      // Convert markdown-like formatting to HTML
+      let response = data.response || data.reply || "I apologize, I could not process that request.";
       response = response
         .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
         .replace(/\n\n/g, "<br><br>")
         .replace(/\n/g, "<br>");
 
-      // Add contextual CTAs
-      const lower = text.toLowerCase();
-      if (lower.includes("insurance")) response += "<br>" + affiliateCTA("Compare Insurance Rates", "insurance", vehicleContext.vin);
-      else if (lower.includes("warranty")) response += "<br>" + affiliateCTA("Check Warranty Options", "warranty", vehicleContext.vin);
-      else if (lower.includes("loan") || lower.includes("refi") || lower.includes("financ")) response += "<br>" + affiliateCTA("Get Loan/Refi Offers", "loans", vehicleContext.vin);
-      else if (lower.includes("sell") || lower.includes("trade")) response += "<br>" + affiliateCTA("Get Instant Offer", "sell", vehicleContext.vin);
-      else if (lower.includes("repair") || lower.includes("mechanic")) response += "<br>" + affiliateCTA("Find Repair Estimates", "repair", vehicleContext.vin);
-      else if (lower.includes("lemon")) response += "<br>" + affiliateCTA("Lemon Law Help", "lemon-law", vehicleContext.vin);
-      else if (lower.includes("ev") || lower.includes("electric") || lower.includes("charg")) response += "<br>" + affiliateCTA("Find EV Charging Stations", "ev-charger", vehicleContext.vin);
-      else if (lower.includes("history") || lower.includes("carfax") || lower.includes("accident") || lower.includes("title check")) response += "<br>" + affiliateCTA("Get Full Vehicle History", "carfax", vehicleContext.vin);
+      const extra = topicCTA(text, vehicleContext.vin);
+      if (extra) response += "<br>" + extra;
 
       postBubble(chatContainer, "ai", response);
       chatHistory.push({ role: "user", content: text });
@@ -356,33 +371,32 @@ async function handleAIChat(inputEl, chatContainer) {
 }
 
 function localAnswer(q) {
-  const query = (q || "").toLowerCase();
   const c = vehicleContext;
   const age = c.decoded?.ModelYear ? (new Date().getFullYear() - parseInt(c.decoded.ModelYear, 10)) : null;
   const make = c.decoded?.Make || "this vehicle";
-  const isEV = (c.decoded?.FuelTypePrimary || "").toLowerCase().includes("electric");
+  const isEV = mentions(c.decoded?.FuelTypePrimary || "", "electric");
 
-  if (query.includes("recall"))
+  if (mentions(q, "recalls?"))
     return c.recallCount > 0
-      ? `We found <strong>${c.recallCount}</strong> recall(s) for ${make}. Book the <strong>free dealer fix</strong> first. ${affiliateCTA("Find a dealer", "mechanics", c.vin)} ${affiliateCTA("Compare warranty options", "warranty", c.vin)}`
-      : `No recalls were found for ${make}. Still, consider a quick inspection before purchase. ${affiliateCTA("Get mechanic estimates", "repair", c.vin)}`;
-  if (query.includes("warranty"))
+      ? `We found <strong>${c.recallCount}</strong> recall(s) for ${make}. The remedy is a free repair at a franchised dealer of that make. Confirm the campaign on NHTSA, then call that dealer. ${nhtsaRecallCTA()} ${affiliateCTA("Compare warranty options", "warranty", c.vin)}`
+      : `No recalls were found for ${make}. Confirm that on NHTSA before you rely on it. ${nhtsaRecallCTA()} ${affiliateCTA("Get mechanic estimates", "repair", c.vin)}`;
+  if (mentions(q, "warrant(?:y|ies)"))
     return age !== null && age >= 7
       ? `At about <strong>${age} years</strong> old, an extended warranty can be cost-effective. ${affiliateCTA("See warranty plans", "warranty", c.vin)}`
       : `Warranty value depends on repair risk and mileage. ${affiliateCTA("Check warranty quotes", "warranty", c.vin)}`;
-  if (query.includes("insurance"))
+  if (mentions(q, "insurance"))
     return `${isEV ? "EVs are priced from repair cost as well as the driver record. " : ""}Compare carriers on the same liability limits, deductibles, and VIN. ${affiliateCTA("Compare insurance rates", "insurance", c.vin)}`;
-  if (query.includes("loan") || query.includes("refi") || query.includes("financ"))
+  if (mentions(q, "loans?|refi(?:nance|nancing)?|financ(?:e|es|ed|ing)"))
     return `Better credit and newer vehicles often qualify for lower APR. ${affiliateCTA("Get loan/refi offers", "loans", c.vin)}`;
-  if (query.includes("mechanic") || query.includes("repair") || query.includes("estimate"))
+  if (mentions(q, "repairs?|mechanics?|estimates?"))
     return `Get multiple quotes and check common issues for this model. ${affiliateCTA("Check repair estimates", "repair", c.vin)}`;
-  if (query.includes("sell") || query.includes("trade"))
+  if (mentions(q, "sell(?:s|ing)?|trades?|trade-ins?"))
     return `A trade-in credit, a private sale, and an instant offer are different transactions. Compare the offers in front of you rather than a fixed percent. ${affiliateCTA("Get an instant offer", "sell", c.vin)}`;
-  if (query.includes("lemon"))
+  if (mentions(q, "lemons?"))
     return `If repeated repairs affect safety or drivability, you may have remedies under state lemon laws. ${affiliateCTA("Check lemon-law options", "lemon-law", c.vin)}`;
-  if (query.includes("ev") || query.includes("electric") || query.includes("charg"))
+  if (mentions(q, "evs?|electric|chargers?|charging"))
     return `${isEV ? "Your vehicle is electric — " : "For electric vehicles, "}find nearby charging stations and check EV incentives. ${affiliateCTA("Find EV Charging Stations", "ev-charger", c.vin)}`;
-  if (query.includes("history") || query.includes("carfax") || query.includes("accident") || query.includes("title check"))
+  if (mentions(q, "history|carfax|accidents?|title checks?"))
     return `A full vehicle history report reveals accidents, title issues, and ownership history. ${affiliateCTA("Get Full Vehicle History", "carfax", c.vin)}`;
   return `I can help with: <strong>recalls</strong>, <strong>insurance</strong>, <strong>warranty</strong>, <strong>loan/refi</strong>, <strong>repair estimates</strong>, <strong>selling</strong>, <strong>lemon law</strong>, <strong>EV charging</strong>, or <strong>vehicle history</strong>. Run a VIN for tailored guidance.`;
 }
